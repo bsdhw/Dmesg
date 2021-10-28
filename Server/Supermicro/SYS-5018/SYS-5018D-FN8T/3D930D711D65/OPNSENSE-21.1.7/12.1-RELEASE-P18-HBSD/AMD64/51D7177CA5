@@ -1,0 +1,266 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p18-HBSD #1  815defa6fd0(stable/21.1)-dirty: Mon Jun 14 09:17:18 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU D-1518 @ 2.20GHz (2200.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x50663  Family=0x6  Model=0x56  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffefbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x21cbfbb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,PQM,NFPUSG,PQE,RDSEED,ADX,SMAP,PROCTRACE>
+  Structured Extended Features3=0x9c000400<MD_CLEAR,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33233829888 (31694 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <SUPERM SMCI--MB>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 4 7 2 6 3 5
+Timecounter "TSC-low" frequency 1100023730 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SMCI--MB> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x71,0x74-0x77 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <dasp, performance counters> at device 11.1 (no driver attached)
+pci0: <dasp, performance counters> at device 11.2 (no driver attached)
+pci0: <dasp, performance counters> at device 16.1 (no driver attached)
+pci0: <dasp, performance counters> at device 16.6 (no driver attached)
+pci0: <dasp, performance counters> at device 18.1 (no driver attached)
+acpi_syscontainer0: <System Container> on acpi0
+pcib1: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 1.1 on pci1
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 16 at device 2.0 on pci1
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 2.2 on pci1
+ACPI Warning: \134_SB.PCI0.BR2C._PRT: Return Package has no elements (empty) (20181213/nsprepkg-251)
+pci5: <ACPI PCI bus> on pcib5
+pcib5: no PRT entry for 4.0.INTA
+pcib5: no PRT entry for 4.0.INTB
+ix0: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xfbc00000-0xfbdfffff,0xfbe04000-0xfbe07fff irq 11 at device 0.0 on pci5
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xfba00000-0xfbbfffff,0xfbe00000-0xfbe03fff irq 10 at device 0.1 on pci5
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 3.0 on pci1
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> irq 16 at device 3.2 on pci1
+pci7: <ACPI PCI bus> on pcib7
+xhci0: <Intel Lynx Point USB 3.0 controller> mem 0xfb600000-0xfb60ffff irq 19 at device 20.0 on pci1
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci1: <simple comms> at device 22.0 (no driver attached)
+pci1: <simple comms> at device 22.1 (no driver attached)
+ehci0: <Intel Lynx Point USB 2.0 controller USB-B> mem 0xfb614000-0xfb6143ff irq 18 at device 26.0 on pci1
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib8: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci1
+pci8: <ACPI PCI bus> on pcib8
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xe000-0xe01f mem 0xfb300000-0xfb37ffff,0xfb380000-0xfb383fff irq 16 at device 0.0 on pci8
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib9: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci1
+pci9: <ACPI PCI bus> on pcib9
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xd000-0xd01f mem 0xfb200000-0xfb27ffff,0xfb280000-0xfb283fff irq 17 at device 0.0 on pci9
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib10: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci1
+pci10: <ACPI PCI bus> on pcib10
+pcib11: <ACPI PCI-PCI bridge> at device 0.0 on pci10
+pci11: <ACPI PCI bus> on pcib11
+vgapci0: <VGA-compatible display> port 0xc000-0xc07f mem 0xfa000000-0xfaffffff,0xfb000000-0xfb01ffff irq 16 at device 0.0 on pci11
+vgapci0: Boot video device
+pcib12: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci1
+pci12: <ACPI PCI bus> on pcib12
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb060-0xb07f mem 0xfb160000-0xfb17ffff,0xfb18c000-0xfb18ffff irq 16 at device 0.0 on pci12
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb040-0xb05f mem 0xfb140000-0xfb15ffff,0xfb188000-0xfb18bfff irq 17 at device 0.1 on pci12
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+igb4: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb020-0xb03f mem 0xfb120000-0xfb13ffff,0xfb184000-0xfb187fff irq 18 at device 0.2 on pci12
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 4 RX queues 4 TX queues
+igb4: Using MSI-X interrupts with 5 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 4/1024, RX 4/1024
+igb5: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb000-0xb01f mem 0xfb100000-0xfb11ffff,0xfb180000-0xfb183fff irq 19 at device 0.3 on pci12
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 4 RX queues 4 TX queues
+igb5: Using MSI-X interrupts with 5 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci1: <Intel Lynx Point USB 2.0 controller USB-A> mem 0xfb613000-0xfb6133ff irq 18 at device 29.0 on pci1
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci1
+isa0: <ISA bus> on isab0
+ahci0: <Intel Patsburg+ (RAID) AHCI SATA controller> port 0xf070-0xf077,0xf060-0xf063,0xf050-0xf057,0xf040-0xf043,0xf020-0xf03f mem 0xfb612000-0xfb6127ff irq 16 at device 31.2 on pci1
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xd0800-0xd17ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <INTEL SSDSC2KB240G8 XCV10132> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 228936MB (468862128 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <INTEL SSDSC2KB240G8 XCV10132> ACS-3 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 228936MB (468862128 512 byte sectors)
+GEOM_RAID: Intel-fe1243c1: Array Intel-fe1243c1 created.
+GEOM_RAID: Intel-fe1243c1: Disk ada0 state changed from NONE to ACTIVE.
+GEOM_RAID: Intel-fe1243c1: Subdisk system:0-ada0 state changed from NONE to ACTIVE.
+GEOM_RAID: Intel-fe1243c1: Disk ada1 state changed from NONE to ACTIVE.
+GEOM_RAID: Intel-fe1243c1: Subdisk system:1-ada1 state changed from NONE to ACTIVE.
+GEOM_RAID: Intel-fe1243c1: Array started.
+GEOM_RAID: Intel-fe1243c1: Volume system state changed from STARTING to OPTIMAL.
+GEOM_RAID: Intel-fe1243c1: Provider raid/r0 for volume system created.
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+uhub1: 21 ports with 21 removable, self powered
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub3 on uhub1
+uhub3: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 1> on usbus0
+uhub3: MTT enabled
+ugen2.2: <vendor 0x8087 product 0x8000> at usbus2
+uhub4 on uhub0
+uhub4: <vendor 0x8087 product 0x8000, class 9/0, rev 2.00/0.05, addr 2> on usbus2
+ugen1.2: <vendor 0x8087 product 0x8008> at usbus1
+uhub5 on uhub2
+uhub5: <vendor 0x8087 product 0x8008, class 9/0, rev 2.00/0.05, addr 2> on usbus1
+uhub4: 4 ports with 4 removable, self powered
+uhub5: 4 ports with 4 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+ugen0.3: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub6 on uhub3
+uhub6: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 2> on usbus0
+uhub6: MTT enabled
+uhub6: 4 ports with 4 removable, self powered
+ugen0.4: <vendor 0x0557 product 0x7000> at usbus0
+uhub7 on uhub1
+uhub7: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 3> on usbus0
+uhub7: 4 ports with 3 removable, self powered
+ugen0.5: <vendor 0x0557 product 0x2419> at usbus0
+ukbd0 on uhub7
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 4> on usbus0
+kbd2 at ukbd0
+igb0: link state changed to UP
+ioat0: <BDXDE IOAT Ch0> mem 0xfb506000-0xfb507fff irq 16 at device 0.0 on pci4
+ioat0: Capabilities: c2641<Completion_Timeout_Support,DMA_with_Multicasting_Support,Descriptor_Write_Back_Error_Support,DMA_with_DIF,PQ,Block_Fill,Page_Break>
+ioat1: <BDXDE IOAT Ch1> mem 0xfb504000-0xfb505fff irq 17 at device 0.1 on pci4
+ioat1: Capabilities: c2641<Completion_Timeout_Support,DMA_with_Multicasting_Support,Descriptor_Write_Back_Error_Support,DMA_with_DIF,PQ,Block_Fill,Page_Break>
+ioat2: <BDXDE IOAT Ch2> mem 0xfb502000-0xfb503fff irq 18 at device 0.2 on pci4
+ioat2: Capabilities: c2641<Completion_Timeout_Support,DMA_with_Multicasting_Support,Descriptor_Write_Back_Error_Support,DMA_with_DIF,PQ,Block_Fill,Page_Break>
+ioat3: <BDXDE IOAT Ch3> mem 0xfb500000-0xfb501fff irq 19 at device 0.3 on pci4
+ioat3: Capabilities: c2641<Completion_Timeout_Support,DMA_with_Multicasting_Support,Descriptor_Write_Back_Error_Support,DMA_with_DIF,PQ,Block_Fill,Page_Break>
+ums0 on uhub7
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 4> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+igb0: link state changed to DOWN
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ng0: changing name to 'pppoe0'
+igb0: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ix0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

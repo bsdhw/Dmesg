@@ -1,0 +1,206 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.1 (GENERIC) #0: Sun Oct 18 19:24:30 UTC 2020
+	XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+total memory = 246 MB
+avail memory = 222 MB
+rnd: seeded with 256 bits
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+running cgd selftest aes-xts-256 aes-xts-512 done
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+IBM 2887AVG (ThinkPad R51)
+mainbus0 (root)
+ACPI: RSDP 0x00000000000F6DA0 000024 (v02 IBM   )
+ACPI: XSDT 0x000000000F6EB16B 00004C (v01 IBM    TP-1V    00001290  LTP 00000000)
+ACPI: FACP 0x000000000F6EB200 0000F4 (v03 IBM    TP-1V    00001290 IBM  00000001)
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 64/32 (20190405/tbfadt-642)
+Firmware Warning (ACPI): Optional FADT field Gpe1Block has valid Address but zero Length: 0x000000000000102C/0x0 (20190405/tbfadt-693)
+ACPI: DSDT 0x000000000F6EB3E7 00BA37 (v01 IBM    TP-1V    00001290 MSFT 0100000E)
+ACPI: FACS 0x000000000F6F8000 000040
+ACPI: SSDT 0x000000000F6EB3B4 000033 (v01 IBM    TP-1V    00001290 MSFT 0100000E)
+ACPI: ECDT 0x000000000F6F6E1E 000052 (v01 IBM    TP-1V    00001290 IBM  00000001)
+ACPI: TCPA 0x000000000F6F6E70 000032 (v01 IBM    TP-1V    00001290 PTL  00000001)
+ACPI: BOOT 0x000000000F6F6FD8 000028 (v01 IBM    TP-1V    00001290  LTP 00000001)
+ACPI: 2 ACPI AML tables successfully acquired and loaded
+cpu0 at mainbus0
+cpu0: Intel(R) Pentium(R) M processor 1.50GHz, id 0x6d6
+cpu0: package 0, core 0, smt 0
+acpi0 at mainbus0: Intel ACPICA 20190405
+acpi0: X/RSDT: OemId <IBM   ,TP-1V   ,00001290>, AslId < LTP,00000000>
+acpiecdt0 at acpi0: ACPI Embedded Controller via ECDT
+LNKA: ACPI: Found matching pin for 0.2.INTA at func 0: 11
+LNKA: ACPI: Found matching pin for 0.29.INTA at func 0: 11
+LNKD: ACPI: Found matching pin for 0.29.INTB at func 1: 11
+LNKC: ACPI: Found matching pin for 0.29.INTC at func 2: 11
+LNKH: ACPI: Found matching pin for 0.29.INTD at func 7: 11
+LNKC: ACPI: Found matching pin for 0.31.INTA at func 1: 255
+LNKB: ACPI: Found matching pin for 0.31.INTB at func 3: 11
+LNKA: ACPI: Found matching pin for 2.0.INTA at func 0: 11
+LNKF: ACPI: Found matching pin for 2.2.INTA at func 0: 11
+LNKE: ACPI: Found matching pin for 2.8.INTA at func 0: 11
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+acpiec0 at acpi0 (EC, PNP0C09-0): using acpiecdt0
+MEM (PNP0C01) at acpi0 not configured
+acpilid0 at acpi0 (LID, PNP0C0D): ACPI Lid Switch
+acpibut0 at acpi0 (SLPB, PNP0C0E): ACPI Sleep Button
+SIO (PNP0C02) at acpi0 not configured
+attimer1 at acpi0 (TIMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+FPU (PNP0C04) at acpi0 not configured
+pckbc1 at acpi0 (KBD, PNP0303) (kbd port): io 0x60,0x64 irq 1
+pckbc2 at acpi0 (MOU, IBM0057) (aux port): irq 12
+FDC (PNP0700) at acpi0 not configured
+UART (PNP0501) at acpi0 not configured
+LPT (PNP0400) at acpi0 not configured
+FIR (IBM0071) at acpi0 not configured
+acpibat0 at acpi0 (BAT0, PNP0C0A-0): ACPI Battery
+acpiacad0 at acpi0 (AC, ACPI0003-0): ACPI AC Adapter
+thinkpad0 at acpi0 (HKEY, IBM0068)
+acpivga0 at acpi0 (VID): ACPI Display Adapter
+acpiout0 at acpivga0 (LCD0, 0x0400): ACPI Display Output Device
+acpiout1 at acpivga0 (CRT0, 0x0100): ACPI Display Output Device
+acpiout2 at acpivga0 (TV0, 0x0200): ACPI Display Output Device
+acpivga0: connected output devices:
+acpivga0:   0x0400 (acpiout0): Unknown Output Device, head 0
+acpivga0:   0x0100 (acpiout1): Ext. Monitor, head 0
+acpivga0:   0x0200 (acpiout2): TV, head 0
+acpitz0 at acpi0 (THM0)
+acpitz0: levels: critical 94.0 C, passive 86.5 C, passive cooling
+apm0 at acpi0: Power Management spec V1.2
+attimer1: attached to pcppi1
+pckbd0 at pckbc1 (kbd slot)
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc1 (aux slot)
+pms0: Synaptics touchpad version 5.9
+pms0: Passthrough, Palm detect, Multi-finger
+pckbc1: using irq 12 for aux slot
+wsmouse0 at pms0 mux 0
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: vendor 8086 product 3580 (rev. 0x02)
+agp0 at pchb0: i855-family chipset
+agp0: detected 8060k stolen memory
+agp0: aperture at 0xe0000000, size 0x8000000
+vendor 8086 product 3584 (miscellaneous system, revision 0x02) at pci0 dev 0 function 1 not configured
+vendor 8086 product 3585 (miscellaneous system, revision 0x02) at pci0 dev 0 function 3 not configured
+i915drmkms0 at pci0 dev 2 function 0: vendor 8086 product 3582 (rev. 0x02)
+vendor 8086 product 3582 (miscellaneous display, revision 0x02) at pci0 dev 2 function 1 not configured
+uhci0 at pci0 dev 29 function 0: vendor 8086 product 24c2 (rev. 0x01)
+uhci0: interrupting at irq 11
+usb0 at uhci0: USB revision 1.0
+uhci1 at pci0 dev 29 function 1: vendor 8086 product 24c4 (rev. 0x01)
+uhci1: interrupting at irq 11
+usb1 at uhci1: USB revision 1.0
+uhci2 at pci0 dev 29 function 2: vendor 8086 product 24c7 (rev. 0x01)
+uhci2: interrupting at irq 11
+usb2 at uhci2: USB revision 1.0
+ehci0 at pci0 dev 29 function 7: vendor 8086 product 24cd (rev. 0x01)
+ehci0: interrupting at irq 11
+ehci0: EHCI version 1.0
+ehci0: 3 companion controllers, 2 ports each: uhci0 uhci1 uhci2
+usb3 at ehci0: USB revision 2.0
+ppb0 at pci0 dev 30 function 0: vendor 8086 product 2448 (rev. 0x81)
+pci1 at ppb0 bus 2
+pci1: i/o space, memory space enabled
+cbb0 at pci1 dev 0 function 0: vendor 104c product ac56 (rev. 0x00)
+iwi0 at pci1 dev 2 function 0: vendor 8086 product 4220 (rev. 0x05)
+iwi0: interrupting at irq 11
+iwi0: 802.11 address XXX
+iwi0: 11b rates: 1Mbps 2Mbps 5.5Mbps 11Mbps
+iwi0: 11g rates: 1Mbps 2Mbps 5.5Mbps 11Mbps 6Mbps 9Mbps 12Mbps 18Mbps 24Mbps 36Mbps 48Mbps 54Mbps
+fxp0 at pci1 dev 8 function 0: Intel PRO/100 VE (MOB) Network Controller (rev. 0x81)
+fxp0: interrupting at irq 11
+fxp0: Ethernet address XXX
+inphy0 at fxp0 phy 1: i82562ET 10/100 media interface, rev. 0
+inphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+cbb0: cacheline 0x8 lattimer 0x40
+cbb0: bhlc 0x24008
+cbb0: interrupting at irq 11
+cardslot0 at cbb0
+cardbus0 at cardslot0: bus 3
+pcmcia0 at cardslot0
+ichlpcib0 at pci0 dev 31 function 0: vendor 8086 product 24cc (rev. 0x01)
+timecounter: Timecounter "ichlpcib0" frequency 3579545 Hz quality 1000
+ichlpcib0: 24-bit timer
+tco0 at ichlpcib0: TCO (watchdog) timer configured.
+tco0: Min/Max interval 2/37 seconds
+ichlpcib0: SpeedStep enabled
+piixide0 at pci0 dev 31 function 1: Intel 82801DBM IDE Controller (ICH4-M) (rev. 0x01)
+piixide0: bus-master DMA support present
+piixide0: primary channel configured to compatibility mode
+piixide0: primary channel interrupting at irq 14
+atabus0 at piixide0 channel 0
+piixide0: secondary channel configured to compatibility mode
+piixide0: secondary channel interrupting at irq 15
+atabus1 at piixide0 channel 1
+ichsmb0 at pci0 dev 31 function 3: vendor 8086 product 24c3 (rev. 0x01)
+ichsmb0: interrupting at irq 11
+iic0 at ichsmb0: I2C bus
+auich0 at pci0 dev 31 function 5: i82801DB/DBM (ICH4/ICH4M) AC-97 Audio
+auich0: interrupting at irq 11
+auich0: ac97: Analog Devices AD1981B codec; headphone, 20 bit DAC, no 3D stereo
+auich0: ac97: ext id 0x601<AC97_22,AMAP,VRA>
+vendor 8086 product 24c6 (modem communications, revision 0x01) at pci0 dev 31 function 6 not configured
+isa0 at ichlpcib0
+lpt2 at isa0 port 0x3bc-0x3bf irq : polled
+com0 at isa0 port 0x3f8-0x3ff irq 4: ns16550a, working fifo
+com1 at isa0 port 0x2f8-0x2ff irq 3: ns16550a, working fifo
+fdc0 at isa0 port 0x3f0-0x3f7 irq 6 drq 2
+est0 at cpu0: Enhanced SpeedStep
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+auich0: measured ac97 link rate at 48000 Hz
+audio0 at auich0: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+fd0 at fdc0 drive 0: 1.44MB, 80 cyl, 2 head, 18 sec
+acpiacad0: AC adapter online.
+uhub0 at usb0: NetBSD (0000) UHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+uhub1 at usb1: NetBSD (0000) UHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub1: 2 ports with 2 removable, self powered
+uhub2 at usb2: NetBSD (0000) UHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub2: 2 ports with 2 removable, self powered
+uhub3 at usb3: NetBSD (0000) EHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 1
+uhub3: 6 ports with 6 removable, self powered
+IPsec: Initialized Security Association Processing.
+acpibat0: SANYO LION rechargeable battery
+acpibat0: granularity: low->warn 0.001 Wh, warn->full 0.001 Wh
+wd0 at atabus0 drive 0
+wd0: <HTS548040M9AT00>
+wd0: drive supports 16-sector PIO transfers, LBA addressing
+wd0: 38154 MB, 77520 cyl, 16 head, 63 sec, 512 bytes/sect x 78140160 sectors
+wd0: 32-bit data port
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100)
+wd0(piixide0:0:0): using PIO mode 4, Ultra-DMA mode 5 (Ultra/100) (using DMA)
+atapibus0 at atabus1: 2 targets
+cd0 at atapibus0 drive 0: <HL-DT-STCD-RW/DVD DRIVE GCC-4241N, , 0202> cdrom removable
+cd0: 32-bit data port
+cd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 2 (Ultra/33)
+cd0(piixide0:1:0): using PIO mode 4, Ultra-DMA mode 2 (Ultra/33) (using DMA)
+boot device: wd0
+root on wd0a dumps on wd0b
+root file system type: ffs
+kern.module.path=/stand/i386/9.1/modules
+kern info: [drm] Memory usable by graphics device = 128M
+kern info: [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+kern info: [drm] Driver supports precise vblank timestamp query.
+i915drmkms0: interrupting at irq 11 (i915drmkms0)
+kern error: [drm:(/usr/src/sys/external/bsd/drm2/dist/drm/i915/intel_fifo_underrun.c:363)intel_cpu_fifo_underrun_irq_handler] *ERROR* CPU pipe A FIFO underrun
+kern error: [drm:(/usr/src/sys/external/bsd/drm2/dist/drm/i915/intel_fifo_underrun.c:363)intel_cpu_fifo_underrun_irq_handler] *ERROR* CPU pipe B FIFO underrun
+kern info: [drm] initialized overlay support
+intelfb0 at i915drmkms0
+intelfb0: framebuffer at 0xcde96000, size 1024x768, depth 32, stride 4096
+wsdisplay0 at intelfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+JIT compilation is postponed until after bpfjit module is loaded
+acpibat0: normal capacity on 'charge state'

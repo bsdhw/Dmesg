@@ -1,0 +1,246 @@
+OpenBSD 6.8-current (RAMDISK_CD) #152: Thu Nov  5 15:18:44 MST 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 519962624 (495MB)
+avail mem = 500240384 (477MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0
+acpi at bios0 not configured
+mpbios0 at bios0: Intel MP Specification 1.4
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Genuine Intel(R) CPU @ 600MHz, 600.08 MHz, 06-26-01
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,MOVBE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 512KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.0.3, IBE
+cpu at mainbus0: not configured
+mpbios0: bus 0 is type PCI   
+mpbios0: bus 64 is type ISA   
+ioapic0 at mainbus0: apid 0 pa 0xfec00000, version 20, 24 pins
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 vendor "Intel", unknown product 0x4115 rev 0x05
+pchb1 at pci0 dev 1 function 0 "Intel E600 Config" rev 0x00
+ppb0 at pci0 dev 23 function 0 "Intel E600 PCIE" rev 0x00
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "Intel EG20T PCIE" rev 0x01
+pci2 at ppb1 bus 2
+"Intel EG20T Packet Hub" rev 0x01 at pci2 dev 0 function 0 not configured
+"Intel EG20T Ethernet" rev 0x02 at pci2 dev 0 function 1 not configured
+"Intel EG20T GPIO" rev 0x01 at pci2 dev 0 function 2 not configured
+ohci0 at pci2 dev 2 function 0 "Intel EG20T USB" rev 0x02: apic 0 int 19, version 1.0
+ohci1 at pci2 dev 2 function 1 "Intel EG20T USB" rev 0x02: apic 0 int 19, version 1.0
+ohci2 at pci2 dev 2 function 2 "Intel EG20T USB" rev 0x02: apic 0 int 19, version 1.0
+ehci0 at pci2 dev 2 function 3 "Intel EG20T USB" rev 0x02: apic 0 int 19
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel EG20T USB Client" rev 0x02 at pci2 dev 2 function 4 not configured
+sdhc0 at pci2 dev 4 function 0 "Intel EG20T SDIO" rev 0x01: apic 0 int 18
+sdhc0: SDHC 1.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+sdhc1 at pci2 dev 4 function 1 "Intel EG20T SDIO" rev 0x01: apic 0 int 18
+sdhc1: SDHC 1.0, 50 MHz base clock
+sdmmc1 at sdhc1: 4-bit, sd high-speed, mmc high-speed
+ahci0 at pci2 dev 6 function 0 "Intel EG20T AHCI" rev 0x02: apic 0 int 17, AHCI 1.1
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 3.0Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, HP SSD S700 Pro, Q050> naa.a000000000000000
+sd0: 122104MB, 512 bytes/sector, 250069680 sectors, thin
+sd1 at scsibus0 targ 1 lun 0: <ATA, HP SSD S700 Pro, Q050> naa.a000000000000000
+sd1: 122104MB, 512 bytes/sector, 250069680 sectors, thin
+ohci3 at pci2 dev 8 function 0 "Intel EG20T USB" rev 0x02: apic 0 int 16, version 1.0
+ohci4 at pci2 dev 8 function 1 "Intel EG20T USB" rev 0x02: apic 0 int 16, version 1.0
+ohci5 at pci2 dev 8 function 2 "Intel EG20T USB" rev 0x02: apic 0 int 16, version 1.0
+ehci1 at pci2 dev 8 function 3 "Intel EG20T USB" rev 0x02: apic 0 int 16
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel EG20T DMA" rev 0x00 at pci2 dev 10 function 0 not configured
+"Intel EG20T Serial" rev 0x01 at pci2 dev 10 function 1 not configured
+"Intel EG20T Serial" rev 0x00 at pci2 dev 10 function 2 not configured
+"Intel EG20T Serial" rev 0x00 at pci2 dev 10 function 3 not configured
+"Intel EG20T Serial" rev 0x00 at pci2 dev 10 function 4 not configured
+"Intel EG20T DMA" rev 0x00 at pci2 dev 12 function 0 not configured
+"Intel EG20T SPI" rev 0x00 at pci2 dev 12 function 1 not configured
+"Intel EG20T I2C" rev 0x00 at pci2 dev 12 function 2 not configured
+"Intel EG20T CAN" rev 0x00 at pci2 dev 12 function 3 not configured
+"Intel EG20T 1588" rev 0x01 at pci2 dev 12 function 4 not configured
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb4 at ohci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb5 at ohci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb6 at ohci4: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb7 at ohci5: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+ppb2 at pci0 dev 24 function 0 "Intel E600 PCIE" rev 0x00
+pci3 at ppb2 bus 3
+ppb3 at pci3 dev 0 function 0 "IDT 89HPES4T4" rev 0x0e
+pci4 at ppb3 bus 4
+ppb4 at pci4 dev 2 function 0 "IDT 89HPES4T4" rev 0x0e
+pci5 at ppb4 bus 5
+em0 at pci5 dev 0 function 0 "Intel 82574L" rev 0x00: apic 0 int 19, address XXX
+ppb5 at pci4 dev 3 function 0 "IDT 89HPES4T4" rev 0x0e
+pci6 at ppb5 bus 6
+em1 at pci6 dev 0 function 0 "Intel 82574L" rev 0x00: apic 0 int 16, address XXX
+ppb6 at pci4 dev 4 function 0 "IDT 89HPES4T4" rev 0x0e
+pci7 at ppb6 bus 7
+ppb7 at pci0 dev 25 function 0 "Intel E600 PCIE" rev 0x00
+pci8 at ppb7 bus 8
+ppb8 at pci8 dev 0 function 0 "IDT 89HPES4T4" rev 0x0e
+pci9 at ppb8 bus 9
+ppb9 at pci9 dev 2 function 0 "IDT 89HPES4T4" rev 0x0e
+pci10 at ppb9 bus 10
+em2 at pci10 dev 0 function 0 "Intel 82574L" rev 0x00: apic 0 int 16, address XXX
+ppb10 at pci9 dev 3 function 0 "IDT 89HPES4T4" rev 0x0e
+pci11 at ppb10 bus 11
+em3 at pci11 dev 0 function 0 "Intel 82574L" rev 0x00: apic 0 int 17, address XXX
+ppb11 at pci9 dev 4 function 0 "IDT 89HPES4T4" rev 0x0e
+pci12 at ppb11 bus 12
+ppb12 at pci0 dev 26 function 0 "Intel E600 PCIE" rev 0x00
+pci13 at ppb12 bus 13
+"Intel E600 LPC" rev 0x00 at pci0 dev 31 function 0 not configured
+isa0 at mainbus0
+com0 at isa0 port 0x3f8/8 irq 4: ti16750, 64 byte fifo
+com0: console
+softraid0 at root
+scsibus1 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+panic: init died (signal 11, exit 0)
+syncing disks...17 11  done
+OpenBSD 6.8-current (GENERIC.MP) #164: Thu Nov  5 15:11:03 MST 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 519962624 (495MB)
+avail mem = 488955904 (466MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0
+acpi at bios0 not configured
+mpbios0 at bios0: Intel MP Specification 1.4
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Genuine Intel(R) CPU @ 600MHz, 600.10 MHz, 06-26-01
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,MOVBE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 512KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.0.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Genuine Intel(R) CPU @ 600MHz, 600.00 MHz, 06-26-01
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,MOVBE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 512KB 64b/line 8-way L2 cache
+cpu1: smt 1, core 0, package 0
+mpbios0: bus 0 is type PCI   
+mpbios0: bus 64 is type ISA   
+ioapic0 at mainbus0: apid 0 pa 0xfec00000, version 20, 24 pins
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 vendor "Intel", unknown product 0x4115 rev 0x05
+pchb1 at pci0 dev 1 function 0 "Intel E600 Config" rev 0x00
+ppb0 at pci0 dev 23 function 0 "Intel E600 PCIE" rev 0x00
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "Intel EG20T PCIE" rev 0x01
+pci2 at ppb1 bus 2
+"Intel EG20T Packet Hub" rev 0x01 at pci2 dev 0 function 0 not configured
+"Intel EG20T Ethernet" rev 0x02 at pci2 dev 0 function 1 not configured
+"Intel EG20T GPIO" rev 0x01 at pci2 dev 0 function 2 not configured
+ohci0 at pci2 dev 2 function 0 "Intel EG20T USB" rev 0x02: apic 0 int 19, version 1.0
+ohci1 at pci2 dev 2 function 1 "Intel EG20T USB" rev 0x02: apic 0 int 19, version 1.0
+ohci2 at pci2 dev 2 function 2 "Intel EG20T USB" rev 0x02: apic 0 int 19, version 1.0
+ehci0 at pci2 dev 2 function 3 "Intel EG20T USB" rev 0x02: apic 0 int 19
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel EG20T USB Client" rev 0x02 at pci2 dev 2 function 4 not configured
+sdhc0 at pci2 dev 4 function 0 "Intel EG20T SDIO" rev 0x01: apic 0 int 18
+sdhc0: SDHC 1.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+sdhc1 at pci2 dev 4 function 1 "Intel EG20T SDIO" rev 0x01: apic 0 int 18
+sdhc1: SDHC 1.0, 50 MHz base clock
+sdmmc1 at sdhc1: 4-bit, sd high-speed, mmc high-speed
+ahci0 at pci2 dev 6 function 0 "Intel EG20T AHCI" rev 0x02: apic 0 int 17, AHCI 1.1
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 3.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, HP SSD S700 Pro, Q050> naa.a000000000000000
+sd0: 122104MB, 512 bytes/sector, 250069680 sectors, thin
+sd1 at scsibus1 targ 1 lun 0: <ATA, HP SSD S700 Pro, Q050> naa.a000000000000000
+sd1: 122104MB, 512 bytes/sector, 250069680 sectors, thin
+ohci3 at pci2 dev 8 function 0 "Intel EG20T USB" rev 0x02: apic 0 int 16, version 1.0
+ohci4 at pci2 dev 8 function 1 "Intel EG20T USB" rev 0x02: apic 0 int 16, version 1.0
+ohci5 at pci2 dev 8 function 2 "Intel EG20T USB" rev 0x02: apic 0 int 16, version 1.0
+ehci1 at pci2 dev 8 function 3 "Intel EG20T USB" rev 0x02: apic 0 int 16
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel EG20T DMA" rev 0x00 at pci2 dev 10 function 0 not configured
+puc0 at pci2 dev 10 function 1 "Intel EG20T Serial" rev 0x01: ports: 16 com
+com4 at puc0 port 0 apic 0 int 19: ti16750, 64 byte fifo
+puc1 at pci2 dev 10 function 2 "Intel EG20T Serial" rev 0x00: ports: 16 com
+com5 at puc1 port 0 apic 0 int 19: ti16750, 64 byte fifo
+puc2 at pci2 dev 10 function 3 "Intel EG20T Serial" rev 0x00: ports: 16 com
+com6 at puc2 port 0 apic 0 int 19: ti16750, 64 byte fifo
+puc3 at pci2 dev 10 function 4 "Intel EG20T Serial" rev 0x00: ports: 16 com
+com7 at puc3 port 0 apic 0 int 19: ti16750, 64 byte fifo
+"Intel EG20T DMA" rev 0x00 at pci2 dev 12 function 0 not configured
+"Intel EG20T SPI" rev 0x00 at pci2 dev 12 function 1 not configured
+"Intel EG20T I2C" rev 0x00 at pci2 dev 12 function 2 not configured
+"Intel EG20T CAN" rev 0x00 at pci2 dev 12 function 3 not configured
+"Intel EG20T 1588" rev 0x01 at pci2 dev 12 function 4 not configured
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb4 at ohci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb5 at ohci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb6 at ohci4: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+usb7 at ohci5: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel OHCI root hub" rev 1.00/1.00 addr 1
+ppb2 at pci0 dev 24 function 0 "Intel E600 PCIE" rev 0x00
+pci3 at ppb2 bus 3
+ppb3 at pci3 dev 0 function 0 "IDT 89HPES4T4" rev 0x0e
+pci4 at ppb3 bus 4
+ppb4 at pci4 dev 2 function 0 "IDT 89HPES4T4" rev 0x0e
+pci5 at ppb4 bus 5
+em0 at pci5 dev 0 function 0 "Intel 82574L" rev 0x00: apic 0 int 19, address XXX
+ppb5 at pci4 dev 3 function 0 "IDT 89HPES4T4" rev 0x0e
+pci6 at ppb5 bus 6
+em1 at pci6 dev 0 function 0 "Intel 82574L" rev 0x00: apic 0 int 16, address XXX
+ppb6 at pci4 dev 4 function 0 "IDT 89HPES4T4" rev 0x0e
+pci7 at ppb6 bus 7
+ppb7 at pci0 dev 25 function 0 "Intel E600 PCIE" rev 0x00
+pci8 at ppb7 bus 8
+ppb8 at pci8 dev 0 function 0 "IDT 89HPES4T4" rev 0x0e
+pci9 at ppb8 bus 9
+ppb9 at pci9 dev 2 function 0 "IDT 89HPES4T4" rev 0x0e
+pci10 at ppb9 bus 10
+em2 at pci10 dev 0 function 0 "Intel 82574L" rev 0x00: apic 0 int 16, address XXX
+ppb10 at pci9 dev 3 function 0 "IDT 89HPES4T4" rev 0x0e
+pci11 at ppb10 bus 11
+em3 at pci11 dev 0 function 0 "Intel 82574L" rev 0x00: apic 0 int 17, address XXX
+ppb11 at pci9 dev 4 function 0 "IDT 89HPES4T4" rev 0x0e
+pci12 at ppb11 bus 12
+ppb12 at pci0 dev 26 function 0 "Intel E600 PCIE" rev 0x00
+pci13 at ppb12 bus 13
+tcpcib0 at pci0 dev 31 function 0 "Intel E600 LPC" rev 0x00: 14318179 Hz timer, watchdog
+isa0 at tcpcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ti16750, 64 byte fifo
+com0: console
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+skgpio0 at isa0 port 0x680/32
+gpio0 at skgpio0: 16 pins
+gpio1 at skgpio0: 2 pins
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (f6dc74e0e225a0a7.a) swap on sd0b dump on sd0b
+WARNING: /mnt was not properly unmounted

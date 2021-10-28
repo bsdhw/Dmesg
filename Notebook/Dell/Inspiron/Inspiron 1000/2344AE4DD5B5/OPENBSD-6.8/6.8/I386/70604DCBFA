@@ -1,0 +1,99 @@
+OpenBSD 6.8 (GENERIC) #4: Mon Jan 11 10:34:49 MST 2021
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 1272397824 (1213MB)
+avail mem = 1232912384 (1175MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 03/04/05, BIOS32 rev. 0 @ 0xfd830, SMBIOS rev. 2.31 @ 0xd6010 (29 entries)
+bios0: vendor Dell Computer Corp. version "A08 (Q3B01)" date 03/04/2004
+bios0: Dell Computer Corp. Inspiron 1000
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC
+acpi0: wakeup devices LID_(S3) PCI0(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Mobile Intel(R) Celeron(R) CPU 2.20GHz ("GenuineIntel" 686-class) 2.20 GHz, 0f-02-09
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,CNXT-ID,xTPR,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 11, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiec0 at acpi0
+acpibtn0 at acpi0: LID_
+acpibat0 at acpi0: BAT1 model "60S6701 " serial ... type LION  oem "Sanyo"
+acpiac0 at acpi0: AC unit online
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+acpibtn1 at acpi0: PWB_
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: !C3(@85 io@0x8015), !C2(@1 io@0x8014), C1(@1 halt!)
+acpipwrres0 at acpi0: QFAN, resource for FAN_
+acpitz0 at acpi0: critical temperature is 95 degC
+bios0: ROM list: 0xc0000/0xc000 0xcc000/0xa000 0xd6000/0x800!
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "SiS 650 PCI" rev 0x80
+sisagp0 at pchb0
+agp0 at sisagp0: aperture at 0xe0000000, size 0x4000000
+ppb0 at pci0 dev 1 function 0 "SiS 86C201 AGP" rev 0x00
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 "SiS 650 VGA" rev 0x00
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+pcib0 at pci0 dev 2 function 0 "SiS 85C503 System" rev 0x25
+pciide0 at pci0 dev 2 function 5 "SiS 5513 EIDE" rev 0x00: 650: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide0 channel 0 drive 0: <KingSpec KSD-PA25.6-032MS>
+wd0: 1-sector PIO, LBA48, 30458MB, 62377984 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 6
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <TSSTcorp, DVD+-RW TS-L632H, D200> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 2
+"SiS 7013 Modem" rev 0xa0 at pci0 dev 2 function 6 not configured
+auich0 at pci0 dev 2 function 7 "SiS 7012 AC97" rev 0xa0: apic 1 int 18, SiS7012
+ac97: codec id 0x41445374 (Analog Devices AD1981B)
+ac97: codec features headphone, 20 bit DAC, No 3D Stereo
+audio0 at auich0
+ohci0 at pci0 dev 3 function 0 "SiS 5597/5598 USB" rev 0x0f: apic 1 int 20, version 1.0, legacy support
+ohci1 at pci0 dev 3 function 1 "SiS 5597/5598 USB" rev 0x0f: apic 1 int 21, version 1.0, legacy support
+ehci0 at pci0 dev 3 function 2 "SiS 7002 USB" rev 0x00: apic 1 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "SiS EHCI root hub" rev 2.00/1.00 addr 1
+sis0 at pci0 dev 4 function 0 "SiS 900" rev 0x91: apic 1 int 19, address XXX
+rlphy0 at sis0 phy 1: RTL8201L 10/100 PHY, rev. 1
+cbb0 at pci0 dev 10 function 0 "TI PCI1510 CardBus" rev 0x00: apic 1 int 17
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: ALPS Glidepoint, version 0x7321
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+usb1 at ohci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "SiS OHCI root hub" rev 1.00/1.00 addr 1
+usb2 at ohci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "SiS OHCI root hub" rev 1.00/1.00 addr 1
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 2 device 0 cacheline 0x8, lattimer 0x20
+pcmcia0 at cardslot0
+urtwn0 at uhub0 port 3 configuration 1 interface 0 "Realtek 802.11n WLAN Adapter" rev 2.00/2.00 addr 2
+urtwn0: MAC/BB RTL8188CUS, RF 6052 1T1R, address XXX
+uhidev0 at uhub1 port 1 configuration 1 interface 0 "PixArt Lenovo USB Optical Mouse" rev 2.00/1.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (b15c8aa547f0d9da.a) swap on wd0b dump on wd0b
+WARNING: / was not properly unmounted
+firefox[65472]: pledge "", syscall 289
+firefox[7922]: pledge "", syscall 289

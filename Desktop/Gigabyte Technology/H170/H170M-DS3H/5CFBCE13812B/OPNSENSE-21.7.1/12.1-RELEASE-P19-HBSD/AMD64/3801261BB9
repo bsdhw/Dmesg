@@ -1,0 +1,317 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD #0  f692db99f3c(stable/21.7)-dirty: Mon Aug  2 13:29:29 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz (4008.15-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506e3  Family=0x6  Model=0x5e  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xc000000<IBPB,STIBP>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16498499584 (15734 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 5 4 2 6 7 3
+Timecounter "TSC-low" frequency 2004075216 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ix0: <Intel(R) X540-AT2> mem 0xe0000000-0xe01fffff,0xe0200000-0xe0203fff irq 16 at device 0.0 on pci1
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xee000000-0xeeffffff,0xd0000000-0xdfffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xef510000-0xef51ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xef528000-0xef529fff,0xef52c000-0xef52c0ff,0xef52b000-0xef52b7ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib2: <ACPI PCI-PCI bridge> irq 18 at device 27.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 19 at device 27.3 on pci0
+pci3: <ACPI PCI bus> on pcib3
+em0: <Intel(R) Gigabit CT 82574L> port 0xe000-0xe01f mem 0xef3c0000-0xef3dffff,0xef300000-0xef37ffff,0xef3e0000-0xef3e3fff irq 19 at device 0.0 on pci3
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using 2 RX queues 2 TX queues
+em0: Using MSI-X interrupts with 3 vectors
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib4: <ACPI PCI-PCI bridge> irq 18 at device 28.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+re0: <Realtek PCIe GbE Family Controller> port 0xd000-0xd0ff mem 0xef204000-0xef204fff,0xef200000-0xef203fff irq 18 at device 0.0 on pci4
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib5: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci5: <ACPI PCI bus> on pcib5
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci6: <ACPI PCI bus> on pcib6
+em1: <Intel(R) Gigabit CT 82574L> port 0xc000-0xc01f mem 0xef1c0000-0xef1dffff,0xef100000-0xef17ffff,0xef1e0000-0xef1e3fff irq 16 at device 0.0 on pci6
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using 2 RX queues 2 TX queues
+em1: Using MSI-X interrupts with 3 vectors
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib7: <ACPI PCI-PCI bridge> irq 16 at device 29.0 on pci0
+pci7: <ACPI PCI bus> on pcib7
+nvme0: <Generic NVMe Device> mem 0xef000000-0xef003fff irq 16 at device 0.0 on pci7
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Sunrise Point HDA Controller> mem 0xef520000-0xef523fff,0xef500000-0xef50ffff irq 16 at device 31.3 on pci0
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+ppc1: <Parallel port> port 0x378-0x37f irq 5 on acpi0
+ppc1: Generic chipset (EPP/NIBBLE) in COMPATIBLE mode
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xcffff,0xd0000-0xd0fff,0xd1000-0xd1fff,0xd2000-0xd2fff,0xd3000-0xd3fff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+cd0 at ahcich0 bus 0 scbus0 target 0 lun 0
+cd0: <ATAPI iHAS124   F CL9N> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA6, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <Sabrent> NVMe namespace
+nvd0: 244198MB (500118192 512 byte sectors)
+hdacc0: <Realtek ALC887 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC887 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC887 (Rear Analog 7.1/2.0)> at nid 20,22,21,23 and 24,26 on hdaa0
+pcm1: <Realtek ALC887 (Front Analog)> at nid 27 and 25 on hdaa0
+pcm2: <Realtek ALC887 (Onboard Digital)> at nid 17 on hdaa0
+hdacc1: <Intel Skylake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Skylake Audio Function Group> at nid 1 on hdacc1
+pcm3: <Intel Skylake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 24 ports with 24 removable, self powered
+ugen0.2: <American Power Conversion Back-UPS RS 1500G FW:865.L5 .D USB FW:L5> at usbus0
+ugen0.3: <vendor 0x1a40 USB 2.0 Hub> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x1a40 USB 2.0 Hub, class 9/0, rev 2.00/1.11, addr 2> on usbus0
+uhub1: 4 ports with 4 removable, self powered
+ugen0.4: <SONiX USB Device> at usbus0
+ukbd0 on uhub1
+ukbd0: <SONiX USB Device, class 0/0, rev 2.00/0.01, addr 3> on usbus0
+kbd2 at ukbd0
+em0: link state changed to UP
+em1: link state changed to UP
+ums0 on uhub1
+ums0: <SONiX USB Device, class 0/0, rev 2.00/0.01, addr 3> on usbus0
+ums0: 5 buttons and [XYZ] coordinates ID=1
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+em0: link state changed to DOWN
+vlan0: changing name to 'em0_vlan30'
+vlan1: changing name to 'em0_vlan40'
+vlan2: changing name to 'em0_vlan50'
+tun1: changing name to 'ovpns1'
+em1: link state changed to DOWN
+ix0: link state changed to UP
+re0: link state changed to UP
+ix0: link state changed to DOWN
+em0: link state changed to UP
+em0_vlan50: link state changed to UP
+em0_vlan40: link state changed to UP
+em0_vlan30: link state changed to UP
+em1: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+ovpns1: link state changed to UP
+ix0: link state changed to UP
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+688.114913 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+688.114935 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+688.116665 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+688.151736 [ 320] generic_netmap_register   Emulated adapter for re0 activated
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+692.259864 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+692.259904 [1130] generic_netmap_attach     Emulated adapter for em0_vlan40 created (prev was NULL)
+692.259931 [1035] generic_netmap_dtor       Emulated netmap adapter for em0_vlan40 destroyed
+692.259965 [1130] generic_netmap_attach     Emulated adapter for em0_vlan50 created (prev was NULL)
+692.259991 [1035] generic_netmap_dtor       Emulated netmap adapter for em0_vlan50 destroyed
+em0_vlan40: permanently promiscuous mode enabled
+em0: promiscuous mode enabled
+em0_vlan50: permanently promiscuous mode enabled
+692.260166 [1130] generic_netmap_attach     Emulated adapter for em0_vlan40 created (prev was NULL)
+692.260279 [ 320] generic_netmap_register   Emulated adapter for em0_vlan40 activated
+692.260343 [1130] generic_netmap_attach     Emulated adapter for em0_vlan50 created (prev was NULL)
+692.260462 [ 320] generic_netmap_register   Emulated adapter for em0_vlan50 activated
+692.289234 [1130] generic_netmap_attach     Emulated adapter for em0_vlan30 created (prev was NULL)
+692.289261 [1035] generic_netmap_dtor       Emulated netmap adapter for em0_vlan30 destroyed
+em0_vlan30: permanently promiscuous mode enabled
+692.289460 [1130] generic_netmap_attach     Emulated adapter for em0_vlan30 created (prev was NULL)
+692.289567 [ 320] generic_netmap_register   Emulated adapter for em0_vlan30 activated
+692.305893 [ 853] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+ix0: link state changed to DOWN
+em1: link state changed to DOWN
+em1: permanently promiscuous mode enabled
+692.457507 [ 853] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+ix0: permanently promiscuous mode enabled
+ix0: link state changed to UP
+692.601750 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+ix0: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+em0: link state changed to DOWN
+em0_vlan50: link state changed to DOWN
+em0_vlan40: link state changed to DOWN
+vlan0: changing name to 'em0_vlan30'
+em0: link state changed to UP
+em0_vlan50: link state changed to UP
+em0_vlan40: link state changed to UP
+em0_vlan30: link state changed to UP
+em0: link state changed to DOWN
+em0_vlan50: link state changed to DOWN
+em0_vlan30: link state changed to DOWN
+vlan1: changing name to 'em0_vlan40'
+em0: link state changed to UP
+em0_vlan50: link state changed to UP
+em0_vlan40: link state changed to UP
+em0_vlan30: link state changed to UP
+em0: promiscuous mode disabled
+em0: link state changed to DOWN
+em0_vlan40: link state changed to DOWN
+em0_vlan30: link state changed to DOWN
+vlan2: changing name to 'em0_vlan50'
+em0: link state changed to UP
+em0_vlan50: link state changed to UP
+em0_vlan40: link state changed to UP
+em0_vlan30: link state changed to UP
+656.172355 [ 295] generic_netmap_unregister Emulated adapter for em0_vlan40 deactivated
+656.172442 [1035] generic_netmap_dtor       Emulated netmap adapter for em0_vlan40 destroyed
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+656.876443 [ 295] generic_netmap_unregister Emulated adapter for em0_vlan30 deactivated
+656.876536 [1035] generic_netmap_dtor       Emulated netmap adapter for em0_vlan30 destroyed
+em1: link state changed to DOWN
+657.451753 [ 295] generic_netmap_unregister Emulated adapter for em0_vlan50 deactivated
+657.451809 [1035] generic_netmap_dtor       Emulated netmap adapter for em0_vlan50 destroyed
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+664.937551 [1130] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+664.937575 [1035] generic_netmap_dtor       Emulated netmap adapter for ovpns1 destroyed
+664.937699 [1130] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+664.937783 [ 320] generic_netmap_register   Emulated adapter for ovpns1 activated
+664.955444 [1130] generic_netmap_attach     Emulated adapter for em1 created (prev was em1)
+664.955464 [1027] generic_netmap_dtor       Native netmap adapter for em1 restored
+664.955481 [1035] generic_netmap_dtor       Emulated netmap adapter for em1 destroyed
+664.961890 [1130] generic_netmap_attach     Emulated adapter for ix0 created (prev was ix0)
+664.961915 [1027] generic_netmap_dtor       Native netmap adapter for ix0 restored
+664.961935 [1035] generic_netmap_dtor       Emulated netmap adapter for ix0 destroyed
+664.961963 [1130] generic_netmap_attach     Emulated adapter for em0_vlan30 created (prev was NULL)
+664.961985 [1035] generic_netmap_dtor       Emulated netmap adapter for em0_vlan30 destroyed
+664.962012 [1130] generic_netmap_attach     Emulated adapter for em0_vlan50 created (prev was NULL)
+664.962037 [1035] generic_netmap_dtor       Emulated netmap adapter for em0_vlan50 destroyed
+664.962112 [1130] generic_netmap_attach     Emulated adapter for ix0 created (prev was ix0)
+664.962211 [ 320] generic_netmap_register   Emulated adapter for ix0 activated
+em0_vlan50: permanently promiscuous mode enabled
+664.962265 [1130] generic_netmap_attach     Emulated adapter for em0_vlan40 created (prev was NULL)
+em0: promiscuous mode enabled
+664.962287 [1035] generic_netmap_dtor       Emulated netmap adapter for em0_vlan40 destroyed
+664.962326 [1130] generic_netmap_attach     Emulated adapter for em0_vlan50 created (prev was NULL)
+664.962433 [ 320] generic_netmap_register   Emulated adapter for em0_vlan50 activated
+em0_vlan40: permanently promiscuous mode enabled
+664.962499 [1130] generic_netmap_attach     Emulated adapter for em0_vlan40 created (prev was NULL)
+664.962588 [ 320] generic_netmap_register   Emulated adapter for em0_vlan40 activated
+em0_vlan30: permanently promiscuous mode enabled
+664.962776 [1130] generic_netmap_attach     Emulated adapter for em0_vlan30 created (prev was NULL)
+664.962882 [ 320] generic_netmap_register   Emulated adapter for em0_vlan30 activated
+em1: link state changed to DOWN
+665.095696 [1130] generic_netmap_attach     Emulated adapter for em1 created (prev was em1)
+665.095778 [ 320] generic_netmap_register   Emulated adapter for em1 activated
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+pid 10843 (c-icap), jid 0, uid 959: exited on signal 11

@@ -1,0 +1,568 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p18-HBSD #1  815defa6fd0(stable/21.1)-dirty: Mon Jun 14 09:17:18 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1360x768
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Celeron(R) CPU  J1900  @ 1.99GHz (2000.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x30678  Family=0x6  Model=0x37  Stepping=8
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x41d8e3bf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2282<TSCADJ,SMEP,ERMS,NFPUSG>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3982942208 (3798 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 128/32 (20181213/tbfadt-748)
+ioapic0 <Version 2.0> irqs 0-86 on motherboard
+Launching APs: 2 1 3
+Timecounter "TSC" frequency 2000049504 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000054 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf080-0xf087 mem 0xd0000000-0xd03fffff,0xc0000000-0xcfffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+ahci0: <AHCI SATA controller> port 0xf070-0xf077,0xf060-0xf063,0xf050-0xf057,0xf040-0xf043,0xf020-0xf03f mem 0xd0a15000-0xd0a157ff irq 19 at device 19.0 on pci0
+ahci0: AHCI v1.30 with 2 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+xhci0: <Intel BayTrail USB 3.0 controller> mem 0xd0a00000-0xd0a0ffff irq 20 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <encrypt/decrypt> at device 26.0 (no driver attached)
+hdac0: <Intel BayTrail HDA Controller> mem 0xd0a10000-0xd0a13fff irq 22 at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+em0: <Intel(R) PRO/1000 Network Connection> port 0xe000-0xe01f mem 0xd0900000-0xd091ffff,0xd0920000-0xd0923fff irq 16 at device 0.0 on pci1
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib2: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+em1: <Intel(R) PRO/1000 Network Connection> port 0xd000-0xd01f mem 0xd0800000-0xd081ffff,0xd0820000-0xd0823fff irq 17 at device 0.0 on pci2
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib3: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci3: <ACPI PCI bus> on pcib3
+em2: <Intel(R) PRO/1000 Network Connection> port 0xc000-0xc01f mem 0xd0700000-0xd071ffff,0xd0720000-0xd0723fff irq 18 at device 0.0 on pci3
+em2: Using 1024 TX descriptors and 1024 RX descriptors
+em2: Using an MSI interrupt
+em2: Ethernet address: ...
+em2: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib4: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci4: <ACPI PCI bus> on pcib4
+em3: <Intel(R) PRO/1000 Network Connection> port 0xb000-0xb01f mem 0xd0600000-0xd061ffff,0xd0620000-0xd0623fff irq 19 at device 0.0 on pci4
+em3: Using 1024 TX descriptors and 1024 RX descriptors
+em3: Using an MSI interrupt
+em3: Ethernet address: ...
+em3: netmap queues/slots: TX 1/1024, RX 1/1024
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <Intel (0x2882) HDA CODEC> at cad 2 on hdac0
+hdaa0: <Intel (0x2882) Audio Function Group> at nid 1 on hdacc0
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <SATA SSD S5FAM012> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 15272MB (31277232 512 byte sectors)
+pcm0: <Intel (0x2882) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <Intel (0x2882) (HDMI/DP 8ch)> at nid 5 on hdaa0
+Trying to mount root from ufs:/dev/da1p2 [rw]...
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+Root mount waiting for: usbus0
+uhub0: 7 ports with 7 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <Chicony Saitek Eclipse Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <Chicony Saitek Eclipse Keyboard, class 0/0, rev 2.00/1.30, addr 1> on usbus0
+kbd1 at ukbd0
+mountroot: waiting for device /dev/da1p2...
+Mounting from ufs:/dev/da1p2 failed with error 19.
+
+Loader variables:
+  vfs.root.mountfrom=ufs:/dev/da1p2
+  vfs.root.mountfrom.options=rw
+
+Manual root filesystem specification:
+  <fstype>:<device> [options]
+      Mount <device> using filesystem <fstype>
+      and with the specified (optional) option list.
+
+    eg. ufs:/dev/da0s1a
+        zfs:zroot/ROOT/default
+        cd9660:/dev/cd0 ro
+          (which is equivalent to: mount -t cd9660 -o ro /dev/cd0 /)
+
+  ?               List valid disk boot devices
+  .               Yield 1 second (for background tasks)
+  <empty line>    Abort manual input
+
+mountroot> 
+List of GEOM managed disk devices:
+  diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXX diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXX diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXX gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX ufsid/XXXXXXXXXXXXXXXX gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX msdosfs/EFISYS gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX diskid/XXXXXXXXXXXXXXXXXXXXXXXXX ada0p3 ada0p2 ada0p1 ada0
+
+mountroot> Invalid file system specification.
+
+mountroot> Trying to mount root from ufs:/dev/ada0p1 []...
+Mounting from ufs:/dev/ada0p1 failed with error 2; retrying for 3 more seconds
+Mounting from ufs:/dev/ada0p1 failed with error 2.
+
+mountroot> Trying to mount root from ufs:/dev/ada0p3 []...
+Mounting from ufs:/dev/ada0p3 failed with error 2; retrying for 3 more seconds
+Mounting from ufs:/dev/ada0p3 failed with error 2.
+
+mountroot> Trying to mount root from ufs:/dev/ada0p2 []...
+em0: link state changed to UP
+em1: link state changed to UP
+uhid0 on uhub0
+uhid0: <Chicony Saitek Eclipse Keyboard, class 0/0, rev 2.00/1.30, addr 1> on usbus0
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+tun1: changing name to 'ovpns1'
+em0: link state changed to DOWN
+em1: link state changed to DOWN
+em0: link state changed to UP
+em1: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+tap9993: Ethernet address: ...
+tap9993: changing name to 'ztebjbqjoe9rrj1'
+ztebjbqjoe9rrj1: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+em0: promiscuous mode enabled
+enc0: promiscuous mode enabled
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+em1: promiscuous mode enabled
+ovpns1: promiscuous mode enabled
+lo0: promiscuous mode enabled
+ztebjbqjoe9rrj1: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pid 74073 (ntopng), jid 0, uid 288, was killed: out of swap space
+em0: promiscuous mode disabled
+enc0: promiscuous mode disabled
+em1: promiscuous mode disabled
+ovpns1: promiscuous mode disabled
+lo0: promiscuous mode disabled
+ztebjbqjoe9rrj1: promiscuous mode disabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+em1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+em1: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pid 92007 (clamd), jid 0, uid 106, was killed: out of swap space
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+Deprecated code (to be removed in FreeBSD 13): MD5-HMAC authenticator for IPsec

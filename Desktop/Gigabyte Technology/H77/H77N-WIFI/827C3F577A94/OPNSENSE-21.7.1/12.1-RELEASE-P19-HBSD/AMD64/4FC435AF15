@@ -1,0 +1,205 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD #0  f692db99f3c(stable/21.7)-dirty: Mon Aug  2 13:29:29 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU           X3440  @ 2.53GHz (2527.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x106e5  Family=0x6  Model=0x1e  Stepping=5
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x98e3fd<SSE3,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16602603520 (15833 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 5 4 3 2 7 6
+Timecounter "TSC-low" frequency 1263520037 Hz quality 1000
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+000.000058 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 3.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 5.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb0: <Intel(R) I340-T2 82580 (Dual Copper)> mem 0xdfa00000-0xdfa7ffff,0xdf9f8000-0xdf9fbfff irq 16 at device 0.0 on pci2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) I340-T2 82580 (Dual Copper)> mem 0xdfa80000-0xdfafffff,0xdf9fc000-0xdf9fffff irq 17 at device 0.1 on pci2
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci0: <Intel PCH USB 2.0 controller USB-B> mem 0xdf8fa000-0xdf8fa3ff irq 22 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+bge0: <Broadcom NetXtreme Gigabit Ethernet Controller, ASIC rev. 0x00a200> mem 0xdfbf0000-0xdfbfffff irq 16 at device 0.0 on pci4
+bge0: CHIP ID 0x0000a200; ASIC REV 0x0a; CHIP REV 0xa2; PCI-E
+miibus0: <MII bus> on bge0
+brgphy0: <BCM5722 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+pcib5: <ACPI PCI-PCI bridge> at device 28.5 on pci0
+pci5: <ACPI PCI bus> on pcib5
+ehci1: <Intel PCH USB 2.0 controller USB-A> mem 0xdf8fc000-0xdf8fc3ff irq 22 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib6: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+vgapci0: <VGA-compatible display> mem 0xde000000-0xde7fffff,0xdeffc000-0xdeffffff,0xdf000000-0xdf7fffff irq 19 at device 3.0 on pci6
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Ibex Peak AHCI SATA controller> port 0xfcd0-0xfcd7,0xfcc8-0xfccb,0xfcd8-0xfcdf,0xfccc-0xfccf,0xfce0-0xfcff mem 0xdf8fe000-0xdf8fe7ff irq 20 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xcb800-0xcc7ff,0xec000-0xeffff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 14
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 14
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 14
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 14
+device_attach: est3 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 14
+device_attach: est4 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 14
+device_attach: est5 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 14
+device_attach: est6 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 14
+device_attach: est7 attach returned 6
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 850 EVO 120GB EMT02B6Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <ST380815AS 4.ADA> ATA-7 SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 76293MB (156250000 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus1 usbus0
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen0.2: <vendor 0x8087 product 0x0020> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0020> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus1 usbus0
+uhub3: 6 ports with 6 removable, self powered
+uhub2: 6 ports with 6 removable, self powered
+igb0: link state changed to UP
+igb1: link state changed to UP
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+igb0: link state changed to DOWN
+vlan0: changing name to 'igb0_vlan37'
+vlan1: changing name to 'igb0_vlan8'
+vlan2: changing name to 'igb0_vlan9'
+vlan3: changing name to 'igb0_vlan11'
+vlan4: changing name to 'igb0_vlan12'
+vlan5: changing name to 'igb0_vlan10'
+vlan6: changing name to 'igb0_vlan20'
+igb1: link state changed to DOWN
+igb0: link state changed to UP
+igb0_vlan20: link state changed to UP
+igb0_vlan37: link state changed to UP
+igb0_vlan8: link state changed to UP
+igb0_vlan9: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan11: link state changed to UP
+igb0_vlan12: link state changed to UP
+igb1: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+889.077594 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb1: permanently promiscuous mode enabled
+889.174996 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb1: link state changed to DOWN
+889.401659 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb1: link state changed to UP
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+igb1: link state changed to DOWN
+igb1: link state changed to UP

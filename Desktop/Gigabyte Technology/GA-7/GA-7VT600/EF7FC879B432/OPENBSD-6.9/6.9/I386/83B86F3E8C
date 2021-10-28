@@ -1,0 +1,99 @@
+OpenBSD 6.9 (GENERIC) #2: Tue Aug 10 08:12:32 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 1878474752 (1791MB)
+avail mem = 1827885056 (1743MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 09/24/03, BIOS32 rev. 0 @ 0xfa0e0, SMBIOS rev. 2.3 @ 0xf0120 (37 entries)
+bios0: vendor Award Software International, Inc. version "F8" date 09/24/2003
+bios0: Gigabyte Technology Co., Ltd. GA-7VT600
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S4 S5
+acpi0: tables DSDT FACP APIC
+acpi0: wakeup devices PCI0(S5) USB0(S3) USB1(S3) USB2(S3) USB6(S3) USB7(S3) USB8(S3) USB9(S3) UAR1(S5) LPT1(S5)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: AMD Athlon(tm) XP 2400+ ("AuthenticAMD" 686-class, 256KB L2 cache) 2.01 GHz, 06-08-01
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE,MMXX,3DNOW2,3DNOW
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 267MHz
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 3, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpibtn0 at acpi0: PWRB
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"PNPB006" at acpi0 not configured
+"PNPB02F" at acpi0 not configured
+acpicpu0 at acpi0: C1(@1 halt!)
+bios0: ROM list: 0xc0000/0xd000 0xd0000/0x8000!
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "VIA VT8377 PCI" rev 0x80
+viaagp0 at pchb0: v3
+agp0 at viaagp0: aperture at 0xd0000000, size 0x10000000
+ppb0 at pci0 dev 1 function 0 "VIA VT8377 AGP" rev 0x00
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 "ATI Radeon 9200 PRO" rev 0x01
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+"ATI Radeon 9200 PRO Sec" rev 0x01 at pci1 dev 0 function 1 not configured
+bktr0 at pci0 dev 10 function 0 "Brooktree BT878" rev 0x11: apic 2 int 18
+bktr0: AVer Media TV/FM, Philips PAL tuner.
+"Brooktree BT878 Audio" rev 0x11 at pci0 dev 10 function 1 not configured
+"AT&T/Lucent LTMODEM" rev 0x02 at pci0 dev 12 function 0 not configured
+rl0 at pci0 dev 13 function 0 "Realtek 8139" rev 0x10: apic 2 int 17, address XXX
+rlphy0 at rl0 phy 0: RTL internal PHY
+uhci0 at pci0 dev 16 function 0 "VIA VT83C572 USB" rev 0x80: apic 2 int 21
+uhci1 at pci0 dev 16 function 1 "VIA VT83C572 USB" rev 0x80: apic 2 int 21
+uhci2 at pci0 dev 16 function 2 "VIA VT83C572 USB" rev 0x80: apic 2 int 21
+ehci0 at pci0 dev 16 function 3 "VIA VT6202 USB" rev 0x82: apic 2 int 21
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "VIA EHCI root hub" rev 2.00/1.00 addr 1
+viapm0 at pci0 dev 17 function 0 "VIA VT8235 ISA" rev 0x00: SMI
+iic0 at viapm0
+spdmem0 at iic0 addr 0x50: 1GB DDR SDRAM non-parity PC3200CL3.0
+spdmem1 at iic0 addr 0x51: 256MB DDR SDRAM non-parity PC2700CL2.5
+spdmem2 at iic0 addr 0x52: 512MB DDR SDRAM non-parity PC3200CL3.0
+pciide0 at pci0 dev 17 function 1 "VIA VT82C571 IDE" rev 0x06: ATA133, channel 0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide0 channel 0 drive 0: <ST3160212ACE>
+wd0: 128-sector PIO, LBA48, 152626MB, 312579695 sectors
+wd1 at pciide0 channel 0 drive 1: <ST380011A>
+wd1: 16-sector PIO, LBA, 76318MB, 156299375 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+wd1(pciide0:0:1): using PIO mode 4, Ultra-DMA mode 5
+pciide0: channel 1 disabled (no drives)
+auvia0 at pci0 dev 17 function 5 "VIA VT8233 AC97" rev 0x50: apic 2 int 22
+ac97: codec id 0x414c4760 (Avance Logic ALC655 rev 0)
+audio0 at auvia0
+rl1 at pci0 dev 19 function 0 "Realtek 8139" rev 0x10: apic 2 int 18, address XXX
+rlphy1 at rl1 phy 0: RTL internal PHY
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "VIA UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "VIA UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "VIA UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at mainbus0
+isadma0 at isa0
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+it0 at isa0 port 0x2e/2: IT8705F rev 2, EC port 0x290
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec
+uhub2: device problem, disabling port 1
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on wd0a (c936933268da87a8.a) swap on wd0b dump on wd0b

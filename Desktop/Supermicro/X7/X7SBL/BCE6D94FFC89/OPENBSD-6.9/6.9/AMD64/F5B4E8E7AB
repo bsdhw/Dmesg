@@ -1,0 +1,156 @@
+OpenBSD 6.9 (GENERIC.MP) #3: Mon Jun  7 08:21:26 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 1055326208 (1006MB)
+avail mem = 1008033792 (961MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.5 @ 0x3fedf000 (39 entries)
+bios0: vendor Phoenix Technologies LTD version "1.2a" date 12/19/2008
+bios0: Supermicro X7SBL
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S1 S4 S5
+acpi0: tables DSDT FACP _MAR TCPA MCFG HPET APIC BOOT SPCR ERST HEST BERT EINJ SLIC SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT
+acpi0: wakeup devices PEG_(S5) PEX_(S5) LAN_(S5) USB4(S5) USB5(S5) USB7(S5) ESB2(S5) EXP1(S5) EXP5(S5) EXP6(S5) USB1(S5) USB2(S5) USB3(S5) USB6(S5) ESB1(S5) PCIB(S5) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-16
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU E8400 @ 3.00GHz, 2992.93 MHz, 06-17-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 6MB 64b/line 16-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 7 var ranges, 88 fixed ranges
+cpu0: apic clock running at 332MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 Duo CPU E8400 @ 3.00GHz, 2992.51 MHz, 06-17-0a
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 6MB 64b/line 16-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (PEG_)
+acpiprt2 at acpi0: bus -1 (PEX_)
+acpiprt3 at acpi0: bus 5 (EXP1)
+acpiprt4 at acpi0: bus 13 (EXP5)
+acpiprt5 at acpi0: bus 15 (EXP6)
+acpiprt6 at acpi0: bus 17 (PCIB)
+acpipci0 at acpi0 PCI0
+acpicmos0 at acpi0
+"PNP0A05" at acpi0 not configured
+acpibtn0 at acpi0: PWRB
+acpicpu0 at acpi0: C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C1(1000@1 mwait.1), PSS
+acpivideo0 at acpi0: IGD0
+ipmi at mainbus0 not configured
+cpu0: Enhanced SpeedStep 2992 MHz: speeds: 3000, 2667, 2333, 2000 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel 3200/3210 Host" rev 0x01
+ppb0 at pci0 dev 1 function 0 "Intel 3200/3210 PCIE" rev 0x01: msi
+pci1 at ppb0 bus 1
+em0 at pci1 dev 0 function 0 "Intel 82574L" rev 0x00: msi, address XXX
+uhci0 at pci0 dev 26 function 0 "Intel 82801I USB" rev 0x02: apic 2 int 16
+uhci1 at pci0 dev 26 function 1 "Intel 82801I USB" rev 0x02: apic 2 int 17
+uhci2 at pci0 dev 26 function 2 "Intel 82801I USB" rev 0x02: apic 2 int 18
+ehci0 at pci0 dev 26 function 7 "Intel 82801I USB" rev 0x02: apic 2 int 18
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb1 at pci0 dev 28 function 0 "Intel 82801I PCIE" rev 0x02: msi
+pci2 at ppb1 bus 5
+ppb2 at pci0 dev 28 function 4 "Intel 82801I PCIE" rev 0x02: msi
+pci3 at ppb2 bus 13
+em1 at pci3 dev 0 function 0 "Intel 82573E" rev 0x03: msi, address XXX
+ppb3 at pci0 dev 28 function 5 "Intel 82801I PCIE" rev 0x02: msi
+pci4 at ppb3 bus 15
+em2 at pci4 dev 0 function 0 "Intel 82573L" rev 0x00: msi, address XXX
+uhci3 at pci0 dev 29 function 0 "Intel 82801I USB" rev 0x02: apic 2 int 23
+uhci4 at pci0 dev 29 function 1 "Intel 82801I USB" rev 0x02: apic 2 int 22
+uhci5 at pci0 dev 29 function 2 "Intel 82801I USB" rev 0x02: apic 2 int 18
+ehci1 at pci0 dev 29 function 7 "Intel 82801I USB" rev 0x02: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0x92
+pci5 at ppb4 bus 17
+vga1 at pci5 dev 4 function 0 "XGI Technology Volari Z9s/Z9m" rev 0x00
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+pcib0 at pci0 dev 31 function 0 "Intel 82801IR LPC" rev 0x02
+ahci0 at pci0 dev 31 function 2 "Intel 82801I AHCI" rev 0x02: msi, AHCI 1.2
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 3.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD1005FBYZ-0, RR09> naa.50014ee2132cb834
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+sd1 at scsibus1 targ 1 lun 0: <ATA, WDC WD1005FBYZ-0, RR09> naa.50014ee26882293c
+sd1: 953869MB, 512 bytes/sector, 1953525168 sectors
+ichiic0 at pci0 dev 31 function 3 "Intel 82801I SMBus" rev 0x02: apic 2 int 17
+iic0 at ichiic0
+lm1 at iic0 addr 0x2d: W83627HF
+wbng0 at iic0 addr 0x2f: w83793g
+spdmem0 at iic0 addr 0x50: 512MB DDR2 SDRAM non-parity PC2-6400CL5
+spdmem1 at iic0 addr 0x52: 512MB DDR2 SDRAM non-parity PC2-6400CL5
+"Intel 82801I Thermal" rev 0x02 at pci0 dev 31 function 6 not configured
+usb2 at uhci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb6 at uhci4: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb7 at uhci5: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+wbsio0 at isa0 port 0x2e/2: W83627HF rev 0x41
+lm2 at wbsio0 port 0x290/8: W83627HF
+lm1: disabling sensors due to alias with lm2
+uhidev0 at uhub5 port 2 configuration 1 interface 0 "Logitech USB Keyboard" rev 1.10/64.00 addr 2
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub5 port 2 configuration 1 interface 1 "Logitech USB Keyboard" rev 1.10/64.00 addr 2
+uhidev1: iclass 3/0, 3 report ids
+uhid0 at uhidev1 reportid 1: input=1, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 3: input=3, output=0, feature=0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd2 at scsibus3 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd2: 953866MB, 512 bytes/sector, 1953519473 sectors
+root on sd2a (c0813f14b665d41c.a) swap on sd2b dump on sd2b
+wskbd1: disconnecting from wsdisplay0
+wskbd1 detached
+ukbd0 detached
+uhidev0 detached
+uhid0 detached
+uhid1 detached
+uhid2 detached
+uhidev1 detached
+carp192: state transition: BACKUP -> MASTER
+carp: pfsync0 demoted group carp by 32 to 32 (pfsync init)
+carp: pfsync0 demoted group pfsync by 32 to 32 (pfsync init)
+carp: pfsync0 demoted group carp by 1 to 33 (pfsync bulk start)
+carp: pfsync0 demoted group pfsync by 1 to 33 (pfsync bulk start)
+carp192: state transition: MASTER -> BACKUP
+carp192: state transition: BACKUP -> MASTER
+carp: pfsync0 demoted group carp by -1 to 32 (pfsync bulk done)
+carp: pfsync0 demoted group pfsync by -1 to 32 (pfsync bulk done)
+carp: pfsync0 demoted group carp by -32 to 0 (pfsync init)
+carp: pfsync0 demoted group pfsync by -32 to 0 (pfsync init)

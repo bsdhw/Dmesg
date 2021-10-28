@@ -1,0 +1,388 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE-p3 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(vga): resolution 640x480
+CPU: AMD Ryzen 7 2700X Eight-Core Processor          (3693.17-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x800f82  Family=0x17  Model=0x8  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16548003840 (15781 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 16 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 4 core(s) x 2 hardware threads
+random: unblocking device.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20200430/tbfadt-796)
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+Launching APs: 12 5 1 14 15 2 7 4 3 6 9 13 10 8 11
+Timecounter "TSC-low" frequency 1846585677 Hz quality 1000
+random: entropy device external interface
+000.000017 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81114e40, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+kbd1 at kbdmux0
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+AMD-Vi: IVRS Info VAsize = 64 PAsize = 48 GVAsize = 2 flags:0
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xfe900000-0xfe903fff irq 24 at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.3 on pci0
+pci2: <ACPI PCI bus> on pcib2
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfe6a0000-0xfe6a7fff irq 32 at device 0.0 on pci2
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AHCI SATA controller> mem 0xfe680000-0xfe69ffff irq 33 at device 0.1 on pci2
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+pcib3: <ACPI PCI-PCI bridge> irq 34 at device 0.2 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 32 at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xf000-0xf0ff mem 0xfe504000-0xfe504fff,0xfe500000-0xfe503fff irq 32 at device 0.0 on pci4
+re0: Using 1 MSI-X message
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib5: <ACPI PCI-PCI bridge> irq 33 at device 1.0 on pci3
+pci5: <ACPI PCI bus> on pcib5
+pcib6: <ACPI PCI-PCI bridge> irq 32 at device 4.0 on pci3
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci7: <ACPI PCI bus> on pcib7
+vgapci0: <VGA-compatible display> port 0xe000-0xe0ff mem 0xe0000000-0xefffffff,0xf0000000-0xf01fffff,0xfe800000-0xfe83ffff irq 54 at device 0.0 on pci7
+vgapci0: Boot video device
+hdac0: <ATI (0xaae0) HDA Controller> mem 0xfe860000-0xfe863fff irq 55 at device 0.1 on pci7
+pcib8: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci8: <ACPI PCI bus> on pcib8
+pci8: <unknown> at device 0.0 (no driver attached)
+pci8: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xfe200000-0xfe2fffff irq 37 at device 0.3 on pci8
+xhci1: 64 bytes context size, 64-bit DMA
+xhci1: Unable to map MSI-X table 
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib9: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pci9: <unknown> at device 0.0 (no driver attached)
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xfe708000-0xfe708fff irq 42 at device 0.2 on pci9
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich8: <AHCI channel> at channel 0 on ahci1
+hdac1: <AMD X370 HDA Controller> mem 0xfe700000-0xfe707fff irq 43 at device 0.3 on pci9
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart2: <16x50 with 256 byte FIFO> iomem 0xfedc9000-0xfedc9fff,0xfedc7000-0xfedc7fff irq 3 on acpi0
+uart3: <16x50 with 256 byte FIFO> iomem 0xfedca000-0xfedcafff,0xfedc8000-0xfedc8fff irq 4 on acpi0
+uart4: <16x50 with 256 byte FIFO> iomem 0xfedce000-0xfedcefff,0xfedcc000-0xfedccfff irq 3 on acpi0
+uart5: <16x50 with 256 byte FIFO> iomem 0xfedcf000-0xfedcffff,0xfedcd000-0xfedcdfff irq 4 on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+ivhd0: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd0: Flag:b0<IotlbSup,Coherent>
+ivhd0: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd0: Extended features[31:0]:22294ada<PPRSup,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd0: Extended features[62:32]:f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd0: supported paging level:7, will use only: 4
+ivhd0: device range: 0x0 - 0xffff
+ivhd0: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <Samsung SSD 970 EVO Plus 500GB> NVMe namespace
+nvd0: 476940MB (976773168 512 byte sectors)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+pcm4: <ATI R6xx (HDMI)> at nid 11 on hdaa0
+hdacc1: <Realtek ALC887 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC887 Audio Function Group> at nid 1 on hdacc1
+pcm5: <Realtek ALC887 (Rear Analog)> at nid 20 and 24,26 on hdaa1
+pcm6: <Realtek ALC887 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm7: <Realtek ALC887 (Internal Digital)> at nid 17 on hdaa1
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 CAM usbus1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <SanDisk SDSSDHII240G X31200RL> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 228936MB (468862128 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <ST3360320AS 3.AAM> ATA-7 SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 343399MB (703282608 512 byte sectors)
+ada2 at ahcich4 bus 0 scbus2 target 0 lun 0
+ada2: <TOSHIBA MK2555GSX FG001U> ATA8-ACS SATA 2.x device
+ada2: Serial Number...
+ada2: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 238475MB (488397168 512 byte sectors)
+ada3 at ahcich5 bus 0 scbus3 target 0 lun 0
+ada3: <Hitachi HTS543232A7A384 ES2OA70F> ATA8-ACS SATA 1.x device
+ada3: Serial Number...
+ada3: 150.000MB/s transfers (SATA 1.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 305245MB (625142448 512 byte sectors)
+uhub0: 8 ports with 8 removable, self powered
+uhub1: 22 ports with 22 removable, self powered
+ugen1.2: <vendor 0x0430 product 0x100e> at usbus1
+uhub2 on uhub0
+uhub2: <vendor 0x0430 product 0x100e, class 9/0, rev 2.00/1.05, addr 1> on usbus1
+Root mount waiting for: usbus0 usbus1
+uhub2: 4 ports with 3 removable, bus powered
+ugen0.2: <Nordic 2.4G Wireless Receiver> at usbus0
+ukbd0 on uhub1
+ukbd0: <Nordic 2.4G Wireless Receiver, class 0/0, rev 1.10/2.00, addr 1> on usbus0
+kbd2 at ukbd0
+Root mount waiting for: usbus0 usbus1
+ugen1.3: <Logitech 2.4GHz Cordless Desktop> at usbus1
+ukbd1 on uhub2
+ukbd1: <Logitech 2.4GHz Cordless Desktop, class 0/0, rev 2.00/9.00, addr 2> on usbus1
+kbd3 at ukbd1
+ugen0.3: <Logitech USB Mouse> at usbus0
+ugen1.4: <vendor 0x0430 Sun USB Keyboard> at usbus1
+ukbd2 on uhub2
+ukbd2: <vendor 0x0430 Sun USB Keyboard, class 0/0, rev 2.00/1.05, addr 3> on usbus1
+kbd4 at ukbd2
+GEOM_PART: integrity check failed (zvol/zroot/vm/openbsdp4, BSD)
+GEOM_PART: integrity check failed (gpt/OpenBSD%20Area, BSD)
+GEOM_ELI: Device ada0p3.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+[drm] amdgpu kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] initializing kernel modesetting (POLARIS11 0x1002:0x67EF 0x1DA2:0xE348 0xE5).
+[drm] register mmio base: 0xFE800000
+[drm] register mmio size: 262144
+[drm] PCI I/O BAR is not found.
+[drm] probing gen 2 caps for device 1022:1453 = 737903/e
+[drm] probing mlw for device 1002:67ef = 400883
+[drm] UVD is enabled in VM mode
+[drm] UVD ENC is enabled in VM mode
+[drm] VCE enabled in VM mode
+ATOM BIOS: 113-A348101E-U11
+[drm] vm size is 64 GB, 2 levels, block size is 10-bit, fragment size is 9-bit
+amdgpu/polaris11_mc.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_mc.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_mc_bin
+drmn0: VRAM: 2048M 0x000000F400000000 - 0x000000F47FFFFFFF (2048M used)
+drmn0: GTT: 256M 0x0000000000000000 - 0x000000000FFFFFFF
+Successfully added WC MTRR for [0xe0000000-0xefffffff]: 0; 
+[drm] Detected VRAM RAM=2048M, BAR=256M
+[drm] RAM width 128bits GDDR5
+[TTM] Zone  kernel: Available graphics memory: 8327770 kiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 kiB
+[TTM] Initializing pool allocator
+[drm] amdgpu: 2048M of VRAM memory ready
+[drm] amdgpu: 3072M of GTT memory ready.
+i_size_write unimplemented
+[drm] GART: num cpu pages 65536, num gpu pages 65536
+[drm] PCIE GART of 256M enabled (table at 0x000000F400040000).
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DVI-D-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-D-1
+[drm]   - kern.vt.fb.default_mode
+[drm] AMDGPU Display Connectors
+[drm] Connector 0:
+[drm]   DP-1
+[drm]   HPD5
+[drm]   DDC: 0x4868 0x4868 0x4869 0x4869 0x486a 0x486a 0x486b 0x486b
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY1
+[drm] Connector 1:
+[drm]   HDMI-A-1
+[drm]   HPD3
+[drm]   DDC: 0x4874 0x4874 0x4875 0x4875 0x4876 0x4876 0x4877 0x4877
+[drm]   Encoders:
+[drm]     DFP2: INTERNAL_UNIPHY1
+[drm] Connector 2:
+[drm]   DVI-D-1
+[drm]   HPD4
+[drm]   DDC: 0x4878 0x4878 0x4879 0x4879 0x487a 0x487a 0x487b 0x487b
+[drm]   Encoders:
+[drm]     DFP3: INTERNAL_UNIPHY
+amdgpu/polaris11_pfp_2.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_pfp_2.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_pfp_2_bin
+amdgpu/polaris11_me_2.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_me_2.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_me_2_bin
+amdgpu/polaris11_ce_2.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_ce_2.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_ce_2_bin
+[drm] Chained IB support enabled!
+amdgpu/polaris11_rlc.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_rlc.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_rlc_bin
+amdgpu/polaris11_mec_2.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_mec_2.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_mec_2_bin
+amdgpu/polaris11_mec2_2.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_mec2_2.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_mec2_2_bin
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+amdgpu/polaris11_sdma.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_sdma.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_sdma_bin
+amdgpu/polaris11_sdma1.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_sdma1.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_sdma1_bin
+i_size_write unimplemented
+i_size_write unimplemented
+amdgpu/polaris11_uvd.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_uvd.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_uvd_bin
+[drm] Found UVD firmware Version: 1.130 Family ID: 16
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+amdgpu/polaris11_vce.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_vce.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_vce_bin
+[drm] Found VCE firmware Version: 53.26 Binary ID: 3
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+amdgpu/polaris11_k_smc.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/polaris11_k_smc.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_polaris11_k_smc_bin
+[drm] UVD and UVD ENC initialized successfully.
+[drm] VCE initialized successfully.
+[drm] fb mappable at 0xE0568000
+[drm] vram apper at 0xE0000000
+[drm] size 33177600
+[drm] fb depth is 24
+[drm]    pitch is 15360
+VT: Replacing driver "vga" with new "fb".
+start FB_INFO:
+type=11 height=2160 width=3840 depth=32
+cmsize=16 size=33177600
+pbase=0xe0568000 vbase=0xfffff800e0568000
+name=drmn0 flags=0x0 stride=15360 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: amdgpudrmfb frame buffer device
+i_size_write unimplemented
+[drm] Initialized amdgpu 3.23.0 20150101 for drmn0 on minor 0
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+ums0 on uhub1
+ums0: <Nordic 2.4G Wireless Receiver, class 0/0, rev 1.10/2.00, addr 1> on usbus0
+ums0: 5 buttons and [XYZT] coordinates ID=1
+ums1 on uhub1
+ums1: <Logitech USB Mouse, class 0/0, rev 1.10/29.00, addr 2> on usbus0
+ums2 on uhub2
+ums2: <Logitech 2.4GHz Cordless Desktop, class 0/0, rev 2.00/9.00, addr 2> on usbus1
+ums1: 3 buttons and [XYZ] coordinates ID=0
+ums2: 8 buttons and [XYZT] coordinates ID=1
+re0: link state changed to UP
+Security policy loaded: MAC/ntpd (mac_ntpd)
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5
+WARNING: autofs_trigger_one: request for /usr/home/XXXXX completed with error 5

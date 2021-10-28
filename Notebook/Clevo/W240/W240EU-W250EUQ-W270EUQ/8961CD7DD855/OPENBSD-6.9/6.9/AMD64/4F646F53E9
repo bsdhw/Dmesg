@@ -1,0 +1,141 @@
+OpenBSD 6.9-beta (GENERIC) #324: Sat Feb 13 12:19:38 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+real mem = 8461582336 (8069MB)
+avail mem = 8189902848 (7810MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xda571018 (40 entries)
+bios0: vendor American Megatrends Inc. version "4.6.5" date 11/11/2013
+bios0: CLEVO CO. W240EU/W250EUQ/W270EUQ
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT MCFG SSDT HPET SSDT SSDT SSDT BGRT
+acpi0: wakeup devices P0P1(S4) USB1(S3) USB2(S3) USB3(S3) USB4(S3) USB5(S3) USB6(S3) USB7(S3) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i3-3130M CPU @ 2.60GHz, 2594.50 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus -1 (RP02)
+acpiprt3 at acpi0: bus 2 (RP03)
+acpiprt4 at acpi0: bus 3 (RP04)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+acpibtn0 at acpi0: PWRB
+acpibtn1 at acpi0: SLPB
+acpibtn2 at acpi0: LID0
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "BAT" serial ... type LION oem "NOTEBOOK"
+"PNP0C14" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@87 mwait.1@0x30), C2(500@59 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 120 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD0
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2594 MHz: speeds: 2600, 2500, 2400, 2300, 2200, 2100, 2000, 1900, 1800, 1700, 1600, 1500, 1400, 1300, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, IVYBRIDGE, gen 7
+xhci0 at pci0 dev 20 function 0 "Intel 7 Series xHCI" rev 0x04: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 16
+usb1 at ehci0: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 7 Series HD Audio" rev 0x04: msi
+azalia0: codecs: VIA/0x8446, Intel/0x2806, using VIA/0x8446
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 2
+iwn0 at pci2 dev 0 function 0 "Intel Centrino Wireless-N 2230" rev 0xc4: msi, MIMO 2T2R, BGN, address XXX
+ppb2 at pci0 dev 28 function 3 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 3
+rtsx0 at pci3 dev 0 function 0 "Realtek RTL8411 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+re0 at pci3 dev 0 function 2 "Realtek 8168" rev 0x0a: RTL8411 (0x4880), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 23
+usb2 at ehci1: USB revision 2.0
+uhub2 at usb2 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel HM76 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 6.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, Samsung SSD 850, EMT0> naa.5002538d415ff087
+sd0: 238475MB, 512 bytes/sector, 488397168 sectors, thin
+cd0 at scsibus1 targ 2 lun 0: <TSSTcorp, CDDVDW SN-208DB, TC01> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 7 Series SMBus" rev 0x04: apic 2 int 18
+iic0 at ichiic0
+"eeprom" at iic0 addr 0x50 not configured
+spdmem0 at iic0 addr 0x52: 4GB DDR3 SDRAM PC3-12800 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.2, 0x1c0b1 0xa40000 0x0 0xd04731 0xa0000
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub3 at uhub0 port 1 configuration 1 interface 0 "Alcor Micro product 0x6254" rev 2.00/1.00 addr 2
+uhidev0 at uhub3 port 3 configuration 1 interface 0 "Elan product 0x0103" rev 2.00/1.07 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+uhidev1 at uhub3 port 3 configuration 1 interface 1 "Elan product 0x0103" rev 2.00/1.07 addr 3
+uhidev1: iclass 3/0, 2 report ids
+uhid0 at uhidev1 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=1, output=0, feature=0
+ulpt0 at uhub0 port 2 configuration 1 interface 0 "Brother DCP-L2510D series" rev 2.00/1.00 addr 4
+ulpt0: using bi-directional mode
+ugen0 at uhub0 port 2 configuration 1 "Brother DCP-L2510D series" rev 2.00/1.00 addr 4
+ugen1 at uhub0 port 3 "Intel product 0x07da" rev 2.00/78.69 addr 5
+uvideo0 at uhub0 port 4 configuration 1 interface 0 "Bison BisonCam, NB Pro" rev 2.00/6.06 addr 6
+video0 at uvideo0
+uhub4 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhub5 at uhub2 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (8c5deb7d524eb5a2.a) swap on sd0b dump on sd0b
+drm:pid13310:ivb_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared fifo underrun on pipe A
+drm:pid13310:intel_cpu_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* CPU pipe A FIFO underrun
+drm:pid13310:cpt_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared pch fifo underrun on pch transcoder A
+drm:pid13310:intel_pch_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* PCH transcoder A FIFO underrun
+inteldrm0: 1366x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+/dev/sd0j: file system not clean; please fsck(8)
+ulpt0 detached
+ugen0 detached
+ulpt0 at uhub0 port 2 configuration 1 interface 0 "Brother DCP-L2510D series" rev 2.00/1.00 addr 4
+ulpt0: using bi-directional mode
+ugen0 at uhub0 port 2 configuration 1 "Brother DCP-L2510D series" rev 2.00/1.00 addr 4

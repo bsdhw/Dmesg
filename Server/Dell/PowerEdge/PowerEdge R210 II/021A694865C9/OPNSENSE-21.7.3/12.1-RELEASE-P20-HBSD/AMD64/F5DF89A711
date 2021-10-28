@@ -1,0 +1,800 @@
+uhub4: 4 ports with 4 removable, self powered
+ugen0.4: <Avocent USB Composite Device-1> at usbus0
+umass0 on uhub3
+umass0: <SCSI Transparent Interface 0> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4100
+umass0:2:0: Attached to scbus2
+umass1 on uhub3
+umass1: <SCSI Transparent Interface 1> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0x4100
+umass1:3:1: Attached to scbus3
+cd0 at umass-sim1 bus 1 scbus3 target 0 lun 0
+cd0: <iDRAC Virtual CD 0323> Removable CD-ROM SCSI device
+cd0: 40.000MB/s transfers
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+cd0: quirks=0x10<10_BYTE_ONLY>
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <iDRAC LCDRIVE 0323> Removable Direct Access SCSI device
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+
+Waiting (max 60 seconds) for system process `syncer' to stop... Syncing disks, vnodes remaining... 9 1 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+Uptime: 2m53s
+ukbd0: detached
+uhub4: detached
+uhub2: detached
+ukbd1: detached
+umass0: detached
+umass1: detached
+uhub3: detached
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD  f692db99f3c(stable/21.7) SMP amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E31220 @ 3.10GHz (3093.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206a7  Family=0x6  Model=0x2a  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8239063040 (7857 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 2 1 3
+Timecounter "TSC-low" frequency 1546523180 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+000.000054 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) I340 82580 (Copper)> mem 0xc5280000-0xc52fffff,0xc530c000-0xc530ffff irq 16 at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) I340 82580 (Copper)> mem 0xc5200000-0xc527ffff,0xc5308000-0xc530bfff irq 17 at device 0.1 on pci1
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+igb2: <Intel(R) I340 82580 (Copper)> mem 0xc5180000-0xc51fffff,0xc5304000-0xc5307fff irq 18 at device 0.2 on pci1
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+igb3: <Intel(R) I340 82580 (Copper)> mem 0xc5100000-0xc517ffff,0xc5300000-0xc5303fff irq 19 at device 0.3 on pci1
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc5406000-0xc54063ff irq 20 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce0: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc0000000-0xc1ffffff irq 16 at device 0.0 on pci2
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc2000000-0xc3ffffff irq 17 at device 0.1 on pci2
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc5405000-0xc54053ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> mem 0xc4000000-0xc47fffff,0xc5000000-0xc5003fff,0xc4800000-0xc4ffffff irq 19 at device 3.0 on pci3
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x2048-0x204f,0x2054-0x2057,0x2040-0x2047,0x2050-0x2053,0x2020-0x203f mem 0xc5404000-0xc54047ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xcc7ff,0xcc800-0xcd7ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <CT120BX500SSD1 M6CR013> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+ugen0.3: <Avocent USB Composite Device-0> at usbus0
+ukbd0 on uhub2
+ukbd0: <Keyboard> on usbus0
+kbd1 at ukbd0
+ugen1.3: <Lenovo ThinkPad Compact USB Keyboard with TrackPoint> at usbus1
+ukbd1 on uhub3
+ukbd1: <Lenovo ThinkPad Compact USB Keyboard with TrackPoint, class 0/0, rev 2.00/3.30, addr 3> on usbus1
+kbd2 at ukbd1
+ugen1.4: <vendor 0x0424 product 0x2514> at usbus1
+uhub4 on uhub3
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 4> on usbus1
+uhub4: MTT enabled
+uhub4: 4 ports with 4 removable, self powered
+ugen0.4: <Avocent USB Composite Device-1> at usbus0
+umass0 on uhub2
+umass0: <SCSI Transparent Interface 0> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4100
+umass0:2:0: Attached to scbus2
+umass1 on uhub2
+umass1: <SCSI Transparent Interface 1> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0x4100
+umass1:3:1: Attached to scbus3
+cd0 at umass-sim1 bus 1 scbus3 target 0 lun 0
+cd0: <iDRAC Virtual CD 0323> Removable CD-ROM SCSI device
+cd0: 40.000MB/s transfers
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+cd0: quirks=0x10<10_BYTE_ONLY>
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <iDRAC LCDRIVE 0323> Removable Direct Access SCSI device
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ums0 on uhub3
+ums0: <Lenovo ThinkPad Compact USB Keyboard with TrackPoint, class 0/0, rev 2.00/3.30, addr 3> on usbus1
+ums1 on uhub2
+ums1: <Mouse> on usbus0
+ums1: 3 buttons and [Z] coordinates ID=0
+ums0: 6 buttons and [XYZT] coordinates ID=1
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+vlan0: changing name to 'bce0_vlan10'
+vlan1: changing name to 'bce0_vlan100'
+tun1: changing name to 'ovpns1'
+bce0: 
+bce0: link state changed to UP
+bce0_vlan100: link state changed to UP
+bce0_vlan10: link state changed to UP
+Gigabit link up!
+bce0: Gigabit link up!
+bce0: Gigabit link up!
+bce1: 
+bce1: link state changed to UP
+Gigabit link up!
+bce1: Gigabit link up!
+pflog0: permanently promiscuous mode enabled
+ovpns1: link state changed to UP
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+476.384896 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+476.393096 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+bce0: permanently promiscuous mode enabled
+476.400961 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+476.522306 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+652.449084 [ 295] generic_netmap_unregister Emulated adapter for bce0 deactivated
+652.458096 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+670.496688 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+670.504865 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+670.512776 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+670.521190 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+728.121599 [ 295] generic_netmap_unregister Emulated adapter for bce0 deactivated
+728.130338 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+ovpns1: link state changed to DOWN
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+Uptime: 2h18m58s
+ukbd1: detached
+ums0: detached
+uhub4: detached
+uhub3: detached
+ukbd0: detached
+ums1: detached
+umass0: detached
+umass1: detached
+uhub2: detached
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD #0  f692db99f3c(stable/21.7)-dirty: Mon Aug  2 13:29:29 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E31220 @ 3.10GHz (3093.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206a7  Family=0x6  Model=0x2a  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8239063040 (7857 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 2 3 1
+Timecounter "TSC-low" frequency 1546520544 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+000.000054 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) I340 82580 (Copper)> mem 0xc5280000-0xc52fffff,0xc530c000-0xc530ffff irq 16 at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) I340 82580 (Copper)> mem 0xc5200000-0xc527ffff,0xc5308000-0xc530bfff irq 17 at device 0.1 on pci1
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+igb2: <Intel(R) I340 82580 (Copper)> mem 0xc5180000-0xc51fffff,0xc5304000-0xc5307fff irq 18 at device 0.2 on pci1
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+igb3: <Intel(R) I340 82580 (Copper)> mem 0xc5100000-0xc517ffff,0xc5300000-0xc5303fff irq 19 at device 0.3 on pci1
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc5406000-0xc54063ff irq 20 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce0: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc0000000-0xc1ffffff irq 16 at device 0.0 on pci2
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc2000000-0xc3ffffff irq 17 at device 0.1 on pci2
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc5405000-0xc54053ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> mem 0xc4000000-0xc47fffff,0xc5000000-0xc5003fff,0xc4800000-0xc4ffffff irq 19 at device 3.0 on pci3
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x2048-0x204f,0x2054-0x2057,0x2040-0x2047,0x2050-0x2053,0x2020-0x203f mem 0xc5404000-0xc54047ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xcc7ff,0xcc800-0xcd7ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <CT120BX500SSD1 M6CR013> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+ugen0.3: <Avocent USB Composite Device-0> at usbus0
+ukbd0 on uhub2
+ukbd0: <Keyboard> on usbus0
+kbd1 at ukbd0
+ugen1.3: <Lenovo ThinkPad Compact USB Keyboard with TrackPoint> at usbus1
+ukbd1 on uhub3
+ukbd1: <Lenovo ThinkPad Compact USB Keyboard with TrackPoint, class 0/0, rev 2.00/3.30, addr 3> on usbus1
+kbd2 at ukbd1
+ugen1.4: <vendor 0x0424 product 0x2514> at usbus1
+uhub4 on uhub3
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 4> on usbus1
+uhub4: MTT enabled
+uhub4: 4 ports with 4 removable, self powered
+ugen0.4: <Avocent USB Composite Device-1> at usbus0
+umass0 on uhub2
+umass0: <SCSI Transparent Interface 0> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4100
+umass0:2:0: Attached to scbus2
+umass1 on uhub2
+umass1: <SCSI Transparent Interface 1> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0x4100
+umass1:3:1: Attached to scbus3
+cd0 at umass-sim1 bus 1 scbus3 target 0 lun 0
+cd0: <iDRAC Virtual CD 0323> Removable CD-ROM SCSI device
+cd0: 40.000MB/s transfers
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+cd0: quirks=0x10<10_BYTE_ONLY>
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <iDRAC LCDRIVE 0323> Removable Direct Access SCSI device
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ums0 on uhub2
+ums0: <Mouse> on usbus0
+ums1 on uhub3
+ums1: <Lenovo ThinkPad Compact USB Keyboard with TrackPoint, class 0/0, rev 2.00/3.30, addr 3> on usbus1
+ums0: 3 buttons and [Z] coordinates ID=0
+ums1: 6 buttons and [XYZT] coordinates ID=1
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+vlan0: changing name to 'bce0_vlan10'
+vlan1: changing name to 'bce0_vlan100'
+tun1: changing name to 'ovpns1'
+bce0: 
+bce0: link state changed to UP
+bce0_vlan100: link state changed to UP
+bce0_vlan10: link state changed to UP
+Gigabit link up!
+bce0: Gigabit link up!
+bce0: Gigabit link up!
+bce1: 
+bce1: link state changed to UP
+Gigabit link up!
+bce1: Gigabit link up!
+bce1: Gigabit link up!
+pflog0: permanently promiscuous mode enabled
+ovpns1: link state changed to UP
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+987.771193 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+987.779382 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+bce0: permanently promiscuous mode enabled
+987.787255 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+987.909689 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+bce1: link state changed to DOWN
+bce1: 
+bce1: link state changed to UP
+Gigabit link up!
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+bce1: link state changed to DOWN
+bce1: 
+bce1: link state changed to UP
+Gigabit link up!
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce0
+826.150406 [ 295] generic_netmap_unregister Emulated adapter for bce0 deactivated
+826.159437 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+840.930341 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+840.938517 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+840.946392 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+840.954822 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+897.515190 [ 295] generic_netmap_unregister Emulated adapter for bce0 deactivated
+897.524306 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+ovpns1: link state changed to DOWN
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+
+Waiting (max 60 seconds) for system process `syncer' to stop... Syncing disks, vnodes remaining... 34 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+Uptime: 37d6h59m59s
+ukbd1: detached
+ums1: detached
+uhub4: detached
+uhub3: detached
+ukbd0: detached
+ums0: detached
+umass0: detached
+umass1: detached
+uhub2: detached
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p20-HBSD #0  e4fc5be9c3d(stable/21.7)-dirty: Thu Sep  2 10:30:36 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E31220 @ 3.10GHz (3093.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206a7  Family=0x6  Model=0x2a  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8239063040 (7857 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 3 2 1
+Timecounter "TSC-low" frequency 1546518114 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+000.000054 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) I340 82580 (Copper)> mem 0xc5280000-0xc52fffff,0xc530c000-0xc530ffff irq 16 at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) I340 82580 (Copper)> mem 0xc5200000-0xc527ffff,0xc5308000-0xc530bfff irq 17 at device 0.1 on pci1
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+igb2: <Intel(R) I340 82580 (Copper)> mem 0xc5180000-0xc51fffff,0xc5304000-0xc5307fff irq 18 at device 0.2 on pci1
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+igb3: <Intel(R) I340 82580 (Copper)> mem 0xc5100000-0xc517ffff,0xc5300000-0xc5303fff irq 19 at device 0.3 on pci1
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc5406000-0xc54063ff irq 20 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce0: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc0000000-0xc1ffffff irq 16 at device 0.0 on pci2
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc2000000-0xc3ffffff irq 17 at device 0.1 on pci2
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc5405000-0xc54053ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> mem 0xc4000000-0xc47fffff,0xc5000000-0xc5003fff,0xc4800000-0xc4ffffff irq 19 at device 3.0 on pci3
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x2048-0x204f,0x2054-0x2057,0x2040-0x2047,0x2050-0x2053,0x2020-0x203f mem 0xc5404000-0xc54047ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xcc7ff,0xcc800-0xcd7ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <CT120BX500SSD1 M6CR013> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+ugen0.3: <Avocent USB Composite Device-0> at usbus0
+ukbd0 on uhub2
+ukbd0: <Keyboard> on usbus0
+kbd1 at ukbd0
+ugen1.3: <Lenovo ThinkPad Compact USB Keyboard with TrackPoint> at usbus1
+ukbd1 on uhub3
+ukbd1: <Lenovo ThinkPad Compact USB Keyboard with TrackPoint, class 0/0, rev 2.00/3.30, addr 3> on usbus1
+kbd2 at ukbd1
+ugen1.4: <vendor 0x0424 product 0x2514> at usbus1
+uhub4 on uhub3
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 4> on usbus1
+uhub4: MTT enabled
+uhub4: 4 ports with 4 removable, self powered
+ugen0.4: <Avocent USB Composite Device-1> at usbus0
+umass0 on uhub2
+umass0: <SCSI Transparent Interface 0> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4100
+umass0:2:0: Attached to scbus2
+umass1 on uhub2
+umass1: <SCSI Transparent Interface 1> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0x4100
+umass1:3:1: Attached to scbus3
+cd0 at umass-sim1 bus 1 scbus3 target 0 lun 0
+cd0: <iDRAC Virtual CD 0323> Removable CD-ROM SCSI device
+cd0: 40.000MB/s transfers
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+cd0: quirks=0x10<10_BYTE_ONLY>
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <iDRAC LCDRIVE 0323> Removable Direct Access SCSI device
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ums0 on uhub3
+ums0: <Lenovo ThinkPad Compact USB Keyboard with TrackPoint, class 0/0, rev 2.00/3.30, addr 3> on usbus1
+ums1 on uhub2
+ums1: <Mouse> on usbus0
+ums1: 3 buttons and [Z] coordinates ID=0
+ums0: 6 buttons and [XYZT] coordinates ID=1
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+vlan0: changing name to 'bce0_vlan10'
+vlan1: changing name to 'bce0_vlan100'
+tun1: changing name to 'ovpns1'
+bce0: 
+bce0: link state changed to UP
+bce0_vlan100: link state changed to UP
+bce0_vlan10: link state changed to UP
+Gigabit link up!
+bce0: Gigabit link up!
+bce1: 
+bce1: link state changed to UP
+Gigabit link up!
+bce1: Gigabit link up!
+bce1: Gigabit link up!
+bce0: Gigabit link up!
+pflog0: permanently promiscuous mode enabled
+ovpns1: link state changed to UP
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+155.490776 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+155.498957 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+bce0: permanently promiscuous mode enabled
+155.506927 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+155.632216 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+933.604799 [1192] netmap_grab_packets       bad pkt at 1009 len 10
+933.711407 [1192] netmap_grab_packets       bad pkt at 115 len 13
+933.810579 [1192] netmap_grab_packets       bad pkt at 561 len 10
+934.059207 [1192] netmap_grab_packets       bad pkt at 50 len 13
+934.199254 [1192] netmap_grab_packets       bad pkt at 344 len 10
+934.367113 [1192] netmap_grab_packets       bad pkt at 702 len 13
+934.507659 [1192] netmap_grab_packets       bad pkt at 982 len 10
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce0
+pid 75537 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+pid 63197 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+pid 94605 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+pid 87467 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+pid 20923 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+[HBSD SEGVGUARD] [syslog-ng (20923)] Suspending execution for 600 seconds after 5 crashes.
+ -> pid: 20923 ppid: 51475 p_pax: 0xa50<SEGVGUARD,ASLR,NOSHLIBRANDOM,NODISALLOWMAP32BIT> 
+[HBSD SEGVGUARD] [syslog-ng (51475)] Preventing execution due to repeated segfaults.
+ -> pid: 51475 ppid: 1 p_pax: 0xa50<SEGVGUARD,ASLR,NOSHLIBRANDOM,NODISALLOWMAP32BIT> 

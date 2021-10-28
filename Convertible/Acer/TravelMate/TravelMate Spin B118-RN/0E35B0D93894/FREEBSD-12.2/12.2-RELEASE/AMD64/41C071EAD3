@@ -1,0 +1,730 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE r366954 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Pentium(R) CPU N4200 @ 1.10GHz (1094.45-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506c9  Family=0x6  Model=0x5c  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x4ff8ebbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,CX16,xTPR,PDCM,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2294e283<FSGSBASE,TSCADJ,SMEP,ERMS,NFPUSG,MPX,PQE,RDSEED,SMAP,CLFLUSHOPT,PROCTRACE,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3903971328 (3723 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ACRSYS ACRPRDCT>
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 3 2 1
+Timecounter "TSC" frequency 1094453157 Hz quality 1000
+Cuse v0.1.36 @ /dev/cuse
+random: entropy device external interface
+000.000020 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81115e40, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+kbd1 at kbdmux0
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+acpi0: <ACRSYS ACRPRDCT> on motherboard
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 8 on acpi0
+Timecounter "HPET" frequency 19200000 Hz quality 950
+Event timer "HPET" frequency 19200000 Hz quality 550
+Event timer "HPET1" frequency 19200000 Hz quality 440
+Event timer "HPET2" frequency 19200000 Hz quality 440
+Event timer "HPET3" frequency 19200000 Hz quality 440
+Event timer "HPET4" frequency 19200000 Hz quality 440
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x2b> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x2000-0x203f mem 0x90000000-0x90ffffff,0x80000000-0x8fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+hdac0: <Intel Broxton-P HDA Controller> mem 0x91318000-0x9131bfff,0x91000000-0x910fffff irq 25 at device 14.0 on pci0
+pci0: <simple comms> at device 15.0 (no driver attached)
+ahci0: <Intel Apollo Lake AHCI SATA controller> port 0x2080-0x2087,0x2088-0x208b,0x2060-0x207f mem 0x9131c000-0x9131dfff,0x91329000-0x913290ff,0x91327000-0x913277ff at device 18.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 19.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 19.2 on pci0
+pcib2: failed to allocate initial I/O port window: 0x1000-0x1fff
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> mem 0x91204000-0x91204fff,0x91200000-0x91203fff at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: turning off MSI enable bit.
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib3: <ACPI PCI-PCI bridge> at device 19.3 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <network> at device 0.0 (no driver attached)
+xhci0: <Intel Apollo Lake USB 3.0 controller> mem 0x91300000-0x9130ffff irq 17 at device 21.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+usbus0: timed out waiting for BIOS
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+psm0: model Generic PS/2 mouse, device ID 0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS NOTICE: Prefetch is disabled by default if less than 4GB of RAM is present;
+            to enable, add "vfs.zfs.prefetch_disable=0" to /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <Realtek ALC255 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC255 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC255 (Internal Analog)> at nid 20 and 18 on hdaa0
+pcm1: <Realtek ALC255 (Front Analog Headphones)> at nid 33 on hdaa0
+hdacc1: <Intel Broxton HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Broxton Audio Function Group> at nid 1 on hdacc1
+pcm2: <Intel Broxton (HDMI/DP 8ch)> at nid 3 on hdaa1
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: CAM usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <Micron 1100 MTFDDAV256TBN M0MA020> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 244198MB (500118192 512 byte sectors)
+GEOM_ELI: Device ada0p4.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: hardware
+uhub0: 15 ports with 15 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0
+Root mount waiting for: usbus0
+ugen0.3: <ELAN Touchscreen> at usbus0
+wmt0 on uhub0
+wmt0: <ELAN Touchscreen, class 0/0, rev 2.00/57.21, addr 2> on usbus0
+wmt0: 10 contacts and [WH]. Report range [0:0] - [3024:1680]
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0
+Root mount waiting for: usbus0
+ugen0.5: <Generic USB2.0-CRW> at usbus0
+GEOM_ELI: Device label/swap0.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: hardware
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+Successfully added WC MTRR for [0x80000000-0x8fffffff]: 0; 
+[drm] Got stolen memory base 0x7c000000, size 0x4000000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector eDP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.eDP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Initialized i915 1.6.0 20171222 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+cmsize=16 size=8294400
+pbase=0x80040000 vbase=0xfffff80080040000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: inteldrmfb frame buffer device
+ig4iic0: <Intel Apollo Lake I2C Controller-0> mem 0x91321000-0x91321fff,0x91322000-0x91322fff irq 27 at device 22.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus> on ig4iic0
+ig4iic1: <Intel Apollo Lake I2C Controller-1> mem 0x91323000-0x91323fff,0x91324000-0x91324fff irq 28 at device 22.1 on pci0
+ig4iic1: Using MSI
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+iicbus1: <unknown card> at addr 0x5c
+ig4iic2: <Intel Apollo Lake I2C Controller-4> mem 0x91325000-0x91325fff,0x91326000-0x91326fff irq 31 at device 23.0 on pci0
+ig4iic2: Using MSI
+iicbus2: <Philips I2C bus (ACPI-hinted)> on ig4iic2
+drmn0: successfully loaded firmware image with name: i915/bxt_dmc_ver1_07.bin
+[drm] Finished loading DMC firmware i915/bxt_dmc_ver1_07.bin (v1.7)
+iwm0: <Intel(R) Dual Band Wireless AC 7265> mem 0x91100000-0x91101fff at device 0.0 on pci3
+iwm0: hw rev 0x210, fw ver 22.361476.0, address XXX
+wlan0: Ethernet address: ...
+lo0: link state changed to UP
+re0: link state changed to DOWN
+wlan0: link state changed to UP
+ubt0 on uhub0
+ubt0: <vendor 0x8087 product 0x0a2a, class 224/1, rev 2.01/0.01, addr 1> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ubt0: ubt_ctrl_write_callback:908: control transfer failed: USB_ERR_TIMEOUT
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+bridge0: Ethernet address: ...
+bridge0: changing name to 'vm-private'
+Security policy loaded: MAC/ntpd (mac_ntpd)
+hdac0: Command 0x2033b000 timeout on address 2
+pid 32326 (gnome-keyring-daemo), jid 0, uid 1001: exited on signal 11 (core dumped)
+hdac0: Command 0x20220011 timeout on address 2
+hdac0: Command 0x20270d01 timeout on address 2
+hdac0: Command 0x20270630 timeout on address 2
+hdac0: Command 0x20272d01 timeout on address 2
+hdac0: Command 0x20373400 timeout on address 2
+hdac0: Command 0x20373411 timeout on address 2
+hdac0: Command 0x203734f2 timeout on address 2
+hdac0: Command 0x203734f3 timeout on address 2
+hdac0: Command 0x203734f4 timeout on address 2
+hdac0: Command 0x203734f5 timeout on address 2
+hdac0: Command 0x203734f6 timeout on address 2
+hdac0: Command 0x203734f7 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373200 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373184 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x2037310a timeout on address 2
+hdac0: Command 0x20373170 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x203732c0 timeout on address 2
+hdac0: Command 0x20270d00 timeout on address 2
+hdac0: Command 0x20270600 timeout on address 2
+pid 93002 (gnome-keyring-daemo), jid 0, uid 1001: exited on signal 11 (core dumped)
+hdac0: Command 0x20220011 timeout on address 2
+hdac0: Command 0x20270d01 timeout on address 2
+hdac0: Command 0x20270630 timeout on address 2
+hdac0: Command 0x20272d01 timeout on address 2
+hdac0: Command 0x20373400 timeout on address 2
+hdac0: Command 0x20373411 timeout on address 2
+hdac0: Command 0x203734f2 timeout on address 2
+pid 81755 (gdm), jid 0, uid 0: exited on signal 11 (core dumped)
+hdac0: Command 0x203734f3 timeout on address 2
+hdac0: Command 0x203734f4 timeout on address 2
+hdac0: Command 0x203734f5 timeout on address 2
+hdac0: Command 0x203734f6 timeout on address 2
+hdac0: Command 0x203734f7 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373200 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373184 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x2037310a timeout on address 2
+hdac0: Command 0x20373170 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x203732c0 timeout on address 2
+hdac0: Command 0x20270d00 timeout on address 2
+hdac0: Command 0x20270600 timeout on address 2
+hdac0: Command 0x20220011 timeout on address 2
+hdac0: Command 0x20270d01 timeout on address 2
+hdac0: Command 0x20270630 timeout on address 2
+hdac0: Command 0x20272d01 timeout on address 2
+hdac0: Command 0x20373400 timeout on address 2
+hdac0: Command 0x20373411 timeout on address 2
+hdac0: Command 0x203734f2 timeout on address 2
+hdac0: Command 0x203734f3 timeout on address 2
+hdac0: Command 0x203734f4 timeout on address 2
+hdac0: Command 0x203734f5 timeout on address 2
+hdac0: Command 0x203734f6 timeout on address 2
+hdac0: Command 0x203734f7 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373200 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373184 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x2037310a timeout on address 2
+hdac0: Command 0x20373170 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x203732c0 timeout on address 2
+hdac0: Command 0x20270d00 timeout on address 2
+hdac0: Command 0x20270600 timeout on address 2
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0 (disconnected)
+ubt0: at uhub0, port 5, addr 1 (disconnected)
+ubt0: detached
+ugen0.3: <ELAN Touchscreen> at usbus0 (disconnected)
+wmt0: at uhub0, port 6, addr 2 (disconnected)
+wmt0: detached
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0 (disconnected)
+ugen0.5: <Generic USB2.0-CRW> at usbus0 (disconnected)
+wlan0: link state changed to DOWN
+hdac0: Command 0x20170503 timeout on address 2
+vgapci0: child drmn0 requested pci_set_powerstate
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+hdac0: Command 0x20170500 timeout on address 2
+hdac0: Command 0x20270500 timeout on address 2
+hdac0: Command 0x20370500 timeout on address 2
+hdac0: Command 0x2033b080 timeout on address 2
+hdac0: Command 0x20370100 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20370883 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f2e08 timeout on address 2
+hdac0: Command 0x2033b000 timeout on address 2
+usbus0: waiting for BIOS to give up control
+wlan0: link state changed to UP
+usbus0: timed out waiting for BIOS
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub0: 15 ports with 15 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0
+ubt0 on uhub0
+ubt0: <vendor 0x8087 product 0x0a2a, class 224/1, rev 2.01/0.01, addr 1> on usbus0
+ugen0.3: <ELAN Touchscreen> at usbus0
+wmt0 on uhub0
+wmt0: <ELAN Touchscreen, class 0/0, rev 2.00/57.21, addr 2> on usbus0
+wmt0: 10 contacts and [WH]. Report range [0:0] - [3024:1680]
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0
+ugen0.5: <Generic USB2.0-CRW> at usbus0
+ubt0: ubt_ctrl_write_callback:908: control transfer failed: USB_ERR_TIMEOUT
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+pid 76245 (gnome-keyring-daemo), jid 0, uid 1001: exited on signal 11 (core dumped)
+hdac0: Command 0x20220011 timeout on address 2
+hdac0: Command 0x20270d01 timeout on address 2
+hdac0: Command 0x20270630 timeout on address 2
+hdac0: Command 0x20272d01 timeout on address 2
+hdac0: Command 0x20373400 timeout on address 2
+hdac0: Command 0x20373411 timeout on address 2
+hdac0: Command 0x203734f2 timeout on address 2
+hdac0: Command 0x203734f3 timeout on address 2
+hdac0: Command 0x203734f4 timeout on address 2
+hdac0: Command 0x203734f5 timeout on address 2
+hdac0: Command 0x203734f6 timeout on address 2
+hdac0: Command 0x203734f7 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373200 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373184 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x2037310a timeout on address 2
+hdac0: Command 0x20373170 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x203732c0 timeout on address 2
+hdac0: Command 0x20270d00 timeout on address 2
+hdac0: Command 0x20270600 timeout on address 2
+hdac0: Command 0x20220011 timeout on address 2
+hdac0: Command 0x20270d01 timeout on address 2
+hdac0: Command 0x20270630 timeout on address 2
+hdac0: Command 0x20272d01 timeout on address 2
+hdac0: Command 0x20373400 timeout on address 2
+hdac0: Command 0x20373411 timeout on address 2
+hdac0: Command 0x203734f2 timeout on address 2
+hdac0: Command 0x203734f3 timeout on address 2
+hdac0: Command 0x203734f4 timeout on address 2
+hdac0: Command 0x203734f5 timeout on address 2
+hdac0: Command 0x203734f6 timeout on address 2
+hdac0: Command 0x203734f7 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373200 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x20373184 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x2037310a timeout on address 2
+hdac0: Command 0x20373170 timeout on address 2
+hdac0: Command 0x20373101 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373100 timeout on address 2
+hdac0: Command 0x20373000 timeout on address 2
+hdac0: Command 0x203732c0 timeout on address 2
+hdac0: Command 0x20270d00 timeout on address 2
+hdac0: Command 0x20270600 timeout on address 2
+acpi_ec0: EcCommand: no response to 0x84
+acpi_ec0: EcCommand: no response to 0x84
+acpi_ec0: GPE query failed: AE_NO_HARDWARE_RESPONSE
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0 (disconnected)
+ubt0: at uhub0, port 5, addr 1 (disconnected)
+ubt0: detached
+ugen0.3: <ELAN Touchscreen> at usbus0 (disconnected)
+wmt0: at uhub0, port 6, addr 2 (disconnected)
+wmt0: detached
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0 (disconnected)
+ugen0.5: <Generic USB2.0-CRW> at usbus0 (disconnected)
+wlan0: link state changed to DOWN
+hdac0: Command 0x20170503 timeout on address 2
+vgapci0: child drmn0 requested pci_set_powerstate
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+hdac0: Command 0x20170500 timeout on address 2
+hdac0: Command 0x20270500 timeout on address 2
+hdac0: Command 0x20370500 timeout on address 2
+hdac0: Command 0x2033b080 timeout on address 2
+hdac0: Command 0x20370100 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20370883 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f2e08 timeout on address 2
+hdac0: Command 0x2033b000 timeout on address 2
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub0: 15 ports with 15 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0
+ubt0 on uhub0
+ubt0: <vendor 0x8087 product 0x0a2a, class 224/1, rev 2.01/0.01, addr 1> on usbus0
+ugen0.3: <ELAN Touchscreen> at usbus0
+wmt0 on uhub0
+wmt0: <ELAN Touchscreen, class 0/0, rev 2.00/57.21, addr 2> on usbus0
+wmt0: 10 contacts and [WH]. Report range [0:0] - [3024:1680]
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0
+wlan0: link state changed to UP
+ugen0.5: <Generic USB2.0-CRW> at usbus0
+ubt0: ubt_ctrl_write_callback:908: control transfer failed: USB_ERR_TIMEOUT
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0 (disconnected)
+ubt0: at uhub0, port 5, addr 1 (disconnected)
+ubt0: detached
+ugen0.3: <ELAN Touchscreen> at usbus0 (disconnected)
+wmt0: at uhub0, port 6, addr 2 (disconnected)
+wmt0: detached
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0 (disconnected)
+ugen0.5: <Generic USB2.0-CRW> at usbus0 (disconnected)
+wlan0: link state changed to DOWN
+hdac0: Command 0x20170503 timeout on address 2
+vgapci0: child drmn0 requested pci_set_powerstate
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+hdac0: Command 0x20170500 timeout on address 2
+hdac0: Command 0x20270500 timeout on address 2
+hdac0: Command 0x20370500 timeout on address 2
+hdac0: Command 0x2033b080 timeout on address 2
+hdac0: Command 0x20370100 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20370883 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f2e08 timeout on address 2
+hdac0: Command 0x2033b000 timeout on address 2
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub0: 15 ports with 15 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0
+ubt0 on uhub0
+ubt0: <vendor 0x8087 product 0x0a2a, class 224/1, rev 2.01/0.01, addr 1> on usbus0
+ugen0.3: <ELAN Touchscreen> at usbus0
+wmt0 on uhub0
+wmt0: <ELAN Touchscreen, class 0/0, rev 2.00/57.21, addr 2> on usbus0
+wmt0: 10 contacts and [WH]. Report range [0:0] - [3024:1680]
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0
+wlan0: link state changed to UP
+ugen0.5: <Generic USB2.0-CRW> at usbus0
+ubt0: ubt_ctrl_write_callback:908: control transfer failed: USB_ERR_TIMEOUT
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+pid 78932 (gnome-shell), jid 0, uid 1001: exited on signal 11 (core dumped)
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0 (disconnected)
+ubt0: at uhub0, port 5, addr 1 (disconnected)
+ubt0: detached
+ugen0.3: <ELAN Touchscreen> at usbus0 (disconnected)
+wmt0: at uhub0, port 6, addr 2 (disconnected)
+wmt0: detached
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0 (disconnected)
+ugen0.5: <Generic USB2.0-CRW> at usbus0 (disconnected)
+wlan0: link state changed to DOWN
+hdac0: Command 0x20170503 timeout on address 2
+vgapci0: child drmn0 requested pci_set_powerstate
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+hdac0: Command 0x20170500 timeout on address 2
+hdac0: Command 0x20270500 timeout on address 2
+hdac0: Command 0x20370500 timeout on address 2
+hdac0: Command 0x2033b080 timeout on address 2
+hdac0: Command 0x20370100 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20370883 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f2e08 timeout on address 2
+hdac0: Command 0x2033b000 timeout on address 2
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub0: 15 ports with 15 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0
+ubt0 on uhub0
+ubt0: <vendor 0x8087 product 0x0a2a, class 224/1, rev 2.01/0.01, addr 1> on usbus0
+ugen0.3: <ELAN Touchscreen> at usbus0
+wmt0 on uhub0
+wmt0: <ELAN Touchscreen, class 0/0, rev 2.00/57.21, addr 2> on usbus0
+wmt0: 10 contacts and [WH]. Report range [0:0] - [3024:1680]
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0
+wlan0: link state changed to UP
+pid 98000 (gnome-shell), jid 0, uid 1001: exited on signal 11 (core dumped)
+ugen0.5: <Generic USB2.0-CRW> at usbus0
+ubt0: ubt_ctrl_write_callback:908: control transfer failed: USB_ERR_TIMEOUT
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+tun0: link state changed to UP
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0 (disconnected)
+ubt0: at uhub0, port 5, addr 1 (disconnected)
+ubt0: detached
+ugen0.3: <ELAN Touchscreen> at usbus0 (disconnected)
+wmt0: at uhub0, port 6, addr 2 (disconnected)
+wmt0: detached
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0 (disconnected)
+ugen0.5: <Generic USB2.0-CRW> at usbus0 (disconnected)
+wlan0: link state changed to DOWN
+hdac0: Command 0x20170503 timeout on address 2
+vgapci0: child drmn0 requested pci_set_powerstate
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+hdac0: Command 0x20170500 timeout on address 2
+hdac0: Command 0x20270500 timeout on address 2
+hdac0: Command 0x20370500 timeout on address 2
+hdac0: Command 0x2033b080 timeout on address 2
+hdac0: Command 0x20370100 timeout on address 2
+hdac0: Command 0x20370740 timeout on address 2
+hdac0: Command 0x20370883 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f0900 timeout on address 2
+hdac0: Command 0x203f2e08 timeout on address 2
+hdac0: Command 0x2033b000 timeout on address 2
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub0: 15 ports with 15 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0a2a> at usbus0
+ubt0 on uhub0
+ubt0: <vendor 0x8087 product 0x0a2a, class 224/1, rev 2.01/0.01, addr 1> on usbus0
+ugen0.3: <ELAN Touchscreen> at usbus0
+wmt0 on uhub0
+wmt0: <ELAN Touchscreen, class 0/0, rev 2.00/57.21, addr 2> on usbus0
+wmt0: 10 contacts and [WH]. Report range [0:0] - [3024:1680]
+ugen0.4: <Chicony Electronics Co.,Ltd. HD WebCam> at usbus0
+wlan0: link state changed to UP
+ugen0.5: <Generic USB2.0-CRW> at usbus0
+ubt0: ubt_ctrl_write_callback:908: control transfer failed: USB_ERR_TIMEOUT
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+pid 46526 (gnome-shell), jid 0, uid 1001: exited on signal 11 (core dumped)
+tun0: link state changed to DOWN
+tun0: link state changed to UP

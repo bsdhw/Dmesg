@@ -1,0 +1,932 @@
+Ie (rev. 0x00)
+ppb11: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci12 at ppb11 bus 12
+pci12: i/o space, memory space enabled, rd/line, wr/inv ok
+genfb0 at pci12 dev 0 function 0: ATI Technologies Radeon RX470 (rev. 0xe7)
+genfb0: framebuffer at 0xd0000000, size 1024x768, depth 32, stride 4096
+genfb0: shadow framebuffer enabled, size 3072 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+hdaudio0 at pci12 dev 0 function 1: HD Audio Controller
+hdaudio0: interrupting at msi4 vec 0
+hdaudio0: HDA ver. 1.0, OSS 6, ISS 0, BSS 0, SDO 1, 64-bit
+hdafg0 at hdaudio0: vendor 1002 product aa01
+hdafg0: HDMI00 2ch: Digital Out [Jack]
+hdafg0: HDMI01 2ch: Digital Out [Jack]
+hdafg0: HDMI02 2ch: Digital Out [Jack]
+hdafg0: HDMI03 2ch: Digital Out [Jack]
+hdafg0: HDMI04 2ch: Digital Out [Jack]
+hdafg0: HDMI05 2ch: Digital Out [Jack]
+hdafg0: 2ch/0ch 32000Hz 44100Hz 48000Hz PCM16 AC3
+pchb3 at pci0 dev 4 function 0: AMD Family17h PCIe (rev. 0x00)
+pchb4 at pci0 dev 7 function 0: AMD Family17h PCIe (rev. 0x00)
+ppb12 at pci0 dev 7 function 1: AMD Family17h PCIe (rev. 0x00)
+ppb12: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci13 at ppb12 bus 13
+pci13: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD Family17h PCIe Dummy Function (non-essential instrumentation, subclass 0x00) at pci13 dev 0 function 0 not configured
+amdccp0 at pci13 dev 0 function 2: AMD Cryptographic Coprocessor
+xhci1 at pci13 dev 0 function 3: AMD Family17h xHCI (rev. 0x00)
+xhci1: 64-bit DMA
+xhci1: interrupting at msix5 vec 0
+xhci1: xHCI version 1.0
+usb2 at xhci1: USB revision 3.0
+usb3 at xhci1: USB revision 2.0
+pchb5 at pci0 dev 8 function 0: AMD Family17h PCIe (rev. 0x00)
+ppb13 at pci0 dev 8 function 1: AMD Family17h PCIe (rev. 0x00)
+ppb13: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci14 at ppb13 bus 14
+pci14: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD product 1455 (non-essential instrumentation, subclass 0x00) at pci14 dev 0 function 0 not configured
+ahcisata1 at pci14 dev 0 function 2: AMD FCH AHCI (rev. 0x51)
+ahcisata1: 64-bit DMA
+ahcisata1: AHCI revision 1.31, 1 port, 32 slots, CAP 0xf737ff00<PSC,SSC,PMD,FBSS,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SMPS,SSNTF,SNCQ,S64A>
+ahcisata1: interrupting at msi6 vec 0
+atabus8 at ahcisata1 channel 0
+hdaudio1 at pci14 dev 0 function 3: HD Audio Controller
+hdaudio1: interrupting at msi7 vec 0
+hdaudio1: HDA ver. 1.0, OSS 4, ISS 4, BSS 0, SDO 1, 64-bit
+hdafg1 at hdaudio1: vendor 10ec product 1220
+hdafg1: DAC00 6ch: Speaker [Jack]
+hdafg1: DAC01 2ch: HP Out [Jack]
+hdafg1: DIG02 2ch: SPDIF Out [Jack]
+hdafg1: ADC03 2ch: Line In [Jack], Mic In [Jack]
+hdafg1: ADC04 2ch: Mic In [Jack]
+hdafg1: 6ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg1: playback, capture, full duplex, independent
+audio0: slinear_le:16 6ch 48000Hz, blk 5760 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+piixpm0 at pci0 dev 20 function 0: AMD X370/X399 SMBus Controller (rev. 0x59)
+piixpm0: interrupting at SMI, 
+iic0 at piixpm0 port 0: I2C bus
+iic1 at piixpm0 port 1: I2C bus
+pcib0 at pci0 dev 20 function 3: AMD FCH LPC (rev. 0x51)
+pchb6 at pci0 dev 24 function 0: AMD Family17h Data Fabric (rev. 0x00)
+pchb7 at pci0 dev 24 function 1: AMD Family17h Data Fabric (rev. 0x00)
+pchb8 at pci0 dev 24 function 2: AMD Family17h Data Fabric (rev. 0x00)
+pchb9 at pci0 dev 24 function 3: AMD Family17h Data Fabric (rev. 0x00)
+pchb10 at pci0 dev 24 function 4: AMD Family17h Data Fabric (rev. 0x00)
+pchb11 at pci0 dev 24 function 5: AMD Family17h Data Fabric (rev. 0x00)
+pchb12 at pci0 dev 24 function 6: AMD Family17h Data Fabric (rev. 0x00)
+pchb13 at pci0 dev 24 function 7: AMD Family17h Data Fabric (rev. 0x00)
+isa0 at pcib0
+pckbc0 at isa0 port 0x60-0x64
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow     0 mW
+acpicpu0: C2: I/O, lat 400 us, pow     0 mW
+acpicpu0: P0: FFH, lat   1 us, pow  3867 mW, 3400 MHz
+acpicpu0: P1: FFH, lat   1 us, pow  2537 mW, 2800 MHz
+acpicpu0: P2: FFH, lat   1 us, pow  1237 mW, 1550 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+acpicpu1 at cpu1: ACPI CPU
+acpicpu2 at cpu2: ACPI CPU
+acpicpu3 at cpu3: ACPI CPU
+acpicpu4 at cpu4: ACPI CPU
+acpicpu5 at cpu5: ACPI CPU
+acpicpu6 at cpu6: ACPI CPU
+acpicpu7 at cpu7: ACPI CPU
+acpicpu8 at cpu8: ACPI CPU
+acpicpu9 at cpu9: ACPI CPU
+acpicpu10 at cpu10: ACPI CPU
+acpicpu11 at cpu11: ACPI CPU
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 3400002000 Hz quality 3000
+uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 8 ports with 8 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 14 ports with 14 removable, self powered
+uhub2 at usb2: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub2: 4 ports with 4 removable, self powered
+uhub3 at usb3: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub3: 4 ports with 4 removable, self powered
+ld0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at ld0: "EFI system partition", 204800 blocks at 2048, type: msdos
+dk1 at ld0: "Microsoft reserved partition", 32768 blocks at 206848, type: <unknown>
+dk2 at ld0: "Basic data partition", 1952258776 blocks at 239616, type: ntfs
+dk3 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 1021952 blocks at 1952499712, type: <unknown>
+IPsec: Initialized Security Association Processing.
+aes: Intel AES-NI
+chacha: x86 SSE2 ChaCha
+adiantum: self-test passed
+aes_ccm: self-test passed
+blake2s: self-test passed
+ahcisata0 port 4: device present, speed: 6.0Gb/s
+ahcisata0 port 5: device present, speed: 6.0Gb/s
+uhub4 at uhub3 port 3: Oculus VR (0x2833) Rift S USB Hub (0x2052), class 9/0, rev 2.10/1.08, addr 2
+uhub4: multiple transaction translators
+uhub4: 2 ports with 0 removable, self powered
+wd0 at atabus4 drive 0
+wd0: <CT1000BX500SSD1>
+wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+wd0: 931 GB, 1938021 cyl, 16 head, 63 sec, 512 bytes/sect x 1953525168 sectors
+wd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk4 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32734 blocks at 34, type: <unknown>
+autoconfiguration error: wd0: wedge named 'Microsoft reserved partition' already existed, using 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
+dk5 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 1953488896 blocks at 32768, type: ntfs
+autoconfiguration error: wd0: wedge named 'Basic data partition' already existed, using 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags)
+wd0(ahcisata0:4:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+wd1 at atabus5 drive 0
+wd1: <CT120BX500SSD1>
+wd1: drive supports 1-sector PIO transfers, LBA48 addressing
+wd1: 111 GB, 232581 cyl, 16 head, 63 sec, 512 bytes/sect x 234441648 sectors
+wd1: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk6 at wd1: "efiboot0", 262144 blocks at 64, type: msdos
+dk7 at wd1: "swap0", 200772416 blocks at 262208, type: ffs
+dk8 at wd1: "zfs0", 33406976 blocks at 201034624, type: swap
+umass0 at uhub0 port 3 configuration 1 interface 0
+umass0: JetFlash (0x8564) Mass Storage Device (0x1000), rev 3.00/11.00, addr 2
+umass0: using SCSI over Bulk-Only
+wd1: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags)
+wd1(ahcisata0:5:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+uhub5 at uhub2 port 3: Oculus VR (0x2833) Rift S USB Hub (0x2051), class 9/0, rev 3.10/1.08, addr 1
+uhub5: 1 port with 0 removable, self powered
+scsibus0 at umass0: 2 targets, 1 lun per target
+uhidev0 at uhub1 port 1 configuration 1 interface 0
+uhidev0: Kingsis Peripherals (0x1a7c) ZOWIE Gaming mouse (0x0001), rev 2.00/0.01, addr 1, iclass 3/1
+ums0 at uhidev0: 6 buttons and Z dir
+wsmouse0 at ums0 mux 0
+sd0 at scsibus0 target 0 lun 0: <JetFlash, Transcend 16GB, 1100> disk removable
+sd0: fabricating a geometry
+sd0: 15064 MB, 15064 cyl, 64 head, 32 sec, 512 bytes/sect x 30851072 sectors
+sd0: fabricating a geometry
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk9 at sd0: "EFI system", 262144 blocks at 2048, type: msdos
+dk10 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 3010560 blocks at 264192, type: ffs
+umodem0 at uhub4 port 2 configuration 1 interface 0
+umodem0: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3, iclass 2/2
+umodem0: data interface 1, has no CM over data, has no break
+umodem0: status change notification available
+ucom0 at umodem0
+uaudio0 at uhub4 port 2 configuration 1 interface 2
+uaudio0: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3
+uaudio0: autoconfiguration error: no usable endpoint found
+uaudio0: autoconfiguration error: audio descriptors make no sense, error=4
+uaudio1 at uhub4 port 2 configuration 1 interface 4
+uaudio1: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3
+uaudio1: autoconfiguration error: no usable endpoint found
+uaudio1: autoconfiguration error: audio descriptors make no sense, error=4
+uhidev1 at uhub4 port 2 configuration 1 interface 6
+uhidev1: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3, iclass 3/0
+uhidev1: 83 report ids
+uhid0 at uhidev1 reportid 1: input=0, output=0, feature=42
+uhid1 at uhidev1 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev1 reportid 3: input=0, output=0, feature=14
+uhid3 at uhidev1 reportid 4: input=0, output=0, feature=33
+uhid4 at uhidev1 reportid 5: input=0, output=0, feature=40
+uhid5 at uhidev1 reportid 6: input=0, output=0, feature=21
+uhid6 at uhidev1 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev1 reportid 8: input=0, output=0, feature=1
+uhid8 at uhidev1 reportid 9: input=0, output=0, feature=20
+uhid9 at uhidev1 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev1 reportid 11: input=0, output=0, feature=55
+uhid11 at uhidev1 reportid 12: input=0, output=0, feature=114
+uhid12 at uhidev1 reportid 13: input=0, output=0, feature=10
+uhid13 at uhidev1 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev1 reportid 15: input=0, output=0, feature=4
+uhid15 at uhidev1 reportid 16: input=0, output=0, feature=8
+uhid16 at uhidev1 reportid 17: input=0, output=0, feature=113
+uhid17 at uhidev1 reportid 18: input=0, output=0, feature=60
+uhid18 at uhidev1 reportid 19: input=0, output=0, feature=60
+uhid19 at uhidev1 reportid 20: input=0, output=0, feature=1
+uhid20 at uhidev1 reportid 31: input=0, output=0, feature=57
+uhid21 at uhidev1 reportid 32: input=0, output=0, feature=38
+uhid22 at uhidev1 reportid 33: input=0, output=0, feature=4
+uhid23 at uhidev1 reportid 34: input=0, output=0, feature=8
+uhid24 at uhidev1 reportid 35: input=0, output=0, feature=1
+uhid25 at uhidev1 reportid 71: input=0, output=0, feature=1
+uhid26 at uhidev1 reportid 72: input=0, output=0, feature=6
+uhid27 at uhidev1 reportid 73: input=0, output=0, feature=63
+uhid28 at uhidev1 reportid 74: input=0, output=0, feature=63
+uhid29 at uhidev1 reportid 75: input=0, output=0, feature=14
+uhid30 at uhidev1 reportid 76: input=0, output=0, feature=3
+uhid31 at uhidev1 reportid 83: input=0, output=0, feature=1
+uhidev2 at uhub4 port 2 configuration 1 interface 7
+uhidev2: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3, iclass 3/0
+uhidev2: 83 report ids
+uhid32 at uhidev2 reportid 1: input=0, output=0, feature=42
+uhid33 at uhidev2 reportid 2: input=0, output=0, feature=1
+uhid34 at uhidev2 reportid 3: input=0, output=0, feature=14
+uhid35 at uhidev2 reportid 4: input=0, output=0, feature=33
+uhid36 at uhidev2 reportid 5: input=0, output=0, feature=40
+uhid37 at uhidev2 reportid 6: input=0, output=0, feature=21
+uhid38 at uhidev2 reportid 7: input=0, output=0, feature=2
+uhid39 at uhidev2 reportid 8: input=0, output=0, feature=1
+uhid40 at uhidev2 reportid 9: input=0, output=0, feature=20
+uhid41 at uhidev2 reportid 10: input=0, output=0, feature=1
+uhid42 at uhidev2 reportid 11: input=0, output=0, feature=55
+uhid43 at uhidev2 reportid 12: input=0, output=0, feature=114
+uhid44 at uhidev2 reportid 13: input=0, output=0, feature=10
+uhid45 at uhidev2 reportid 14: input=0, output=0, feature=1
+uhid46 at uhidev2 reportid 15: input=0, output=0, feature=4
+uhid47 at uhidev2 reportid 16: input=0, output=0, feature=8
+uhid48 at uhidev2 reportid 17: input=0, output=0, feature=113
+uhid49 at uhidev2 reportid 18: input=0, output=0, feature=60
+uhid50 at uhidev2 reportid 19: input=0, output=0, feature=60
+uhid51 at uhidev2 reportid 20: input=0, output=0, feature=1
+uhid52 at uhidev2 reportid 31: input=0, output=0, feature=57
+uhid53 at uhidev2 reportid 32: input=0, output=0, feature=38
+uhid54 at uhidev2 reportid 33: input=0, output=0, feature=4
+uhid55 at uhidev2 reportid 34: input=0, output=0, feature=8
+uhid56 at uhidev2 reportid 35: input=0, output=0, feature=1
+uhid57 at uhidev2 reportid 71: input=0, output=0, feature=1
+uhid58 at uhidev2 reportid 72: input=0, output=0, feature=6
+uhid59 at uhidev2 reportid 73: input=0, output=0, feature=63
+uhid60 at uhidev2 reportid 74: input=0, output=0, feature=63
+uhid61 at uhidev2 reportid 75: input=0, output=0, feature=14
+uhid62 at uhidev2 reportid 76: input=0, output=0, feature=3
+uhid63 at uhidev2 reportid 83: input=0, output=0, feature=1
+uhidev3 at uhub4 port 2 configuration 1 interface 8
+uhidev3: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3, iclass 3/0
+uhidev3: 83 report ids
+uhid64 at uhidev3 reportid 1: input=0, output=0, feature=42
+uhid65 at uhidev3 reportid 2: input=0, output=0, feature=1
+uhid66 at uhidev3 reportid 3: input=0, output=0, feature=14
+uhid67 at uhidev3 reportid 4: input=0, output=0, feature=33
+uhid68 at uhidev3 reportid 5: input=0, output=0, feature=40
+uhid69 at uhidev3 reportid 6: input=0, output=0, feature=21
+uhid70 at uhidev3 reportid 7: input=0, output=0, feature=2
+uhid71 at uhidev3 reportid 8: input=0, output=0, feature=1
+uhid72 at uhidev3 reportid 9: input=0, output=0, feature=20
+uhid73 at uhidev3 reportid 10: input=0, output=0, feature=1
+uhid74 at uhidev3 reportid 11: input=0, output=0, feature=55
+uhid75 at uhidev3 reportid 12: input=0, output=0, feature=114
+uhid76 at uhidev3 reportid 13: input=0, output=0, feature=10
+uhid77 at uhidev3 reportid 14: input=0, output=0, feature=1
+uhid78 at uhidev3 reportid 15: input=0, output=0, feature=4
+uhid79 at uhidev3 reportid 16: input=0, output=0, feature=8
+uhid80 at uhidev3 reportid 17: input=0, output=0, feature=113
+uhid81 at uhidev3 reportid 18: input=0, output=0, feature=60
+uhid82 at uhidev3 reportid 19: input=0, output=0, feature=60
+uhid83 at uhidev3 reportid 20: input=0, output=0, feature=1
+uhid84 at uhidev3 reportid 31: input=0, output=0, feature=57
+uhid85 at uhidev3 reportid 32: input=0, output=0, feature=38
+uhid86 at uhidev3 reportid 33: input=0, output=0, feature=4
+uhid87 at uhidev3 reportid 34: input=0, output=0, feature=8
+uhid88 at uhidev3 reportid 35: input=0, output=0, feature=1
+uhid89 at uhidev3 reportid 71: input=0, output=0, feature=1
+uhid90 at uhidev3 reportid 72: input=0, output=0, feature=6
+uhid91 at uhidev3 reportid 73: input=0, output=0, feature=63
+uhid92 at uhidev3 reportid 74: input=0, output=0, feature=63
+uhid93 at uhidev3 reportid 75: input=0, output=0, feature=14
+uhid94 at uhidev3 reportid 76: input=0, output=0, feature=3
+uhid95 at uhidev3 reportid 83: input=0, output=0, feature=1
+ugen0 at uhub1 port 2
+ugen0: Microsoft (0x045e) Microsoft HoloLens (0x0661), rev 2.10/1.00, addr 3
+uhidev4 at uhub1 port 4 configuration 1 interface 0
+uhidev4: Apple Inc. (0x05ac) Magic Keyboard with Numeric Keypad (0x026c), rev 2.00/8.52, addr 4, iclass 3/0
+uhidev4: 154 report ids
+uhid96 at uhidev4 reportid 144: input=2, output=0, feature=0
+uhid97 at uhidev4 reportid 154: input=1, output=0, feature=0
+uhidev5 at uhub1 port 4 configuration 1 interface 1
+uhidev5: Apple Inc. (0x05ac) Magic Keyboard with Numeric Keypad (0x026c), rev 2.00/8.52, addr 4, iclass 3/1
+uhidev5: 63 report ids
+ukbd0 at uhidev5 reportid 1
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhid98 at uhidev5 reportid 9: input=0, output=0, feature=3
+uhid99 at uhidev5 reportid 63: input=64, output=0, feature=0
+ubt0 at uhub1 port 10
+ubt0: vendor 8087 (0x8087) product 0025 (0x0025), rev 2.00/0.02, addr 5
+uhub6 at uhub1 port 11: vendor 045b (0x045b) product 0209 (0x0209), class 9/0, rev 2.00/1.00, addr 6
+uhub6: single transaction translator
+uhub6: 3 ports with 2 removable, self powered
+uvideo0 at uhub6 port 1 configuration 1 interface 0: HD Web Camera (0x05a3) HD Web Camera (0x9331), rev 2.00/1.02, addr 7
+video0 at uvideo0: HD Web Camera (0x05a3) HD Web Camera (0x9331), rev 2.00/1.02, addr 7
+uaudio2 at uhub6 port 1 configuration 1 interface 2
+uaudio2: HD Web Camera (0x05a3) HD Web Camera (0x9331), rev 2.00/1.02, addr 7
+uaudio2: audio rev 1.00
+audio1 at uaudio2: capture
+audio1: slinear_le:16 1ch 16000Hz, blk 23040 bytes (720ms) for recording
+uhidev6 at uhub6 port 3 configuration 1 interface 0
+uhidev6: EIZO (0x056d) EIZO USB HID Monitor (0x4027), rev 1.10/80.00, addr 8, iclass 3/0
+uhidev6: 9 report ids
+uhid100 at uhidev6 reportid 1: input=0, output=0, feature=516
+uhid101 at uhidev6 reportid 2: input=0, output=0, feature=38
+uhid102 at uhidev6 reportid 3: input=38, output=0, feature=38
+uhid103 at uhidev6 reportid 4: input=0, output=0, feature=262
+uhid104 at uhidev6 reportid 5: input=0, output=0, feature=262
+uhid105 at uhidev6 reportid 6: input=0, output=0, feature=2
+uhid106 at uhidev6 reportid 7: input=0, output=0, feature=7
+uhid107 at uhidev6 reportid 8: input=0, output=0, feature=24
+uhid108 at uhidev6 reportid 9: input=0, output=0, feature=74
+uhub7 at uhub1 port 14: vendor 0424 (0x0424) product 2422 (0x2422), class 9/0, rev 2.00/0.a0, addr 9
+uhub7: single transaction translator
+uhub7: 1 port with 0 removable, self powered
+uaudio3 at uhub7 port 1 configuration 1 interface 0
+uaudio3: Yamaha Corporation (0x0499) AG06/AG03 (0x170d), rev 2.00/1.10, addr 10
+uaudio3: autoconfiguration error: audio descriptors make no sense, error=4
+umidi0 at uhub7 port 1 configuration 1 interface 1
+umidi0: Yamaha Corporation (0x0499) AG06/AG03 (0x170d), rev 2.00/1.10, addr 10
+umidi0: (Yamaha Specific)
+umidi0: autoconfiguration error: alloc_all_endpoints failed. (err=4)
+umidi0: autoconfiguration error: disabled.
+umidi1 at uhub7 port 1 configuration 1 interface 2
+umidi1: Yamaha Corporation (0x0499) AG06/AG03 (0x170d), rev 2.00/1.10, addr 10
+umidi1: (Yamaha Specific)
+umidi1: autoconfiguration error: alloc_all_endpoints failed. (err=4)
+umidi1: autoconfiguration error: disabled.
+umidi2 at uhub7 port 1 configuration 1 interface 3
+umidi2: Yamaha Corporation (0x0499) AG06/AG03 (0x170d), rev 2.00/1.10, addr 10
+umidi2: (Yamaha Specific)
+umidi2: out=1, in=1
+midi1 at umidi2: <0 >0 on umidi2
+cgd: self-test aes-xts-256
+cgd: self-test aes-xts-512
+cgd: self-test aes-cbc-128
+cgd: self-test aes-cbc-256
+cgd: self-test 3des-cbc-192
+cgd: self-test blowfish-cbc-448
+cgd: self-test aes-cbc-128 (encblkno8)
+cgd: self-tests passed
+WARNING: 17 errors while detecting hardware; check system log.
+boot device: wd1
+root on dk7 dumps on dk8
+root file system type: ffs
+kern.module.path=/stand/amd64/9.99.81/modules
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)
+syncing disks... done
+unmounted tmpfs on /var/shm type tmpfs
+unmounted procfs on /proc type procfs
+unmounted ptyfs on /dev/pts type ptyfs
+unmounted kernfs on /kern type kernfs
+unmounted tmpfs on /tmp type tmpfs
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020, 2021 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.99.81 (ZUB) #0: Wed Apr 14 21:23:38 UTC 2021
+	XXX@XXX:/usr/src/sys/arch/amd64/compile/ZUB
+total memory = 16311 MB
+avail memory = 15781 MB
+entropy: entering seed from bootloader with 256 bits of entropy
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+efi: systbl at pa cdf76018
+To Be Filled By O.E.M. To Be Filled By O.E.M. (To Be Filled By O.E.M.)
+mainbus0 (root)
+ACPI: RSDP 0x00000000CD489014 000024 (v02 ALASKA)
+ACPI: XSDT 0x00000000CD488728 0000BC (v01 ALASKA A M I    01072009 AMI  01000013)
+ACPI: FACP 0x00000000CCE19000 000114 (v06 ALASKA A M I    01072009 AMI  00010013)
+ACPI: DSDT 0x00000000CCE13000 005D20 (v02 ALASKA A M I    01072009 INTL 20120913)
+ACPI: FACS 0x00000000CD482000 000040
+ACPI: SSDT 0x00000000CCE1F000 008C98 (v02 AMD    AmdTable 00000002 MSFT 04000000)
+ACPI: SSDT 0x00000000CCE1B000 003BA2 (v01 AMD    AMD AOD  00000001 INTL 20120913)
+ACPI: SSDT 0x00000000CCE1A000 0000C8 (v02 ALASKA CPUSSDT  01072009 AMI  01072009)
+ACPI: FIDT 0x00000000CCE12000 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: MCFG 0x00000000CCE11000 00003C (v01 ALASKA A M I    01072009 MSFT 00010013)
+ACPI: AAFT 0x00000000CCE10000 0000C9 (v01 ALASKA OEMAAFT  01072009 MSFT 00000097)
+ACPI: HPET 0x00000000CCE0F000 000038 (v01 ALASKA A M I    01072009 AMI  00000005)
+ACPI: SSDT 0x00000000CCE0E000 000024 (v01 AMDFCH FCHZP    00001000 INTL 20120913)
+ACPI: SSDT 0x00000000CCE0B000 001A58 (v02 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: CRAT 0x00000000CCE0A000 000BD0 (v01 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: CDIT 0x00000000CCE09000 000029 (v01 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: BGRT 0x00000000CCE0D000 000038 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x00000000CCE05000 00348C (v01 AMD    MYRTLE   00000001 INTL 20120913)
+ACPI: SSDT 0x00000000CCE04000 0000BF (v01 AMD    AmdTable 00001000 INTL 20120913)
+ACPI: WSMT 0x00000000CCE03000 000028 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: APIC 0x00000000CCE02000 00015E (v03 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x00000000CCE00000 0010AF (v01 AMD    MYRTLE   00000001 INTL 20120913)
+ACPI: FPDT 0x00000000CCDFF000 000044 (v01 ALASKA A M I    01072009 AMI  01000013)
+ACPI: 9 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 13: pa 0xfec00000, version 0x21, 24 pins
+ioapic1 at mainbus0 apid 14: pa 0xfec01000, version 0x21, 32 pins
+cpu0 at mainbus0 apid 0
+cpu0: Use mfence to serialize rdtsc
+cpu0: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu0: node 0, package 0, core 0, smt 0
+cpu1 at mainbus0 apid 2
+cpu1: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu1: node 0, package 0, core 1, smt 0
+cpu2 at mainbus0 apid 4
+cpu2: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu2: node 0, package 0, core 2, smt 0
+cpu3 at mainbus0 apid 8
+cpu3: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu3: node 0, package 0, core 4, smt 0
+cpu4 at mainbus0 apid 10
+cpu4: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu4: node 0, package 0, core 5, smt 0
+cpu5 at mainbus0 apid 12
+cpu5: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu5: node 0, package 0, core 6, smt 0
+cpu6 at mainbus0 apid 1
+cpu6: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu6: node 0, package 0, core 0, smt 1
+cpu7 at mainbus0 apid 3
+cpu7: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu7: node 0, package 0, core 1, smt 1
+cpu8 at mainbus0 apid 5
+cpu8: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu8: node 0, package 0, core 2, smt 1
+cpu9 at mainbus0 apid 9
+cpu9: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu9: node 0, package 0, core 4, smt 1
+cpu10 at mainbus0 apid 11
+cpu10: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu10: node 0, package 0, core 5, smt 1
+cpu11 at mainbus0 apid 13
+cpu11: AMD Ryzen 5 2600 Six-Core Processor            , id 0x800f82
+cpu11: node 0, package 0, core 6, smt 1
+acpi0 at mainbus0: Intel ACPICA 20210331
+acpi0: X/RSDT: OemId <ALASKA,  A M I ,01072009>, AslId <AMI ,01000013>
+acpi0: autoconfiguration error: invalid PCI address for D004
+acpi0: autoconfiguration error: invalid PCI address for D012
+acpi0: autoconfiguration error: invalid PCI address for D040
+acpi0: autoconfiguration error: invalid PCI address for D041
+acpi0: autoconfiguration error: invalid PCI address for D042
+acpi0: autoconfiguration error: invalid PCI address for D043
+acpi0: MCFG: segment 0, bus 0-127, address 0x00000000f0000000
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+AMDN (PNP0C01) at acpi0 not configured
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+spkr0 at pcppi1: PC Speaker
+wsbell at spkr0 not configured
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+GPIO (AMDI0030) at acpi0 not configured
+PTIO (AMDIF030) at acpi0 not configured
+acpiwmi0 at acpi0 (AOD, PNP0C14-AOD): ACPI WMI Interface
+acpiwmibus at acpiwmi0 not configured
+ACPI: Enabled 1 GPEs in block 00 to 1F
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+amdsmn0 at pci0 dev 0 function 0: AMD System Management Network
+amdzentemp0 at amdsmn0: AMD CPU Temperature Sensors (Family17h)
+pchb0 at pci0 dev 1 function 0: AMD Family17h PCIe (rev. 0x00)
+ppb0 at pci0 dev 1 function 1: AMD Family17h PCIe (rev. 0x00)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 8.0GT/s
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+nvme0 at pci1 dev 0 function 0: Western Digital (SanDisk) WD Blue SN550 NVMe SSD (rev. 0x01)
+nvme0: NVMe 1.4
+nvme0: for admin queue interrupting at msix0 vec 0
+nvme0: WDC WDS100T2B0C-00PXH0, firmware 211070WD, serial ...
+nvme0: for io queue 1 interrupting at msix0 vec 1 affinity to cpu0
+nvme0: for io queue 2 interrupting at msix0 vec 2 affinity to cpu1
+nvme0: for io queue 3 interrupting at msix0 vec 3 affinity to cpu2
+nvme0: for io queue 4 interrupting at msix0 vec 4 affinity to cpu3
+nvme0: for io queue 5 interrupting at msix0 vec 5 affinity to cpu4
+nvme0: for io queue 6 interrupting at msix0 vec 6 affinity to cpu5
+nvme0: for io queue 7 interrupting at msix0 vec 7 affinity to cpu6
+nvme0: for io queue 8 interrupting at msix0 vec 8 affinity to cpu7
+nvme0: for io queue 9 interrupting at msix0 vec 9 affinity to cpu8
+nvme0: for io queue 10 interrupting at msix0 vec 10 affinity to cpu9
+nvme0: for io queue 11 interrupting at msix0 vec 11 affinity to cpu10
+nvme0: for io queue 12 interrupting at msix0 vec 12 affinity to cpu11
+ld0 at nvme0 nsid 1
+ld0: 931 GB, 121601 cyl, 255 head, 63 sec, 512 bytes/sect x 1953525168 sectors
+ppb1 at pci0 dev 1 function 3: AMD Family17h PCIe (rev. 0x00)
+ppb1: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 8.0GT/s
+pci2 at ppb1 bus 2
+pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+xhci0 at pci2 dev 0 function 0: AMD 400 Series xHCI (rev. 0x01)
+xhci0: 64-bit DMA
+xhci0: interrupting at msix1 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+ahcisata0 at pci2 dev 0 function 1: AMD 400 Series AHCI (rev. 0x01)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 8 ports, 32 slots, CAP 0xef36ff27<SXS,PSC,SSC,PMD,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SSS,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi2 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 2
+atabus3 at ahcisata0 channel 3
+atabus4 at ahcisata0 channel 4
+atabus5 at ahcisata0 channel 5
+atabus6 at ahcisata0 channel 6
+atabus7 at ahcisata0 channel 7
+ppb2 at pci2 dev 0 function 2: AMD 400 Series PCIe (rev. 0x01)
+ppb2: PCI Express capability version 2 <Upstream Port of PCI-E Switch>
+pci3 at ppb2 bus 3
+pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb3 at pci3 dev 0 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb3: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci4 at ppb3 bus 4
+pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb4 at pci3 dev 1 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb4: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci5 at ppb4 bus 5
+pci5: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb5 at pci3 dev 2 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb5: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci6 at ppb5 bus 6
+pci6: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb6 at pci3 dev 3 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb6: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci7 at ppb6 bus 7
+pci7: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb7 at pci3 dev 4 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb7: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci8 at ppb7 bus 8
+pci8: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb8 at pci3 dev 5 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb8: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci9 at ppb8 bus 9
+pci9: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb9 at pci3 dev 6 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb9: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci10 at ppb9 bus 10
+pci10: i/o space, memory space enabled, rd/line, wr/inv ok
+Intel Wireless AC 9260 (miscellaneous network, revision 0x29) at pci10 dev 0 function 0 not configured
+ppb10 at pci3 dev 7 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb10: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+ppb10: link is x1 @ 2.5GT/s
+pci11 at ppb10 bus 11
+pci11: i/o space, memory space enabled, rd/line, wr/inv ok
+wm0 at pci11 dev 0 function 0: I211 Ethernet (COPPER) (rev. 0x03)
+wm0: for TX and RX interrupting at msix3 vec 0 affinity to 1
+wm0: for TX and RX interrupting at msix3 vec 1 affinity to 2
+wm0: for LINK interrupting at msix3 vec 2
+wm0: PCI-Express bus
+wm0: 64 words iNVM, version 0.4
+wm0: Ethernet address XXX
+wm0: Copper
+wm0: 0x4c614420<INVM,IOH_VALID,PCIE,NEWQUEUE,WOL,EEE,PLLWA,CLSEMWA,CRC_STRIP>
+makphy0 at wm0 phy 1: I210 10/100/1000 media interface, rev. 0
+makphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-FDX, auto
+pchb1 at pci0 dev 2 function 0: AMD Family17h PCIe (rev. 0x00)
+pchb2 at pci0 dev 3 function 0: AMD Family17h PCIe (rev. 0x00)
+ppb11 at pci0 dev 3 function 1: AMD Family17h PCIe (rev. 0x00)
+ppb11: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci12 at ppb11 bus 12
+pci12: i/o space, memory space enabled, rd/line, wr/inv ok
+genfb0 at pci12 dev 0 function 0: ATI Technologies Radeon RX470 (rev. 0xe7)
+genfb0: framebuffer at 0xd0000000, size 1024x768, depth 32, stride 4096
+genfb0: shadow framebuffer enabled, size 3072 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+hdaudio0 at pci12 dev 0 function 1: HD Audio Controller
+hdaudio0: interrupting at msi4 vec 0
+hdaudio0: HDA ver. 1.0, OSS 6, ISS 0, BSS 0, SDO 1, 64-bit
+hdafg0 at hdaudio0: vendor 1002 product aa01
+hdafg0: HDMI00 2ch: Digital Out [Jack]
+hdafg0: HDMI01 2ch: Digital Out [Jack]
+hdafg0: HDMI02 2ch: Digital Out [Jack]
+hdafg0: HDMI03 2ch: Digital Out [Jack]
+hdafg0: HDMI04 2ch: Digital Out [Jack]
+hdafg0: HDMI05 2ch: Digital Out [Jack]
+hdafg0: 2ch/0ch 32000Hz 44100Hz 48000Hz PCM16 AC3
+pchb3 at pci0 dev 4 function 0: AMD Family17h PCIe (rev. 0x00)
+pchb4 at pci0 dev 7 function 0: AMD Family17h PCIe (rev. 0x00)
+ppb12 at pci0 dev 7 function 1: AMD Family17h PCIe (rev. 0x00)
+ppb12: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci13 at ppb12 bus 13
+pci13: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD Family17h PCIe Dummy Function (non-essential instrumentation, subclass 0x00) at pci13 dev 0 function 0 not configured
+amdccp0 at pci13 dev 0 function 2: AMD Cryptographic Coprocessor
+xhci1 at pci13 dev 0 function 3: AMD Family17h xHCI (rev. 0x00)
+xhci1: 64-bit DMA
+xhci1: interrupting at msix5 vec 0
+xhci1: xHCI version 1.0
+usb2 at xhci1: USB revision 3.0
+usb3 at xhci1: USB revision 2.0
+pchb5 at pci0 dev 8 function 0: AMD Family17h PCIe (rev. 0x00)
+ppb13 at pci0 dev 8 function 1: AMD Family17h PCIe (rev. 0x00)
+ppb13: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci14 at ppb13 bus 14
+pci14: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD product 1455 (non-essential instrumentation, subclass 0x00) at pci14 dev 0 function 0 not configured
+ahcisata1 at pci14 dev 0 function 2: AMD FCH AHCI (rev. 0x51)
+ahcisata1: 64-bit DMA
+ahcisata1: AHCI revision 1.31, 1 port, 32 slots, CAP 0xf737ff00<PSC,SSC,PMD,FBSS,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SMPS,SSNTF,SNCQ,S64A>
+ahcisata1: interrupting at msi6 vec 0
+atabus8 at ahcisata1 channel 0
+hdaudio1 at pci14 dev 0 function 3: HD Audio Controller
+hdaudio1: interrupting at msi7 vec 0
+hdaudio1: HDA ver. 1.0, OSS 4, ISS 4, BSS 0, SDO 1, 64-bit
+hdafg1 at hdaudio1: vendor 10ec product 1220
+hdafg1: DAC00 6ch: Speaker [Jack]
+hdafg1: DAC01 2ch: HP Out [Jack]
+hdafg1: DIG02 2ch: SPDIF Out [Jack]
+hdafg1: ADC03 2ch: Line In [Jack], Mic In [Jack]
+hdafg1: ADC04 2ch: Mic In [Jack]
+hdafg1: 6ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg1: playback, capture, full duplex, independent
+audio0: slinear_le:16 6ch 48000Hz, blk 5760 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+piixpm0 at pci0 dev 20 function 0: AMD X370/X399 SMBus Controller (rev. 0x59)
+piixpm0: interrupting at SMI, 
+iic0 at piixpm0 port 0: I2C bus
+iic1 at piixpm0 port 1: I2C bus
+pcib0 at pci0 dev 20 function 3: AMD FCH LPC (rev. 0x51)
+pchb6 at pci0 dev 24 function 0: AMD Family17h Data Fabric (rev. 0x00)
+pchb7 at pci0 dev 24 function 1: AMD Family17h Data Fabric (rev. 0x00)
+pchb8 at pci0 dev 24 function 2: AMD Family17h Data Fabric (rev. 0x00)
+pchb9 at pci0 dev 24 function 3: AMD Family17h Data Fabric (rev. 0x00)
+pchb10 at pci0 dev 24 function 4: AMD Family17h Data Fabric (rev. 0x00)
+pchb11 at pci0 dev 24 function 5: AMD Family17h Data Fabric (rev. 0x00)
+pchb12 at pci0 dev 24 function 6: AMD Family17h Data Fabric (rev. 0x00)
+pchb13 at pci0 dev 24 function 7: AMD Family17h Data Fabric (rev. 0x00)
+isa0 at pcib0
+pckbc0 at isa0 port 0x60-0x64
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow     0 mW
+acpicpu0: C2: I/O, lat 400 us, pow     0 mW
+acpicpu0: P0: FFH, lat   1 us, pow  3867 mW, 3400 MHz
+acpicpu0: P1: FFH, lat   1 us, pow  2537 mW, 2800 MHz
+acpicpu0: P2: FFH, lat   1 us, pow  1237 mW, 1550 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+acpicpu1 at cpu1: ACPI CPU
+acpicpu2 at cpu2: ACPI CPU
+acpicpu3 at cpu3: ACPI CPU
+acpicpu4 at cpu4: ACPI CPU
+acpicpu5 at cpu5: ACPI CPU
+acpicpu6 at cpu6: ACPI CPU
+acpicpu7 at cpu7: ACPI CPU
+acpicpu8 at cpu8: ACPI CPU
+acpicpu9 at cpu9: ACPI CPU
+acpicpu10 at cpu10: ACPI CPU
+acpicpu11 at cpu11: ACPI CPU
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 3400004000 Hz quality 3000
+uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 8 ports with 8 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 14 ports with 14 removable, self powered
+uhub2 at usb2: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub2: 4 ports with 4 removable, self powered
+uhub3 at usb3: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub3: 4 ports with 4 removable, self powered
+ld0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at ld0: "EFI system partition", 204800 blocks at 2048, type: msdos
+dk1 at ld0: "Microsoft reserved partition", 32768 blocks at 206848, type: <unknown>
+dk2 at ld0: "Basic data partition", 1952258776 blocks at 239616, type: ntfs
+dk3 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 1021952 blocks at 1952499712, type: <unknown>
+IPsec: Initialized Security Association Processing.
+aes: Intel AES-NI
+chacha: x86 SSE2 ChaCha
+adiantum: self-test passed
+aes_ccm: self-test passed
+blake2s: self-test passed
+ahcisata0 port 4: device present, speed: 6.0Gb/s
+ahcisata0 port 5: device present, speed: 6.0Gb/s
+uhub4 at uhub3 port 3: Oculus VR (0x2833) Rift S USB Hub (0x2052), class 9/0, rev 2.10/1.08, addr 2
+uhub4: multiple transaction translators
+uhub4: 2 ports with 0 removable, self powered
+wd0 at atabus4 drive 0
+wd0: <CT1000BX500SSD1>
+wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+wd0: 931 GB, 1938021 cyl, 16 head, 63 sec, 512 bytes/sect x 1953525168 sectors
+wd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk4 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32734 blocks at 34, type: <unknown>
+autoconfiguration error: wd0: wedge named 'Microsoft reserved partition' already existed, using 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
+dk5 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 1953488896 blocks at 32768, type: ntfs
+autoconfiguration error: wd0: wedge named 'Basic data partition' already existed, using 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
+wd0: drive supports PIO mode 4, DMA mode 2uhub5 at uhub2 port 3: Oculus VR (0x2833) Rift S USB Hub (0x2051), class 9/0, rev 3.10/1.08, addr 1
+, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags)
+wd0(ahcisata0:4:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+wd1 at atabus5 drive 0
+uhub5: 1 port with 0 removable, self powered
+wd1: <CT120BX500SSD1>
+wd1: drive supports 1-sector PIO transfers, LBA48 addressing
+wd1: 111 GB, 232581 cyl, 16 head, 63 sec, 512 bytes/sect x 234441648 sectors
+wd1: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk6 at wd1: "efiboot0", 262144 blocks at 64, type: msdos
+dk7 at wd1: "swap0", 200772416 blocks at 262208, type: ffs
+dk8 at wd1: "zfs0", 33406976 blocks at 201034624, type: swap
+umass0 at uhub0 port 3 configuration 1 interface 0
+umass0: JetFlash (0x8564) Mass Storage Device (0x1000), rev 3.00/11.00, addr 2
+umass0: using SCSI over Bulk-Only
+wd1: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags)
+wd1(ahcisata0:5:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+scsibus0 at umass0: 2 targets, 1 lun per target
+uhidev0 at uhub1 port 1 configuration 1 interface 0
+uhidev0: Kingsis Peripherals (0x1a7c) ZOWIE Gaming mouse (0x0001), rev 2.00/0.01, addr 1, iclass 3/1
+ums0 at uhidev0: 6 buttons and Z dir
+wsmouse0 at ums0 mux 0
+sd0 at scsibus0 target 0 lun 0: <JetFlash, Transcend 16GB, 1100> disk removable
+sd0: fabricating a geometry
+sd0: 15064 MB, 15064 cyl, 64 head, 32 sec, 512 bytes/sect x 30851072 sectors
+sd0: fabricating a geometry
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk9 at sd0: "EFI system", 262144 blocks at 2048, type: msdos
+dk10 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 3010560 blocks at 264192, type: ffs
+umodem0 at uhub4 port 2 configuration 1 interface 0
+umodem0: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3, iclass 2/2
+umodem0: data interface 1, has no CM over data, has no break
+umodem0: status change notification available
+ucom0 at umodem0
+uaudio0 at uhub4 port 2 configuration 1 interface 2
+uaudio0: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3
+uaudio0: autoconfiguration error: no usable endpoint found
+uaudio0: autoconfiguration error: audio descriptors make no sense, error=4
+uaudio1 at uhub4 port 2 configuration 1 interface 4
+uaudio1: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3
+uaudio1: autoconfiguration error: no usable endpoint found
+uaudio1: autoconfiguration error: audio descriptors make no sense, error=4
+uhidev1 at uhub4 port 2 configuration 1 interface 6
+uhidev1: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3, iclass 3/0
+uhidev1: 83 report ids
+uhid0 at uhidev1 reportid 1: input=0, output=0, feature=42
+uhid1 at uhidev1 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev1 reportid 3: input=0, output=0, feature=14
+uhid3 at uhidev1 reportid 4: input=0, output=0, feature=33
+uhid4 at uhidev1 reportid 5: input=0, output=0, feature=40
+uhid5 at uhidev1 reportid 6: input=0, output=0, feature=21
+uhid6 at uhidev1 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev1 reportid 8: input=0, output=0, feature=1
+uhid8 at uhidev1 reportid 9: input=0, output=0, feature=20
+uhid9 at uhidev1 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev1 reportid 11: input=0, output=0, feature=55
+uhid11 at uhidev1 reportid 12: input=0, output=0, feature=114
+uhid12 at uhidev1 reportid 13: input=0, output=0, feature=10
+uhid13 at uhidev1 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev1 reportid 15: input=0, output=0, feature=4
+uhid15 at uhidev1 reportid 16: input=0, output=0, feature=8
+uhid16 at uhidev1 reportid 17: input=0, output=0, feature=113
+uhid17 at uhidev1 reportid 18: input=0, output=0, feature=60
+uhid18 at uhidev1 reportid 19: input=0, output=0, feature=60
+uhid19 at uhidev1 reportid 20: input=0, output=0, feature=1
+uhid20 at uhidev1 reportid 31: input=0, output=0, feature=57
+uhid21 at uhidev1 reportid 32: input=0, output=0, feature=38
+uhid22 at uhidev1 reportid 33: input=0, output=0, feature=4
+uhid23 at uhidev1 reportid 34: input=0, output=0, feature=8
+uhid24 at uhidev1 reportid 35: input=0, output=0, feature=1
+uhid25 at uhidev1 reportid 71: input=0, output=0, feature=1
+uhid26 at uhidev1 reportid 72: input=0, output=0, feature=6
+uhid27 at uhidev1 reportid 73: input=0, output=0, feature=63
+uhid28 at uhidev1 reportid 74: input=0, output=0, feature=63
+uhid29 at uhidev1 reportid 75: input=0, output=0, feature=14
+uhid30 at uhidev1 reportid 76: input=0, output=0, feature=3
+uhid31 at uhidev1 reportid 83: input=0, output=0, feature=1
+uhidev2 at uhub4 port 2 configuration 1 interface 7
+uhidev2: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3, iclass 3/0
+uhidev2: 83 report ids
+uhid32 at uhidev2 reportid 1: input=0, output=0, feature=42
+uhid33 at uhidev2 reportid 2: input=0, output=0, feature=1
+uhid34 at uhidev2 reportid 3: input=0, output=0, feature=14
+uhid35 at uhidev2 reportid 4: input=0, output=0, feature=33
+uhid36 at uhidev2 reportid 5: input=0, output=0, feature=40
+uhid37 at uhidev2 reportid 6: input=0, output=0, feature=21
+uhid38 at uhidev2 reportid 7: input=0, output=0, feature=2
+uhid39 at uhidev2 reportid 8: input=0, output=0, feature=1
+uhid40 at uhidev2 reportid 9: input=0, output=0, feature=20
+uhid41 at uhidev2 reportid 10: input=0, output=0, feature=1
+uhid42 at uhidev2 reportid 11: input=0, output=0, feature=55
+uhid43 at uhidev2 reportid 12: input=0, output=0, feature=114
+uhid44 at uhidev2 reportid 13: input=0, output=0, feature=10
+uhid45 at uhidev2 reportid 14: input=0, output=0, feature=1
+uhid46 at uhidev2 reportid 15: input=0, output=0, feature=4
+uhid47 at uhidev2 reportid 16: input=0, output=0, feature=8
+uhid48 at uhidev2 reportid 17: input=0, output=0, feature=113
+uhid49 at uhidev2 reportid 18: input=0, output=0, feature=60
+uhid50 at uhidev2 reportid 19: input=0, output=0, feature=60
+uhid51 at uhidev2 reportid 20: input=0, output=0, feature=1
+uhid52 at uhidev2 reportid 31: input=0, output=0, feature=57
+uhid53 at uhidev2 reportid 32: input=0, output=0, feature=38
+uhid54 at uhidev2 reportid 33: input=0, output=0, feature=4
+uhid55 at uhidev2 reportid 34: input=0, output=0, feature=8
+uhid56 at uhidev2 reportid 35: input=0, output=0, feature=1
+uhid57 at uhidev2 reportid 71: input=0, output=0, feature=1
+uhid58 at uhidev2 reportid 72: input=0, output=0, feature=6
+uhid59 at uhidev2 reportid 73: input=0, output=0, feature=63
+uhid60 at uhidev2 reportid 74: input=0, output=0, feature=63
+uhid61 at uhidev2 reportid 75: input=0, output=0, feature=14
+uhid62 at uhidev2 reportid 76: input=0, output=0, feature=3
+uhid63 at uhidev2 reportid 83: input=0, output=0, feature=1
+uhidev3 at uhub4 port 2 configuration 1 interface 8
+uhidev3: Oculus VR (0x2833) Rift S (0x0051), rev 2.00/1.08, addr 3, iclass 3/0
+uhidev3: 83 report ids
+uhid64 at uhidev3 reportid 1: input=0, output=0, feature=42
+uhid65 at uhidev3 reportid 2: input=0, output=0, feature=1
+uhid66 at uhidev3 reportid 3: input=0, output=0, feature=14
+uhid67 at uhidev3 reportid 4: input=0, output=0, feature=33
+uhid68 at uhidev3 reportid 5: input=0, output=0, feature=40
+uhid69 at uhidev3 reportid 6: input=0, output=0, feature=21
+uhid70 at uhidev3 reportid 7: input=0, output=0, feature=2
+uhid71 at uhidev3 reportid 8: input=0, output=0, feature=1
+uhid72 at uhidev3 reportid 9: input=0, output=0, feature=20
+uhid73 at uhidev3 reportid 10: input=0, output=0, feature=1
+uhid74 at uhidev3 reportid 11: input=0, output=0, feature=55
+uhid75 at uhidev3 reportid 12: input=0, output=0, feature=114
+uhid76 at uhidev3 reportid 13: input=0, output=0, feature=10
+uhid77 at uhidev3 reportid 14: input=0, output=0, feature=1
+uhid78 at uhidev3 reportid 15: input=0, output=0, feature=4
+uhid79 at uhidev3 reportid 16: input=0, output=0, feature=8
+uhid80 at uhidev3 reportid 17: input=0, output=0, feature=113
+uhid81 at uhidev3 reportid 18: input=0, output=0, feature=60
+uhid82 at uhidev3 reportid 19: input=0, output=0, feature=60
+uhid83 at uhidev3 reportid 20: input=0, output=0, feature=1
+uhid84 at uhidev3 reportid 31: input=0, output=0, feature=57
+uhid85 at uhidev3 reportid 32: input=0, output=0, feature=38
+uhid86 at uhidev3 reportid 33: input=0, output=0, feature=4
+uhid87 at uhidev3 reportid 34: input=0, output=0, feature=8
+uhid88 at uhidev3 reportid 35: input=0, output=0, feature=1
+uhid89 at uhidev3 reportid 71: input=0, output=0, feature=1
+uhid90 at uhidev3 reportid 72: input=0, output=0, feature=6
+uhid91 at uhidev3 reportid 73: input=0, output=0, feature=63
+uhid92 at uhidev3 reportid 74: input=0, output=0, feature=63
+uhid93 at uhidev3 reportid 75: input=0, output=0, feature=14
+uhid94 at uhidev3 reportid 76: input=0, output=0, feature=3
+uhid95 at uhidev3 reportid 83: input=0, output=0, feature=1
+ugen0 at uhub1 port 2
+ugen0: Microsoft (0x045e) Microsoft HoloLens (0x0661), rev 2.10/1.00, addr 3
+uhidev4 at uhub1 port 4 configuration 1 interface 0
+uhidev4: Apple Inc. (0x05ac) Magic Keyboard with Numeric Keypad (0x026c), rev 2.00/8.52, addr 4, iclass 3/0
+uhidev4: 154 report ids
+uhid96 at uhidev4 reportid 144: input=2, output=0, feature=0
+uhid97 at uhidev4 reportid 154: input=1, output=0, feature=0
+uhidev5 at uhub1 port 4 configuration 1 interface 1
+uhidev5: Apple Inc. (0x05ac) Magic Keyboard with Numeric Keypad (0x026c), rev 2.00/8.52, addr 4, iclass 3/1
+uhidev5: 63 report ids
+ukbd0 at uhidev5 reportid 1
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhid98 at uhidev5 reportid 9: input=0, output=0, feature=3
+uhid99 at uhidev5 reportid 63: input=64, output=0, feature=0
+ubt0 at uhub1 port 10
+ubt0: vendor 8087 (0x8087) product 0025 (0x0025), rev 2.00/0.02, addr 5
+uhub6 at uhub1 port 11: vendor 045b (0x045b) product 0209 (0x0209), class 9/0, rev 2.00/1.00, addr 6
+uhub6: single transaction translator
+uhub6: 3 ports with 2 removable, self powered
+uvideo0 at uhub6 port 1 configuration 1 interface 0: HD Web Camera (0x05a3) HD Web Camera (0x9331), rev 2.00/1.02, addr 7
+video0 at uvideo0: HD Web Camera (0x05a3) HD Web Camera (0x9331), rev 2.00/1.02, addr 7
+uaudio2 at uhub6 port 1 configuration 1 interface 2
+uaudio2: HD Web Camera (0x05a3) HD Web Camera (0x9331), rev 2.00/1.02, addr 7
+uaudio2: audio rev 1.00
+audio1 at uaudio2: capture
+audio1: slinear_le:16 1ch 16000Hz, blk 23040 bytes (720ms) for recording
+uhidev6 at uhub6 port 3 configuration 1 interface 0
+uhidev6: EIZO (0x056d) EIZO USB HID Monitor (0x4027), rev 1.10/80.00, addr 8, iclass 3/0
+uhidev6: 9 report ids
+uhid100 at uhidev6 reportid 1: input=0, output=0, feature=516
+uhid101 at uhidev6 reportid 2: input=0, output=0, feature=38
+uhid102 at uhidev6 reportid 3: input=38, output=0, feature=38
+uhid103 at uhidev6 reportid 4: input=0, output=0, feature=262
+uhid104 at uhidev6 reportid 5: input=0, output=0, feature=262
+uhid105 at uhidev6 reportid 6: input=0, output=0, feature=2
+uhid106 at uhidev6 reportid 7: input=0, output=0, feature=7
+uhid107 at uhidev6 reportid 8: input=0, output=0, feature=24
+uhid108 at uhidev6 reportid 9: input=0, output=0, feature=74
+uhub7 at uhub1 port 14: vendor 0424 (0x0424) product 2422 (0x2422), class 9/0, rev 2.00/0.a0, addr 9
+uhub7: single transaction translator
+uhub7: 1 port with 0 removable, self powered
+uaudio3 at uhub7 port 1 configuration 1 interface 0
+uaudio3: Yamaha Corporation (0x0499) AG06/AG03 (0x170d), rev 2.00/1.10, addr 10
+uaudio3: autoconfiguration error: audio descriptors make no sense, error=4
+umidi0 at uhub7 port 1 configuration 1 interface 1
+umidi0: Yamaha Corporation (0x0499) AG06/AG03 (0x170d), rev 2.00/1.10, addr 10
+umidi0: (Yamaha Specific)
+umidi0: autoconfiguration error: alloc_all_endpoints failed. (err=4)
+umidi0: autoconfiguration error: disabled.
+umidi1 at uhub7 port 1 configuration 1 interface 2
+umidi1: Yamaha Corporation (0x0499) AG06/AG03 (0x170d), rev 2.00/1.10, addr 10
+umidi1: (Yamaha Specific)
+umidi1: autoconfiguration error: alloc_all_endpoints failed. (err=4)
+umidi1: autoconfiguration error: disabled.
+umidi2 at uhub7 port 1 configuration 1 interface 3
+umidi2: Yamaha Corporation (0x0499) AG06/AG03 (0x170d), rev 2.00/1.10, addr 10
+umidi2: (Yamaha Specific)
+umidi2: out=1, in=1
+midi1 at umidi2: <0 >0 on umidi2
+cgd: self-test aes-xts-256
+cgd: self-test aes-xts-512
+cgd: self-test aes-cbc-128
+cgd: self-test aes-cbc-256
+cgd: self-test 3des-cbc-192
+cgd: self-test blowfish-cbc-448
+cgd: self-test aes-cbc-128 (encblkno8)
+cgd: self-tests passed
+WARNING: 17 errors while detecting hardware; check system log.
+boot device: wd1
+root on dk7 dumps on dk8
+root file system type: ffs
+kern.module.path=/stand/amd64/9.99.81/modules
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)

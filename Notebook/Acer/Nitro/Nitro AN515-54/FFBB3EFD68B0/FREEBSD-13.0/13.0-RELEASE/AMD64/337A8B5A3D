@@ -1,0 +1,392 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0 releng/13.0-n244733-ea31abc261f: Fri Apr  9 04:24:09 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz (2400.19-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906ed  Family=0x6  Model=0x9e  Stepping=13
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features2=0x40000000<SGXLC>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x2b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8087568384 (7712 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ACRSYS ACRPRDCT>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 2 6 4 5 7 3
+Timecounter "TSC-low" frequency 1200095646 Hz quality 1000
+KTLS: Initialized 8 threads
+random: entropy device external interface
+000.000019 [4354] netmap_init               netmap: loaded module
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ACRSYS ACRPRDCT>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x14> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0x4000-0x407f mem 0xa3000000-0xa3ffffff,0x90000000-0x9fffffff,0xa0000000-0xa1ffffff at device 0.0 on pci1
+hdac0: <NVIDIA (0x10fa) HDA Controller> mem 0xa4000000-0xa4003fff at device 0.1 on pci1
+vgapci1: <VGA-compatible display> port 0x5000-0x503f mem 0xa2000000-0xa2ffffff,0xb0000000-0xbfffffff at device 2.0 on pci0
+vgapci1: Boot video device
+xhci0: <Intel Cannon Lake USB 3.1 controller> mem 0xa4500000-0xa450ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Cannon Lake AHCI SATA controller> port 0x5080-0x5087,0x5088-0x508b,0x5060-0x507f mem 0xa4516000-0xa4517fff,0xa4522000-0xa45220ff,0xa4521000-0xa45217ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier not supported
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+ahciem0: EM timeout
+device_attach: ahciem0 attach returned 6
+pcib2: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+nvme0: <Generic NVMe Device> mem 0xa4400000-0xa4403fff at device 0.0 on pci2
+pcib3: <ACPI PCI-PCI bridge> at device 29.5 on pci0
+pci3: <ACPI PCI bus> on pcib3
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0x3000-0x30ff mem 0xa4304000-0xa4304fff,0xa4300000-0xa4303fff at device 0.0 on pci3
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib4: <ACPI PCI-PCI bridge> at device 29.6 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pci4: <network> at device 0.0 (no driver attached)
+pci0: <simple comms> at device 30.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac1: <Intel Coffee Lake HDA Controller> mem 0xa4510000-0xa4513fff,0xa4100000-0xa41fffff at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounters tick every 1.000 msec
+hdacc0: <NVIDIA (0x0094) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0094) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0094) (HDMI/DP 8ch)> at nid 7 on hdaa0
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <HFM256GDJTNG-8310A> NVMe namespace
+nvd0: 244198MB (500118192 512 byte sectors)
+hdacc1: <Realtek ALC255 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC255 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC255 (Internal Analog)> at nid 20 and 18 on hdaa1
+pcm2: <Realtek ALC255 (Front Analog Headphones)> at nid 33 on hdaa1
+Trying to mount root from ufs:/dev/nvd0p6 [rw]...
+ig4iic0: <Intel Cannon Lake-H I2C Controller-0> at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+ig4iic1: <Intel Cannon Lake-H I2C Controller-1> at device 21.1 on pci0
+ig4iic1: Using MSI
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+iicbus1: <unknown card> at addr 0x2c
+ichsmb0: <Intel Cannon Lake SMBus controller> port 0x5040-0x505f mem 0xa451f000-0xa451f0ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WFDE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_dock0: <ACPI Docking Station> on acpi0
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134_SB.PCI0.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+uhub0: 24 ports with 24 removable, self powered
+ugen0.2: <Generic TX-384Khz Hifi Type-C Audio> at usbus0
+ugen0.3: <dakai PS/2+USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <dakai PS/2+USB Keyboard, class 0/0, rev 1.10/3.21, addr 2> on usbus0
+kbd2 at ukbd0
+ukbd1 on uhub0
+ukbd1: <dakai PS/2+USB Keyboard, class 0/0, rev 1.10/3.21, addr 2> on usbus0
+kbd3 at ukbd1
+ugen0.4: <vendor 0x18f8 USB OPTICAL MOUSE> at usbus0
+ukbd2 on uhub0
+ukbd2: <vendor 0x18f8 USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+kbd4 at ukbd2
+re0: link state changed to UP
+iichid0: <SYNA7DB5:01 06CB:CD41 I2C HID device> at addr 0x2c on iicbus1
+iichid0: Interrupt setup failed. Fallback to sampling
+hidbus0: <HID bus> on iichid0
+hms0: <SYNA7DB5:01 06CB:CD41 Mouse> on hidbus0
+hms0: 2 buttons and [XY] coordinates ID=2
+hmt0: <SYNA7DB5:01 06CB:CD41 TouchPad> on hidbus0
+hconf0: <SYNA7DB5:01 06CB:CD41 Configuration> on hidbus0
+hmt0: Multitouch touchpad with 0 external buttons, click-pad
+hmt0: 5 contacts with [C] properties. Report range [0:0] - [1236:896]
+ugen0.5: <SunplusIT Inc HD User Facing> at usbus0
+ugen0.6: <vendor 0x8087 product 0x0029> at usbus0
+uaudio0 on uhub0
+uaudio0: <TX-384Khz Hifi Type-C Audio> on usbus0
+uaudio0: Play[0]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm3: <USB audio> on uaudio0
+uaudio0: HID volume keys found.
+ums0 on uhub0
+ums0: <vendor 0x18f8 USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+ums0: 5 buttons and [XYZ] coordinates ID=1
+ng_ubt: HCI command 0xfc05 timed out
+ubt0 on uhub0
+ubt0: <vendor 0x8087 product 0x0029, class 224/1, rev 2.01/0.01, addr 5> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ubt0: ubt_ctrl_write_callback:906: control transfer failed: USB_ERR_TIMEOUT
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+Security policy loaded: MAC/ntpd (mac_ntpd)
+nvidia0: <GeForce GTX 1650> on vgapci0
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: child nvidia0 requested pci_enable_io
+drmn1: <drmn> on vgapci1
+vgapci1: child drmn1 requested pci_enable_io
+vgapci1: child drmn1 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+Failed to add WC MTRR for [0xb0000000-0xbfffffff]: -22; performance may suffer
+[drm] Got stolen memory base 0x8b800000, size 0x4000000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+Firmware Warning (ACPI): Possibly buggy BIOS with ACPI_TYPE_INTEGER for function enumeration
+ (20201113/ACPI-2675)
+[drm] Connector eDP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.eDP-1
+[drm]   - kern.vt.fb.default_mode
+drmn1: successfully loaded firmware image 'i915/kbl_dmc_ver1_04.bin'
+[drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+drmn1: Failed to program MOCS registers; expect performance issues.
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] Initialized i915 1.6.0 20190822 for drmn1 on minor 0
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 14.0.
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+cmsize=16 size=8294400
+pbase=0xb0000000 vbase=0xfffff800b0000000
+name=drmn1 flags=0x0 stride=7680 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn1: fb0: i915drmfb frame buffer device
+ACPI Warning: \134_SB.PCI0.PEG0.PEGP._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20201113/nsarguments-212)
+pid 3212 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3210 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3211 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3213 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3214 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3215 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3216 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3217 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3218 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3223 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 3225 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  460.67  Thu Mar 11 00:01:57 UTC 2021
+pid 4444 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4445 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4448 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4446 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4447 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4449 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4451 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4452 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4453 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4454 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4455 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4458 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4462 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4780 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4781 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4782 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4783 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4784 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4785 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4786 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4788 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4789 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4790 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 4791 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5308 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5309 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5311 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5314 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5310 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5313 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5312 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5315 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5317 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5318 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5319 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5320 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5321 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5322 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5326 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5331 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5333 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5620 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5621 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5624 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5622 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5623 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5625 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5627 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5626 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5628 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5630 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5632 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5634 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5635 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5637 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5638 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5640 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5642 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5647 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5871 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5872 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5873 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5874 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5875 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5876 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5877 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5878 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5879 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5880 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5881 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5882 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5883 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5884 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5885 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5886 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5887 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5888 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5889 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 5891 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6126 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6127 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6129 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6128 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6130 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6131 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6132 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6133 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6134 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6135 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6136 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6137 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6138 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6139 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6140 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6141 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6142 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6143 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6144 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6145 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6147 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 6154 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7036 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7040 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7043 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7052 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7054 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7055 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7059 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7062 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7061 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7065 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7030 (baloo_file), jid 0, uid 1001: exited on signal 11 (core dumped)
+pid 7079 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 7081 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+feeder_init(0xfffff8023d137000) on feeder_matrix returned 22
+pcm0: feeder_build_matrix(): can't add feeder_matrix
+feeder_init(0xfffff8023d137000) on feeder_matrix returned 22
+pcm0: feeder_build_matrix(): can't add feeder_matrix
+pid 8630 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8636 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8633 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8645 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8646 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8647 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8648 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8649 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8652 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8655 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8660 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8664 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8666 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8668 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8689 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8708 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8728 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8736 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8741 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8755 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8764 (baloo_file_extracto), jid 0, uid 1001: exited on signal 6 (core dumped)
+pid 8776 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)

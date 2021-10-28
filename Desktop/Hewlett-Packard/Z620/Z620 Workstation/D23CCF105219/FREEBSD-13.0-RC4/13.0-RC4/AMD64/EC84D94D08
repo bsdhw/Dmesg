@@ -1,0 +1,763 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RC4 #0 releng/13.0-n244719-2e70fcbb154: Mon Mar 29 04:19:01 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 800x600
+CPU: Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz (2593.81-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206d7  Family=0x6  Model=0x2d  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000400<MD_CLEAR,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 103079215104 (98304 MB)
+avail memory = 100242006016 (95598 MB)
+CPU microcode: updated from 0x718 to 0x71a
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM SLIC-WKS>
+FreeBSD/SMP: Multiprocessor System Detected: 16 CPUs
+FreeBSD/SMP: 2 package(s) x 8 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+ioapic1 <Version 2.0> irqs 24-47
+ioapic2 <Version 2.0> irqs 48-71
+Launching APs: 15 6 11 7 8 5 9 2 13 3 4 10 12 1 14
+Timecounter "TSC-low" frequency 1296904120 Hz quality 1000
+KTLS: Initialized 16 threads
+random: entropy device external interface
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000066 [4354] netmap_init               netmap: loaded module
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-WKS>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 26 at device 1.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+nvme0: <Generic NVMe Device> mem 0xef300000-0xef303fff irq 26 at device 0.0 numa-domain 0 on pci1
+pcib2: <ACPI PCI-PCI bridge> irq 32 at device 2.0 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 40 at device 3.0 numa-domain 0 on pci0
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+vgapci0: <VGA-compatible display> port 0xc000-0xc07f mem 0xee000000-0xeeffffff,0xd0000000-0xdfffffff,0xe0000000-0xe1ffffff irq 40 at device 0.0 numa-domain 0 on pci3
+vgapci0: Boot video device
+hdac0: <NVIDIA (0x0fbc) HDA Controller> mem 0xef080000-0xef083fff irq 44 at device 0.1 numa-domain 0 on pci3
+pcib4: <ACPI PCI-PCI bridge> irq 16 at device 17.0 numa-domain 0 on pci0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+isci0: <Intel(R) C600 Series Chipset SAS Controller (SATA mode)> port 0xd000-0xd0ff mem 0xe2800000-0xe2803fff,0xe2400000-0xe27fffff irq 16 at device 0.0 numa-domain 0 on pci4
+pci0: <simple comms> at device 22.0 (no driver attached)
+atapci0: <Intel ATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf070-0xf077,0xf060-0xf063,0xf050-0xf05f irq 18 at device 22.2 numa-domain 0 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+uart2: <Intel C600/X79 Series Chipset KT Controller> port 0xf040-0xf047 mem 0xef547000-0xef547fff irq 17 at device 22.3 numa-domain 0 on pci0
+uart2: Using 1 MSI message
+em0: <Intel(R) PRO/1000 Network Connection> port 0xf020-0xf03f mem 0xef500000-0xef51ffff,0xef54c000-0xef54cfff irq 20 at device 25.0 numa-domain 0 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+ehci0: <Intel Patsburg USB 2.0 controller> mem 0xef54e000-0xef54e3ff irq 16 at device 26.0 numa-domain 0 on pci0
+usbus0: EHCI version 1.0
+usbus0 numa-domain 0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+hdac1: <Intel Patsburg HDA Controller> mem 0xef540000-0xef543fff irq 22 at device 27.0 numa-domain 0 on pci0
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 28.0 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+em1: <Intel(R) PRO/1000 Network Connection> port 0xe000-0xe01f mem 0xef400000-0xef41ffff,0xef420000-0xef423fff irq 17 at device 0.0 numa-domain 0 on pci5
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using 2 RX queues 2 TX queues
+em1: Using MSI-X interrupts with 3 vectors
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> irq 17 at device 28.5 numa-domain 0 on pci0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+pcib7: <ACPI PCI-PCI bridge> irq 18 at device 28.6 numa-domain 0 on pci0
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+pcib8: <ACPI PCI-PCI bridge> irq 19 at device 28.7 numa-domain 0 on pci0
+pci8: <ACPI PCI bus> numa-domain 0 on pcib8
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xef200000-0xef20ffff,0xef210000-0xef211fff irq 19 at device 0.0 numa-domain 0 on pci8
+xhci0: 64 bytes context size, 64-bit DMA
+xhci_interrupt: host controller halted
+usbus1 numa-domain 0 on xhci0
+usbus1: 5.0Gbps Super Speed USB v3.0
+ehci1: <Intel Patsburg USB 2.0 controller> mem 0xef54d000-0xef54d3ff irq 23 at device 29.0 numa-domain 0 on pci0
+usbus2: EHCI version 1.0
+usbus2 numa-domain 0 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+pcib9: <ACPI PCI-PCI bridge> at device 30.0 numa-domain 0 on pci0
+pci9: <ACPI PCI bus> numa-domain 0 on pcib9
+pci9: <serial bus, FireWire> at device 5.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+atapci1: <Intel Patsburg SATA600 controller> port 0xf150-0xf157,0xf140-0xf143,0xf130-0xf137,0xf120-0xf123,0xf110-0xf11f,0xf100-0xf10f irq 19 at device 31.2 numa-domain 0 on pci0
+ata4: <ATA channel> at channel 0 on atapci1
+ata5: <ATA channel> at channel 1 on atapci1
+atapci2: <Intel Patsburg SATA300 controller> port 0xf0f0-0xf0f7,0xf0e0-0xf0e3,0xf0d0-0xf0d7,0xf0c0-0xf0c3,0xf0b0-0xf0bf,0xf0a0-0xf0af irq 19 at device 31.5 numa-domain 0 on pci0
+ata6: <ATA channel> at channel 0 on atapci2
+ata7: <ATA channel> at channel 1 on atapci2
+pcib10: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 1 on acpi0
+pci10: <ACPI PCI bus> numa-domain 1 on pcib10
+acpi_button0: <Power Button> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xce7ff,0xce800-0xcf7ff,0xcf800-0xcffff,0xd0000-0xd0fff,0xd1000-0xd1fff pnpid ORM0000 on isa0
+coretemp0: <CPU On-Die Thermal Sensors> numa-domain 0 on cpu0
+est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen1.1: <0x104c XHCI root HUB> at usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+uhub0 numa-domain 0 on usbus2
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1 numa-domain 0 on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub2 numa-domain 0 on usbus1
+uhub2: <0x104c XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <Samsung SSD 960 EVO 1TB> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+hdacc0: <NVIDIA (0x0060) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0060) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0060) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0060) (HDMI/DP 8ch)> at nid 5 on hdaa0
+pcm2: <NVIDIA (0x0060) (HDMI/DP 8ch)> at nid 7 on hdaa0
+hdacc1: <Realtek ALC262 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC262 Audio Function Group> at nid 1 on hdacc1
+pcm3: <Realtek ALC262 (Analog)> at nid 21 and 24,25,26 on hdaa1
+pcm4: <Realtek ALC262 (Front Analog Headphones)> at nid 27 on hdaa1
+Trying to mount root from zfs:zroot/ROOT/default []...
+uhub2: 8 ports with 8 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+ugen1.2: <Generic 4-Port USB 2.0 Hub> at usbus1
+uhub3 numa-domain 0 on uhub2
+uhub3: <Generic 4-Port USB 2.0 Hub, class 9/0, rev 2.10/1.44, addr 1> on usbus1
+uhub3: MTT enabled
+uhub3: 4 ports with 4 removable, self powered
+ugen2.2: <vendor 0x8087 product 0x0024> at usbus2
+uhub4 numa-domain 0 on uhub0
+uhub4: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus2
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub5 numa-domain 0 on uhub1
+uhub5: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+GEOM_ELI: Device nvd0p1.eli created.
+GEOM_ELI: Encryption: AES-XTS 256
+GEOM_ELI:     Crypto: accelerated software
+ugen1.3: <VIA Labs, Inc. USB2.0 Hub> at usbus1
+uhub6 numa-domain 0 on uhub3
+uhub6: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/d.a0, addr 2> on usbus1
+uhub5: 6 ports with 6 removable, self powered
+uhub6: 4 ports with 4 removable, self powered
+uhub4: 8 ports with 8 removable, self powered
+ugen1.4: <MOSART Semi. 2.4G Wireless Mouse> at usbus1
+ugen2.3: <Canon Inc MF4800 Series> at usbus2
+ada0 at ata4 bus 0 scbus3 target 0 lun 0
+ada0: <KINGSTON SA400S37120G S3500104> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA5, PIO 512bytes)
+ada0: 114473MB (234441648 512 byte sectors)
+ada1 at ata5 bus 0 scbus4 target 0 lun 0
+ada1: <ADATA SU650 V8X01c62> ACS-3 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA5, PIO 8192bytes)
+ada1: 228936MB (468862128 512 byte sectors)
+ada2 at ata5 bus 0 scbus4 target 1 lun 0
+ada2: <MB1000GCWCV HPGB> ACS-2 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada2: 953869MB (1953525168 512 byte sectors)
+cd0 at ata4 bus 0 scbus3 target 1 lun 0
+cd0: <hp DVD D  DH16D7SH WHH3> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+GEOM_ELI: Device ada0p4.eli created.
+GEOM_ELI: Encryption: AES-XTS 256
+GEOM_ELI:     Crypto: accelerated software
+Root mount waiting for: usbus1
+ugen1.5: <Metadot - Das Keyboard Das Keyboard> at usbus1
+ukbd0 numa-domain 0 on uhub6
+ukbd0: <Keyboard> on usbus1
+kbd2 at ukbd0
+ugen1.6: <XMOS Khadas Tone Control> at usbus1
+Root mount waiting for: usbus1
+ugen1.7: <Yubico YubiKey OTP+FIDO+CCID> at usbus1
+ukbd1 numa-domain 0 on uhub2
+ukbd1: <Yubico YubiKey OTP+FIDO+CCID, class 0/0, rev 2.00/5.24, addr 6> on usbus1
+kbd3 at ukbd1
+Root mount waiting for: usbus1
+ugen1.8: <Generic 4-Port USB 3.0 Hub> at usbus1
+uhub7 numa-domain 0 on uhub2
+uhub7: <Interrupt In Interface> on usbus1
+uhub7: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1
+ugen1.9: <VIA Labs, Inc. USB3.0 Hub> at usbus1
+uhub8 numa-domain 0 on uhub7
+uhub8: <VIA Labs, Inc. USB3.0 Hub, class 9/0, rev 3.00/d.a1, addr 8> on usbus1
+Root mount waiting for: usbus1
+uhub8: 4 ports with 4 removable, self powered
+GEOM_ELI: Device ada0p3.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: accelerated software
+CPU: Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz (2593.81-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206d7  Family=0x6  Model=0x2d  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000400<MD_CLEAR,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+ioat0: <SNB IOAT Ch0> mem 0xef53c000-0xef53ffff irq 31 at device 4.0 numa-domain 0 on pci0
+ioat0: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat1: <SNB IOAT Ch1> mem 0xef538000-0xef53bfff irq 39 at device 4.1 numa-domain 0 on pci0
+ioat1: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat2: <SNB IOAT Ch2> mem 0xef534000-0xef537fff irq 31 at device 4.2 numa-domain 0 on pci0
+ioat2: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat3: <SNB IOAT Ch3> mem 0xef530000-0xef533fff irq 39 at device 4.3 numa-domain 0 on pci0
+ioat3: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat4: <SNB IOAT Ch4> mem 0xef52c000-0xef52ffff irq 31 at device 4.4 numa-domain 0 on pci0
+ioat4: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat5: <SNB IOAT Ch5> mem 0xef528000-0xef52bfff irq 39 at device 4.5 numa-domain 0 on pci0
+ioat5: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat6: <SNB IOAT Ch6> mem 0xef524000-0xef527fff irq 31 at device 4.6 numa-domain 0 on pci0
+ioat6: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat7: <SNB IOAT Ch7> mem 0xef520000-0xef523fff irq 39 at device 4.7 numa-domain 0 on pci0
+ioat7: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ichsmb0: <Intel Patsburg SMBus controller> port 0xf000-0xf01f mem 0xef54b000-0xef54b0ff irq 18 at device 31.3 numa-domain 0 on pci0
+smbus0: <System Management Bus> numa-domain 0 on ichsmb0
+ioat8: <SNB IOAT Ch0> mem 0xfbf1c000-0xfbf1ffff irq 55 at device 4.0 numa-domain 1 on pci10
+ioat8: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat9: <SNB IOAT Ch1> mem 0xfbf18000-0xfbf1bfff irq 63 at device 4.1 numa-domain 1 on pci10
+ioat9: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat10: <SNB IOAT Ch2> mem 0xfbf14000-0xfbf17fff irq 55 at device 4.2 numa-domain 1 on pci10
+ioat10: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat11: <SNB IOAT Ch3> mem 0xfbf10000-0xfbf13fff irq 63 at device 4.3 numa-domain 1 on pci10
+ioat11: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat12: <SNB IOAT Ch4> mem 0xfbf0c000-0xfbf0ffff irq 55 at device 4.4 numa-domain 1 on pci10
+ioat12: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat13: <SNB IOAT Ch5> mem 0xfbf08000-0xfbf0bfff irq 63 at device 4.5 numa-domain 1 on pci10
+ioat13: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat14: <SNB IOAT Ch6> mem 0xfbf04000-0xfbf07fff irq 55 at device 4.6 numa-domain 1 on pci10
+ioat14: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat15: <SNB IOAT Ch7> mem 0xfbf00000-0xfbf03fff irq 63 at device 4.7 numa-domain 1 on pci10
+ioat15: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.WMID.WQZZ: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+nvidia0: <Quadro K2200> numa-domain 0 on vgapci0
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: child nvidia0 requested pci_enable_io
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  460.67  Thu Mar 11 00:01:57 UTC 2021
+lo0: link state changed to UP
+em0: link state changed to UP
+pflog0: promiscuous mode enabled
+ums0 numa-domain 0 on uhub6
+ums0: <MOSART Semi. 2.4G Wireless Mouse, class 0/0, rev 1.10/81.13, addr 3> on usbus1
+ums0: 5 buttons and [XYZT] coordinates ID=3
+uhid0 numa-domain 0 on uhub6
+uhid0: <System Control> on usbus1
+uhid1 numa-domain 0 on uhub2
+uhid1: <Yubico YubiKey OTP+FIDO+CCID, class 0/0, rev 2.00/5.24, addr 6> on usbus1
+ulpt0 numa-domain 0 on uhub4
+ulpt0: <Canon Inc MF4800 Series, class 0/0, rev 2.00/1.00, addr 3> on usbus2
+ulpt0: using bi-directional mode
+ulpt1 numa-domain 0 on uhub4
+ulpt1: <Canon Inc MF4800 Series, class 0/0, rev 2.00/1.00, addr 3> on usbus2
+ulpt1: using bi-directional mode
+uaudio0 numa-domain 0 on uhub2
+uaudio0: <Khadas Tone Control> on usbus1
+uaudio0: Play[0]: 384000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 352800 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 176400 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 88200 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 44100 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No recording.
+uaudio0: No MIDI sequencer.
+pcm5: <USB audio> numa-domain 0 on uaudio0
+uaudio0: No HID volume keys found.
+Accounting enabled
+bridge0: Ethernet address: ...
+bridge0: changing name to 'vm-public'
+em0: link state changed to DOWN
+vm-public: link state changed to UP
+em0: promiscuous mode enabled
+Security policy loaded: MAC/ntpd (mac_ntpd)
+ichwd0: <Intel Patsburg watchdog timer> on isa0
+ichwd0: ICH WDT present but disabled in BIOS or hardware
+device_attach: ichwd0 attach returned 6
+em0: link state changed to UP
+(ada1:ata5:0:0:0): READ_DMA. ACB: c8 00 10 08 22 40 00 00 00 00 10 00
+(ada1:ata5:0:0:0): CAM status: ATA Status Error
+(ada1:ata5:0:0:0): ATA status: 51 (DRDY SERV ERR), error: 04 (ABRT )
+(ada1:ata5:0:0:0): RES: 51 04 01 00 00 00 00 00 00 00 00
+(ada1:ata5:0:0:0): Retrying command, 3 more tries remain
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+TCP: [2600:1480:3000:e5::]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52220 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [2600:1480:3000:e5::]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52220 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [2600:1480:3000:e5::]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52220 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [2600:1480:3000:e5::]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52220 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [2600:1480:3000:e5::]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52220 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [2600:1480:3000:e5::]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52220 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:50159 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:50159 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:50159 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+TCP: [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:35756 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:35756 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:35756 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:35756 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:35756 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:35756 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:11519 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:11519 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:11519 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:11519 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:11519 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:11519 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+TCP: [XXX.XXX.XXX.XXX]:54991 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49536 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49536 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:54991 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:54991 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49536 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49536 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:54991 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:54991 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49536 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49537 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49537 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49537 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49537 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49536 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:54991 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49537 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49537 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:54991 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49536 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:49537 to [XXX.XXX.XXX.XXX]:25 tcpflags 0x2<SYN>; tcp_input: Connection attempt to closed port
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:46572 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:46572 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:47796 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:61270 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:20485 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:20485 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:47796 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:61270 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:46572 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:20485 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:47796 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:61270 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:46572 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:20485 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:47796 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:61270 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:20485 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:47796 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:61270 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:20485 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:47796 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:61270 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+TCP: [2606:4700::6810:5714]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:10653 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [2606:4700::6810:5714]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:10653 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+cannot forward from XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on em0
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:10925 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:45244 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:29651 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:61986 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:52990 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:10925 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:45244 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:29651 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:61986 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:52990 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:10925 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:45244 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:29651 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:61986 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:52990 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:10925 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:45244 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:29651 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:52990 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX.XXX.XXX.XXX]:443 to [XXX.XXX.XXX.XXX]:61986 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52175 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52174 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52173 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52174 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52175 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52173 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52174 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52175 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52173 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52174 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52175 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52173 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52174 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52173 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52175 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52174 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52173 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:52175 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:31949 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:40004 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:31949 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:40004 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+Connection attempt to UDP XXX.XXX.XXX.XXX:XXX from XXX.XXX.XXX.XXX:XXX
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:31949 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:40004 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:31949 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:40004 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:31949 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:40004 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:31949 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port
+TCP: [XXX:XXX:XXX:XXX::XXX]:443 to [XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX]:40004 tcpflags 0x12<SYN,ACK>; tcp_input: Connection attempt to closed port

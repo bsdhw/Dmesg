@@ -1,0 +1,238 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p13-HBSD #0  5a415173060(stable/21.1)-dirty: Fri Feb  5 16:41:22 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1024x768
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) Silver 4215R CPU @ 3.20GHz (3200.09-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x50657  Family=0x6  Model=0x55  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffefbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0xd39ffffb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,RTM,PQM,NFPUSG,MPX,PQE,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,PROCTRACE,AVX512CD,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x808<PKU>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xab<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 32973504512 (31445 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <SUPERM SMCI--MB>
+FreeBSD/SMP: Multiprocessor System Detected: 16 CPUs
+FreeBSD/SMP: 1 package(s) x 8 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 24-31 on motherboard
+ioapic2 <Version 2.0> irqs 32-39 on motherboard
+ioapic3 <Version 2.0> irqs 40-47 on motherboard
+ioapic4 <Version 2.0> irqs 48-55 on motherboard
+Launching APs: 1 8 12 7 9 10 6 13 15 11 3 2 5 14 4
+Timecounter "TSC-low" frequency 1600042842 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000066 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SUPERM> on motherboard
+acpi0: Power Button (fixed)
+atrtc0: <AT realtime clock> port 0x70-0x71,0x74-0x77 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 350
+Event timer "HPET1" frequency 24000000 Hz quality 340
+Event timer "HPET2" frequency 24000000 Hz quality 340
+Event timer "HPET3" frequency 24000000 Hz quality 340
+Event timer "HPET4" frequency 24000000 Hz quality 340
+Event timer "HPET5" frequency 24000000 Hz quality 340
+Event timer "HPET6" frequency 24000000 Hz quality 340
+Event timer "HPET7" frequency 24000000 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x508-0x50b on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pci0: <dasp, performance counters> at device 8.1 (no driver attached)
+pci0: <unknown> at device 17.0 (no driver attached)
+pci0: <unknown> at device 17.1 (no driver attached)
+xhci0: <Intel Lewisburg USB 3.0 controller> mem 0xaa380000-0xaa38ffff irq 16 at device 20.0 numa-domain 0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 numa-domain 0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+pci0: <simple comms> at device 22.4 (no driver attached)
+ahci0: <Intel Lewisburg AHCI SATA controller> port 0x840-0x847,0x850-0x853,0x860-0x87f mem 0xaa394000-0xaa395fff,0xaa396000-0xaa3960ff,0xaa300000-0xaa37ffff irq 16 at device 23.0 numa-domain 0 on pci0
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahcich6: <AHCI channel> at channel 6 on ahci0
+ahcich7: <AHCI channel> at channel 7 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 17 at device 28.5 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 17 at device 0.0 numa-domain 0 on pci2
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+vgapci0: <VGA-compatible display> port 0x3000-0x307f mem 0xa9000000-0xa9ffffff,0xaa000000-0xaa01ffff irq 17 at device 0.0 numa-domain 0 on pci3
+vgapci0: Boot video device
+pcib4: <ACPI PCI-PCI bridge> irq 18 at device 28.6 numa-domain 0 on pci0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x2000-0x201f mem 0xaa200000-0xaa27ffff,0xaa280000-0xaa283fff irq 18 at device 0.0 numa-domain 0 on pci4
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib5: <ACPI PCI-PCI bridge> irq 19 at device 28.7 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x1000-0x101f mem 0xaa100000-0xaa17ffff,0xaa180000-0xaa183fff irq 19 at device 0.0 numa-domain 0 on pci5
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+pci0: <serial bus> at device 31.5 (no driver attached)
+pcib6: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+pcib7: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+pcib8: <ACPI PCI-PCI bridge> irq 47 at device 0.0 numa-domain 0 on pci7
+pci8: <ACPI PCI bus> numa-domain 0 on pcib8
+ixl0: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.1.0-k> mem 0xe0000000-0xe07fffff,0xe0808000-0xe080ffff irq 40 at device 0.0 numa-domain 0 on pci8
+ixl0: fw 7.2.60285 api 1.9 nvm 7.20 etid 8000794b oem 1.266.0
+ixl0: The driver for the device detected a newer version of the NVM image than expected.
+ixl0: Please install the most recent version of the network driver.
+ixl0: PF-ID[0]: VFs 64, MSI-X 129, VF MSI-X 5, QPs 768, I2C
+ixl0: Using 1024 TX descriptors and 1024 RX descriptors
+ixl0: Using 8 RX queues 8 TX queues
+ixl0: Using MSI-X interrupts with 9 vectors
+ixl0: Ethernet address: ...
+ixl0: Allocating 8 queues for PF LAN VSI; 8 queues active
+ixl0: PCI Express Bus: Speed 8.0GT/s Width x8
+ixl0: SR-IOV ready
+ixl0: netmap queues/slots: TX 8/1024, RX 8/1024
+ixl1: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.1.0-k> mem 0xdf800000-0xdfffffff,0xe0800000-0xe0807fff irq 40 at device 0.1 numa-domain 0 on pci8
+ixl1: fw 7.2.60285 api 1.9 nvm 7.20 etid 8000794b oem 1.266.0
+ixl1: The driver for the device detected a newer version of the NVM image than expected.
+ixl1: Please install the most recent version of the network driver.
+ixl1: PF-ID[1]: VFs 64, MSI-X 129, VF MSI-X 5, QPs 768, I2C
+ixl1: Using 1024 TX descriptors and 1024 RX descriptors
+ixl1: Using 8 RX queues 8 TX queues
+ixl1: Using MSI-X interrupts with 9 vectors
+ixl1: Ethernet address: ...
+ixl1: Allocating 8 queues for PF LAN VSI; 8 queues active
+ixl1: PCI Express Bus: Speed 8.0GT/s Width x8
+ixl1: SR-IOV ready
+ixl1: netmap queues/slots: TX 8/1024, RX 8/1024
+pcib9: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci9: <ACPI PCI bus> numa-domain 0 on pcib9
+pcib10: <ACPI PCI-PCI bridge> irq 55 at device 2.0 numa-domain 0 on pci9
+pci10: <ACPI PCI bus> numa-domain 0 on pcib10
+pci9: <dasp, performance counters> at device 14.0 (no driver attached)
+pci9: <dasp, performance counters> at device 15.0 (no driver attached)
+pci9: <dasp, performance counters> at device 16.0 (no driver attached)
+pci9: <dasp, performance counters> at device 18.0 (no driver attached)
+pci9: <dasp, performance counters> at device 18.1 (no driver attached)
+pci9: <dasp, performance counters> at device 18.4 (no driver attached)
+pci9: <dasp, performance counters> at device 18.5 (no driver attached)
+pci9: <dasp, performance counters> at device 21.1 (no driver attached)
+pci9: <dasp, performance counters> at device 22.1 (no driver attached)
+pci9: <dasp, performance counters> at device 22.5 (no driver attached)
+pci9: <dasp, performance counters> at device 23.1 (no driver attached)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xc7fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <INTEL SSDSC2KB240G8 XCV10132> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 228936MB (468862128 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <INTEL SSDSC2KB240G8 XCV10132> ACS-3 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 228936MB (468862128 512 byte sectors)
+GEOM: ada0: the secondary GPT header is not in the last LBA.
+GEOM: ada1: the secondary GPT header is not in the last LBA.
+GEOM_MIRROR: Device mirror/OPNsense launched (2/2).
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <vendor 0x0557 product 0x7000> at usbus0
+uhub1 numa-domain 0 on uhub0
+uhub1: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 1> on usbus0
+uhub1: 4 ports with 3 removable, self powered
+ugen0.3: <vendor 0x0557 product 0x2419> at usbus0
+ukbd0 numa-domain 0 on uhub1
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+kbd2 at ukbd0
+igb0: link state changed to UP
+ioat0: <SKX IOAT> mem 0x383ffff1c000-0x383ffff1ffff irq 26 at device 4.0 numa-domain 0 on pci0
+ioat0: Capabilities: f0006f1<DMA_with_DIF,PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat1: <SKX IOAT> mem 0x383ffff18000-0x383ffff1bfff irq 27 at device 4.1 numa-domain 0 on pci0
+ioat1: Capabilities: f0006f1<DMA_with_DIF,PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat2: <SKX IOAT> mem 0x383ffff14000-0x383ffff17fff irq 26 at device 4.2 numa-domain 0 on pci0
+ioat2: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat3: <SKX IOAT> mem 0x383ffff10000-0x383ffff13fff irq 27 at device 4.3 numa-domain 0 on pci0
+ioat3: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat4: <SKX IOAT> mem 0x383ffff0c000-0x383ffff0ffff irq 26 at device 4.4 numa-domain 0 on pci0
+ioat4: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat5: <SKX IOAT> mem 0x383ffff08000-0x383ffff0bfff irq 27 at device 4.5 numa-domain 0 on pci0
+ioat5: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat6: <SKX IOAT> mem 0x383ffff04000-0x383ffff07fff irq 26 at device 4.6 numa-domain 0 on pci0
+ioat6: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat7: <SKX IOAT> mem 0x383ffff00000-0x383ffff03fff irq 27 at device 4.7 numa-domain 0 on pci0
+ioat7: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ums0 numa-domain 0 on uhub1
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+vlan0: changing name to 'ixl1_vlan200'
+igb0: link state changed to DOWN
+igb0: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

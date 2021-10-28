@@ -1,0 +1,902 @@
+OpenBSD 6.8 (RAMDISK_CD) #94: Sun Oct  4 18:21:11 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8554749952 (8158MB)
+avail mem = 8291463168 (7907MB)
+random: boothowto does not indicate good seed
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xeb350 (17 entries)
+bios0: vendor American Megatrends Inc. version "R1120Y6" date 10/11/2010
+bios0: Sony Corporation VPCF12C5E
+acpi0 at bios0: ACPI 4.0
+acpi0: tables DSDT FACP APIC MCFG HPET SLIC SSDT SSDT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7 CPU Q 720 @ 1.60GHz, 2793.41 MHz, 06-1e-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 132MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (RP01)
+acpiprt2 at acpi0: bus 4 (RP03)
+acpiprt3 at acpi0: bus 3 (RP02)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiprt5 at acpi0: bus 5 (RP06)
+acpiprt6 at acpi0: bus -1 (PEGP)
+acpiprt7 at acpi0: bus 1 (PEG3)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"SNY5001" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpipci1 at acpi0 CPBG
+"PNP0C0A" at acpi0 not configured
+"ACPI0003" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using IvyBridge MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core DMI" rev 0x11
+ppb0 at pci0 dev 3 function 0 "Intel Core PCIE" rev 0x11: msi
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 vendor "NVIDIA", unknown product 0x0a29 rev 0xa2
+vga1: aperture needed
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+vendor "NVIDIA", unknown product 0x0be2 (class multimedia subclass hdaudio, rev 0xa1) at pci1 dev 0 function 1 not configured
+"Intel Core Management" rev 0x11 at pci0 dev 8 function 0 not configured
+"Intel Core Scratch" rev 0x11 at pci0 dev 8 function 1 not configured
+"Intel Core Control" rev 0x11 at pci0 dev 8 function 2 not configured
+"Intel Core Misc" rev 0x11 at pci0 dev 8 function 3 not configured
+"Intel Core QPI Link" rev 0x11 at pci0 dev 16 function 0 not configured
+"Intel Core QPI Routing" rev 0x11 at pci0 dev 16 function 1 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 3400 USB" rev 0x05: apic 2 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel 3400 HD Audio" rev 0x05 at pci0 dev 27 function 0 not configured
+ppb1 at pci0 dev 28 function 0 "Intel 3400 PCIE" rev 0x05: msi
+pci2 at ppb1 bus 2
+iwn0 at pci2 dev 0 function 0 "Intel Centrino Advanced-N 6200" rev 0x35: msi, MIMO 2T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 1 "Intel 3400 PCIE" rev 0x05: msi
+pci3 at ppb2 bus 3
+sdhc0 at pci3 dev 0 function 0 "Ricoh 5U822 SD/MMC" rev 0x00: apic 2 int 17
+sdhc0: SDHC 1.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+"Ricoh 5U230 Memory Stick" rev 0x00 at pci3 dev 0 function 1 not configured
+"Ricoh 5U832 Firewire" rev 0x00 at pci3 dev 0 function 3 not configured
+sdhc1 at pci3 dev 0 function 4 "Ricoh 5U822 SD/MMC" rev 0x00: apic 2 int 19
+sdhc1: SDHC 1.0, 50 MHz base clock
+sdmmc1 at sdhc1: 4-bit, sd high-speed, mmc high-speed
+ppb3 at pci0 dev 28 function 2 "Intel 3400 PCIE" rev 0x05: msi
+pci4 at ppb3 bus 4
+mskc0 at pci4 dev 0 function 0 "Marvell Yukon 88E8057" rev 0x10, Yukon-2 Ultra 2 (0x0): msi
+msk0 at mskc0 port A: address XXX
+eephy0 at msk0 phy 0: 88E1149 Gigabit PHY, rev. 1
+ppb4 at pci0 dev 28 function 5 "Intel 3400 PCIE" rev 0x05: msi
+pci5 at ppb4 bus 5
+ehci1 at pci0 dev 29 function 0 "Intel 3400 USB" rev 0x05: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb5 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xa5
+pci6 at ppb5 bus 13
+"Intel PM55 LPC" rev 0x05 at pci0 dev 31 function 0 not configured
+ahci0 at pci0 dev 31 function 2 "Intel 3400 AHCI" rev 0x05: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 1.5Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, WDC WDS240G2G0A-, UF45> naa.5001b444a929ebb7
+sd0: 228944MB, 512 bytes/sector, 468877312 sectors, thin
+cd0 at scsibus0 targ 1 lun 0: <PIONEER, BD-ROM BDC-TD03, 1.00> removable
+"Intel 3400 SMBus" rev 0x05 at pci0 dev 31 function 3 not configured
+pci7 at mainbus0 bus 63
+pchb1 at pci7 dev 0 function 0 vendor "Intel", unknown product 0x2c52 rev 0x04
+pchb2 at pci7 dev 0 function 1 vendor "Intel", unknown product 0x2c81 rev 0x04
+pchb3 at pci7 dev 2 function 0 vendor "Intel", unknown product 0x2c90 rev 0x04
+pchb4 at pci7 dev 2 function 1 vendor "Intel", unknown product 0x2c91 rev 0x04
+pchb5 at pci7 dev 3 function 0 vendor "Intel", unknown product 0x2c98 rev 0x04
+pchb6 at pci7 dev 3 function 1 vendor "Intel", unknown product 0x2c99 rev 0x04
+pchb7 at pci7 dev 3 function 4 vendor "Intel", unknown product 0x2c9c rev 0x04
+pchb8 at pci7 dev 4 function 0 vendor "Intel", unknown product 0x2ca0 rev 0x04
+pchb9 at pci7 dev 4 function 1 vendor "Intel", unknown product 0x2ca1 rev 0x04
+pchb10 at pci7 dev 4 function 2 vendor "Intel", unknown product 0x2ca2 rev 0x04
+pchb11 at pci7 dev 4 function 3 vendor "Intel", unknown product 0x2ca3 rev 0x04
+pchb12 at pci7 dev 5 function 0 vendor "Intel", unknown product 0x2ca8 rev 0x04
+pchb13 at pci7 dev 5 function 1 vendor "Intel", unknown product 0x2ca9 rev 0x04
+pchb14 at pci7 dev 5 function 2 vendor "Intel", unknown product 0x2caa rev 0x04
+pchb15 at pci7 dev 5 function 3 vendor "Intel", unknown product 0x2cab rev 0x04
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+uhub2 at uhub0 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0020" rev 2.00/0.00 addr 2
+"Ricoh co. Ltd. product 0x18ba" rev 2.00/3.02 addr 3 at uhub2 port 2 not configured
+"Broadcom Corp Broadcom Bluetooth Device" rev 2.00/5.96 addr 4 at uhub2 port 6 not configured
+uhub3 at uhub1 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0020" rev 2.00/0.00 addr 2
+umass0 at uhub3 port 2 configuration 1 interface 0 "Generic USB3.0-CRW" rev 2.10/2.04 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <Generic-, SD/MMC, 1.00> removable serial....
+sd1: 30532MB, 512 bytes/sector, 62529536 sectors
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+syncing disks... done
+rebooting...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8554749952 (8158MB)
+avail mem = 8280432640 (7896MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xeb350 (17 entries)
+bios0: vendor American Megatrends Inc. version "R1120Y6" date 10/11/2010
+bios0: Sony Corporation VPCF12C5E
+acpi0 at bios0: ACPI 4.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC MCFG HPET SLIC SSDT SSDT
+acpi0: wakeup devices P0PF(S4) USB1(S3) USB2(S3) USB3(S3) USB4(S3) USB5(S3) USB6(S3) USB7(S3) HDEF(S4) RP01(S3) PXSX(S3) RP03(S3) PXSX(S3) EHC1(S3) EHC2(S3) RP06(S3) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7 CPU Q 720 @ 1.60GHz, 2793.37 MHz, 06-1e-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 133MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i7 CPU Q 720 @ 1.60GHz, 2394.02 MHz, 06-1e-05
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Core(TM) i7 CPU Q 720 @ 1.60GHz, 1729.02 MHz, 06-1e-05
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Core(TM) i7 CPU Q 720 @ 1.60GHz, 1729.02 MHz, 06-1e-05
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+cpu4 at mainbus0: apid 1 (application processor)
+cpu4: Intel(R) Core(TM) i7 CPU Q 720 @ 1.60GHz, 1729.01 MHz, 06-1e-05
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,MELTDOWN
+cpu4: 256KB 64b/line 8-way L2 cache
+cpu4: smt 1, core 0, package 0
+cpu5 at mainbus0: apid 3 (application processor)
+cpu5: Intel(R) Core(TM) i7 CPU Q 720 @ 1.60GHz, 1729.01 MHz, 06-1e-05
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,MELTDOWN
+cpu5: 256KB 64b/line 8-way L2 cache
+cpu5: smt 1, core 1, package 0
+cpu6 at mainbus0: apid 5 (application processor)
+cpu6: Intel(R) Core(TM) i7 CPU Q 720 @ 1.60GHz, 1729.01 MHz, 06-1e-05
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,MELTDOWN
+cpu6: 256KB 64b/line 8-way L2 cache
+cpu6: smt 1, core 2, package 0
+cpu7 at mainbus0: apid 7 (application processor)
+cpu7: Intel(R) Core(TM) i7 CPU Q 720 @ 1.60GHz, 1729.01 MHz, 06-1e-05
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,MELTDOWN
+cpu7: 256KB 64b/line 8-way L2 cache
+cpu7: smt 1, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (RP01)
+acpiprt2 at acpi0: bus 4 (RP03)
+acpiprt3 at acpi0: bus 3 (RP02)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiprt5 at acpi0: bus 5 (RP06)
+acpiprt6 at acpi0: bus -1 (PEGP)
+acpiprt7 at acpi0: bus 1 (PEG3)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"SNY5001" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpipci1 at acpi0 CPBG
+acpibat0 at acpi0: BAT0 not present
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PWRB
+acpicpu0 at acpi0: !C3(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu1 at acpi0: !C3(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu2 at acpi0: !C3(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu3 at acpi0: !C3(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu4 at acpi0: !C3(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu5 at acpi0: !C3(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu6 at acpi0: !C3(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu7 at acpi0: !C3(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 98 degC
+acpitz1 at acpi0: critical temperature is 98 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 2793 MHz: speeds: 1600, 1599, 1466, 1333, 1199, 1066, 933 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core DMI" rev 0x11
+ppb0 at pci0 dev 3 function 0 "Intel Core PCIE" rev 0x11: msi
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 vendor "NVIDIA", unknown product 0x0a29 rev 0xa2
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+azalia0 at pci1 dev 0 function 1 vendor "NVIDIA", unknown product 0x0be2 rev 0xa1: msi
+azalia0: no supported codecs
+"Intel Core Management" rev 0x11 at pci0 dev 8 function 0 not configured
+"Intel Core Scratch" rev 0x11 at pci0 dev 8 function 1 not configured
+"Intel Core Control" rev 0x11 at pci0 dev 8 function 2 not configured
+"Intel Core Misc" rev 0x11 at pci0 dev 8 function 3 not configured
+"Intel Core QPI Link" rev 0x11 at pci0 dev 16 function 0 not configured
+"Intel Core QPI Routing" rev 0x11 at pci0 dev 16 function 1 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 3400 USB" rev 0x05: apic 2 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia1 at pci0 dev 27 function 0 "Intel 3400 HD Audio" rev 0x05: msi
+azalia1: codecs: Realtek/0x0275
+audio0 at azalia1
+ppb1 at pci0 dev 28 function 0 "Intel 3400 PCIE" rev 0x05: msi
+pci2 at ppb1 bus 2
+iwn0 at pci2 dev 0 function 0 "Intel Centrino Advanced-N 6200" rev 0x35: msi, MIMO 2T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 1 "Intel 3400 PCIE" rev 0x05: msi
+pci3 at ppb2 bus 3
+sdhc0 at pci3 dev 0 function 0 "Ricoh 5U822 SD/MMC" rev 0x00: apic 2 int 17
+sdhc0: SDHC 1.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+"Ricoh 5U230 Memory Stick" rev 0x00 at pci3 dev 0 function 1 not configured
+"Ricoh 5U832 Firewire" rev 0x00 at pci3 dev 0 function 3 not configured
+sdhc1 at pci3 dev 0 function 4 "Ricoh 5U822 SD/MMC" rev 0x00: apic 2 int 19
+sdhc1: SDHC 1.0, 50 MHz base clock
+sdmmc1 at sdhc1: 4-bit, sd high-speed, mmc high-speed
+ppb3 at pci0 dev 28 function 2 "Intel 3400 PCIE" rev 0x05: msi
+pci4 at ppb3 bus 4
+mskc0 at pci4 dev 0 function 0 "Marvell Yukon 88E8057" rev 0x10, Yukon-2 Ultra 2 (0x0): msi
+msk0 at mskc0 port A: address XXX
+eephy0 at msk0 phy 0: 88E1149 Gigabit PHY, rev. 1
+ppb4 at pci0 dev 28 function 5 "Intel 3400 PCIE" rev 0x05: msi
+pci5 at ppb4 bus 5
+ehci1 at pci0 dev 29 function 0 "Intel 3400 USB" rev 0x05: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb5 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xa5
+pci6 at ppb5 bus 13
+pcib0 at pci0 dev 31 function 0 "Intel PM55 LPC" rev 0x05
+ahci0 at pci0 dev 31 function 2 "Intel 3400 AHCI" rev 0x05: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WDS240G2G0A-, UF45> naa.5001b444a929ebb7
+sd0: 228944MB, 512 bytes/sector, 468877312 sectors, thin
+cd0 at scsibus1 targ 1 lun 0: <PIONEER, BD-ROM BDC-TD03, 1.00> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 3400 SMBus" rev 0x05: apic 2 int 18
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x52: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+pci7 at mainbus0 bus 63
+pchb1 at pci7 dev 0 function 0 vendor "Intel", unknown product 0x2c52 rev 0x04
+pchb2 at pci7 dev 0 function 1 vendor "Intel", unknown product 0x2c81 rev 0x04
+pchb3 at pci7 dev 2 function 0 vendor "Intel", unknown product 0x2c90 rev 0x04
+pchb4 at pci7 dev 2 function 1 vendor "Intel", unknown product 0x2c91 rev 0x04
+pchb5 at pci7 dev 3 function 0 vendor "Intel", unknown product 0x2c98 rev 0x04
+pchb6 at pci7 dev 3 function 1 vendor "Intel", unknown product 0x2c99 rev 0x04
+pchb7 at pci7 dev 3 function 4 vendor "Intel", unknown product 0x2c9c rev 0x04
+pchb8 at pci7 dev 4 function 0 vendor "Intel", unknown product 0x2ca0 rev 0x04
+pchb9 at pci7 dev 4 function 1 vendor "Intel", unknown product 0x2ca1 rev 0x04
+pchb10 at pci7 dev 4 function 2 vendor "Intel", unknown product 0x2ca2 rev 0x04
+pchb11 at pci7 dev 4 function 3 vendor "Intel", unknown product 0x2ca3 rev 0x04
+pchb12 at pci7 dev 5 function 0 vendor "Intel", unknown product 0x2ca8 rev 0x04
+pchb13 at pci7 dev 5 function 1 vendor "Intel", unknown product 0x2ca9 rev 0x04
+pchb14 at pci7 dev 5 function 2 vendor "Intel", unknown product 0x2caa rev 0x04
+pchb15 at pci7 dev 5 function 3 vendor "Intel", unknown product 0x2cab rev 0x04
+vmm0 at mainbus0: VMX/EPT
+uhub2 at uhub0 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uvideo0 at uhub2 port 2 configuration 1 interface 0 "Ricoh co. Ltd. product 0x18ba" rev 2.00/3.02 addr 3
+video0 at uvideo0
+ugen0 at uhub2 port 6 "Broadcom Corp Broadcom Bluetooth Device" rev 2.00/5.96 addr 4
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+umass0 at uhub3 port 2 configuration 1 interface 0 "Generic USB3.0-CRW" rev 2.10/2.04 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd1 at scsibus2 targ 1 lun 0: <Generic-, SD/MMC, 1.00> removable serial....
+sd1: 30532MB, 512 bytes/sector, 62529536 sectors
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+root on sd1a (8d3018c9fb4b526a.a) swap on sd1b dump on sd1b
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsdisplay0: screen 5 deleted
+wsdisplay0: screen 5 added (80x50, vt100 emulation)
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub3 port 5 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+wsmouse1 detached
+ums0 detached
+uhidev0 detached
+ugen1 at uhub3 port 5 "Gemalto USB SmartCard Reader" rev 2.00/2.01 addr 4

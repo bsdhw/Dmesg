@@ -1,0 +1,134 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-BETA1 #0 releng/13.0-n244471-638e531019f: Fri Feb  5 17:44:44 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 1280x1024
+CPU: Intel(R) Atom(TM) CPU  E3845  @ 1.91GHz (1916.71-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x30679  Family=0x6  Model=0x37  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x43d8e3bf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,AESNI,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2282<TSCADJ,SMEP,ERMS,NFPUSG>
+  Structured Extended Features3=0xc000000<IBPB,STIBP>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3984945152 (3800 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <BCKHFF BECKHOFF>
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 128/32 (20201113/tbfadt-748)
+ioapic0 <Version 2.0> irqs 0-86
+Launching APs: 2 3 1
+Timecounter "TSC" frequency 1916712981 Hz quality 1000
+KTLS: Initialized 4 threads
+random: entropy device external interface
+000.000019 [4350] netmap_init               netmap: loaded module
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd0 at kbdmux0
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <BCKHFF BECKHOFF>
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pcib0: Length mismatch for 3 range: 10815fff vs 10816000
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xe080-0xe087 mem 0xd0000000-0xd03fffff,0xc0000000-0xcfffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+ahci0: <AHCI SATA controller> port 0xe070-0xe077,0xe060-0xe063,0xe050-0xe057,0xe040-0xe043,0xe020-0xe03f mem 0xd0815000-0xd08157ff irq 19 at device 19.0 on pci0
+ahci0: AHCI v1.30 with 2 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+xhci0: <Intel BayTrail USB 3.0 controller> mem 0xd0800000-0xd080ffff irq 20 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <encrypt/decrypt> at device 26.0 (no driver attached)
+hdac0: <Intel BayTrail HDA Controller> mem 0xd0810000-0xd0813fff irq 22 at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xd000-0xd01f mem 0xd0700000-0xd071ffff,0xd0720000-0xd0723fff irq 16 at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib2: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xc000-0xc01f mem 0xd0600000-0xd061ffff,0xd0620000-0xd0623fff irq 17 at device 0.0 on pci2
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Sleep Button> on acpi0
+orm0: <ISA Option ROMs> at iomem 0xce800-0xcf7ff,0xcf800-0xd57ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 8a0000001745
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 8a0000001745
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 8a0000001745
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 8a0000001745
+device_attach: est3 attach returned 6
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Intel Valleyview2 HDA CODEC> at cad 2 on hdac0
+hdaa0: <Intel Valleyview2 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Valleyview2 (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <Intel Valleyview2 (HDMI/DP 8ch)> at nid 5 on hdaa0
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: CAM usbus0
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <ADATA IM2S3144-030GK L170317e> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 28626MB (58626288 512 byte sectors)
+uhub0: 7 ports with 7 removable, self powered
+ichsmb0: <Intel Baytrail SMBus controller> port 0xe000-0xe01f mem 0xd0814000-0xd081401f irq 18 at device 31.3 on pci0
+smbus0: <System Management Bus> on ichsmb0
+lo0: link state changed to UP
+igb1: link state changed to UP
+Security policy loaded: MAC/ntpd (mac_ntpd)

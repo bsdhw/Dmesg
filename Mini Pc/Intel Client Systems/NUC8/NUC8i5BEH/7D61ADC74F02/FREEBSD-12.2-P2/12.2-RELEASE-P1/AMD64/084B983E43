@@ -1,0 +1,836 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE-p1 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(efifb): resolution 2560x1080
+CPU: Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz (2304.15-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8160657408 (7782 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  NUC8i5BE>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 7 2 4 6 3 5
+Timecounter "TSC-low" frequency 1152072774 Hz quality 1000
+random: entropy device external interface
+kbd0 at kbdmux0
+000.000023 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81115e40, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+[ath_dfs] loaded
+[ath_rate] loaded
+[ar9300] loaded
+[ar5212] loaded
+[ar5416] loaded
+[ar5211] loaded
+[ar5210] loaded
+[ath] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <INTEL NUC8i5BE> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x14> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x303f mem 0x88000000-0x88ffffff,0x80000000-0x87ffffff at device 2.0 on pci0
+acpi_video0: <ACPI video extension> on vgapci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x4000000000-0x400000ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <network> at device 20.3 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x3090-0x3097,0x3080-0x3083,0x3060-0x307f mem 0x89020000-0x89021fff,0x89023000-0x890230ff,0x89022000-0x890227ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier not supported
+ahcich2: <AHCI channel> at channel 2 on ahci0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <serial bus> at device 31.5 (no driver attached)
+em0: <Intel(R) PRO/1000 Network Connection> mem 0x89000000-0x8901ffff at device 31.6 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _HOT value is absurd, ignored (-73.1C)
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+uart0: <Non-standard ns8250 class UART with FIFOs> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to deny, logging disabled
+acpi_tz1: _TMP value is absurd, ignored (-263.1C)
+Trying to mount root from ufs:/dev/ada0p2 [rw]...
+Root mount waiting for: usbus0 CAM
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich2 bus 0 scbus0 target 0 lun 0
+ada0: <KINGSTON SUV500240G 003056RI> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 228936MB (468862128 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <SONiX USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 1> on usbus0
+kbd1 at ukbd0
+ukbd1 on uhub0
+ukbd1: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 1> on usbus0
+kbd2 at ukbd1
+Root mount waiting for: usbus0
+ugen0.3: <vendor 0x093a USB OPTICAL MOUSE> at usbus0
+mountroot: waiting for device /dev/ada0p2...
+GEOM_ELI: Device ada0p4.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+GEOM_ELI: Device ada0p3.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Found 128MB of eDRAM
+Failed to add WC MTRR for [0x80000000-0x87ffffff]: -22; performance may suffer
+[drm] Got stolen memory base 0x7e000000, size 0x2000000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector eDP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.eDP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] failed to retrieve link info, disabling eDP
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Initialized i915 1.6.0 20171222 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=2560 depth=32
+cmsize=16 size=11059200
+pbase=0x80040000 vbase=0xfffff80080040000
+name=drmn0 flags=0x0 stride=10240 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: inteldrmfb frame buffer device
+iwm0: <Intel(R) Dual Band Wireless AC 9560> mem 0x4000010000-0x4000013fff at device 20.3 on pci0
+iwm0: hw rev 0x310, fw ver 34.3125811985.0, address XXX
+i915/kbl_dmc_ver1_04.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: i915/kbl_dmc_ver1_04.bin
+drmn0: successfully loaded firmware image with mapped name: i915_kbl_dmc_ver1_04_bin
+[drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+wlan0: Ethernet address: ...
+lo0: link state changed to UP
+wlan0: link state changed to UP
+uhid0 on uhub0
+uhid0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 1> on usbus0
+ums0 on uhub0
+ums0: <vendor 0x093a USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 5 buttons and [XYZT] coordinates ID=0
+pid 50998 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 51150 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 51677 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 51986 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 52979 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 53774 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 53348 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 52727 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 53814 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 70701 (baloo_file), jid 0, uid 1001: exited on signal 4
+pid 60424 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 60814 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+GEOM_ELI: Device md0.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+WARNING: /mnt/XXXX GJOURNAL flag on fs but no gjournal provider below
+arp: short packet received on wlan0
+arp: short packet received on wlan0
+arp: short packet received on wlan0
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+pid 91825 (conftest), jid 0, uid 0: exited on signal 11 (core dumped)
+arp: short packet received on wlan0
+GEOM_ELI: Device md0.eli destroyed.
+arp: short packet received on wlan0
+arp: short packet received on wlan0
+GEOM_ELI: Device md0.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+WARNING: /mnt/XXXX GJOURNAL flag on fs but no gjournal provider below
+GEOM_ELI: Device md0.eli destroyed.
+pid 2939 (conftest), jid 0, uid 0: exited on signal 11 (core dumped)
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+arp: short packet received on wlan0
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+arp: short packet received on wlan0
+tap0: link state changed to DOWN
+in6_purgeaddr: err=65, destination address delete failed
+lo0: link state changed to DOWN
+wlan0: Ethernet address: ...
+lo0: link state changed to UP
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 12 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+GEOM_ELI: Device ada0p4.eli destroyed.
+GEOM_ELI: Detached ada0p4.eli on last close.
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE-p1 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(efifb): resolution 2560x1080
+CPU: Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz (2304.12-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8160657408 (7782 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  NUC8i5BE>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 3 4 6 7 2 5
+Timecounter "TSC-low" frequency 1152062397 Hz quality 1000
+random: entropy device external interface
+kbd0 at kbdmux0
+000.000023 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81115e40, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+[ath_dfs] loaded
+[ath_rate] loaded
+[ar9300] loaded
+[ar5212] loaded
+[ar5416] loaded
+[ar5211] loaded
+[ar5210] loaded
+[ath] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <INTEL NUC8i5BE> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x14> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x303f mem 0x88000000-0x88ffffff,0x80000000-0x87ffffff at device 2.0 on pci0
+acpi_video0: <ACPI video extension> on vgapci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x4000000000-0x400000ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <network> at device 20.3 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x3090-0x3097,0x3080-0x3083,0x3060-0x307f mem 0x89020000-0x89021fff,0x89023000-0x890230ff,0x89022000-0x890227ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier not supported
+ahcich2: <AHCI channel> at channel 2 on ahci0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <serial bus> at device 31.5 (no driver attached)
+em0: <Intel(R) PRO/1000 Network Connection> mem 0x89000000-0x8901ffff at device 31.6 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _HOT value is absurd, ignored (-73.1C)
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+uart0: <Non-standard ns8250 class UART with FIFOs> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to deny, logging disabled
+acpi_tz1: _TMP value is absurd, ignored (-263.1C)
+Trying to mount root from ufs:/dev/ada0p2 [rw]...
+Root mount waiting for: usbus0 CAM
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich2 bus 0 scbus0 target 0 lun 0
+ada0: <KINGSTON SUV500240G 003056RI> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 228936MB (468862128 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <SONiX USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 1> on usbus0
+kbd1 at ukbd0
+ukbd1 on uhub0
+ukbd1: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 1> on usbus0
+kbd2 at ukbd1
+Root mount waiting for: usbus0
+ugen0.3: <vendor 0x093a USB OPTICAL MOUSE> at usbus0
+mountroot: waiting for device /dev/ada0p2...
+GEOM_ELI: Device ada0p4.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+GEOM_ELI: Device ada0p3.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Found 128MB of eDRAM
+Failed to add WC MTRR for [0x80000000-0x87ffffff]: -22; performance may suffer
+[drm] Got stolen memory base 0x7e000000, size 0x2000000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector eDP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.eDP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] failed to retrieve link info, disabling eDP
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Initialized i915 1.6.0 20171222 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=2560 depth=32
+cmsize=16 size=11059200
+pbase=0x80040000 vbase=0xfffff80080040000
+name=drmn0 flags=0x0 stride=10240 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: inteldrmfb frame buffer device
+iwm0: <Intel(R) Dual Band Wireless AC 9560> mem 0x4000010000-0x4000013fff at device 20.3 on pci0
+iwm0: hw rev 0x310, fw ver 34.3125811985.0, address XXX
+i915/kbl_dmc_ver1_04.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: i915/kbl_dmc_ver1_04.bin
+drmn0: successfully loaded firmware image with mapped name: i915_kbl_dmc_ver1_04_bin
+[drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+wlan0: Ethernet address: ...
+lo0: link state changed to UP
+wlan0: link state changed to UP
+uhid0 on uhub0
+uhid0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 1> on usbus0
+ums0 on uhub0
+ums0: <vendor 0x093a USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 5 buttons and [XYZT] coordinates ID=0
+pid 22708 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 22286 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 23048 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 22739 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 23187 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 23354 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 23658 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 24314 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 24144 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 35712 (baloo_file), jid 0, uid 1001: exited on signal 4
+pid 24894 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 26136 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 27023 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 27502 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 26932 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 27261 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 27291 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 31618 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 31165 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 31728 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 31701 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+ugen0.3: <vendor 0x093a USB OPTICAL MOUSE> at usbus0 (disconnected)
+ums0: at uhub0, port 4, addr 2 (disconnected)
+ums0: detached
+ugen0.2: <SONiX USB Keyboard> at usbus0 (disconnected)
+ukbd0: at uhub0, port 3, addr 1 (disconnected)
+ukbd0: detached
+uhid0: at uhub0, port 3, addr 1 (disconnected)
+uhid0: detached
+ukbd1: at uhub0, port 3, addr 1 (disconnected)
+ukbd1: detached
+ugen0.2: <vendor 0x093a USB OPTICAL MOUSE> at usbus0
+ums0 on uhub0
+ums0: <vendor 0x093a USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+ums0: 5 buttons and [XYZT] coordinates ID=0
+ugen0.3: <SONiX USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 4> on usbus0
+kbd1 at ukbd0
+uhid0 on uhub0
+uhid0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 4> on usbus0
+ukbd1 on uhub0
+ukbd1: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 4> on usbus0
+kbd2 at ukbd1
+ugen0.4: <ENE UB6225> at usbus0
+umass0 on uhub0
+umass0: <ENE UB6225, class 0/0, rev 2.00/1.00, addr 5> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc000
+umass0:1:0: Attached to scbus1
+da0 at umass-sim0 bus 0 scbus1 target 0 lun 0
+da0: <USB2.0 CardReader SD0 0100> Removable Direct Access SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+da1 at umass-sim0 bus 0 scbus1 target 0 lun 1
+da1: <USB2.0 CardReader SD1 0100> Removable Direct Access SCSI device
+da1: Serial Number...
+da1: 40.000MB/s transfers
+da1: Attempt to query device size failed: NOT READY, Medium not present
+da1: quirks=0x2<NO_6_BYTE>
+da2 at umass-sim0 bus 0 scbus1 target 0 lun 2
+da2: <USB2.0 CardReader SD2 0100> Removable Direct Access SCSI device
+da2: Serial Number...
+da2: 40.000MB/s transfers
+da2: 15193MB (31116288 512 byte sectors)
+da2: quirks=0x2<NO_6_BYTE>
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+pid 13644 (perl), uid 117 inumber 5069927 on /: filesystem full
+pid 13644 (perl), uid 117 inumber 5069937 on /: filesystem full
+ugen0.4: <ENE UB6225> at usbus0 (disconnected)
+umass0: at uhub0, port 2, addr 5 (disconnected)
+da0 at umass-sim0 bus 0 scbus1 target 0 lun 0
+da0: <USB2.0 CardReader SD0 0100>  s/n ... detached
+da1 at umass-sim0 bus 0 scbus1 target 0 lun 1
+da1: <USB2.0 CardReader SD1 0100>  s/n ... detached
+da2 at umass-sim0 bus 0 scbus1 target 0 lun 2
+da2: <USB2.0 CardReader SD2 0100>  s/n ... detached
+(da1:umass-sim0:0:0:1): Periph destroyed
+(da0:umass-sim0:0:0:0): Periph destroyed
+(da2:umass-sim0:0:0:2): Periph destroyed
+umass0: detached
+ugen0.3: <SONiX USB Keyboard> at usbus0 (disconnected)
+ukbd0: at uhub0, port 4, addr 4 (disconnected)
+ukbd0: detached
+uhid0: at uhub0, port 4, addr 4 (disconnected)
+uhid0: detached
+ukbd1: at uhub0, port 4, addr 4 (disconnected)
+ukbd1: detached
+ugen0.3: <SONiX USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 6> on usbus0
+kbd1 at ukbd0
+uhid0 on uhub0
+uhid0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 6> on usbus0
+ukbd1 on uhub0
+ukbd1: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 6> on usbus0
+kbd2 at ukbd1
+ugen0.3: <SONiX USB Keyboard> at usbus0 (disconnected)
+ukbd0: at uhub0, port 4, addr 6 (disconnected)
+ukbd0: detached
+uhid0: at uhub0, port 4, addr 6 (disconnected)
+uhid0: detached
+ukbd1: at uhub0, port 4, addr 6 (disconnected)
+ukbd1: detached
+ugen0.3: <SONiX USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 7> on usbus0
+kbd1 at ukbd0
+uhid0 on uhub0
+uhid0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 7> on usbus0
+ukbd1 on uhub0
+ukbd1: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 7> on usbus0
+kbd2 at ukbd1
+ugen0.3: <SONiX USB Keyboard> at usbus0 (disconnected)
+ukbd0: at uhub0, port 4, addr 7 (disconnected)
+ukbd0: detached
+uhid0: at uhub0, port 4, addr 7 (disconnected)
+uhid0: detached
+ukbd1: at uhub0, port 4, addr 7 (disconnected)
+ukbd1: detached
+em0: link state changed to UP
+ugen0.3: <SONiX USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 8> on usbus0
+kbd1 at ukbd0
+uhid0 on uhub0
+uhid0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 8> on usbus0
+ukbd1 on uhub0
+ukbd1: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 8> on usbus0
+kbd2 at ukbd1
+ugen0.3: <SONiX USB Keyboard> at usbus0 (disconnected)
+ukbd0: at uhub0, port 4, addr 8 (disconnected)
+ukbd0: detached
+uhid0: at uhub0, port 4, addr 8 (disconnected)
+uhid0: detached
+ukbd1: at uhub0, port 4, addr 8 (disconnected)
+ukbd1: detached
+ugen0.3: <SONiX USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 9> on usbus0
+kbd1 at ukbd0
+uhid0 on uhub0
+uhid0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 9> on usbus0
+ukbd1 on uhub0
+ukbd1: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 9> on usbus0
+kbd2 at ukbd1
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+wlan0: link state changed to DOWN
+tap0: link state changed to DOWN
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 12 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+GEOM_ELI: Device ada0p4.eli destroyed.
+GEOM_ELI: Detached ada0p4.eli on last close.
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE-p1 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(efifb): resolution 2560x1080
+CPU: Intel(R) Core(TM) i5-8259U CPU @ 2.30GHz (2304.11-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8160657408 (7782 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  NUC8i5BE>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 3 4 6 7 2 5
+Timecounter "TSC-low" frequency 1152053769 Hz quality 1000
+random: entropy device external interface
+kbd0 at kbdmux0
+000.000023 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81115e40, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+[ath_dfs] loaded
+[ath_rate] loaded
+[ar9300] loaded
+[ar5212] loaded
+[ar5416] loaded
+[ar5211] loaded
+[ar5210] loaded
+[ath] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <INTEL NUC8i5BE> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x14> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x303f mem 0x88000000-0x88ffffff,0x80000000-0x87ffffff at device 2.0 on pci0
+acpi_video0: <ACPI video extension> on vgapci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x4000000000-0x400000ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <network> at device 20.3 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x3090-0x3097,0x3080-0x3083,0x3060-0x307f mem 0x89020000-0x89021fff,0x89023000-0x890230ff,0x89022000-0x890227ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier not supported
+ahcich2: <AHCI channel> at channel 2 on ahci0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <serial bus> at device 31.5 (no driver attached)
+em0: <Intel(R) PRO/1000 Network Connection> mem 0x89000000-0x8901ffff at device 31.6 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _HOT value is absurd, ignored (-73.1C)
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+uart0: <Non-standard ns8250 class UART with FIFOs> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to deny, logging disabled
+acpi_tz1: _TMP value is absurd, ignored (-263.1C)
+Trying to mount root from ufs:/dev/ada0p2 [rw]...
+Root mount waiting for: usbus0 CAM
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich2 bus 0 scbus0 target 0 lun 0
+ada0: <KINGSTON SUV500240G 003056RI> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 228936MB (468862128 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <vendor 0x093a USB OPTICAL MOUSE> at usbus0
+Root mount waiting for: usbus0
+ugen0.3: <SONiX USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 2> on usbus0
+kbd1 at ukbd0
+ukbd1 on uhub0
+ukbd1: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 2> on usbus0
+kbd2 at ukbd1
+mountroot: waiting for device /dev/ada0p2...
+GEOM_ELI: Device ada0p4.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+GEOM_ELI: Device ada0p3.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Found 128MB of eDRAM
+Failed to add WC MTRR for [0x80000000-0x87ffffff]: -22; performance may suffer
+[drm] Got stolen memory base 0x7e000000, size 0x2000000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector eDP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.eDP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] failed to retrieve link info, disabling eDP
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Initialized i915 1.6.0 20171222 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=2560 depth=32
+cmsize=16 size=11059200
+pbase=0x80040000 vbase=0xfffff80080040000
+name=drmn0 flags=0x0 stride=10240 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: inteldrmfb frame buffer device
+iwm0: <Intel(R) Dual Band Wireless AC 9560> mem 0x4000010000-0x4000013fff at device 20.3 on pci0
+iwm0: hw rev 0x310, fw ver 34.3125811985.0, address XXX
+i915/kbl_dmc_ver1_04.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: i915/kbl_dmc_ver1_04.bin
+drmn0: successfully loaded firmware image with mapped name: i915_kbl_dmc_ver1_04_bin
+[drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+wlan0: Ethernet address: ...
+lo0: link state changed to UP
+em0: link state changed to UP
+wlan0: link state changed to UP
+ums0 on uhub0
+ums0: <vendor 0x093a USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 1> on usbus0
+ums0: 5 buttons and [XYZT] coordinates ID=0
+uhid0 on uhub0
+uhid0: <SONiX USB Keyboard, class 0/0, rev 2.00/2.01, addr 2> on usbus0
+em0: link state changed to DOWN
+em0: link state changed to UP
+pid 29796 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 27433 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 28942 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 31065 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 28947 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 33105 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 32787 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 33730 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 37475 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 38890 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 35762 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 40431 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 41029 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 42022 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 41911 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 43582 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 44976 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 50366 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 52693 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 661 (baloo_file), jid 0, uid 1001: exited on signal 4
+pid 51757 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 50518 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+pid 52497 (xfsettingsd), jid 0, uid 1001: exited on signal 5 (core dumped)
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+arp: short packet received on wlan0
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on tap0
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP
+tap0: link state changed to DOWN
+tap0: Ethernet address: ...
+tap0: link state changed to UP

@@ -1,0 +1,418 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 7.2 (GENERIC.201808291900Z)
+total memory = 2014 MB
+avail memory = 1965 MB
+WARNING: module error: module `cd9660' pushed by boot loader already exists
+kern.module.path=/stand/i386/7.2/modules
+timecounter: Timecounters tick every 10.000 msec
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+ASUSTeK Computer Inc.         A3L        (1.0       )
+mainbus0 (root)
+ACPI: RSDP 0xf5080 000014 (v00 ACPIAM)
+ACPI: RSDT 0x7df40000 000030 (v01 A M I  OEMRSDT  01000504 MSFT 00000097)
+ACPI: FACP 0x7df40200 000081 (v02 A M I  OEMFACP  01000504 MSFT 00000097)
+ACPI: DSDT 0x7df40360 0072A1 (v01  0ABBD 0ABBD001 00000001 MSFT 0100000E)
+ACPI: FACS 0x7df50000 000040
+ACPI: APIC 0x7df40300 000054 (v01 A M I  OEMAPIC  01000504 MSFT 00000097)
+ACPI: OEMB 0x7df50040 00004D (v01 A M I  OEMBIOS  01000504 MSFT 00000097)
+ACPI: All ACPI Tables successfully acquired
+ioapic0 at mainbus0 apid 1: pa 0xfec00000, version 0x20, 24 pins
+cpu0 at mainbus0 apid 0: Intel(R) Pentium(R) M processor 1.60GHz, id 0x6d6
+acpi0 at mainbus0: Intel ACPICA 20131218
+acpi0: X/RSDT: OemId <A M I ,OEMRSDT ,01000504>, AslId <MSFT,00000097>
+acpi0: SCI interrupting at int 9
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+acpiec0 at acpi0 (EC0, PNP0C09)
+: io 0x62,0x66
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pckbc1 at acpi0 (PS2K, PNP0303) (kbd port): io 0x60,0x64 irq 1
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+COPR (PNP0C04) at acpi0 not configured
+RMSC (PNP0C02) at acpi0 not configured
+OMSC (PNP0C02) at acpi0 not configured
+SIOR (PNP0C02) at acpi0 not configured
+UAR2 (PNP0510) at acpi0 not configured
+LPTE (PNP0401) at acpi0 not configured
+FWH (PNP0C02) at acpi0 not configured
+FWHE (PNP0C02) at acpi0 not configured
+acpiacad0 at acpi0 (AC0, ACPI0003): ACPI AC Adapter
+acpibat0 at acpi0 (BAT0, PNP0C0A-0): ACPI Battery
+acpibat0: ASUSTEK LIon rechargeable battery
+acpibat0: granularity: low->warn 0.060 Ah, warn->full 0.060 Ah
+acpivga0 at acpi0 (VGA): ACPI Display Adapter
+acpiout0 at acpivga0 (CRTD, 0x0100): ACPI Display Output Device
+acpiout1 at acpivga0 (LCDD, 0x0400): ACPI Display Output Device
+acpivga0: connected output devices:
+acpivga0:   0x0100 (acpiout0): Ext. Monitor, head 0, bios detect
+acpivga0:   0x0400 (acpiout1): Unknown Output Device, head 0, bios detect
+RMEM (PNP0C01) at acpi0 not configured
+acpibut0 at acpi0 (SLPB, PNP0C0E): ACPI Sleep Button
+acpilid0 at acpi0 (LID, PNP0C0D): ACPI Lid Switch
+ATKD (ATK0100) at acpi0 not configured
+acpitz0 at acpi0 (THRM): cpu0
+acpitz0: active cooling level 0: 51.0C
+acpitz0: levels: critical 112.0 C, passive 102.0 C
+acpifan0 at acpi0 (FN00, PNP0C0B): ACPI Fan
+apm0 at acpi0: Power Management spec V1.2
+ACPI: Enabled 2 GPEs in block 00 to 1F
+ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20131218/hwxface-646)
+pckbd0 at pckbc1 (kbd slot)
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: vendor 0x8086 product 0x3580 (rev. 0x02)
+agp0 at pchb0: i855-family chipset
+agp0: detected 32636k stolen memory
+agp0: aperture at 0xf0000000, size 0x8000000
+vendor 0x8086 product 0x3584 (miscellaneous system, revision 0x02) at pci0 dev 0 function 1 not configured
+vendor 0x8086 product 0x3585 (miscellaneous system, revision 0x02) at pci0 dev 0 function 3 not configured
+i915drmkms0 at pci0 dev 2 function 0: vendor 0x8086 product 0x3582 (rev. 0x02)
+drm: Memory usable by graphics device = 128M
+drm: Supports vblank timestamp caching Rev 2 (21.10.2013).
+drm: Driver supports precise vblank timestamp query.
+i915drmkms0: interrupting at ioapic0 pin 16 (i915)
+drm: initialized overlay support
+intelfb0 at i915drmkms0
+i915drmkms0: info: registered panic notifier
+intelfb0: framebuffer at 0xdb2d5000, size 1024x768, depth 32, stride 4096
+wsdisplay0 at intelfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+vendor 0x8086 product 0x3582 (miscellaneous display, revision 0x02) at pci0 dev 2 function 1 not configured
+uhci0 at pci0 dev 29 function 0: vendor 0x8086 product 0x24c2 (rev. 0x03)
+uhci0: interrupting at ioapic0 pin 16
+usb0 at uhci0: USB revision 1.0
+uhci1 at pci0 dev 29 function 1: vendor 0x8086 product 0x24c4 (rev. 0x03)
+uhci1: interrupting at ioapic0 pin 19
+usb1 at uhci1: USB revision 1.0
+uhci2 at pci0 dev 29 function 2: vendor 0x8086 product 0x24c7 (rev. 0x03)
+uhci2: interrupting at ioapic0 pin 18
+usb2 at uhci2: USB revision 1.0
+ehci0 at pci0 dev 29 function 7: vendor 0x8086 product 0x24cd (rev. 0x03)
+ehci0: interrupting at ioapic0 pin 23
+ehci0: EHCI version 1.0
+ehci0: companion controllers, 2 ports each: uhci0 uhci1 uhci2
+usb3 at ehci0: USB revision 2.0
+ppb0 at pci0 dev 30 function 0: vendor 0x8086 product 0x2448 (rev. 0x83)
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled
+rtk0 at pci1 dev 0 function 0: Realtek 8139 10/100BaseTX (rev. 0x10)
+rtk0: interrupting at ioapic0 pin 18
+rtk0: Ethernet address XXX
+rlphy0 at rtk0 phy 7: Realtek internal PHY
+rlphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+ath0 at pci1 dev 4 function 0: Atheros 2413
+ath0: interrupting at ioapic0 pin 18
+ath0: 11b rates: 1Mbps 2Mbps 5.5Mbps 11Mbps
+ath0: 11g rates: 1Mbps 2Mbps 5.5Mbps 11Mbps 6Mbps 9Mbps 12Mbps 18Mbps 24Mbps 36Mbps 48Mbps 54Mbps
+ath0: mac 7.8 phy 4.5 radio 5.6
+cbb0 at pci1 dev 5 function 0: vendor 0x1180 product 0x0476 (rev. 0xac)
+cbb1 at pci1 dev 5 function 1: vendor 0x1180 product 0x0476 (rev. 0xac)
+fwohci0 at pci1 dev 5 function 2: vendor 0x1180 product 0x0552 (rev. 0x04)
+fwohci0: interrupting at ioapic0 pin 19
+fwohci0: OHCI version 1.0 (ROM=1)
+fwohci0: No. of Isochronous channels is 4.
+fwohci0: EUI64 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+fwohci0: Phy 1394a available S400, 2 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+ieee1394if0 at fwohci0: IEEE1394 bus
+fwip0 at ieee1394if0: IP over IEEE1394
+fwohci0: Initiate bus reset
+cbb0: cacheline 0x0 lattimer 0x20
+cbb0: bhlc 0x822000
+cbb0: secondary bus number uninitialized; try PCI_BUS_FIXUP
+cbb0: interrupting at ioapic0 pin 17
+cardslot0 at cbb0
+pcmcia0 at cardslot0
+cbb1: cacheline 0x0 lattimer 0x10
+cbb1: bhlc 0x821000
+cbb1: secondary bus number uninitialized; try PCI_BUS_FIXUP
+cbb1: interrupting at ioapic0 pin 16
+cardslot1 at cbb1
+pcmcia1 at cardslot1
+ichlpcib0 at pci0 dev 31 function 0: vendor 0x8086 product 0x24cc (rev. 0x03)
+timecounter: Timecounter "ichlpcib0" frequency 3579545 Hz quality 1000
+ichlpcib0: 24-bit timer
+ichlpcib0: TCO (watchdog) timer configured.
+ichlpcib0: SpeedStep enabled
+piixide0 at pci0 dev 31 function 1: Intel 82801DBM IDE Controller (ICH4-M) (rev. 0x03)
+piixide0: bus-master DMA support present
+piixide0: primary channel configured to compatibility mode
+piixide0: primary channel interrupting at ioapic0 pin 14
+atabus0 at piixide0 channel 0
+piixide0: secondary channel configured to compatibility mode
+piixide0: secondary channel interrupting at ioapic0 pin 15
+atabus1 at piixide0 channel 1
+auich0 at pci0 dev 31 function 5: i82801DB/DBM (ICH4/ICH4M) AC-97 Audio
+auich0: interrupting at ioapic0 pin 17
+auich0: ac97: Avance Logic ALC650 codec; 20 bit DAC, 18 bit ADC, Realtek 3D
+auich0: ac97: ext id 0x5c7<AC97_22,LDAC,SDAC,CDAC,SPDIF,DRA,VRA>
+isa0 at ichlpcib0
+lpt0 at isa0 port 0x378-0x37b irq 7
+com1 at isa0 port 0x2f8-0x2ff irq 3: ns16550a, working fifo
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: HLT, lat   0 us, pow     0 mW
+acpicpu0: C2: I/O, lat   1 us, pow     0 mW
+acpicpu0: C3: I/O, lat 101 us, pow     0 mW
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+fwohci0: BUS reset
+fwohci0: node_id=0xc800ffc0, gen=1, CYCLEMASTER mode
+ieee1394if0: 1 nodes, maxhop <= 0 cable IRM irm(0) (me)
+ieee1394if0: bus manager 0
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+auich0: measured ac97 link rate at 47997 Hz, will use 48000 Hz
+audio0 at auich0: full duplex, playback, capture, mmap, independent
+uhub0 at usb0: vendor 0x8086 UHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+uhub1 at usb1: vendor 0x8086 UHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub1: 2 ports with 2 removable, self powered
+uhub2 at usb2: vendor 0x8086 UHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub2: 2 ports with 2 removable, self powered
+uhub3 at usb3: vendor 0x8086 EHCI root hub, class 9/0, rev 2.00/1.00, addr 1
+uhub3: 6 ports with 6 removable, self powered
+IPsec: Initialized Security Association Processing.
+acpiacad0: AC adapter online.
+wd0 at atabus0 drive 0
+wd0: <HTS721060G9AT00>
+wd0: drive supports 16-sector PIO transfers, LBA addressing
+wd0: 57231 MB, 116280 cyl, 16 head, 63 sec, 512 bytes/sect x 117210240 sectors
+wd0: 32-bit data port
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100)
+wd0(piixide0:0:0): using PIO mode 4, Ultra-DMA mode 5 (Ultra/100) (using DMA)
+atapibus0 at atabus1: 2 targets
+cd0 at atapibus0 drive 0: <ASUS    SCB-2424V, , 1.1> cdrom removable
+cd0: 32-bit data port
+cd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 2 (Ultra/33)
+cd0(piixide0:1:0): using PIO mode 4, Ultra-DMA mode 2 (Ultra/33) (using DMA)
+Kernelized RAIDframe activated
+boot device: cd0
+root on cd0a dumps on cd0b
+root file system type: cd9660
+warning: no /dev/console
+acpibat0: state changed on 'charge state' to 'LOW'
+syncing disks... done
+unmounted tmpfs on /etc type tmpfs
+unmounted tmpfs on /tmp type tmpfs
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 7.2 (GENERIC.201808291900Z)
+total memory = 2014 MB
+avail memory = 1965 MB
+kern.module.path=/stand/i386/7.2/modules
+timecounter: Timecounters tick every 10.000 msec
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+ASUSTeK Computer Inc.         A3L        (1.0       )
+mainbus0 (root)
+ACPI: RSDP 0xf5080 000014 (v00 ACPIAM)
+ACPI: RSDT 0x7df40000 000030 (v01 A M I  OEMRSDT  01000504 MSFT 00000097)
+ACPI: FACP 0x7df40200 000081 (v02 A M I  OEMFACP  01000504 MSFT 00000097)
+ACPI: DSDT 0x7df40360 0072A1 (v01  0ABBD 0ABBD001 00000001 MSFT 0100000E)
+ACPI: FACS 0x7df50000 000040
+ACPI: APIC 0x7df40300 000054 (v01 A M I  OEMAPIC  01000504 MSFT 00000097)
+ACPI: OEMB 0x7df50040 00004D (v01 A M I  OEMBIOS  01000504 MSFT 00000097)
+ACPI: All ACPI Tables successfully acquired
+ioapic0 at mainbus0 apid 1: pa 0xfec00000, version 0x20, 24 pins
+cpu0 at mainbus0 apid 0: Intel(R) Pentium(R) M processor 1.60GHz, id 0x6d6
+acpi0 at mainbus0: Intel ACPICA 20131218
+acpi0: X/RSDT: OemId <A M I ,OEMRSDT ,01000504>, AslId <MSFT,00000097>
+acpi0: SCI interrupting at int 9
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+acpiec0 at acpi0 (EC0, PNP0C09)
+: io 0x62,0x66
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pckbc1 at acpi0 (PS2K, PNP0303) (kbd port): io 0x60,0x64 irq 1
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+COPR (PNP0C04) at acpi0 not configured
+RMSC (PNP0C02) at acpi0 not configured
+OMSC (PNP0C02) at acpi0 not configured
+SIOR (PNP0C02) at acpi0 not configured
+UAR2 (PNP0510) at acpi0 not configured
+LPTE (PNP0401) at acpi0 not configured
+FWH (PNP0C02) at acpi0 not configured
+FWHE (PNP0C02) at acpi0 not configured
+acpiacad0 at acpi0 (AC0, ACPI0003): ACPI AC Adapter
+acpibat0 at acpi0 (BAT0, PNP0C0A-0): ACPI Battery
+acpibat0: ASUSTEK LIon rechargeable battery
+acpibat0: granularity: low->warn 0.060 Ah, warn->full 0.060 Ah
+acpivga0 at acpi0 (VGA): ACPI Display Adapter
+acpiout0 at acpivga0 (CRTD, 0x0100): ACPI Display Output Device
+acpiout1 at acpivga0 (LCDD, 0x0400): ACPI Display Output Device
+acpivga0: connected output devices:
+acpivga0:   0x0100 (acpiout0): Ext. Monitor, head 0, bios detect
+acpivga0:   0x0400 (acpiout1): Unknown Output Device, head 0, bios detect
+RMEM (PNP0C01) at acpi0 not configured
+acpibut0 at acpi0 (SLPB, PNP0C0E): ACPI Sleep Button
+acpilid0 at acpi0 (LID, PNP0C0D): ACPI Lid Switch
+ATKD (ATK0100) at acpi0 not configured
+acpitz0 at acpi0 (THRM): cpu0
+acpitz0: active cooling level 0: 51.0C
+acpitz0: levels: critical 112.0 C, passive 102.0 C
+acpifan0 at acpi0 (FN00, PNP0C0B): ACPI Fan
+apm0 at acpi0: Power Management spec V1.2
+ACPI: Enabled 2 GPEs in block 00 to 1F
+ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20131218/hwxface-646)
+pckbd0 at pckbc1 (kbd slot)
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: vendor 0x8086 product 0x3580 (rev. 0x02)
+agp0 at pchb0: i855-family chipset
+agp0: detected 32636k stolen memory
+agp0: aperture at 0xf0000000, size 0x8000000
+vendor 0x8086 product 0x3584 (miscellaneous system, revision 0x02) at pci0 dev 0 function 1 not configured
+vendor 0x8086 product 0x3585 (miscellaneous system, revision 0x02) at pci0 dev 0 function 3 not configured
+i915drmkms0 at pci0 dev 2 function 0: vendor 0x8086 product 0x3582 (rev. 0x02)
+drm: Memory usable by graphics device = 128M
+drm: Supports vblank timestamp caching Rev 2 (21.10.2013).
+drm: Driver supports precise vblank timestamp query.
+i915drmkms0: interrupting at ioapic0 pin 16 (i915)
+drm: initialized overlay support
+intelfb0 at i915drmkms0
+i915drmkms0: info: registered panic notifier
+intelfb0: framebuffer at 0xdb2d0000, size 1024x768, depth 32, stride 4096
+wsdisplay0 at intelfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+vendor 0x8086 product 0x3582 (miscellaneous display, revision 0x02) at pci0 dev 2 function 1 not configured
+uhci0 at pci0 dev 29 function 0: vendor 0x8086 product 0x24c2 (rev. 0x03)
+uhci0: interrupting at ioapic0 pin 16
+usb0 at uhci0: USB revision 1.0
+uhci1 at pci0 dev 29 function 1: vendor 0x8086 product 0x24c4 (rev. 0x03)
+uhci1: interrupting at ioapic0 pin 19
+usb1 at uhci1: USB revision 1.0
+uhci2 at pci0 dev 29 function 2: vendor 0x8086 product 0x24c7 (rev. 0x03)
+uhci2: interrupting at ioapic0 pin 18
+usb2 at uhci2: USB revision 1.0
+ehci0 at pci0 dev 29 function 7: vendor 0x8086 product 0x24cd (rev. 0x03)
+ehci0: interrupting at ioapic0 pin 23
+ehci0: EHCI version 1.0
+ehci0: companion controllers, 2 ports each: uhci0 uhci1 uhci2
+usb3 at ehci0: USB revision 2.0
+ppb0 at pci0 dev 30 function 0: vendor 0x8086 product 0x2448 (rev. 0x83)
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled
+rtk0 at pci1 dev 0 function 0: Realtek 8139 10/100BaseTX (rev. 0x10)
+rtk0: interrupting at ioapic0 pin 18
+rtk0: Ethernet address XXX
+rlphy0 at rtk0 phy 7: Realtek internal PHY
+rlphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+ath0 at pci1 dev 4 function 0: Atheros 2413
+ath0: interrupting at ioapic0 pin 18
+ath0: 11b rates: 1Mbps 2Mbps 5.5Mbps 11Mbps
+ath0: 11g rates: 1Mbps 2Mbps 5.5Mbps 11Mbps 6Mbps 9Mbps 12Mbps 18Mbps 24Mbps 36Mbps 48Mbps 54Mbps
+ath0: mac 7.8 phy 4.5 radio 5.6
+cbb0 at pci1 dev 5 function 0: vendor 0x1180 product 0x0476 (rev. 0xac)
+cbb1 at pci1 dev 5 function 1: vendor 0x1180 product 0x0476 (rev. 0xac)
+fwohci0 at pci1 dev 5 function 2: vendor 0x1180 product 0x0552 (rev. 0x04)
+fwohci0: interrupting at ioapic0 pin 19
+fwohci0: OHCI version 1.0 (ROM=1)
+fwohci0: No. of Isochronous channels is 4.
+fwohci0: EUI64 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+fwohci0: Phy 1394a available S400, 2 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+ieee1394if0 at fwohci0: IEEE1394 bus
+fwip0 at ieee1394if0: IP over IEEE1394
+fwohci0: Initiate bus reset
+cbb0: cacheline 0x0 lattimer 0x20
+cbb0: bhlc 0x822000
+cbb0: secondary bus number uninitialized; try PCI_BUS_FIXUP
+cbb0: interrupting at ioapic0 pin 17
+cardslot0 at cbb0
+pcmcia0 at cardslot0
+cbb1: cacheline 0x0 lattimer 0x10
+cbb1: bhlc 0x821000
+cbb1: secondary bus number uninitialized; try PCI_BUS_FIXUP
+cbb1: interrupting at ioapic0 pin 16
+cardslot1 at cbb1
+pcmcia1 at cardslot1
+ichlpcib0 at pci0 dev 31 function 0: vendor 0x8086 product 0x24cc (rev. 0x03)
+timecounter: Timecounter "ichlpcib0" frequency 3579545 Hz quality 1000
+ichlpcib0: 24-bit timer
+ichlpcib0: TCO (watchdog) timer configured.
+ichlpcib0: SpeedStep enabled
+piixide0 at pci0 dev 31 function 1: Intel 82801DBM IDE Controller (ICH4-M) (rev. 0x03)
+piixide0: bus-master DMA support present
+piixide0: primary channel configured to compatibility mode
+piixide0: primary channel interrupting at ioapic0 pin 14
+atabus0 at piixide0 channel 0
+piixide0: secondary channel configured to compatibility mode
+piixide0: secondary channel interrupting at ioapic0 pin 15
+atabus1 at piixide0 channel 1
+auich0 at pci0 dev 31 function 5: i82801DB/DBM (ICH4/ICH4M) AC-97 Audio
+auich0: interrupting at ioapic0 pin 17
+auich0: ac97: Avance Logic ALC650 codec; 20 bit DAC, 18 bit ADC, Realtek 3D
+auich0: ac97: ext id 0x5c7<AC97_22,LDAC,SDAC,CDAC,SPDIF,DRA,VRA>
+isa0 at ichlpcib0
+lpt0 at isa0 port 0x378-0x37b irq 7
+com1 at isa0 port 0x2f8-0x2ff irq 3: ns16550a, working fifo
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: HLT, lat   0 us, pow     0 mW
+acpicpu0: C2: I/O, lat   1 us, pow     0 mW
+acpicpu0: C3: I/O, lat 101 us, pow     0 mW
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+fwohci0: BUS reset
+fwohci0: node_id=0xc800ffc0, gen=1, CYCLEMASTER mode
+ieee1394if0: 1 nodes, maxhop <= 0 cable IRM irm(0) (me)
+ieee1394if0: bus manager 0
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+auich0: measured ac97 link rate at 47997 Hz, will use 48000 Hz
+audio0 at auich0: full duplex, playback, capture, mmap, independent
+uhub0 at usb0: vendor 0x8086 UHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+uhub1 at usb1: vendor 0x8086 UHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub1: 2 ports with 2 removable, self powered
+uhub2 at usb2: vendor 0x8086 UHCI root hub, class 9/0, rev 1.00/1.00, addr 1
+uhub2: 2 ports with 2 removable, self powered
+uhub3 at usb3: vendor 0x8086 EHCI root hub, class 9/0, rev 2.00/1.00, addr 1
+uhub3: 6 ports with 6 removable, self powered
+IPsec: Initialized Security Association Processing.
+acpiacad0: AC adapter online.
+wd0 at atabus0 drive 0
+wd0: <HTS721060G9AT00>
+wd0: drive supports 16-sector PIO transfers, LBA addressing
+wd0: 57231 MB, 116280 cyl, 16 head, 63 sec, 512 bytes/sect x 117210240 sectors
+wd0: 32-bit data port
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100)
+wd0(piixide0:0:0): using PIO mode 4, Ultra-DMA mode 5 (Ultra/100) (using DMA)
+atapibus0 at atabus1: 2 targets
+cd0 at atapibus0 drive 0: <ASUS    SCB-2424V, , 1.1> cdrom removable
+cd0: 32-bit data port
+cd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 2 (Ultra/33)
+cd0(piixide0:1:0): using PIO mode 4, Ultra-DMA mode 2 (Ultra/33) (using DMA)
+Kernelized RAIDframe activated
+boot device: wd0
+root on wd0e dumps on wd0b
+root file system type: ffs
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)

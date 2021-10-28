@@ -1,0 +1,545 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD  f692db99f3c(stable/21.7) SMP amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1024x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Celeron(R) CPU  N3060  @ 1.60GHz (1600.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x406c4  Family=0x6  Model=0x4c  Stepping=4
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x43d8e3bf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,AESNI,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2282<TSCADJ,SMEP,ERMS,NFPUSG>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3915845632 (3734 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 128/32 (20181213/tbfadt-748)
+ioapic0 <Version 2.0> irqs 0-114 on motherboard
+Launching APs: 1
+Timecounter "TSC" frequency 1600052260 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000052 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0x80000000-0x80ffffff,0x90000000-0x9fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Braswell USB 3.0 controller> mem 0x81600000-0x8160ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <encrypt/decrypt> at device 26.0 (no driver attached)
+hdac0: <Intel (0x2284) HDA Controller> mem 0x81614000-0x81617fff at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <unknown> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+pcib2: [GIANT-LOCKED]
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> at device 28.2 on pci0
+pci3: <ACPI PCI bus> on pcib3
+re0: <Realtek PCIe GbE Family Controller> port 0xd000-0xd0ff mem 0x81304000-0x81304fff,0x81300000-0x81303fff at device 0.0 on pci3
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib4: <ACPI PCI-PCI bridge> at device 28.3 on pci0
+pci4: <ACPI PCI bus> on pcib4
+re1: <Realtek PCIe GbE Family Controller> port 0xc000-0xc0ff mem 0x81204000-0x81204fff,0x81200000-0x81203fff at device 0.0 on pci4
+re1: Using Memory Mapping!
+re1: Using 1 MSI-X message
+re1: version:1.96.04
+re1: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re1: Ethernet address: ...
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+sdhci_acpi0: <Intel Bay Trail/Braswell eMMC 4.5/4.5.1 Controller> iomem 0x81626000-0x81626fff irq 45 on acpi0
+mmc0: <MMC/SD bus> on sdhci_acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+uart1: <16550 or compatible> at port 0x2f8 irq 3 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <Realtek ALC255 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC255 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC255 (Right Analog)> at nid 33 and 25 on hdaa0
+hdacc1: <Intel (0x2883) HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel (0x2883) Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel (0x2883) (HDMI/DP 8ch)> at nid 5 on hdaa1
+pcm2: <Intel (0x2883) (HDMI/DP 8ch)> at nid 6 on hdaa1
+pcm3: <Intel (0x2883) (HDMI/DP 8ch)> at nid 7 on hdaa1
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+mmcsd0: 31GB <MMCHC M52532 5.2 SN ... MFG 12/2017 by 112 0x0000> at mmc0 200.0MHz/8bit/8192-block
+mmcsd0boot0: 4MB partition 1 at mmcsd0
+mmcsd0boot1: 4MB partition 2 at mmcsd0
+mmcsd0rpmb: 4MB partition 3 at mmcsd0
+Trying to mount root from ufs:/dev/gpt/rootfs [rw,noatime]...
+uhub0: 13 ports with 13 removable, self powered
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 1> on usbus0
+uhub1: MTT enabled
+uhub1: 4 ports with 4 removable, self powered
+ugen0.3: <Realtek Bluetooth Radio> at usbus0
+ugen0.4: <vendor 0x0d62 USB Multimedia Keyboard> at usbus0
+ukbd0 on uhub1
+ukbd0: <vendor 0x0d62 USB Multimedia Keyboard, class 0/0, rev 1.10/4.50, addr 3> on usbus0
+kbd2 at ukbd0
+ubt0 on uhub1
+ubt0: <Bluetooth Radio> on usbus0
+uhid0 on uhub1
+uhid0: <vendor 0x0d62 USB Multimedia Keyboard, class 0/0, rev 1.10/4.50, addr 3> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+re0: link state changed to UP
+re1: link state changed to UP
+ng0: changing name to 'pppoe0'
+pflog0: permanently promiscuous mode enabled
+775.256323 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+775.256379 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+re0: permanently promiscuous mode enabled
+775.273817 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+775.521298 [ 320] generic_netmap_register   Emulated adapter for re0 activated
+820.190654 [ 295] generic_netmap_unregister Emulated adapter for re0 deactivated
+820.191822 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+828.564173 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+828.564229 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+re1: permanently promiscuous mode enabled
+828.581397 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+828.581712 [ 320] generic_netmap_register   Emulated adapter for re1 activated
+828.623388 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+828.623438 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+828.640615 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+828.640963 [ 320] generic_netmap_register   Emulated adapter for re0 activated
+ugen0.4: <vendor 0x0d62 USB Multimedia Keyboard> at usbus0 (disconnected)
+ukbd0: at uhub1, port 4, addr 3 (disconnected)
+ukbd0: detached
+uhid0: at uhub1, port 4, addr 3 (disconnected)
+uhid0: detached
+re1: link state changed to DOWN
+re0: link state changed to DOWN
+re1: link state changed to UP
+re1: link state changed to DOWN
+re0: link state changed to UP
+re1: link state changed to UP
+698.947283 [ 295] generic_netmap_unregister Emulated adapter for re0 deactivated
+698.947490 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+699.646076 [ 295] generic_netmap_unregister Emulated adapter for re1 deactivated
+699.647226 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 4 3 1 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+All buffers synced.
+Uptime: 2h42m3s
+ubt0: detached
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD  f692db99f3c(stable/21.7) SMP amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1024x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Celeron(R) CPU  N3060  @ 1.60GHz (1600.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x406c4  Family=0x6  Model=0x4c  Stepping=4
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x43d8e3bf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,AESNI,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2282<TSCADJ,SMEP,ERMS,NFPUSG>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3915845632 (3734 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 128/32 (20181213/tbfadt-748)
+ioapic0 <Version 2.0> irqs 0-114 on motherboard
+Launching APs: 1
+Timecounter "TSC" frequency 1600052780 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000052 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0x80000000-0x80ffffff,0x90000000-0x9fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Braswell USB 3.0 controller> mem 0x81600000-0x8160ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <encrypt/decrypt> at device 26.0 (no driver attached)
+hdac0: <Intel (0x2284) HDA Controller> mem 0x81614000-0x81617fff at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <unknown> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+pcib2: [GIANT-LOCKED]
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> at device 28.2 on pci0
+pci3: <ACPI PCI bus> on pcib3
+re0: <Realtek PCIe GbE Family Controller> port 0xd000-0xd0ff mem 0x81304000-0x81304fff,0x81300000-0x81303fff at device 0.0 on pci3
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib4: <ACPI PCI-PCI bridge> at device 28.3 on pci0
+pci4: <ACPI PCI bus> on pcib4
+re1: <Realtek PCIe GbE Family Controller> port 0xc000-0xc0ff mem 0x81204000-0x81204fff,0x81200000-0x81203fff at device 0.0 on pci4
+re1: Using Memory Mapping!
+re1: Using 1 MSI-X message
+re1: version:1.96.04
+re1: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re1: Ethernet address: ...
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+sdhci_acpi0: <Intel Bay Trail/Braswell eMMC 4.5/4.5.1 Controller> iomem 0x81626000-0x81626fff irq 45 on acpi0
+mmc0: <MMC/SD bus> on sdhci_acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+uart1: <16550 or compatible> at port 0x2f8 irq 3 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <Realtek ALC255 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC255 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC255 (Right Analog)> at nid 33 and 25 on hdaa0
+hdacc1: <Intel (0x2883) HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel (0x2883) Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel (0x2883) (HDMI/DP 8ch)> at nid 5 on hdaa1
+pcm2: <Intel (0x2883) (HDMI/DP 8ch)> at nid 6 on hdaa1
+pcm3: <Intel (0x2883) (HDMI/DP 8ch)> at nid 7 on hdaa1
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+mmcsd0: 31GB <MMCHC M52532 5.2 SN ... MFG 12/2017 by 112 0x0000> at mmc0 200.0MHz/8bit/8192-block
+mmcsd0boot0: 4MB partition 1 at mmcsd0
+mmcsd0boot1: 4MB partition 2 at mmcsd0
+mmcsd0rpmb: 4MB partition 3 at mmcsd0
+Trying to mount root from ufs:/dev/gpt/rootfs [rw,noatime]...
+uhub0: 13 ports with 13 removable, self powered
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 1> on usbus0
+uhub1: MTT enabled
+uhub1: 4 ports with 4 removable, self powered
+ugen0.3: <Realtek Bluetooth Radio> at usbus0
+ubt0 on uhub1
+ubt0: <Bluetooth Radio> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+re0: link state changed to UP
+re1: link state changed to UP
+ng0: changing name to 'pppoe0'
+pflog0: permanently promiscuous mode enabled
+819.117687 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+819.117741 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+re1: permanently promiscuous mode enabled
+819.134912 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+819.383696 [ 320] generic_netmap_register   Emulated adapter for re1 activated
+819.398850 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+819.398902 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+re0: permanently promiscuous mode enabled
+819.416164 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+819.416466 [ 320] generic_netmap_register   Emulated adapter for re0 activated
+068.067592 [ 295] generic_netmap_unregister Emulated adapter for re1 deactivated
+068.067801 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+068.173015 [ 295] generic_netmap_unregister Emulated adapter for re0 deactivated
+068.174191 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+All buffers synced.
+Uptime: 22m51s
+ubt0: detached
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD  f692db99f3c(stable/21.7) SMP amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1024x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Celeron(R) CPU  N3060  @ 1.60GHz (1600.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x406c4  Family=0x6  Model=0x4c  Stepping=4
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x43d8e3bf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,AESNI,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2282<TSCADJ,SMEP,ERMS,NFPUSG>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3915845632 (3734 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 128/32 (20181213/tbfadt-748)
+ioapic0 <Version 2.0> irqs 0-114 on motherboard
+Launching APs: 1
+Timecounter "TSC" frequency 1600051760 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000052 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0x80000000-0x80ffffff,0x90000000-0x9fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Braswell USB 3.0 controller> mem 0x81600000-0x8160ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <encrypt/decrypt> at device 26.0 (no driver attached)
+hdac0: <Intel (0x2284) HDA Controller> mem 0x81614000-0x81617fff at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <unknown> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+pcib2: [GIANT-LOCKED]
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> at device 28.2 on pci0
+pci3: <ACPI PCI bus> on pcib3
+re0: <Realtek PCIe GbE Family Controller> port 0xd000-0xd0ff mem 0x81304000-0x81304fff,0x81300000-0x81303fff at device 0.0 on pci3
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib4: <ACPI PCI-PCI bridge> at device 28.3 on pci0
+pci4: <ACPI PCI bus> on pcib4
+re1: <Realtek PCIe GbE Family Controller> port 0xc000-0xc0ff mem 0x81204000-0x81204fff,0x81200000-0x81203fff at device 0.0 on pci4
+re1: Using Memory Mapping!
+re1: Using 1 MSI-X message
+re1: version:1.96.04
+re1: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re1: Ethernet address: ...
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+sdhci_acpi0: <Intel Bay Trail/Braswell eMMC 4.5/4.5.1 Controller> iomem 0x81626000-0x81626fff irq 45 on acpi0
+mmc0: <MMC/SD bus> on sdhci_acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+uart1: <16550 or compatible> at port 0x2f8 irq 3 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <Realtek ALC255 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC255 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC255 (Right Analog)> at nid 33 and 25 on hdaa0
+hdacc1: <Intel (0x2883) HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel (0x2883) Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel (0x2883) (HDMI/DP 8ch)> at nid 5 on hdaa1
+pcm2: <Intel (0x2883) (HDMI/DP 8ch)> at nid 6 on hdaa1
+pcm3: <Intel (0x2883) (HDMI/DP 8ch)> at nid 7 on hdaa1
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+mmcsd0: 31GB <MMCHC M52532 5.2 SN ... MFG 12/2017 by 112 0x0000> at mmc0 200.0MHz/8bit/8192-block
+mmcsd0boot0: 4MB partition 1 at mmcsd0
+mmcsd0boot1: 4MB partition 2 at mmcsd0
+mmcsd0rpmb: 4MB partition 3 at mmcsd0
+Trying to mount root from ufs:/dev/gpt/rootfs [rw,noatime]...
+uhub0: 13 ports with 13 removable, self powered
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 1> on usbus0
+uhub1: MTT enabled
+uhub1: 4 ports with 4 removable, self powered
+ugen0.3: <Realtek Bluetooth Radio> at usbus0
+ubt0 on uhub1
+ubt0: <Bluetooth Radio> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+re0: link state changed to UP
+re1: link state changed to UP
+ng0: changing name to 'pppoe0'
+pflog0: permanently promiscuous mode enabled
+215.880866 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+215.880924 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+re0: permanently promiscuous mode enabled
+215.898213 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+216.162520 [ 320] generic_netmap_register   Emulated adapter for re0 activated
+216.162658 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+216.162698 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+re1: permanently promiscuous mode enabled
+216.179979 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+216.180323 [ 320] generic_netmap_register   Emulated adapter for re1 activated
+530.849396 [ 295] generic_netmap_unregister Emulated adapter for re0 deactivated
+530.849602 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+530.858530 [ 295] generic_netmap_unregister Emulated adapter for re1 deactivated
+530.859677 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+045.266460 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+045.266512 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+045.283622 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+045.283935 [ 320] generic_netmap_register   Emulated adapter for re1 activated
+045.339565 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+045.339630 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+045.356849 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+045.357188 [ 320] generic_netmap_register   Emulated adapter for re0 activated
+569.757567 [1130] generic_netmap_attach     Emulated adapter for pppoe0 created (prev was NULL)
+569.757624 [1035] generic_netmap_dtor       Emulated netmap adapter for pppoe0 destroyed
+569.765124 [1130] generic_netmap_attach     Emulated adapter for pppoe0 created (prev was NULL)
+569.765388 [ 320] generic_netmap_register   Emulated adapter for pppoe0 activated
+079.130699 [ 295] generic_netmap_unregister Emulated adapter for re1 deactivated
+079.130889 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+079.239783 [ 295] generic_netmap_unregister Emulated adapter for re0 deactivated
+079.239964 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+383.552770 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+383.552823 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+383.570004 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+383.570323 [ 320] generic_netmap_register   Emulated adapter for re0 activated
+383.588388 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+383.588442 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+383.605869 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+383.606199 [ 320] generic_netmap_register   Emulated adapter for re1 activated
+121.734205 [ 295] generic_netmap_unregister Emulated adapter for re0 deactivated
+121.734435 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+122.004067 [ 295] generic_netmap_unregister Emulated adapter for re1 deactivated
+122.004483 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+129.958296 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+129.958353 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+129.975626 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+129.975955 [ 320] generic_netmap_register   Emulated adapter for re0 activated
+130.018723 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+130.018793 [1035] generic_netmap_dtor       Emulated netmap adapter for re1 destroyed
+130.036322 [1130] generic_netmap_attach     Emulated adapter for re1 created (prev was NULL)
+130.036700 [ 320] generic_netmap_register   Emulated adapter for re1 activated

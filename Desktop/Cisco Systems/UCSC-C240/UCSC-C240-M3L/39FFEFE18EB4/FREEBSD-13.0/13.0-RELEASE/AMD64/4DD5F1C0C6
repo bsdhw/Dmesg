@@ -1,0 +1,356 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0 releng/13.0-n244733-ea31abc261f: Fri Apr  9 04:24:09 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(vga): resolution 640x480
+module_register: cannot register pci/mrsas from kernel; already loaded from mrsas.ko
+Module pci/mrsas failed to register: 17
+CPU: Intel(R) Xeon(R) CPU E5-2620 v2 @ 2.10GHz (2100.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306e4  Family=0x6  Model=0x3e  Stepping=4
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  Structured Extended Features3=0x9c000400<MD_CLEAR,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 68719476736 (65536 MB)
+avail memory = 66730917888 (63639 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <Cisco0 CiscoUCS>
+FreeBSD/SMP: Multiprocessor System Detected: 24 CPUs
+FreeBSD/SMP: 2 package(s) x 6 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+ioapic1 <Version 2.0> irqs 24-47
+ioapic2 <Version 2.0> irqs 48-71
+Launching APs: 16 17 5 11 12 10 14 4 22 6 23 20 7 9 2 21 13 19 15 8 1 18 3
+Timecounter "TSC" frequency 2100045628 Hz quality 1000
+KTLS: Initialized 24 threads
+random: entropy device external interface
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000078 [4354] netmap_init               netmap: loaded module
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+vtvga0: <VT VGA driver>
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <Cisco0 CiscoUCS>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+apei0: <ACPI Platform Error Interface> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 26 at device 1.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 26 at device 1.1 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x8060-0x807f mem 0xdec00000-0xdecfffff,0xdef0c000-0xdef0ffff irq 27 at device 0.0 numa-domain 0 on pci2
+igb0: PHY reset is blocked due to SOL/IDER session.
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 6 RX queues 6 TX queues
+igb0: Using MSI-X interrupts with 7 vectors
+igb0: Ethernet address: ...
+igb0: link state changed to UP
+igb0: netmap queues/slots: TX 6/1024, RX 6/1024
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x8040-0x805f mem 0xdeb00000-0xdebfffff,0xdef08000-0xdef0bfff irq 30 at device 0.1 numa-domain 0 on pci2
+igb1: PHY reset is blocked due to SOL/IDER session.
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 6 RX queues 6 TX queues
+igb1: Using MSI-X interrupts with 7 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 6/1024, RX 6/1024
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x8020-0x803f mem 0xdea00000-0xdeafffff,0xdef04000-0xdef07fff irq 28 at device 0.2 numa-domain 0 on pci2
+igb2: PHY reset is blocked due to SOL/IDER session.
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 6 RX queues 6 TX queues
+igb2: Using MSI-X interrupts with 7 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 6/1024, RX 6/1024
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x8000-0x801f mem 0xde900000-0xde9fffff,0xdef00000-0xdef03fff irq 29 at device 0.3 numa-domain 0 on pci2
+igb3: PHY reset is blocked due to SOL/IDER session.
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 6 RX queues 6 TX queues
+igb3: Using MSI-X interrupts with 7 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 6/1024, RX 6/1024
+pcib3: <ACPI PCI-PCI bridge> irq 32 at device 2.0 numa-domain 0 on pci0
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 32 at device 2.2 numa-domain 0 on pci0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 42 at device 3.0 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 17.0 numa-domain 0 on pci0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+ehci0: <Intel Patsburg USB 2.0 controller> mem 0xdf001000-0xdf0013ff irq 22 at device 26.0 numa-domain 0 on pci0
+usbus0: EHCI version 1.0
+usbus0 numa-domain 0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib7: <ACPI PCI-PCI bridge> irq 17 at device 28.0 numa-domain 0 on pci0
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+pcib8: <ACPI PCI-PCI bridge> irq 19 at device 28.7 numa-domain 0 on pci0
+pci8: <ACPI PCI bus> numa-domain 0 on pcib8
+vgapci0: <VGA-compatible display> mem 0xdd000000-0xddffffff,0xde810000-0xde813fff,0xde000000-0xde7fffff irq 19 at device 0.0 numa-domain 0 on pci8
+vgapci0: Boot video device
+ehci1: <Intel Patsburg USB 2.0 controller> mem 0xdf000000-0xdf0003ff irq 23 at device 29.0 numa-domain 0 on pci0
+usbus1: EHCI version 1.0
+usbus1 numa-domain 0 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib9: <ACPI PCI-PCI bridge> at device 30.0 numa-domain 0 on pci0
+pci9: <ACPI PCI bus> numa-domain 0 on pcib9
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+pcib10: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci10: <ACPI PCI bus> numa-domain 0 on pcib10
+pci10: <dasp, performance counters> at device 14.1 (no driver attached)
+pci10: <dasp, performance counters> at device 19.1 (no driver attached)
+pci10: <dasp, performance counters> at device 19.5 (no driver attached)
+pcib11: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci11: <ACPI PCI bus> numa-domain 1 on pcib11
+pcib12: <ACPI PCI-PCI bridge> irq 50 at device 1.0 numa-domain 1 on pci11
+pci12: <ACPI PCI bus> numa-domain 1 on pcib12
+mfi0: <Drake Skinny> port 0xf000-0xf0ff mem 0xfbe60000-0xfbe63fff,0xfbe00000-0xfbe3ffff irq 50 at device 0.0 numa-domain 1 on pci12
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: 30285 (594456831s/0x0020/info) - Shutdown command received from host
+mfi0: 30286 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0073/1000/00b7/1137)
+mfi0: 30287 (boot + 3s/0x0020/info) - Firmware version 2.130.404-4910
+mfi0: 30288 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0073/1000/00b7/1137)
+mfi0: 30289 (boot + 3s/0x0020/info) - Firmware version 2.130.404-4910
+mfi0: 30290 (boot + 5s/0x0020/info) - Package version 20.13.1-0249
+mfi0: 30291 (boot + 5s/0x0020/info) - Board Revision 
+mfi0: 30292 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0073/1000/00b7/1137)
+mfi0: 30293 (boot + 3s/0x0020/info) - Firmware version 2.130.404-4910
+mfi0: 30294 (boot + 5s/0x0020/info) - Package version 20.13.1-0249
+mfi0: 30295 (boot + 5s/0x0020/info) - Board Revision 
+mfi0: 30296 (boot + 24s/0x0004/info) - Enclosure (SES) discovered on PD 1b(c Port 0 - 3/p1)
+mfi0: 30297 (boot + 24s/0x0004/info) - Enclosure PD 1b(c Port 0 - 3/p1) communication restored
+mfi0: 30298 (boot + 24s/0x0002/info) - Inserted: Encl PD 1b
+mfi0: 30299 (boot + 24s/0x0002/info) - Inserted: PD 1b(c Port 0 - 3/p1) Info: enclPd=1b, scsiType=d, portMap=00, sasAddr=78da6e986bfe00bd,0000000000000000
+pcib13: <ACPI PCI-PCI bridge>mfi0: 30300 (boot + 24s/0x0002/info) - Inserted: PD 10(e0x1b/s3)
+ irq 56 at device 2.0 numa-domain 1 on pci11
+pci13: <ACPI PCI bus>mfi0: 30301 (boot + 24s/0x0002/info) - Inserted: PD 10(e0x1b/s3) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c500572d413d,0000000000000000
+mfi0: 30302 (boot + 24s/0x0002/info) - Inserted: PD 11(e0x1b/s7)
+mfi0: 30303 (boot + 24s/0x0002/info) - Inserted: PD 11(e0x1b/s7) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c5005713391d,0000000000000000
+mfi0: 30304 (boot + 24s/0x0002/info) - Inserted: PD 12(e0x1b/s4)
+ numa-domain 1 on pcib13
+mfi0: 30305 (boot + 24s/0x0002/info) - Inserted: PD 12(e0x1b/s4) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000cca009bb02e5,0000000000000000
+mfi0: 30306 (boot + 24s/0x0002/FATAL) - Unable to access device PD 12(e0x1b/s4)
+mfi0: 30307 (boot + 24s/0x0002/info) - State change on PD 12(e0x1b/s4) from UNCONFIGURED_GOOD(0) to UNCONFIGURED_BAD(1)
+mfi0: 30308 (boot + 24s/0x0002/info) - Inserted: PD 13(e0x1b/s8)
+mfi0: 30309 (boot + 24s/0x0002/info) - Inserted: PD 13(e0x1b/s8) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000cca271079715,0000000000000000
+mfi0: 30310 (boot + 24s/0x0002/FATAL) - Unable to access device PD 13(e0x1b/s8)
+mfi0: 30311 (boot + 24s/0x0002/info) - State change on PD 13(e0x1b/s8) from UNCONFIGURED_GOOD(0) to UNCONFIGURED_BAD(1)
+mfi0: 30312 (boot + 24s/0x0002/info) - Inserted: PD 14(e0x1b/s11)
+mfi0: 30313 (boot + 24s/0x0002/info) - Inserted: PD 14(e0x1b/s11) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50057191e25,0000000000000000
+mfi0: 30314 (boot + 24s/0x0002/info) - Inserted: PD 15(e0x1b/s9)
+mfi0: 30315 (boot + 24s/0x0002/info) - Inserted: PD 15(e0x1b/s9) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50083eccf5d,0000000000000000
+pcib14: <ACPI PCI-PCI bridge>mfi0: 30316 (boot + 24s/0x0002/info) - Inserted: PD 16(e0x1b/s10)
+mfi0: 30317 (boot + 24s/0x0002/info) - Inserted: PD 16(e0x1b/s10) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50057132dd5,0000000000000000
+mfi0: 30318 (boot + 24s/0x0002/info) - Inserted: PD 17(e0x1b/s6)
+mfi0: 30319 (boot + 24s/0x0002/info) - Inserted: PD 17(e0x1b/s6) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c5005719186d,0000000000000000
+ irq 64 at device 3.0 numa-domain 1 on pci11
+pci14: <ACPI PCI bus>mfi0: 30320 (boot + 24s/0x0002/info) - Inserted: PD 18(e0x1b/s5)
+mfi0: 30321 (boot + 24s/0x0002/info) - Inserted: PD 18(e0x1b/s5) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50056f1e5dd,0000000000000000
+mfi0: 30322 (boot + 24s/0x0002/info) - Inserted: PD 19(e0x1b/s1)
+mfi0: 30323 (boot + 24s/0x0002/info) - Inserted: PD 19(e0x1b/s1) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c5005719019d,0000000000000000
+ numa-domain 1 on pcib14
+mfi0: 30324 (boot + 24s/0x0002/info) - Inserted: PD 1a(e0x1b/s2)
+mfi0: 30325 (boot + 24s/0x0002/info) - Inserted: PD 1a(e0x1b/s2) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50057191825,0000000000000000
+mfi0: 30326 (boot + 24s/0x0020/WARN) - Previous configuration completely missing at boot
+mfi0: 30327 (682108519s/0x0020/info) - Time established as 08/12/21 18:35:19; (25 seconds since power on)
+mfi0: 30328 (682108520s/0x0020/info) - Patrol Read can't be started, as PDs are either not ONLINE, or are in a VD with an active process, or are in an excluded VD
+mfi0: 30329 (682108538s/0x0020/info) - Time established as 08/12/21 18:35:38; (44 seconds since power on)
+mfi0: 30330 (682108541s/0x0020/info) - CC Schedule properties changed
+mfi0: 30331 (682108565s/0x0020/info) - Controller properties changed
+mfi0: 30332 (682108565s/0x0002/info) - State change on PD 10(e0x1b/s3) from UNCONFIGURED_GOOD(0) to JBOD(40)
+mfi0: 30333 (682108565s/0x0020/info) - Controller requests a host bus rescan
+mfi0: 30334 (682108565s/0x0002/info) - State change on PD 11(e0x1b/s7) from UNCONFIGURED_GOOD(0) to JBOD(40)
+mfi0: 30335 (682108565s/0x0020/info) - Controller requests a host bus rescan
+mfi0: 30336 (682108565s/0x0002/info) - State change on PD 14(e0x1b/s11) from UNCONFIGURED_GOOD(0) to JBOD(40)
+mfi0: 30337 (682108565s/0x0020/info) - Controller requests a host bus rescan
+mfi0: 30338 (682108565s/0x0002/info) - State change on PD 15(e0x1b/s9) from UNCONFIGURED_GOOD(0) to JBOD(40)
+mfi0: 30339 (682108565s/0x0020/info) - Controller requests a host bus rescan
+mfi0: 30340 (682108565s/0x0002/info) - State change on PD 16(e0x1b/s10) from UNCONFIGURED_GOOD(0) to JBOD(40)
+mfi0: 30341 (682108565s/0x0020/info) - Controller requests a host bus rescan
+mfi0: 30342 (682108565s/0x0002/info) - State change on PD 17(e0x1b/s6) from UNCONFIGURED_GOOD(0) to JBOD(40)
+mfi0: 30343 (682108565s/0x0020/info) - Controller requests a host bus rescan
+mfi0: 30344 (682108565s/0x0002/info) - State change on PD 18(e0x1b/s5) from UNCONFIGURED_GOOD(0) to JBOD(40)
+mfi0: 30345 (682108565s/0x0020/info) - Controller requests a host bus rescan
+mfi0: 30346 (682108565s/0x0002/info) - State change on PD 19(e0x1b/s1) from UNCONFIGURED_GOOD(0) to JBOD(40)
+mfi0: 30347 (682108565s/0x0020/info) - Controller requests a host bus rescan
+mfi0: 30348 (682108565s/0x0002/info) - State change on PD 1a(e0x1b/s2) from UNCONFIGURED_GOOD(0) to JBOD(40)
+mfi0: 30349 (682108565s/0x0020/info) - Controller requests a host bus rescan
+mfi0: 30350 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0073/1000/00b7/1137)
+mfi0: 30351 (boot + 3s/0x0020/info) - Firmware version 2.130.404-4910
+mfi0: 30352 (boot + 5s/0x0020/info) - Package version 20.13.1-0249
+mfi0: 30353 (boot + 5s/0x0020/info) - Board Revision 
+mfi0: 30354 (boot + 24s/0x0004/info) - Enclosure (SES) discovered on PD 1b(c Port 0 - 3/p1)
+mfi0: 30355 (boot + 24s/0x0004/info) - Enclosure PD 1b(c Port 0 - 3/p1) communication restored
+mfi0: 30356 (boot + 24s/0x0002/info) - Inserted: Encl PD 1b
+pcib15: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci15: <ACPI PCI bus> numa-domain 1 on pcib15
+pci15: <dasp, performance counters> at device 14.1 (no driver attached)
+pci15: <dasp, performance counters> at device 19.1 (no driver attached)
+pci15: <dasp, performance counters> at device 19.5 (no driver attached)
+acpi_button0: <Power Button> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xc7fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+mfisyspd0 numa-domain 1 on mfi0
+mfisyspd0: 2861588MB (5860533168 sectors) SYSPD volume (deviceid: 16)
+mfisyspd0:  SYSPD volume attached
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+mfisyspd1 numa-domain 1 on mfi0
+mfisyspd1: 2861588MB (5860533168 sectors) SYSPD volume (deviceid: 17)
+mfisyspd1:  SYSPD volume attached
+uhub0 numa-domain 0 on usbus1
+mfisyspd2 numa-domain 1 on mfi0
+mfisyspd2: 2861588MB (5860533168 sectors) SYSPD volume (deviceid: 20)
+mfisyspd2:  SYSPD volume attached
+uhub1 numa-domain 0 on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+mfisyspd3 numa-domain 1 on mfi0
+mfisyspd3: 953869MB (1953525168 sectors) SYSPD volume (deviceid: 21)
+mfisyspd3:  SYSPD volume attached
+mfisyspd4 numa-domain 1 on mfi0
+mfisyspd4: 2861588MB (5860533168 sectors) SYSPD volume (deviceid: 22)
+mfisyspd4:  SYSPD volume attached
+mfisyspd5 numa-domain 1 on mfi0
+mfisyspd5: 2861588MB (5860533168 sectors) SYSPD volume (deviceid: 23)
+mfisyspd5:  SYSPD volume attached
+mfisyspd6 numa-domain 1 on mfi0
+mfisyspd6: 2861588MB (5860533168 sectors) SYSPD volume (deviceid: 24)
+mfisyspd6:  SYSPD volume attached
+mfisyspd7 numa-domain 1 on mfi0
+mfisyspd7: 2861588MB (5860533168 sectors) SYSPD volume (deviceid: 25)
+mfisyspd7:  SYSPD volume attached
+mfisyspd8 numa-domain 1 on mfi0
+mfisyspd8: 2861588MB (5860533168 sectors) SYSPD volume (deviceid: 26)
+mfisyspd8:  SYSPD volume attached
+mfi0: 30357 (boot + 24s/0x0002/info) - Inserted: PD 1b(c Port 0 - 3/p1) Info: enclPd=1b, scsiType=d, portMap=00, sasAddr=78da6e986bfe00bd,0000000000000000
+mfi0: 30358 (boot + 24s/0x0002/info) - Inserted: PD 10(e0x1b/s3)
+mfi0: 30359 (boot + 24s/0x0002/info) - Inserted: PD 10(e0x1b/s3) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c500572d413d,0000000000000000
+mfi0: 30360 (boot + 24s/0x0002/info) - Inserted: PD 11(e0x1b/s7)
+mfi0: 30361 (boot + 24s/0x0002/info) - Inserted: PD 11(e0x1b/s7) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c5005713391d,0000000000000000
+mfi0: 30362 (boot + 24s/0x0002/info) - Inserted: PD 12(e0x1b/s4)
+mfi0: 30363 (boot + 24s/0x0002/info) - Inserted: PD 12(e0x1b/s4) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000cca009bb02e5,0000000000000000
+mfi0: 30364 (boot + 24s/0x0002/FATAL) - Unable to access device PD 12(e0x1b/s4)
+mfi0: 30365 (boot + 24s/0x0002/info) - State change on PD 12(e0x1b/s4) from UNCONFIGURED_GOOD(0) to UNCONFIGURED_BAD(1)
+mfi0: 30366 (boot + 24s/0x0002/info) - Inserted: PD 13(e0x1b/s8)
+mfi0: 30367 (boot + 24s/0x0002/info) - Inserted: PD 13(e0x1b/s8) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000cca271079715,0000000000000000
+mfi0: 30368 (boot + 24s/0x0002/FATAL) - Unable to access device PD 13(e0x1b/s8)
+mfi0: 30369 (boot + 24s/0x0002/info) - State change on PD 13(e0x1b/s8) from UNCONFIGURED_GOOD(0) to UNCONFIGURED_BAD(1)
+mfi0: 30370 (boot + 24s/0x0002/info) - Inserted: PD 14(e0x1b/s11)
+mfi0: 30371 (boot + 24s/0x0002/info) - Inserted: PD 14(e0x1b/s11) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50057191e25,0000000000000000
+mfi0: 30372 (boot + 24s/0x0002/info) - Inserted: PD 15(e0x1b/s9)
+mfi0: 30373 (boot + 24s/0x0002/info) - Inserted: PD 15(e0x1b/s9) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50083eccf5d,0000000000000000
+mfi0: 30374 (boot + 24s/0x0002/info) - Inserted: PD 16(e0x1b/s10)
+mfi0: 30375 (boot + 24s/0x0002/info) - Inserted: PD 16(e0x1b/s10) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50057132dd5,0000000000000000
+mfi0: 30376 (boot + 24s/0x0002/info) - Inserted: PD 17(e0x1b/s6)
+mfi0: 30377 (boot + 24s/0x0002/info) - Inserted: PD 17(e0x1b/s6) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c5005719186d,0000000000000000
+mfi0: 30378 (boot + 24s/0x0002/info) - Inserted: PD 18(e0x1b/s5)
+mfi0: 30379 (boot + 24s/0x0002/info) - Inserted: PD 18(e0x1b/s5) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50056f1e5dd,0000000000000000
+mfi0: 30380 (boot + 24s/0x0002/info) - Inserted: PD 19(e0x1b/s1)
+mfi0: 30381 (boot + 24s/0x0002/info) - Inserted: PD 19(e0x1b/s1) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c5005719019d,0000000000000000
+mfi0: 30382 (boot + 24s/0x0002/info) - Inserted: PD 1a(e0x1b/s2)
+mfi0: 30383 (boot + 24s/0x0002/info) - Inserted: PD 1a(e0x1b/s2) Info: enclPd=1b, scsiType=0, portMap=00, sasAddr=5000c50057191825,0000000000000000
+mfi0: 30384 (boot + 24s/0x0020/WARN) - Previous configuration completely missing at boot
+mfi0: 30385 (682108638s/0x0020/info) - Time established as 08/12/21 18:37:18; (25 seconds since power on)
+mfi0: 30386 (682108646s/0x0020/info) - Time established as 08/12/21 18:37:26; (33 seconds since power on)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 usbus1
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus0 usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 numa-domain 0 on uhub1
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 numa-domain 0 on uhub0
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus0 usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Avocent Cisco USB Composite Device-0> at usbus0
+ukbd0 numa-domain 0 on uhub2
+ukbd0: <Keyboard> on usbus0
+kbd2 at ukbd0
+Root mount waiting for: usbus1
+ugen1.3: <Swissbit USB Flash Drive> at usbus1
+umass0 numa-domain 0 on uhub3
+umass0: <Swissbit USB Flash Drive, class 0/0, rev 2.10/1.00, addr 3> on usbus1
+umass0:  SCSI over Bulk-Only; quirks = 0x8100
+umass0:0:0: Attached to scbus0
+(probe0:umass-sim0:0:0:0): REPORT LUNS. CDB: a0 00 00 00 00 00 00 00 00 10 00 00 
+(probe0:umass-sim0:0:0:0): CAM status: SCSI Status Error
+(probe0:umass-sim0:0:0:0): SCSI status: Check Condition
+(probe0:umass-sim0:0:0:0): SCSI sense: ILLEGAL REQUEST asc:20,0 (Invalid command operation code)
+(probe0:umass-sim0:0:0:0): Error 22, Unretryable error
+da0 at umass-sim0 bus 0 scbus0 target 0 lun 0
+da0: <Swissbit USB Flash Drive 0100> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 15296MB (31326208 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+ugen1.4: <GASIA PS2toUSB Adapter> at usbus1
+ukbd1 numa-domain 0 on uhub3
+ukbd1: <GASIA PS2toUSB Adapter, class 0/0, rev 1.10/1.00, addr 4> on usbus1
+kbd3 at ukbd1
+ugen1.5: <vendor 0x0424 product 0x2512> at usbus1
+uhub4 numa-domain 0 on uhub3
+uhub4: <vendor 0x0424 product 0x2512, class 9/0, rev 2.00/b.b3, addr 5> on usbus1
+uhub4: MTT enabled
+Root mount waiting for: usbus1
+uhub4: 2 ports with 2 removable, self powered
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+lo0: link state changed to UP
+ums0 numa-domain 0 on uhub2
+ums0: <Mouse> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+ums1 numa-domain 0 on uhub2
+ums1: <Mouse REL> on usbus0
+ums2 numa-domain 0 on uhub3
+ums2: <GASIA PS2toUSB Adapter, class 0/0, rev 1.10/1.00, addr 4> on usbus1
+ums1: 3 buttons and [XYZ] coordinates ID=0
+ums2: 5 buttons and [XYZ] coordinates ID=1
+Security policy loaded: MAC/ntpd (mac_ntpd)
+mfi0: 30387 (682108990s/0x0002/info) - Locate LED started on PD 12(e0x1b/s4)

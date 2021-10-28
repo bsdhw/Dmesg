@@ -1,0 +1,496 @@
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p7 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz (3192.14-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506e3  Family=0x6  Model=0x5e  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16484417536 (15720 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 2 3
+Timecounter "TSC-low" frequency 1596068984 Hz quality 1000
+random: entropy device external interface
+000.000019 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112f0f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+kbd1 at kbdmux0
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xd0000000-0xd0ffffff,0xc0000000-0xcfffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xd1200000-0xd120ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xd1214000-0xd1215fff,0xd1218000-0xd12180ff,0xd1217000-0xd12177ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier not supported
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 27.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci5: <ACPI PCI bus> on pcib5
+em0: <Intel(R) PRO/1000 Network Connection> port 0xe000-0xe01f mem 0xd11c0000-0xd11dffff,0xd1100000-0xd117ffff,0xd11e0000-0xd11e3fff irq 16 at device 0.0 on pci5
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using 2 RX queues 2 TX queues
+em0: Using MSI-X interrupts with 3 vectors
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 29.0 on pci0
+pcib6: [GIANT-LOCKED]
+pcib7: <ACPI PCI-PCI bridge> irq 16 at device 29.4 on pci0
+pci6: <ACPI PCI bus> on pcib7
+em1: <Intel(R) PRO/1000 Network Connection> port 0xd000-0xd01f mem 0xd10c0000-0xd10dffff,0xd1000000-0xd107ffff,0xd10e0000-0xd10e3fff irq 16 at device 0.0 on pci6
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using 2 RX queues 2 TX queues
+em1: Using MSI-X interrupts with 3 vectors
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <ACPI PCI-PCI bridge> irq 17 at device 29.5 on pci0
+pci7: <ACPI PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> irq 17 at device 0.0 on pci7
+pci8: <ACPI PCI bus> on pcib9
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+psm0: model Generic PS/2 mouse, device ID 0
+orm0: <ISA Option ROMs> at iomem 0xd0000-0xd0fff,0xd1000-0xd1fff pnpid ORM0000 on isa0
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich4 bus 0 scbus2 target 0 lun 0
+ada0: <SanDisk SSD PLUS 120GB UE4500RL> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114480MB (234455040 512 byte sectors)
+ada1 at ahcich5 bus 0 scbus3 target 0 lun 0
+ada1: <SanDisk SSD PLUS 120GB UE4500RL> ACS-2 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 114480MB (234455040 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+GEOM_MIRROR: Device mirror/swap launched (2/2).
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+uhub0: 26 ports with 26 removable, self powered
+em0: changing name to 'pub_1'
+em1: changing name to 'lan_1'
+lo0: link state changed to UP
+pub_1: promiscuous mode enabled
+carp: demoted by 240 to 240 (interface down)
+carp: demoted by 240 to 480 (interface down)
+carp: demoted by 240 to 720 (interface down)
+carp: demoted by 240 to 960 (interface down)
+carp: demoted by 240 to 1200 (interface down)
+carp: demoted by 240 to 1440 (interface down)
+carp: demoted by 240 to 1680 (interface down)
+carp: demoted by 240 to 1920 (interface down)
+carp: demoted by 240 to 2160 (interface down)
+carp: demoted by 240 to 2400 (interface down)
+carp: demoted by 240 to 2640 (interface down)
+carp: demoted by 240 to 2880 (interface down)
+carp: demoted by 240 to 3120 (interface down)
+carp: demoted by 240 to 3360 (interface down)
+carp: demoted by 240 to 3600 (interface down)
+carp: demoted by 240 to 3840 (interface down)
+carp: demoted by 240 to 4080 (interface down)
+carp: demoted by 240 to 4320 (interface down)
+carp: demoted by 240 to 4560 (interface down)
+carp: demoted by 240 to 4800 (interface down)
+carp: demoted by 240 to 5040 (interface down)
+carp: demoted by 240 to 5280 (interface down)
+carp: demoted by 240 to 5520 (interface down)
+carp: demoted by 240 to 5760 (interface down)
+carp: demoted by 240 to 6000 (interface down)
+carp: demoted by 240 to 6240 (interface down)
+carp: demoted by 240 to 6480 (interface down)
+carp: demoted by 240 to 6720 (interface down)
+carp: demoted by 240 to 6960 (interface down)
+carp: demoted by 240 to 7200 (interface down)
+carp: demoted by 240 to 7440 (interface down)
+carp: demoted by 240 to 7680 (interface down)
+carp: demoted by 240 to 7920 (interface down)
+lan_1: promiscuous mode enabled
+carp: demoted by 240 to 8160 (interface down)
+carp: demoted by 240 to 8400 (interface down)
+carp: demoted by 240 to 8640 (interface down)
+carp: demoted by 240 to 8880 (interface down)
+carp: demoted by 240 to 9120 (interface down)
+carp: demoted by 240 to 9360 (interface down)
+carp: demoted by 240 to 9600 (interface down)
+carp: demoted by 240 to 9840 (interface down)
+carp: demoted by 240 to 10080 (interface down)
+carp: demoted by 240 to 10320 (interface down)
+carp: demoted by 240 to 10560 (interface down)
+carp: demoted by 240 to 10800 (interface down)
+carp: demoted by 240 to 11040 (interface down)
+carp: demoted by 240 to 11280 (interface down)
+carp: demoted by 240 to 11520 (interface down)
+carp: demoted by 240 to 11760 (interface down)
+carp: demoted by 240 to 12000 (interface down)
+carp: demoted by 240 to 12240 (interface down)
+carp: demoted by 240 to 12480 (interface down)
+carp: demoted by 240 to 12720 (interface down)
+carp: demoted by 240 to 12960 (interface down)
+carp: demoted by 240 to 13200 (interface down)
+carp: demoted by 240 to 13440 (interface down)
+carp: demoted by 240 to 13680 (interface down)
+carp: demoted by 240 to 13920 (interface down)
+carp: demoted by 240 to 14160 (interface down)
+carp: demoted by 240 to 14400 (interface down)
+carp: demoted by 240 to 14640 (interface down)
+carp: demoted by 240 to 14880 (interface down)
+carp: demoted by 240 to 15120 (interface down)
+carp: demoted by 240 to 15360 (interface down)
+carp: demoted by 240 to 15600 (interface down)
+carp: demoted by 240 to 15840 (interface down)
+carp: demoted by 240 to 16080 (interface down)
+carp: demoted by 240 to 16320 (interface down)
+pflog0: promiscuous mode enabled
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 16080 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 15840 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 15600 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 15360 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 15120 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 14880 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 14640 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 14400 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 14160 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 13920 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 13680 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 13440 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 13200 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 12960 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 12720 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 12480 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 12240 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 12000 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 11760 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 11520 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 11280 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 11040 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 10800 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 10560 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 10320 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 10080 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 9840 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 9600 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 9360 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 9120 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 8880 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 8640 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 8400 (interface up)
+pub_1: link state changed to UP
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 8160 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 7920 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 7680 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 7440 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 7200 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6960 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6720 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6480 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6240 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6000 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 5760 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 5520 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 5280 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 5040 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 4800 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 4560 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 4320 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 4080 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 3840 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 3600 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 3360 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 3120 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 2880 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 2640 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 2400 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 2160 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 1920 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 1680 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 1440 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 1200 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 960 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 720 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 480 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 240 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 0 (interface up)
+lan_1: link state changed to UP
+tap0: Ethernet address: ...
+tap1: Ethernet address: ...
+tap1: link state changed to UP
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 240 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 480 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 720 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 960 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 1200 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 1440 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 1680 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 1920 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 2160 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 2400 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 2640 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 2880 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 3120 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 3360 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 3600 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 3840 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 4080 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 4320 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 4560 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 4800 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 5040 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 5280 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 5520 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 5760 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 6000 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 6240 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 6480 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 6720 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 6960 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 7200 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 7440 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 7680 (interface down)
+carp: XXX@XXX: BACKUP -> INIT (hardware interface down)
+carp: demoted by 240 to 7920 (interface down)
+pub_1: link state changed to DOWN
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 7680 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 7440 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 7200 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6960 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6720 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6480 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6240 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 6000 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 5760 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 5520 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 5280 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 5040 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 4800 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 4560 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 4320 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 4080 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 3840 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 3600 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 3360 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 3120 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 2880 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 2640 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 2400 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 2160 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 1920 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 1680 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 1440 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 1200 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 960 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 720 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 480 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 240 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 0 (interface up)
+pub_1: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on lan_1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on lan_1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on lan_1

@@ -1,0 +1,468 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE-p6 df578562304(HEAD) TRUENAS amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(efifb): resolution 1920x1200
+CPU: Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz (3408.17-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906e9  Family=0x6  Model=0x9e  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xc000000<IBPB,STIBP>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 68719476736 (65536 MB)
+avail memory = 66512588800 (63431 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 2 1 3
+Timecounter "TSC-low" frequency 1704085638 Hz quality 1000
+random: entropy device external interface
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+kbd1 at kbdmux0
+mlx5en: Mellanox Ethernet driver 3.5.2 (September 2019)
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+padlock0: No ACE support.
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+mps0: <Avago Technologies (LSI) SAS2008> port 0xe000-0xe0ff mem 0xdf4c0000-0xdf4c3fff,0xdf480000-0xdf4bffff irq 16 at device 0.0 on pci1
+mps0: Firmware: XXX.XXX.XXX.XXX, Driver: XXX.XXX.XXX.XXX-fbsd
+mps0: IOCCapabilities: 1285c<ScsiTaskFull,DiagTrace,SnapBuf,EEDP,TransRetry,EventReplay,HostDisc>
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xde000000-0xdeffffff,0xc0000000-0xcfffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Union Point USB 3.0 controller> mem 0xdf520000-0xdf52ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Union Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xdf534000-0xdf535fff,0xdf538000-0xdf5380ff,0xdf537000-0xdf5377ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 27.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 27.4 on pci0
+pci3: <ACPI PCI bus> on pcib3
+nvme0: <Generic NVMe Device> mem 0xdf300000-0xdf303fff irq 16 at device 0.0 on pci3
+pcib4: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci5: <ACPI PCI bus> on pcib5
+ahci1: <JMicron JMB58x AHCI SATA controller> port 0xd200-0xd27f,0xd180-0xd1ff,0xd100-0xd17f,0xd080-0xd0ff,0xd000-0xd07f mem 0xdf210000-0xdf211fff irq 18 at device 0.0 on pci5
+ahci1: AHCI v1.31 with 5 6Gbps ports, Port Multiplier supported with FBS
+ahcich6: <AHCI channel> at channel 0 on ahci1
+ahcich7: <AHCI channel> at channel 1 on ahci1
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci6: <ACPI PCI bus> on pcib6
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xdf100000-0xdf107fff irq 16 at device 0.0 on pci6
+xhci1: 32 bytes context size, 64-bit DMA
+xhci1: Unable to map MSI-X table 
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib7: <ACPI PCI-PCI bridge> irq 16 at device 29.0 on pci0
+pci7: <ACPI PCI bus> on pcib7
+nvme1: <Generic NVMe Device> mem 0xdf000000-0xdf003fff irq 16 at device 0.0 on pci7
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+em0: <Intel(R) PRO/1000 Network Connection> mem 0xdf500000-0xdf51ffff irq 16 at device 31.6 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xcffff,0xd0000-0xd07ff pnpid ORM0000 on isa0
+superio0: <Nuvoton NCT6793> at port 0x2e-0x2f on isa0
+wbwd0: <Nuvoton NCT6793 (0xd1/0x21) Watchdog Timer> at WDT ldn 0x08 on superio0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ipfw2 (+ipv6) initialized, divert enabled, nat enabled, default to accept, logging disabled
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+ugen1.1: <0x1b21 XHCI root HUB> at usbus1
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1: <0x1b21 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub1: 4 ports with 4 removable, self powered
+nvd0: <KINGSTON SA2000M8500G> NVMe namespace
+nvd0: 476940MB (976773168 512 byte sectors)
+nvd1: <KINGSTON SA2000M8500G> NVMe namespace
+nvd1: 476940MB (976773168 512 byte sectors)
+Trying to mount root from zfs:freenas-boot/ROOT/12.0-U4.1 []...
+Root mount waiting for: CAM usbus0
+uhub0: 26 ports with 26 removable, self powered
+mps0: Error reading device 0xb SATA PASSTHRU; iocstatus= 0x47
+mps0: Error reading device 0xb SATA PASSTHRU; iocstatus= 0x804b
+mps0: Sleeping 3 seconds after SATA ID error to wait for spinup
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+ses0 at mps0 bus 0 scbus0 target 23 lun 0
+ses0: <IBM-ESXS SAS EXP BP 634A> Fixed Enclosure Services SPC-2 SCSI device
+ses0: 600.000MB/s transfers
+ses0: SES Device
+ses1 at ahciem0 bus 0 scbus7 target 0 lun 0
+ses1: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses1: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus1 target 0 lun 0
+ada0: <KINGSTON SA400S37480G SBFKK1B3> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 457862MB (937703088 512 byte sectors)
+ses1: ada0 in 'Slot 00', SATA Slot: scbus1 target 0
+ada1 at ahcich1 bus 0 scbus2 target 0 lun 0
+ada1: <KINGSTON SA400S37480G SBFK61E1> ACS-3 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 457862MB (937703088 512 byte sectors)
+ada2 at ahcich5 bus 0 scbus6 target 0 lun 0
+ada2: <WDC WD30EFRX-68EUZN0 82.00A82> ACS-2 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 2861588MB (5860533168 512 byte sectors)
+ada2: quirks=0x1<4K>
+ses1: ada1 in 'Slot 01', SATA Slot: scbus2 target 0
+ses1: ada2 in 'Slot 05', SATA Slot: scbus6 target 0
+ada3 at ahcich6 bus 0 scbus8 target 0 lun 0
+ada3: <TOSHIBA THNSNX032GTNT M.2 2242 32GB XTXAN106> ACS-2 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 600.000MB/s transfers (SATA 3.x, UDMA5, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 30533MB (62533296 512 byte sectors)
+ada4 at ahcich7 bus 0 scbus9 target 0 lun 0
+ada4: <TOSHIBA THNSNX032GTNT XTXAN106> ACS-2 ATA SATA 3.x device
+ada4: Serial Number...
+ada4: 600.000MB/s transfers (SATA 3.x, UDMA5, PIO 8192bytes)
+ada4: Command Queueing enabled
+ada4: 30533MB (62533296 512 byte sectors)
+da2 at mps0 bus 0 scbus0 target 8 lun 0
+da2: <ATA Hitachi HUS72403 A5F0> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 600.000MB/s transfers
+da2: Command Queueing enabled
+da2: 2861588MB (5860533168 512 byte sectors)
+da3 at mps0 bus 0 scbus0 target 9 lun 0
+da3: <ATA Hitachi HUS72403 A5F0> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 600.000MB/s transfers
+da3: Command Queueing enabled
+da3: 2861588MB (5860533168 512 byte sectors)
+da4 at mps0 bus 0 scbus0 target 10 lun 0
+da4: <ATA WDC WD3003FZEX-0 1A01> Fixed Direct Access SPC-4 SCSI device
+da4: Serial Number...
+da4: 600.000MB/s transfers
+da4: Command Queueing enabled
+da4: 2861588MB (5860533168 512 byte sectors)
+da5 at mps0 bus 0 scbus0 target 11 lun 0
+da5: <ATA WDC WD3001FFSX-6 0A81> Fixed Direct Access SPC-4 SCSI device
+da5: Serial Number...
+da5: 600.000MB/s transfers
+da5: Command Queueing enabled
+da5: 2861588MB (5860533168 512 byte sectors)
+da12 at mps0 bus 0 scbus0 target 35 lun 0
+da12: <ATA WDC WD3000F9YZ-0 1A02> Fixed Direct Access SPC-4 SCSI device
+da12: Serial Number...
+da12: 600.000MB/s transfers
+da12: Command Queueing enabled
+da12: 2861588MB (5860533168 512 byte sectors)
+da9 at mps0 bus 0 scbus0 target 15 lun 0
+da9: <ATA WDC WD30PURX-64P 0A80> Fixed Direct Access SPC-4 SCSI device
+da9: Serial Number...
+da9: 600.000MB/s transfers
+da9: Command Queueing enabled
+da9: 2861588MB (5860533168 512 byte sectors)
+da9: quirks=0x8<4K>
+da15 at mps0 bus 0 scbus0 target 48 lun 0
+da15: <ATA WDC WD3000F9YZ-0 1A01> Fixed Direct Access SPC-4 SCSI device
+da15: Serial Number...
+da15: 600.000MB/s transfers
+da15: Command Queueing enabled
+da15: 2861588MB (5860533168 512 byte sectors)
+da14 at mps0 bus 0 scbus0 target 47 lun 0
+da14: <ATA WDC WD30EFRX-68A 0A80> Fixed Direct Access SPC-4 SCSI device
+da14: Serial Number...
+da14: 600.000MB/s transfers
+da14: Command Queueing enabled
+da14: 2861588MB (5860533168 512 byte sectors)
+da14: quirks=0x8<4K>
+da13 at mps0 bus 0 scbus0 target 46 lun 0
+da13: <ATA WDC WD3000F9YZ-0 1A01> Fixed Direct Access SPC-4 SCSI device
+da13: Serial Number...
+da13: 600.000MB/s transfers
+da13: Command Queueing enabled
+da13: 2861588MB (5860533168 512 byte sectors)
+da8 at mps0 bus 0 scbus0 target 14 lun 0
+da8: <ATA WDC WD30EZRX-00M 0A80> Fixed Direct Access SPC-4 SCSI device
+da8: Serial Number...
+da8: 600.000MB/s transfers
+da8: Command Queueing enabled
+da8: 2861588MB (5860533168 512 byte sectors)
+da8: quirks=0x8<4K>
+da7 at mps0 bus 0 scbus0 target 13 lun 0
+da7: <ATA WDC WD30EZRX-00M 0A80> Fixed Direct Access SPC-4 SCSI device
+da7: Serial Number...
+da7: 600.000MB/s transfers
+da7: Command Queueing enabled
+da7: 2861588MB (5860533168 512 byte sectors)
+da7: quirks=0x8<4K>
+da0 at mps0 bus 0 scbus0 target 4 lun 0
+da0: <ATA WDC WD5000LPLX-0 1A04> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: Command Queueing enabled
+da0: 476940MB (976773168 512 byte sectors)
+da1 at mps0 bus 0 scbus0 target 5 lun 0
+da1: <ATA WDC WD5000LPLX-0 1A01> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 600.000MB/s transfers
+da1: Command Queueing enabled
+da1: 476940MB (976773168 512 byte sectors)
+da11 at mps0 bus 0 scbus0 target 31 lun 0
+da11: <ATA KINGSTON SV300S3 BBF0> Fixed Direct Access SPC-4 SCSI device
+da11: Serial Number...
+da11: 600.000MB/s transfers
+da11: Command Queueing enabled
+da11: 114473MB (234441648 512 byte sectors)
+da10 at mps0 bus 0 scbus0 target 30 lun 0
+da10: <ATA KINGSTON SV300S3 BBF0> Fixed Direct Access SPC-4 SCSI device
+da10: Serial Number...
+da10: 600.000MB/s transfers
+da10: Command Queueing enabled
+da10: 114473MB (234441648 512 byte sectors)
+da6 at mps0 bus 0 scbus0 target 12 lun 0
+da6: <ATA ST3000DM008-2DM1 CC26> Fixed Direct Access SPC-4 SCSI device
+da6: Serial Number...
+da6: 600.000MB/s transfers
+da6: Command Queueing enabled
+da6: 2861588MB (5860533168 512 byte sectors)
+da6: quirks=0x8<4K>
+da16 at mps0 bus 0 scbus0 target 49 lun 0
+da16: <ATA ST3000DM001-1ER1 CC25> Fixed Direct Access SPC-4 SCSI device
+da16: Serial Number...
+da16: 600.000MB/s transfers
+da16: Command Queueing enabled
+da16: 2861588MB (5860533168 512 byte sectors)
+da16: quirks=0x8<4K>
+da17 at mps0 bus 0 scbus0 target 50 lun 0
+da17: <ATA ST3000DM001-1CH1 CC29> Fixed Direct Access SPC-4 SCSI device
+da17: Serial Number...
+da17: 600.000MB/s transfers
+da17: Command Queueing enabled
+da17: 2861588MB (5860533168 512 byte sectors)
+da17: quirks=0x8<4K>
+da18 at mps0 bus 0 scbus0 target 51 lun 0
+da18: <ATA TOSHIBA HDWD130 ACF0> Fixed Direct Access SPC-4 SCSI device
+da18: Serial Number...
+da18: 600.000MB/s transfers
+da18: Command Queueing enabled
+da18: 2861588MB (5860533168 512 byte sectors)
+da19 at mps0 bus 0 scbus0 target 52 lun 0
+da19: <ATA TOSHIBA HDWD130 ACF0> Fixed Direct Access SPC-4 SCSI device
+da19: Serial Number...
+da19: 600.000MB/s transfers
+da19: Command Queueing enabled
+da19: 2861588MB (5860533168 512 byte sectors)
+lo0: link state changed to UP
+em0: link state changed to UP
+GEOM_MIRROR: Device mirror/swap0 launched (2/2).
+GEOM_ELI: Device mirror/swap0.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: hardware
+hwpmc: SOFT/16/64/0x67<INT,USR,SYS,REA,WRI> TSC/1/64/0x20<REA> IAP/8/48/0x3ff<INT,USR,SYS,EDG,THR,REA,WRI,INV,QUA,PRC> IAF/3/48/0x67<INT,USR,SYS,REA,WRI>
+em0: link state changed to DOWN
+em0: link state changed to UP
+CPU: Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz (3408.17-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906e9  Family=0x6  Model=0x9e  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0x9c002600<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+Security policy loaded: MAC/ntpd (mac_ntpd)
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+Failed to add WC MTRR for [0xc0000000-0xcfffffff]: -22; performance may suffer
+[drm] Got stolen memory base 0x8c000000, size 0x4000000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Initialized i915 1.6.0 20171222 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1200 width=1920 depth=32
+cmsize=16 size=9216000
+pbase=0xc0040000 vbase=0xfffff800c0040000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: inteldrmfb frame buffer device
+i915/kbl_dmc_ver1_04.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: i915/kbl_dmc_ver1_04.bin
+drmn0: successfully loaded firmware image with mapped name: i915_kbl_dmc_ver1_04_bin
+[drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+epair0a: Ethernet address: ...
+epair0b: Ethernet address: ...
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0.1'
+em0: link state changed to DOWN
+lo0: link state changed to UP
+bridge0: Ethernet address: ...
+em0: link state changed to UP
+epair1a: Ethernet address: ...
+epair1b: Ethernet address: ...
+epair1a: link state changed to UP
+epair1b: link state changed to UP
+epair1a: changing name to 'vnet0.2'
+epair1b: changing name to 'epair0b'
+vnet0.2: promiscuous mode enabled
+bridge0: link state changed to UP
+lo0: link state changed to UP
+epair2a: Ethernet address: ...
+epair2b: Ethernet address: ...
+epair2a: link state changed to UP
+epair2b: link state changed to UP
+epair2a: changing name to 'vnet0.3'
+epair2b: changing name to 'epair0b'
+em0: link state changed to DOWN
+em0: promiscuous mode enabled
+vnet0.3: promiscuous mode enabled
+lo0: link state changed to UP
+em0: link state changed to UP
+epair3a: Ethernet address: ...
+epair3b: Ethernet address: ...
+epair3a: link state changed to UP
+epair3b: link state changed to UP
+epair3a: changing name to 'vnet0.4'
+epair3b: changing name to 'epair0b'
+vnet0.4: promiscuous mode enabled
+lo0: link state changed to UP
+Limiting closed port RST response from 202 to 200 packets/sec
+Limiting closed port RST response from 203 to 200 packets/sec
+epair4a: Ethernet address: ...
+epair4b: Ethernet address: ...
+epair4a: link state changed to UP
+epair4b: link state changed to UP
+epair4a: changing name to 'vnet0.5'
+epair4b: changing name to 'epair0b'
+vnet0.5: promiscuous mode enabled
+lo0: link state changed to UP
+Limiting closed port RST response from 202 to 200 packets/sec
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on epair0b
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on epair0b
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on epair0b
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on epair0b
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on epair0b
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on epair0b
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on epair0b
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on epair0b
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on epair0b
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/7.02, addr 1> on usbus0
+uhub2: 4 ports with 4 removable, self powered
+ugen0.3: <Logitech USB Receiver> at usbus0
+ukbd0 on uhub2
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/12.03, addr 2> on usbus0
+kbd2 at ukbd0
+ums0 on uhub2
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/12.03, addr 2> on usbus0
+ums0: 16 buttons and [XYZT] coordinates ID=2
+uhid0 on uhub2
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/12.03, addr 2> on usbus0
+ugen0.4: <Logitech USB Receiver> at usbus0
+ukbd1 on uhub2
+ukbd1: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 3> on usbus0
+kbd3 at ukbd1
+ums1 on uhub2
+ums1: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 3> on usbus0
+ums1: 16 buttons and [XYZT] coordinates ID=2
+uhid1 on uhub2
+uhid1: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 3> on usbus0
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0 (disconnected)
+uhub2: at uhub0, port 11, addr 1 (disconnected)
+ugen0.3: <Logitech USB Receiver> at usbus0 (disconnected)
+ukbd0: at uhub2, port 1, addr 2 (disconnected)
+ukbd0: detached
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+uhid0: at uhub2, port 1, addr 2 (disconnected)
+uhid0: detached
+ugen0.4: <Logitech USB Receiver> at usbus0 (disconnected)
+ukbd1: at uhub2, port 4, addr 3 (disconnected)
+ukbd1: detached
+ums1: at uhub2, port 4, addr 3 (disconnected)
+ums1: detached
+uhid1: at uhub2, port 4, addr 3 (disconnected)
+uhid1: detached
+uhub2: detached
+epair5a: Ethernet address: ...
+epair5b: Ethernet address: ...
+epair5a: link state changed to UP
+epair5b: link state changed to UP
+epair5a: changing name to 'vnet0.6'
+epair5b: changing name to 'epair0b'
+lo0: link state changed to UP

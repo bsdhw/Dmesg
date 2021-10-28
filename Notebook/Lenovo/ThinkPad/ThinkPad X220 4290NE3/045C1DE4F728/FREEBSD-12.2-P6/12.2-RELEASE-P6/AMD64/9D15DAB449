@@ -1,0 +1,1116 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE-p6 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(efifb): resolution 640x480
+CPU: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz (2491.96-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206a7  Family=0x6  Model=0x2a  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x28000800<SYSCALL,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16508325888 (15743 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <LENOVO TP-8D   >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 3 2
+Timecounter "TSC-low" frequency 1245980890 Hz quality 1000
+random: entropy device external interface
+000.000019 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81115e40, 0) error 19
+kbd1 at kbdmux0
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+acpi0: <LENOVO TP-8D> on motherboard
+acpi_ec0: <Embedded Controller: GPE 0x11, ECDT> port 0x62,0x66 on acpi0
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_button0: <Sleep Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x6000-0x603f mem 0xf0000000-0xf03fffff,0xe0000000-0xefffffff irq 16 at device 2.0 on pci0
+acpi_video0: <ACPI video extension> on vgapci0
+vgapci0: Boot video device
+pci0: <simple comms> at device 22.0 (no driver attached)
+em0: <Intel(R) PRO/1000 Network Connection> port 0x6080-0x609f mem 0xf2500000-0xf251ffff,0xf252b000-0xf252bfff at device 25.0 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xf252a000-0xf252a3ff at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+hdac0: <Intel Cougar Point HDA Controller> mem 0xf2520000-0xf2523fff at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> at device 28.3 on pci0
+pcib3: [GIANT-LOCKED]
+pcib4: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pcib4: [GIANT-LOCKED]
+pci3: <ACPI PCI bus> on pcib4
+sdhci_pci0: <RICOH R5CE823 SD> mem 0xf1400000-0xf14000ff at device 0.0 on pci3
+sdhci_pci0: 1 slot(s) allocated
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xf2529000-0xf25293ff at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x60a8-0x60af,0x60bc-0x60bf,0x60a0-0x60a7,0x60b8-0x60bb,0x6060-0x607f mem 0xf2528000-0xf25287ff at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+acpi_tz0: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+psm0: model IBM/Lenovo TrackPoint, device ID 14
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_ibm0: <IBM ThinkPad ACPI Extras> on acpi0
+acpi_ibm0: Firmware version is 0x100
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcffff pnpid ORM0000 on isa0
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <Conexant CX20590 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant CX20590 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant CX20590 (Analog 2.0+HP/2.0)> at nid 31,25 and 35,27 on hdaa0
+hdacc1: <Intel Cougar Point HDA CODEC> at cad 3 on hdac0
+hdaa1: <Intel Cougar Point Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel Cougar Point (HDMI/DP 8ch)> at nid 5 on hdaa1
+pcm2: <Intel Cougar Point (HDMI/DP 8ch)> at nid 6 on hdaa1
+pcm3: <Intel Cougar Point (HDMI/DP 8ch)> at nid 7 on hdaa1
+ses0 at ahciem0 bus 0 scbus3 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <WDC WDS480G2G0A-00JH30 UG400400> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 457862MB (937703088 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ses0: ada0,pass0 in 'Slot 00', SATA Slot: scbus0 target 0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+Trying to mount root from zfs:zroot/ROOT/default []...
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+GEOM_ELI: Device ada0p4.eli created.
+GEOM_ELI: Encryption: AES-XTS 256
+GEOM_ELI:     Crypto: hardware
+Root mount waiting for: usbus0 usbus1
+Root mount waiting for: usbus0 usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+Root mount waiting for: usbus0 usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub1
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub0
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus0 usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+Failed to add WC MTRR for [0xe0000000-0xefffffff]: -28; performance may suffer
+[drm] Got stolen memory base 0xdba00000, size 0x4000000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector LVDS-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.LVDS-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector VGA-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.VGA-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-3: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-3
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-3: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-3
+[drm]   - kern.vt.fb.default_mode
+[drm] Initialized i915 1.6.0 20171222 for drmn0 on minor 0
+rtwn0: <Realtek RTL8188CE> port 0x5000-0x50ff mem 0xf2400000-0xf2403fff at device 0.0 on pci2
+rtwn0: MAC/BB RTL8188CE, RF 6052 1T1R
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=768 width=1366 depth=32
+cmsize=16 size=4227072
+pbase=0xe018d000 vbase=0xfffff800e018d000
+name=drmn0 flags=0x0 stride=5504 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: inteldrmfb frame buffer device
+lo0: link state changed to UP
+umodem0 on uhub3
+umodem0: <Lenovo F5521gw, class 2/0, rev 2.00/0.00, addr 3> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+bridge0: Ethernet address: ...
+bridge0: changing name to 'vm-public'
+Security policy loaded: MAC/ntpd (mac_ntpd)
+wlan0: Ethernet address: ...
+wlan0: link state changed to UP
+uhub0: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub0, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+wlan0: link state changed to DOWN
+uhub1: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub1, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+wlan0: link state changed to UP
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+wlan0: link state changed to DOWN
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+wlan0: link state changed to UP
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+wlan0: link state changed to DOWN
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+wlan0: link state changed to UP
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+lo1: link state changed to UP
+bridge1: Ethernet address: ...
+epair0a: Ethernet address: ...
+epair0b: Ethernet address: ...
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0:2'
+epair0b: changing name to 'vnet0'
+epair1a: Ethernet address: ...
+epair1b: Ethernet address: ...
+epair1a: link state changed to UP
+epair1b: link state changed to UP
+epair1a: changing name to 'vnet1:2'
+epair1b: changing name to 'vnet1'
+vnet1:2: promiscuous mode enabled
+bridge1: link state changed to UP
+lo0: link state changed to UP
+vnet0:2: link state changed to DOWN
+vnet0: link state changed to DOWN
+vnet1:2: link state changed to DOWN
+vnet1: link state changed to DOWN
+bridge1: link state changed to DOWN
+in6_purgeaddr: err=65, destination address delete failed
+bridge1: Ethernet address: ...
+epair0a: Ethernet address: ...
+epair0b: Ethernet address: ...
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0:3'
+epair0b: changing name to 'vnet0'
+epair1a: Ethernet address: ...
+epair1b: Ethernet address: ...
+epair1a: link state changed to UP
+epair1b: link state changed to UP
+epair1a: changing name to 'vnet1:3'
+epair1b: changing name to 'vnet1'
+vnet1:3: promiscuous mode enabled
+bridge1: link state changed to UP
+lo0: link state changed to UP
+vnet0:3: link state changed to DOWN
+vnet0: link state changed to DOWN
+vnet1:3: link state changed to DOWN
+vnet1: link state changed to DOWN
+bridge1: link state changed to DOWN
+in6_purgeaddr: err=65, destination address delete failed
+bridge1: Ethernet address: ...
+epair0a: Ethernet address: ...
+epair0b: Ethernet address: ...
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0:4'
+epair0b: changing name to 'vnet0'
+epair1a: Ethernet address: ...
+epair1b: Ethernet address: ...
+epair1a: link state changed to UP
+epair1b: link state changed to UP
+epair1a: changing name to 'vnet1:4'
+epair1b: changing name to 'vnet1'
+vnet1:4: promiscuous mode enabled
+bridge1: link state changed to UP
+lo0: link state changed to UP
+vnet0:4: link state changed to DOWN
+vnet0: link state changed to DOWN
+vnet1:4: link state changed to DOWN
+vnet1: link state changed to DOWN
+bridge1: link state changed to DOWN
+in6_purgeaddr: err=65, destination address delete failed
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+wlan0: link state changed to DOWN
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+wlan0: Ethernet address: ...
+wlan0: link state changed to UP
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+wlan0: link state changed to DOWN
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+wlan0: link state changed to UP
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+tap0: Ethernet address: ...
+tap0: promiscuous mode enabled
+vm-public: link state changed to DOWN
+nd6_dad_timer: cancel DAD on tap0 because of ND6_IFF_IFDISABLED.
+tap0: link state changed to UP
+vm-public: link state changed to UP
+tap0: link state changed to DOWN
+vm-public: link state changed to DOWN
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+wlan0: link state changed to DOWN
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+wlan0: Ethernet address: ...
+wlan0: link state changed to UP
+rtwn0: device timeout
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+wlan0: link state changed to DOWN
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+wlan0: link state changed to UP
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+em0: link state changed to UP
+wlan0: link state changed to DOWN
+pid 20821 (mc), jid 0, uid 1001: exited on signal 11 (core dumped)
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+Limiting icmp unreach response from 277 to 200 packets/sec
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+em0: link state changed to DOWN
+em0: link state changed to UP
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+tun0: link state changed to UP
+tun0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: link state changed to DOWN
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+em0: link state changed to DOWN
+em0: link state changed to UP
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: 3 ports with 3 removable, self powered
+uhub0: 3 ports with 3 removable, self powered
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub2 on uhub1
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub3 on uhub0
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+uhub3: 6 ports with 6 removable, self powered
+uhub2: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub2
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub2
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub2
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub2
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+Limiting closed port RST response from 250 to 200 packets/sec
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub2: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub2, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub2, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub2, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub2, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub2: detached
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub3: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub3: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+em0: link state changed to DOWN
+em0: link state changed to UP
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+em0: link state changed to DOWN
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub3
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub3
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub3
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub3
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+wlan0: Ethernet address: ...
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: Ethernet address: ...
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+uhub1: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1 (disconnected)
+uhub3: at uhub1, port 1, addr 2 (disconnected)
+ugen1.3: <Lenovo F5521gw> at usbus1 (disconnected)
+umodem0: at uhub3, port 4, addr 3 (disconnected)
+umodem0: detached
+umodem1: at uhub3, port 4, addr 3 (disconnected)
+umodem1: detached
+cdce0: at uhub3, port 4, addr 3 (disconnected)
+cdce0: detached
+umodem2: at uhub3, port 4, addr 3 (disconnected)
+umodem2: detached
+uhub3: detached
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0 (disconnected)
+uhub2: at uhub0, port 1, addr 2 (disconnected)
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0 (disconnected)
+uhub2: detached
+vgapci0: child drmn0 requested pci_set_powerstate
+pci0: failed to set ACPI power state D3 on \134_SB_.PCI0.VID_: AE_BAD_PARAMETER
+pcib0: failed to set ACPI power state D2 on \134_SB_.PCI0: AE_BAD_PARAMETER
+acpi0: cleared fixed power button status
+vgapci0: child drmn0 requested pci_set_powerstate
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: 3 ports with 3 removable, self powered
+uhub0: 3 ports with 3 removable, self powered
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub2 on uhub1
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub3 on uhub0
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+uhub3: 6 ports with 6 removable, self powered
+uhub2: 8 ports with 8 removable, self powered
+ugen0.3: <Ricoh Company Ltd. Integrated Camera> at usbus0
+ugen1.3: <Lenovo F5521gw> at usbus1
+umodem0 on uhub2
+umodem0: <F5521gw Mobile Broadband Modem> on usbus1
+umodem0: data interface 2, has CM over data, has break
+umodem1 on uhub2
+umodem1: <F5521gw Mobile Broadband Data Modem> on usbus1
+umodem1: data interface 4, has CM over data, has break
+cdce0 on uhub2
+cdce0: <F5521gw Mobile Broadband Network Adapter> on usbus1
+ue0: <USB Ethernet> on cdce0
+ue0: Ethernet address: ...
+umodem2 on uhub2
+umodem2: <F5521gw Mobile Broadband GPS Port> on usbus1
+umodem2: data interface 10, has CM over data, has break
+wlan0: Ethernet address: ...
+wlan0: link state changed to UP

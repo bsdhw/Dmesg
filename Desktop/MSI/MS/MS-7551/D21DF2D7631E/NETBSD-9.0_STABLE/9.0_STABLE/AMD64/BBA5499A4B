@@ -1,0 +1,295 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.0_STABLE (GENERIC) #0: Mon Jul 20 18:35:18 UTC 2020
+	XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+total memory = 8190 MB
+avail memory = 7929 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+running cgd selftest aes-xts-256 aes-xts-512 done
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+MICRO-STAR INTERNATIONAL CO.,LTD MS-7551 (1.0)
+mainbus0 (root)
+ACPI: RSDP 0x00000000000FA9E0 000014 (v00 ACPIAM)
+ACPI: RSDT 0x00000000CFE90000 000040 (v01 7551MS A7551010 20100928 MSFT 00000097)
+ACPI: FACP 0x00000000CFE90200 000084 (v01 7551MS A7551010 20100928 MSFT 00000097)
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20190405/tbfadt-693)
+ACPI: DSDT 0x00000000CFE905D0 009841 (v01 A7551  A7551010 00000010 INTL 20051117)
+ACPI: FACS 0x00000000CFE9E000 000040
+ACPI: APIC 0x00000000CFE90390 00007C (v01 7551MS A7551010 20100928 MSFT 00000097)
+ACPI: MCFG 0x00000000CFE90410 00003C (v01 7551MS OEMMCFG  20100928 MSFT 00000097)
+ACPI: OEMB 0x00000000CFE9E040 000072 (v01 7551MS A7551010 20100928 MSFT 00000097)
+ACPI: SRAT 0x00000000CFE99E20 000108 (v03 AMD    FAM_F_10 00000002 AMD  00000001)
+ACPI: HPET 0x00000000CFE99F30 000038 (v01 7551MS OEMHPET  20100928 MSFT 00000097)
+ACPI: SSDT 0x00000000CFE99F70 000DA4 (v01 A M I  POWERNOW 00000001 AMD  00000001)
+ACPI: 2 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 6: pa 0xfec00000, version 0x21, 24 pins
+cpu0 at mainbus0 apid 0
+cpu0: AMD Phenom(tm) II X6 1055T Processor, id 0x100fa0
+cpu0: package 0, core 0, smt 0
+cpu1 at mainbus0 apid 1
+cpu1: AMD Phenom(tm) II X6 1055T Processor, id 0x100fa0
+cpu1: package 0, core 1, smt 0
+cpu2 at mainbus0 apid 2
+cpu2: AMD Phenom(tm) II X6 1055T Processor, id 0x100fa0
+cpu2: package 0, core 2, smt 0
+cpu3 at mainbus0 apid 3
+cpu3: AMD Phenom(tm) II X6 1055T Processor, id 0x100fa0
+cpu3: package 0, core 3, smt 0
+cpu4 at mainbus0 apid 4
+cpu4: AMD Phenom(tm) II X6 1055T Processor, id 0x100fa0
+cpu4: package 0, core 4, smt 0
+cpu5 at mainbus0 apid 5
+cpu5: AMD Phenom(tm) II X6 1055T Processor, id 0x100fa0
+cpu5: package 0, core 5, smt 0
+acpi0 at mainbus0: Intel ACPICA 20190405
+acpi0: X/RSDT: OemId <7551MS,A7551010,20100928>, AslId <MSFT,00000097>
+acpi0: MCFG: segment 0, bus 0-255, address 0x00000000e0000000
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+BROD (PNP0C02) at acpi0 not configured
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+spkr0 at pcppi1: PC Speaker
+wsbell at spkr0 not configured
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+OMSC (PNP0C02) at acpi0 not configured
+RMSC (PNP0C02) at acpi0 not configured
+pckbc1 at acpi0 (PS2K, PNP0303) (kbd port): io 0x60,0x64 irq 1
+SIOR (PNP0C02) at acpi0 not configured
+PCIE (PNP0C02) at acpi0 not configured
+RMEM (PNP0C01) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+acpiwmi0 at acpi0 (AOD, PNP0C14-0): ACPI WMI Interface
+acpiwmibus at acpiwmi0 not configured
+attimer1: attached to pcppi1
+pckbd0 at pckbc1 (kbd slot)
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: vendor 1022 product 9600 (rev. 0x00)
+ppb0 at pci0 dev 2 function 0: vendor 1022 product 9603 (rev. 0x00)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 5.0GT/s
+ppb0: link is x16 @ 2.5GT/s
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+nouveau0 at pci1 dev 0 function 0: vendor 10de product 1201 (rev. 0xa1)
+hdaudio0 at pci1 dev 0 function 1: HD Audio Controller
+hdaudio0: interrupting at ioapic0 pin 19
+hdafg0 at hdaudio0: vendor 10de product 0016
+hdafg0: DP00 8ch: Digital Out [Jack]
+hdafg0: 8ch/0ch 48000Hz PCM16*
+hdafg1 at hdaudio0: vendor 10de product 0016
+hdafg1: DP00 8ch: Digital Out [Jack]
+hdafg1: 8ch/0ch 48000Hz PCM16*
+hdafg2 at hdaudio0: vendor 10de product 0016
+hdafg2: DP00 8ch: Digital Out [Jack]
+hdafg2: 8ch/0ch 48000Hz PCM16*
+hdafg3 at hdaudio0: vendor 10de product 0016
+hdafg3: DP00 8ch: Digital Out [Jack]
+hdafg3: 8ch/0ch 48000Hz PCM16*
+ppb1 at pci0 dev 5 function 0: vendor 1022 product 9605 (rev. 0x00)
+ppb1: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+ppb1: link is x1 @ 2.5GT/s
+pci2 at ppb1 bus 2
+pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci2 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x02)
+re0: interrupting at ioapic0 pin 17
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8211B 1000BASE-T media interface
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-FDX, auto
+ahcisata0 at pci0 dev 17 function 0: vendor 1002 product 4391 (rev. 0x00)
+ahcisata0: 64-bit DMA
+ahcisata0: ignoring broken port multiplier support
+ahcisata0: ignoring broken NCQ support
+ahcisata0: AHCI revision 1.10, 6 ports, 32 slots, CAP 0xb720ff85<CCCS,PSC,SSC,PMD,ISS=0x2=Gen2,SCLO,SAL,SALP,SMPS,SSNTF,S64A>
+ahcisata0: interrupting at ioapic0 pin 22
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 2
+atabus3 at ahcisata0 channel 3
+atabus4 at ahcisata0 channel 4
+atabus5 at ahcisata0 channel 5
+ohci0 at pci0 dev 18 function 0: vendor 1002 product 4397 (rev. 0x00)
+ohci0: interrupting at ioapic0 pin 16
+ohci0: OHCI version 1.0, legacy support
+usb0 at ohci0: USB revision 1.0
+ohci1 at pci0 dev 18 function 1: vendor 1002 product 4398 (rev. 0x00)
+ohci1: interrupting at ioapic0 pin 16
+ohci1: OHCI version 1.0, legacy support
+usb1 at ohci1: USB revision 1.0
+ehci0 at pci0 dev 18 function 2: vendor 1002 product 4396 (rev. 0x00)
+ehci0: applying AMD SB600/SB700 USB freeze workaround
+ehci0: interrupting at ioapic0 pin 17
+ehci0: dropped intr workaround enabled
+ehci0: EHCI version 1.0
+ehci0: 2 companion controllers, 3 ports each: ohci0 ohci1
+usb2 at ehci0: USB revision 2.0
+ohci2 at pci0 dev 19 function 0: vendor 1002 product 4397 (rev. 0x00)
+ohci2: interrupting at ioapic0 pin 18
+ohci2: OHCI version 1.0, legacy support
+usb3 at ohci2: USB revision 1.0
+ohci3 at pci0 dev 19 function 1: vendor 1002 product 4398 (rev. 0x00)
+ohci3: interrupting at ioapic0 pin 18
+ohci3: OHCI version 1.0, legacy support
+usb4 at ohci3: USB revision 1.0
+ehci1 at pci0 dev 19 function 2: vendor 1002 product 4396 (rev. 0x00)
+ehci1: applying AMD SB600/SB700 USB freeze workaround
+ehci1: interrupting at ioapic0 pin 19
+ehci1: dropped intr workaround enabled
+ehci1: EHCI version 1.0
+ehci1: 2 companion controllers, 3 ports each: ohci2 ohci3
+usb5 at ehci1: USB revision 2.0
+piixpm0 at pci0 dev 20 function 0: vendor 1002 product 4385 (rev. 0x3a)
+piixpm0: interrupting at SMI, 
+iic0 at piixpm0 port 0: I2C bus
+ixpide0 at pci0 dev 20 function 1: ATI Technologies IXP IDE Controller (rev. 0x00)
+ixpide0: bus-master DMA support present
+ixpide0: primary channel configured to compatibility mode
+ixpide0: primary channel interrupting at ioapic0 pin 14
+atabus6 at ixpide0 channel 0
+ixpide0: secondary channel configured to compatibility mode
+ixpide0: secondary channel interrupting at ioapic0 pin 15
+atabus7 at ixpide0 channel 1
+hdaudio1 at pci0 dev 20 function 2: HD Audio Controller
+hdaudio1: interrupting at ioapic0 pin 16
+hdafg4 at hdaudio1: vendor 10ec product 0888
+hdafg4: DAC00 8ch: Speaker [Jack]
+hdafg4: DAC01 2ch: HP Out [Jack]
+hdafg4: DIG02 2ch: SPDIF Out [Jack]
+hdafg4: ADC03 2ch: Line In [Jack], Mic In [Jack]
+hdafg4: ADC04 2ch: Mic In [Jack]
+hdafg4: 8ch/2ch 44100Hz 48000Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg4: playback, capture, full duplex, independent
+audio0: slinear_le:16 8ch 48000Hz, blk 7680 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+pcib0 at pci0 dev 20 function 3: vendor 1002 product 439d (rev. 0x00)
+ppb2 at pci0 dev 20 function 4: vendor 1002 product 4384 (rev. 0x00)
+pci3 at ppb2 bus 3
+pci3: i/o space, memory space enabled
+ohci4 at pci0 dev 20 function 5: vendor 1002 product 4399 (rev. 0x00)
+ohci4: interrupting at ioapic0 pin 18
+ohci4: OHCI version 1.0, legacy support
+usb6 at ohci4: USB revision 1.0
+pchb1 at pci0 dev 24 function 0: vendor 1022 product 1200 (rev. 0x00)
+pchb2 at pci0 dev 24 function 1: vendor 1022 product 1201 (rev. 0x00)
+pchb3 at pci0 dev 24 function 2: vendor 1022 product 1202 (rev. 0x00)
+amdnb_misc0 at pci0 dev 24 function 3: AMD NB Misc Configuration
+amdtemp0 at amdnb_misc0: AMD CPU Temperature Sensors (Family10h)
+pchb4 at pci0 dev 24 function 4: vendor 1022 product 1204 (rev. 0x00)
+isa0 at pcib0
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: HLT, lat   0 us, pow     0 mW
+acpicpu0: C2: I/O, lat  75 us, pow     1 mW
+acpicpu0: P0: FFH, lat   4 us, pow 20250 mW, 2800 MHz
+acpicpu0: P1: FFH, lat   4 us, pow 15370 mW, 2200 MHz
+acpicpu0: P2: FFH, lat   4 us, pow 11050 mW, 1500 MHz
+acpicpu0: P3: FFH, lat   4 us, pow  6737 mW,  800 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+acpicpu1 at cpu1: ACPI CPU
+acpicpu2 at cpu2: ACPI CPU
+acpicpu3 at cpu3: ACPI CPU
+acpicpu4 at cpu4: ACPI CPU
+acpicpu5 at cpu5: ACPI CPU
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 2800329890 Hz quality 3000
+IPsec: Initialized Security Association Processing.
+uhub0 at usb2: NetBSD (0000) EHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 1
+uhub0: 6 ports with 6 removable, self powered
+uhub1 at usb4: NetBSD (0000) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub1: 3 ports with 3 removable, self powered
+uhub2 at usb5: NetBSD (0000) EHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 1
+uhub2: 6 ports with 6 removable, self powered
+uhub3 at usb0: NetBSD (0000) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub3: 3 ports with 3 removable, self powered
+uhub4 at usb3: NetBSD (0000) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub4: 3 ports with 3 removable, self powered
+uhub5 at usb1: NetBSD (0000) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub5: 3 ports with 3 removable, self powered
+uhub6 at usb6: NetBSD (0000) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub6: 2 ports with 2 removable, self powered
+ahcisata0 port 0: device present, speed: 1.5Gb/s
+ahcisata0 port 1: device present, speed: 3.0Gb/s
+ahcisata0 port 4: device present, speed: 1.5Gb/s
+atapibus0 at atabus0: 1 targets
+cd0 at atapibus0 drive 0: <TSSTcorp CDDVDW SH-224DB, R93E68CF600G1Q, SB01> cdrom removable
+cd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100)
+cd0(ahcisata0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100) (using DMA)
+wd0 at atabus1 drive 0
+wd0: <SAMSUNG HD103UJ>
+wd0: drive supports 16-sector PIO transfers, LBA48 addressing
+wd0: 931 GB, 1938021 cyl, 16 head, 63 sec, 512 bytes/sect x 1953525168 sectors
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 7, NCQ (32 tags) w/PRIO
+wd0(ahcisata0:1:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA)
+wd1 at atabus4 drive 0
+wd1: <MAXTOR STM3250310AS>
+wd1: drive supports 16-sector PIO transfers, LBA48 addressing
+wd1: 232 GB, 484521 cyl, 16 head, 63 sec, 512 bytes/sect x 488397168 sectors
+wd1: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), NCQ (32 tags)
+wd1(ahcisata0:4:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA)
+boot device: wd0
+root on wd0a dumps on wd0b
+root file system type: ffs
+kern.module.path=/stand/amd64/9.0/modules
+nouveau0: info: NVIDIA GF114 (0ce080a1)
+nouveau0: info: bios: version XXX.XXX.XXX.XXX.00
+nouveau0: info: fb: 1024 MiB GDDR5
+Zone  kernel: Available graphics memory: 2607588 kiB
+Zone   dma32: Available graphics memory: 2097152 kiB
+nouveau0: info: DRM: VRAM: 1024 MiB
+nouveau0: info: DRM: GART: 1048576 MiB
+nouveau0: info: DRM: TMDS table version 2.0
+nouveau0: info: DRM: DCB version 4.0
+nouveau0: info: DRM: DCB outp 00: 02000300 00000000
+nouveau0: info: DRM: DCB outp 01: 01000302 00020030
+nouveau0: info: DRM: DCB outp 02: 04011380 00000000
+nouveau0: info: DRM: DCB outp 03: 08011382 00020030
+nouveau0: info: DRM: DCB outp 04: 02022362 00020010
+nouveau0: info: DRM: DCB conn 00: 00001030
+nouveau0: info: DRM: DCB conn 01: 00010130
+nouveau0: info: DRM: DCB conn 02: 00002261
+kern info: [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+kern info: [drm] Driver supports precise vblank timestamp query.
+nouveau0: info: DRM: MM: using COPY0 for buffer copies
+nouveaufb0 at nouveau0
+nouveaufb0: framebuffer at 0xffffaf80b1b33000, size 1920x1080, depth 32, stride 7680
+wsdisplay0 at nouveaufb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+uhidev0 at uhub5 port 3 configuration 1 interface 0
+uhidev0: 2.4G wireless USB Device (0x279e) 2.4G wireless USB Device (0x24e), rev 1.10/52.08, addr 2, iclass 3/1
+uhidev0: 4 report ids
+ums0 at uhidev0 reportid 1: 5 buttons and Z dir
+wsmouse0 at ums0 mux 0
+uhid0 at uhidev0 reportid 3: input=3, output=0, feature=0
+uhid1 at uhidev0 reportid 4: input=1, output=0, feature=0
+uhidev1 at uhub5 port 3 configuration 1 interface 1
+uhidev1: 2.4G wireless USB Device (0x279e) 2.4G wireless USB Device (0x24e), rev 1.10/52.08, addr 2, iclass 3/1
+ukbd0 at uhidev1
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev2 at uhub5 port 3 configuration 1 interface 2
+uhidev2: 2.4G wireless USB Device (0x279e) 2.4G wireless USB Device (0x24e), rev 1.10/52.08, addr 2, iclass 3/0
+uhid2 at uhidev2: input=64, output=64, feature=0
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)

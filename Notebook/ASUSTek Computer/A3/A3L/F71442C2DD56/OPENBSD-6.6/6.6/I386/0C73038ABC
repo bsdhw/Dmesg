@@ -1,0 +1,113 @@
+OpenBSD 6.6 (GENERIC) #298: Sat Oct 12 11:06:10 MDT 2019
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 2112634880 (2014MB)
+avail mem = 2058469376 (1963MB)
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 01/04/05, SMBIOS rev. 2.3 @ 0xf5b80 (37 entries)
+bios0: vendor American Megatrends Inc. version "0215" date 01/04/2005
+bios0: ASUSTeK Computer Inc. A3L
+acpi0 at bios0: ACPI 2.0
+acpi0: sleep states S0 S1 S3 S4 S5
+acpi0: tables DSDT FACP APIC OEMB
+acpi0: wakeup devices P0P1(S4) LAN0(S4) CBS0(S3) CBS1(S3) P394(S3) MPCI(S3) MODM(S3) USB1(S3) USB2(S3) USB3(S3) EHCI(S3) SLPB(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Pentium(R) M processor 1.60GHz ("GenuineIntel" 686-class) 1.61 GHz, 06-0d-06
+cpu0: FPU,V86,DE,PSE,TSC,MSR,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,TM,PBE,EST,TM2,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 100MHz
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 20, 24 pins, remapped
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (P0P1)
+acpiec0 at acpi0
+acpicpu0 at acpi0: !C3(@101 io@0xe415), !C2(@1 io@0xe414), C1(@1 halt!)
+acpitz0 at acpi0: critical temperature is 112 degC
+acpipwrres0 at acpi0: GFAN, resource for SBRG, FN00
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0510" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "4993857" serial ... type LIon oem "ASUSTEK"
+acpibtn0 at acpi0: SLPB
+acpibtn1 at acpi0: LID_
+"ATK0100" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpivideo0 at acpi0: VGA_
+bios0: ROM list: 0xc0000/0xce00!
+cpu0: Enhanced SpeedStep 1601 MHz: speeds: 1600, 1400, 1200, 1000, 800, 600 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82855GM Host" rev 0x02
+"Intel 82855GM Memory" rev 0x02 at pci0 dev 0 function 1 not configured
+"Intel 82855GM Config" rev 0x02 at pci0 dev 0 function 3 not configured
+inteldrm0 at pci0 dev 2 function 0 "Intel 82855GM Video" rev 0x02
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0xf0000000, size 0x8000000
+inteldrm0: apic 1 int 16
+"Intel 82855GM Video" rev 0x02 at pci0 dev 2 function 1 not configured
+uhci0 at pci0 dev 29 function 0 "Intel 82801DB USB" rev 0x03: apic 1 int 16
+uhci1 at pci0 dev 29 function 1 "Intel 82801DB USB" rev 0x03: apic 1 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801DB USB" rev 0x03: apic 1 int 18
+ehci0 at pci0 dev 29 function 7 "Intel 82801DB USB" rev 0x03: apic 1 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb0 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0x83
+pci1 at ppb0 bus 1
+rl0 at pci1 dev 0 function 0 "Realtek 8139" rev 0x10: apic 1 int 18, address XXX
+rlphy0 at rl0 phy 0: RTL internal PHY
+ath0 at pci1 dev 4 function 0 "Atheros AR2413" rev 0x01: apic 1 int 18
+ath0: AR2413 7.8 phy 4.5 rf 5.6 eeprom 5.3, FCC2A*, address XXX
+cbb0 at pci1 dev 5 function 0 "Ricoh 5C476 CardBus" rev 0xac: apic 1 int 17, CardBus support disabled
+cbb1 at pci1 dev 5 function 1 "Ricoh 5C476 CardBus" rev 0xac: apic 1 int 16, CardBus support disabled
+"Ricoh 5C552 Firewire" rev 0x04 at pci1 dev 5 function 2 not configured
+cardslot0 at cbb0 slot 0 flags 0
+pcmcia0 at cardslot0
+cardslot1 at cbb1 slot 1 flags 0
+pcmcia1 at cardslot1
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801DBM LPC" rev 0x03
+pciide0 at pci0 dev 31 function 1 "Intel 82801DBM IDE" rev 0x03: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide0 channel 0 drive 0: <HTS721060G9AT00>
+wd0: 16-sector PIO, LBA, 57231MB, 117210240 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <ASUS, SCB-2424V, 1.1> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 2
+auich0 at pci0 dev 31 function 5 "Intel 82801DB AC97" rev 0x03: apic 1 int 17, ICH4
+ac97: codec id 0x414c4720 (Avance Logic ALC650)
+ac97: codec features 20 bit DAC, 18 bit ADC, Realtek 3D
+audio0 at auich0
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+it0 at isa0 port 0x2e/2: IT8705F rev 2, EC port 0x290
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+uhidev0 at uhub1 port 2 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/63.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (a5c6052d90ca33c0.a) swap on wd0b dump on wd0b
+[drm] *ERROR* CPU pipe A FIFO underrun
+[drm] *ERROR* CPU pipe B FIFO underrun
+inteldrm0: 1024x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

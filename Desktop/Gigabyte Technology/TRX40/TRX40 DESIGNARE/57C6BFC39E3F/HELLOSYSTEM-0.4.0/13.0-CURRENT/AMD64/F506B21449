@@ -1,0 +1,1355 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-ALPHA1 #27 main-c255989-gf64329bcdc4: Fri Jan 15 20:15:43 GMT 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-rc2-0-g43ff75f2c3f)
+VT(efifb): resolution 1024x768
+CPU: AMD Ryzen Threadripper 3970X 32-Core Processor  (3693.15-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x830f10  Family=0x17  Model=0x31  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c91a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x400004<UMIP,RDPID>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x188b757<CLZERO,IRPerf,XSaveErPtr,RDPRU,MCOMMIT,WBNOINVD,IBPB,STIBP,PPIN,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 137438953472 (131072 MB)
+avail memory = 133674778624 (127482 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <AMD A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 64 CPUs
+FreeBSD/SMP: 1 package(s) x 8 cache groups x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 120-151
+ioapic2 <Version 2.1> irqs 88-119
+ioapic3 <Version 2.1> irqs 56-87
+ioapic4 <Version 2.1> irqs 24-55
+Launching APs: 41 45 51 53 1 48 2 4 40 6 44 3 49 7 5 62 60 56 30 36 32 26 39 42 35 59 29 25 47 13 17 23 18 55 19 11 38 9 34 37 33 21 61 57 46 58 24 12 16 10 31 27 15 22 14 63 43 52 54 28 8 50 20
+Timecounter "TSC-low" frequency 1846573393 Hz quality 1000
+Cuse v0.1.36 @ /dev/cuse
+random: entropy device external interface
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd1 at kbdmux0
+000.000106 [4346] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <AMD>
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.WT1A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT1A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.WT2A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT2A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.WT3A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT3A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.WT4A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT4A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT5A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.WT1B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT1B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.WT2B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT2B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.WT3B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT3B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.WT4B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT4B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT5B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.WT1C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT1C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.WT2C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT2C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.WT3C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT3C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.WT4C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT4C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT5C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.WT1D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT1D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.WT2D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT2D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.WT3D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT3D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.WT4D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT4D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT5D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xfd200000-0xfd203fff irq 24 at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+nvme1: <Generic NVMe Device> mem 0xfd100000-0xfd103fff irq 28 at device 0.0 on pci2
+pcib3: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <unknown> at device 0.0 (no driver attached)
+pcib4: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pci4: <unknown> at device 0.0 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfd000000-0xfd0fffff irq 39 at device 0.3 on pci4
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib5: <ACPI Host-PCI bridge> on acpi0
+pci5: <ACPI PCI bus> on pcib5
+pci5: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib6: <ACPI PCI-PCI bridge> at device 3.1 on pci5
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <PCI-PCI bridge> mem 0xd1e00000-0xd1e03fff irq 86 at device 0.0 on pci6
+pci7: <PCI bus> on pcib7
+pcib8: <PCI-PCI bridge> irq 86 at device 0.0 on pci7
+pci8: <PCI bus> on pcib8
+vgapci0: <VGA-compatible display> port 0x6000-0x60ff mem 0xc0000000-0xcfffffff,0xd0000000-0xd01fffff,0xd1d00000-0xd1d7ffff irq 86 at device 0.0 on pci8
+vgapci0: Boot video device
+hdac0: <ATI (0xab38) HDA Controller> mem 0xd1da0000-0xd1da3fff irq 87 at device 0.1 on pci8
+pcib9: <ACPI PCI-PCI bridge> at device 7.1 on pci5
+pci9: <ACPI PCI bus> on pcib9
+pci9: <unknown> at device 0.0 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 8.1 on pci5
+pci10: <ACPI PCI bus> on pcib10
+pci10: <unknown> at device 0.0 (no driver attached)
+pci10: <encrypt/decrypt> at device 0.1 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xd1a00000-0xd1afffff irq 71 at device 0.3 on pci10
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+hdac1: <AMD X570 HDA Controller> mem 0xd1c00000-0xd1c07fff irq 68 at device 0.4 on pci10
+pcib11: <ACPI Host-PCI bridge> on acpi0
+pci11: <ACPI PCI bus> on pcib11
+pci11: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib12: <ACPI PCI-PCI bridge> at device 1.1 on pci11
+pci12: <ACPI PCI bus> on pcib12
+pcib13: <ACPI PCI-PCI bridge> irq 88 at device 0.0 on pci12
+pci13: <ACPI PCI bus> on pcib13
+pcib14: <ACPI PCI-PCI bridge> at device 1.0 on pci13
+pci14: <ACPI PCI bus> on pcib14
+nvme2: <Generic NVMe Device> mem 0xead00000-0xead03fff irq 89 at device 0.0 on pci14
+pcib15: <ACPI PCI-PCI bridge> at device 3.0 on pci13
+pci15: <ACPI PCI bus> on pcib15
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x9000-0x901f mem 0xea600000-0xea6fffff,0xea700000-0xea703fff irq 91 at device 0.0 on pci15
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib16: <ACPI PCI-PCI bridge> at device 5.0 on pci13
+pci16: <ACPI PCI bus> on pcib16
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x8000-0x801f mem 0xea300000-0xea3fffff,0xea400000-0xea403fff irq 89 at device 0.0 on pci16
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib17: <ACPI PCI-PCI bridge> at device 6.0 on pci13
+pci17: <ACPI PCI bus> on pcib17
+pci17: <network> at device 0.0 (no driver attached)
+pcib18: <ACPI PCI-PCI bridge> irq 88 at device 8.0 on pci13
+pci18: <ACPI PCI bus> on pcib18
+pci18: <unknown> at device 0.0 (no driver attached)
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xea900000-0xea9fffff irq 88 at device 0.1 on pci18
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+xhci3: <XHCI (generic) USB 3.0 controller> mem 0xea800000-0xea8fffff irq 90 at device 0.3 on pci18
+xhci3: 64 bytes context size, 64-bit DMA
+usbus3 on xhci3
+usbus3: 5.0Gbps Super Speed USB v3.0
+pcib19: <PCI-PCI bridge> irq 89 at device 9.0 on pci13
+pci19: <PCI bus> on pcib19
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xeab00000-0xeab007ff irq 89 at device 0.0 on pci19
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+pcib20: <PCI-PCI bridge> irq 90 at device 10.0 on pci13
+pci20: <PCI bus> on pcib20
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xeaa00000-0xeaa007ff irq 90 at device 0.0 on pci20
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich1: <AHCI channel> at channel 0 on ahci1
+pcib21: <ACPI PCI-PCI bridge> at device 1.3 on pci11
+pci21: <ACPI PCI bus> on pcib21
+pcib22: <PCI-PCI bridge> irq 96 at device 0.0 on pci21
+pci22: <PCI bus> on pcib22
+pcib23: <PCI-PCI bridge> irq 96 at device 0.0 on pci22
+pci23: <PCI bus> on pcib23
+pcib24: <PCI-PCI bridge> irq 97 at device 1.0 on pci22
+pcib25: <PCI-PCI bridge> irq 98 at device 2.0 on pci22
+pci24: <PCI bus> on pcib25
+xhci4: <XHCI (generic) USB 3.0 controller> mem 0xea000000-0xea00ffff irq 98 at device 0.0 on pci24
+xhci4: 32 bytes context size, 64-bit DMA
+usbus4 on xhci4
+usbus4: 5.0Gbps Super Speed USB v3.0
+pcib26: <PCI-PCI bridge> irq 96 at device 4.0 on pci22
+pcib27: <ACPI PCI-PCI bridge> at device 7.1 on pci11
+pci25: <ACPI PCI bus> on pcib27
+pci25: <unknown> at device 0.0 (no driver attached)
+pcib28: <ACPI PCI-PCI bridge> at device 8.1 on pci11
+pci26: <ACPI PCI bus> on pcib28
+pci26: <unknown> at device 0.0 (no driver attached)
+pcib29: <ACPI Host-PCI bridge> on acpi0
+pci27: <ACPI PCI bus> on pcib29
+pci27: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib30: <ACPI PCI-PCI bridge> at device 7.1 on pci27
+pci28: <ACPI PCI bus> on pcib30
+pci28: <unknown> at device 0.0 (no driver attached)
+pcib31: <ACPI PCI-PCI bridge> at device 8.1 on pci27
+pci29: <ACPI PCI bus> on pcib31
+pci29: <unknown> at device 0.0 (no driver attached)
+acpi_button0: <Power Button> on acpi0
+uart2: <16x50 with 256 byte FIFO> iomem 0xfedc9000-0xfedc9fff,0xfedc7000-0xfedc7fff irq 3 on acpi0
+uart3: <16x50 with 256 byte FIFO> iomem 0xfedca000-0xfedcafff,0xfedc8000-0xfedc8fff irq 4 on acpi0
+uart4: <16x50 with 256 byte FIFO> iomem 0xfedce000-0xfedcefff,0xfedcc000-0xfedccfff irq 3 on acpi0
+uart5: <16x50 with 256 byte FIFO> iomem 0xfedcf000-0xfedcffff,0xfedcd000-0xfedcdfff irq 4 on acpi0
+ig4iic0: <Designware I2C Controller> iomem 0xfedc2000-0xfedc2fff irq 10 on acpi0
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+ig4iic1: <Designware I2C Controller> iomem 0xfedc3000-0xfedc3fff irq 11 on acpi0
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+ig4iic2: <Designware I2C Controller> iomem 0xfedc4000-0xfedc4fff irq 4 on acpi0
+iicbus2: <Philips I2C bus (ACPI-hinted)> on ig4iic2
+ig4iic3: <Designware I2C Controller> iomem 0xfedc5000-0xfedc5fff irq 6 on acpi0
+iicbus3: <Philips I2C bus (ACPI-hinted)> on ig4iic3
+ig4iic4: <Designware I2C Controller> iomem 0xfedc6000-0xfedc6fff irq 14 on acpi0
+iicbus4: <Philips I2C bus (ACPI-hinted)> on ig4iic4
+ig4iic5: <Designware I2C Controller> iomem 0xfedcb000-0xfedcbfff irq 15 on acpi0
+iicbus5: <Philips I2C bus (ACPI-hinted)> on ig4iic5
+acpi_tz0: <Thermal Zone> on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xce7ff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen2.1: <0x1022 XHCI root HUB> at usbus2
+ugen3.1: <0x1022 XHCI root HUB> at usbus3
+ugen4.1: <0x8086 XHCI root HUB> at usbus4
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+uhub0 on usbus2
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub1 on usbus3
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus3
+uhub2 on usbus0
+uhub2: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub3 on usbus4
+uhub3: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus4
+uhub4 on usbus1
+uhub4: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <Sabrent Rocket 4.0 1TB> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+nvd1: <Sabrent Rocket 4.0 1TB> NVMe namespace
+nvd1: 953869MB (1953525168 512 byte sectors)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+pcm4: <ATI R6xx (HDMI)> at nid 11 on hdaa0
+pcm5: <ATI R6xx (HDMI)> at nid 13 on hdaa0
+nvd2: <Sabrent Rocket 4.0 1TB> NVMe namespace
+nvd2: 953869MB (1953525168 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 usbus1 usbus2 usbus3 CAM usbus4
+uhub4: 4 ports with 4 removable, self powered
+uhub2: 4 ports with 4 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+uhub0: 10 ports with 10 removable, self powered
+uhub1: 10 ports with 10 removable, self powered
+ugen2.2: <vendor 0x05e3 USB2.0 Hub> at usbus2
+uhub5 on uhub0
+uhub5: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 1> on usbus2
+ugen3.2: <vendor 0x8087 product 0x0029> at usbus3
+Root mount waiting for: usbus2 usbus3
+ugen3.3: <vendor 0x05e3 USB2.0 Hub> at usbus3
+uhub6 on uhub1
+uhub6: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 2> on usbus3
+uhub5: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus2 usbus3
+uhub6: 4 ports with 4 removable, self powered
+ugen2.3: <Logitech USB Receiver> at usbus2
+ukbd0 on uhub5
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 2> on usbus2
+kbd2 at ukbd0
+ugen2.4: <vendor 0x1a40 USB 2.0 Hub> at usbus2
+uhub7 on uhub5
+uhub7: <vendor 0x1a40 USB 2.0 Hub, class 9/0, rev 2.00/1.11, addr 3> on usbus2
+Root mount waiting for: usbus2
+uhub7: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus2
+ugen2.5: <Sony Computer Entertainment Wireless Controller> at usbus2
+ugen2.6: <Cooler Master Technology Inc. MasterKeys Pro M Single> at usbus2
+ukbd1 on uhub7
+ukbd1: <Cooler Master Technology Inc. MasterKeys Pro M Single, class 0/0, rev 1.10/11.06, addr 5> on usbus2
+kbd3 at ukbd1
+ukbd2 on uhub7
+ukbd2: <Cooler Master Technology Inc. MasterKeys Pro M Single, class 0/0, rev 1.10/11.06, addr 5> on usbus2
+kbd4 at ukbd2
+Root mount waiting for: usbus2
+ugen2.7: <vendor 0x046d C922 Pro Stream Webcam> at usbus2
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+ugen2.8: <Generic USB Audio> at usbus2
+Root mount waiting for: usbus2
+ugen2.9: <ITE Tech. Inc. ITE Device(8595)> at usbus2
+ukbd3 on uhub0
+ukbd3: <ITE Tech. Inc. ITE Device(8595), class 0/0, rev 2.00/0.03, addr 8> on usbus2
+kbd5 at ukbd3
+[drm] amdgpu kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] initializing kernel modesetting (NAVI10 0x1002:0x731F 0x1682:0x5701 0xC1).
+[drm] register mmio base: 0xD1D00000
+[drm] register mmio size: 524288
+[drm] set register base offset for ATHUB
+[drm] set register base offset for CLKA
+[drm] set register base offset for CLKA
+[drm] set register base offset for CLKA
+[drm] set register base offset for CLKA
+[drm] set register base offset for CLKA
+[drm] set register base offset for DF
+[drm] set register base offset for DMU
+[drm] set register base offset for GC
+[drm] set register base offset for HDP
+[drm] set register base offset for MMHUB
+[drm] set register base offset for MP0
+[drm] set register base offset for MP1
+[drm] set register base offset for NBIF
+[drm] set register base offset for NBIF
+[drm] set register base offset for OSSSYS
+[drm] set register base offset for SDMA0
+[drm] set register base offset for SDMA1
+[drm] set register base offset for SMUIO
+[drm] set register base offset for THM
+[drm] set register base offset for UVD
+[drm] add ip block number 0 <nv_common>
+[drm] add ip block number 1 <gmc_v10_0>
+[drm] add ip block number 2 <navi10_ih>
+[drm] add ip block number 3 <psp>
+[drm] add ip block number 4 <smu>
+[drm] add ip block number 5 <dm>
+[drm] add ip block number 6 <gfx_v10_0>
+[drm] add ip block number 7 <sdma_v5_0>
+[drm] add ip block number 8 <vcn_v2_0>
+amdgpu/navi10_gpu_info.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_gpu_info.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_gpu_info_bin
+ATOM BIOS: 113-230LNAVIXT612_8GD6_MS_W8
+[drm] VCN decode is enabled in VM mode
+[drm] VCN encode is enabled in VM mode
+[drm] VCN jpeg decode is enabled in VM mode
+[drm] vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+drmn0: VRAM: 8176M 0x0000008000000000 - 0x00000081FEFFFFFF (8176M used)
+drmn0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+Successfully added WC MTRR for [0xc0000000-0xcfffffff]: 0; 
+[drm] Detected VRAM RAM=8176M, BAR=256M
+[drm] RAM width 256bits GDDR6
+[TTM] Zone  kernel: Available graphics memory: 67031654 KiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 KiB
+[TTM] Initializing pool allocator
+[drm] amdgpu: 8176M of VRAM memory ready
+[drm] amdgpu: 8176M of GTT memory ready.
+[drm] GART: num cpu pages 131072, num gpu pages 131072
+[drm] PCIE GART of 512M enabled (table at 0x0000008000300000).
+amdgpu/navi10_sos.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_sos.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_sos_bin
+amdgpu/navi10_asd.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_asd.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_asd_bin
+amdgpu/navi10_smc.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_smc.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_smc_bin
+amdgpu/navi10_pfp.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_pfp.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_pfp_bin
+amdgpu/navi10_me.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_me.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_me_bin
+amdgpu/navi10_ce.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_ce.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_ce_bin
+amdgpu/navi10_rlc.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_rlc.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_rlc_bin
+amdgpu/navi10_mec.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_mec.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_mec_bin
+amdgpu/navi10_mec2.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_mec2.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_mec2_bin
+amdgpu/navi10_sdma.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_sdma.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_sdma_bin
+amdgpu/navi10_sdma1.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_sdma1.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_sdma1_bin
+[drm] use_doorbell being set to: [true]
+[drm] use_doorbell being set to: [true]
+amdgpu/navi10_vcn.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/navi10_vcn.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_navi10_vcn_bin
+[drm] Found VCN firmware Version ENC: 1.9 DEC: 5 VEP: 0 Revision: 0
+[drm] PSP loading VCN firmware
+[drm] reserve 0x900000 from 0x81fe400000 for PSP TMR
+amdgpu: [powerplay] smu driver if version = 0x00000033, smu fw if version = 0x00000036, smu fw version = 0x002a3600 (42.54.0)
+amdgpu: [powerplay] SMU driver if version not matched
+amdgpu: [powerplay] SMU is initialized successfully!
+[drm] Display Core initialized with v3.2.48!
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-3: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-3
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] kiq ring mec 2 pipe 1 q 0
+[drm] ring test on 10 succeeded in 75 usecs
+[drm] ring test on 10 succeeded in 16 usecs
+[drm] gfx 0 ring me 0 pipe 0 q 0
+[drm] ring test on 0 succeeded in 16 usecs
+[drm] gfx 1 ring me 0 pipe 1 q 0
+[drm] ring test on 1 succeeded in 3 usecs
+[drm] compute ring 0 mec 1 pipe 0 q 0
+[drm] ring test on 2 succeeded in 5 usecs
+[drm] compute ring 1 mec 1 pipe 1 q 0
+[drm] ring test on 3 succeeded in 3 usecs
+[drm] compute ring 2 mec 1 pipe 2 q 0
+[drm] ring test on 4 succeeded in 3 usecs
+[drm] compute ring 3 mec 1 pipe 3 q 0
+[drm] ring test on 5 succeeded in 3 usecs
+[drm] compute ring 4 mec 1 pipe 0 q 1
+[drm] ring test on 6 succeeded in 3 usecs
+[drm] compute ring 5 mec 1 pipe 1 q 1
+[drm] ring test on 7 succeeded in 3 usecs
+[drm] compute ring 6 mec 1 pipe 2 q 1
+[drm] ring test on 8 succeeded in 3 usecs
+[drm] compute ring 7 mec 1 pipe 3 q 1
+[drm] ring test on 9 succeeded in 3 usecs
+[drm] ring test on 11 succeeded in 19 usecs
+[drm] ring test on 12 succeeded in 19 usecs
+[drm] VCN decode and encode initialized successfully(under DPG Mode).
+[drm] fb mappable at 0xC04C9000
+[drm] vram apper at 0xC0000000
+[drm] size 33177600
+[drm] fb depth is 24
+[drm]    pitch is 15360
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 13.0.
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=2160 width=3840 depth=32
+cmsize=16 size=33177600
+pbase=0xc04c9000 vbase=0xfffff800c04c9000
+name=drmn0 flags=0x0 stride=15360 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: amdgpudrmfb frame buffer device
+drmn0: ring 0(gfx_0.0.0) uses VM inv eng 4 on hub 0
+drmn0: ring 1(gfx_0.1.0) uses VM inv eng 5 on hub 0
+drmn0: ring 2(comp_1.0.0) uses VM inv eng 6 on hub 0
+drmn0: ring 3(comp_1.1.0) uses VM inv eng 7 on hub 0
+drmn0: ring 4(comp_1.2.0) uses VM inv eng 8 on hub 0
+drmn0: ring 5(comp_1.3.0) uses VM inv eng 9 on hub 0
+drmn0: ring 6(comp_1.0.1) uses VM inv eng 10 on hub 0
+drmn0: ring 7(comp_1.1.1) uses VM inv eng 11 on hub 0
+drmn0: ring 8(comp_1.2.1) uses VM inv eng 12 on hub 0
+drmn0: ring 9(comp_1.3.1) uses VM inv eng 13 on hub 0
+drmn0: ring 10(kiq_2.1.0) uses VM inv eng 14 on hub 0
+drmn0: ring 11(sdma0) uses VM inv eng 15 on hub 0
+drmn0: ring 12(sdma1) uses VM inv eng 16 on hub 0
+drmn0: ring 13(vcn_dec) uses VM inv eng 4 on hub 1
+drmn0: ring 14(vcn_enc0) uses VM inv eng 5 on hub 1
+drmn0: ring 15(vcn_enc1) uses VM inv eng 6 on hub 1
+drmn0: ring 16(vcn_jpeg) uses VM inv eng 7 on hub 1
+[drm] Initialized amdgpu 3.35.0 20150101 for drmn0 on minor 0
+lo0: link state changed to UP
+[drm] ib test on ring 0 succeeded
+[drm] ib test on ring 1 succeeded
+[drm] ib test on ring 2 succeeded
+[drm] ib test on ring 3 succeeded
+[drm] ib test on ring 4 succeeded
+[drm] ib test on ring 5 succeeded
+[drm] ib test on ring 6 succeeded
+[drm] ib test on ring 7 succeeded
+[drm] ib test on ring 8 succeeded
+[drm] ib test on ring 9 succeeded
+[drm] ib test on ring 10 succeeded
+[drm] ib test on ring 11 succeeded
+[drm] ib test on ring 12 succeeded
+igb0: link state changed to UP
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134GSA1.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+acpi_wmi1: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: cannot find EC device
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+ums0 on uhub5
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 2> on usbus2
+ums0: 16 buttons and [XYZT] coordinates ID=2
+uhid0 on uhub5
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 2> on usbus2
+uhid1 on uhub7
+uhid1: <Sony Computer Entertainment Wireless Controller, class 0/0, rev 2.00/1.00, addr 4> on usbus2
+uhid2 on uhub7
+uhid2: <Cooler Master Technology Inc. MasterKeys Pro M Single, class 0/0, rev 1.10/11.06, addr 5> on usbus2
+uhid3 on uhub0
+uhid3: <Generic USB Audio, class 239/2, rev 2.00/0.05, addr 8> on usbus2
+uaudio0 on uhub7
+uaudio0: <vendor 0x046d C922 Pro Stream Webcam, class 239/2, rev 2.00/0.16, addr 6> on usbus2
+uaudio0: No playback.
+uaudio0: Record[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 24000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm6: <USB audio> on uaudio0
+uaudio0: No HID volume keys found.
+uaudio1 on uhub0
+uaudio1: <Realtek USB2.0 Audio> on usbus2
+ng_ubt: HCI command 0xfc05 timed out
+ubt0 on uhub1
+ubt0: <vendor 0x8087 product 0x0029, class 224/1, rev 2.01/0.01, addr 1> on usbus3
+uaudio1: Play[0]: 192000 Hz, 8 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 96000 Hz, 8 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 48000 Hz, 8 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[1]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[1]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[1]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[1]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[1]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[1]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: No MIDI sequencer.
+pcm7: <USB audio> on uaudio1
+pcm8: <USB audio> on uaudio1
+uaudio1: No HID volume keys found.
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+Security policy loaded: MAC/ntpd (mac_ntpd)
+linux: jid 0 pid 3691 (http): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 3690 (http): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 3688 (http): linux: jid 0 pid 3689 (http): unsupported prctl PR_SET_NO_NEW_PRIVSunsupported prctl PR_SET_NO_NEW_PRIVS
+
+linux: jid 0 pid 3686 (http): linux: jid 0 pid 3685 (http): unsupported prctl PR_SET_NO_NEW_PRIVSunsupported prctl PR_SET_NO_NEW_PRIVSlinux: jid 0 pid 3687 (http): 
+unsupported prctl PR_SET_NO_NEW_PRIVS
+
+linux: jid 0 pid 3686 (http): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 3689 (http): linux: jid 0 pid 3685 (http): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+
+linux: jid 0 pid 3691 (http): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 3688 (http): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 3690 (http): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 3687 (http): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 3693 (gpgv): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 3794 (store): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 59340 (ThreadPoolServi): syscall statx not implemented
+linux: jid 0 pid 59342 (sandbox_ipc_thr): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 59343 (sandbox_ipc_thr): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 59341 (MemoryInfra): syscall statx not implemented
+linux: jid 0 pid 59341 (CrShutdownDetec): syscall inotify_init not implemented
+linux: jid 0 pid 59341 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59341 (VideoCaptureThr): unsupported socket(AF_NETLINK, 3, NETLINK_KOBJECT_UEVENT)
+linux: jid 0 pid 59341 (VideoCaptureThr): syscall inotify_init1 not implemented
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 59344 (GpuWatchdog): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59344 (GpuWatchdog): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59345 (ThreadPoolForeg): linux: jid 0 pid 59345 (ThreadPoolForeg): syscall inotify_init not implementedunsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59341 (renderer_crash_): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59341 (renderer_crash_): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59346 (CompositorTileW): syscall statx not implemented
+linux: jid 0 pid 59346 (ThreadPoolForeg): syscall inotify_init1 not implemented
+linux: jid 0 pid 59346 (ThreadPoolForeg): syscall inotify_init not implemented
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59346 (ThreadPoolForeg): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59347 (ThreadPoolServi): syscall statx not implemented
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59341 (ThreadPoolSingl): syscall inotify_init1 not implemented
+linux: jid 0 pid 59341 (ThreadPoolSingl): syscall inotify_init not implemented
+linux: jid 0 pid 59341 (gmain): syscall sched_getattr not implemented
+linux: jid 0 pid 59346 (ThreadPoolForeg): syscall inotify_init1 not implemented
+linux: jid 0 pid 59346 (ThreadPoolForeg): syscall inotify_init not implemented
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59341 (pool-code): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59347 (ThreadPoolServi): syscall inotify_init1 not implemented
+linux: jid 0 pid 59347 (ThreadPoolServi): syscall inotify_init not implemented
+linux: jid 0 pid 59347 (ThreadPoolServi): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59347 (ThreadPoolServi): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59347 (ThreadPoolServi): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59364 (CompositorTileW): syscall statx not implemented
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59364 (ThreadPoolForeg): syscall inotify_init1 not implemented
+linux: jid 0 pid 59364 (ThreadPoolForeg): syscall inotify_init not implemented
+linux: jid 0 pid 59364 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59364 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59345 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59654 (ThreadPoolForeg): syscall statx not implemented
+linux: jid 0 pid 59656 (sandbox_ipc_thr): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 59657 (sandbox_ipc_thr): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 59655 (MemoryInfra): syscall statx not implemented
+linux: jid 0 pid 59655 (CrShutdownDetec): syscall inotify_init not implemented
+linux: jid 0 pid 59655 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59655 (VideoCaptureThr): unsupported socket(AF_NETLINK, 3, NETLINK_KOBJECT_UEVENT)
+linux: jid 0 pid 59658 (GpuWatchdog): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59658 (GpuWatchdog): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59655 (gpu-process_cra): syscall inotify_init1 not implemented
+linux: jid 0 pid 59655 (utility_crash_u): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59659 (gpu-process_cra): unsupported prctl PR_SET_NO_NEW_PRIVS
+linux: jid 0 pid 59655 (utility_crash_u): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59659 (Chrome_ChildIOT): syscall inotify_init not implemented
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59655 (renderer_crash_): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59655 (renderer_crash_): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59655 (renderer_crash_): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59655 (renderer_crash_): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59660 (CompositorTileW): syscall statx not implemented
+linux: jid 0 pid 59660 (ThreadPoolForeg): syscall inotify_init1 not implemented
+linux: jid 0 pid 59660 (ThreadPoolForeg): syscall inotify_init not implemented
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59660 (ThreadPoolForeg): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59660 (ThreadPoolForeg): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59660 (ThreadPoolForeg): possibly incorrect MADV_DONTNEED
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59661 (ThreadPoolForeg): syscall statx not implemented
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59655 (ThreadPoolForeg): syscall inotify_init1 not implemented
+linux: jid 0 pid 59655 (ThreadPoolForeg): syscall inotify_init not implemented
+linux: jid 0 pid 59655 (gmain): syscall sched_getattr not implemented
+linux: jid 0 pid 59660 (ThreadPoolForeg): syscall inotify_init1 not implemented
+linux: jid 0 pid 59660 (ThreadPoolForeg): syscall inotify_init not implemented
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59655 (gdbus): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59661 (ThreadPoolForeg): syscall inotify_init1 not implemented
+linux: jid 0 pid 59661 (ThreadPoolForeg): syscall inotify_init not implemented
+linux: jid 0 pid 59661 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59661 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59661 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59684 (CompositorTileW): syscall statx not implemented
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59684 (ThreadPoolForeg): syscall inotify_init1 not implemented
+linux: jid 0 pid 59684 (ThreadPoolForeg): syscall inotify_init not implemented
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59684 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59684 (ThreadPoolForeg): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+linux: jid 0 pid 59659 (ThreadPoolForeg): unsupported getsockopt level 6 optname 11
+ugen3.4: <PNY USB 2.0 FD> at usbus3
+umass0 on uhub1
+umass0: <PNY USB 2.0 FD, class 0/0, rev 2.00/1.00, addr 3> on usbus3
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <PNY USB 2.0 FD PMAP> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 15296MB (31326208 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM: da0: the secondary GPT header is not in the last LBA.
+GEOM: iso9660/GHOSTBSD: the secondary GPT header is not in the last LBA.
+ugen3.4: <PNY USB 2.0 FD> at usbus3 (disconnected)
+umass0: at uhub1, port 2, addr 3 (disconnected)
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <PNY USB 2.0 FD PMAP>  s/n ... detached
+(da0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+ugen3.4: <ADATA ADATA USB Flash Drive> at usbus3
+umass0 on uhub1
+umass0: <ADATA ADATA USB Flash Drive, class 0/0, rev 2.00/1.00, addr 3> on usbus3
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <ADATA USB Flash Drive 0.00> Removable Direct Access SCSI-2 device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 61888MB (126746624 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM: da0: the secondary GPT table is corrupt or invalid.
+GEOM: da0: using the primary only -- recovery suggested.
+GEOM: iso9660/LIVE: the secondary GPT table is corrupt or invalid.
+GEOM: iso9660/LIVE: using the primary only -- recovery suggested.
+pid 6866 (drkonqi), jid 0, uid 1001: exited on signal 6 (core dumped)
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... timed out
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... timed out
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... timed out
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... timed out
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... timed out
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... timed out
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... timed out
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... timed out
+All buffers synced.
+Uptime: 8h8m28s
+uhub3: detached
+umass0: detached
+ubt0: detached
+uhub6: detached
+uhub1: detached
+ukbd0: detached
+ums0: detached
+uhid0: detached
+uhid1: detached
+ukbd1: detached
+uhid2: detached
+ukbd2: detached
+pcm6: detached
+uaudio0: detached
+uhub7: detached
+uhub5: detached
+pcm8: detached
+pcm7: detached
+uaudio1: detached
+uhid3: detached
+ukbd3: detached
+uhub0: detached
+uhub4: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-CURRENT #0 main-c255641-gf2b794e1e90: Thu Jan  7 06:25:26 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-rc2-0-g43ff75f2c3f)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 1024x768
+Solaris: WARNING: ignoring tunable zfs_arc_max (using 0 instead)
+CPU: AMD Ryzen Threadripper 3970X 32-Core Processor  (3693.14-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x830f10  Family=0x17  Model=0x31  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c91a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x400004<UMIP,RDPID>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x188b757<CLZERO,IRPerf,XSaveErPtr,RDPRU,MCOMMIT,WBNOINVD,IBPB,STIBP,PPIN,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 137438953472 (131072 MB)
+avail memory = 133630152704 (127439 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <AMD A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 64 CPUs
+FreeBSD/SMP: 1 package(s) x 8 cache groups x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 120-151
+ioapic2 <Version 2.1> irqs 88-119
+ioapic3 <Version 2.1> irqs 56-87
+ioapic4 <Version 2.1> irqs 24-55
+Launching APs: 48 51 53 54 1 42 2 5 47 6 38 4 7 55 3 43 41 44 32 37 61 14 57 59 24 17 10 26 29 19 21 39 62 34 9 33 16 22 27 23 60 49 50 45 25 31 20 13 11 30 35 12 36 40 52 28 46 15 63 56 18 58 8
+Timecounter "TSC-low" frequency 1846570544 Hz quality 1000
+random: entropy device external interface
+md0: Preloaded image </data/XXXXXXXXXXXX 16285696 bytes at 0xffffffff827b58b0
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd1 at kbdmux0
+000.000179 [4346] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+acpi0: <AMD>
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.WT1A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT1A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.WT2A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT2A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.WT3A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT3A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.WT4A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT4A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CA.MT5A], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.WT1B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT1B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.WT2B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT2B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.WT3B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT3B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.WT4B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT4B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CB.MT5B], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.WT1C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT1C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.WT2C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT2C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.WT3C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT3C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.WT4C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT4C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CC.MT5C], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.WT1D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT1D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.WT2D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT2D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.WT3D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT3D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.WT4D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT4D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.I2CD.MT5D], AE_ALREADY_EXISTS (20201113/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20201113/psobject-372)
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xfd200000-0xfd203fff irq 24 at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+nvme1: <Generic NVMe Device> mem 0xfd100000-0xfd103fff irq 28 at device 0.0 on pci2
+pcib3: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <unknown> at device 0.0 (no driver attached)
+pcib4: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pci4: <unknown> at device 0.0 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfd000000-0xfd0fffff irq 39 at device 0.3 on pci4
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib5: <ACPI Host-PCI bridge> on acpi0
+pci5: <ACPI PCI bus> on pcib5
+pci5: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib6: <ACPI PCI-PCI bridge> at device 3.1 on pci5
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <PCI-PCI bridge> mem 0xd1e00000-0xd1e03fff irq 86 at device 0.0 on pci6
+pci7: <PCI bus> on pcib7
+pcib8: <PCI-PCI bridge> irq 86 at device 0.0 on pci7
+pci8: <PCI bus> on pcib8
+vgapci0: <VGA-compatible display> port 0x6000-0x60ff mem 0xc0000000-0xcfffffff,0xd0000000-0xd01fffff,0xd1d00000-0xd1d7ffff irq 86 at device 0.0 on pci8
+vgapci0: Boot video device
+hdac0: <ATI (0xab38) HDA Controller> mem 0xd1da0000-0xd1da3fff irq 87 at device 0.1 on pci8
+pcib9: <ACPI PCI-PCI bridge> at device 7.1 on pci5
+pci9: <ACPI PCI bus> on pcib9
+pci9: <unknown> at device 0.0 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 8.1 on pci5
+pci10: <ACPI PCI bus> on pcib10
+pci10: <unknown> at device 0.0 (no driver attached)
+pci10: <encrypt/decrypt> at device 0.1 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xd1a00000-0xd1afffff irq 71 at device 0.3 on pci10
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+hdac1: <AMD X570 HDA Controller> mem 0xd1c00000-0xd1c07fff irq 68 at device 0.4 on pci10
+pcib11: <ACPI Host-PCI bridge> on acpi0
+pci11: <ACPI PCI bus> on pcib11
+pci11: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib12: <ACPI PCI-PCI bridge> at device 1.1 on pci11
+pci12: <ACPI PCI bus> on pcib12
+pcib13: <ACPI PCI-PCI bridge> irq 88 at device 0.0 on pci12
+pci13: <ACPI PCI bus> on pcib13
+pcib14: <ACPI PCI-PCI bridge> at device 1.0 on pci13
+pci14: <ACPI PCI bus> on pcib14
+nvme2: <Generic NVMe Device> mem 0xead00000-0xead03fff irq 89 at device 0.0 on pci14
+pcib15: <ACPI PCI-PCI bridge> at device 3.0 on pci13
+pci15: <ACPI PCI bus> on pcib15
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x9000-0x901f mem 0xea600000-0xea6fffff,0xea700000-0xea703fff irq 91 at device 0.0 on pci15
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib16: <ACPI PCI-PCI bridge> at device 5.0 on pci13
+pci16: <ACPI PCI bus> on pcib16
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x8000-0x801f mem 0xea300000-0xea3fffff,0xea400000-0xea403fff irq 89 at device 0.0 on pci16
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib17: <ACPI PCI-PCI bridge> at device 6.0 on pci13
+pci17: <ACPI PCI bus> on pcib17
+pci17: <network> at device 0.0 (no driver attached)
+pcib18: <ACPI PCI-PCI bridge> irq 88 at device 8.0 on pci13
+pci18: <ACPI PCI bus> on pcib18
+pci18: <unknown> at device 0.0 (no driver attached)
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xea900000-0xea9fffff irq 88 at device 0.1 on pci18
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+xhci3: <XHCI (generic) USB 3.0 controller> mem 0xea800000-0xea8fffff irq 90 at device 0.3 on pci18
+xhci3: 64 bytes context size, 64-bit DMA
+usbus3 on xhci3
+usbus3: 5.0Gbps Super Speed USB v3.0
+pcib19: <PCI-PCI bridge> irq 89 at device 9.0 on pci13
+pci19: <PCI bus> on pcib19
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xeab00000-0xeab007ff irq 89 at device 0.0 on pci19
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+pcib20: <PCI-PCI bridge> irq 90 at device 10.0 on pci13
+pci20: <PCI bus> on pcib20
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xeaa00000-0xeaa007ff irq 90 at device 0.0 on pci20
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich1: <AHCI channel> at channel 0 on ahci1
+pcib21: <ACPI PCI-PCI bridge> at device 1.3 on pci11
+pci21: <ACPI PCI bus> on pcib21
+pcib22: <PCI-PCI bridge> irq 96 at device 0.0 on pci21
+pci22: <PCI bus> on pcib22
+pcib23: <PCI-PCI bridge> irq 96 at device 0.0 on pci22
+pci23: <PCI bus> on pcib23
+pcib24: <PCI-PCI bridge> irq 97 at device 1.0 on pci22
+pcib25: <PCI-PCI bridge> irq 98 at device 2.0 on pci22
+pci24: <PCI bus> on pcib25
+xhci4: <XHCI (generic) USB 3.0 controller> mem 0xea000000-0xea00ffff irq 98 at device 0.0 on pci24
+xhci4: 32 bytes context size, 64-bit DMA
+usbus4 on xhci4
+usbus4: 5.0Gbps Super Speed USB v3.0
+pcib26: <PCI-PCI bridge> irq 96 at device 4.0 on pci22
+pcib27: <ACPI PCI-PCI bridge> at device 7.1 on pci11
+pci25: <ACPI PCI bus> on pcib27
+pci25: <unknown> at device 0.0 (no driver attached)
+pcib28: <ACPI PCI-PCI bridge> at device 8.1 on pci11
+pci26: <ACPI PCI bus> on pcib28
+pci26: <unknown> at device 0.0 (no driver attached)
+pcib29: <ACPI Host-PCI bridge> on acpi0
+pci27: <ACPI PCI bus> on pcib29
+pci27: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib30: <ACPI PCI-PCI bridge> at device 7.1 on pci27
+pci28: <ACPI PCI bus> on pcib30
+pci28: <unknown> at device 0.0 (no driver attached)
+pcib31: <ACPI PCI-PCI bridge> at device 8.1 on pci27
+pci29: <ACPI PCI bus> on pcib31
+pci29: <unknown> at device 0.0 (no driver attached)
+acpi_button0: <Power Button> on acpi0
+uart2: <16x50 with 256 byte FIFO> iomem 0xfedc9000-0xfedc9fff,0xfedc7000-0xfedc7fff irq 3 on acpi0
+uart3: <16x50 with 256 byte FIFO> iomem 0xfedca000-0xfedcafff,0xfedc8000-0xfedc8fff irq 4 on acpi0
+uart4: <16x50 with 256 byte FIFO> iomem 0xfedce000-0xfedcefff,0xfedcc000-0xfedccfff irq 3 on acpi0
+uart5: <16x50 with 256 byte FIFO> iomem 0xfedcf000-0xfedcffff,0xfedcd000-0xfedcdfff irq 4 on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xce7ff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+Solaris: WARNING: ignoring tunable zfs_arc_max (using 136192405504 instead)
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen4.1: <0x8086 XHCI root HUB> at usbus4
+ugen2.1: <0x1022 XHCI root HUB> at usbus2
+uhub0 on usbus4
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus4
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+uhub1 on usbus2
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+ugen3.1: <0x1022 XHCI root HUB> at usbus3
+uhub2 on usbus3
+uhub2: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus3
+uhub3 on usbus1
+uhub3: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub4 on usbus0
+uhub4: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <Sabrent Rocket 4.0 1TB> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+nvd1: <Sabrent Rocket 4.0 1TB> NVMe namespace
+nvd1: 953869MB (1953525168 512 byte sectors)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+pcm4: <ATI R6xx (HDMI)> at nid 11 on hdaa0
+pcm5: <ATI R6xx (HDMI)> at nid 13 on hdaa0
+nvd2: <Sabrent Rocket 4.0 1TB> NVMe namespace
+nvd2: 953869MB (1953525168 512 byte sectors)
+random: unblocking device.
+Trying to mount root from ufs:/dev/md0 []...
+Root mount waiting for: usbus0 usbus1 usbus2 usbus3 CAM usbus4
+WARNING: WITNESS option enabled, expect reduced performance.
+uhub3: 4 ports with 4 removable, self powered
+uhub4: 4 ports with 4 removable, self powered
+uhub0: 4 ports with 4 removable, self powered
+uhub2: 10 ports with 10 removable, self powered
+uhub1: 10 ports with 10 removable, self powered
+ugen2.2: <vendor 0x05e3 USB2.0 Hub> at usbus2
+uhub5 on uhub1
+uhub5: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 1> on usbus2
+Root mount waiting for: usbus2 usbus3
+uhub5: 4 ports with 4 removable, self powered
+ugen3.2: <ADATA ADATA USB Flash Drive> at usbus3
+umass0 on uhub2
+umass0: <ADATA ADATA USB Flash Drive, class 0/0, rev 2.00/1.00, addr 1> on usbus3
+umass0:  SCSI over Bulk-Only; quirks = 0x8100
+umass0:2:0: Attached to scbus2
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <ADATA USB Flash Drive 0.00> Removable Direct Access SCSI-2 device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 61888MB (126746624 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM: da0: the secondary GPT header is not in the last LBA.
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+Root mount waiting for: usbus2 usbus3
+ugen2.3: <Logitech USB Receiver> at usbus2
+ukbd0 on uhub5
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 2> on usbus2
+kbd2 at ukbd0
+ugen3.3: <vendor 0x8087 product 0x0029> at usbus3
+ugen2.4: <vendor 0x1a40 USB 2.0 Hub> at usbus2
+uhub6 on uhub5
+uhub6: <vendor 0x1a40 USB 2.0 Hub, class 9/0, rev 2.00/1.11, addr 3> on usbus2
+Root mount waiting for: usbus2 usbus3
+ugen3.4: <vendor 0x05e3 USB2.0 Hub> at usbus3
+uhub7 on uhub2
+uhub7: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 3> on usbus3
+uhub6: 4 ports with 4 removable, self powered
+uhub7: 4 ports with 4 removable, self powered
+ugen2.5: <Sony Computer Entertainment Wireless Controller> at usbus2
+Root mount waiting for: usbus2
+ugen2.6: <Cooler Master Technology Inc. MasterKeys Pro M Single> at usbus2
+ukbd1 on uhub6
+ukbd1: <Cooler Master Technology Inc. MasterKeys Pro M Single, class 0/0, rev 1.10/11.06, addr 5> on usbus2
+kbd3 at ukbd1
+ukbd2 on uhub6
+ukbd2: <Cooler Master Technology Inc. MasterKeys Pro M Single, class 0/0, rev 1.10/11.06, addr 5> on usbus2
+kbd4 at ukbd2
+ugen2.7: <vendor 0x046d C922 Pro Stream Webcam> at usbus2
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+usb_alloc_device: set address 8 failed (USB_ERR_TIMEOUT, ignored)
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+ugen2.8: <Generic USB Audio> at usbus2
+ugen2.9: <ITE Tech. Inc. ITE Device(8595)> at usbus2
+ukbd3 on uhub1
+ukbd3: <ITE Tech. Inc. ITE Device(8595), class 0/0, rev 2.00/0.03, addr 8> on usbus2
+kbd5 at ukbd3
+lock order reversal:
+ 1st 0xfffffe0256612b00 bufwait (bufwait, lockmgr) @ /usr/src/sys/vm/vm_pager.c:392
+ 2nd 0xfffff8010b489be0 isofs (isofs, lockmgr) @ /usr/src/sys/dev/md/md.c:986
+lock order isofs -> bufwait established at:
+#0 0xffffffff80c66a5d at witness_checkorder+0x46d
+#1 0xffffffff80bc828c at lockmgr_xlock_hard+0x6c
+#2 0xffffffff80bc8fa3 at __lockmgr_args+0x613
+#3 0xffffffff80cb5564 at getnewbuf+0x334
+#4 0xffffffff80cb290e at getblkx+0x34e
+#5 0xffffffff80cb23b4 at breadn_flags+0x44
+#6 0xffffffff80b75c8c at cd9660_blkatoff+0x5c
+#7 0xffffffff80b780e6 at cd9660_vget_internal+0x266
+#8 0xffffffff80cd23b2 at vfs_domount+0xa32
+#9 0xffffffff80cd0fb2 at vfs_donmount+0x872
+#10 0xffffffff80cd0709 at sys_nmount+0x69
+#11 0xffffffff8104bfde at amd64_syscall+0x12e
+#12 0xffffffff8101f60e at fast_syscall_common+0xf8
+lock order bufwait -> isofs attempted at:
+#0 0xffffffff80c673bc at witness_checkorder+0xdcc
+#1 0xffffffff80bc7ba8 at lockmgr_lock_flags+0x188
+#2 0xffffffff80cf3484 at _vn_lock+0x54
+#3 0xffffffff806f9cc9 at mdstart_vnode+0x439
+#4 0xffffffff806f7921 at md_kthread+0x1d1
+#5 0xffffffff80bb2750 at fork_exit+0x80
+#6 0xffffffff8101fd6e at fork_trampoline+0xe
+witness_lock_list_get: witness exhausted
+Trying to mount root from zfs:livecd []...
+lo0: link state changed to UP
+igb0: link state changed to UP
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134GSA1.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+acpi_wmi1: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: cannot find EC device
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+pid 59894 (asmctl), jid 0, uid 0: exited on signal 6
+ums0 on uhub5
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 2> on usbus2
+ums0: 16 buttons and [XYZT] coordinates ID=2
+uhid0 on uhub5
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 2> on usbus2
+uhid1 on uhub6
+uhid1: <Sony Computer Entertainment Wireless Controller, class 0/0, rev 2.00/1.00, addr 4> on usbus2
+uhid2 on uhub6
+uhid2: <Cooler Master Technology Inc. MasterKeys Pro M Single, class 0/0, rev 1.10/11.06, addr 5> on usbus2
+uhid3 on uhub1
+uhid3: <Generic USB Audio, class 239/2, rev 2.00/0.05, addr 8> on usbus2
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+uaudio0 on uhub6
+uaudio0: <vendor 0x046d C922 Pro Stream Webcam, class 239/2, rev 2.00/0.16, addr 6> on usbus2
+uaudio0: No playback.
+uaudio0: Record[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 24000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm6: <USB audio> on uaudio0
+uaudio0: No HID volume keys found.
+uaudio1 on uhub1
+uaudio1: <Realtek USB2.0 Audio> on usbus2
+ng_ubt: HCI command 0xfc05 timed out
+ubt0 on uhub2
+ubt0: <vendor 0x8087 product 0x0029, class 224/1, rev 2.01/0.01, addr 2> on usbus3
+uaudio1: Play[0]: 192000 Hz, 8 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 96000 Hz, 8 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 48000 Hz, 8 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[1]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[1]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[1]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[1]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[1]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[1]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: No MIDI sequencer.
+pcm7: <USB audio> on uaudio1
+pcm8: <USB audio> on uaudio1
+uaudio1: No HID volume keys found.
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+KLD amdgpu.ko: depends on kernel - not available or version mismatch
+linker_load_file: /boot/modules/amdgpu.ko - unsupported file type

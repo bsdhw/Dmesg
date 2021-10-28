@@ -1,0 +1,263 @@
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE r354233 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM)2 Duo CPU     E7200  @ 2.53GHz (2533.35-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x10676  Family=0x6  Model=0x17  Stepping=6
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x8e39d<SSE3,DTES64,MON,DS_CPL,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1>
+  AMD Features=0x20100800<SYSCALL,NX,LM>
+  AMD Features2=0x1<LAHF>
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3342442496 (3187 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <030408 APIC1655>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1
+Timecounter "TSC-low" frequency 1266676429 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112e050, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <030408 RSDT1655> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xd000-0xd0ff mem 0xd0000000-0xdfffffff,0xefde0000-0xefdeffff irq 16 at device 0.0 on pci1
+vgapci0: Boot video device
+hdac0: <ATI (0xaa18) HDA Controller> mem 0xefdfc000-0xefdfffff irq 17 at device 0.1 on pci1
+uhci0: <Intel 82801H (ICH8) USB controller USB-D> port 0xc880-0xc89f irq 22 at device 26.0 on pci0
+uhci0: LegSup = 0x2f00
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 82801H (ICH8) USB controller USB-E> port 0xcc00-0xcc1f irq 21 at device 26.1 on pci0
+uhci1: LegSup = 0x2f00
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 82801H (ICH8) USB 2.0 controller USB2-B> mem 0xefcffc00-0xefcfffff irq 18 at device 26.7 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+usbus2: 480Mbps High Speed USB v2.0
+hdac1: <Intel 82801H HDA Controller> mem 0xefcf8000-0xefcfbfff irq 22 at device 27.0 on pci0
+pcib2: <ACPI PCI-PCI bridge> irq 17 at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci3: <ACPI PCI bus> on pcib3
+age0: <Attansic Technology Corp, L1 Gigabit Ethernet> mem 0xeffc0000-0xefffffff irq 18 at device 0.0 on pci3
+age0: 1280 Tx FIFO, 2364 Rx FIFO
+age0: Using 1 MSI messages.
+miibus0: <MII bus> on age0
+atphy0: <Atheros F1 10/100/1000 PHY> PHY 0 on miibus0
+atphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+age0: Using defaults for TSO: 65518/35/2048
+age0: Ethernet address: ...
+pcib4: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci4: <ACPI PCI bus> on pcib4
+atapci0: <JMicron JMB363 UDMA133 controller> port 0xec00-0xec07,0xe880-0xe883,0xe800-0xe807,0xe480-0xe483,0xe400-0xe40f mem 0xefefe000-0xefefffff irq 19 at device 0.0 on pci4
+ahci0: <JMicron JMB363 AHCI SATA controller> at channel -1 on atapci0
+ahci0: AHCI v1.00 with 2 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x8001<NOFORCE,SATA1_UNIT0>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ata2: <ATA channel> at channel 0 on atapci0
+uhci2: <Intel 82801H (ICH8) USB controller USB-A> port 0xc400-0xc41f irq 23 at device 29.0 on pci0
+uhci2: LegSup = 0x2f00
+usbus3 on uhci2
+usbus3: 12Mbps Full Speed USB v1.0
+uhci3: <Intel 82801H (ICH8) USB controller USB-B> port 0xc480-0xc49f irq 20 at device 29.1 on pci0
+uhci3: LegSup = 0x2f00
+usbus4 on uhci3
+usbus4: 12Mbps Full Speed USB v1.0
+uhci4: <Intel 82801H (ICH8) USB controller USB-C> port 0xc800-0xc81f irq 21 at device 29.2 on pci0
+uhci4: LegSup = 0x2f00
+usbus5 on uhci4
+usbus5: 12Mbps Full Speed USB v1.0
+ehci1: <Intel 82801H (ICH8) USB 2.0 controller USB2-A> mem 0xefcff800-0xefcffbff irq 23 at device 29.7 on pci0
+usbus6: EHCI version 1.0
+usbus6 on ehci1
+usbus6: 480Mbps High Speed USB v2.0
+pcib5: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci1: <Intel ICH8 SATA300 controller> port 0xb080-0xb087,0xb000-0xb003,0xac00-0xac07,0xa880-0xa883,0xa800-0xa80f,0xa480-0xa48f irq 18 at device 31.2 on pci0
+ata3: <ATA channel> at channel 0 on atapci1
+ata4: <ATA channel> at channel 1 on atapci1
+atapci2: <Intel ICH8 SATA300 controller> port 0xc080-0xc087,0xc000-0xc003,0xbc00-0xbc07,0xb880-0xb883,0xb800-0xb80f,0xb480-0xb48f irq 18 at device 31.5 on pci0
+ata5: <ATA channel> at channel 0 on atapci2
+ata6: <ATA channel> at channel 1 on atapci2
+acpi_button0: <Power Button> on acpi0
+fdc0: <floppy drive controller (FDE)> port 0x3f0-0x3f5,0x3f7 irq 6 drq 2 on acpi0
+ppc0: <Parallel port> port 0x378-0x37f,0x778-0x77f irq 7 drq 3 on acpi0
+ppc0: SMC-like chipset (ECP/EPP/PS2/NIBBLE) in COMPATIBLE mode
+ppc0: FIFO with 16/16/9 bytes threshold
+ppbus0: <Parallel port bus> on ppc0
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS NOTICE: Prefetch is disabled by default if less than 4GB of RAM is present;
+            to enable, add "vfs.zfs.prefetch_disable=0" to /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC662 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC662 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC662 (Rear Analog)> at nid 20 and 24,26 on hdaa1
+pcm2: <Realtek ALC662 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm3: <Realtek ALC662 (Onboard Digital)> at nid 30 on hdaa1
+ugen4.1: <Intel UHCI root HUB> at usbus4
+ugen6.1: <Intel EHCI root HUB> at usbus6
+uhub0: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+ugen0.1: <Intel UHCI root HUB> at usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus6
+uhub2: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+ugen5.1: <Intel UHCI root HUB> at usbus5
+uhub3: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+ugen2.1: <Intel EHCI root HUB> at usbus2
+uhub4: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ugen3.1: <Intel UHCI root HUB> at usbus3
+uhub5: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+ugen1.1: <Intel UHCI root HUB> at usbus1
+uhub6: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub3: 2 ports with 2 removable, self powered
+uhub5: 2 ports with 2 removable, self powered
+uhub4: 4 ports with 4 removable, self powered
+ada0 at ata5 bus 0 scbus5 target 0 lun 0
+ada0: <CLOVER CD253GJ 1AJ10001> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: 238475MB (488397168 512 byte sectors)
+ada1 at ata6 bus 0 scbus6 target 0 lun 0
+ada1: <Hitachi HDP725025GLA380 GM2OA52A> ATA8-ACS SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada1: 238475MB (488397168 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus6
+uhub1: 6 ports with 6 removable, self powered
+ugen3.2: <PixArt USB Optical Mouse> at usbus3
+Cuse v0.1.36 @ /dev/cuse
+lo0: link state changed to UP
+age0: link state changed to DOWN
+age0: link state changed to UP
+ums0 on uhub5
+ums0: <PixArt USB Optical Mouse, class 0/0, rev 2.00/1.00, addr 2> on usbus3
+ums0: 3 buttons and [XYZ] coordinates ID=0
+[drm] radeon kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] initializing kernel modesetting (RV670 0x1002:0x9505 0x1787:0x2245 0x00).
+[drm:radeon_device_init] Unable to find PCI I/O BAR
+[drm:radeon_atombios_init] Unable to find PCI I/O BAR; using MMIO for ATOM IIO
+ATOM BIOS: RV670
+drmn0: VRAM: 512M 0x0000000000000000 - 0x000000001FFFFFFF (512M used)
+drmn0: GTT: 512M 0x0000000020000000 - 0x000000003FFFFFFF
+Successfully added WC MTRR for [0xd0000000-0xdfffffff]: 0; 
+[drm] Detected VRAM RAM=512M, BAR=256M
+[drm] RAM width 256bits DDR
+[TTM] Zone  kernel: Available graphics memory: 1682008 kiB
+[TTM] Initializing pool allocator
+[drm] radeon: 512M of VRAM memory ready
+[drm] radeon: 512M of GTT memory ready.
+[drm] Loading RV670 Microcode
+drmn0: successfully loaded firmware image with name: radeon/RV670_pfp.bin
+drmn0: successfully loaded firmware image with name: radeon/RV670_me.bin
+drmn0: successfully loaded firmware image with name: radeon/R600_rlc.bin
+[drm] Internal thermal controller with fan control
+[drm] radeon: power management initialized
+drmn0: successfully loaded firmware image with name: radeon/R600_uvd.bin
+[drm] GART: num cpu pages 131072, num gpu pages 131072
+[drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+[drm] PCIE GART of 512M enabled (table at 0x0000000000142000).
+drmn0: WB enabled
+drmn0: fence driver on ring 0 use gpu addr 0x0000000020000c00 and cpu addr 0x0xfffff8000c9c9c00
+drmn0: fence driver on ring 5 use gpu addr 0x00000000000521d0 and cpu addr 0x0xfffff800d00521d0
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+drmn0: radeon: MSI limited to 32-bit
+drmn0: radeon: using MSI.
+[drm] radeon: irq initialized.
+[drm] ring test on 0 succeeded in 1 usecs
+[drm] ring test on 5 succeeded in 1 usecs
+[drm] UVD initialized successfully.
+[drm] ib test on ring 0 succeeded in 0 usecs
+[drm] ib test on ring 5 succeeded
+[drm] Connector DVI-I-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-I-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DIN-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DIN-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DVI-I-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-I-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Radeon Display Connectors
+[drm] Connector 0:
+[drm]   DVI-I-1
+[drm]   HPD1
+[drm]   DDC: 0x7e50 0x7e50 0x7e54 0x7e54 0x7e58 0x7e58 0x7e5c 0x7e5c
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_KLDSCP_TMDS1
+[drm]     CRT2: INTERNAL_KLDSCP_DAC2
+[drm] Connector 1:
+[drm]   DIN-1
+[drm]   Encoders:
+[drm]     TV1: INTERNAL_KLDSCP_DAC2
+[drm] Connector 2:
+[drm]   DVI-I-2
+[drm]   HPD2
+[drm]   DDC: 0x7e40 0x7e40 0x7e44 0x7e44 0x7e48 0x7e48 0x7e4c 0x7e4c
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[drm]     DFP2: INTERNAL_LVTM1
+[drm] fb mappable at 0xD0243000
+[drm] vram apper at 0xD0000000
+[drm] size 7299072
+[drm] fb depth is 24
+[drm]    pitch is 6912
+VT: Replacing driver "vga" with new "fb".
+start FB_INFO:
+type=11 height=1050 width=1680 depth=32
+cmsize=16 size=7299072
+pbase=0xd0243000 vbase=0xfffff800d0243000
+name=drmn0 flags=0x0 stride=6912 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: radeondrmfb frame buffer device
+[drm] Initialized radeon 2.50.0 20080528 for drmn0 on minor 0

@@ -1,0 +1,328 @@
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p1 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+CPU: Intel(R) Xeon(R) CPU           X5460  @ 3.16GHz (3158.81-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x1067a  Family=0x6  Model=0x17  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0xc0ce3bd<SSE3,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,DCA,SSE4.1,XSAVE,OSXSAVE>
+  AMD Features=0x20100800<SYSCALL,NX,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: HLT,PAUSE
+  TSC: P-state invariant, performance statistics
+real memory  = 30064771072 (28672 MB)
+avail memory = 29186707456 (27834 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <010410 APIC1157>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 2 package(s) x 4 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Address but zero Length: 0x0000000000000420/0x0 (20181213/tbfadt-796)
+Firmware Warning (ACPI): Invalid length for FADT/Pm2ControlBlock: 0, using default 8 (20181213/tbfadt-850)
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 24-47 on motherboard
+Launching APs: 1 7 2 4 5 3 6
+Timecounter "TSC-low" frequency 1579404583 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112e0f0, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <010410 XSDT1157> on motherboard
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 2.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 2.0 on pci2
+pci4: <ACPI PCI bus> on pcib4
+em0: <Intel(R) PRO/1000 Network Connection> port 0x8c00-0x8c1f mem 0xfc8e0000-0xfc8fffff irq 18 at device 0.0 on pci4
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: XXX
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 Network Connection> port 0x8800-0x881f mem 0xfc8c0000-0xfc8dffff irq 19 at device 0.1 on pci4
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: XXX
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib5: <PCI-PCI bridge> at device 0.3 on pci1
+pci5: <PCI bus> on pcib5
+pcib6: <ACPI PCI-PCI bridge> at device 3.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 4.0 on pci0
+pci7: <ACPI PCI bus> on pcib7
+mps0: <Avago Technologies (LSI) SAS2008> port 0x9800-0x98ff mem 0xfcbfc000-0xfcbfffff,0xfcb80000-0xfcbbffff irq 17 at device 0.0 on pci7
+mps0: Firmware: XXX.XXX.XXX.XXX, Driver: XXX.XXX.XXX.XXX-fbsd
+mps0: IOCCapabilities: 185c<ScsiTaskFull,DiagTrace,SnapBuf,EEDP,TransRetry,IR>
+pcib8: <ACPI PCI-PCI bridge> at device 5.0 on pci0
+pci8: <ACPI PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> at device 6.0 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pcib10: <ACPI PCI-PCI bridge> at device 7.0 on pci0
+pci10: <ACPI PCI bus> on pcib10
+pcib11: <ACPI PCI-PCI bridge> irq 17 at device 28.0 on pci0
+pci11: <ACPI PCI bus> on pcib11
+em2: <Intel(R) PRO/1000 Network Connection> port 0xac00-0xac1f mem 0xfcde0000-0xfcdfffff,0xfcdc0000-0xfcddffff irq 16 at device 0.0 on pci11
+em2: Using 1024 TX descriptors and 1024 RX descriptors
+em2: Using an MSI interrupt
+em2: Ethernet address: XXX
+em2: netmap queues/slots: TX 1/1024, RX 1/1024
+em3: <Intel(R) PRO/1000 Network Connection> port 0xa800-0xa81f mem 0xfcd80000-0xfcd9ffff,0xfcd60000-0xfcd7ffff irq 17 at device 0.1 on pci11
+em3: Using 1024 TX descriptors and 1024 RX descriptors
+em3: Using an MSI interrupt
+em3: Ethernet address: XXX
+em3: netmap queues/slots: TX 1/1024, RX 1/1024
+uhci0: <Intel 631XESB/632XESB/3100 USB controller USB-1> port 0xd800-0xd81f irq 22 at device 29.0 on pci0
+uhci0: LegSup = 0x2f00
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 631XESB/632XESB/3100 USB controller USB-2> port 0xd400-0xd41f irq 23 at device 29.1 on pci0
+uhci1: LegSup = 0x2f00
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+uhci2: <Intel 631XESB/632XESB/3100 USB controller USB-3> port 0xd000-0xd01f irq 20 at device 29.2 on pci0
+uhci2: LegSup = 0x2f00
+usbus2 on uhci2
+usbus2: 12Mbps Full Speed USB v1.0
+uhci3: <Intel 631XESB/632XESB/3100 USB controller USB-4> port 0xcc00-0xcc1f irq 21 at device 29.3 on pci0
+uhci3: LegSup = 0x2f00
+usbus3 on uhci3
+usbus3: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 63XXESB USB 2.0 controller> mem 0xfdfff800-0xfdfffbff irq 22 at device 29.7 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci0
+usbus4: 480Mbps High Speed USB v2.0
+pcib12: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci12: <ACPI PCI bus> on pcib12
+vgapci0: <VGA-compatible display> port 0xbc00-0xbc7f mem 0xfd000000-0xfd7fffff,0xfdee0000-0xfdefffff irq 16 at device 5.0 on pci12
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci0: <Intel 63XXESB2 UDMA100 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xffa0-0xffaf at device 31.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+ahci0: <Intel ESB2 AHCI SATA controller> port 0xec00-0xec07,0xe800-0xe803,0xe400-0xe407,0xe000-0xe003,0xdc00-0xdc1f mem 0xfdfffc00-0xfdffffff irq 21 at device 31.2 on pci0
+ahci0: AHCI v1.10 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+acpi_button0: <Power Button> on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc67ff,0xc6800-0xc77ff,0xc7800-0xc87ff,0xce800-0xcf7ff,0xd0800-0xd17ff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen4.1: <Intel EHCI root HUB> at usbus4
+ugen3.1: <Intel UHCI root HUB> at usbus3
+ugen2.1: <Intel UHCI root HUB> at usbus2
+ugen1.1: <Intel UHCI root HUB> at usbus1
+ugen0.1: <Intel UHCI root HUB> at usbus0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+uhub1: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub2: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub4: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub3: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub1: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+uhub3: 2 ports with 2 removable, self powered
+uhub4: 2 ports with 2 removable, self powered
+uhub0: 8 ports with 8 removable, self powered
+ugen4.2: <Texas Instruments Incorporated 6250 FW: XXX.XXX.XXX.XXX.562AD423> at usbus4
+umass0 on uhub0
+umass0: <Texas Instruments Incorporated 6250 FW: XXX.XXX.XXX.XXX.562AD423, class 0/0, rev 2.00/2.00, addr 2> on usbus4
+umass0:  SCSI over Bulk-Only; quirks = 0x0100
+umass0:8:0: Attached to scbus8
+ugen4.3: <vendor 0x1a40 USB 2.0 Hub> at usbus4
+uhub5 on uhub0
+uhub5: <vendor 0x1a40 USB 2.0 Hub, class 9/0, rev 2.00/1.11, addr 3> on usbus4
+uhub5: 4 ports with 4 removable, self powered
+Trying to mount root from zfs:zroot/ROOT/default []...
+da1 at mps0 bus 0 scbus0 target 3 lun 0
+da1: <ATA SanDisk SSD SATA 1.13> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 150.000MB/s transfers
+da1: Command Queueing enabled
+da1: 15072MB (30867456 512 byte sectors)
+da3 at mps0 bus 0 scbus0 target 5 lun 0
+da3: <ATA SanDisk SSD SATA 1.13> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 150.000MB/s transfers
+da3: Command Queueing enabled
+da3: 15072MB (30867456 512 byte sectors)
+da0 at mps0 bus 0 scbus0 target 2 lun 0
+da0: <ATA WDC WD1200BEVT-2 1A11> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 300.000MB/s transfers
+da0: Command Queueing enabled
+da0: 114473MB (234441648 512 byte sectors)
+da2 at mps0 bus 0 scbus0 target 4 lun 0
+da2: <ATA Hitachi HTS72322 C30F> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 300.000MB/s transfers
+da2: Command Queueing enabled
+da2: 238475MB (488397168 512 byte sectors)
+cd0 at umass-sim0 bus 0 scbus8 target 0 lun 0
+cd0: <TSSTcorp CD/DVDW TS-T632A SR03> Removable CD-ROM SCSI device
+cd0: 40.000MB/s transfers
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray open
+cd0: quirks=0x10<10_BYTE_ONLY>
+GEOM: da0: the secondary GPT header is not in the last LBA.
+ugen4.4: <vendor 0x13ba Barcode Reader> at usbus4
+ukbd0 on uhub5
+ukbd0: <vendor 0x13ba Barcode Reader, class 0/0, rev 1.10/0.01, addr 4> on usbus4
+kbd2 at ukbd0
+Root mount waiting for: usbus4
+ugen4.5: <vendor 0x04b4 product 0x6560> at usbus4
+uhub6 on uhub0
+uhub6: <vendor 0x04b4 product 0x6560, class 9/0, rev 2.00/0.0b, addr 5> on usbus4
+uhub6: MTT enabled
+ugen1.2: <American Megatrends Inc. Virtual Keyboard and Mouse> at usbus1
+ukbd1 on uhub3
+ukbd1: <Keyboard Interface> on usbus1
+kbd3 at ukbd1
+Root mount waiting for: usbus4
+uhub6: 4 ports with 4 removable, self powered
+lo0: link state changed to UP
+em0: link state changed to UP
+ums0 on uhub5
+ums0: <vendor 0x13ba Barcode Reader, class 0/0, rev 1.10/0.01, addr 4> on usbus4
+ums0: 5 buttons and [XYZ] coordinates ID=1
+ums1 on uhub3
+ums1: <Mouse Interface> on usbus1
+Security policy loaded: MAC/ntpd (mac_ntpd)
+bridge0: Ethernet address: XXX
+lo0: link state changed to UP
+in6_purgeaddr: err=65, destination address delete failed
+em0: link state changed to DOWN
+bridge0: link state changed to UP
+em0: promiscuous mode enabled
+em0: link state changed to UP
+epair0a: Ethernet address: XXX
+epair0b: Ethernet address: XXX
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0.3'
+em0: link state changed to DOWN
+vnet0.3: promiscuous mode enabled
+em0: link state changed to UP
+lo0: link state changed to UP
+vnet0.3: link state changed to DOWN
+epair0b: link state changed to DOWN
+em0: link state changed to DOWN
+in6_purgeaddr: err=65, destination address delete failed
+em0: link state changed to UP
+epair0a: Ethernet address: XXX
+epair0b: Ethernet address: XXX
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0.4'
+em0: link state changed to DOWN
+vnet0.4: promiscuous mode enabled
+em0: link state changed to UP
+lo0: link state changed to UP
+vnet0.4: link state changed to DOWN
+epair0b: link state changed to DOWN
+em0: link state changed to DOWN
+em0: link state changed to UP
+epair0a: Ethernet address: XXX
+epair0b: Ethernet address: XXX
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0.5'
+em0: link state changed to DOWN
+vnet0.5: promiscuous mode enabled
+em0: link state changed to UP
+lo0: link state changed to UP
+in6_purgeaddr: err=65, destination address delete failed
+vnet0.5: link state changed to DOWN
+epair0b: link state changed to DOWN
+em0: link state changed to DOWN
+in6_purgeaddr: err=65, destination address delete failed
+em0: link state changed to UP
+epair0a: Ethernet address: XXX
+epair0b: Ethernet address: XXX
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0.6'
+em0: link state changed to DOWN
+vnet0.6: promiscuous mode enabled
+em0: link state changed to UP
+lo0: link state changed to UP
+vnet0.6: link state changed to DOWN
+epair0b: link state changed to DOWN
+em0: link state changed to DOWN
+in6_purgeaddr: err=65, destination address delete failed
+em0: link state changed to UP
+epair0a: Ethernet address: XXX
+epair0b: Ethernet address: XXX
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0.7'
+em0: link state changed to DOWN
+vnet0.7: promiscuous mode enabled
+em0: link state changed to UP
+lo0: link state changed to UP
+vnet0.7: link state changed to DOWN
+epair0b: link state changed to DOWN
+em0: link state changed to DOWN
+in6_purgeaddr: err=65, destination address delete failed
+em0: link state changed to UP
+epair0a: Ethernet address: XXX
+epair0b: Ethernet address: XXX
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0.8'
+em0: link state changed to DOWN
+vnet0.8: promiscuous mode enabled
+em0: link state changed to UP
+lo0: link state changed to UP
+vnet0.8: link state changed to DOWN
+epair0b: link state changed to DOWN
+em0: link state changed to DOWN
+em0: link state changed to UP
+in6_purgeaddr: err=65, destination address delete failed
+epair0a: Ethernet address: XXX
+epair0b: Ethernet address: XXX
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0.9'
+em0: link state changed to DOWN
+vnet0.9: promiscuous mode enabled
+em0: link state changed to UP
+lo0: link state changed to UP

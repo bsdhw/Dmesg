@@ -1,0 +1,73 @@
+OpenBSD 6.6 (GENERIC) #3: Mon Jul 20 22:45:05 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 133705728 (127MB)
+avail mem = 115617792 (110MB)
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 08/01/01, BIOS32 rev. 0 @ 0xffe90, SMBIOS rev. 2.2 @ 0xfb410 (64 entries)
+bios0: vendor Dell Computer Corporation version "A10" date 08/01/01
+bios0: Dell Computer Corporation OptiPlex GX1 500M+
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S4 S5
+acpi0: tables DSDT FACP
+acpi0: wakeup devices PCI0(S5) USB0(S5) PCI1(S5)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PCI1)
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+bios0: ROM list: 0xc0000/0x8000 0xc8000/0x8000 0xd0000/0x1800
+cpu0 at mainbus0: (uniprocessor)
+cpu0: Intel Pentium III ("GenuineIntel" 686-class, 512KB L2 cache) 499 MHz, 06-07-03
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,SEP,MTRR,PGE,MCA,CMOV,PSE36,MMX,FXSR,SSE,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82443BX AGP" rev 0x02
+intelagp0 at pchb0
+agp0 at intelagp0: aperture at 0xf4000000, size 0x4000000
+ppb0 at pci0 dev 1 function 0 "Intel 82443BX AGP" rev 0x02
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 "ATI Rage Pro" rev 0x5c
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+piixpcib0 at pci0 dev 7 function 0 "Intel 82371AB PIIX4 ISA" rev 0x02
+pciide0 at pci0 dev 7 function 1 "Intel 82371AB IDE" rev 0x01: DMA, channel 0 wired to compatibility, channel 1 wired to compatibility
+wd0 at pciide0 channel 0 drive 0: <WDC WD1600JB-00REA0>
+wd0: 16-sector PIO, LBA48, 152627MB, 312581808 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 2
+pciide0: channel 1 ignored (disabled)
+uhci0 at pci0 dev 7 function 2 "Intel 82371AB USB" rev 0x01: irq 11
+piixpm0 at pci0 dev 7 function 3 "Intel 82371AB Power" rev 0x02: SMBus disabled
+em0 at pci0 dev 13 function 0 "Intel 82546EB" rev 0x01: irq 11, address XXX
+em1 at pci0 dev 13 function 1 "Intel 82546EB" rev 0x01: irq 10, address XXX
+sis0 at pci0 dev 15 function 0 "NS DP83815" rev 0x00, DP83815D: irq 10, address XXX
+nsphyter0 at sis0 phy 0: DP83815 10/100 PHY, rev. 1
+xl0 at pci0 dev 17 function 0 "3Com 3c905B" rev 0x24: irq 11, address XXX
+exphy0 at xl0 phy 24: 3Com internal media interface
+isa0 at piixpcib0
+isadma0 at isa0
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+isapnp0 at isa0 port 0x279: read port 0x203
+"CS4236B, CSC0000, , WSS/SB" at isapnp0 port 0x534/4,0x388/4,0x220/16 irq 5 drq 1,0 not configured
+joy0 at isapnp0 "CS4236B, CSC000F, , Game" port 0x3a0/8
+"CS4236B, CSC0010, , Ctrl" at isapnp0 port 0xf00/8 not configured
+"CS4236B, CSC0003, , MPU" at isapnp0 port 0x330/2 not configured
+usb0 at uhci0: USB revision 1.0
+uhub0 at usb0 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on wd0a (0f854d035a082542.a) swap on wd0b dump on wd0b
+WARNING: / was not properly unmounted
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec

@@ -1,0 +1,389 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p12-HBSD #0  0857355c1c2(stable/20.7)-dirty: Mon Jan 18 18:12:55 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz (3093.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206a7  Family=0x6  Model=0x2a  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1d9ae3bf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,TSCDLT,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 4078329856 (3889 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 3 2
+Timecounter "TSC-low" frequency 1546524572 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+000.000054 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0x2000-0x207f mem 0xc6000000-0xc6ffffff,0xb0000000-0xbfffffff,0xc0000000-0xc1ffffff irq 16 at device 0.0 on pci1
+vgapci0: Boot video device
+hdac0: <NVIDIA (0x0be3) HDA Controller> mem 0xc7000000-0xc7003fff irq 17 at device 0.1 on pci1
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc8906000-0xc89063ff irq 16 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce0: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc2000000-0xc3ffffff irq 16 at device 0.0 on pci2
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (5.2.3); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc4000000-0xc5ffffff irq 17 at device 0.1 on pci2
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (5.2.3); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc8905000-0xc89053ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci1: <VGA-compatible display> mem 0xc7800000-0xc7ffffff,0xc8800000-0xc8803fff,0xc8000000-0xc87fffff irq 19 at device 3.0 on pci3
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x3048-0x304f,0x3054-0x3057,0x3040-0x3047,0x3050-0x3053,0x3020-0x303f mem 0xc8904000-0xc89047ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <NVIDIA GT21x HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA GT21x Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA GT21x (HDMI/DP 8ch)> at nid 5 on hdaa0
+hdacc1: <NVIDIA GT21x HDA CODEC> at cad 1 on hdac0
+hdaa1: <NVIDIA GT21x Audio Function Group> at nid 1 on hdacc1
+pcm1: <NVIDIA GT21x (HDMI/DP 8ch)> at nid 5 on hdaa1
+hdacc2: <NVIDIA GT21x HDA CODEC> at cad 2 on hdac0
+hdaa2: <NVIDIA GT21x Audio Function Group> at nid 1 on hdacc2
+pcm2: <NVIDIA GT21x (HDMI/DP 8ch)> at nid 5 on hdaa2
+hdacc3: <NVIDIA GT21x HDA CODEC> at cad 3 on hdac0
+hdaa3: <NVIDIA GT21x Audio Function Group> at nid 1 on hdacc3
+pcm3: <NVIDIA GT21x (HDMI/DP 8ch)> at nid 5 on hdaa3
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <WDC WD5003ABYX-18WERA0 01.01S02> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+cd0 at ahcich4 bus 0 scbus1 target 0 lun 0
+cd0: <TSSTcorp DVD+-RW TS-L633J D250> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+ugen1.3: <PixArt HP USB Optical Mouse> at usbus1
+ugen1.4: <Logitech USB Keyboard> at usbus1
+ukbd0 on uhub2
+ukbd0: <USB Keyboard> on usbus1
+kbd1 at ukbd0
+ugen1.5: <vendor 0x0424 product 0x2514> at usbus1
+uhub4 on uhub2
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 5> on usbus1
+uhub4: MTT enabled
+uhub4: 4 ports with 4 removable, self powered
+ums0 on uhub2
+ums0: <PixArt HP USB Optical Mouse, class 0/0, rev 2.00/1.00, addr 3> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhid0 on uhub2
+uhid0: <USB Keyboard> on usbus1
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+vlan0: changing name to 'bce1_vlan10'
+vlan1: changing name to 'bce1_vlan6'
+bce0: link state changed to UP
+bce0: Gigabit link up!
+bce0: Gigabit link up!
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ugen1.3: <PixArt HP USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 3 (disconnected)
+ums0: detached
+ugen1.4: <Logitech USB Keyboard> at usbus1 (disconnected)
+ukbd0: at uhub2, port 2, addr 4 (disconnected)
+ukbd0: detached
+uhid0: at uhub2, port 2, addr 4 (disconnected)
+uhid0: detached
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+661.353536 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+661.353556 [1035] generic_netmap_dtor       Emulated netmap adapter for bce1 destroyed
+bce1: permanently promiscuous mode enabled
+661.353758 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+661.423760 [ 320] generic_netmap_register   Emulated adapter for bce1 activated
+893.727224 [1130] generic_netmap_attach     Emulated adapter for bce1_vlan10 created (prev was NULL)
+893.727250 [1035] generic_netmap_dtor       Emulated netmap adapter for bce1_vlan10 destroyed
+bce1_vlan10: permanently promiscuous mode enabled
+893.729754 [1130] generic_netmap_attach     Emulated adapter for bce1_vlan10 created (prev was NULL)
+893.729855 [ 320] generic_netmap_register   Emulated adapter for bce1_vlan10 activated
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: deletion failed: 3
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: deletion failed: 3
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: deletion failed: 3
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: deletion failed: 3
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1 (disconnected)
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1
+urndis0 on uhub4
+urndis0: <RNDIS Communications Control> on usbus1
+ue0: <USB Ethernet> on urndis0
+ue0: Ethernet address: ...
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1 (disconnected)
+urndis0: at uhub4, port 1, addr 3 (disconnected)
+urndis0: detached
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1 (disconnected)
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1
+urndis0 on uhub4
+urndis0: <RNDIS Communications Control> on usbus1
+ue0: <USB Ethernet> on urndis0
+ue0: Ethernet address: ...
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+bce0: link state changed to DOWN
+bce1: Gigabit link up!
+bce1: link state changed to UP
+bce1_vlan6: link state changed to UP
+bce1_vlan10: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+bce1: link state changed to DOWN
+bce1_vlan6: link state changed to DOWN
+bce1_vlan10: link state changed to DOWN
+bce0: Gigabit link up!
+bce0: link state changed to UP
+arpresolve: can't allocate llinfo for XXX.XXX.XXX.XXX on bce0
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1 (disconnected)
+urndis0: at uhub4, port 1, addr 3 (disconnected)
+urndis0: detached
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1
+bce0: link state changed to DOWN
+bce1: Gigabit link up!
+bce1: link state changed to UP
+bce1_vlan6: link state changed to UP
+bce1_vlan10: link state changed to UP
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1 (disconnected)
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1
+urndis0 on uhub4
+urndis0: <RNDIS Communications Control> on usbus1
+ue0: <USB Ethernet> on urndis0
+ue0: Ethernet address: ...
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: deletion failed: 3
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1 (disconnected)
+urndis0: at uhub4, port 1, addr 3 (disconnected)
+urndis0: detached
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1 (disconnected)
+in_scrubprefix: err=65, prefix delete failed
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+vlan2: changing name to 'bce0_vlan832'
+vlan3: changing name to 'bce0_vlan838'
+wg0: link state changed to DOWN
+bce1: link state changed to DOWN
+bce1_vlan6: link state changed to DOWN
+bce1_vlan10: link state changed to DOWN
+bce1: Gigabit link up!
+bce1: link state changed to UP
+bce1_vlan6: link state changed to UP
+bce1_vlan10: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce1: link state changed to DOWN
+bce1_vlan6: link state changed to DOWN
+bce1_vlan10: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce1: Gigabit link up!
+bce1: link state changed to UP
+bce1_vlan6: link state changed to UP
+bce1_vlan10: link state changed to UP
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1 (disconnected)
+ugen1.3: <Xiaomi Redmi Note 8 Pro> at usbus1
+urndis0 on uhub4
+urndis0: <RNDIS Communications Control> on usbus1
+ue0: <USB Ethernet> on urndis0
+ue0: Ethernet address: ...
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+in_scrubprefix: err=65, prefix delete failed
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

@@ -1,0 +1,1710 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p13-HBSD #0  5a415173060(stable/21.1)-dirty: Fri Feb  5 16:41:22 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Core(TM) i7-10710U CPU @ 1.10GHz (6775.18-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0xa0660  Family=0x6  Model=0xa6  Stepping=0
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x2b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 68717379584 (65534 MB)
+avail memory = 66680221696 (63591 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL NUC9i5FN>
+FreeBSD/SMP: Multiprocessor System Detected: 12 CPUs
+FreeBSD/SMP: 1 package(s) x 6 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 3 5 9 7 11 4 10 2 6 8
+MCA: Bank 3, Status 0x8c20004000101135
+MCA: Global Cap 0x0000000000000c0c, Status 0x0000000000000000
+MCA: Vendor "GenuineIntel", ID 0xa0660, APIC ID 7
+MCA: CPU 7 COR (1) DCACHE L1 DRD error
+MCA: Address 0x2bb81ac
+MCA: Misc 0x412285
+Timecounter "TSC-low" frequency 1693794392 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000062 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <INTEL> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 350
+Event timer "HPET1" frequency 24000000 Hz quality 340
+Event timer "HPET2" frequency 24000000 Hz quality 340
+Event timer "HPET3" frequency 24000000 Hz quality 340
+Event timer "HPET4" frequency 24000000 Hz quality 340
+Event timer "HPET5" frequency 24000000 Hz quality 340
+Event timer "HPET6" frequency 24000000 Hz quality 340
+Event timer "HPET7" frequency 24000000 Hz quality 340
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x6e> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x303f mem 0x6022000000-0x6022ffffff,0x4000000000-0x407fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x6023100000-0x602310ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <network> at device 20.3 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.2 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel ICH8M+ (RAID) AHCI SATA controller> port 0x3090-0x3097,0x3080-0x3083,0x3060-0x307f mem 0xa2320000-0xa2321fff,0xa2323000-0xa23230ff,0xa2322000-0xa23227ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier not supported
+ahcich2: <AHCI channel> at channel 2 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pcib1: [GIANT-LOCKED]
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <PCI-PCI bridge> at device 0.0 on pci2
+pci3: <PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> at device 1.0 on pci2
+pcib4: [GIANT-LOCKED]
+pcib5: <ACPI PCI-PCI bridge> at device 2.0 on pci2
+pci4: <ACPI PCI bus> on pcib5
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xa1f00000-0xa1f0ffff at device 0.0 on pci4
+xhci1: 32 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib6: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci5: <ACPI PCI bus> on pcib6
+nvme0: <Generic NVMe Device> mem 0xa2200000-0xa2203fff at device 0.0 on pci5
+pcib7: <ACPI PCI-PCI bridge> at device 29.5 on pci0
+pci6: <ACPI PCI bus> on pcib7
+sdhci_pci0: <Generic SD HCI> mem 0xa2100000-0xa2100fff at device 0.0 on pci6
+sdhci_pci0: 1 slot(s) allocated
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac0: <Intel (0x02c8) HDA Controller> mem 0x6023110000-0x6023113fff,0x6023000000-0x60230fffff at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+pci0: <network, ethernet> at device 31.6 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _HOT value is absurd, ignored (-73.1C)
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+acpi_tz1: _TMP value is absurd, ignored (-263.1C)
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+ugen1.1: <0x8086 XHCI root HUB> at usbus1
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <Samsung SSD 970 EVO Plus 250GB> NVMe namespace
+nvd0: 238475MB (488397168 512 byte sectors)
+hdacc0: <Realtek ALC256 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC256 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC256 (Analog)> at nid 33 and 18 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub1: 4 ports with 4 removable, self powered
+uhub0: 18 ports with 18 removable, self powered
+ugen1.2: <Realtek USB 10/100/1000 LAN> at usbus1
+ugen0.2: <Logitech USB Receiver> at usbus0
+ukbd0 on uhub0
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 1> on usbus0
+kbd1 at ukbd0
+ure0 on uhub1
+ure0: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 1> on usbus1
+miibus0: <MII bus> on ure0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue0: <USB Ethernet> on ure0
+ue0: Ethernet address: ...
+ugen0.3: <vendor 0x8087 product 0x0026> at usbus0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+ue0: link state changed to UP
+ugen0.4: <Realtek USB 10/100/1000 LAN> at usbus0
+ure1 on uhub0
+ure1: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 3> on usbus0
+miibus1: <MII bus> on ure1
+rgephy1: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus1
+rgephy1:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue1: <USB Ethernet> on ure1
+ue1: Ethernet address: ...
+ue0: link state changed to DOWN
+ue1: link state changed to DOWN
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ugen0.5: <Realtek USB 10/100/1000 LAN> at usbus0
+ure2 on uhub0
+ure2: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 4> on usbus0
+miibus2: <MII bus> on ure2
+rgephy2: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus2
+rgephy2:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue2: <USB Ethernet> on ure2
+ue2: Ethernet address: ...
+ue0: link state changed to UP
+ugen0.6: <Realtek USB 10/100/1000 LAN> at usbus0
+ure3 on uhub0
+ure3: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 5> on usbus0
+ums0 on uhub0
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 1> on usbus0
+ums0: 16 buttons and [XYZT] coordinates ID=2
+uhid0 on uhub0
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 1> on usbus0
+miibus3: <MII bus> on ure3
+rgephy3: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus3
+rgephy3:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue3: <USB Ethernet> on ure3
+ue3: Ethernet address: ...
+ue2: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 5 1 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p13-HBSD #0  5a415173060(stable/21.1)-dirty: Fri Feb  5 16:41:22 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Core(TM) i7-10710U CPU @ 1.10GHz (6774.38-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0xa0660  Family=0x6  Model=0xa6  Stepping=0
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x2b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 68717379584 (65534 MB)
+avail memory = 66680221696 (63591 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL NUC9i5FN>
+FreeBSD/SMP: Multiprocessor System Detected: 12 CPUs
+FreeBSD/SMP: 1 package(s) x 6 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 11 7 5 3 9 2 4 6 8 10
+Timecounter "TSC-low" frequency 1693594735 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000062 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <INTEL> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 350
+Event timer "HPET1" frequency 24000000 Hz quality 340
+Event timer "HPET2" frequency 24000000 Hz quality 340
+Event timer "HPET3" frequency 24000000 Hz quality 340
+Event timer "HPET4" frequency 24000000 Hz quality 340
+Event timer "HPET5" frequency 24000000 Hz quality 340
+Event timer "HPET6" frequency 24000000 Hz quality 340
+Event timer "HPET7" frequency 24000000 Hz quality 340
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x6e> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x303f mem 0x6022000000-0x6022ffffff,0x4000000000-0x407fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x6023100000-0x602310ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <network> at device 20.3 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.2 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel ICH8M+ (RAID) AHCI SATA controller> port 0x3090-0x3097,0x3080-0x3083,0x3060-0x307f mem 0xa2320000-0xa2321fff,0xa2323000-0xa23230ff,0xa2322000-0xa23227ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier not supported
+ahcich2: <AHCI channel> at channel 2 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pcib1: [GIANT-LOCKED]
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <PCI-PCI bridge> at device 0.0 on pci2
+pci3: <PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> at device 1.0 on pci2
+pcib4: [GIANT-LOCKED]
+pcib5: <ACPI PCI-PCI bridge> at device 2.0 on pci2
+pci4: <ACPI PCI bus> on pcib5
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xa1f00000-0xa1f0ffff at device 0.0 on pci4
+xhci1: 32 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib6: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci5: <ACPI PCI bus> on pcib6
+nvme0: <Generic NVMe Device> mem 0xa2200000-0xa2203fff at device 0.0 on pci5
+pcib7: <ACPI PCI-PCI bridge> at device 29.5 on pci0
+pci6: <ACPI PCI bus> on pcib7
+sdhci_pci0: <Generic SD HCI> mem 0xa2100000-0xa2100fff at device 0.0 on pci6
+sdhci_pci0: 1 slot(s) allocated
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac0: <Intel (0x02c8) HDA Controller> mem 0x6023110000-0x6023113fff,0x6023000000-0x60230fffff at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+pci0: <network, ethernet> at device 31.6 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _HOT value is absurd, ignored (-73.1C)
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+acpi_tz1: _TMP value is absurd, ignored (-263.1C)
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+ugen1.1: <0x8086 XHCI root HUB> at usbus1
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <Samsung SSD 970 EVO Plus 250GB> NVMe namespace
+nvd0: 238475MB (488397168 512 byte sectors)
+hdacc0: <Realtek ALC256 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC256 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC256 (Analog)> at nid 33 and 18 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub1: 4 ports with 4 removable, self powered
+uhub0: 18 ports with 18 removable, self powered
+ugen1.2: <Realtek USB 10/100/1000 LAN> at usbus1
+ugen0.2: <Logitech USB Receiver> at usbus0
+ukbd0 on uhub0
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 1> on usbus0
+kbd1 at ukbd0
+ure0 on uhub1
+ure0: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 1> on usbus1
+miibus0: <MII bus> on ure0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue0: <USB Ethernet> on ure0
+ue0: Ethernet address: ...
+ugen0.3: <vendor 0x8087 product 0x0026> at usbus0
+lo0: link state changed to UP
+ugen0.4: <Realtek USB 10/100/1000 LAN> at usbus0
+ure1 on uhub0
+ure1: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 3> on usbus0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+ue0: link state changed to UP
+miibus1: <MII bus> on ure1
+rgephy1: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus1
+rgephy1:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue1: <USB Ethernet> on ure1
+ue1: Ethernet address: ...
+ue0: link state changed to DOWN
+ue1: link state changed to DOWN
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ugen0.5: <Realtek USB 10/100/1000 LAN> at usbus0
+ure2 on uhub0
+ure2: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 4> on usbus0
+miibus2: <MII bus> on ure2
+rgephy2: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus2
+rgephy2:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue2: <USB Ethernet> on ure2
+ue2: Ethernet address: ...
+ue0: link state changed to UP
+ugen0.6: <Realtek USB 10/100/1000 LAN> at usbus0
+ure3 on uhub0
+ure3: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 5> on usbus0
+ums0 on uhub0
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 1> on usbus0
+ums0: 16 buttons and [XYZT] coordinates ID=2
+uhid0 on uhub0
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 1> on usbus0
+miibus3: <MII bus> on ure3
+rgephy3: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus3
+rgephy3:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue3: <USB Ethernet> on ure3
+ue3: Ethernet address: ...
+ue2: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+997.562716 [1130] generic_netmap_attach     Emulated adapter for ue3 created (prev was NULL)
+997.562719 [1035] generic_netmap_dtor       Emulated netmap adapter for ue3 destroyed
+ue3: permanently promiscuous mode enabled
+997.563018 [1130] generic_netmap_attach     Emulated adapter for ue3 created (prev was NULL)
+997.572488 [ 320] generic_netmap_register   Emulated adapter for ue3 activated
+997.573397 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+997.573399 [1035] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+ue0: permanently promiscuous mode enabled
+997.573658 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+997.573671 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ue3
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ue3
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ue3
+tun1: changing name to 'ovpnc1'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pid 92882 (tor), jid 0, uid 256: exited on signal 6 (core dumped)
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pid 65310 (tor), jid 0, uid 256: exited on signal 6 (core dumped)
+[HBSD SEGVGUARD] [/usr/local/bin/tor (5699)] Suspension expired.
+ -> pid: 5699 ppid: 51613 p_pax: 0xa50<SEGVGUARD,ASLR,NOSHLIBRANDOM,NODISALLOWMAP32BIT> 
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+ue3: link state changed to DOWN
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pid 98205 (tor), jid 0, uid 256: exited on signal 6 (core dumped)
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+100.206653 [ 295] generic_netmap_unregister Emulated adapter for ue0 deactivated
+100.206663 [1035] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+100.206723 [ 295] generic_netmap_unregister Emulated adapter for ue3 deactivated
+100.206785 [1035] generic_netmap_dtor       Emulated netmap adapter for ue3 destroyed
+pflog0: promiscuous mode disabled
+ovpnc1: link state changed to DOWN
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 6 5 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p13-HBSD #0  5a415173060(stable/21.1)-dirty: Fri Feb  5 16:41:22 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Core(TM) i7-10710U CPU @ 1.10GHz (6775.72-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0xa0660  Family=0x6  Model=0xa6  Stepping=0
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x2b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 68717379584 (65534 MB)
+avail memory = 66680217600 (63591 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL NUC9i5FN>
+FreeBSD/SMP: Multiprocessor System Detected: 12 CPUs
+FreeBSD/SMP: 1 package(s) x 6 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 11 5 9 3 7 6 2 4 8 10
+Timecounter "TSC-low" frequency 1693930179 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000062 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <INTEL> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 350
+Event timer "HPET1" frequency 24000000 Hz quality 340
+Event timer "HPET2" frequency 24000000 Hz quality 340
+Event timer "HPET3" frequency 24000000 Hz quality 340
+Event timer "HPET4" frequency 24000000 Hz quality 340
+Event timer "HPET5" frequency 24000000 Hz quality 340
+Event timer "HPET6" frequency 24000000 Hz quality 340
+Event timer "HPET7" frequency 24000000 Hz quality 340
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x6e> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x303f mem 0x6022000000-0x6022ffffff,0x4000000000-0x407fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x6023100000-0x602310ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <network> at device 20.3 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.2 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel ICH8M+ (RAID) AHCI SATA controller> port 0x3090-0x3097,0x3080-0x3083,0x3060-0x307f mem 0xa2320000-0xa2321fff,0xa2323000-0xa23230ff,0xa2322000-0xa23227ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier not supported
+ahcich2: <AHCI channel> at channel 2 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pcib1: [GIANT-LOCKED]
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <PCI-PCI bridge> at device 0.0 on pci2
+pci3: <PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> at device 1.0 on pci2
+pcib4: [GIANT-LOCKED]
+pcib5: <ACPI PCI-PCI bridge> at device 2.0 on pci2
+pci4: <ACPI PCI bus> on pcib5
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xa1f00000-0xa1f0ffff at device 0.0 on pci4
+xhci1: 32 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib6: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci5: <ACPI PCI bus> on pcib6
+nvme0: <Generic NVMe Device> mem 0xa2200000-0xa2203fff at device 0.0 on pci5
+pcib7: <ACPI PCI-PCI bridge> at device 29.5 on pci0
+pci6: <ACPI PCI bus> on pcib7
+sdhci_pci0: <Generic SD HCI> mem 0xa2100000-0xa2100fff at device 0.0 on pci6
+sdhci_pci0: 1 slot(s) allocated
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac0: <Intel (0x02c8) HDA Controller> mem 0x6023110000-0x6023113fff,0x6023000000-0x60230fffff at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+pci0: <network, ethernet> at device 31.6 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _HOT value is absurd, ignored (-73.1C)
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+acpi_tz1: _TMP value is absurd, ignored (-263.1C)
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ugen1.1: <0x8086 XHCI root HUB> at usbus1
+uhub1: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <Samsung SSD 970 EVO Plus 250GB> NVMe namespace
+nvd0: 238475MB (488397168 512 byte sectors)
+hdacc0: <Realtek ALC256 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC256 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC256 (Analog)> at nid 33 and 18 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub1: 4 ports with 4 removable, self powered
+uhub0: 18 ports with 18 removable, self powered
+ugen1.2: <Realtek USB 10/100/1000 LAN> at usbus1
+ugen0.2: <Logitech USB Receiver> at usbus0
+ukbd0 on uhub0
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 1> on usbus0
+kbd1 at ukbd0
+ugen0.3: <vendor 0x8087 product 0x0026> at usbus0
+ure0 on uhub1
+ure0: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 1> on usbus1
+miibus0: <MII bus> on ure0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue0: <USB Ethernet> on ure0
+ue0: Ethernet address: ...
+ugen0.4: <Realtek USB 10/100/1000 LAN> at usbus0
+ure1 on uhub0
+ure1: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 3> on usbus0
+miibus1: <MII bus> on ure1
+rgephy1: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus1
+rgephy1:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue1: <USB Ethernet> on ure1
+ue1: Ethernet address: ...
+ugen0.5: <Realtek USB 10/100/1000 LAN> at usbus0
+ure2 on uhub0
+ure2: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 4> on usbus0
+miibus2: <MII bus> on ure2
+rgephy2: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus2
+rgephy2:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue2: <USB Ethernet> on ure2
+ue2: Ethernet address: ...
+ugen0.6: <Realtek USB 10/100/1000 LAN> at usbus0
+ure3 on uhub0
+ure3: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 5> on usbus0
+ums0 on uhub0
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 1> on usbus0
+ums0: 16 buttons and [XYZT] coordinates ID=2
+uhid0 on uhub0
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 1> on usbus0
+miibus3: <MII bus> on ure3
+rgephy3: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus3
+rgephy3:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue3: <USB Ethernet> on ure3
+ue3: Ethernet address: ...
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+ue3: link state changed to UP
+ue0: link state changed to UP
+ue1: link state changed to DOWN
+ue2: link state changed to DOWN
+ue3: link state changed to DOWN
+ue0: link state changed to DOWN
+tun1: changing name to 'ovpnc1'
+pflog0: promiscuous mode enabled
+ue3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+375.363249 [1130] generic_netmap_attach     Emulated adapter for ue3 created (prev was NULL)
+375.363250 [1035] generic_netmap_dtor       Emulated netmap adapter for ue3 destroyed
+ue3: permanently promiscuous mode enabled
+375.363615 [1130] generic_netmap_attach     Emulated adapter for ue3 created (prev was NULL)
+375.372308 [ 320] generic_netmap_register   Emulated adapter for ue3 activated
+375.373897 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+375.373898 [1035] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+ue0: permanently promiscuous mode enabled
+375.374153 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+375.374165 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: promiscuous mode enabled
+lo0: promiscuous mode enabled
+ovpnc1: promiscuous mode disabled
+lo0: promiscuous mode disabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

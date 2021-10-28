@@ -1,0 +1,101 @@
+OpenBSD 6.8 (GENERIC) #427: Sun Oct  4 18:20:41 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 267272192 (254MB)
+avail mem = 246091776 (234MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 11/30/99, BIOS32 rev. 0 @ 0xfd7f2, SMBIOS rev. 2.3 @ 0xefba0 (40 entries)
+bios0: vendor Phoenix Technologies Ltd. version "EB.M2.41" date 09/05/03
+bios0: Hewlett-Packard HP OmniBook PC
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP BOOT
+acpi0: wakeup devices LID_(S4) SLP_(S4) USB1(S3) HUB_(S5) LAN_(S5) ESSM(S4) MPC1(S4) MPC2(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (HUB_)
+acpiprt2 at acpi0: bus 1 (AGP_)
+acpiec0 at acpi0
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: SLP_
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0A05" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT1 not present
+acpibat1 at acpi0: BAT2 not present
+"HWPC209" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: !C2(@10 io@0x1014), C1(@1 halt!), FVS, 1000, 733 MHz
+acpipwrres0 at acpi0: PFAN, resource for FAN_
+acpitz0 at acpi0: critical temperature is 100 degC
+acpidock0 at acpi0: SPR0 not docked (0)
+acpivideo0 at acpi0: VGA_
+bios0: ROM list: 0xc0000/0xe000 0xe0000/0x3000!
+cpu0 at mainbus0: (uniprocessor)
+cpu0: Mobile Intel(R) Pentium(R) III CPU - M 1000MHz ("GenuineIntel" 686-class) 1 GHz, 06-0b-04
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,SEP,MTRR,PGE,MCA,CMOV,PSE36,MMX,FXSR,SSE,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82830M Host" rev 0x02
+intelagp0 at pchb0
+agp0 at intelagp0: aperture at 0xe0000000, size 0xe400000
+ppb0 at pci0 dev 1 function 0 "Intel 82830M AGP" rev 0x02
+pci1 at ppb0 bus 1
+radeondrm0 at pci1 dev 0 function 0 "ATI Radeon Mobility M6" rev 0x00
+drm0 at radeondrm0
+radeondrm0: irq 10
+uhci0 at pci0 dev 29 function 0 "Intel 82801CA/CAM USB" rev 0x01: irq 10
+ppb1 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0x41
+pci2 at ppb1 bus 2
+"3Com V.90 Modem" rev 0x00 at pci2 dev 2 function 0 not configured
+esa0 at pci2 dev 3 function 0 "ESS ES1989" rev 0x12: irq 5
+ac97: codec id 0x45838308 (ESS Technology ES1921)
+ac97: codec features 20 bit DAC, 20 bit ADC, ESS Technology
+audio0 at esa0
+cbb0 at pci2 dev 5 function 0 "TI PCI1420 CardBus" rev 0x00: irq 10, CardBus support disabled
+cbb1 at pci2 dev 5 function 1 "TI PCI1420 CardBus" rev 0x00: irq 10, CardBus support disabled
+fxp0 at pci2 dev 8 function 0 "Intel PRO/100 VM" rev 0x41, i82562: irq 10, address XXX
+inphy0 at fxp0 phy 1: i82562EM 10/100 PHY, rev. 0
+cardslot0 at cbb0 slot 0 flags 0
+pcmcia0 at cardslot0
+cardslot1 at cbb1 slot 1 flags 0
+pcmcia1 at cardslot1
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801CAM LPC" rev 0x01
+pciide0 at pci0 dev 31 function 1 "Intel 82801CAM IDE" rev 0x01: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide0 channel 0 drive 0: <HITACHI_DK23AA-12>
+wd0: 16-sector PIO, LBA, 11513MB, 23579136 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 4
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <MATSHITA, UJDA340, 1.50> removable
+cd0(pciide0:1:0): using PIO mode 4, DMA mode 2
+ichiic0 at pci0 dev 31 function 3 "Intel 82801CA/CAM SMBus" rev 0x01: irq 10
+iic0 at ichiic0
+usb0 at uhci0: USB revision 1.0
+uhub0 at usb0 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 5.8, 0x9b48b1 0x0 0x0 0x88479b 0x0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (c6f7c01a09a341f6.a) swap on wd0b dump on wd0b
+WARNING: bad clock chip time
+WARNING: CHECK AND RESET THE DATE!
+initializing kernel modesetting (RV100 0x1002:0x4C59 0x103C:0x001A 0x00).
+radeondrm0: 1024x768, 16bpp
+wsdisplay0 at radeondrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

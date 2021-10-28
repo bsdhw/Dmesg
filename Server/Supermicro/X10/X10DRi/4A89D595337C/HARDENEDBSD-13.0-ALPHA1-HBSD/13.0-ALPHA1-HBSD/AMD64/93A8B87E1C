@@ -1,0 +1,530 @@
+[1] ---<<BOOT>>---
+[1] Copyright (c) DDFB-79F5 The HardenedBSD Project.
+[1] Copyright (c) 02B2-369B The FreeBSD Project.
+[1] Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+[1] 	The Regents of the University of California. All rights reserved.
+[1] FreeBSD is a registered trademark of The FreeBSD Foundation.
+[1] FreeBSD 13.0-ALPHA1-HBSD #0 : Thu Jan 14 21:26:47 UTC 2021
+[1]     XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+[1] FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-rc2-0-g43ff75f2c3f)
+[1] WARNING: WITNESS option enabled, expect reduced performance.
+[1] VT(vga): resolution 640x480
+[1] HardenedBSD: initialize and check features (__HardenedBSD_version 1300061 __FreeBSD_version 1300135).
+[1] module_register: cannot register pci/em from kernel; already loaded from if_em_updated.ko
+[1] Module pci/em failed to register: 17
+[1] module_register: cannot register cpu/coretemp from kernel; already loaded from coretemp.ko
+[1] Module cpu/coretemp failed to register: 17
+[1] CPU microcode: updated from 0x43 to 0x44
+[1] CPU: Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz (1800.04-MHz K8-class CPU)
+[1]   Origin="GenuineIntel"  Id=0x306f2  Family=0x6  Model=0x3f  Stepping=2
+[1]   Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+[1]   Features2=0x7ffefbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+[1]   AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+[1]   AMD Features2=0x21<LAHF,ABM>
+[1]   Structured Extended Features=0x37ab<FSGSBASE,TSCADJ,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,NFPUSG>
+[1]   Structured Extended Features3=0x9c000400<MD_CLEAR,IBPB,STIBP,L1DFL,SSBD>
+[1]   XSAVE Features=0x1<XSAVEOPT>
+[1]   VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+[1]   TSC: P-state invariant, performance statistics
+[1] real memory  = 206152138752 (196602 MB)
+[1] avail memory = 200546074624 (191255 MB)
+[1] Event timer "LAPIC" quality 600
+[1] ACPI APIC Table: <ALASKA A M I >
+[1] FreeBSD/SMP: Multiprocessor System Detected: 24 CPUs
+[1] FreeBSD/SMP: 2 package(s) x 2 cache groups x 6 core(s)
+[1] random: registering fast source Intel Secure Key RNG
+[1] random: fast provider: "Intel Secure Key RNG"
+[1] random: unblocking device.
+[1] ioapic0 <Version 2.0> irqs 0-23
+[1] ioapic1 <Version 2.0> irqs 24-47
+[1] ioapic2 <Version 2.0> irqs 48-71
+[1] Launching APs: 1 6 9 7 3 2 10 11 15 20 8 5 4 12 19 23 21 17 22 18 16 13 14
+[1] Timecounter "TSC" frequency 1800037508 Hz quality 1000
+[1] Cuse v0.1.36 @ /dev/cuse
+[1] random: entropy device external interface
+[1] 000.000049 [4346] netmap_init               netmap: loaded module
+[1] [ath_hal] loaded
+[1] WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+[1] kbd1 at kbdmux0
+[1] mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+[1] nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  440.100  Fri May 29 08:11:49 UTC 2020
+[1] nexus0
+[1] vtvga0: <VT VGA driver>
+[1] cryptosoft0: <software crypto>
+[1] aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+[1] acpi0: <ALASKA A M I >
+[1] acpi0: Power Button (fixed)
+[1] cpu0: <ACPI CPU> numa-domain 0 on acpi0
+[1] atrtc0: <AT realtime clock> port 0x70-0x71,0x74-0x77 irq 8 on acpi0
+[1] atrtc0: registered as a time-of-day clock, resolution 1.000000s
+[1] Event timer "RTC" frequency 32768 Hz quality 0
+[1] attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+[1] Timecounter "i8254" frequency 1193182 Hz quality 0
+[1] Event timer "i8254" frequency 1193182 Hz quality 100
+[1] hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+[1] Timecounter "HPET" frequency 14318180 Hz quality 950
+[1] Event timer "HPET" frequency 14318180 Hz quality 350
+[1] Event timer "HPET1" frequency 14318180 Hz quality 340
+[1] Event timer "HPET2" frequency 14318180 Hz quality 340
+[1] Event timer "HPET3" frequency 14318180 Hz quality 340
+[1] Event timer "HPET4" frequency 14318180 Hz quality 340
+[1] Event timer "HPET5" frequency 14318180 Hz quality 340
+[1] Event timer "HPET6" frequency 14318180 Hz quality 340
+[1] Event timer "HPET7" frequency 14318180 Hz quality 340
+[1] Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+[1] acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+[1] pcib0: <ACPI Host-PCI bridge> on acpi0
+[1] pci0: <ACPI PCI bus> on pcib0
+[1] pci0: <dasp, performance counters> at device 8.2 (no driver attached)
+[1] pci0: <dasp, performance counters> at device 9.2 (no driver attached)
+[1] pci0: <dasp, performance counters> at device 11.1 (no driver attached)
+[1] pci0: <dasp, performance counters> at device 11.2 (no driver attached)
+[1] pci0: <dasp, performance counters> at device 16.1 (no driver attached)
+[1] pci0: <dasp, performance counters> at device 16.6 (no driver attached)
+[1] pci0: <dasp, performance counters> at device 18.1 (no driver attached)
+[1] pci0: <dasp, performance counters> at device 18.5 (no driver attached)
+[1] pcib1: <ACPI Host-PCI bridge> on acpi0
+[1] pci1: <ACPI PCI bus> on pcib1
+[1] pci1: <dasp, performance counters> at device 8.2 (no driver attached)
+[1] pci1: <dasp, performance counters> at device 9.2 (no driver attached)
+[1] pci1: <dasp, performance counters> at device 11.1 (no driver attached)
+[1] pci1: <dasp, performance counters> at device 11.2 (no driver attached)
+[1] pci1: <dasp, performance counters> at device 16.1 (no driver attached)
+[1] pci1: <dasp, performance counters> at device 16.6 (no driver attached)
+[1] pci1: <dasp, performance counters> at device 18.1 (no driver attached)
+[1] pci1: <dasp, performance counters> at device 18.5 (no driver attached)
+[1] acpi_syscontainer0: <System Container> on acpi0
+[1] acpi_syscontainer1: <System Container> on acpi0
+[1] pcib2: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+[1] pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+[1] pcib3: <ACPI PCI-PCI bridge> irq 26 at device 1.0 numa-domain 0 on pci2
+[1] pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+[1] pcib4: <ACPI PCI-PCI bridge> irq 26 at device 1.1 numa-domain 0 on pci2
+[1] pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+[1] pcib5: <ACPI PCI-PCI bridge> mem 0xc7400000-0xc743ffff irq 26 at device 0.0 numa-domain 0 on pci4
+[1] pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+[1] pcib6: <PCI-PCI bridge> irq 28 at device 1.0 numa-domain 0 on pci5
+[1] pci6: <PCI bus> numa-domain 0 on pcib6
+[1] nvme0: <Generic NVMe Device> mem 0xc7300000-0xc7303fff irq 28 at device 0.0 numa-domain 0 on pci6
+[1] pcib7: <PCI-PCI bridge> irq 29 at device 2.0 numa-domain 0 on pci5
+[1] pci7: <PCI bus> numa-domain 0 on pcib7
+[1] nvme1: <Generic NVMe Device> mem 0xc7200000-0xc7203fff irq 29 at device 0.0 numa-domain 0 on pci7
+[1] pcib8: <ACPI PCI-PCI bridge> irq 32 at device 2.0 numa-domain 0 on pci2
+[1] pci8: <ACPI PCI bus> numa-domain 0 on pcib8
+[1] vgapci0: <VGA-compatible display> port 0x6000-0x607f mem 0xc6000000-0xc6ffffff,0x383fe0000000-0x383fefffffff,0x383ff0000000-0x383ff1ffffff irq 32 at device 0.0 numa-domain 0 on pci8
+[1] nvidia0: <Unknown> numa-domain 0 on vgapci0
+[1] vgapci0: child nvidia0 requested pci_enable_io
+[1] vgapci0: child nvidia0 requested pci_enable_io
+[1] vgapci0: Boot video device
+[1] hdac0: <NVIDIA (0x0fbb) HDA Controller> mem 0xc7080000-0xc7083fff irq 36 at device 0.1 numa-domain 0 on pci8
+[1] pcib9: <ACPI PCI-PCI bridge> irq 40 at device 3.0 numa-domain 0 on pci2
+[1] pci9: <ACPI PCI bus> numa-domain 0 on pcib9
+[1] nvme2: <Generic NVMe Device> mem 0xc7700000-0xc7703fff irq 40 at device 0.0 numa-domain 0 on pci9
+[1] pcib10: <ACPI PCI-PCI bridge> irq 40 at device 3.1 numa-domain 0 on pci2
+[1] pci10: <ACPI PCI bus> numa-domain 0 on pcib10
+[1] nvme3: <Generic NVMe Device> mem 0xc7600000-0xc7603fff irq 40 at device 0.0 numa-domain 0 on pci10
+[1] pcib11: <ACPI PCI-PCI bridge> irq 40 at device 3.2 numa-domain 0 on pci2
+[1] pci11: <ACPI PCI bus> numa-domain 0 on pcib11
+[1] igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5020-0x503f mem 0xc7520000-0xc753ffff,0xc7544000-0xc7547fff irq 42 at device 0.0 numa-domain 0 on pci11
+[1] igb0: Using 1024 TX descriptors and 1024 RX descriptors
+[1] igb0: queue equality override not set, capping rx_queues at 6 and tx_queues at 6
+[1] igb0: Using 6 RX queues 6 TX queues
+[1] igb0: Using MSI-X interrupts with 7 vectors
+[1] igb0: Ethernet address: ...
+[1] igb0: netmap queues/slots: TX 6/1024, RX 6/1024
+[1] igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5000-0x501f mem 0xc7500000-0xc751ffff,0xc7540000-0xc7543fff irq 45 at device 0.1 numa-domain 0 on pci11
+[1] igb1: Using 1024 TX descriptors and 1024 RX descriptors
+[1] igb1: queue equality override not set, capping rx_queues at 6 and tx_queues at 6
+[1] igb1: Using 6 RX queues 6 TX queues
+[1] igb1: Using MSI-X interrupts with 7 vectors
+[1] igb1: Ethernet address: ...
+[1] igb1: netmap queues/slots: TX 6/1024, RX 6/1024
+[1] pcib12: <ACPI PCI-PCI bridge> irq 40 at device 3.3 numa-domain 0 on pci2
+[1] pci12: <ACPI PCI bus> numa-domain 0 on pcib12
+[1] pci2: <unknown> at device 17.0 (no driver attached)
+[1] ahci0: <Intel Wellsburg AHCI SATA controller> port 0x7110-0x7117,0x7100-0x7103,0x70f0-0x70f7,0x70e0-0x70e3,0x7020-0x703f mem 0xc5106000-0xc51067ff irq 16 at device 17.4 numa-domain 0 on pci2
+[1] ahci0: AHCI v1.30 with 4 6Gbps ports, Port Multiplier not supported
+[1] ahcich0: <AHCI channel> at channel 0 on ahci0
+[1] ahcich1: <AHCI channel> at channel 1 on ahci0
+[1] ahcich2: <AHCI channel> at channel 2 on ahci0
+[1] ahcich3: <AHCI channel> at channel 3 on ahci0
+[1] ahciem0: <AHCI enclosure management bridge> on ahci0
+[1] xhci0: <Intel Wellsburg USB 3.0 controller> mem 0x383ffff00000-0x383ffff0ffff irq 19 at device 20.0 numa-domain 0 on pci2
+[1] xhci0: 32 bytes context size, 64-bit DMA
+[1] usbus0 numa-domain 0 on xhci0
+[1] usbus0: 5.0Gbps Super Speed USB v3.0
+[1] pci2: <simple comms> at device 22.0 (no driver attached)
+[1] pci2: <simple comms> at device 22.1 (no driver attached)
+[1] pcib13: <ACPI PCI-PCI bridge> irq 16 at device 28.0 numa-domain 0 on pci2
+[1] pci13: <ACPI PCI bus> numa-domain 0 on pcib13
+[1] pcib14: <ACPI PCI-PCI bridge> irq 16 at device 28.4 numa-domain 0 on pci2
+[1] pci14: <ACPI PCI bus> numa-domain 0 on pcib14
+[1] pcib15: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 0 on pci14
+[1] pci15: <ACPI PCI bus> numa-domain 0 on pcib15
+[1] vgapci1: <VGA-compatible display> port 0x4000-0x407f mem 0xc4000000-0xc4ffffff,0xc5000000-0xc501ffff irq 16 at device 0.0 numa-domain 0 on pci15
+[1] isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci2
+[1] isa0: <ISA bus> numa-domain 0 on isab0
+[1] ahci1: <Intel Wellsburg AHCI SATA controller> port 0x7070-0x7077,0x7060-0x7063,0x7050-0x7057,0x7040-0x7043,0x7000-0x701f mem 0xc5100000-0xc51007ff irq 16 at device 31.2 numa-domain 0 on pci2
+[1] ahci1: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+[1] ahcich4: <AHCI channel> at channel 0 on ahci1
+[1] ahcich5: <AHCI channel> at channel 1 on ahci1
+[1] ahcich6: <AHCI channel> at channel 2 on ahci1
+[1] ahcich7: <AHCI channel> at channel 3 on ahci1
+[1] ahcich8: <AHCI channel> at channel 4 on ahci1
+[1] ahcich9: <AHCI channel> at channel 5 on ahci1
+[1] ahciem1: <AHCI enclosure management bridge> on ahci1
+[1] pcib16: <ACPI Host-PCI bridge> numa-domain 2 on acpi0
+[1] pci16: <ACPI PCI bus> numa-domain 2 on pcib16
+[1] pcib17: <ACPI PCI-PCI bridge> irq 50 at device 1.0 numa-domain 2 on pci16
+[1] pci17: <ACPI PCI bus> numa-domain 2 on pcib17
+[1] nvme4: <Generic NVMe Device> mem 0xfbe00000-0xfbe03fff irq 50 at device 0.0 numa-domain 2 on pci17
+[1] pcib18: <ACPI PCI-PCI bridge> irq 50 at device 1.1 numa-domain 2 on pci16
+[1] pci18: <ACPI PCI bus> numa-domain 2 on pcib18
+[1] nvme5: <Generic NVMe Device> mem 0xfbd00000-0xfbd03fff irq 50 at device 0.0 numa-domain 2 on pci18
+[1] pcib19: <ACPI PCI-PCI bridge> irq 56 at device 2.0 numa-domain 2 on pci16
+[1] pci19: <ACPI PCI bus> numa-domain 2 on pcib19
+[1] pci19: <network, ethernet> at device 0.0 (no driver attached)
+[1] pci19: <network, ethernet> at device 0.1 (no driver attached)
+[1] pcib20: <ACPI PCI-PCI bridge> irq 64 at device 3.0 numa-domain 2 on pci16
+[1] pci20: <ACPI PCI bus> numa-domain 2 on pcib20
+[1] nvme6: <Generic NVMe Device> mem 0xfbc00000-0xfbc03fff irq 64 at device 0.0 numa-domain 2 on pci20
+[1] pcib21: <ACPI PCI-PCI bridge> irq 64 at device 3.1 numa-domain 2 on pci16
+[1] pci21: <ACPI PCI bus> numa-domain 2 on pcib21
+[1] nvme7: <Generic NVMe Device> mem 0xfbb00000-0xfbb03fff irq 64 at device 0.0 numa-domain 2 on pci21
+[1] pcib22: <ACPI PCI-PCI bridge> irq 64 at device 3.2 numa-domain 2 on pci16
+[1] pci22: <ACPI PCI bus> numa-domain 2 on pcib22
+[1] nvme8: <Generic NVMe Device> mem 0xfba00000-0xfba03fff irq 64 at device 0.0 numa-domain 2 on pci22
+[1] pcib23: <ACPI PCI-PCI bridge> irq 64 at device 3.3 numa-domain 2 on pci16
+[1] pci23: <ACPI PCI bus> numa-domain 2 on pcib23
+[1] nvme9: <Generic NVMe Device> mem 0xfb900000-0xfb903fff irq 64 at device 0.0 numa-domain 2 on pci23
+[1] acpi_button0: <Power Button> on acpi0
+[1] apei0: <ACPI Platform Error Interface> on acpi0
+[1] uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+[1] uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+[1] uart1: console (115200,n,8,1)
+[1] ipmi0: <IPMI System Interface> port 0xca2,0xca3 on acpi0
+[1] ipmi0: KCS mode found at io 0xca2 on acpi
+[1] orm0: <ISA Option ROM> at iomem 0xce800-0xcf7ff pnpid ORM0000 on isa0
+[1] coretemp0: <CPU On-Die Thermal Sensors> numa-domain 0 on cpu0
+[1] est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+[1] Timecounters tick every 1.000 msec
+[1] ZFS filesystem version: 5
+[1] ZFS storage pool version: features support (5000)
+[1] ugen0.1: <0x8086 XHCI root HUB> at usbus0
+[1] uhub0 numa-domain 0 on usbus0
+[1] uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+[1] nvd0: <HP SSD EX950 512GB> NVMe namespace
+[1] nvd0: 488386MB (1000215216 512 byte sectors)
+[1] nvd1: <HP SSD EX950 512GB> NVMe namespace
+[1] nvd1: 488386MB (1000215216 512 byte sectors)
+[1] hdacc0: <NVIDIA (0x0071) HDA CODEC> at cad 0 on hdac0
+[1] hdaa0: <NVIDIA (0x0071) Audio Function Group> at nid 1 on hdacc0
+[2] pcm0: <NVIDIA (0x0071) (HDMI/DP 8ch)> at nid 4 on hdaa0
+[2] pcm1: <NVIDIA (0x0071) (HDMI/DP 8ch)> at nid 5 on hdaa0
+[2] pcm2: <NVIDIA (0x0071) (HDMI/DP 8ch)> at nid 6 on hdaa0
+[2] pcm3: <NVIDIA (0x0071) (HDMI/DP 8ch)> at nid 7 on hdaa0
+[2] nvd2: <HP SSD EX950 512GB> NVMe namespace
+[2] nvd2: 488386MB (1000215216 512 byte sectors)
+[2] nvd3: <HP SSD EX950 512GB> NVMe namespace
+[2] nvd3: 488386MB (1000215216 512 byte sectors)
+[2] nvd4: <HP SSD EX950 512GB> NVMe namespace
+[2] nvd4: 488386MB (1000215216 512 byte sectors)
+[3] nvd5: <HP SSD EX950 512GB> NVMe namespace
+[3] nvd5: 488386MB (1000215216 512 byte sectors)
+[3] nvd6: <HP SSD EX950 512GB> NVMe namespace
+[3] nvd6: 488386MB (1000215216 512 byte sectors)
+[3] nvd7: <HP SSD EX950 512GB> NVMe namespace
+[3] nvd7: 488386MB (1000215216 512 byte sectors)
+[4] nvd8: <HP SSD EX950 512GB> NVMe namespace
+[4] nvd8: 488386MB (1000215216 512 byte sectors)
+[4] nvd9: <HP SSD EX950 512GB> NVMe namespace
+[4] nvd9: 488386MB (1000215216 512 byte sectors)
+[4] ipmi0: IPMI device rev. 1, firmware rev. 3.88, version 2.0, device support mask 0xbf
+[4] ipmi0: Number of channels 2
+[4] ipmi0: Attached watchdog
+[4] ipmi0: Establishing power cycle handler
+[8] mlx5_core0: <mlx5_core> mem 0x387ffc000000-0x387ffdffffff irq 56 at device 0.0 numa-domain 2 on pci19
+[9] ses0 at ahciem0 bus 0 scbus4 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+[9] ses1 at ahciem1 bus 0 scbus11 target 0 lun 0
+ses1: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses1: SEMB SES Device
+[9] ada0 at ahcich4 bus 0 scbus5 target 0 lun 0
+ada0: <Micron 5200 MTFDDAK1T9TDN D1MU004> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 1831420MB (3750748848 512 byte sectors)
+[9] ada1 at ahcich5 bus 0 scbus6 target 0 lun 0
+ada1: <Micron 5200 MTFDDAK1T9TDN D1MU004> ACS-3 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 1831420MB (3750748848 512 byte sectors)
+[9] ses1: ada0 in 'Slot 00', SATA Slot: scbus5 target 0
+[9] ada2 at ahcich8 bus 0 scbus9 target 0 lun 0
+ada2: <SATADOM-SL 3IE3 V2 S560301N> ATA8-ACS SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada2: Command Queueing enabled
+ada2: 61057MB (125045424 512 byte sectors)
+[9] ses1: ada1 in 'Slot 01', SATA Slot: scbus6 target 0
+[9] ada3 at ahcich9 bus 0 scbus10 target 0 lun 0
+ada3: <SATADOM-SL 3IE3 V2 S560301N> ATA8-ACS SATA 3.x device
+ada3: Serial Number...
+ada3: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada3: Command Queueing enabled
+ada3: 61057MB (125045424 512 byte sectors)
+[9] ses1: ada2 in 'Slot 04', SATA Slot: scbus9 target 0
+[9] ses1: ada3,pass4 in 'Slot 05', SATA Slot: scbus10 target 0
+[9] GEOM_ELI: Device ada0p4.eli created.
+[9] GEOM_ELI: Encryption: AES-XTS 256
+[9] GEOM_ELI:     Crypto: accelerated software
+[9] GEOM_MIRROR: Device mirror/swap launched (2/2).
+[9] GEOM_ELI: Device ada1p4.eli created.
+[9] GEOM_ELI: Encryption: AES-XTS 256
+[9] GEOM_ELI:     Crypto: accelerated software
+[9] mlx5_core0: INFO: mlx5_port_module_event:706:(pid 12): Module 0, status: plugged and enabled
+[12] mlx5_core: INFO: (mlx5_core0): E-Switch: Total vports 9, l2 table size(65536), per vport: max uc(1024) max mc(16384)
+[12] mlx5_core1: <mlx5_core> mem 0x387ffa000000-0x387ffbffffff irq 60 at device 0.1 numa-domain 2 on pci19
+[12] uhub0: 21 ports with 21 removable, self powered
+[12] mlx5_core1: INFO: mlx5_port_module_event:706:(pid 12): Module 1, status: plugged and enabled
+[15] mlx5_core: INFO: (mlx5_core1): E-Switch: Total vports 9, l2 table size(65536), per vport: max uc(1024) max mc(16384)
+[15] mce0: Ethernet address: ...
+[15] mce0: link state changed to DOWN
+[15] mce1: Ethernet address: ...
+[15] mce1: link state changed to DOWN
+[15] Trying to mount root from zfs:zroot/ROOT/default []...
+[15] Root mount waiting for: usbus0
+[15] WARNING: WITNESS option enabled, expect reduced performance.
+[15] ugen0.2: <Generic 4-Port USB 2.1 Hub> at usbus0
+[15] uhub1 numa-domain 0 on uhub0
+[15] uhub1: <Generic 4-Port USB 2.1 Hub, class 9/0, rev 2.10/1.01, addr 1> on usbus0
+[15] uhub1: MTT enabled
+[16] uhub1: 4 ports with 4 removable, self powered
+[16] Root mount waiting for: usbus0
+[16] ugen0.3: <Generic 4-Port USB 2.1 Hub> at usbus0
+[16] uhub2 numa-domain 0 on uhub1
+[16] uhub2: <Generic 4-Port USB 2.1 Hub, class 9/0, rev 2.10/1.01, addr 2> on usbus0
+[16] uhub2: MTT enabled
+[17] Root mount waiting for: usbus0
+[17] uhub2: 4 ports with 4 removable, self powered
+[18] ugen0.4: <GenesysLogic USB2.0 Hub> at usbus0
+[18] uhub3 numa-domain 0 on uhub2
+[18] uhub3: <GenesysLogic USB2.0 Hub, class 9/0, rev 2.10/92.26, addr 3> on usbus0
+[18] uhub3: MTT enabled
+[18] Root mount waiting for: usbus0
+[19] uhub3: 4 ports with 4 removable, self powered
+[19] Root mount waiting for: usbus0
+[19] ugen0.5: <Logitech USB Receiver> at usbus0
+[19] usbhid0 numa-domain 0 on uhub3
+[19] usbhid0: <Logitech USB Receiver, class 0/0, rev 2.00/30.00, addr 4> on usbus0
+[19] hidbus0: <HID bus> numa-domain 0 on usbhid0
+[19] usbhid1 numa-domain 0 on uhub3
+[19] usbhid1: <Logitech USB Receiver, class 0/0, rev 2.00/30.00, addr 4> on usbus0
+[19] hidbus1: <HID bus> numa-domain 0 on usbhid1
+[20] ugen0.6: <HOLTEK USB-HID Keyboard> at usbus0
+[20] ukbd0 numa-domain 0 on uhub2
+[20] ukbd0: <HOLTEK USB-HID Keyboard, class 0/0, rev 1.10/2.03, addr 5> on usbus0
+[20] kbd2 at ukbd0
+[20] usbhid2 numa-domain 0 on uhub2
+[20] usbhid2: <HOLTEK USB-HID Keyboard, class 0/0, rev 1.10/2.03, addr 5> on usbus0
+[20] hidbus2: <HID bus> numa-domain 0 on usbhid2
+[20] usbhid3 numa-domain 0 on uhub2
+[20] usbhid3: <HOLTEK USB-HID Keyboard, class 0/0, rev 1.10/2.03, addr 5> on usbus0
+[20] hidbus3: <HID bus> numa-domain 0 on usbhid3
+[20] hkbd0: <HOLTEK USB-HID Keyboard> numa-domain 0 on hidbus3
+[20] kbd3 at hkbd0
+[20] usbhid4 numa-domain 0 on uhub2
+[20] usbhid4: <HOLTEK USB-HID Keyboard, class 0/0, rev 1.10/2.03, addr 5> on usbus0
+[20] hidbus4: <HID bus> numa-domain 0 on usbhid4
+[20] Root mount waiting for: usbus0
+[21] ugen0.7: <vendor 0x0557 product 0x7000> at usbus0
+[21] uhub4 numa-domain 0 on uhub0
+[21] uhub4: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 6> on usbus0
+[21] uhub4: 4 ports with 3 removable, self powered
+[21] Root mount waiting for: usbus0
+[22] ugen0.8: <vendor 0x0557 product 0x2419> at usbus0
+[22] ukbd1 numa-domain 0 on uhub4
+[22] ukbd1: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 7> on usbus0
+[22] kbd4 at ukbd1
+[22] usbhid5 numa-domain 0 on uhub4
+[22] usbhid5: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 7> on usbus0
+[22] hidbus5: <HID bus> numa-domain 0 on usbhid5
+[22] Root mount waiting for: usbus0
+[22] ugen0.9: <Generic 4-Port USB 3.1 Hub> at usbus0
+[22] uhub5 numa-domain 0 on uhub0
+[22] uhub5: <Interrupt In Interface> on usbus0
+[23] uhub5: 4 ports with 4 removable, self powered
+[23] Root mount waiting for: usbus0
+[24] ugen0.10: <Generic 4-Port USB 3.1 Hub> at usbus0
+[24] uhub6 numa-domain 0 on uhub5
+[24] uhub6: <Interrupt In Interface> on usbus0
+[24] Root mount waiting for: usbus0
+[24] uhub6: 4 ports with 4 removable, self powered
+[25] ugen0.11: <GenesysLogic USB3.0 Hub> at usbus0
+[25] uhub7 numa-domain 0 on uhub6
+[25] uhub7: <GenesysLogic> on usbus0
+[25] Root mount waiting for: usbus0
+[26] uhub7: 4 ports with 4 removable, self powered
+[26] Dual Console: Video Primary, Serial Secondary
+[27] GEOM_ELI: Device mirror/swap.eli created.
+[27] GEOM_ELI: Encryption: AES-XTS 128
+[27] GEOM_ELI:     Crypto: accelerated software
+[29] CPU: Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz (1800.04-MHz K8-class CPU)
+[29]   Origin="GenuineIntel"  Id=0x306f2  Family=0x6  Model=0x3f  Stepping=2
+[29]   Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+[29]   Features2=0x7ffefbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+[29]   AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+[29]   AMD Features2=0x21<LAHF,ABM>
+[29]   Structured Extended Features=0x37ab<FSGSBASE,TSCADJ,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,NFPUSG>
+[29]   Structured Extended Features3=0x9c000400<MD_CLEAR,IBPB,STIBP,L1DFL,SSBD>
+[29]   XSAVE Features=0x1<XSAVEOPT>
+[29]   VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+[29]   TSC: P-state invariant, performance statistics
+[31] lo0: link state changed to UP
+[35] igb1: link state changed to UP
+[35] igb0: link state changed to UP
+[107] ioat0: <HSW IOAT Ch0> mem 0x383ffff2c000-0x383ffff2ffff irq 31 at device 4.0 numa-domain 0 on pci2
+[107] ioat0: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[107] ioat1: <HSW IOAT Ch1> mem 0x383ffff28000-0x383ffff2bfff irq 39 at device 4.1 numa-domain 0 on pci2
+[107] ioat1: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[107] ioat2: <HSW IOAT Ch2> mem 0x383ffff24000-0x383ffff27fff irq 31 at device 4.2 numa-domain 0 on pci2
+[107] ioat2: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[107] ioat3: <HSW IOAT Ch3> mem 0x383ffff20000-0x383ffff23fff irq 39 at device 4.3 numa-domain 0 on pci2
+[107] ioat3: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[107] ioat4: <HSW IOAT Ch4> mem 0x383ffff1c000-0x383ffff1ffff irq 31 at device 4.4 numa-domain 0 on pci2
+[107] ioat4: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[107] ioat5: <HSW IOAT Ch5> mem 0x383ffff18000-0x383ffff1bfff irq 39 at device 4.5 numa-domain 0 on pci2
+[107] ioat5: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[107] ioat6: <HSW IOAT Ch6> mem 0x383ffff14000-0x383ffff17fff irq 31 at device 4.6 numa-domain 0 on pci2
+[107] ioat6: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[107] ioat7: <HSW IOAT Ch7> mem 0x383ffff10000-0x383ffff13fff irq 39 at device 4.7 numa-domain 0 on pci2
+[107] ioat7: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[108] ioat8: <HSW IOAT Ch0> mem 0x387ffff1c000-0x387ffff1ffff irq 55 at device 4.0 numa-domain 2 on pci16
+[108] ioat8: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[108] ioat9: <HSW IOAT Ch1> mem 0x387ffff18000-0x387ffff1bfff irq 63 at device 4.1 numa-domain 2 on pci16
+[108] ioat9: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[108] ioat10: <HSW IOAT Ch2> mem 0x387ffff14000-0x387ffff17fff irq 55 at device 4.2 numa-domain 2 on pci16
+[108] ioat10: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[109] ioat11: <HSW IOAT Ch3> mem 0x387ffff10000-0x387ffff13fff irq 63 at device 4.3 numa-domain 2 on pci16
+[109] ioat11: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[109] ioat12: <HSW IOAT Ch4> mem 0x387ffff0c000-0x387ffff0ffff irq 55 at device 4.4 numa-domain 2 on pci16
+[109] ioat12: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[109] ioat13: <HSW IOAT Ch5> mem 0x387ffff08000-0x387ffff0bfff irq 63 at device 4.5 numa-domain 2 on pci16
+[109] ioat13: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[109] ioat14: <HSW IOAT Ch6> mem 0x387ffff04000-0x387ffff07fff irq 55 at device 4.6 numa-domain 2 on pci16
+[109] ioat14: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[109] ioat15: <HSW IOAT Ch7> mem 0x387ffff00000-0x387ffff03fff irq 63 at device 4.7 numa-domain 2 on pci16
+[109] ioat15: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+[127] ichsmb0: <Intel Wellsburg SMBus controller> port 0x580-0x59f mem 0x383ffff31000-0x383ffff310ff irq 18 at device 31.3 numa-domain 0 on pci2
+[127] smbus0: <System Management Bus> numa-domain 0 on ichsmb0
+[139] acpi_wmi0: <ACPI-WMI mapping> on acpi0
+[139] acpi_wmi0: cannot find EC device
+[139] acpi_wmi1: <ACPI-WMI mapping> on acpi0
+[139] acpi_wmi1: cannot find EC device
+[149] hms0: <Logitech USB Receiver Mouse> numa-domain 0 on hidbus0
+[149] hms0: 16 buttons and [XYWH] coordinates ID=0
+[149] hms1: <HOLTEK USB-HID Keyboard Mouse> numa-domain 0 on hidbus3
+[149] hms1: 5 buttons and [XYWH] coordinates ID=1
+[150] hms2: <vendor 0x0557 product 0x2419 Tablet> numa-domain 0 on hidbus5
+[150] hms2: 3 buttons and [XYW] coordinates ID=0
+[150] hcons0: <Logitech USB Receiver Consumer Control> numa-domain 0 on hidbus1
+[150] hcons1: <HOLTEK USB-HID Keyboard Consumer Control> numa-domain 0 on hidbus3
+[151] hsctrl0: <HOLTEK USB-HID Keyboard System Control> numa-domain 0 on hidbus3
+[158] Security policy loaded: MAC/ntpd (mac_ntpd)
+[159] [HBSD INTERNAL] the process started with non-default hardening settings
+[159]  -> fname: /usr/local/lib/polkit-1/polkitd 
+[159]  -> pid: 80762 ppid: 58652 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[169] acquiring duplicate lock of same type: "os.lock_mtx"
+[169]  1st os.lock_mtx @ nvidia_os.c:900
+[169]  2nd os.lock_mtx @ nvidia_os.c:900
+[169] stack backtrace:
+[169] #0 0xffffffff80c7cff1 at witness_debugger+0x71
+[169] #1 0xffffffff80bea784 at __mtx_lock_flags+0x94
+[169] #2 0xffffffff8377b5fb at os_acquire_spinlock+0x1b
+[169] #3 0xffffffff8368914c at _nv033412rm+0xc
+[170] acquiring duplicate lock of same type: "os.lock_sx"
+[170]  1st os.lock_sx @ nvidia_os.c:663
+[170]  2nd os.lock_sx @ nvidia_os.c:663
+[170] stack backtrace:
+[170] #0 0xffffffff80c7cff1 at witness_debugger+0x71
+[170] #1 0xffffffff80c174d7 at _sx_xlock+0x67
+[170] #2 0xffffffff8377b0d2 at os_acquire_mutex+0x32
+[170] #3 0xffffffff8330f6ee at _nv034842rm+0x1e
+[181] pid 96001 (mate-session-check-), jid 0, uid 1024: exited on signal 11 (core dumped)
+[182] pid 43476 (mate-session-check-), jid 0, uid 1024: exited on signal 11 (core dumped)
+[183] [HBSD INTERNAL] the process started with non-default hardening settings
+[183]  -> fname: /usr/local/bin/python3.7 
+[183]  -> pid: 65777 ppid: 83850 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[194] [HBSD INTERNAL] the process started with non-default hardening settings
+[194]  -> fname: /usr/local/bin/python3 
+[194]  -> pid: 12600 ppid: 9136 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[208] [HBSD INTERNAL] the process started with non-default hardening settings
+[208]  -> fname: /usr/local/share/chromium/chrome 
+[208]  -> pid: 73623 ppid: 82361 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[209] [HBSD INTERNAL] the process started with non-default hardening settings
+[209]  -> fname: /usr/local/share/chromium/chrome 
+[209]  -> pid: 99148 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[209] [HBSD INTERNAL] the process started with non-default hardening settings
+[209]  -> fname: /usr/local/share/chromium/chrome 
+[209]  -> pid: 106 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 46313 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 48439 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 71094 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 79325 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 97746 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 107 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 11409 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 28974 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 52441 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[211] [HBSD INTERNAL] the process started with non-default hardening settings
+[211]  -> fname: /usr/local/share/chromium/chrome 
+[211]  -> pid: 67761 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[212] [HBSD INTERNAL] the process started with non-default hardening settings
+[212]  -> fname: /usr/local/bin/python3.7 
+[212]  -> pid: 10323 ppid: 71901 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[212] [HBSD INTERNAL] the process started with non-default hardening settings
+[212]  -> fname: /usr/local/share/chromium/chrome 
+[212]  -> pid: 43327 ppid: 82361 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[213] [HBSD INTERNAL] the process started with non-default hardening settings
+[213]  -> fname: /usr/local/share/chromium/chrome 
+[213]  -> pid: 23226 ppid: 43327 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[213] [HBSD INTERNAL] the process started with non-default hardening settings
+[213]  -> fname: /usr/local/share/chromium/chrome 
+[213]  -> pid: 43374 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[213] [HBSD INTERNAL] the process started with non-default hardening settings
+[213]  -> fname: /usr/local/share/chromium/chrome 
+[213]  -> pid: 90245 ppid: 43327 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[213] pid 85049 (node), jid 0, uid 302: exited on signal 4 (core dumped)
+[223] [HBSD INTERNAL] the process started with non-default hardening settings
+[223]  -> fname: /usr/local/share/chromium/chrome 
+[223]  -> pid: 108 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[224] [HBSD INTERNAL] the process started with non-default hardening settings
+[224]  -> fname: /usr/local/share/chromium/chrome 
+[224]  -> pid: 69263 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[268] [HBSD INTERNAL] the process started with non-default hardening settings
+[268]  -> fname: /usr/local/bin/python3 
+[268]  -> pid: 14854 ppid: 96307 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 
+[272] [HBSD INTERNAL] the process started with non-default hardening settings
+[272]  -> fname: /usr/local/share/chromium/chrome 
+[272]  -> pid: 51225 ppid: 73623 p_pax: 0x65a<NOPAGEEXEC,NOMPROTECT,SEGVGUARD,ASLR,NOSHLIBRANDOM,DISALLOWMAP32BIT> 

@@ -1,0 +1,983 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p12-HBSD #0  0857355c1c2(stable/20.7)-dirty: Mon Jan 18 18:12:55 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz (2261.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x106a5  Family=0x6  Model=0x1a  Stepping=5
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x9ce3bd<SSE3,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,DCA,SSE4.1,SSE4.2,POPCNT>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8259432448 (7876 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 16 CPUs
+FreeBSD/SMP: 2 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic1: Changing APIC ID to 1
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 32-55 on motherboard
+Launching APs: 1 7 11 3 15 5 14 4 2 9 13 10 6 8 12
+Timecounter "TSC-low" frequency 1130523624 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+000.000066 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+bce0: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xd6000000-0xd7ffffff irq 36 at device 0.0 on pci1
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xd8000000-0xd9ffffff irq 48 at device 0.1 on pci1
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+pcib2: <ACPI PCI-PCI bridge> at device 3.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce2: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xda000000-0xdbffffff irq 32 at device 0.0 on pci2
+miibus2: <MII bus> on bce2
+brgphy2: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus2
+brgphy2:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce2: Using defaults for TSO: 65518/35/2048
+bce2: Ethernet address: ...
+bce2: 
+bce2: link state changed to DOWN
+ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce3: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xdc000000-0xddffffff irq 42 at device 0.1 on pci2
+miibus3: <MII bus> on bce3
+brgphy3: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus3
+brgphy3:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce3: Using defaults for TSO: 65518/35/2048
+bce3: Ethernet address: ...
+bce3: 
+bce3: link state changed to DOWN
+ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+pcib3: <ACPI PCI-PCI bridge> at device 7.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+em0: <Intel(R) PRO/1000 Network Connection> port 0xecc0-0xecdf mem 0xdf180000-0xdf19ffff,0xdf1a0000-0xdf1bffff irq 38 at device 0.0 on pci3
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 Network Connection> port 0xece0-0xecff mem 0xdf1c0000-0xdf1dffff,0xdf1e0000-0xdf1fffff irq 45 at device 0.1 on pci3
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib4: <ACPI PCI-PCI bridge> at device 9.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pci0: <base peripheral, interrupt controller> at device 20.0 (no driver attached)
+pci0: <base peripheral, interrupt controller> at device 20.1 (no driver attached)
+pci0: <base peripheral, interrupt controller> at device 20.2 (no driver attached)
+uhci0: <Intel 82801I (ICH9) USB controller> port 0xdc40-0xdc5f irq 17 at device 26.0 on pci0
+uhci0: LegSup = 0x2f00
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 82801I (ICH9) USB controller> port 0xdc60-0xdc7f irq 18 at device 26.1 on pci0
+uhci1: LegSup = 0x2f00
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 82801I (ICH9) USB 2.0 controller> mem 0xdf0de000-0xdf0de3ff irq 19 at device 26.7 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+usbus2: 480Mbps High Speed USB v2.0
+pcib5: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+mfi0: <Dell PERC 6> port 0xfc00-0xfcff mem 0xdf280000-0xdf2bffff,0xdf2c0000-0xdf2fffff irq 16 at device 0.0 on pci5
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: FW MaxCmds = 1008, limiting to 128
+mfi0: 12772 (664452889s/0x0020/info) - Shutdown command received from host
+mfi0: 12773 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0060/1000/1f0c/1028)
+mfi0: 12774 (boot + 3s/0x0020/info) - Firmware version 1.22.32-1371
+mfi0: 12775 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0060/1000/1f0c/1028)
+mfi0: 12776 (boot + 3s/0x0020/info) - Firmware version 1.22.32-1371
+mfi0: 12777 (boot + 23s/0x0008/info) - Battery Present
+mfi0: 12778 (boot + 23s/0x0020/info) - Controller hardware revision ID (0x0)
+mfi0: 12779 (boot + 23s/0x0020/info) - Package version 6.3.1-0003
+mfi0: 12780 (boot + 23s/0x0020/info) - Board Revision 
+mfi0: 12781 (boot + 37s/0x0004/info) - Enclosure PD 20(c None/p0) communication restored
+uhci2: mfi0: 12782 (boot + 37s/0x0002/info) - Inserted: Encl PD 20
+<Intel 82801I (ICH9) USB controller> port 0xdc80-0xdc9f irq 21 at device 29.0mfi0:  on pci0
+MFI_DCMD_PD_LIST_QUERY failed 2
+mfi0: uhci2: 12783 (boot + 37s/0x0002/info) - Inserted: PD 20(c None/p0) Info: enclPd=20, scsiType=d, portMap=09, sasAddr=50026090393bc900,0000000000000000
+mfi0: 12784 (boot + 37s/0x0002/info) - Inserted: PD 00(e0xff/s0)
+LegSup = 0x2f00
+mfi0: MFI_DCMD_PD_LIST_QUERY failed 2
+mfi0: 12785 (boot + 37s/0x0002/info) - Inserted: PD 00(e0xff/s0) Info: enclPd=ffff, scsiType=0, portMap=00, sasAddr=1221000000000000,0000000000000000
+mfi0: 12786 (boot + 37s/0x0002/WARN) - PD 00(e0xff/s0) is not a certified drive
+mfi0: 12787 (664452947s/0x0020/info) - Time established as 01/20/21 10:15:47; (38 seconds since power on)
+mfi0: 12788 (664452997s/0x0008/info) - Battery temperature is normal
+mfi0: 12789 (664452997s/0x0008/info) - Current capacity of the battery is above threshold
+usbus3mfi0: 12790 (664452997s/0x0008/info) - Battery charge complete
+mfi0: 12791 (664453067s/0x0004/WARN) - Enclosure PD 20(c None/p0) sensor 0 bad
+ on uhci2
+usbus3: 12Mbps Full Speed USB v1.0
+uhci3: <Intel 82801I (ICH9) USB controller> port 0xdca0-0xdcbf irq 20 at device 29.1 on pci0
+uhci3: LegSup = 0x2f00
+usbus4 on uhci3
+usbus4: 12Mbps Full Speed USB v1.0
+ehci1: <Intel 82801I (ICH9) USB 2.0 controller> mem 0xdf0df000-0xdf0df3ff irq 21 at device 29.7 on pci0
+usbus5: EHCI version 1.0
+usbus5 on ehci1
+usbus5: 480Mbps High Speed USB v2.0
+pcib6: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+vgapci0: <VGA-compatible display> mem 0xd5800000-0xd5ffffff,0xde7fc000-0xde7fffff,0xde800000-0xdeffffff irq 19 at device 3.0 on pci6
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci0: <Intel ICH9 SATA300 controller> port 0xdc10-0xdc17,0xdc08-0xdc0b,0xdc18-0xdc1f,0xdc0c-0xdc0f,0xdc20-0xdc2f,0xdc30-0xdc3f irq 23 at device 31.2 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xc8fff,0xc9000-0xcbfff,0xcc000-0xcefff,0xcf000-0xd1fff,0xd2000-0xd4fff,0xec000-0xeffff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est3 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est4 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est5 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est6 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est7 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est8 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est9 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est10 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est11 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est12 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est13 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est14 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est15 attach returned 6
+Timecounters tick every 1.000 msec
+mfid0 on mfi0
+mfid0: 228352MB (467664896 sectors) RAID volume 'Virtual Disk 00' is optimal
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen0.1: <Intel UHCI root HUB> at usbus0
+ugen4.1: <Intel UHCI root HUB> at usbus4
+ugen3.1: <Intel UHCI root HUB> at usbus3
+ugen1.1: <Intel UHCI root HUB> at usbus1
+ugen5.1: <Intel EHCI root HUB> at usbus5
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub2: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub3: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub4: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub5: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub1: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+uhub4: 2 ports with 2 removable, self powered
+uhub5: 2 ports with 2 removable, self powered
+cd0 at ata2 bus 0 scbus0 target 0 lun 0
+cd0: <TEAC DVD-ROM DV28SV D.0K> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub3: 4 ports with 4 removable, self powered
+uhub0: 4 ports with 4 removable, self powered
+ugen2.2: <vendor 0x0424 product 0x2514> at usbus2
+uhub6 on uhub0
+uhub6: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 2> on usbus2
+uhub6: MTT enabled
+uhub6: 3 ports with 3 removable, self powered
+em0: link state changed to UP
+em1: link state changed to UP
+ioat0: <TBG IOAT Ch0> mem 0xdf0e0000-0xdf0e3fff irq 51 at device 22.0 on pci0
+ioat0: Capabilities: 77<Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat1: <TBG IOAT Ch1> mem 0xdf0e4000-0xdf0e7fff irq 52 at device 22.1 on pci0
+ioat1: Capabilities: 77<Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat2: <TBG IOAT Ch2> mem 0xdf0e8000-0xdf0ebfff irq 53 at device 22.2 on pci0
+ioat2: Capabilities: 77<Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat3: <TBG IOAT Ch3> mem 0xdf0ec000-0xdf0effff irq 54 at device 22.3 on pci0
+ioat3: Capabilities: 77<Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat4: <TBG IOAT Ch4> mem 0xdf0f0000-0xdf0f3fff irq 51 at device 22.4 on pci0
+ioat4: Capabilities: 77<Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat5: <TBG IOAT Ch5> mem 0xdf0f4000-0xdf0f7fff irq 52 at device 22.5 on pci0
+ioat5: Capabilities: 77<Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat6: <TBG IOAT Ch6> mem 0xdf0f8000-0xdf0fbfff irq 53 at device 22.6 on pci0
+ioat6: Capabilities: 77<Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat7: <TBG IOAT Ch7> mem 0xdf0fc000-0xdf0fffff irq 54 at device 22.7 on pci0
+ioat7: Capabilities: 77<Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est3 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est4 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est5 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est6 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est7 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est8 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est9 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est10 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est11 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est12 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est13 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est14 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est15 attach returned 6
+em1: link state changed to DOWN
+em0: link state changed to DOWN
+bridge0: Ethernet address: ...
+em1: promiscuous mode enabled
+bridge0: link state changed to UP
+bce0: promiscuous mode enabled
+bridge0: link state changed to DOWN
+bce1: promiscuous mode enabled
+bce2: promiscuous mode enabled
+bce3: promiscuous mode enabled
+bce1: link state changed to UP
+bridge0: link state changed to UP
+bce0: link state changed to UP
+bce0: Gigabit link up!
+em0: link state changed to UP
+bce2: Gigabit link up!
+bce2: link state changed to UP
+em1: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+963.111764 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+963.111800 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+bce0: permanently promiscuous mode enabled
+963.112324 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+963.245161 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+963.245338 [1130] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+963.245365 [1035] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+963.245452 [1130] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+963.245478 [1035] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+963.245568 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+963.245600 [1035] generic_netmap_dtor       Emulated netmap adapter for bce1 destroyed
+bce3: permanently promiscuous mode enabled
+963.246000 [1130] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+963.246254 [ 320] generic_netmap_register   Emulated adapter for bce3 activated
+bce1: permanently promiscuous mode enabled
+963.246449 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+bce2: permanently promiscuous mode enabled
+em1: permanently promiscuous mode enabled
+963.246697 [ 320] generic_netmap_register   Emulated adapter for bce1 activated
+963.246855 [1130] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+963.247140 [ 320] generic_netmap_register   Emulated adapter for bce2 activated
+em1: link state changed to DOWN
+em1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+em0: permanently promiscuous mode enabled
+em0: link state changed to DOWN
+em0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bridge0
+945.626607 [ 295] generic_netmap_unregister Emulated adapter for bce1 deactivated
+945.626722 [1035] generic_netmap_dtor       Emulated netmap adapter for bce1 destroyed
+945.706464 [ 295] generic_netmap_unregister Emulated adapter for bce2 deactivated
+945.706598 [1035] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+945.833655 [ 295] generic_netmap_unregister Emulated adapter for bce0 deactivated
+945.833777 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+em1: link state changed to DOWN
+946.414133 [ 295] generic_netmap_unregister Emulated adapter for bce3 deactivated
+946.414258 [1035] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+em1: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bridge0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bridge0
+vlan0: changing name to 'bridge0_vlan99'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+mfi0: 12792 (664733539s/0x0020/WARN) - Patrol Read can't be started, as PDs are either not ONLINE, or are in a VD with an active process, or are in an excluded VD
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+cannot forward from fe80:XXXX::XXX:XXX:XXX:XXX to fe80:XXXX::XXX:XXX:XXX:XXX nxt 58 received on bridge0
+967.441455 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+967.441483 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+967.441847 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+967.442102 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+967.477471 [1130] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+967.477507 [1035] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+967.477558 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+967.477585 [1035] generic_netmap_dtor       Emulated netmap adapter for bce1 destroyed
+967.477616 [1130] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+967.477648 [1035] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+967.478009 [1130] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+967.478297 [ 320] generic_netmap_register   Emulated adapter for bce2 activated
+967.478491 [1130] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+967.478862 [ 320] generic_netmap_register   Emulated adapter for bce3 activated
+967.479055 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+967.479376 [ 320] generic_netmap_register   Emulated adapter for bce1 activated
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+946.184854 [ 295] generic_netmap_unregister Emulated adapter for bce0 deactivated
+946.184992 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+946.213757 [ 295] generic_netmap_unregister Emulated adapter for bce3 deactivated
+946.213906 [1035] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+946.274493 [ 295] generic_netmap_unregister Emulated adapter for bce2 deactivated
+946.274627 [1035] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+946.405422 [ 295] generic_netmap_unregister Emulated adapter for bce1 deactivated
+946.405589 [1035] generic_netmap_dtor       Emulated netmap adapter for bce1 destroyed
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP

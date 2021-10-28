@@ -1,0 +1,333 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p18-HBSD #0  2e2d4484b05(stable/21.7)-dirty: Tue Jun 29 08:38:24 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz (3408.17-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906e9  Family=0x6  Model=0x9e  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16516874240 (15751 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 3 2
+Timecounter "TSC-low" frequency 1704084338 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000054 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> port 0xe000-0xe0ff mem 0xdf600000-0xdf603fff at device 0.0 on pci1
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xde000000-0xdeffffff,0xc0000000-0xcfffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xdf710000-0xdf71ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xdf728000-0xdf729fff,0xdf72c000-0xdf72c0ff,0xdf72b000-0xdf72b7ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb0: <Intel(R) I211 (Copper)> port 0xd000-0xd01f mem 0xdf500000-0xdf51ffff,0xdf520000-0xdf523fff at device 0.0 on pci2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib3: <ACPI PCI-PCI bridge> at device 28.7 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb1: <Intel(R) I211 (Copper)> port 0xc000-0xc01f mem 0xdf400000-0xdf41ffff,0xdf420000-0xdf423fff at device 0.0 on pci3
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib4: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb2: <Intel(R) I211 (Copper)> port 0xb000-0xb01f mem 0xdf300000-0xdf31ffff,0xdf320000-0xdf323fff at device 0.0 on pci4
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib5: <ACPI PCI-PCI bridge> at device 29.1 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb3: <Intel(R) I211 (Copper)> port 0xa000-0xa01f mem 0xdf200000-0xdf21ffff,0xdf220000-0xdf223fff at device 0.0 on pci5
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> at device 29.2 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb4: <Intel(R) I211 (Copper)> port 0x9000-0x901f mem 0xdf100000-0xdf11ffff,0xdf120000-0xdf123fff at device 0.0 on pci6
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib7: <ACPI PCI-PCI bridge> at device 29.3 on pci0
+pci7: <ACPI PCI bus> on pcib7
+igb5: <Intel(R) I211 (Copper)> port 0x8000-0x801f mem 0xdf000000-0xdf01ffff,0xdf020000-0xdf023fff at device 0.0 on pci7
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Sunrise Point HDA Controller> mem 0xdf720000-0xdf723fff,0xdf700000-0xdf70ffff at device 31.3 on pci0
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <SAMSUNG MZFLV128HCGR-000MV> NVMe namespace
+nvd0: 122104MB (250069680 512 byte sectors)
+hdacc0: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa0: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa0
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 22 ports with 22 removable, self powered
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 1 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+Uptime: 20s
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p18-HBSD #0  2e2d4484b05(stable/21.7)-dirty: Tue Jun 29 08:38:24 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz (3408.17-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906e9  Family=0x6  Model=0x9e  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16516874240 (15751 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 3 1 2
+Timecounter "TSC-low" frequency 1704084746 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000054 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> port 0xe000-0xe0ff mem 0xdf600000-0xdf603fff at device 0.0 on pci1
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xde000000-0xdeffffff,0xc0000000-0xcfffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xdf710000-0xdf71ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xdf728000-0xdf729fff,0xdf72c000-0xdf72c0ff,0xdf72b000-0xdf72b7ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb0: <Intel(R) I211 (Copper)> port 0xd000-0xd01f mem 0xdf500000-0xdf51ffff,0xdf520000-0xdf523fff at device 0.0 on pci2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib3: <ACPI PCI-PCI bridge> at device 28.7 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb1: <Intel(R) I211 (Copper)> port 0xc000-0xc01f mem 0xdf400000-0xdf41ffff,0xdf420000-0xdf423fff at device 0.0 on pci3
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib4: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb2: <Intel(R) I211 (Copper)> port 0xb000-0xb01f mem 0xdf300000-0xdf31ffff,0xdf320000-0xdf323fff at device 0.0 on pci4
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib5: <ACPI PCI-PCI bridge> at device 29.1 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb3: <Intel(R) I211 (Copper)> port 0xa000-0xa01f mem 0xdf200000-0xdf21ffff,0xdf220000-0xdf223fff at device 0.0 on pci5
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> at device 29.2 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb4: <Intel(R) I211 (Copper)> port 0x9000-0x901f mem 0xdf100000-0xdf11ffff,0xdf120000-0xdf123fff at device 0.0 on pci6
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib7: <ACPI PCI-PCI bridge> at device 29.3 on pci0
+pci7: <ACPI PCI bus> on pcib7
+igb5: <Intel(R) I211 (Copper)> port 0x8000-0x801f mem 0xdf000000-0xdf01ffff,0xdf020000-0xdf023fff at device 0.0 on pci7
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Sunrise Point HDA Controller> mem 0xdf720000-0xdf723fff,0xdf700000-0xdf70ffff at device 31.3 on pci0
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <SAMSUNG MZFLV128HCGR-000MV> NVMe namespace
+nvd0: 122104MB (250069680 512 byte sectors)
+hdacc0: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa0: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa0
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 22 ports with 22 removable, self powered
+igb0: link state changed to UP
+igb1: link state changed to UP
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+igb1: link state changed to DOWN
+igb0: link state changed to DOWN
+igb1: link state changed to UP
+igb0: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+tun1: link state changed to UP
+tun1: changing name to 'wg1'

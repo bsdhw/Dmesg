@@ -1,0 +1,194 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE-p3 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(vga): resolution 640x480
+CPU: Dual-Core AMD Opteron(tm) Processor 2218 (2600.15-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x40f13  Family=0xf  Model=0x41  Stepping=3
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x2001<SSE3,CX16>
+  AMD Features=0xea500800<SYSCALL,NX,MMX+,FFXSR,RDTSCP,LM,3DNow!+,3DNow!>
+  AMD Features2=0x1f<LAHF,CMP,SVM,ExtAPIC,CR8>
+  SVM: NAsids=64
+real memory  = 21474836480 (20480 MB)
+avail memory = 20812591104 (19848 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <HP     ProLiant>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 2 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0 <Version 1.1> irqs 0-15 on motherboard
+ioapic1 <Version 1.1> irqs 16-31 on motherboard
+ioapic2 <Version 1.1> irqs 32-47 on motherboard
+Launching APs: 1 3 2
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81114e40, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <HP ProLiant> on motherboard
+acpi0: Power Button (fixed)
+Firmware Error (ACPI): AE_AML_BUFFER_LIMIT, Field [CDW3] at bit offset/length 64/32 exceeds size of target Buffer (64 bits) (20200430/dsopcode-356)
+ACPI Error: Aborting method \134_SB._OSC due to previous error (AE_AML_BUFFER_LIMIT) (20200430/psparse-689)
+acpi0: _OSC failed: AE_AML_BUFFER_LIMIT
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+apei0: <ACPI Platform Error Interface> on acpi0
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x920-0x923 on acpi0
+pcib0: <ACPI Host-PCI bridge> on acpi0
+pcib0: Length mismatch for 4 range: 918 vs 917
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x1000-0x10ff mem 0xe8000000-0xefffffff,0xf5ff0000-0xf5ffffff irq 44 at device 3.0 on pci0
+vgapci0: Boot video device
+uhci0: <HP iLO Standard Virtual USB controller> port 0x1800-0x181f irq 45 at device 4.4 on pci0
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+pci0: <serial bus> at device 4.6 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 5.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 13.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+atapci0: <ServerWorks HT1000 UDMA100 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0x500-0x50f at device 6.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+ata1: <ATA channel> at channel 1 on atapci0
+isab0: <PCI-ISA bridge> at device 6.2 on pci0
+isa0: <ISA bus> on isab0
+ohci0: <OHCI (generic) USB controller> port 0x1c00-0x1cff mem 0xf5ee0000-0xf5ee0fff irq 5 at device 7.0 on pci0
+usbus1 on ohci0
+usbus1: 12Mbps Full Speed USB v1.0
+ohci1: <OHCI (generic) USB controller> port 0x3000-0x30ff mem 0xf5ed0000-0xf5ed0fff irq 5 at device 7.1 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci0: <EHCI (generic) USB 2.0 controller> port 0x3400-0x34ff mem 0xf5ec0000-0xf5ec0fff irq 5 at device 7.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci0
+usbus3: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> irq 42 at device 15.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+ciss0: <HP Smart Array P600> port 0x4000-0x40ff mem 0xf9df0000-0xf9df1fff,0xf9d80000-0xf9dbffff irq 39 at device 2.0 on pci4
+ciss0: PERFORMANT Transport
+ciss0: got 0 MSI messages]
+pcib5: <ACPI PCI-PCI bridge> irq 38 at device 16.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+pcib6: <ACPI PCI-PCI bridge> mem 0xf9ef0000-0xf9ef1fff irq 38 at device 0.0 on pci5
+pci6: <ACPI PCI bus> on pcib6
+mpt0: <LSILogic 1030 Ultra4 Adapter> port 0x5000-0x50ff mem 0xf9fe0000-0xf9ffffff,0xf9fc0000-0xf9fdffff irq 38 at device 8.0 on pci6
+mpt0: MPI Version=XXX.XXX.XXX.XXX
+pcib7: <PCI-PCI bridge> irq 39 at device 17.0 on pci0
+pci7: <PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> irq 40 at device 18.0 on pci0
+pci8: <ACPI PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> irq 41 at device 19.0 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pcib10: <PCI-PCI bridge> at device 0.0 on pci9
+pci10: <PCI bus> on pcib10
+bce0: <HP NC373i Multifunction Gigabit Server Adapter (B2)> mem 0xf6000000-0xf7ffffff irq 41 at device 0.0 on pci10
+bce0: /usr/src/sys/dev/bce/if_bce.c(1284): Management firmware enabled but not running!
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5708C 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57081020); Rev (B2); Bus (PCI-X, 64-bit, 133MHz); B/C (1.9.6); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NOT RUNNING!)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+pcib11: <ACPI Host-PCI bridge> on acpi0
+pci11: <ACPI PCI bus> on pcib11
+pcib12: <ACPI PCI-PCI bridge> irq 36 at device 15.0 on pci11
+pci12: <ACPI PCI bus> on pcib12
+pcib13: <ACPI PCI-PCI bridge> irq 32 at device 16.0 on pci11
+pci13: <ACPI PCI bus> on pcib13
+ciss1: <HP Smart Array P400> port 0x6000-0x60ff mem 0xfdf00000-0xfdffffff,0xfdef0000-0xfdef0fff irq 32 at device 0.0 on pci13
+ciss1: PERFORMANT Transport
+pcib14: <PCI-PCI bridge> irq 33 at device 17.0 on pci11
+pci14: <PCI bus> on pcib14
+pcib15: <ACPI PCI-PCI bridge> irq 34 at device 18.0 on pci11
+pci15: <ACPI PCI bus> on pcib15
+pcib16: <PCI-PCI bridge> at device 0.0 on pci15
+pci16: <PCI bus> on pcib16
+bce1: <HP NC373i Multifunction Gigabit Server Adapter (B2)> mem 0xfa000000-0xfbffffff irq 34 at device 0.0 on pci16
+bce1: /usr/src/sys/dev/bce/if_bce.c(1284): Management firmware enabled but not running!
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5708C 1000BASE-T media interface> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57081020); Rev (B2); Bus (PCI-X, 64-bit, 133MHz); B/C (1.9.6); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NOT RUNNING!)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+pcib17: <PCI-PCI bridge> irq 35 at device 19.0 on pci11
+pci17: <PCI bus> on pcib17
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+acpi_syscontainer0: <System Container> port 0x2e-0x2f,0x4e-0x4f,0x620-0x65f,0x680-0x69f,0x600-0x61f,0x660-0x67f,0x300-0x30f on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xcafff,0xcb000-0xcefff,0xcf000-0xcf7ff,0xcf800-0xd37ff,0xd3800-0xd4fff,0xe5000-0xe6fff pnpid ORM0000 on isa0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+uart1: <Non-standard ns8250 class UART with FIFOs> at port 0x2f8 irq 3 on isa0
+uart1: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+powernow0: <PowerNow! K8> on cpu0
+Timecounters tick every 1.000 msec
+ugen1.1: <(0x1166) OHCI root HUB> at usbus1
+ugen3.1: <(0x1166) EHCI root HUB> at usbus3
+uhub1: <(0x1166) EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+uhub0: <(0x1166) OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+ugen2.1: <(0x1166) OHCI root HUB> at usbus2
+ugen0.1: <HP UHCI root HUB> at usbus0
+Trying to mount root from ufs:/dev/da0s1a [rw]...
+Root mount waiting for: usbus0 CAM usbus1 usbus2 usbus3
+uhub2: <(0x1166) OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub3: <HP UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub2: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub3: 2 ports with 2 removable, self powered
+bce0: bce_pulse(): Warning: bootcode thinks driver is absent! (bc_state = 0x00000006)
+Root mount waiting for: usbus0 CAM usbus3
+ugen0.2: <HP Virtual Keyboard> at usbus0
+ukbd0 on uhub3
+ukbd0: <Virtual Keyboard> on usbus0
+kbd2 at ukbd0
+uhub1: 4 ports with 4 removable, self powered
+Root mount waiting for: CAM
+ugen2.2: <vendor 0x04b4 product 0x6560> at usbus2
+uhub4 on uhub2
+uhub4: <vendor 0x04b4 product 0x6560, class 9/0, rev 2.00/0.07, addr 2> on usbus2
+Root mount waiting for: CAM
+uhub4: 4 ports with 4 removable, self powered
+da0 at ciss1 bus 0 scbus4 target 0 lun 0
+da0: <HP RAID 1(1+0) OK> Fixed Direct Access SPC-3 SCSI device
+da0: Serial Number...
+da0: 135.168MB/s transfers
+da0: Command Queueing enabled
+da0: 69973MB (143305920 512 byte sectors)
+cd0 at ata0 bus 0 scbus0 target 0 lun 0
+cd0: <Optiarc DVD RW AD-7561A GH53> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 33.300MB/s transfers (UDMA2, ATAPI 12bytes, PIO 65534bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+mountroot: waiting for device /dev/da0s1a...
+lo0: link state changed to UP
+bce0: Gigabit link up!
+bce0: link state changed to UP
+ums0 on uhub3
+ums0: <Virtual Mouse> on usbus0
+ums0: 3 buttons and [XY] coordinates ID=0

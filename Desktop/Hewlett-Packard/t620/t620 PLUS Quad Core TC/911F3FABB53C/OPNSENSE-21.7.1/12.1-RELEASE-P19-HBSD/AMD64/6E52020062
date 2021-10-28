@@ -1,0 +1,441 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD  f692db99f3c(stable/21.7) SMP amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: AMD GX-420CA SOC with Radeon(tm) HD Graphics    (1996.29-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x700f01  Family=0x16  Model=0x0  Stepping=1
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x3ed8220b<SSE3,PCLMULQDQ,MON,SSSE3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C>
+  AMD Features=0x2e400800<SYSCALL,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x154037ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,Topology,PNXC,DBE,PL2I>
+  Structured Extended Features=0x8<BMI1>
+  XSAVE Features=0x1<XSAVEOPT>
+  SVM: (disabled in BIOS) NP,NRIP,AFlush,DAssist,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3489955840 (3328 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM SLIC-CPC>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20181213/tbfadt-796)
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+Launching APs: 3 1 2
+Timecounter "TSC" frequency 1996293253 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+000.000054 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <HPQOEM SLIC-CPC> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xc0000000-0xcfffffff,0xd0000000-0xd07fffff,0xfeb00000-0xfeb3ffff irq 44 at device 1.0 on pci0
+vgapci0: Boot video device
+hdac0: <ATI (0x9840) HDA Controller> mem 0xfeb64000-0xfeb67fff irq 45 at device 1.1 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 24 at device 2.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+em0: <Intel(R) PRO/1000 PT 82571EB/82571GB (Copper)> port 0xe020-0xe03f mem 0xfeaa0000-0xfeabffff,0xfea80000-0xfea9ffff irq 24 at device 0.0 on pci1
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 PT 82571EB/82571GB (Copper)> port 0xe000-0xe01f mem 0xfea40000-0xfea5ffff,0xfea20000-0xfea3ffff irq 25 at device 0.1 on pci1
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib2: <ACPI PCI-PCI bridge> irq 25 at device 2.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> irq 26 at device 2.3 on pci0
+pci3: <ACPI PCI bus> on pcib3
+re0: <Realtek PCIe GbE Family Controller> port 0xd000-0xd0ff mem 0xfe800000-0xfe800fff,0xd0800000-0xd0803fff irq 32 at device 0.0 on pci3
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+xhci0: <AMD FCH USB 3.0 controller> mem 0xfeb68000-0xfeb69fff irq 18 at device 16.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AMD Hudson-2 AHCI SATA controller> port 0xf140-0xf147,0xf130-0xf133,0xf120-0xf127,0xf110-0xf113,0xf100-0xf10f mem 0xfeb6e000-0xfeb6e3ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.30 with 2 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ohci0: <AMD FCH USB Controller> mem 0xfeb6d000-0xfeb6dfff irq 18 at device 18.0 on pci0
+usbus1 on ohci0
+usbus1: 12Mbps Full Speed USB v1.0
+ehci0: <AMD FCH USB 2.0 controller> mem 0xfeb6c000-0xfeb6c0ff irq 17 at device 18.2 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+usbus2: 480Mbps High Speed USB v2.0
+ohci1: <AMD FCH USB Controller> mem 0xfeb6b000-0xfeb6bfff irq 18 at device 19.0 on pci0
+usbus3 on ohci1
+usbus3: 12Mbps Full Speed USB v1.0
+ehci1: <AMD FCH USB 2.0 controller> mem 0xfeb6a000-0xfeb6a0ff irq 17 at device 19.2 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci1
+usbus4: 480Mbps High Speed USB v2.0
+hdac1: <AMD Hudson-2 HDA Controller> mem 0xfeb60000-0xfeb63fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+ppc0: <Parallel port> port 0x378-0x37f,0x778-0x77f irq 7 drq 3 on acpi0
+ppc0: SMC-like chipset (ECP/EPP/PS2/NIBBLE) in COMPATIBLE mode
+ppc0: FIFO with 16/16/8 bytes threshold
+ppbus0: <Parallel port bus> on ppc0
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+orm0: <ISA Option ROM> at iomem 0xcf000-0xcffff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+hdacc1: <Realtek ALC221 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC221 Audio Function Group> at nid 1 on hdacc1
+pcm2: <Realtek ALC221 (Analog 2.0+HP/2.0)> at nid 20,33 and 26,27 on hdaa1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+ugen3.1: <AMD OHCI root HUB> at usbus3
+ugen4.1: <AMD EHCI root HUB> at usbus4
+ugen1.1: <AMD OHCI root HUB> at usbus1
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1: <AMD OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+ugen2.1: <AMD EHCI root HUB> at usbus2
+uhub2: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+uhub3: <AMD OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub4: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <SanDisk SDSA6MM-016G-1006 U221006> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 15272MB (31277232 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw,noatime]...
+WARNING: /mnt was not properly dismounted
+uhub1: 4 ports with 4 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+uhub0: 4 ports with 4 removable, self powered
+uhub4: 4 ports with 4 removable, self powered
+uhub2: 4 ports with 4 removable, self powered
+ugen3.2: <Broadcom Corp BCM20702A0> at usbus3
+em1: link state changed to UP
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+ubt0 on uhub3
+ubt0: <Broadcom Corp BCM20702A0, rev 2.00/1.12, addr 2> on usbus3
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+em1: link state changed to DOWN
+re0: link state changed to DOWN
+em1: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+em0: link state changed to UP
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em0: link state changed to DOWN
+re0: link state changed to DOWN
+re0: link state changed to UP
+em0: link state changed to UP
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to accept, logging disabled
+load_dn_sched dn_sched FIFO loaded
+load_dn_sched dn_sched QFQ loaded
+load_dn_sched dn_sched RR loaded
+load_dn_sched dn_sched WF2Q+ loaded
+load_dn_sched dn_sched PRIO loaded
+load_dn_sched dn_sched FQ_CODEL loaded
+load_dn_sched dn_sched FQ_PIE loaded
+load_dn_aqm dn_aqm CODEL loaded
+load_dn_aqm dn_aqm PIE loaded
+Bump sched buckets to 256 (was 0)
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+[zone: pf frag entries] PF frag entries limit reached
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+All buffers synced.
+Uptime: 6d2h5m32s
+ubt0: detached
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD #0  f692db99f3c(stable/21.7)-dirty: Mon Aug  2 13:29:29 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: AMD GX-420CA SOC with Radeon(tm) HD Graphics    (1996.29-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x700f01  Family=0x16  Model=0x0  Stepping=1
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x3ed8220b<SSE3,PCLMULQDQ,MON,SSSE3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C>
+  AMD Features=0x2e400800<SYSCALL,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x154037ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,Topology,PNXC,DBE,PL2I>
+  Structured Extended Features=0x8<BMI1>
+  XSAVE Features=0x1<XSAVEOPT>
+  SVM: (disabled in BIOS) NP,NRIP,AFlush,DAssist,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3489955840 (3328 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM SLIC-CPC>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20181213/tbfadt-796)
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+Launching APs: 3 1 2
+Timecounter "TSC" frequency 1996294569 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+000.000054 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <HPQOEM SLIC-CPC> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xc0000000-0xcfffffff,0xd0000000-0xd07fffff,0xfeb00000-0xfeb3ffff irq 44 at device 1.0 on pci0
+vgapci0: Boot video device
+hdac0: <ATI (0x9840) HDA Controller> mem 0xfeb64000-0xfeb67fff irq 45 at device 1.1 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 24 at device 2.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+em0: <Intel(R) PRO/1000 PT 82571EB/82571GB (Copper)> port 0xe020-0xe03f mem 0xfeaa0000-0xfeabffff,0xfea80000-0xfea9ffff irq 24 at device 0.0 on pci1
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 PT 82571EB/82571GB (Copper)> port 0xe000-0xe01f mem 0xfea40000-0xfea5ffff,0xfea20000-0xfea3ffff irq 25 at device 0.1 on pci1
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib2: <ACPI PCI-PCI bridge> irq 25 at device 2.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> irq 26 at device 2.3 on pci0
+pci3: <ACPI PCI bus> on pcib3
+re0: <Realtek PCIe GbE Family Controller> port 0xd000-0xd0ff mem 0xfe800000-0xfe800fff,0xd0800000-0xd0803fff irq 32 at device 0.0 on pci3
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+xhci0: <AMD FCH USB 3.0 controller> mem 0xfeb68000-0xfeb69fff irq 18 at device 16.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AMD Hudson-2 AHCI SATA controller> port 0xf140-0xf147,0xf130-0xf133,0xf120-0xf127,0xf110-0xf113,0xf100-0xf10f mem 0xfeb6e000-0xfeb6e3ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.30 with 2 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ohci0: <AMD FCH USB Controller> mem 0xfeb6d000-0xfeb6dfff irq 18 at device 18.0 on pci0
+usbus1 on ohci0
+usbus1: 12Mbps Full Speed USB v1.0
+ehci0: <AMD FCH USB 2.0 controller> mem 0xfeb6c000-0xfeb6c0ff irq 17 at device 18.2 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+usbus2: 480Mbps High Speed USB v2.0
+ohci1: <AMD FCH USB Controller> mem 0xfeb6b000-0xfeb6bfff irq 18 at device 19.0 on pci0
+usbus3 on ohci1
+usbus3: 12Mbps Full Speed USB v1.0
+ehci1: <AMD FCH USB 2.0 controller> mem 0xfeb6a000-0xfeb6a0ff irq 17 at device 19.2 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci1
+usbus4: 480Mbps High Speed USB v2.0
+hdac1: <AMD Hudson-2 HDA Controller> mem 0xfeb60000-0xfeb63fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+ppc0: <Parallel port> port 0x378-0x37f,0x778-0x77f irq 7 drq 3 on acpi0
+ppc0: SMC-like chipset (ECP/EPP/PS2/NIBBLE) in COMPATIBLE mode
+ppc0: FIFO with 16/16/8 bytes threshold
+ppbus0: <Parallel port bus> on ppc0
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+orm0: <ISA Option ROM> at iomem 0xcf000-0xcffff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+hdacc1: <Realtek ALC221 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC221 Audio Function Group> at nid 1 on hdacc1
+pcm2: <Realtek ALC221 (Analog 2.0+HP/2.0)> at nid 20,33 and 26,27 on hdaa1
+ugen2.1: <AMD EHCI root HUB> at usbus2
+ugen3.1: <AMD OHCI root HUB> at usbus3
+ugen1.1: <AMD OHCI root HUB> at usbus1
+ugen4.1: <AMD EHCI root HUB> at usbus4
+uhub0: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <AMD OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub2: <AMD OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub4: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <SanDisk SDSA6MM-016G-1006 U221006> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 15272MB (31277232 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw,noatime]...
+uhub1: 4 ports with 4 removable, self powered
+uhub2: 4 ports with 4 removable, self powered
+uhub4: 4 ports with 4 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+uhub0: 4 ports with 4 removable, self powered
+ugen3.2: <Broadcom Corp BCM20702A0> at usbus3
+em0: link state changed to UP
+em1: link state changed to UP
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+ubt0 on uhub2
+ubt0: <Broadcom Corp BCM20702A0, rev 2.00/1.12, addr 2> on usbus3
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+em1: link state changed to DOWN
+em0: link state changed to DOWN
+re0: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+em1: link state changed to UP
+em0: link state changed to UP
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to accept, logging disabled
+load_dn_sched dn_sched FIFO loaded
+load_dn_sched dn_sched QFQ loaded
+load_dn_sched dn_sched RR loaded
+load_dn_sched dn_sched WF2Q+ loaded
+load_dn_sched dn_sched PRIO loaded
+load_dn_sched dn_sched FQ_CODEL loaded
+load_dn_sched dn_sched FQ_PIE loaded
+load_dn_aqm dn_aqm CODEL loaded
+load_dn_aqm dn_aqm PIE loaded
+Bump sched buckets to 256 (was 0)

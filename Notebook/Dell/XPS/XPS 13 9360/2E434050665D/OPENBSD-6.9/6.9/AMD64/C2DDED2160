@@ -1,0 +1,2735 @@
+ 20 function 2 "Intel 100 Series Thermal" rev 0x21
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+imt0 at ihidev0: clickpad, 5 contacts
+wsmouse0 at imt0 mux 0
+ims0 at ihidev0 reportid 2: 2 buttons
+wsmouse1 at ims0 mux 0
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Realtek/0x0256, Intel/0x280b, using Realtek/0x0256
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic2 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+ugen0 at uhub0 port 3 "Intel Bluetooth" rev 2.00/0.10 addr 3
+uvideo0 at uhub0 port 5 configuration 1 interface 0 "CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 4
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd1 at scsibus3 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on sd1a (1e2e75883f1a1a08.a) swap on sd1b dump on sd1b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+uhub1 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 5
+uhub2 at uhub0 port 2 configuration 1 interface 0 "VIA Labs, Inc. USB2.0 Hub" rev 2.10/b.e0 addr 6
+ure0 at uhub1 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 7
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 2 ctls
+audio1 at uaudio0
+uhidev1 at uhub2 port 2 configuration 1 interface 3 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev1: iclass 3/0, 3 report ids
+uhid0 at uhidev1 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=18, output=18, feature=0
+uhid2 at uhidev1 reportid 3: input=64, output=64, feature=0
+uhidev2 at uhub2 port 2 configuration 1 interface 4 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev2: iclass 3/0, 4 report ids
+uhid3 at uhidev2 reportid 1: input=0, output=65, feature=0
+uhid4 at uhidev2 reportid 2: input=65, output=0, feature=0
+uhid5 at uhidev2 reportid 3: input=0, output=0, feature=3
+uhid6 at uhidev2 reportid 4: input=0, output=0, feature=3
+uaudio0: can't reset interface
+uaudio0: rec xfer, err = 13
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid0 detached
+uhid1 detached
+uhid2 detached
+uhidev1 detached
+uhid3 detached
+uhid4 detached
+uhid5 detached
+uhid6 detached
+uhidev2 detached
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 2 ctls
+audio1 at uaudio0
+uhidev1 at uhub2 port 2 configuration 1 interface 3 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev1: iclass 3/0, 3 report ids
+uhid0 at uhidev1 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=18, output=18, feature=0
+uhid2 at uhidev1 reportid 3: input=64, output=64, feature=0
+uhidev2 at uhub2 port 2 configuration 1 interface 4 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev2: iclass 3/0, 4 report ids
+uhid3 at uhidev2 reportid 1: input=0, output=65, feature=0
+uhid4 at uhidev2 reportid 2: input=65, output=0, feature=0
+uhid5 at uhidev2 reportid 3: input=0, output=0, feature=3
+uhid6 at uhidev2 reportid 4: input=0, output=0, feature=3
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid0 detached
+uhid1 detached
+uhid2 detached
+uhidev1 detached
+uhid3 detached
+uhid4 detached
+uhid5 detached
+uhid6 detached
+uhidev2 detached
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 2 ctls
+audio1 at uaudio0
+uhidev1 at uhub2 port 2 configuration 1 interface 3 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev1: iclass 3/0, 3 report ids
+uhid0 at uhidev1 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=18, output=18, feature=0
+uhid2 at uhidev1 reportid 3: input=64, output=64, feature=0
+uhidev2 at uhub2 port 2 configuration 1 interface 4 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev2: iclass 3/0, 4 report ids
+uhid3 at uhidev2 reportid 1: input=0, output=65, feature=0
+uhid4 at uhidev2 reportid 2: input=65, output=0, feature=0
+uhid5 at uhidev2 reportid 3: input=0, output=0, feature=3
+uhid6 at uhidev2 reportid 4: input=0, output=0, feature=3
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid0 detached
+uhid1 detached
+uhid2 detached
+uhidev1 detached
+uhid3 detached
+uhid4 detached
+uhid5 detached
+uhid6 detached
+uhidev2 detached
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 2 ctls
+audio1 at uaudio0
+uhidev1 at uhub2 port 2 configuration 1 interface 3 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev1: iclass 3/0, 3 report ids
+uhid0 at uhidev1 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=18, output=18, feature=0
+uhid2 at uhidev1 reportid 3: input=64, output=64, feature=0
+uhidev2 at uhub2 port 2 configuration 1 interface 4 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev2: iclass 3/0, 4 report ids
+uhid3 at uhidev2 reportid 1: input=0, output=65, feature=0
+uhid4 at uhidev2 reportid 2: input=65, output=0, feature=0
+uhid5 at uhidev2 reportid 3: input=0, output=0, feature=3
+uhid6 at uhidev2 reportid 4: input=0, output=0, feature=3
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid0 detached
+uhid1 detached
+uhid2 detached
+uhidev1 detached
+uhid3 detached
+uhid4 detached
+uhid5 detached
+uhid6 detached
+uhidev2 detached
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+syncing disks... done
+rebooting...
+OpenBSD 6.9-beta (RAMDISK_CD) #323: Tue Feb 16 10:09:36 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8281227264 (7897MB)
+avail mem = 8026226688 (7654MB)
+random: boothowto does not indicate good seed
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xe0000 (91 entries)
+bios0: vendor Dell Inc. version "2.14.2" date 07/13/2020
+bios0: Dell Inc. XPS 13 9360
+acpi0 at bios0: ACPI 5.0
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT BOOT SSDT HPET SSDT UEFI SSDT LPIT SSDT SSDT SSDT SSDT DBGP DBG2 SSDT SSDT MSDM SLIC NHLT TPM2 ASF! DMAR BGRT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3492.98 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 60 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 58 (RP05)
+acpiprt14 at acpi0: bus 59 (RP06)
+acpiprt15 at acpi0: bus -1 (RP07)
+acpiprt16 at acpi0: bus -1 (RP08)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+acpiprt25 at acpi0: bus -1 (RP14)
+acpiprt26 at acpi0: bus -1 (RP15)
+acpiprt27 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0
+acpiec at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"INT33D2" at acpi0 not configured
+"INT33D3" at acpi0 not configured
+"INT33D4" at acpi0 not configured
+"INT33D6" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT344B" at acpi0 not configured
+"DLL075B" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+"ACPI0003" at acpi0 not configured
+"PNP0C0A" at acpi0 not configured
+"INT33D5" at acpi0 not configured
+"USBC000" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using VERW MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x02
+"Intel HD Graphics 620" rev 0x02 at pci0 dev 2 function 0 not configured
+"Intel Core 6G Thermal" rev 0x02 at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 100 Series Thermal" rev 0x21 at pci0 dev 20 function 2 not configured
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+hid at ihidev0 reportid 2 not configured
+hid at ihidev0 reportid 3 not configured
+hid at ihidev0 reportid 4 not configured
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 8 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus0 at nvme0: 2 targets, initiator 0
+sd0 at scsibus0 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+"Intel 200 Series LPC" rev 0x21 at pci0 dev 31 function 0 not configured
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+"Intel 200 Series HD Audio" rev 0x21 at pci0 dev 31 function 3 not configured
+"Intel 100 Series SMBus" rev 0x21 at pci0 dev 31 function 4 not configured
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+efifb0 at mainbus0: 1920x1080, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+uhub1 at uhub0 port 2 configuration 1 interface 0 "VIA Labs, Inc. USB2.0 Hub" rev 2.10/b.e0 addr 3
+"vendor 0x8087 product 0x0a2b" rev 2.00/0.10 addr 4 at uhub0 port 3 not configured
+"CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 5 at uhub0 port 5 not configured
+uhub2 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 6
+ure0 at uhub2 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 7
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+softraid0 at root
+scsibus1 at softraid0: 256 targets
+sd1 at scsibus1 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on rd0a swap on rd0b dump on rd0b
+iwm0: could not read firmware iwm-8265-34 (error 2)
+iwm0: failed to load init firmware
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+uhid at uhidev0 not configured
+syncing disks... done
+rebooting...
+OpenBSD 6.9-beta (GENERIC.MP) #338: Tue Feb 16 10:01:46 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8281227264 (7897MB)
+avail mem = 8014901248 (7643MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xe0000 (91 entries)
+bios0: vendor Dell Inc. version "2.14.2" date 07/13/2020
+bios0: Dell Inc. XPS 13 9360
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT BOOT SSDT HPET SSDT UEFI SSDT LPIT SSDT SSDT SSDT SSDT DBGP DBG2 SSDT SSDT MSDM SLIC NHLT TPM2 ASF! DMAR BGRT
+acpi0: wakeup devices RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.20 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3489.50 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 60 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 58 (RP05)
+acpiprt14 at acpi0: bus 59 (RP06)
+acpiprt15 at acpi0: bus -1 (RP07)
+acpiprt16 at acpi0: bus -1 (RP08)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+acpiprt25 at acpi0: bus -1 (RP14)
+acpiprt26 at acpi0: bus -1 (RP15)
+acpiprt27 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0
+acpiec at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"INT33D2" at acpi0 not configured
+"INT33D3" at acpi0 not configured
+"INT33D4" at acpi0 not configured
+"INT33D6" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT344B" at acpi0 not configured
+"DLL075B" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PBTN
+acpibtn2 at acpi0: SBTN
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "DELL TP1GT61" serial ... type LiP oem "SMP"
+acpihid0 at acpi0: HIDD, 5 button array
+"USBC000" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: WRST
+acpipwrres2 at acpi0: WRST
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpitz0 at acpi0: critical temperature is 107 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3491 MHz: speeds: 2701, 2700, 2600, 2500, 2400, 2200, 2000, 1800, 1600, 1500, 1300, 1100, 800, 700, 600, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 620" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+"Intel Core 6G Thermal" rev 0x02 at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x21
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+imt0 at ihidev0: clickpad, 5 contacts
+wsmouse0 at imt0 mux 0
+ims0 at ihidev0 reportid 2: 2 buttons
+wsmouse1 at ims0 mux 0
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Realtek ALC256, Intel/0x280b, using Realtek ALC256
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic2 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+uhub1 at uhub0 port 2 configuration 1 interface 0 "VIA Labs, Inc. USB2.0 Hub" rev 2.10/b.e0 addr 3
+ugen0 at uhub0 port 3 "Intel Bluetooth" rev 2.00/0.10 addr 4
+uvideo0 at uhub0 port 5 configuration 1 interface 0 "CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 5
+video0 at uvideo0
+uhub2 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 6
+ure0 at uhub2 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 7
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd1 at scsibus3 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on sd1a (1e2e75883f1a1a08.a) swap on sd1b dump on sd1b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+syncing disks... done
+rebooting...
+OpenBSD 6.9-beta (GENERIC.MP) #338: Tue Feb 16 10:01:46 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8281227264 (7897MB)
+avail mem = 8014888960 (7643MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xe0000 (91 entries)
+bios0: vendor Dell Inc. version "2.14.2" date 07/13/2020
+bios0: Dell Inc. XPS 13 9360
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT BOOT SSDT HPET SSDT UEFI SSDT LPIT SSDT SSDT SSDT SSDT DBGP DBG2 SSDT SSDT MSDM SLIC NHLT TPM2 ASF! DMAR BGRT
+acpi0: wakeup devices RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3492.99 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3490.14 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 60 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 58 (RP05)
+acpiprt14 at acpi0: bus 59 (RP06)
+acpiprt15 at acpi0: bus -1 (RP07)
+acpiprt16 at acpi0: bus -1 (RP08)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+acpiprt25 at acpi0: bus -1 (RP14)
+acpiprt26 at acpi0: bus -1 (RP15)
+acpiprt27 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0
+acpiec at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"INT33D2" at acpi0 not configured
+"INT33D3" at acpi0 not configured
+"INT33D4" at acpi0 not configured
+"INT33D6" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT344B" at acpi0 not configured
+"DLL075B" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PBTN
+acpibtn2 at acpi0: SBTN
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "DELL TP1GT61" serial ... type LiP oem "SMP"
+acpihid0 at acpi0: HIDD, 5 button array
+"USBC000" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: WRST
+acpipwrres2 at acpi0: WRST
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpitz0 at acpi0: critical temperature is 107 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3492 MHz: speeds: 2701, 2700, 2600, 2500, 2400, 2200, 2000, 1800, 1600, 1500, 1300, 1100, 800, 700, 600, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 620" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+"Intel Core 6G Thermal" rev 0x02 at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x21
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+imt0 at ihidev0: clickpad, 5 contacts
+wsmouse0 at imt0 mux 0
+ims0 at ihidev0 reportid 2: 2 buttons
+wsmouse1 at ims0 mux 0
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Realtek ALC256, Intel/0x280b, using Realtek ALC256
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic2 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+uhub1 at uhub0 port 2 configuration 1 interface 0 "VIA Labs, Inc. USB2.0 Hub" rev 2.10/b.e0 addr 3
+ugen0 at uhub0 port 3 "Intel Bluetooth" rev 2.00/0.10 addr 4
+uvideo0 at uhub0 port 5 configuration 1 interface 0 "CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 5
+video0 at uvideo0
+uhub2 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 6
+ure0 at uhub2 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 7
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd1 at scsibus3 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on sd1a (1e2e75883f1a1a08.a) swap on sd1b dump on sd1b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+syncing disks... done
+rebooting...
+OpenBSD 6.9-beta (GENERIC.MP) #338: Tue Feb 16 10:01:46 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8281227264 (7897MB)
+avail mem = 8014884864 (7643MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xe0000 (91 entries)
+bios0: vendor Dell Inc. version "2.14.2" date 07/13/2020
+bios0: Dell Inc. XPS 13 9360
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT BOOT SSDT HPET SSDT UEFI SSDT LPIT SSDT SSDT SSDT SSDT DBGP DBG2 SSDT SSDT MSDM SLIC NHLT TPM2 ASF! DMAR BGRT
+acpi0: wakeup devices RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3493.14 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3490.22 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 60 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 58 (RP05)
+acpiprt14 at acpi0: bus 59 (RP06)
+acpiprt15 at acpi0: bus -1 (RP07)
+acpiprt16 at acpi0: bus -1 (RP08)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+acpiprt25 at acpi0: bus -1 (RP14)
+acpiprt26 at acpi0: bus -1 (RP15)
+acpiprt27 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0
+acpiec at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"INT33D2" at acpi0 not configured
+"INT33D3" at acpi0 not configured
+"INT33D4" at acpi0 not configured
+"INT33D6" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT344B" at acpi0 not configured
+"DLL075B" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PBTN
+acpibtn2 at acpi0: SBTN
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "DELL TP1GT61" serial ... type LiP oem "SMP"
+acpihid0 at acpi0: HIDD, 5 button array
+"USBC000" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: WRST
+acpipwrres2 at acpi0: WRST
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpitz0 at acpi0: critical temperature is 107 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3493 MHz: speeds: 2701, 2700, 2600, 2500, 2400, 2200, 2000, 1800, 1600, 1500, 1300, 1100, 800, 700, 600, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 620" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+"Intel Core 6G Thermal" rev 0x02 at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x21
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+imt0 at ihidev0: clickpad, 5 contacts
+wsmouse0 at imt0 mux 0
+ims0 at ihidev0 reportid 2: 2 buttons
+wsmouse1 at ims0 mux 0
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Realtek ALC256, Intel/0x280b, using Realtek ALC256
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic2 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+uhub1 at uhub0 port 2 configuration 1 interface 0 "VIA Labs, Inc. USB2.0 Hub" rev 2.10/b.e0 addr 3
+ugen0 at uhub0 port 3 "Intel Bluetooth" rev 2.00/0.10 addr 4
+uvideo0 at uhub0 port 5 configuration 1 interface 0 "CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 5
+video0 at uvideo0
+uhub2 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 6
+ure0 at uhub2 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 7
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd1 at scsibus3 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on sd1a (1e2e75883f1a1a08.a) swap on sd1b dump on sd1b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+rgephy0 detached
+ure0 detached
+uhub2 detached
+uhub1 detached
+syncing disks... done
+rebooting...
+OpenBSD 6.9-beta (GENERIC.MP) #338: Tue Feb 16 10:01:46 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8281227264 (7897MB)
+avail mem = 8014893056 (7643MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xe0000 (91 entries)
+bios0: vendor Dell Inc. version "2.14.2" date 07/13/2020
+bios0: Dell Inc. XPS 13 9360
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT BOOT SSDT HPET SSDT UEFI SSDT LPIT SSDT SSDT SSDT SSDT DBGP DBG2 SSDT SSDT MSDM SLIC NHLT TPM2 ASF! DMAR BGRT
+acpi0: wakeup devices RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3490.59 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3490.07 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 60 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 58 (RP05)
+acpiprt14 at acpi0: bus 59 (RP06)
+acpiprt15 at acpi0: bus -1 (RP07)
+acpiprt16 at acpi0: bus -1 (RP08)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+acpiprt25 at acpi0: bus -1 (RP14)
+acpiprt26 at acpi0: bus -1 (RP15)
+acpiprt27 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0
+acpiec at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"INT33D2" at acpi0 not configured
+"INT33D3" at acpi0 not configured
+"INT33D4" at acpi0 not configured
+"INT33D6" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT344B" at acpi0 not configured
+"DLL075B" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PBTN
+acpibtn2 at acpi0: SBTN
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "DELL TP1GT61" serial ... type LiP oem "SMP"
+acpihid0 at acpi0: HIDD, 5 button array
+"USBC000" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: WRST
+acpipwrres2 at acpi0: WRST
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpitz0 at acpi0: critical temperature is 107 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3490 MHz: speeds: 2701, 2700, 2600, 2500, 2400, 2200, 2000, 1800, 1600, 1500, 1300, 1100, 800, 700, 600, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 620" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+"Intel Core 6G Thermal" rev 0x02 at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x21
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+imt0 at ihidev0: clickpad, 5 contacts
+wsmouse0 at imt0 mux 0
+ims0 at ihidev0 reportid 2: 2 buttons
+wsmouse1 at ims0 mux 0
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Realtek ALC256, Intel/0x280b, using Realtek ALC256
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic2 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+ugen0 at uhub0 port 3 "Intel Bluetooth" rev 2.00/0.10 addr 3
+uvideo0 at uhub0 port 5 configuration 1 interface 0 "CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 4
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd1 at scsibus3 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on sd1a (1e2e75883f1a1a08.a) swap on sd1b dump on sd1b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+syncing disks... done
+rebooting...
+OpenBSD 6.9-beta (GENERIC.MP) #338: Tue Feb 16 10:01:46 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8281227264 (7897MB)
+avail mem = 8014893056 (7643MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xe0000 (91 entries)
+bios0: vendor Dell Inc. version "2.14.2" date 07/13/2020
+bios0: Dell Inc. XPS 13 9360
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT BOOT SSDT HPET SSDT UEFI SSDT LPIT SSDT SSDT SSDT SSDT DBGP DBG2 SSDT SSDT MSDM SLIC NHLT TPM2 ASF! DMAR BGRT
+acpi0: wakeup devices RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3492.99 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.88 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 60 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 58 (RP05)
+acpiprt14 at acpi0: bus 59 (RP06)
+acpiprt15 at acpi0: bus -1 (RP07)
+acpiprt16 at acpi0: bus -1 (RP08)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+acpiprt25 at acpi0: bus -1 (RP14)
+acpiprt26 at acpi0: bus -1 (RP15)
+acpiprt27 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0
+acpiec at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"INT33D2" at acpi0 not configured
+"INT33D3" at acpi0 not configured
+"INT33D4" at acpi0 not configured
+"INT33D6" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT344B" at acpi0 not configured
+"DLL075B" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PBTN
+acpibtn2 at acpi0: SBTN
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "DELL TP1GT61" serial ... type LiP oem "SMP"
+acpihid0 at acpi0: HIDD, 5 button array
+"USBC000" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: WRST
+acpipwrres2 at acpi0: WRST
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpitz0 at acpi0: critical temperature is 107 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3492 MHz: speeds: 2701, 2700, 2600, 2500, 2400, 2200, 2000, 1800, 1600, 1500, 1300, 1100, 800, 700, 600, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 620" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+"Intel Core 6G Thermal" rev 0x02 at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x21
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+imt0 at ihidev0: clickpad, 5 contacts
+wsmouse0 at imt0 mux 0
+ims0 at ihidev0 reportid 2: 2 buttons
+wsmouse1 at ims0 mux 0
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Realtek ALC256, Intel/0x280b, using Realtek ALC256
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic2 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+ugen0 at uhub0 port 3 "Intel Bluetooth" rev 2.00/0.10 addr 3
+uvideo0 at uhub0 port 5 configuration 1 interface 0 "CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 4
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd1 at scsibus3 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on sd1a (1e2e75883f1a1a08.a) swap on sd1b dump on sd1b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+syncing disks... done
+rebooting...
+OpenBSD 6.9-beta (GENERIC.MP) #338: Tue Feb 16 10:01:46 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8281227264 (7897MB)
+avail mem = 8014884864 (7643MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xe0000 (91 entries)
+bios0: vendor Dell Inc. version "2.14.2" date 07/13/2020
+bios0: Dell Inc. XPS 13 9360
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT BOOT SSDT HPET SSDT UEFI SSDT LPIT SSDT SSDT SSDT SSDT DBGP DBG2 SSDT SSDT MSDM SLIC NHLT TPM2 ASF! DMAR BGRT
+acpi0: wakeup devices RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3492.95 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3490.23 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 60 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 58 (RP05)
+acpiprt14 at acpi0: bus 59 (RP06)
+acpiprt15 at acpi0: bus -1 (RP07)
+acpiprt16 at acpi0: bus -1 (RP08)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+acpiprt25 at acpi0: bus -1 (RP14)
+acpiprt26 at acpi0: bus -1 (RP15)
+acpiprt27 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0
+acpiec at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"INT33D2" at acpi0 not configured
+"INT33D3" at acpi0 not configured
+"INT33D4" at acpi0 not configured
+"INT33D6" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT344B" at acpi0 not configured
+"DLL075B" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PBTN
+acpibtn2 at acpi0: SBTN
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "DELL TP1GT61" serial ... type LiP oem "SMP"
+acpihid0 at acpi0: HIDD, 5 button array
+"USBC000" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: WRST
+acpipwrres2 at acpi0: WRST
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpitz0 at acpi0: critical temperature is 107 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3492 MHz: speeds: 2701, 2700, 2600, 2500, 2400, 2200, 2000, 1800, 1600, 1500, 1300, 1100, 800, 700, 600, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 620" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+"Intel Core 6G Thermal" rev 0x02 at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x21
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+imt0 at ihidev0: clickpad, 5 contacts
+wsmouse0 at imt0 mux 0
+ims0 at ihidev0 reportid 2: 2 buttons
+wsmouse1 at ims0 mux 0
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Realtek ALC256, Intel/0x280b, using Realtek ALC256
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic2 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+ugen0 at uhub0 port 3 "Intel Bluetooth" rev 2.00/0.10 addr 3
+uvideo0 at uhub0 port 5 configuration 1 interface 0 "CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 4
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd1 at scsibus3 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on sd1a (1e2e75883f1a1a08.a) swap on sd1b dump on sd1b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+uvideo1 at uhub0 port 2 configuration 1 interface 0 "Logitech Webcam C310" rev 2.00/0.10 addr 5
+video1 at uvideo1
+uaudio0 at uhub0 port 2 configuration 1 interface 3 "Logitech Webcam C310" rev 2.00/0.10 addr 5
+uaudio0: class v1, high-speed, sync, channels: 0 play, 1 rec, 2 ctls
+audio1 at uaudio0
+video1 detached
+uvideo1 detached
+audio1 detached
+uaudio0 detached
+syncing disks... done
+rebooting...
+OpenBSD 6.9-beta (GENERIC.MP) #338: Tue Feb 16 10:01:46 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8281227264 (7897MB)
+avail mem = 8014884864 (7643MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xe0000 (91 entries)
+bios0: vendor Dell Inc. version "2.14.2" date 07/13/2020
+bios0: Dell Inc. XPS 13 9360
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT BOOT SSDT HPET SSDT UEFI SSDT LPIT SSDT SSDT SSDT SSDT DBGP DBG2 SSDT SSDT MSDM SLIC NHLT TPM2 ASF! DMAR BGRT
+acpi0: wakeup devices RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3493.05 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3490.49 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 60 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 58 (RP05)
+acpiprt14 at acpi0: bus 59 (RP06)
+acpiprt15 at acpi0: bus -1 (RP07)
+acpiprt16 at acpi0: bus -1 (RP08)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+acpiprt25 at acpi0: bus -1 (RP14)
+acpiprt26 at acpi0: bus -1 (RP15)
+acpiprt27 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0
+acpiec at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"INT33D2" at acpi0 not configured
+"INT33D3" at acpi0 not configured
+"INT33D4" at acpi0 not configured
+"INT33D6" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT344B" at acpi0 not configured
+"DLL075B" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PBTN
+acpibtn2 at acpi0: SBTN
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "DELL TP1GT61" serial ... type LiP oem "SMP"
+acpihid0 at acpi0: HIDD, 5 button array
+"USBC000" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: WRST
+acpipwrres2 at acpi0: WRST
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpitz0 at acpi0: critical temperature is 107 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3493 MHz: speeds: 2701, 2700, 2600, 2500, 2400, 2200, 2000, 1800, 1600, 1500, 1300, 1100, 800, 700, 600, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 620" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+"Intel Core 6G Thermal" rev 0x02 at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x21
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+imt0 at ihidev0: clickpad, 5 contacts
+wsmouse0 at imt0 mux 0
+ims0 at ihidev0 reportid 2: 2 buttons
+wsmouse1 at ims0 mux 0
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Realtek ALC256, Intel/0x280b, using Realtek ALC256
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic2 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+ugen0 at uhub0 port 3 "Intel Bluetooth" rev 2.00/0.10 addr 3
+uvideo0 at uhub0 port 5 configuration 1 interface 0 "CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 4
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd1 at scsibus3 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on sd1a (1e2e75883f1a1a08.a) swap on sd1b dump on sd1b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+uvideo1 at uhub0 port 2 configuration 1 interface 0 "Logitech Webcam C310" rev 2.00/0.10 addr 5
+video1 at uvideo1
+uaudio0 at uhub0 port 2 configuration 1 interface 3 "Logitech Webcam C310" rev 2.00/0.10 addr 5
+uaudio0: class v1, high-speed, sync, channels: 0 play, 1 rec, 2 ctls
+audio1 at uaudio0
+video1 detached
+uvideo1 detached
+audio1 detached
+uaudio0 detached
+uhub1 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 5
+uhub2 at uhub0 port 2 configuration 1 interface 0 "VIA Labs, Inc. USB2.0 Hub" rev 2.10/b.e0 addr 6
+ure0 at uhub1 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 7
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 2 ctls
+audio1 at uaudio0
+uhidev1 at uhub2 port 2 configuration 1 interface 3 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev1: iclass 3/0, 3 report ids
+uhid0 at uhidev1 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=18, output=18, feature=0
+uhid2 at uhidev1 reportid 3: input=64, output=64, feature=0
+uhidev2 at uhub2 port 2 configuration 1 interface 4 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 8
+uhidev2: iclass 3/0, 4 report ids
+uhid3 at uhidev2 reportid 1: input=0, output=65, feature=0
+uhid4 at uhidev2 reportid 2: input=65, output=0, feature=0
+uhid5 at uhidev2 reportid 3: input=0, output=0, feature=3
+uhid6 at uhidev2 reportid 4: input=0, output=0, feature=3
+uvideo1 at uhub2 port 1 configuration 1 interface 0 "Logitech Webcam C310" rev 2.00/0.10 addr 9
+video1 at uvideo1
+uaudio1 at uhub2 port 1 configuration 1 interface 3 "Logitech Webcam C310" rev 2.00/0.10 addr 9
+uaudio1: class v1, high-speed, sync, channels: 0 play, 1 rec, 2 ctls
+audio2 at uaudio1
+coredump of chrome(95921), write failed: errno 14
+umass0 at uhub1 port 4 configuration 1 interface 0 "iStorage datAshurPRO" rev 3.00/11.11 addr 10
+umass0: using SCSI over Bulk-Only
+scsibus4 at umass0: 2 targets, initiator 0
+sd2 at scsibus4 targ 1 lun 0: <iStorage, datAshurPRO, 01> removable serial....
+sd2: 14784MB, 512 bytes/sector, 30277632 sectors
+uaudio0: rec xfer, err = 13
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid0 detached
+uhid1 detached
+uhid2 detached
+uhidev1 detached
+uhid3 detached
+uhid4 detached
+uhid5 detached
+uhid6 detached
+uhidev2 detached
+video1 detached
+uvideo1 detached
+audio2 detached
+uaudio1 detached
+uvideo1 at uhub2 port 2 configuration 1 interface 0 "Logitech Webcam C310" rev 2.00/0.10 addr 8
+video1 at uvideo1
+uaudio0 at uhub2 port 2 configuration 1 interface 3 "Logitech Webcam C310" rev 2.00/0.10 addr 8
+uaudio0: class v1, high-speed, sync, channels: 0 play, 1 rec, 2 ctls
+audio1 at uaudio0
+video1 detached
+uvideo1 detached
+audio1 detached
+uaudio0 detached
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Logitech USB Headset Logitech USB Headset" rev 1.10/0.12 addr 8
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 7 ctls
+audio1 at uaudio0
+uhidev1 at uhub2 port 2 configuration 1 interface 3 "Logitech USB Headset Logitech USB Headset" rev 1.10/0.12 addr 8
+uhidev1: iclass 3/0, 3 report ids
+uhid0 at uhidev1 reportid 3: input=1, output=0, feature=0
+uvideo1 at uhub2 port 1 configuration 1 interface 0 "Logitech Webcam C310" rev 2.00/0.10 addr 9
+video1 at uvideo1
+uaudio1 at uhub2 port 1 configuration 1 interface 3 "Logitech Webcam C310" rev 2.00/0.10 addr 9
+uaudio1: class v1, high-speed, sync, channels: 0 play, 1 rec, 2 ctls
+audio2 at uaudio1
+video1 detached
+uvideo1 detached
+audio2 detached
+uaudio1 detached
+uvideo1 at uhub2 port 1 configuration 1 interface 0 "Logitech Webcam C310" rev 2.00/0.10 addr 9
+video1 at uvideo1
+uaudio1 at uhub2 port 1 configuration 1 interface 3 "Logitech Webcam C310" rev 2.00/0.10 addr 9
+uaudio1: class v1, high-speed, sync, channels: 0 play, 1 rec, 2 ctls
+audio2 at uaudio1
+rgephy0 detached
+ure0 detached
+sd2 detached
+scsibus4 detached
+umass0 detached
+uhub1 detached
+uaudio0: rec xfer, err = 13
+uaudio0: play xfer, err = 13
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid0 detached
+uhidev1 detached
+video1 detached
+uvideo1 detached
+audio2 detached
+uaudio1 detached
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 5
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 2 ctls
+audio1 at uaudio0
+uhidev1 at uhub2 port 2 configuration 1 interface 3 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 5
+uhidev1: iclass 3/0, 3 report ids
+uhid0 at uhidev1 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=18, output=18, feature=0
+uhid2 at uhidev1 reportid 3: input=64, output=64, feature=0
+uhidev2 at uhub2 port 2 configuration 1 interface 4 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 5
+uhidev2: iclass 3/0, 4 report ids
+uhid3 at uhidev2 reportid 1: input=0, output=65, feature=0
+uhid4 at uhidev2 reportid 2: input=65, output=0, feature=0
+uhid5 at uhidev2 reportid 3: input=0, output=0, feature=3
+uhid6 at uhidev2 reportid 4: input=0, output=0, feature=3
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid0 detached
+uhid1 detached
+uhid2 detached
+uhidev1 detached
+uhid3 detached
+uhid4 detached
+uhid5 detached
+uhid6 detached
+uhidev2 detached
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.00/2.00 addr 2
+uhidev0: iclass 3/0
+uhid0 at uhidev0: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.00/2.00 addr 2
+uhid0 detached
+uhidev0 detached
+ugen1 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.10/2.01 addr 2
+uhidev0: iclass 3/0
+uhid0 at uhidev0: input=64, output=64, feature=0
+uhidev1 at uhub0 port 1 configuration 1 interface 1 "Ledger Nano X" rev 2.10/2.01 addr 2
+uhidev1: iclass 3/1
+fido0 at uhidev1: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.10/2.01 addr 2
+uhidev2 at uhub2 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 5
+uhidev2: iclass 3/1
+ums0 at uhidev2: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+uhid0 detached
+uhidev0 detached
+fido0 detached
+uhidev1 detached
+ugen1 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.10/2.01 addr 2
+uhidev0: iclass 3/0
+uhid0 at uhidev0: input=64, output=64, feature=0
+uhidev1 at uhub0 port 1 configuration 1 interface 1 "Ledger Nano X" rev 2.10/2.01 addr 2
+uhidev1: iclass 3/1
+fido0 at uhidev1: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.10/2.01 addr 2
+uhid0 detached
+uhidev0 detached
+fido0 detached
+uhidev1 detached
+ugen1 detached
+wsmouse2 detached
+ums0 detached
+uhidev2 detached
+uhub2 detached
+syncing disks... done
+rebooting...
+OpenBSD 6.9-beta (GENERIC.MP) #338: Tue Feb 16 10:01:46 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8281227264 (7897MB)
+avail mem = 8014897152 (7643MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xe0000 (91 entries)
+bios0: vendor Dell Inc. version "2.14.2" date 07/13/2020
+bios0: Dell Inc. XPS 13 9360
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT BOOT SSDT HPET SSDT UEFI SSDT LPIT SSDT SSDT SSDT SSDT DBGP DBG2 SSDT SSDT MSDM SLIC NHLT TPM2 ASF! DMAR BGRT
+acpi0: wakeup devices RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.20 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3490.47 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 3491.87 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 60 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 58 (RP05)
+acpiprt14 at acpi0: bus 59 (RP06)
+acpiprt15 at acpi0: bus -1 (RP07)
+acpiprt16 at acpi0: bus -1 (RP08)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+acpiprt25 at acpi0: bus -1 (RP14)
+acpiprt26 at acpi0: bus -1 (RP15)
+acpiprt27 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0
+acpiec at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"INT33D2" at acpi0 not configured
+"INT33D3" at acpi0 not configured
+"INT33D4" at acpi0 not configured
+"INT33D6" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT344B" at acpi0 not configured
+"DLL075B" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PBTN
+acpibtn2 at acpi0: SBTN
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "DELL TP1GT61" serial ... type LiP oem "SMP"
+acpihid0 at acpi0: HIDD, 5 button array
+"USBC000" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: WRST
+acpipwrres2 at acpi0: WRST
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpitz0 at acpi0: critical temperature is 107 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3491 MHz: speeds: 2701, 2700, 2600, 2500, 2400, 2200, 2000, 1800, 1600, 1500, 1300, 1100, 800, 700, 600, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 620" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+"Intel Core 6G Thermal" rev 0x02 at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x21
+dwiic0 at pci0 dev 21 function 0 "Intel 100 Series I2C" rev 0x21: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 100 Series I2C" rev 0x21: apic 2 int 17
+iic1 at dwiic1
+ihidev0 at iic1 addr 0x2c irq 51, vendor 0x6cb product 0x76af, DLL075B
+ihidev0: 14 report ids
+imt0 at ihidev0: clickpad, 5 contacts
+wsmouse0 at imt0 mux 0
+ims0 at ihidev0 reportid 2: 2 buttons
+wsmouse1 at ims0 mux 0
+hid at ihidev0 reportid 6 not configured
+hid at ihidev0 reportid 7 not configured
+hid at ihidev0 reportid 9 not configured
+hid at ihidev0 reportid 10 not configured
+hid at ihidev0 reportid 11 not configured
+hid at ihidev0 reportid 12 not configured
+hid at ihidev0 reportid 13 not configured
+hid at ihidev0 reportid 14 not configured
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 58
+iwm0 at pci2 dev 0 function 0 "Intel Dual Band Wireless-AC 8265" rev 0x78, msi
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 59
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS525A Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb3 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 60
+nvme0 at pci4 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msix, NVMe 1.2
+nvme0: Samsung SSD 960 EVO 1TB, firmware 3B7QCXE7, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, Samsung SSD 960, 3B7Q>
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Realtek ALC256, Intel/0x280b, using Realtek ALC256
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic2 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+ugen0 at uhub0 port 3 "Intel Bluetooth" rev 2.00/0.10 addr 2
+uvideo0 at uhub0 port 5 configuration 1 interface 0 "CN09GTFM724876A4B4WAA01 Integrated_Webcam_HD" rev 2.01/56.26 addr 3
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd1 at scsibus3 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd1: 75659MB, 512 bytes/sector, 154951152 sectors
+root on sd1a (1e2e75883f1a1a08.a) swap on sd1b dump on sd1b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x230, fw ver 34.0.1, address XXX
+uhub1 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 4
+uhub2 at uhub0 port 2 configuration 1 interface 0 "VIA Labs, Inc. USB2.0 Hub" rev 2.10/b.e0 addr 5
+uhidev0 at uhub2 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 6
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+ure0 at uhub1 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 7
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+rgephy0 detached
+ure0 detached
+uhub1 detached
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhub2 detached
+uhub1 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 4
+uhub2 at uhub0 port 2 configuration 1 interface 0 "VIA Labs, Inc. USB2.0 Hub" rev 2.10/b.e0 addr 5
+ure0 at uhub1 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 6
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+uhidev0 at uhub2 port 4 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 7
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+rgephy0 detached
+ure0 detached
+uhub1 detached
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhub2 detached
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 4
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+uhub1 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 5
+wsmouse2 detached
+ums0 detached
+uhidev0 detached
+uhub2 at uhub0 port 2 configuration 1 interface 0 "VIA Labs, Inc. USB2.0 Hub" rev 2.10/b.e0 addr 4
+ure0 at uhub1 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 6
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+uhidev0 at uhub2 port 4 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 7
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse2 at ums0 mux 0
+uhidev1 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+uhidev2 at uhub0 port 1 configuration 1 interface 1 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhidev2: iclass 3/1
+fido0 at uhidev2: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhid0 detached
+uhidev1 detached
+fido0 detached
+uhidev2 detached
+ugen1 detached
+uhidev1 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+uhidev2 at uhub0 port 1 configuration 1 interface 1 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhidev2: iclass 3/1
+fido0 at uhidev2: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhid0 detached
+uhidev1 detached
+fido0 detached
+uhidev2 detached
+ugen1 detached
+uhidev1 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+uhidev2 at uhub0 port 1 configuration 1 interface 1 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhidev2: iclass 3/1
+fido0 at uhidev2: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhid0 detached
+uhidev1 detached
+fido0 detached
+uhidev2 detached
+ugen1 detached
+uhidev1 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.00/2.00 addr 8
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.00/2.00 addr 8
+uhid0 detached
+uhidev1 detached
+ugen1 detached
+uhidev1 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+uhidev2 at uhub0 port 1 configuration 1 interface 1 "Ledger Nano X" rev 2.10/2.01 addr 8
+uhidev2: iclass 3/1
+fido0 at uhidev2: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.10/2.01 addr 8
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Logitech USB Headset Logitech USB Headset" rev 1.10/0.12 addr 9
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 7 ctls
+audio1 at uaudio0
+uhidev3 at uhub2 port 2 configuration 1 interface 3 "Logitech USB Headset Logitech USB Headset" rev 1.10/0.12 addr 9
+uhidev3: iclass 3/0, 3 report ids
+uhid1 at uhidev3 reportid 3: input=1, output=0, feature=0
+uaudio0: rec xfer, err = 6
+uvideo1 at uhub2 port 1 configuration 1 interface 0 "Logitech Webcam C310" rev 2.00/0.10 addr 10
+video1 at uvideo1
+uaudio1 at uhub2 port 1 configuration 1 interface 3 "Logitech Webcam C310" rev 2.00/0.10 addr 10
+uaudio1: class v1, high-speed, sync, channels: 0 play, 1 rec, 2 ctls
+audio2 at uaudio1
+video1 detached
+uvideo1 detached
+audio2 detached
+uaudio1 detached
+uaudio0: rec xfer, err = 13
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid1 detached
+uhidev3 detached
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Logitech USB Headset Logitech USB Headset" rev 1.10/0.12 addr 9
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 7 ctls
+audio1 at uaudio0
+uhidev3 at uhub2 port 2 configuration 1 interface 3 "Logitech USB Headset Logitech USB Headset" rev 1.10/0.12 addr 9
+uhidev3: iclass 3/0, 3 report ids
+uhid1 at uhidev3 reportid 3: input=1, output=0, feature=0
+uvideo1 at uhub2 port 1 configuration 1 interface 0 "Logitech Webcam C310" rev 2.00/0.10 addr 10
+video1 at uvideo1
+uaudio1 at uhub2 port 1 configuration 1 interface 3 "Logitech Webcam C310" rev 2.00/0.10 addr 10
+uaudio1: class v1, high-speed, sync, channels: 0 play, 1 rec, 2 ctls
+audio2 at uaudio1
+video1 detached
+uvideo1 detached
+audio2 detached
+uaudio1 detached
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid1 detached
+uhidev3 detached
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Logitech USB Headset Logitech USB Headset" rev 1.10/0.12 addr 9
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 7 ctls
+audio1 at uaudio0
+uhidev3 at uhub2 port 2 configuration 1 interface 3 "Logitech USB Headset Logitech USB Headset" rev 1.10/0.12 addr 9
+uhidev3: iclass 3/0, 3 report ids
+uhid1 at uhidev3 reportid 3: input=1, output=0, feature=0
+rgephy0 detached
+ure0 detached
+uhub1 detached
+uhub1 at uhub0 port 14 configuration 1 interface 0 "VIA Labs, Inc. USB3.0 Hub" rev 3.00/b.e1 addr 5
+ure0 at uhub1 port 3 configuration 1 interface 0 "Realtek USB 10/100/1000 LAN" rev 3.00/30.00 addr 6
+ure0: RTL8153 (0x5c20), address XXX
+rgephy0 at ure0 phy 0: RTL8251 PHY, rev. 0
+rgephy0 detached
+ure0 detached
+uhub1 detached
+uaudio0: rec xfer, err = 13
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid1 detached
+uhidev3 detached
+uaudio0 at uhub2 port 1 configuration 1 interface 1 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 5
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 2 ctls
+audio1 at uaudio0
+uhidev3 at uhub2 port 1 configuration 1 interface 3 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 5
+uhidev3: iclass 3/0, 3 report ids
+uhid1 at uhidev3 reportid 1: input=2, output=0, feature=0
+uhid2 at uhidev3 reportid 2: input=18, output=18, feature=0
+uhid3 at uhidev3 reportid 3: input=64, output=64, feature=0
+uhidev4 at uhub2 port 1 configuration 1 interface 4 "Creative Technology Ltd Creative BT-W3" rev 2.00/1.00 addr 5
+uhidev4: iclass 3/0, 4 report ids
+uhid4 at uhidev4 reportid 1: input=0, output=65, feature=0
+uhid5 at uhidev4 reportid 2: input=65, output=0, feature=0
+uhid6 at uhidev4 reportid 3: input=0, output=0, feature=3
+uhid7 at uhidev4 reportid 4: input=0, output=0, feature=3
+uhid0 detached
+uhidev1 detached
+fido0 detached
+uhidev2 detached
+ugen1 detached
+uhidev1 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.00/2.00 addr 6
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.00/2.00 addr 6
+uhid0 detached
+uhidev1 detached
+ugen1 detached
+uhidev1 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.10/2.01 addr 6
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+uhidev2 at uhub0 port 1 configuration 1 interface 1 "Ledger Nano X" rev 2.10/2.01 addr 6
+uhidev2: iclass 3/1
+fido0 at uhidev2: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.10/2.01 addr 6
+uhid0 detached
+uhidev1 detached
+fido0 detached
+uhidev2 detached
+ugen1 detached
+uhidev1 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.00/2.00 addr 6
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.00/2.00 addr 6
+uhid0 detached
+uhidev1 detached
+ugen1 detached
+uhidev1 at uhub0 port 1 configuration 1 interface 0 "Ledger Nano X" rev 2.10/2.01 addr 6
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+uhidev2 at uhub0 port 1 configuration 1 interface 1 "Ledger Nano X" rev 2.10/2.01 addr 6
+uhidev2: iclass 3/1
+fido0 at uhidev2: input=64, output=64, feature=0
+ugen1 at uhub0 port 1 configuration 1 "Ledger Nano X" rev 2.10/2.01 addr 6
+uaudio0: rec xfer, err = 13
+uaudio0: play xfer, err = 13
+uaudio0: can't reset interface
+uaudio0: can't reset interface
+audio1 detached
+uaudio0 detached
+uhid1 detached
+uhid2 detached
+uhid3 detached
+uhidev3 detached
+uhid4 detached
+uhid5 detached
+uhid6 detached
+uhid7 detached
+uhidev4 detached
+uaudio0 at uhub2 port 2 configuration 1 interface 1 "Creative Labs Creative Bluetooth Audio W2" rev 2.00/1.00 addr 5
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 0 ctls
+audio1 at uaudio0
+uhidev3 at uhub2 port 2 configuration 1 interface 3 "Creative Labs Creative Bluetooth Audio W2" rev 2.00/1.00 addr 5
+uhidev3: iclass 3/0, 3 report ids
+uhid1 at uhidev3 reportid 1: input=2, output=0, feature=0
+uhid2 at uhidev3 reportid 2: input=18, output=18, feature=0
+uhid3 at uhidev3 reportid 3: input=64, output=64, feature=0

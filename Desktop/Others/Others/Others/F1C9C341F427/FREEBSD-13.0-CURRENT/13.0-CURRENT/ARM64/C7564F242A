@@ -1,0 +1,577 @@
+---<<BOOT>>---
+4 watchpoints and 6 breakpoints supported
+KDB: debugger backends: ddb
+KDB: current backend: ddb
+Found 4 CPUs in the device tree
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-CURRENT #19 c8e954715d3-c271341(master)-dirty: Thu Sep  3 14:51:53 CEST 2020
+    XXX@XXX:/zstore/obj/usr2/Meloun/git/pmap/arm64.aarch64/sys/GENERIC arm64
+FreeBSD clang version 11.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.0-rc1-47-gff47911ddfc)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT: init without driver.
+Preloaded elf kernel "kernel" at 0xffff0000012fe04c.
+module firmware already present!
+real memory  = 17179865088 (16383 MB)
+Physical memory chunk(s):
+0x000000015d7000 - 0x00000003ffffff, 44208128 bytes (10793 pages)
+0x00000004200000 - 0x000000bfffffff, 3152019456 bytes (769536 pages)
+0x00000100000000 - 0x000004266a6fff, 13529411584 bytes (3303079 pages)
+avail memory = 16724140032 (15949 MB)
+Starting CPU 1 (1)
+Starting CPU 2 (100)
+Starting CPU 3 (101)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+random: no preloaded entropy cache
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+VIMAGE (virtualized network stack) enabled
+hostuuid: using XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ULE: setup cpu 0
+ULE: setup cpu 1
+ULE: setup cpu 2
+ULE: setup cpu 3
+snd_unit_init() u=0x00ff8000 [512] d=0x00007c00 [32] c=0x000003ff [1024]
+feeder_register: snd_unit=-1 snd_maxautovchans=16 latency=2 feeder_rate_min=1 feeder_rate_max=2016000 feeder_rate_round=25
+random: entropy device external interface
+EFI systbl not available
+crypto: <crypto core>
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd0 at kbdmux0
+mem: <memory>
+null: <full device, null device, zero device>
+openfirm: <Open Firmware control device>
+WARNING: Device "openfirm" is Giant locked and may be deleted before FreeBSD 13.0.
+ofwbus0: <Open Firmware Device Tree>
+simplebus0: <Flattened device tree simple bus> on ofwbus0
+simplebus1: <Flattened device tree simple bus> on simplebus0
+simplebus2: <Flattened device tree simple bus> on ofwbus0
+simplebus3: <Flattened device tree simple bus> on simplebus2
+simplebus4: <Flattened device tree simple bus> on ofwbus0
+simplebus5: <Flattened device tree simple bus> on simplebus4
+regfix0: <Fixed Regulator> on ofwbus0
+regfix1: <Fixed Regulator> on ofwbus0
+regfix2: <Fixed Regulator> on ofwbus0
+simple_mfd0: <Simple MFD (Multi-Functions Device)> mem 0x6f4000-0x6f5fff on simplebus1
+simple_mfd1: <Simple MFD (Multi-Functions Device)> mem 0x6f8000-0x6f8fff on simplebus1
+simple_mfd2: <Simple MFD (Multi-Functions Device)> mem 0x440000-0x441fff on simplebus3
+simple_mfd3: <Simple MFD (Multi-Functions Device)> mem 0x400000-0x400fff on simplebus3
+simple_mfd4: <Simple MFD (Multi-Functions Device)> mem 0x440000-0x441fff on simplebus5
+simple_mfd5: <Simple MFD (Multi-Functions Device)> mem 0x400000-0x400fff on simplebus5
+psci0: <ARM Power State Co-ordination Interface Driver> on ofwbus0
+psci0: PSCI version 0.2 compatible
+mv_ap806_clock0: <Marvell AP806 Clock Controller> mem 0x6f4000-0x6f5fff on simple_mfd0
+Clock: ap806-cpu-cluster-0, parent: (NULL)(-1), freq: 2000000000
+Clock: ap806-cpu-cluster-1, parent: (NULL)(-1), freq: 2000000000
+Clock: ap806-fixed, parent: (NULL)(-1), freq: 1200000000
+Clock: ap806-mss, parent: ap806-fixed(0), freq: 200000000
+Clock: ap806-sdio, parent: ap806-fixed(0), freq: 400000000
+mv_cp110_clock0: <Marvell CP110 Clock Controller> mem 0x440000-0x441fff on simple_mfd2
+Clock: cp110-pll0-0, parent: (NULL)(-1), freq: 1000000000
+Clock: cp110-ppv2-0, parent: cp110-pll0-0(0), freq: 333333333
+Clock: cp110-x2core-0, parent: cp110-pll0-0(0), freq: 500000000
+Clock: cp110-core-0, parent: cp110-x2core-0(0), freq: 250000000
+Clock: cp110-sdio-0, parent: cp110-pll0-0(0), freq: 400000000
+Clock: cp110-gate-audio-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-comm_unit-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-ppv2-0, parent: cp110-ppv2-0(0), freq: 333333333
+Clock: cp110-gate-sdio-0, parent: cp110-sdio-0(0), freq: 400000000
+Clock: cp110-gate-mg-0, parent: cp110-ppv2-0(0), freq: 333333333
+Clock: cp110-gate-mg_core-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-xor1-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-xor0-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-gop_dp-0, parent: cp110-ppv2-0(0), freq: 333333333
+Clock: cp110-gate-pcie_x10-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-pcie_x11-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-pcie_x4-0, parent: cp110-x2core-0(0), freq: 500000000
+Clock: cp110-gate-pcie_xor-0, parent: cp110-x2core-0(0), freq: 500000000
+Clock: cp110-gate-sata-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-sata_usb-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-main-0, parent: cp110-x2core-0(0), freq: 500000000
+Clock: cp110-gate-sdmmc_gop-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-slow_io-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-usb3h0-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-usb3h1-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-usb3dev-0, parent: cp110-core-0(0), freq: 250000000
+Clock: cp110-gate-eip150-0, parent: cp110-x2core-0(0), freq: 500000000
+Clock: cp110-gate-eip197-0, parent: cp110-x2core-0(0), freq: 500000000
+mv_cp110_clock1: <Marvell CP110 Clock Controller> mem 0x440000-0x441fff on simple_mfd4
+Clock: cp110-pll0-1, parent: (NULL)(-1), freq: 1000000000
+Clock: cp110-ppv2-1, parent: cp110-pll0-1(0), freq: 333333333
+Clock: cp110-x2core-1, parent: cp110-pll0-1(0), freq: 500000000
+Clock: cp110-core-1, parent: cp110-x2core-1(0), freq: 250000000
+Clock: cp110-sdio-1, parent: cp110-pll0-1(0), freq: 400000000
+Clock: cp110-gate-audio-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-comm_unit-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-ppv2-1, parent: cp110-ppv2-1(0), freq: 333333333
+Clock: cp110-gate-sdio-1, parent: cp110-sdio-1(0), freq: 400000000
+Clock: cp110-gate-mg-1, parent: cp110-ppv2-1(0), freq: 333333333
+Clock: cp110-gate-mg_core-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-xor1-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-xor0-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-gop_dp-1, parent: cp110-ppv2-1(0), freq: 333333333
+Clock: cp110-gate-pcie_x10-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-pcie_x11-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-pcie_x4-1, parent: cp110-x2core-1(0), freq: 500000000
+Clock: cp110-gate-pcie_xor-1, parent: cp110-x2core-1(0), freq: 500000000
+Clock: cp110-gate-sata-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-sata_usb-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-main-1, parent: cp110-x2core-1(0), freq: 500000000
+Clock: cp110-gate-sdmmc_gop-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-slow_io-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-usb3h0-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-usb3h1-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-usb3dev-1, parent: cp110-core-1(0), freq: 250000000
+Clock: cp110-gate-eip150-1, parent: cp110-x2core-1(0), freq: 500000000
+Clock: cp110-gate-eip197-1, parent: cp110-x2core-1(0), freq: 500000000
+mv_cp110_icu_bus0: <Marvell Interrupt Consolidation Unit Bus> mem 0x1e0000-0x1e043f on simplebus3
+mv_cp110_icu_bus1: <Marvell Interrupt Consolidation Unit Bus> mem 0x1e0000-0x1e043f on simplebus5
+gic0: <ARM Generic Interrupt Controller> mem 0x210000-0x21ffff,0x220000-0x23ffff,0x240000-0x25ffff,0x260000-0x27ffff irq 0 on simplebus1
+gic0: pn 0x2, arch 0x2, rev 0x1, implementer 0x43b irqs 352
+gicv2m0: <ARM Generic Interrupt Controller MSI/MSIX> mem 0x280000-0x280fff on gic0
+gicv2m0: using spi 160 to 191
+gicv2m1: <ARM Generic Interrupt Controller MSI/MSIX> mem 0x290000-0x290fff on gic0
+gicv2m1: using spi 192 to 223
+gicv2m2: <ARM Generic Interrupt Controller MSI/MSIX> mem 0x2a0000-0x2a0fff on gic0
+gicv2m2: using spi 224 to 255
+gicv2m3: <ARM Generic Interrupt Controller MSI/MSIX> mem 0x2b0000-0x2b0fff on gic0
+gicv2m3: using spi 256 to 287
+mv_ap806_gicp0: <Marvell GICP> mem 0x3f0040-0x3f004f on simplebus1
+mv_ap806_sei0: <Marvell SEI> mem 0x3f0200-0x3f023f irq 7 on simplebus1
+mv_pinctrl0: <Marvell Pinctrl controller> mem 0x6f4000-0x6f5fff on simple_mfd0
+Processing 1 pin-config node(s) in pinctrl-0 for serial@512000
+Processing 1 pin-config node(s) in pinctrl-0 for mdio@12a200
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@701000
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@701100
+Processing 1 pin-config node(s) in pinctrl-0 for serial@702100
+Processing 1 pin-config node(s) in pinctrl-0 for sdhci@780000
+Processing 1 pin-config node(s) in pinctrl-0 for pcie@f2600000
+Processing 1 pin-config node(s) in pinctrl-0 for spi@700680
+Processing 1 pin-config node(s) in pinctrl-0 for serial@702000
+Processing 1 pin-config node(s) in pinctrl-0 for regulator-usb3-vbus0
+Processing 1 pin-config node(s) in pinctrl-0 for sfp-eth0
+Processing 2 pin-config node(s) in pinctrl-0 for sfp-eth1
+Processing 2 pin-config node(s) in pinctrl-0 for sfp-eth3
+mv_cp110_icu0: <Marvell Interrupt Consolidation Unit> mem 0x1e0000-0x1e043f on mv_cp110_icu_bus0
+mv_cp110_icu1: <Marvell Interrupt Consolidation Unit> mem 0x1e0000-0x1e043f on mv_cp110_icu_bus0
+mv_cp110_icu2: <Marvell Interrupt Consolidation Unit> mem 0x1e0000-0x1e043f on mv_cp110_icu_bus1
+mv_cp110_icu3: <Marvell Interrupt Consolidation Unit> mem 0x1e0000-0x1e043f on mv_cp110_icu_bus1
+generic_timer0: <ARMv8 Generic Timer> irq 1,2,3,4 on simplebus1
+Timecounter "ARM MPCore Timecounter" frequency 25000000 Hz quality 1000
+Event timer "ARM MPCore Eventtimer" frequency 25000000 Hz quality 1000
+gpio0: <Marvell Integrated GPIO Controller> mem 0x6f4000-0x6f5fff on simple_mfd0
+gpio0: 20 pins available
+simple_mfd0: no default resources for rid = 0, type = 1
+gpiobus0: <OFW GPIO bus> on gpio0
+gpio1: <Marvell Integrated GPIO Controller> mem 0x440000-0x441fff irq 63,64,65,66 on simple_mfd2
+gpio1: 31 pins available
+gpiobus1: <OFW GPIO bus> on gpio1
+gpio2: <Marvell Integrated GPIO Controller> mem 0x440000-0x441fff irq 68,69,70,71 on simple_mfd4
+gpio2: 32 pins available
+gpiobus2: <OFW GPIO bus> on gpio2
+simplebus1: <pmu> irq 5 compat arm,cortex-a72-pmu (no driver attached)
+simplebus1: <XXX@XXX> mem 0x300000-0x303fff,0x304000-0x307fff,0x308000-0x30bfff,0x30c000-0x30ffff compat marvell,odmi-controller (no driver attached)
+simplebus1: <XXX@XXX> mem 0x3f0100-0x3f010f irq 6 compat marvell,armada-8k-pic (no driver attached)
+simplebus1: <XXX@XXX> mem 0x400000-0x400fff,0x410000-0x410fff compat marvell,armada-7k-xor (no driver attached)
+simplebus1: <XXX@XXX> mem 0x420000-0x420fff,0x430000-0x430fff compat marvell,armada-7k-xor (no driver attached)
+simplebus1: <XXX@XXX> mem 0x440000-0x440fff,0x450000-0x450fff compat marvell,armada-7k-xor (no driver attached)
+simplebus1: <XXX@XXX> mem 0x460000-0x460fff,0x470000-0x470fff compat marvell,armada-7k-xor (no driver attached)
+simplebus1: <XXX@XXX> mem 0x510600-0x51064f irq 8 disabled compat marvell,armada-380-spi (no driver attached)
+simplebus1: <XXX@XXX> mem 0x511000-0x51101f irq 9 disabled compat marvell,mv78230-i2c (no driver attached)
+uart0: <16550 or compatible> mem 0x512000-0x5120ff irq 10 on simplebus1
+uart0: console (114678,n,8,1)
+uart0: fast interrupt
+uart0: PPS capture mode: DCD
+simplebus1: <XXX@XXX> mem 0x512100-0x5121ff irq 11 disabled compat snps,dw-apb-uart (no driver attached)
+simplebus1: <XXX@XXX> mem 0x610000-0x610fff,0x600000-0x600fff irq 12 compat arm,sbsa-gwdt (no driver attached)
+sdhci_xenon0: vqmmc-supply regulator found
+sdhci_xenon0: <Armada Xenon SDHCI controller> mem 0x6e0000-0x6e02ff irq 13 on simplebus1
+sdhci_xenon0: Non-removable media
+sdhci_xenon0: Non-removable media
+sdhci_xenon0-slot0: 400MHz HS 8bits VDD: 3.3V VCCQ: 3.3V DRV: BACD DMA non-removable
+sdhci_xenon0-slot0: ============== REGISTER DUMP ==============
+sdhci_xenon0-slot0: Sys addr: 0x00000000 | Version:  0x00000002
+sdhci_xenon0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_xenon0-slot0: Argument: 0x00000000 | Trn mode: 0x00000000
+sdhci_xenon0-slot0: Present:  0x01ff0000 | Host ctl: 0x00000000
+sdhci_xenon0-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_xenon0-slot0: Wake-up:  0x00000000 | Clock:    0x00000000
+sdhci_xenon0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_xenon0-slot0: Int enab: 0x027f003b | Sig enab: 0x00000000
+sdhci_xenon0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_xenon0-slot0: Caps:     0x31ee0099 | Caps2:    0x0000af77
+sdhci_xenon0-slot0: Max curr: 0x00000000 | ADMA err: 0x00000000
+sdhci_xenon0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_xenon0-slot0: ===========================================
+sdhci_xenon0-slot0: Card inserted
+mmc0: <MMC/SD bus> on sdhci_xenon0
+gpioc0: <GPIO controller> on gpio0
+mv_thermal0: <Marvell Thermal Sensor Controller> mem 0x6f8000-0x6f8fff irq 58 on simple_mfd1
+simple_mfd1: <XXX@XXX> mem 0x6f8000-0x6f8fff compat marvell,ap806-cpu-clock (no driver attached)
+cpulist0: <Open Firmware CPU Group> on ofwbus0
+cpu0: <Open Firmware CPU> on cpulist0
+cpu0: missing 'clock-frequency' property
+cpu1: <Open Firmware CPU> on cpulist0
+cpu1: missing 'clock-frequency' property
+cpu2: <Open Firmware CPU> on cpulist0
+cpu2: missing 'clock-frequency' property
+cpu3: <Open Firmware CPU> on cpulist0
+cpu3: missing 'clock-frequency' property
+simplebus3: <XXX@XXX> mem 0-0xfffff,0x129000-0x133fff compat marvell,armada-7k-pp22 (no driver attached)
+simplebus3: <XXX@XXX> mem 0x120000-0x125fff compat marvell,comphy-cp110 (no driver attached)
+simplebus3: <XXX@XXX> mem 0x12a200-0x12a20f compat marvell,orion-mdio (no driver attached)
+simplebus3: <XXX@XXX> mem 0x12a600-0x12a60f compat marvell,xmdio (no driver attached)
+simplebus3: <XXX@XXX> mem 0x284000-0x28401f,0x284080-0x2840a3 irq 17 disabled compat marvell,armada-8k-rtc (no driver attached)
+simple_mfd2: <XXX@XXX> mem 0x440000-0x441fff irq 59,60,61,62 disabled compat marvell,armada-8k-gpio (no driver attached)
+gpioc1: <GPIO controller> on gpio1
+simple_mfd2: <pinctrl> mem 0x440000-0x441fff compat marvell,armada-8k-cpm-pinctrl (no driver attached)
+mv_thermal1: <Marvell Thermal Sensor Controller> mem 0x400000-0x400fff irq 67 on simple_mfd3
+xhci0: <Generic USB 3.0 controller> mem 0x500000-0x503fff irq 18 on simplebus3
+xhci0: 32 bytes context size, 32-bit DMA
+usbus0 on xhci0
+xhci0: usbpf: Attached
+xhci1: <Generic USB 3.0 controller> mem 0x510000-0x513fff irq 19 on simplebus3
+xhci1: 32 bytes context size, 32-bit DMA
+usbus1 on xhci1
+xhci1: usbpf: Attached
+ahci0: <AHCI SATA controller> mem 0x540000-0x56ffff irq 20 on simplebus3
+ahci0: AHCI v1.00 with 2 6Gbps ports, Port Multiplier supported with FBS
+ahci0: Caps: 64bit NCQ SNTF AL 6Gbps PM FBS PMD SSC PSC 32cmd eSATA 2ports
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich0: Caps: CPD ESP FBSCP
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich1: Caps: CPD ESP FBSCP
+simplebus3: <XXX@XXX> mem 0x6a0000-0x6a0fff,0x6b0000-0x6b0fff compat marvell,armada-7k-xor (no driver attached)
+simplebus3: <XXX@XXX> mem 0x6c0000-0x6c0fff,0x6d0000-0x6d0fff compat marvell,armada-7k-xor (no driver attached)
+simplebus3: <XXX@XXX> mem 0x700600-0x70064f disabled compat marvell,armada-380-spi (no driver attached)
+simplebus3: <XXX@XXX> mem 0x700680-0x7006cf disabled compat marvell,armada-380-spi (no driver attached)
+twsi0: <Marvell Integrated I2C Bus Controller> mem 0x701000-0x70101f irq 21 on simplebus3
+twsi0: calculated baud rates are:
+ 48 kHz (M=15, N=4) for slow,
+ 97 kHz (M=15, N=3) for fast.
+iicbus0: <OFW I2C bus> on twsi0
+iic0: <I2C generic I/O> on iicbus0
+twsi1: <Marvell Integrated I2C Bus Controller> mem 0x701100-0x70111f irq 22 on simplebus3
+twsi1: calculated baud rates are:
+ 48 kHz (M=15, N=4) for slow,
+ 97 kHz (M=15, N=3) for fast.
+iicbus1: <OFW I2C bus> on twsi1
+iic1: <I2C generic I/O> on iicbus1
+iicbus1: <unknown card> at addr 0xe0
+simplebus3: <XXX@XXX> mem 0x702000-0x7020ff irq 23 disabled compat snps,dw-apb-uart (no driver attached)
+uart1: <16550 or compatible> mem 0x702100-0x7021ff irq 24 on simplebus3
+uart1: fast interrupt
+uart1: PPS capture mode: DCD
+simplebus3: <XXX@XXX> mem 0x702200-0x7022ff irq 25 disabled compat snps,dw-apb-uart (no driver attached)
+simplebus3: <XXX@XXX> mem 0x702300-0x7023ff irq 26 disabled compat snps,dw-apb-uart (no driver attached)
+simplebus3: <XXX@XXX> mem 0x720000-0x720053 irq 27 disabled compat marvell,armada-8k-nand-controller (no driver attached)
+simplebus3: <XXX@XXX> mem 0x760000-0x76007c irq 28 compat marvell,armada-8k-rng (no driver attached)
+sdhci_xenon1: vqmmc-supply regulator found
+sdhci_xenon1: <Armada Xenon SDHCI controller> mem 0x780000-0x7802ff irq 29 on simplebus3
+sdhci_xenon1-slot0: 400MHz HS 8bits VDD: 3.3V VCCQ: 3.3V DRV: BACD DMA removable
+sdhci_xenon1-slot0: ============== REGISTER DUMP ==============
+sdhci_xenon1-slot0: Sys addr: 0x00000000 | Version:  0x00000002
+sdhci_xenon1-slot0: Blk size: 0x00007200 | Blk cnt:  0x00000000
+sdhci_xenon1-slot0: Argument: 0x00000000 | Trn mode: 0x00000032
+sdhci_xenon1-slot0: Present:  0x000f0000 | Host ctl: 0x00000006
+sdhci_xenon1-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_xenon1-slot0: Wake-up:  0x00000000 | Clock:    0x00000407
+sdhci_xenon1-slot0: Timeout:  0x0000000e | Int stat: 0x00000000
+sdhci_xenon1-slot0: Int enab: 0x027f003b | Sig enab: 0x00000000
+sdhci_xenon1-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_xenon1-slot0: Caps:     0x35ee0099 | Caps2:    0x0000af77
+sdhci_xenon1-slot0: Max curr: 0x00000000 | ADMA err: 0x00000000
+sdhci_xenon1-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_xenon1-slot0: ===========================================
+sdhci_xenon1-slot0: Card inserted
+mmc1: <MMC/SD bus> on sdhci_xenon1
+simplebus3: <XXX@XXX> mem 0x800000-0x9fffff irq 30,31,32,33,34,35 compat inside-secure,safexcel-eip197b (no driver attached)
+pcib0: <Marvell Armada8K PCI-E Controller> mem 0xf2600000-0xf260ffff,0xf6f00000-0xf6f7ffff irq 14 on simplebus2
+pcib0: Cannot get phy[0]
+pcib0: Cannot get phy[1]
+pcib0: Cannot get phy[2]
+pcib0: Cannot get phy[3]
+pcib0: Bus is cache-coherent
+pci0: <PCI bus> on pcib0
+pci0: domain=0, physical bus=0
+found->	vendor=0x11ab, dev=0x0110, revid=0x00
+	domain=0, bus=0, slot=0, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=0
+	cmdreg=0x0107, statreg=0x0010, cachelnsz=8 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 32 messages, 64 bit, vector masks
+	MSI-X supports 1 message in maps 0x10 and 0x18
+	map[10]: type Memory, range 64, base 0, size 20, enabled
+	secbus=1, subbus=255
+pcib1: <PCI-PCI bridge> at device 0.0 on pci0
+pcib0: failed to reserve resource for pcib1
+pcib1: failed to allocate initial I/O port window: 0-0xffff
+pcib0: failed to reserve resource for pcib1
+pcib1: failed to allocate initial memory window: 0xf6000000-0xf63fffff
+pcib1:   domain            0
+pcib1:   secondary bus     1
+pcib1:   subordinate bus   255
+pci1: <PCI bus> on pcib1
+pcib1: allocated bus range (1-1) for rid 0 of pci1
+pci1: domain=0, physical bus=1
+found->	vendor=0x8086, dev=0x1521, revid=0x01
+	domain=0, bus=1, slot=0, func=0
+	class=02-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=8 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=0
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit, vector masks
+	MSI-X supports 10 messages in map 0x1c
+	map[10]: type Memory, range 32, base 0xf6000000, size 20, enabled
+pcib0: failed to reserve resource for pcib1
+pcib1: failed to allocate initial memory window (0xf6000000-0xf60fffff,0x100000)
+pcib1: allocated initial memory window of 0xc0000000-0xc00fffff
+pcib1: allocated memory range (0xc0000000-0xc00fffff) for rid 10 of pci0:1:0:0
+	map[18]: type I/O Port, range 32, base 0xffffffe0, size  5, enabled
+	map[1c]: type Memory, range 32, base 0xf6100000, size 14, enabled
+pcib1: attempting to grow memory window for (0xf6100000-0xf6103fff,0x4000)
+	back candidate range: 0xf6100000-0xf6103fff
+pcib1: attempting to grow memory window for (0-0xffffffff,0x4000)
+	front candidate range: 0xbfffc000-0xbfffffff
+	back candidate range: 0xc0100000-0xc0103fff
+pcib1: grew memory window to 0xc0000000-0xc01fffff
+pcib1: allocated memory range (0xc0100000-0xc0103fff) for rid 1c of pci0:1:0:0
+pcib1: slot 0 INTA is routed to irq 77
+found->	vendor=0x8086, dev=0x1521, revid=0x01
+	domain=0, bus=1, slot=0, func=1
+	class=02-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=8 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=b, irq=0
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit, vector masks
+	MSI-X supports 10 messages in map 0x1c
+	map[10]: type Memory, range 32, base 0xf6200000, size 20, enabled
+pcib1: attempting to grow memory window for (0xf6200000-0xf62fffff,0x100000)
+	back candidate range: 0xf6200000-0xf62fffff
+pcib1: attempting to grow memory window for (0-0xffffffff,0x100000)
+	front candidate range: 0xbff00000-0xbfffffff
+	back candidate range: 0xc0200000-0xc02fffff
+pcib1: grew memory window to 0xc0000000-0xc02fffff
+pcib1: allocated memory range (0xc0200000-0xc02fffff) for rid 10 of pci0:1:0:1
+	map[18]: type I/O Port, range 32, base 0xffffffe0, size  5, enabled
+	map[1c]: type Memory, range 32, base 0xf6300000, size 14, enabled
+pcib1: attempting to grow memory window for (0xf6300000-0xf6303fff,0x4000)
+	back candidate range: 0xf6300000-0xf6303fff
+pcib1: allocated memory range (0xc0104000-0xc0107fff) for rid 1c of pci0:1:0:1
+pcib1: slot 0 INTB is routed to irq 78
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc0000000-0xc00fffff,0xc0100000-0xc0103fff irq 77 at device 0.0 on pci1
+igb0: attach_pre capping queues at 8
+ofw_pci mapdev: start c0000000, len 1048576
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: msix_init qsets capped at 8
+ofw_pci mapdev: start c0100000, len 16384
+igb0: intr CPUs: 4 queue msgs: 9 admincnt: 1
+igb0: Using 4 RX queues 4 TX queues
+igb0: attempting to allocate 5 MSI-X vectors (10 supported)
+igb0: using IRQs 79-83 for MSI-X
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: allocated for 4 tx_queues
+igb0: allocated for 4 rx_queues
+igb0: bpf attached
+igb0: Ethernet address: XXX
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc0200000-0xc02fffff,0xc0104000-0xc0107fff irq 78 at device 0.1 on pci1
+igb1: attach_pre capping queues at 8
+ofw_pci mapdev: start c0200000, len 1048576
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: msix_init qsets capped at 8
+ofw_pci mapdev: start c0104000, len 16384
+igb1: intr CPUs: 4 queue msgs: 9 admincnt: 1
+igb1: Using 4 RX queues 4 TX queues
+igb1: attempting to allocate 5 MSI-X vectors (10 supported)
+igb1: using IRQs 84-88 for MSI-X
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: allocated for 4 tx_queues
+igb1: allocated for 4 rx_queues
+igb1: bpf attached
+igb1: Ethernet address: XXX
+simplebus2: <XXX@XXX> mem 0xf2620000-0xf262ffff,0xf7f00000-0xf7f7ffff irq 15 disabled type pci compat marvell,armada8k-pcie (no driver attached)
+simplebus2: <XXX@XXX> mem 0xf2640000-0xf264ffff,0xf8f00000-0xf8f7ffff irq 16 disabled type pci compat marvell,armada8k-pcie (no driver attached)
+simplebus5: <XXX@XXX> mem 0-0xfffff,0x129000-0x133fff compat marvell,armada-7k-pp22 (no driver attached)
+simplebus5: <XXX@XXX> mem 0x120000-0x125fff compat marvell,comphy-cp110 (no driver attached)
+simplebus5: <XXX@XXX> mem 0x12a200-0x12a20f disabled compat marvell,orion-mdio (no driver attached)
+simplebus5: <XXX@XXX> mem 0x12a600-0x12a60f disabled compat marvell,xmdio (no driver attached)
+rtc0: <Marvell Integrated RTC> mem 0x284000-0x28401f,0x284080-0x2840a3 irq 39 on simplebus5
+rtc0: registered as a time-of-day clock, resolution 1.000000s
+gpioc2: <GPIO controller> on gpio2
+simple_mfd4: <XXX@XXX> mem 0x440000-0x441fff irq 72,73,74,75 disabled compat marvell,armada-8k-gpio (no driver attached)
+simple_mfd4: <pinctrl> mem 0x440000-0x441fff compat marvell,armada-8k-cps-pinctrl (no driver attached)
+mv_thermal2: <Marvell Thermal Sensor Controller> mem 0x400000-0x400fff irq 76 on simple_mfd5
+xhci2: <Generic USB 3.0 controller> mem 0x500000-0x503fff irq 40 on simplebus5
+xhci2: 32 bytes context size, 32-bit DMA
+usbus2 on xhci2
+xhci2: usbpf: Attached
+simplebus5: <XXX@XXX> mem 0x510000-0x513fff irq 41 disabled compat marvell,armada-8k-xhci (no driver attached)
+ahci1: <AHCI SATA controller> mem 0x540000-0x56ffff irq 42 on simplebus5
+ahci1: AHCI v1.00 with 2 6Gbps ports, Port Multiplier supported with FBS
+ahci1: Caps: 64bit NCQ SNTF AL 6Gbps PM FBS PMD SSC PSC 32cmd eSATA 2ports
+ahcich2: <AHCI channel> at channel 0 on ahci1
+ahcich2: Caps: CPD ESP FBSCP
+ahcich3: <AHCI channel> at channel 1 on ahci1
+ahcich3: Caps: CPD ESP FBSCP
+simplebus5: <XXX@XXX> mem 0x6a0000-0x6a0fff,0x6b0000-0x6b0fff compat marvell,armada-7k-xor (no driver attached)
+simplebus5: <XXX@XXX> mem 0x6c0000-0x6c0fff,0x6d0000-0x6d0fff compat marvell,armada-7k-xor (no driver attached)
+simplebus5: <XXX@XXX> mem 0x700600-0x70064f disabled compat marvell,armada-380-spi (no driver attached)
+simplebus5: <XXX@XXX> mem 0x700680-0x7006cf compat marvell,armada-380-spi (no driver attached)
+simplebus5: <XXX@XXX> mem 0x701000-0x70101f irq 43 disabled compat marvell,mv78230-i2c (no driver attached)
+simplebus5: <XXX@XXX> mem 0x701100-0x70111f irq 44 disabled compat marvell,mv78230-i2c (no driver attached)
+uart2: <16550 or compatible> mem 0x702000-0x7020ff irq 45 on simplebus5
+uart2: fast interrupt
+uart2: PPS capture mode: DCD
+simplebus5: <XXX@XXX> mem 0x702100-0x7021ff irq 46 disabled compat snps,dw-apb-uart (no driver attached)
+simplebus5: <XXX@XXX> mem 0x702200-0x7022ff irq 47 disabled compat snps,dw-apb-uart (no driver attached)
+simplebus5: <XXX@XXX> mem 0x702300-0x7023ff irq 48 disabled compat snps,dw-apb-uart (no driver attached)
+simplebus5: <XXX@XXX> mem 0x720000-0x720053 irq 49 disabled compat marvell,armada-8k-nand-controller (no driver attached)
+simplebus5: <XXX@XXX> mem 0x760000-0x76007c irq 50 compat marvell,armada-8k-rng (no driver attached)
+simplebus5: <XXX@XXX> mem 0x780000-0x7802ff irq 51 disabled compat marvell,armada-cp110-sdhci (no driver attached)
+simplebus5: <XXX@XXX> mem 0x800000-0x9fffff irq 52,53,54,55,56,57 disabled compat inside-secure,safexcel-eip197b (no driver attached)
+simplebus4: <XXX@XXX> mem 0xf4600000-0xf460ffff,0xfaf00000-0xfaf7ffff irq 36 disabled type pci compat marvell,armada8k-pcie (no driver attached)
+simplebus4: <XXX@XXX> mem 0xf4620000-0xf462ffff,0xfbf00000-0xfbf7ffff irq 37 disabled type pci compat marvell,armada8k-pcie (no driver attached)
+simplebus4: <XXX@XXX> mem 0xf4640000-0xf464ffff,0xfcf00000-0xfcf7ffff irq 38 disabled type pci compat marvell,armada8k-pcie (no driver attached)
+ofwbus0: <sfp-eth0> compat sff,sfp (no driver attached)
+ofwbus0: <sfp-eth1> compat sff,sfp (no driver attached)
+ofwbus0: <sfp-eth3> compat sff,sfp (no driver attached)
+cryptosoft0: <software crypto>
+crypto: assign cryptosoft0 driver id 0, flags 0x6000000
+Found SMCCC version 1.0
+Device configuration finished.
+procfs registered
+Timecounters tick every 1.000 msec
+can't handle raw ops yet!!!
+can't handle raw ops yet!!!
+usbus0: 5.0Gbps Super Speed USB v3.0
+usbus1: 5.0Gbps Super Speed USB v3.0
+usbus2: 5.0Gbps Super Speed USB v3.0
+can't handle raw ops yet!!!
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+lo0: bpf attached
+vlan: initialized, using hash tables with chaining
+IPsec: Initialized Security Association Processing.
+tcp_init: net.inet.tcp.tcbhashsize auto tuned to 131072
+ugen1.1: <Generic XHCI root HUB> at usbus1
+uhub0 on usbus1
+uhub0: <Generic XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+ugen2.1: <Generic XHCI root HUB> at usbus2
+uhub1 on usbus2
+uhub1: <Generic XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+ugen0.1: <Generic XHCI root HUB> at usbus0
+uhub2 on usbus0
+uhub2: <Generic XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+sdhci_xenon0: Powering up sd/mmc
+sdhci_xenon0: Cannot set vqmmc to 3300000<->3300000
+sdhci_xenon0-slot0: Divider 500 for freq 400000 (base 400000000)
+mmc0: Probing bus
+ahcich0: AHCI reset...
+ahcich0: SATA connect timeout time=10000us status=00000000
+ahcich0: AHCI reset: device not found
+ahcich1: AHCI reset...
+ahcich1: SATA connect timeout time=10000us status=00000000
+ahcich1: AHCI reset: device not found
+ahcich2: AHCI reset...
+ahcich2: SATA connect time=100us status=00000133
+ahcich2: AHCI reset: device found
+ahcich2: AHCI reset: device ready after 1ms
+ahcich3: AHCI reset...
+ahcich3: SATA connect timeout time=10000us status=00000000
+ahcich3: AHCI reset: device not found
+mmc0: SD probe: failed
+mmc0: MMC probe: OK (OCR: 0x40ff8080)
+mmc0: Current OCR: 0x00ff8080
+mmc0: Probing cards
+mmc0: New card detected (CID XXX)
+mmc0: New card detected (CSD XXX)
+mmc0: Card at relative address 0x0002 added:
+mmc0:  card: MMCHC 8GME4R 0.1 SN B3BD8C12 MFG 04/2017 by 21 0x0000
+mmc0:  quirks: 0
+mmc0:  bus: 8bit, 52MHz (high speed timing)
+mmc0:  memory: 15269888 blocks, erase sector 1024 blocks
+mmc0: setting transfer rate to 52.000MHz (high speed timing)
+sdhci_xenon0-slot0: Divider 4 for freq 50000000 (base 400000000)
+mmc0: setting bus width to 8 bits high speed timing
+sdhci_xenon0: Cannot set vqmmc to 3300000<->3300000
+mmc0: Failed to set VCCQ for card at relative address 2
+mmcsd0: taking advantage of TRIM
+mmcsd0: cache size 65536KB
+mmcsd0: 8GB <MMCHC 8GME4R 0.1 SN B3BD8C12 MFG 04/2017 by 21 0x0000> at mmc0 50.0MHz/8bit/65535-block
+mmcsd0boot0: 4MB partition 1 at mmcsd0
+mmcsd0boot1: 4MB partition 2 at mmcsd0
+mmcsd0rpmb: 524kB partition 3 at mmcsd0
+sdhci_xenon1: Powering up sd/mmc
+sdhci_xenon1-slot0: Divider 500 for freq 400000 (base 400000000)
+mmc1: Probing bus
+GEOM: new disk mmcsd0
+GEOM: new disk mmcsd0boot0
+mmc1: SD 2.0 interface conditions: OK
+GEOM: new disk mmcsd0boot1
+mmc1: SD probe: OK (OCR: 0x40ff8000)
+mmc1: Current OCR: 0x00ff8000
+mmc1: Probing cards
+mmc1: New card detected (CID XXX)
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+mmc1: New card detected (CSD XXX)
+mmc1: Card at relative address 0xaaaa added:
+mmc1:  card: SDHC SC16G 8.0 SN D1B72650 MFG 08/2018 by 3 SD
+mmc1:  quirks: 0
+mmc1:  bus: 4bit, 50MHz (high speed timing)
+mmc1:  memory: 31116288 blocks, erase sector 8192 blocks
+mmc1: setting transfer rate to 50.000MHz (high speed timing)
+sdhci_xenon1-slot0: Divider 4 for freq 50000000 (base 400000000)
+mmcsd1: 16GB <SDHC SC16G 8.0 SN D1B72650 MFG 08/2018 by 3 SD> at mmc1 50.0MHz/4bit/65535-block
+Release APs...Trying to mount root from zfs:zroot/ROOT/default []...
+done
+GEOM: new disk mmcsd1
+pass0 at ahcich2 bus 0 scbus2 target 0 lun 0
+mmc1: setting bus width to 4 bits high speed timing
+pass0: CPU  0: ARM Cortex-A72 r0p1 affinity:  0  0
+<Samsung SSD 860 EVO 250GB RVT01B6Q>                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,PIPT ICache,64 byte ERG,64 byte CWG>
+ ACS-4 ATA SATA 3.x device
+ Instruction Set Attributes 0 = <CRC32,SHA2,SHA1,AES+PMULL>
+pass0: Serial Number...
+ Instruction Set Attributes 1 = <>
+GEOM_PART: partition 1 on (mmcsd1, MBR) is not aligned on 4194304 bytes
+pass0: 600.000MB/s transfersGEOM_PART: partition 2 on (mmcsd1, MBR) is not aligned on 4194304 bytes
+ (         Processor Features 0 = <AdvSIMD,FP,EL3 32,EL2 32,EL1 32,EL0 32>
+         Processor Features 1 = <>
+SATA 3.x,       Memory Model Features 0 = <TGran4,TGran64,SNSMem,BigEnd,16bit ASID,16TB PA>
+UDMA6,       Memory Model Features 1 = <8bit VMID>
+PIO 512bytes      Memory Model Features 2 = <32bit CCIDX,48bit VA>
+)             Debug Features 0 = <2 CTX BKPTs,4 Watchpoints,6 Breakpoints,PMUv3,Debugv8>
+
+pass0: Command Queueing enabled
+             Debug Features 1 = <>
+ada0 at ahcich2 bus 0 scbus2 target 0 lun 0
+ada0: <Samsung SSD 860 EVO 250GB RVT01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 238475MB (488397168 512 byte sectors)
+         Auxiliary Features 0 = <>
+         Auxiliary Features 1 = <>
+GEOM: new disk ada0
+CPU  1: ARM Cortex-A72 r0p1 affinity:  0  1
+CPU  2: ARM Cortex-A72 r0p1 affinity:  1  0
+GEOM_PART: partition 1 on (diskid/XXXXXXXXXXXXXX MBR) is not aligned on 4194304 bytes
+CPU  3: ARM Cortex-A72 r0p1 affinity:  1  1
+GEOM_PART: partition 2 on (diskid/XXXXXXXXXXXXXX MBR) is not aligned on 4194304 bytes
+can't handle raw ops yet!!!
+random: unblocking device.
+WARNING: WITNESS option enabled, expect reduced performance.
+regulator: shutting down unused regulators
+rtc0: providing initial system time
+start_init: trying /sbin/init
+lo0: link state changed to UP
+igb0: Link is up 100 Mbps Full Duplex
+igb0: link state changed to UP
+pid 72051 (conftest), jid 0, uid 0: exited on signal 11 (core dumped)

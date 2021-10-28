@@ -1,0 +1,299 @@
+ apic 4 int 23
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x02: apic 4 int 21
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x02: apic 4 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801GB USB" rev 0x02: apic 4 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x02: apic 4 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xe2
+pci5 at ppb4 bus 5
+pcib0 at pci0 dev 31 function 0 "Intel NM10 LPC" rev 0x02
+ahci0 at pci0 dev 31 function 2 "Intel 82801GR AHCI" rev 0x02: msi, AHCI 1.1
+ahci0: port 0: 3.0Gb/s
+ahci0: PHY offline on port 1
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD3200BPVT-2, 01.0> naa.50014ee6acb7d097
+sd0: 305245MB, 512 bytes/sector, 625142448 sectors
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x02: apic 4 int 20
+iic0 at ichiic0
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.5, 0x1e0b1 0x240000 0x1c880c 0xf00073 0xa2400
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+uvideo0 at uhub0 port 4 configuration 1 interface 0 "Chicony Electronics Co., Ltd. USB2.0 0.3M UVC WebCam" rev 2.00/62.53 addr 2
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (763b7b7b5535838c.a) swap on sd0b dump on sd0b
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+syncing disks... done
+OpenBSD 6.8 (GENERIC.MP) #2: Sat Dec  5 05:25:22 MST 2020
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC.MP
+real mem  = 1060052992 (1010MB)
+avail mem = 1024335872 (976MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 03/15/11, SMBIOS rev. 2.7 @ 0xe96d0 (31 entries)
+bios0: vendor American Megatrends Inc. version "X101CH.1203" date 07/30/2012
+bios0: ASUSTeK COMPUTER INC. X101CH
+acpi0 at bios0: ACPI 4.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC MCFG RTCF HPET SSDT SLIC BGRT
+acpi0: wakeup devices P0P8(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Atom(TM) CPU N2600 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-36-01
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,ITSC,SENSOR,ARAT,MELTDOWN
+mtrr: Pentium Pro MTRR support, 7 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.0.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Atom(TM) CPU N2600 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-36-01
+cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,ITSC,SENSOR,ARAT,MELTDOWN
+cpu2 at mainbus0: apid 2 (application processor)
+cpu2: Intel(R) Atom(TM) CPU N2600 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-36-01
+cpu2: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,ITSC,SENSOR,ARAT,MELTDOWN
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Atom(TM) CPU N2600 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-36-01
+cpu3: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,ITSC,SENSOR,ARAT,MELTDOWN
+ioapic0 at mainbus0: apid 4 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiprt3 at acpi0: bus 3 (RP03)
+acpiprt4 at acpi0: bus 4 (RP04)
+acpiec0 at acpi0
+"PNP0A08" at acpi0 not configured
+acpibat0 at acpi0: BAT0 model "X101CH" serial ... type LION oem "ASUS"
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: PWRB
+acpibtn1 at acpi0: SLPB
+acpibtn2 at acpi0: LID_
+"PNP0C14" at acpi0 not configured
+acpicpu0 at acpi0: C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 255 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+bios0: ROM list: 0xc0000/0xf400!
+cpu0: Enhanced SpeedStep 1597 MHz: speeds: 1600, 1400, 1200, 1000, 800, 600 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel Atom D2000/N2000 Host" rev 0x03
+vga1 at pci0 dev 2 function 0 "Intel Atom D2000/N2000 Video" rev 0x09
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+azalia0 at pci0 dev 27 function 0 "Intel 82801GB HD Audio" rev 0x02: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2880, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 82801GB PCIE" rev 0x02: apic 4 int 16
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 82801GB PCIE" rev 0x02: apic 4 int 17
+pci2 at ppb1 bus 2
+"Atheros AR9485" rev 0x01 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 2 "Intel 82801GB PCIE" rev 0x02: apic 4 int 18
+pci3 at ppb2 bus 3
+ppb3 at pci0 dev 28 function 3 "Intel 82801GB PCIE" rev 0x02: apic 4 int 19
+pci4 at ppb3 bus 4
+alc0 at pci4 dev 0 function 0 "Attansic Technology L2C" rev 0xc1: msi, address XXX
+atphy0 at alc0 phy 0: F2 10/100 PHY, rev. 5
+uhci0 at pci0 dev 29 function 0 "Intel 82801GB USB" rev 0x02: apic 4 int 23
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x02: apic 4 int 21
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x02: apic 4 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801GB USB" rev 0x02: apic 4 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x02: apic 4 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xe2
+pci5 at ppb4 bus 5
+pcib0 at pci0 dev 31 function 0 "Intel NM10 LPC" rev 0x02
+ahci0 at pci0 dev 31 function 2 "Intel 82801GR AHCI" rev 0x02: msi, AHCI 1.1
+ahci0: port 0: 3.0Gb/s
+ahci0: PHY offline on port 1
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD3200BPVT-2, 01.0> naa.50014ee6acb7d097
+sd0: 305245MB, 512 bytes/sector, 625142448 sectors
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x02: apic 4 int 20
+iic0 at ichiic0
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.5, 0x1e0b1 0x240000 0x1c880c 0xf00073 0xa2400
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+uvideo0 at uhub0 port 4 configuration 1 interface 0 "Chicony Electronics Co., Ltd. USB2.0 0.3M UVC WebCam" rev 2.00/62.53 addr 2
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (763b7b7b5535838c.a) swap on sd0b dump on sd0b
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+duplicate IP address XXX.XXX.XXX.XXX sent from ethernet address XXX
+syncing disks... done
+r
+OpenBSD 6.8 (GENERIC.MP) #2: Sat Dec  5 05:25:22 MST 2020
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC.MP
+real mem  = 1060052992 (1010MB)
+avail mem = 1024352256 (976MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 03/15/11, SMBIOS rev. 2.7 @ 0xe96d0 (31 entries)
+bios0: vendor American Megatrends Inc. version "X101CH.1203" date 07/30/2012
+bios0: ASUSTeK COMPUTER INC. X101CH
+acpi0 at bios0: ACPI 4.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC MCFG RTCF HPET SSDT SLIC BGRT
+acpi0: wakeup devices P0P8(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Atom(TM) CPU N2600 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-36-01
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,ITSC,SENSOR,ARAT,MELTDOWN
+mtrr: Pentium Pro MTRR support, 7 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.0.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Atom(TM) CPU N2600 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-36-01
+cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,ITSC,SENSOR,ARAT,MELTDOWN
+cpu2 at mainbus0: apid 2 (application processor)
+cpu2: Intel(R) Atom(TM) CPU N2600 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-36-01
+cpu2: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,ITSC,SENSOR,ARAT,MELTDOWN
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Atom(TM) CPU N2600 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-36-01
+cpu3: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,ITSC,SENSOR,ARAT,MELTDOWN
+ioapic0 at mainbus0: apid 4 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiprt3 at acpi0: bus 3 (RP03)
+acpiprt4 at acpi0: bus 4 (RP04)
+acpiec0 at acpi0
+"PNP0A08" at acpi0 not configured
+acpibat0 at acpi0: BAT0 model "X101CH" serial ... type LION oem "ASUS"
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: PWRB
+acpibtn1 at acpi0: SLPB
+acpibtn2 at acpi0: LID_
+"PNP0C14" at acpi0 not configured
+acpicpu0 at acpi0: C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 255 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+bios0: ROM list: 0xc0000/0xf400!
+cpu0: Enhanced SpeedStep 1597 MHz: speeds: 1600, 1400, 1200, 1000, 800, 600 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel Atom D2000/N2000 Host" rev 0x03
+vga1 at pci0 dev 2 function 0 "Intel Atom D2000/N2000 Video" rev 0x09
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+azalia0 at pci0 dev 27 function 0 "Intel 82801GB HD Audio" rev 0x02: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2880, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 82801GB PCIE" rev 0x02: apic 4 int 16
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 82801GB PCIE" rev 0x02: apic 4 int 17
+pci2 at ppb1 bus 2
+"Atheros AR9485" rev 0x01 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 2 "Intel 82801GB PCIE" rev 0x02: apic 4 int 18
+pci3 at ppb2 bus 3
+ppb3 at pci0 dev 28 function 3 "Intel 82801GB PCIE" rev 0x02: apic 4 int 19
+pci4 at ppb3 bus 4
+alc0 at pci4 dev 0 function 0 "Attansic Technology L2C" rev 0xc1: msi, address XXX
+atphy0 at alc0 phy 0: F2 10/100 PHY, rev. 5
+uhci0 at pci0 dev 29 function 0 "Intel 82801GB USB" rev 0x02: apic 4 int 23
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x02: apic 4 int 21
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x02: apic 4 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801GB USB" rev 0x02: apic 4 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x02: apic 4 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xe2
+pci5 at ppb4 bus 5
+pcib0 at pci0 dev 31 function 0 "Intel NM10 LPC" rev 0x02
+ahci0 at pci0 dev 31 function 2 "Intel 82801GR AHCI" rev 0x02: msi, AHCI 1.1
+ahci0: port 0: 3.0Gb/s
+ahci0: PHY offline on port 1
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD3200BPVT-2, 01.0> naa.50014ee6acb7d097
+sd0: 305245MB, 512 bytes/sector, 625142448 sectors
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x02: apic 4 int 20
+iic0 at ichiic0
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.5, 0x1e0b1 0x240000 0x1c880c 0xf00073 0xa2400
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+uvideo0 at uhub0 port 4 configuration 1 interface 0 "Chicony Electronics Co., Ltd. USB2.0 0.3M UVC WebCam" rev 2.00/62.53 addr 2
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (763b7b7b5535838c.a) swap on sd0b dump on sd0b

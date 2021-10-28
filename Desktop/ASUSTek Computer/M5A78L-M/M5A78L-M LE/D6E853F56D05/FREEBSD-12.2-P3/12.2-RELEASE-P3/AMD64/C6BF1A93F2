@@ -1,0 +1,1500 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE-p3 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(vga): resolution 640x480
+CPU: AMD Athlon(tm) II X2 250 Processor (3013.59-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x100f63  Family=0x10  Model=0x6  Stepping=3
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802009<SSE3,MON,CX16,POPCNT>
+  AMD Features=0xee500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM,3DNow!+,3DNow!>
+  AMD Features2=0x837ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,NodeId>
+  SVM: (disabled in BIOS) NP,NRIP,NAsids=64
+  TSC: P-state invariant
+real memory  = 8589934592 (8192 MB)
+avail memory = 8276742144 (7893 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <081511 APIC1109>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20200430/tbfadt-796)
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 64/32 (20200430/tbfadt-748)
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+Launching APs: 1
+Timecounter "TSC-low" frequency 1506795324 Hz quality 800
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81114e40, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <081511 XSDT1109> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 18 at device 2.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xd000-0xd0ff mem 0xd0000000-0xdfffffff,0xfebc0000-0xfebdffff irq 18 at device 0.0 on pci1
+vgapci0: Boot video device
+hdac0: <ATI RV810 HDA Controller> mem 0xfebf8000-0xfebfbfff irq 19 at device 0.1 on pci1
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 4.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xe800-0xe8ff mem 0xfdfff000-0xfdffffff,0xfdff8000-0xfdffbfff irq 16 at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x2c800000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0xc000-0xc007,0xb000-0xb003,0xa000-0xa007,0x9000-0x9003,0x8000-0x800f mem 0xfeaffc00-0xfeafffff irq 22 at device 17.0 on pci0
+ahci0: AHCI v1.10 with 4 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeafe000-0xfeafefff irq 16 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeafd000-0xfeafdfff irq 16 at device 18.1 on pci0
+usbus1 on ohci1
+usbus1: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfeaff800-0xfeaff8ff irq 17 at device 18.2 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+usbus2: 480Mbps High Speed USB v2.0
+ohci2: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeafc000-0xfeafcfff irq 18 at device 19.0 on pci0
+usbus3 on ohci2
+usbus3: 12Mbps Full Speed USB v1.0
+ohci3: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeafb000-0xfeafbfff irq 18 at device 19.1 on pci0
+usbus4 on ohci3
+usbus4: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfeaff400-0xfeaff4ff irq 19 at device 19.2 on pci0
+usbus5: EHCI version 1.0
+usbus5 on ehci1
+usbus5: 480Mbps High Speed USB v2.0
+atapci0: <ATI IXP700/800 UDMA133 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xff00-0xff0f at device 20.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+ata1: <ATA channel> at channel 1 on atapci0
+hdac1: <ATI SB600 HDA Controller> mem 0xfeaf4000-0xfeaf7fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib3: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci3: <ACPI PCI bus> on pcib3
+ohci4: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeafa000-0xfeafafff irq 18 at device 20.5 on pci0
+usbus6 on ohci4
+usbus6: 12Mbps Full Speed USB v1.0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb4
+acpi_button0: <Power Button> on acpi0
+ppc0: <Parallel port> port 0x378-0x37f irq 7 on acpi0
+ppc0: Generic chipset (NIBBLE-only) in COMPATIBLE mode
+ppbus0: <Parallel port bus> on ppc0
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcffff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC887 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC887 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC887 (Rear Analog)> at nid 20 and 24,26 on hdaa1
+pcm2: <Realtek ALC887 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm3: <Realtek ALC887 (Onboard Digital)> at nid 17 on hdaa1
+ugen6.1: <ATI OHCI root HUB> at usbus6
+ugen5.1: <ATI EHCI root HUB> at usbus5
+uhub0: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+ugen4.1: <ATI OHCI root HUB> at usbus4
+ugen3.1: <ATI OHCI root HUB> at usbus3
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+ugen2.1: <ATI EHCI root HUB> at usbus2
+ugen1.1: <ATI OHCI root HUB> at usbus1
+uhub4: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+ugen0.1: <ATI OHCI root HUB> at usbus0
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: CAM usbus0 usbus1 usbus2 usbus3 usbus4 usbus5 usbus6
+uhub0: 2 ports with 2 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub6: 3 ports with 3 removable, self powered
+Root mount waiting for: CAM usbus2 usbus5
+Root mount waiting for: CAM usbus2 usbus5
+uhub1: 6 ports with 6 removable, self powered
+uhub4: 6 ports with 6 removable, self powered
+Root mount waiting for: CAM
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <WDC WD40EFRX-68N32N0 82.00A82> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 3815447MB (7814037168 512 byte sectors)
+ada0: quirks=0x1<4K>
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub6
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+info: [drm] Initialized drm 1.1.0 20060810
+drmn0: =======================================================
+drmn0: This code is deprecated.  Install the graphics/drm-kmod pkg
+drmn0: =======================================================
+drmn0: Deprecated code (to be removed in FreeBSD 13): drm2 drivers
+drmn0: =======================================================
+drmn0: This code is deprecated.  Install the graphics/drm-kmod pkg
+drmn0: =======================================================
+drmn0: Deprecated code (to be removed in FreeBSD 13): drm2 drivers
+drmn0: <Manhattan [Mobility Radeon HD 5430 Series]> on vgapci0
+info: [drm] RADEON_IS_PCIE
+info: [drm] initializing kernel modesetting (CEDAR 0x1002:0x68E1 0x1787:0x3000).
+info: [drm] register mmio base: 0xFEBC0000
+info: [drm] register mmio size: 131072
+info: [drm] radeon_atrm_get_bios: ===> Try ATRM...
+info: [drm] radeon_atrm_get_bios: pci_find_class() found: 0:1:0:0, vendor=1002, device=68e1
+info: [drm] radeon_atrm_get_bios: Get ACPI device handle
+info: [drm] radeon_acpi_vfct_bios: ===> Try VFCT...
+info: [drm] radeon_acpi_vfct_bios: Get "VFCT" ACPI table
+info: [drm] radeon_acpi_vfct_bios: Failed to get "VFCT" table: AE_NOT_FOUND
+info: [drm] igp_read_bios_from_vram: ===> Try IGP's VRAM...
+info: [drm] igp_read_bios_from_vram: VRAM base address: 0xd0000000
+info: [drm] igp_read_bios_from_vram: Map address: 0xfffff800d0000000 (262144 bytes)
+info: [drm] igp_read_bios_from_vram: Incorrect BIOS signature: 0x0000
+info: [drm] radeon_read_bios: ===> Try PCI Expansion ROM...
+info: [drm] radeon_read_bios: Map address: 0xfffff800000c0000 (131072 bytes)
+info: [drm] ATOM BIOS: PARK
+drmn0: info: VRAM: 1024M 0x0000000000000000 - 0x000000003FFFFFFF (1024M used)
+drmn0: info: GTT: 512M 0x0000000040000000 - 0x000000005FFFFFFF
+info: [drm] Detected VRAM RAM=1024M, BAR=256M
+info: [drm] RAM width 64bits DDR
+[TTM] Zone  kernel: Available graphics memory: 4172310 kiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 kiB
+[TTM] Initializing pool allocator
+info: [drm] radeon: 1024M of VRAM memory ready
+info: [drm] radeon: 512M of GTT memory ready.
+info: [drm] Supports vblank timestamp caching Rev 1 (10.10.2010).
+info: [drm] Driver supports precise vblank timestamp query.
+info: [drm] MSI enabled 1 message(s)
+drmn0: info: radeon: using MSI.
+info: [drm] radeon: irq initialized.
+info: [drm] GART: num cpu pages 131072, num gpu pages 131072
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] Loading CEDAR Microcode
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 0 usecs
+info: [drm] radeon_device_init: Taking over the fictitious range 0xd0000000-0xe0000000
+radeon_iicbb0 on drmn0
+iicbus0: <Philips I2C bus> on iicbb0 addr 0xff
+iic0: <I2C generic I/O> on iicbus0
+radeon_iicbb1 on drmn0
+iicbus1: <Philips I2C bus> on iicbb1 addr 0xff
+iic1: <I2C generic I/O> on iicbus1
+radeon_iicbb2 on drmn0
+iicbus2: <Philips I2C bus> on iicbb2 addr 0xff
+iic2: <I2C generic I/O> on iicbus2
+radeon_iicbb3 on drmn0
+iicbus3: <Philips I2C bus> on iicbb3 addr 0xff
+iic3: <I2C generic I/O> on iicbus3
+radeon_iicbb4 on drmn0
+iicbus4: <Philips I2C bus> on iicbb4 addr 0xff
+iic4: <I2C generic I/O> on iicbus4
+radeon_iicbb5 on drmn0
+iicbus5: <Philips I2C bus> on iicbb5 addr 0xff
+iic5: <I2C generic I/O> on iicbus5
+radeon_iicbb6 on drmn0
+iicbus6: <Philips I2C bus> on iicbb6 addr 0xff
+iic6: <I2C generic I/O> on iicbus6
+radeon_iicbb7 on drmn0
+iicbus7: <Philips I2C bus> on iicbb7 addr 0xff
+iic7: <I2C generic I/O> on iicbus7
+info: [drm] Radeon Display Connectors
+info: [drm] Connector 0:
+info: [drm]   HDMI-A-1
+info: [drm]   HPD2
+info: [drm]   DDC: 0x6460 0x6460 0x6464 0x6464 0x6468 0x6468 0x646c 0x646c
+info: [drm]   Encoders:
+info: [drm]     DFP1: INTERNAL_UNIPHY1
+info: [drm] Connector 1:
+info: [drm]   DVI-I-1
+info: [drm]   HPD4
+info: [drm]   DDC: 0x6450 0x6450 0x6454 0x6454 0x6458 0x6458 0x645c 0x645c
+info: [drm]   Encoders:
+info: [drm]     DFP2: INTERNAL_UNIPHY
+info: [drm]     CRT1: INTERNAL_KLDSCP_DAC1
+info: [drm] Connector 2:
+info: [drm]   VGA-1
+info: [drm]   DDC: 0x6430 0x6430 0x6434 0x6434 0x6438 0x6438 0x643c 0x643c
+info: [drm]   Encoders:
+info: [drm]     CRT2: INTERNAL_KLDSCP_DAC2
+info: [drm] Internal thermal controller with fan control
+info: [drm] radeon: power management initialized
+info: [drm] Connector HDMI-A-1: get mode from tunables:
+info: [drm]   - kern.vt.fb.modes.HDMI-A-1
+info: [drm]   - kern.vt.fb.default_mode
+info: [drm] Connector DVI-I-1: get mode from tunables:
+info: [drm]   - kern.vt.fb.modes.DVI-I-1
+info: [drm]   - kern.vt.fb.default_mode
+info: [drm] Connector VGA-1: get mode from tunables:
+info: [drm]   - kern.vt.fb.modes.VGA-1
+info: [drm]   - kern.vt.fb.default_mode
+info: [drm] fb mappable at 0xD0142000
+info: [drm] vram apper at 0xD0000000
+info: [drm] size 8294400
+info: [drm] fb depth is 24
+info: [drm]    pitch is 7680
+fbd0 on drmn0
+VT: Replacing driver "vga" with new "fb".
+info: [drm] Initialized radeon 2.29.0 20080528 for drmn0 on minor 0
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+intsmb0: intr SMI enabled revision 0
+intsmb0: using polling mode when configured interrupt is SMI
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+uhid0 on uhub6
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ums0 on uhub5
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+tun0: link state changed to UP
+tun0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: link state changed to DOWN
+uhub0: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub2: at usbus4, port 1, addr 1 (disconnected)
+uhub3: at usbus3, port 1, addr 1 (disconnected)
+uhub4: at usbus2, port 1, addr 1 (disconnected)
+uhub5: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub5, port 1, addr 2 (disconnected)
+ums0: detached
+uhub6: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub6, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub6, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+re0: link state changed to UP
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub3: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub5: at usbus4, port 1, addr 1 (disconnected)
+uhub3: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub2: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub2: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub3
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub3
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub5
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+tun0: link state changed to UP
+tun0: link state changed to DOWN
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub4: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub5: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub5, port 1, addr 2 (disconnected)
+ums0: detached
+uhub3: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub3, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub3, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub2: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub3
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub5: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub3: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub3, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub3: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub5
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub3: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub5: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub5, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+re0: link state changed to UP
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub2: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub3
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub3
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub5
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+tun0: link state changed to UP
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub4: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub5: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub5, port 1, addr 2 (disconnected)
+ums0: detached
+uhub3: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub3, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub3, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub3: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub3
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub3
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+tun0: link state changed to DOWN
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub5: at usbus4, port 1, addr 1 (disconnected)
+uhub4: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub2: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+uhub3: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub3, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub3, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+re0: link state changed to UP
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub5: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub3
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub3
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub4
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub5: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub4: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub4, port 1, addr 2 (disconnected)
+ums0: detached
+uhub3: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub3, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub3, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+re0: link state changed to UP
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub2: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub5
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub5
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub0: at usbus5, port 1, addr 1 (disconnected)
+uhub3: at usbus4, port 1, addr 1 (disconnected)
+uhub4: at usbus3, port 1, addr 1 (disconnected)
+uhub1: at usbus2, port 1, addr 1 (disconnected)
+uhub2: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+uhub5: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub5, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub5, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub2: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub5
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub3: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub5: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub5, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub4: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub3
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub3
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub5
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub4: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub5: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub5, port 1, addr 2 (disconnected)
+ums0: detached
+uhub3: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub3, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub3, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+re0: link state changed to UP
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub3: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub3
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub0: at usbus5, port 1, addr 1 (disconnected)
+uhub5: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub1: at usbus2, port 1, addr 1 (disconnected)
+uhub3: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub3, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub3: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub5
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub5
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub3: at usbus4, port 1, addr 1 (disconnected)
+uhub4: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub2: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+uhub5: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub5, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub5, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+re0: link state changed to UP
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub3: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub3: at usbus4, port 1, addr 1 (disconnected)
+uhub5: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub2: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+re0: link state changed to UP
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub3: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub5
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub2: at usbus4, port 1, addr 1 (disconnected)
+uhub3: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub5: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub5, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+re0: link state changed to UP
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub2: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub5
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub5
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub3
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+Limiting closed port RST response from 323 to 200 packets/sec
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub0: at usbus5, port 1, addr 1 (disconnected)
+uhub4: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub1: at usbus2, port 1, addr 1 (disconnected)
+uhub3: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub3, port 1, addr 2 (disconnected)
+ums0: detached
+uhub5: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub5, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub5, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub5: 2 ports with 2 removable, self powered
+uhub6: 3 ports with 3 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub2
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub2
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub3
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub5: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub4: at usbus4, port 1, addr 1 (disconnected)
+uhub6: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub3: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub3, port 1, addr 2 (disconnected)
+ums0: detached
+uhub2: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub2, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub2, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub4: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub3
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub3
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub4: at usbus4, port 1, addr 1 (disconnected)
+uhub5: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub2: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+uhub3: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub3, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub3, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub3: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub3
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub5: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub3: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub3, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub2: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+usb_alloc_device: set address 2 failed (USB_ERR_IOERROR, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 2 failed, USB_ERR_IOERROR
+usbd_req_re_enumerate: addr=2, set address failed! (USB_ERR_IOERROR, ignored)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+usbd_setup_device_desc: getting device descriptor at addr 2 failed, USB_ERR_IOERROR
+usbd_req_re_enumerate: addr=2, set address failed! (USB_ERR_IOERROR, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 2 failed, USB_ERR_IOERROR
+usbd_req_re_enumerate: addr=2, set address failed! (USB_ERR_IOERROR, ignored)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+usbd_setup_device_desc: getting device descriptor at addr 2 failed, USB_ERR_IOERROR
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub5: at usbus4, port 1, addr 1 (disconnected)
+uhub3: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub2: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub2: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub4
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub4
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub2
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+Limiting closed port RST response from 212 to 200 packets/sec
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub5: at usbus4, port 1, addr 1 (disconnected)
+uhub3: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub2: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub2, port 1, addr 2 (disconnected)
+ums0: detached
+uhub4: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub4, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub4, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub3: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub5
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub5
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub3
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhub6: at usbus6, port 1, addr 1 (disconnected)
+uhub1: at usbus5, port 1, addr 1 (disconnected)
+uhub4: at usbus4, port 1, addr 1 (disconnected)
+uhub2: at usbus3, port 1, addr 1 (disconnected)
+uhub0: at usbus2, port 1, addr 1 (disconnected)
+uhub3: at usbus1, port 1, addr 1 (disconnected)
+ugen1.2: <Logitech USB Optical Mouse> at usbus1 (disconnected)
+ums0: at uhub3, port 1, addr 2 (disconnected)
+ums0: detached
+uhub5: at usbus0, port 1, addr 1 (disconnected)
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0 (disconnected)
+ukbd0: at uhub5, port 3, addr 2 (disconnected)
+ukbd0: detached
+uhid0: at uhub5, port 3, addr 2 (disconnected)
+uhid0: detached
+acpi0: cleared fixed power button status
+info: [drm] probing gen 2 caps for device 1022:9603 = 2/0
+info: [drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8001f9b9c00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8001f9b9c0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 1 usecs
+re0: link state changed to DOWN
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+re0: link state changed to UP
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub5: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub3: 3 ports with 3 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+ugen0.2: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub5
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+kbd2 at ukbd0
+uhid0 on uhub5
+uhid0: <Microsoft Wired Keyboard 600, class 0/0, rev 1.10/1.10, addr 2> on usbus0
+ugen1.2: <Logitech USB Optical Mouse> at usbus1
+ums0 on uhub4
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=0

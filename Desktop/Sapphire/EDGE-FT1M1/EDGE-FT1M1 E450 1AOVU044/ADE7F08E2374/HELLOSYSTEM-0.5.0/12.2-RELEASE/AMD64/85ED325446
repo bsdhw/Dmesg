@@ -1,0 +1,641 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE r366954 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(vga): resolution 640x480
+CPU: AMD E-450 APU with Radeon(tm) HD Graphics (1650.04-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x500f20  Family=0x14  Model=0x2  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802209<SSE3,MON,SSSE3,CX16,POPCNT>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,IBS,SKINIT,WDT>
+  SVM: NP,NRIP,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3682230272 (3511 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20200430/tbfadt-796)
+ioapic0: MADT APIC ID 0 != hw id 3
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+Launching APs: 1
+Timecounter "TSC" frequency 1650035331 Hz quality 800
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81115e40, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xd0000000-0xdfffffff,0xfeb00000-0xfeb3ffff irq 18 at device 1.0 on pci0
+vgapci0: Boot video device
+hdac0: <ATI (0x1314) HDA Controller> mem 0xfeb44000-0xfeb47fff irq 19 at device 1.1 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 4.0 on pci0
+pcib1: [GIANT-LOCKED]
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0xf140-0xf147,0xf130-0xf133,0xf120-0xf127,0xf110-0xf113,0xf100-0xf10f mem 0xfeb4f000-0xfeb4f3ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.20 with 6 6Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeb4e000-0xfeb4efff irq 18 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfeb4d000-0xfeb4d0ff irq 17 at device 18.2 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeb4c000-0xfeb4cfff irq 18 at device 19.0 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfeb4b000-0xfeb4b0ff irq 17 at device 19.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+usbus3: 480Mbps High Speed USB v2.0
+hdac1: <ATI SB600 HDA Controller> mem 0xfeb40000-0xfeb43fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib2: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci1: <ACPI PCI bus> on pcib2
+ohci2: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeb4a000-0xfeb4afff irq 18 at device 20.5 on pci0
+usbus4 on ohci2
+usbus4: 12Mbps Full Speed USB v1.0
+pcib3: <ACPI PCI-PCI bridge> at device 21.0 on pci0
+pci2: <ACPI PCI bus> on pcib3
+mskc0: <Marvell Yukon 88E8059 Gigabit Ethernet> port 0xe000-0xe0ff mem 0xfea20000-0xfea23fff irq 16 at device 0.0 on pci2
+msk0: <Marvell Technology Group Ltd. Yukon Optima Id 0xbc Rev 0x01> on mskc0
+msk0: Using defaults for TSO: 65518/35/2048
+msk0: Ethernet address: ...
+miibus0: <MII bus> on msk0
+e1000phy0: <Marvell PHYG65G Gigabit PHY> PHY 0 on miibus0
+e1000phy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+pcib4: <ACPI PCI-PCI bridge> at device 21.1 on pci0
+pci3: <ACPI PCI bus> on pcib4
+xhci0: <ASMedia ASM1042 USB 3.0 controller> mem 0xfe900000-0xfe907fff irq 17 at device 0.0 on pci3
+xhci0: 32 bytes context size, 32-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus5 on xhci0
+usbus5: 5.0Gbps Super Speed USB v3.0
+ohci3: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeb49000-0xfeb49fff irq 18 at device 22.0 on pci0
+usbus6 on ohci3
+usbus6: 12Mbps Full Speed USB v1.0
+ehci2: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfeb48000-0xfeb480ff irq 17 at device 22.2 on pci0
+usbus7: EHCI version 1.0
+usbus7 on ehci2
+usbus7: 480Mbps High Speed USB v2.0
+acpi_button0: <Power Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS NOTICE: Prefetch is disabled by default if less than 4GB of RAM is present;
+            to enable, add "vfs.zfs.prefetch_disable=0" to /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC662 rev1 HDA CODEC> at cad 3 on hdac1
+hdaa1: <Realtek ALC662 rev1 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC662 rev1 (Rear Analog)> at nid 20 and 24 on hdaa1
+ugen7.1: <ATI EHCI root HUB> at usbus7
+ugen6.1: <ATI OHCI root HUB> at usbus6
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus7
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+ugen4.1: <ATI OHCI root HUB> at usbus4
+ugen5.1: <0x1b21 XHCI root HUB> at usbus5
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub3: <0x1b21 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus5
+ugen2.1: <ATI OHCI root HUB> at usbus2
+ugen3.1: <ATI EHCI root HUB> at usbus3
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub5: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+ugen1.1: <ATI EHCI root HUB> at usbus1
+ugen0.1: <ATI OHCI root HUB> at usbus0
+uhub6: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub7: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+Trying to mount root from zfs:zroot/ROOT/default [rw]...
+Root mount waiting for: CAM usbus0 usbus1 usbus2 usbus3 usbus4 usbus5 usbus6 usbus7
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <WDC WD3200BPVT-22JJ5T0 01.01A01> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 305245MB (625142448 512 byte sectors)
+ada0: quirks=0x1<4K>
+uhub2: 2 ports with 2 removable, self powered
+uhub1: 4 ports with 4 removable, self powered
+uhub4: 5 ports with 5 removable, self powered
+uhub7: 5 ports with 5 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1 usbus3 usbus7
+uhub0: 4 ports with 4 removable, self powered
+uhub6: 5 ports with 5 removable, self powered
+uhub5: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1
+ugen0.2: <dakai PS/2+USB Keyboard> at usbus0
+ukbd0 on uhub7
+ukbd0: <dakai PS/2+USB Keyboard, class 0/0, rev 1.10/3.21, addr 2> on usbus0
+kbd2 at ukbd0
+ukbd1 on uhub7
+ukbd1: <dakai PS/2+USB Keyboard, class 0/0, rev 1.10/3.21, addr 2> on usbus0
+kbd3 at ukbd1
+Root mount waiting for: usbus1
+ugen0.3: <vendor 0x18f8 USB OPTICAL MOUSE> at usbus0
+ukbd2 on uhub7
+ukbd2: <vendor 0x18f8 USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+kbd4 at ukbd2
+ugen1.2: <vendor 0x13d3 product 0x3323> at usbus1
+Cuse v0.1.36 @ /dev/cuse
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+msk0: link state changed to DOWN
+msk0: link state changed to UP
+ums0 on uhub7
+ums0: <vendor 0x18f8 USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+ums0: 5 buttons and [XYZ] coordinates ID=1
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb4
+[drm] radeon kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] initializing kernel modesetting (PALM 0x1002:0x9806 0x174B:0x100C 0x00).
+[drm:radeon_device_init] Unable to find PCI I/O BAR
+[drm:radeon_atombios_init] Unable to find PCI I/O BAR; using MMIO for ATOM IIO
+ATOM BIOS: AMD
+drmn0: VRAM: 384M 0x0000000000000000 - 0x0000000017FFFFFF (384M used)
+drmn0: GTT: 1024M 0x0000000018000000 - 0x0000000057FFFFFF
+Failed to add WC MTRR for [0xd0000000-0xdfffffff]: -22; performance may suffer
+[drm] Detected VRAM RAM=384M, BAR=256M
+[drm] RAM width 32bits DDR
+[TTM] Zone  kernel: Available graphics memory: 1869554 kiB
+[TTM] Initializing pool allocator
+[drm] radeon: 384M of VRAM memory ready
+[drm] radeon: 1024M of GTT memory ready.
+[drm] Loading PALM Microcode
+radeon/PALM_pfp.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: radeon/PALM_pfp.bin
+drmn0: successfully loaded firmware image with mapped name: radeon_PALM_pfp_bin
+radeon/PALM_me.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: radeon/PALM_me.bin
+drmn0: successfully loaded firmware image with mapped name: radeon_PALM_me_bin
+radeon/SUMO_rlc.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: radeon/SUMO_rlc.bin
+drmn0: successfully loaded firmware image with mapped name: radeon_SUMO_rlc_bin
+[drm] Internal thermal controller without fan control
+[drm] Found smc ucode version: 0x00010601
+[drm] radeon: dpm initialized
+radeon/SUMO_uvd.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: radeon/SUMO_uvd.bin
+drmn0: successfully loaded firmware image with mapped name: radeon_SUMO_uvd_bin
+[drm] GART: num cpu pages 262144, num gpu pages 262144
+[drm] PCIE GART of 1024M enabled (table at 0x0000000000162000).
+drmn0: WB enabled
+drmn0: fence driver on ring 0 use gpu addr 0x0000000018000c00 and cpu addr 0x0xfffff80072f32c00
+drmn0: fence driver on ring 3 use gpu addr 0x0000000018000c0c and cpu addr 0x0xfffff80072f32c0c
+drmn0: fence driver on ring 5 use gpu addr 0x0000000000072118 and cpu addr 0x0xfffff800d0072118
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+drmn0: radeon: MSI limited to 32-bit
+drmn0: radeon: using MSI.
+[drm] radeon: irq initialized.
+[drm] ring test on 0 succeeded in 1 usecs
+[drm] ring test on 3 succeeded in 3 usecs
+[drm] ring test on 5 succeeded in 1 usecs
+[drm] UVD initialized successfully.
+[drm] ib test on ring 0 succeeded in 0 usecs
+[drm] ib test on ring 3 succeeded in 0 usecs
+[drm] ib test on ring 5 succeeded
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DVI-D-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-D-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector VGA-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.VGA-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Radeon Display Connectors
+[drm] Connector 0:
+[drm]   HDMI-A-1
+[drm]   HPD1
+[drm]   DDC: 0x6430 0x6430 0x6434 0x6434 0x6438 0x6438 0x643c 0x643c
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY
+[drm] Connector 1:
+[drm]   DVI-D-1
+[drm]   HPD2
+[drm]   DDC: 0x6440 0x6440 0x6444 0x6444 0x6448 0x6448 0x644c 0x644c
+[drm]   Encoders:
+[drm]     DFP2: INTERNAL_UNIPHY
+[drm] Connector 2:
+[drm]   VGA-1
+[drm]   DDC: 0x64d8 0x64d8 0x64dc 0x64dc 0x64e0 0x64e0 0x64e4 0x64e4
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[drm] fb mappable at 0xD0366000
+[drm] vram apper at 0xD0000000
+[drm] size 8294400
+[drm] fb depth is 24
+[drm]    pitch is 7680
+VT: Replacing driver "vga" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+cmsize=16 size=8294400
+pbase=0xd0366000 vbase=0xfffff800d0366000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: radeondrmfb frame buffer device
+[drm] Initialized radeon 2.50.0 20080528 for drmn0 on minor 0
+acpi_video0: <ACPI video extension> on vgapci0
+ugen5.2: <Kingston DataTraveler G2> at usbus5
+umass0 on uhub3
+umass0: <Kingston DataTraveler G2, class 0/0, rev 2.00/1.00, addr 1> on usbus5
+umass0:  SCSI over Bulk-Only; quirks = 0xc100
+umass0:6:0: Attached to scbus6
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <Kingston DataTraveler G2 1.00> Removable Direct Access SCSI-2 device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 3821MB (7827392 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM: da0: the secondary GPT table is corrupt or invalid.
+GEOM: da0: using the primary only -- recovery suggested.
+GEOM: iso9660/LIVE: the secondary GPT table is corrupt or invalid.
+GEOM: iso9660/LIVE: using the primary only -- recovery suggested.
+GEOM: iso9660/LIVE: the secondary GPT table is corrupt or invalid.
+GEOM: iso9660/LIVE: using the primary only -- recovery suggested.
+
+
+Fatal trap 12: page fault while in kernel mode
+cpuid = 1; apic id = 01
+fault virtual address	= 0x1300000006
+fault code		= supervisor read instruction, page not present
+instruction pointer	= 0x20:0x1300000006
+stack pointer	        = 0x28:0xfffffe002b7b8ba8
+frame pointer	        = 0x28:0xfffffe002b7b8bf0
+code segment		= base 0x0, limit 0xfffff, type 0x1b
+			= DPL 0, pres 1, long 1, def32 0, gran 1
+processor eflags	= interrupt enabled, resume, IOPL = 0
+current process		= 12 (irq263: vgapci0)
+trap number		= 12
+panic: page fault
+cpuid = 1
+time = 1631383892
+KDB: stack backtrace:
+#0 0xffffffff80c0a8f5 at kdb_backtrace+0x65
+#1 0xffffffff80bbeb1b at vpanic+0x17b
+#2 0xffffffff80bbe993 at panic+0x43
+#3 0xffffffff8108f911 at trap_fatal+0x391
+#4 0xffffffff8108f96f at trap_pfault+0x4f
+#5 0xffffffff8108efb6 at trap+0x286
+#6 0xffffffff81066f38 at calltrap+0x8
+#7 0xffffffff82bbf0e7 at evergreen_irq_process+0x367
+#8 0xffffffff80b8359c at ithread_loop+0x23c
+#9 0xffffffff80b8044e at fork_exit+0x7e
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE r366954 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(vga): resolution 640x480
+CPU: AMD E-450 APU with Radeon(tm) HD Graphics (1650.03-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x500f20  Family=0x14  Model=0x2  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802209<SSE3,MON,SSSE3,CX16,POPCNT>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,IBS,SKINIT,WDT>
+  SVM: NP,NRIP,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3682230272 (3511 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20200430/tbfadt-796)
+ioapic0: MADT APIC ID 0 != hw id 3
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+Launching APs: 1
+Timecounter "TSC" frequency 1650032214 Hz quality 800
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81115e40, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xd0000000-0xdfffffff,0xfeb00000-0xfeb3ffff irq 18 at device 1.0 on pci0
+vgapci0: Boot video device
+hdac0: <ATI (0x1314) HDA Controller> mem 0xfeb44000-0xfeb47fff irq 19 at device 1.1 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 4.0 on pci0
+pcib1: [GIANT-LOCKED]
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0xf140-0xf147,0xf130-0xf133,0xf120-0xf127,0xf110-0xf113,0xf100-0xf10f mem 0xfeb4f000-0xfeb4f3ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.20 with 6 6Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeb4e000-0xfeb4efff irq 18 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfeb4d000-0xfeb4d0ff irq 17 at device 18.2 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeb4c000-0xfeb4cfff irq 18 at device 19.0 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfeb4b000-0xfeb4b0ff irq 17 at device 19.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+usbus3: 480Mbps High Speed USB v2.0
+hdac1: <ATI SB600 HDA Controller> mem 0xfeb40000-0xfeb43fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib2: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci1: <ACPI PCI bus> on pcib2
+ohci2: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeb4a000-0xfeb4afff irq 18 at device 20.5 on pci0
+usbus4 on ohci2
+usbus4: 12Mbps Full Speed USB v1.0
+pcib3: <ACPI PCI-PCI bridge> at device 21.0 on pci0
+pci2: <ACPI PCI bus> on pcib3
+mskc0: <Marvell Yukon 88E8059 Gigabit Ethernet> port 0xe000-0xe0ff mem 0xfea20000-0xfea23fff irq 16 at device 0.0 on pci2
+msk0: <Marvell Technology Group Ltd. Yukon Optima Id 0xbc Rev 0x01> on mskc0
+msk0: Using defaults for TSO: 65518/35/2048
+msk0: Ethernet address: ...
+miibus0: <MII bus> on msk0
+e1000phy0: <Marvell PHYG65G Gigabit PHY> PHY 0 on miibus0
+e1000phy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+pcib4: <ACPI PCI-PCI bridge> at device 21.1 on pci0
+pci3: <ACPI PCI bus> on pcib4
+xhci0: <ASMedia ASM1042 USB 3.0 controller> mem 0xfe900000-0xfe907fff irq 17 at device 0.0 on pci3
+xhci0: 32 bytes context size, 32-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus5 on xhci0
+usbus5: 5.0Gbps Super Speed USB v3.0
+ohci3: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfeb49000-0xfeb49fff irq 18 at device 22.0 on pci0
+usbus6 on ohci3
+usbus6: 12Mbps Full Speed USB v1.0
+ehci2: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfeb48000-0xfeb480ff irq 17 at device 22.2 on pci0
+usbus7: EHCI version 1.0
+usbus7 on ehci2
+usbus7: 480Mbps High Speed USB v2.0
+acpi_button0: <Power Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS NOTICE: Prefetch is disabled by default if less than 4GB of RAM is present;
+            to enable, add "vfs.zfs.prefetch_disable=0" to /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC662 rev1 HDA CODEC> at cad 3 on hdac1
+hdaa1: <Realtek ALC662 rev1 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC662 rev1 (Rear Analog)> at nid 20 and 24 on hdaa1
+ugen7.1: <ATI EHCI root HUB> at usbus7
+ugen6.1: <ATI OHCI root HUB> at usbus6
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus7
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+ugen5.1: <0x1b21 XHCI root HUB> at usbus5
+ugen4.1: <ATI OHCI root HUB> at usbus4
+uhub2: <0x1b21 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus5
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+ugen2.1: <ATI OHCI root HUB> at usbus2
+ugen3.1: <ATI EHCI root HUB> at usbus3
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub5: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+ugen1.1: <ATI EHCI root HUB> at usbus1
+ugen0.1: <ATI OHCI root HUB> at usbus0
+uhub6: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub7: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+Trying to mount root from zfs:zroot/ROOT/default [rw]...
+Root mount waiting for: CAM usbus0 usbus1 usbus2 usbus3 usbus4 usbus5 usbus6 usbus7
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <WDC WD3200BPVT-22JJ5T0 01.01A01> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 305245MB (625142448 512 byte sectors)
+ada0: quirks=0x1<4K>
+uhub3: 2 ports with 2 removable, self powered
+uhub1: 4 ports with 4 removable, self powered
+uhub4: 5 ports with 5 removable, self powered
+uhub7: 5 ports with 5 removable, self powered
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1 usbus3 usbus5 usbus7
+uhub0: 4 ports with 4 removable, self powered
+ugen5.2: <Kingston DataTraveler G2> at usbus5
+umass0 on uhub2
+umass0: <Kingston DataTraveler G2, class 0/0, rev 2.00/1.00, addr 1> on usbus5
+umass0:  SCSI over Bulk-Only; quirks = 0xc100
+umass0:6:0: Attached to scbus6
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <Kingston DataTraveler G2 1.00> Removable Direct Access SCSI-2 device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 3821MB (7827392 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM: da0: the secondary GPT table is corrupt or invalid.
+GEOM: da0: using the primary only -- recovery suggested.
+GEOM: iso9660/LIVE: the secondary GPT table is corrupt or invalid.
+GEOM: iso9660/LIVE: using the primary only -- recovery suggested.
+uhub5: 5 ports with 5 removable, self powered
+uhub6: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1
+ugen0.2: <dakai PS/2+USB Keyboard> at usbus0
+ukbd0 on uhub7
+ukbd0: <dakai PS/2+USB Keyboard, class 0/0, rev 1.10/3.21, addr 2> on usbus0
+kbd2 at ukbd0
+ukbd1 on uhub7
+ukbd1: <dakai PS/2+USB Keyboard, class 0/0, rev 1.10/3.21, addr 2> on usbus0
+kbd3 at ukbd1
+Root mount waiting for: usbus1
+ugen0.3: <vendor 0x18f8 USB OPTICAL MOUSE> at usbus0
+ukbd2 on uhub7
+ukbd2: <vendor 0x18f8 USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+kbd4 at ukbd2
+ugen1.2: <vendor 0x13d3 product 0x3323> at usbus1
+Cuse v0.1.36 @ /dev/cuse
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+msk0: link state changed to DOWN
+msk0: link state changed to UP
+ums0 on uhub7
+ums0: <vendor 0x18f8 USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+ums0: 5 buttons and [XYZ] coordinates ID=1
+GEOM: iso9660/LIVE: the secondary GPT table is corrupt or invalid.
+GEOM: iso9660/LIVE: using the primary only -- recovery suggested.
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb4
+[drm] radeon kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] initializing kernel modesetting (PALM 0x1002:0x9806 0x174B:0x100C 0x00).
+[drm:radeon_device_init] Unable to find PCI I/O BAR
+[drm:radeon_atombios_init] Unable to find PCI I/O BAR; using MMIO for ATOM IIO
+ATOM BIOS: AMD
+drmn0: VRAM: 384M 0x0000000000000000 - 0x0000000017FFFFFF (384M used)
+drmn0: GTT: 1024M 0x0000000018000000 - 0x0000000057FFFFFF
+Failed to add WC MTRR for [0xd0000000-0xdfffffff]: -22; performance may suffer
+[drm] Detected VRAM RAM=384M, BAR=256M
+[drm] RAM width 32bits DDR
+[TTM] Zone  kernel: Available graphics memory: 1869554 kiB
+[TTM] Initializing pool allocator
+[drm] radeon: 384M of VRAM memory ready
+[drm] radeon: 1024M of GTT memory ready.
+[drm] Loading PALM Microcode
+radeon/PALM_pfp.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: radeon/PALM_pfp.bin
+drmn0: successfully loaded firmware image with mapped name: radeon_PALM_pfp_bin
+radeon/PALM_me.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: radeon/PALM_me.bin
+drmn0: successfully loaded firmware image with mapped name: radeon_PALM_me_bin
+radeon/SUMO_rlc.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: radeon/SUMO_rlc.bin
+drmn0: successfully loaded firmware image with mapped name: radeon_SUMO_rlc_bin
+[drm] Internal thermal controller without fan control
+[drm] Found smc ucode version: 0x00010601
+[drm] radeon: dpm initialized
+radeon/SUMO_uvd.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: radeon/SUMO_uvd.bin
+drmn0: successfully loaded firmware image with mapped name: radeon_SUMO_uvd_bin
+[drm] GART: num cpu pages 262144, num gpu pages 262144
+[drm] PCIE GART of 1024M enabled (table at 0x0000000000162000).
+drmn0: WB enabled
+drmn0: fence driver on ring 0 use gpu addr 0x0000000018000c00 and cpu addr 0x0xfffff8009230ac00
+drmn0: fence driver on ring 3 use gpu addr 0x0000000018000c0c and cpu addr 0x0xfffff8009230ac0c
+drmn0: fence driver on ring 5 use gpu addr 0x0000000000072118 and cpu addr 0x0xfffff800d0072118
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+drmn0: radeon: MSI limited to 32-bit
+drmn0: radeon: using MSI.
+[drm] radeon: irq initialized.
+[drm] ring test on 0 succeeded in 1 usecs
+[drm] ring test on 3 succeeded in 3 usecs
+[drm] ring test on 5 succeeded in 1 usecs
+[drm] UVD initialized successfully.
+[drm] ib test on ring 0 succeeded in 0 usecs
+[drm] ib test on ring 3 succeeded in 0 usecs
+[drm] ib test on ring 5 succeeded
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DVI-D-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-D-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector VGA-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.VGA-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Radeon Display Connectors
+[drm] Connector 0:
+[drm]   HDMI-A-1
+[drm]   HPD1
+[drm]   DDC: 0x6430 0x6430 0x6434 0x6434 0x6438 0x6438 0x643c 0x643c
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY
+[drm] Connector 1:
+[drm]   DVI-D-1
+[drm]   HPD2
+[drm]   DDC: 0x6440 0x6440 0x6444 0x6444 0x6448 0x6448 0x644c 0x644c
+[drm]   Encoders:
+[drm]     DFP2: INTERNAL_UNIPHY
+[drm] Connector 2:
+[drm]   VGA-1
+[drm]   DDC: 0x64d8 0x64d8 0x64dc 0x64dc 0x64e0 0x64e0 0x64e4 0x64e4
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[drm] fb mappable at 0xD0366000
+[drm] vram apper at 0xD0000000
+[drm] size 8294400
+[drm] fb depth is 24
+[drm]    pitch is 7680
+VT: Replacing driver "vga" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+cmsize=16 size=8294400
+pbase=0xd0366000 vbase=0xfffff800d0366000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: radeondrmfb frame buffer device
+[drm] Initialized radeon 2.50.0 20080528 for drmn0 on minor 0
+acpi_video0: <ACPI video extension> on vgapci0
+ugen5.2: <Kingston DataTraveler G2> at usbus5 (disconnected)
+umass0: at uhub2, port 3, addr 1 (disconnected)
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <Kingston DataTraveler G2 1.00>  s/n ... detached
+(da0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+ugen5.2: <FUJITSU USB2.0 HandyDrive> at usbus5
+umass0 on uhub2
+umass0: <FUJITSU USB2.0 HandyDrive, class 0/0, rev 2.00/1.01, addr 1> on usbus5
+umass0:  SCSI over Bulk-Only; quirks = 0x0100
+umass0:6:0: Attached to scbus6
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <FUJITSU HandyDrive500 0101> Fixed Direct Access SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 381554MB (781422768 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+ugen5.2: <FUJITSU USB2.0 HandyDrive> at usbus5 (disconnected)
+umass0: at uhub2, port 3, addr 1 (disconnected)
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <FUJITSU HandyDrive500 0101>  s/n ... detached
+(da0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached

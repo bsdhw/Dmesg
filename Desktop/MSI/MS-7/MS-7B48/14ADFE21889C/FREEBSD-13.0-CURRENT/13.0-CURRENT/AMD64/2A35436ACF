@@ -1,0 +1,1345 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-CURRENT #0 9e082d278b9-c254726(main): Thu Nov 26 04:50:43 UTC 2020
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.0-0-g176249bd673)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 1024x768
+CPU: Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz (3192.16-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906ea  Family=0x6  Model=0x9e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features2=0x40000000<SGXLC>
+  Structured Extended Features3=0xc000000<IBPB,STIBP>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16519581696 (15754 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 12 CPUs
+FreeBSD/SMP: 1 package(s) x 6 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 3 7 10 4 2 8 6 11 5 9
+Timecounter "TSC-low" frequency 1596079055 Hz quality 1000
+random: entropy device external interface
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd1 at kbdmux0
+000.000053 [4346] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 350
+Event timer "HPET1" frequency 24000000 Hz quality 340
+Event timer "HPET2" frequency 24000000 Hz quality 340
+Event timer "HPET3" frequency 24000000 Hz quality 340
+Event timer "HPET4" frequency 24000000 Hz quality 340
+Event timer "HPET5" frequency 24000000 Hz quality 340
+Event timer "HPET6" frequency 24000000 Hz quality 340
+Event timer "HPET7" frequency 24000000 Hz quality 340
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xe000-0xe07f mem 0xde000000-0xdeffffff,0xc0000000-0xcfffffff,0xd0000000-0xd1ffffff irq 16 at device 0.0 on pci1
+vgapci0: Boot video device
+hdac0: <NVIDIA (0x10f8) HDA Controller> mem 0xdf080000-0xdf083fff irq 17 at device 0.1 on pci1
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xd2000000-0xd203ffff,0xd2040000-0xd204ffff irq 18 at device 0.2 on pci1
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci1: <serial bus> at device 0.3 (no driver attached)
+xhci1: <Intel Union Point USB 3.0 controller> mem 0xdf210000-0xdf21ffff irq 16 at device 20.0 on pci0
+xhci1: 32 bytes context size, 64-bit DMA
+usbus1: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Union Point AHCI SATA controller> port 0xf050-0xf057,0xf040-0xf043,0xf020-0xf03f mem 0xdf228000-0xdf229fff,0xdf22c000-0xdf22c0ff,0xdf22b000-0xdf22b7ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci3: <ACPI PCI bus> on pcib3
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xd000-0xd0ff mem 0xdf104000-0xdf104fff,0xdf100000-0xdf103fff irq 18 at device 0.0 on pci3
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac1: <Intel Kaby Lake-H HDA Controller> mem 0xdf220000-0xdf223fff,0xdf200000-0xdf20ffff irq 16 at device 31.3 on pci0
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+ppc1: <Parallel port> port 0x378-0x37f irq 5 on acpi0
+ppc1: Generic chipset (NIBBLE-only) in COMPATIBLE mode
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROM> at iomem 0xce000-0xcefff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+uart1: <16550 or compatible> at port 0x2f8 irq 3 on isa0
+uart1: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+hwpstate_intel8: <Intel Speed Shift> on cpu8
+hwpstate_intel9: <Intel Speed Shift> on cpu9
+hwpstate_intel10: <Intel Speed Shift> on cpu10
+hwpstate_intel11: <Intel Speed Shift> on cpu11
+Timecounters tick every 1.000 msec
+hdacc0: <NVIDIA (0x0092) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0092) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0092) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0092) (HDMI/DP 8ch)> at nid 5 on hdaa0
+pcm2: <NVIDIA (0x0092) (HDMI/DP 8ch)> at nid 6 on hdaa0
+pcm3: <NVIDIA (0x0092) (HDMI/DP 8ch)> at nid 7 on hdaa0
+hdacc1: <Realtek ALC892 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC892 Audio Function Group> at nid 1 on hdacc1
+pcm4: <Realtek ALC892 (Rear Analog 7.1/2.0)> at nid 20,22,21,23 and 24,26 on hdaa1
+pcm5: <Realtek ALC892 (Front Analog)> at nid 27 and 25 on hdaa1
+Trying to mount root from ufs:/dev/ada1p8 [rw]...
+Root mount waiting for: usbus0 usbus1 CAM
+WARNING: WITNESS option enabled, expect reduced performance.
+ugen0.1: <0x10de XHCI root HUB> at usbus0
+ugen1.1: <0x8086 XHCI root HUB> at usbus1
+uhub0 on usbus0
+uhub0: <0x10de XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1 on usbus1
+uhub1: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+ses0 at ahciem0 bus 0 scbus6 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich3 bus 0 scbus3 target 0 lun 0
+ada0: <WDC WD20EZRZ-00Z5HB0 80.00A80> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 1907729MB (3907029168 512 byte sectors)
+ada1 at ahcich5 bus 0 scbus5 target 0 lun 0
+ada1: <MKNSSDSR500GB Q1115A0> ACS-2 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 476940MB (976773168 512 byte sectors)
+ses0: pass0,ada0 in 'Slot 03', SATA Slot: scbus3 target 0
+ses0: pass1,ada1 in 'Slot 05', SATA Slot: scbus5 target 0
+uhub0: 6 ports with 6 removable, self powered
+uhub1: 26 ports with 26 removable, self powered
+Root mount waiting for: usbus1
+ugen1.2: <C-Media Electronics Inc. USB PnP Sound Device> at usbus1
+Root mount waiting for: usbus1
+ugen1.3: <Linksys WUSB6300> at usbus1
+ugen1.4: <Logitech USB Keyboard> at usbus1
+ukbd0 on uhub1
+ukbd0: <USB Keyboard> on usbus1
+kbd2 at ukbd0
+Root mount waiting for: usbus1
+ugen1.5: <Logitech G PRO Gaming Mouse> at usbus1
+ukbd1 on uhub1
+ukbd1: <Logitech G PRO Gaming Mouse, class 0/0, rev 2.00/28.01, addr 4> on usbus1
+kbd3 at ukbd1
+Root mount waiting for: usbus1
+ugen1.6: <M-Audio Fast Track> at usbus1
+mountroot: waiting for device /dev/ada1p8...
+nvidia0: <Unknown> on vgapci0
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: child nvidia0 requested pci_enable_io
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  440.100  Fri May 29 08:11:49 UTC 2020
+lo0: link state changed to UP
+re0: link state changed to DOWN
+ichsmb0: <Intel Kaby Lake SMBus controller> port 0xf000-0xf01f mem 0xdf22a000-0xdf22a0ff irq 16 at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+device_attach: acpi_wmi0 attach returned 6
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+device_attach: acpi_wmi0 attach returned 6
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+device_attach: acpi_wmi0 attach returned 6
+uaudio0 on uhub1
+uaudio0: <C-Media Electronics Inc. USB PnP Sound Device, class 0/0, rev 1.10/1.00, addr 1> on usbus1
+uaudio0: No playback.
+uaudio0: Record[0]: 48000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 44100 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm6: <USB audio> on uaudio0
+uaudio0: HID volume keys found.
+uaudio1 on uhub1
+uaudio1: <Fast Track> on usbus1
+uaudio1: Play[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 40000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 32000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 40000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 32000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: No MIDI sequencer.
+pcm7: <USB audio> on uaudio1
+uaudio1: No HID volume keys found.
+uhid0 on uhub1
+uhid0: <USB Keyboard> on usbus1
+rtwn0 on uhub1
+rtwn0: <Linksys WUSB6300, class 0/0, rev 2.00/0.00, addr 2> on usbus1
+rtwn0: MAC/BB RTL8812AU, RF 6052 2T2R
+ums0 on uhub1
+ums0: <Logitech G PRO Gaming Mouse, class 0/0, rev 2.00/28.01, addr 4> on usbus1
+ums0: 16 buttons and [XYZT] coordinates ID=0
+wlan0: Ethernet address: ...
+wlan0: link state changed to UP
+acquiring duplicate lock of same type: "os.lock_mtx"
+ 1st os.lock_mtx @ nvidia_os.c:900
+ 2nd os.lock_mtx @ nvidia_os.c:900
+stack backtrace:
+#0 0xffffffff80c540b1 at witness_debugger+0x71
+#1 0xffffffff80bc0f54 at __mtx_lock_flags+0x94
+#2 0xffffffff82fb676b at os_acquire_spinlock+0x1b
+#3 0xffffffff82ec414c at _nv033412rm+0xc
+acquiring duplicate lock of same type: "os.lock_sx"
+ 1st os.lock_sx @ nvidia_os.c:663
+ 2nd os.lock_sx @ nvidia_os.c:663
+stack backtrace:
+#0 0xffffffff80c540b1 at witness_debugger+0x71
+#1 0xffffffff80bef4a7 at _sx_xlock+0x67
+#2 0xffffffff82fb6242 at os_acquire_mutex+0x32
+#3 0xffffffff82b4a6ee at _nv034842rm+0x1e
+ugen1.6: <M-Audio Fast Track> at usbus1 (disconnected)
+uaudio1: at uhub1, port 12, addr 5 (disconnected)
+pcm7: detached
+uaudio1: detached
+ugen1.6: <M-Audio Fast Track> at usbus1
+uaudio1 on uhub1
+uaudio1: <Fast Track> on usbus1
+uaudio1: Play[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 40000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 32000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 40000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 32000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: No MIDI sequencer.
+pcm7: <USB audio> on uaudio1
+uaudio1: No HID volume keys found.
+ugen1.6: <M-Audio Fast Track> at usbus1 (disconnected)
+uaudio1: at uhub1, port 12, addr 6 (disconnected)
+pcm7: detached
+uaudio1: detached
+ugen1.6: <M-Audio Fast Track> at usbus1
+uaudio1 on uhub1
+uaudio1: <Fast Track> on usbus1
+uaudio_mixer_fill_info: found AC header, vers=100, len=62
+uaudio_mixer_fill_info: Maximum ID=6
+uaudio_mixer_fill_info: id=6 subtype=3
+uaudio_mixer_fill_info: id=5 subtype=6
+uaudio_mixer_add_feature: chan=1 mask=2
+uaudio_mixer_add_feature: chan=2 mask=2
+uaudio_mixer_add_feature: ctl=1 fumask=0x0001
+uaudio_mixer_determine_class: MATCH=2 IN=0x0201 OUT=0x0000
+uaudio_mixer_get_feature_by_tt: terminal_type=0x0201 RET=7 DEF=11
+uaudio_mixer_add_ctl: adding 28
+uaudio_mixer_add_ctl: [mix] wValue=0100
+uaudio_mixer_add_ctl: [mix] wIndex=0500 type=1 ctl='28' min=0 max=1
+uaudio_mixer_add_feature: ctl=2 fumask=0x0002
+uaudio_mixer_determine_class: MATCH=2 IN=0x0201 OUT=0x0000
+uaudio_mixer_get_feature_by_tt: terminal_type=0x0201 RET=7 DEF=11
+uaudio_mixer_add_ctl: adding 7
+uaudio_mixer_get: val=-32512
+uaudio_mixer_get: val=256
+uaudio_mixer_get: val=256
+uaudio_mixer_add_ctl: Resolution = 256
+uaudio_mixer_add_ctl: [mix] wValue=0201
+uaudio_mixer_add_ctl: [mix] wValue=0201
+uaudio_mixer_add_ctl: [mix] wIndex=0500 type=2 ctl='7' min=-32512 max=256
+uaudio_mixer_add_feature: ctl=3 fumask=0x0004
+uaudio_mixer_add_feature: ctl=4 fumask=0x0008
+uaudio_mixer_add_feature: ctl=5 fumask=0x0010
+uaudio_mixer_add_feature: ctl=6 fumask=0x0020
+uaudio_mixer_add_feature: ctl=7 fumask=0x0040
+uaudio_mixer_add_feature: ctl=8 fumask=0x0080
+uaudio_mixer_add_feature: ctl=9 fumask=0x0100
+uaudio_mixer_add_feature: ctl=10 fumask=0x0200
+uaudio_mixer_fill_info: id=4 subtype=2
+uaudio_mixer_fill_info: id=3 subtype=3
+uaudio_mixer_fill_info: id=2 subtype=6
+uaudio_mixer_add_feature: chan=1 mask=2
+uaudio_mixer_add_feature: chan=2 mask=2
+uaudio_mixer_add_feature: ctl=1 fumask=0x0001
+uaudio_mixer_determine_class: MATCH=1 IN=0x0000 OUT=0x0301
+uaudio_mixer_get_feature_by_tt: terminal_type=0x0301 RET=4 DEF=4
+uaudio_mixer_add_ctl: adding 28
+uaudio_mixer_add_ctl: [mix] wValue=0100
+uaudio_mixer_add_ctl: [mix] wIndex=0200 type=1 ctl='28' min=0 max=1
+uaudio_mixer_add_feature: ctl=2 fumask=0x0002
+uaudio_mixer_determine_class: MATCH=1 IN=0x0000 OUT=0x0301
+uaudio_mixer_get_feature_by_tt: terminal_type=0x0301 RET=4 DEF=4
+uaudio_mixer_add_ctl: adding 4
+uaudio_mixer_get: val=-32640
+uaudio_mixer_get: val=128
+uaudio_mixer_get: val=128
+uaudio_mixer_add_ctl: Resolution = 128
+uaudio_mixer_add_ctl: [mix] wValue=0201
+uaudio_mixer_add_ctl: [mix] wValue=0201
+uaudio_mixer_add_ctl: [mix] wIndex=0200 type=2 ctl='4' min=-32640 max=128
+uaudio_mixer_add_feature: ctl=3 fumask=0x0004
+uaudio_mixer_add_feature: ctl=4 fumask=0x0008
+uaudio_mixer_add_feature: ctl=5 fumask=0x0010
+uaudio_mixer_add_feature: ctl=6 fumask=0x0020
+uaudio_mixer_add_feature: ctl=7 fumask=0x0040
+uaudio_mixer_add_feature: ctl=8 fumask=0x0080
+uaudio_mixer_add_feature: ctl=9 fumask=0x0100
+uaudio_mixer_add_feature: ctl=10 fumask=0x0200
+uaudio_mixer_fill_info: id=1 subtype=2
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_record_fix_fs: Workaround: Updated wMaxPacketSize from 294 to 330 bytes.
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 48000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=330 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 48000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_record_fix_fs: Workaround: Updated wMaxPacketSize from 330 to 360 bytes.
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=360 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 40000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=360 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 40000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 32000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=360 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 32000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_record_fix_fs: Workaround: Updated wMaxPacketSize from 196 to 220 bytes.
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 48000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=220 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 48000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_record_fix_fs: Workaround: Updated wMaxPacketSize from 220 to 240 bytes.
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=240 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 40000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=240 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 40000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 32000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b44fcc48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff8039fb1ae94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=240 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 32000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b44fc058
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_attach: audio rev 1.00
+uaudio_attach: 4 mixer controls
+uaudio1: Play[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 40000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 32000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 40000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 32000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: No MIDI sequencer.
+uaudio_attach: doing child attach
+pcm7: <USB audio> on uaudio1
+uaudio_mixer_init_sub: child=0
+uaudio_mixer_bsd2value: type=0x002 val=-32640 min=-32640 max=128 val=-32640
+uaudio_mixer_bsd2value: type=0x002 val=-32640 min=-32640 max=128 val=-32640
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_bsd2value: type=0x002 val=-14290 min=-32640 max=128 val=-14290
+uaudio_mixer_bsd2value: type=0x002 val=-14290 min=-32640 max=128 val=-14290
+uaudio_mixer_bsd2value: type=0x002 val=-24320 min=-32512 max=256 val=-24320
+uaudio_mixer_bsd2value: type=0x002 val=-24320 min=-32512 max=256 val=-24320
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_chan_init: Worst case buffer is 4608 bytes
+uaudio_chan_init: Worst case buffer is 4608 bytes
+uaudio_chan_set_param_speed: Selecting alt 0
+uaudio_chan_set_param_speed: Selecting alt 2
+uaudio_chan_set_param_format: Selecting format 0x00210000
+uaudio_chan_set_param_speed: Selecting alt 0
+uaudio_chan_set_param_speed: Selecting alt 2
+uaudio_chan_set_param_format: Selecting format 0x00210000
+uaudio1: No HID volume keys found.
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+ugen1.6: <M-Audio Fast Track> at usbus1 (disconnected)
+uaudio1: at uhub1, port 12, addr 7 (disconnected)
+uaudio_mixer_bsd2value: type=0x002 val=-32640 min=-32640 max=128 val=-32640
+uaudio_mixer_bsd2value: type=0x002 val=-32640 min=-32640 max=128 val=-32640
+uaudio_mixer_bsd2value: type=0x002 val=-32640 min=-32640 max=128 val=-32640
+uaudio_mixer_bsd2value: type=0x002 val=-32640 min=-32640 max=128 val=-32640
+uaudio_mixer_bsd2value: type=0x002 val=-32512 min=-32512 max=256 val=-32512
+uaudio_mixer_bsd2value: type=0x002 val=-32512 min=-32512 max=256 val=-32512
+uaudio_mixer_uninit_sub: child=0
+pcm7: detached
+uaudio1: detached
+ugen1.6: <M-Audio Fast Track> at usbus1
+uaudio1 on uhub1
+uaudio1: <Fast Track> on usbus1
+uaudio_mixer_fill_info: found AC header, vers=100, len=62
+uaudio_mixer_fill_info: Maximum ID=6
+uaudio_mixer_fill_info: id=6 subtype=3
+uaudio_mixer_fill_info: id=5 subtype=6
+uaudio_mixer_add_feature: chan=1 mask=2
+uaudio_mixer_add_feature: chan=2 mask=2
+uaudio_mixer_add_feature: ctl=1 fumask=0x0001
+uaudio_mixer_determine_class: MATCH=2 IN=0x0201 OUT=0x0000
+uaudio_mixer_get_feature_by_tt: terminal_type=0x0201 RET=7 DEF=11
+uaudio_mixer_add_ctl: adding 28
+uaudio_mixer_add_ctl: [mix] wValue=0100
+uaudio_mixer_add_ctl: [mix] wIndex=0500 type=1 ctl='28' min=0 max=1
+uaudio_mixer_add_feature: ctl=2 fumask=0x0002
+uaudio_mixer_determine_class: MATCH=2 IN=0x0201 OUT=0x0000
+uaudio_mixer_get_feature_by_tt: terminal_type=0x0201 RET=7 DEF=11
+uaudio_mixer_add_ctl: adding 7
+uaudio_mixer_get: val=-32512
+uaudio_mixer_get: val=256
+uaudio_mixer_get: val=256
+uaudio_mixer_add_ctl: Resolution = 256
+uaudio_mixer_add_ctl: [mix] wValue=0201
+uaudio_mixer_add_ctl: [mix] wValue=0201
+uaudio_mixer_add_ctl: [mix] wIndex=0500 type=2 ctl='7' min=-32512 max=256
+uaudio_mixer_add_feature: ctl=3 fumask=0x0004
+uaudio_mixer_add_feature: ctl=4 fumask=0x0008
+uaudio_mixer_add_feature: ctl=5 fumask=0x0010
+uaudio_mixer_add_feature: ctl=6 fumask=0x0020
+uaudio_mixer_add_feature: ctl=7 fumask=0x0040
+uaudio_mixer_add_feature: ctl=8 fumask=0x0080
+uaudio_mixer_add_feature: ctl=9 fumask=0x0100
+uaudio_mixer_add_feature: ctl=10 fumask=0x0200
+uaudio_mixer_fill_info: id=4 subtype=2
+uaudio_mixer_fill_info: id=3 subtype=3
+uaudio_mixer_fill_info: id=2 subtype=6
+uaudio_mixer_add_feature: chan=1 mask=2
+uaudio_mixer_add_feature: chan=2 mask=2
+uaudio_mixer_add_feature: ctl=1 fumask=0x0001
+uaudio_mixer_determine_class: MATCH=1 IN=0x0000 OUT=0x0301
+uaudio_mixer_get_feature_by_tt: terminal_type=0x0301 RET=4 DEF=4
+uaudio_mixer_add_ctl: adding 28
+uaudio_mixer_add_ctl: [mix] wValue=0100
+uaudio_mixer_add_ctl: [mix] wIndex=0200 type=1 ctl='28' min=0 max=1
+uaudio_mixer_add_feature: ctl=2 fumask=0x0002
+uaudio_mixer_determine_class: MATCH=1 IN=0x0000 OUT=0x0301
+uaudio_mixer_get_feature_by_tt: terminal_type=0x0301 RET=4 DEF=4
+uaudio_mixer_add_ctl: adding 4
+uaudio_mixer_get: val=-32640
+uaudio_mixer_get: val=128
+uaudio_mixer_get: val=128
+uaudio_mixer_add_ctl: Resolution = 128
+uaudio_mixer_add_ctl: [mix] wValue=0201
+uaudio_mixer_add_ctl: [mix] wValue=0201
+uaudio_mixer_add_ctl: [mix] wIndex=0200 type=2 ctl='4' min=-32640 max=128
+uaudio_mixer_add_feature: ctl=3 fumask=0x0004
+uaudio_mixer_add_feature: ctl=4 fumask=0x0008
+uaudio_mixer_add_feature: ctl=5 fumask=0x0010
+uaudio_mixer_add_feature: ctl=6 fumask=0x0020
+uaudio_mixer_add_feature: ctl=7 fumask=0x0040
+uaudio_mixer_add_feature: ctl=8 fumask=0x0080
+uaudio_mixer_add_feature: ctl=9 fumask=0x0100
+uaudio_mixer_add_feature: ctl=10 fumask=0x0200
+uaudio_mixer_fill_info: id=1 subtype=2
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_record_fix_fs: Workaround: Updated wMaxPacketSize from 294 to 330 bytes.
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 48000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=330 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 48000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_record_fix_fs: Workaround: Updated wMaxPacketSize from 330 to 360 bytes.
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=360 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 40000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=360 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 40000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb01 bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=294 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 32000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb66 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=360 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 32000Hz, channels = 2, bits = 24, format = 24-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_record_fix_fs: Workaround: Updated wMaxPacketSize from 196 to 220 bytes.
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 48000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=220 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 48000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_record_fix_fs: Workaround: Updated wMaxPacketSize from 220 to 240 bytes.
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=240 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 44100Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 40000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=240 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 40000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb2f bLength=9 bDescriptorType=5 
+bEndpointAddress=3 bmAttributes=0x1 
+wMaxPacketSize=196 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 32000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x03, chan 0xfffffe00b1b52c48
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_dump_ep_desc: endpoint=0xfffff80019edbb94 bLength=9 bDescriptorType=5 
+bEndpointAddress=133 bmAttributes=0x5 
+wMaxPacketSize=240 bInterval=1 
+bRefresh=0 bSynchAddress=0
+uaudio_chan_fill_info_sub: Sample rate = 32000Hz, channels = 2, bits = 16, format = 16-bit S-LE PCM, ep 0x85, chan 0xfffffe00b1b52058
+uaudio_chan_fill_info_sub: Multiple formats is not supported
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_chan_fill_info_sub: Wrong number of channels
+uaudio_attach: audio rev 1.00
+uaudio_attach: 4 mixer controls
+uaudio1: Play[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 40000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 32000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 40000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 32000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: No MIDI sequencer.
+uaudio_attach: doing child attach
+pcm7: <USB audio> on uaudio1
+uaudio_mixer_init_sub: child=0
+uaudio_mixer_bsd2value: type=0x002 val=-32640 min=-32640 max=128 val=-32640
+uaudio_mixer_bsd2value: type=0x002 val=-32640 min=-32640 max=128 val=-32640
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_bsd2value: type=0x002 val=-14290 min=-32640 max=128 val=-14290
+uaudio_mixer_bsd2value: type=0x002 val=-14290 min=-32640 max=128 val=-14290
+uaudio_mixer_bsd2value: type=0x002 val=-24320 min=-32512 max=256 val=-24320
+uaudio_mixer_bsd2value: type=0x002 val=-24320 min=-32512 max=256 val=-24320
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_chan_init: Worst case buffer is 4608 bytes
+uaudio_chan_init: Worst case buffer is 4608 bytes
+uaudio_chan_set_param_speed: Selecting alt 0
+uaudio_chan_set_param_speed: Selecting alt 2
+uaudio_chan_set_param_format: Selecting format 0x00210000
+uaudio_chan_set_param_speed: Selecting alt 0
+uaudio_chan_set_param_speed: Selecting alt 2
+uaudio_chan_set_param_format: Selecting format 0x00210000
+uaudio1: No HID volume keys found.
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 
+uaudio_mixer_write_cfg_callback: 

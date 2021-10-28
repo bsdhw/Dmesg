@@ -1,0 +1,993 @@
+t mainbus0 apid 14: pa 0xfec01000, version 0x21, 32 pins
+cpu0 at mainbus0 apid 0
+cpu0: Use mfence to serialize rdtsc
+cpu0: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu0: node 0, package 0, core 0, smt 0
+cpu0: SVM disabled by the BIOS
+cpu1 at mainbus0 apid 2
+cpu1: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu1: node 0, package 0, core 1, smt 0
+cpu2 at mainbus0 apid 4
+cpu2: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu2: node 0, package 0, core 2, smt 0
+cpu3 at mainbus0 apid 8
+cpu3: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu3: node 0, package 0, core 4, smt 0
+cpu4 at mainbus0 apid 10
+cpu4: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu4: node 0, package 0, core 5, smt 0
+cpu5 at mainbus0 apid 12
+cpu5: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu5: node 0, package 0, core 6, smt 0
+cpu6 at mainbus0 apid 1
+cpu6: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu6: node 0, package 0, core 0, smt 1
+cpu7 at mainbus0 apid 3
+cpu7: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu7: node 0, package 0, core 1, smt 1
+cpu8 at mainbus0 apid 5
+cpu8: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu8: node 0, package 0, core 2, smt 1
+cpu9 at mainbus0 apid 9
+cpu9: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu9: node 0, package 0, core 4, smt 1
+cpu10 at mainbus0 apid 11
+cpu10: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu10: node 0, package 0, core 5, smt 1
+cpu11 at mainbus0 apid 13
+cpu11: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu11: node 0, package 0, core 6, smt 1
+acpi0 at mainbus0: Intel ACPICA 20210331
+acpi0: X/RSDT: OemId <ALASKA,  A M I ,01072009>, AslId <AMI ,01000013>
+acpi0: autoconfiguration error: invalid PCI address for D012
+acpi0: autoconfiguration error: invalid PCI address for D043
+acpi0: autoconfiguration error: invalid PCI address for D047
+acpi0: autoconfiguration error: invalid PCI address for D044
+acpi0: MCFG: segment 0, bus 0-127, address 0x00000000f0000000
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+AMDN (PNP0C01) at acpi0 not configured
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+spkr0 at pcppi1: PC Speaker
+wsbell at spkr0 not configured
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+LPTE (PNP0400) at acpi0 not configured
+UAR1 (PNP0501) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+GPIO (AMDI0030) at acpi0 not configured
+acpiwmi0 at acpi0 (WMIO, PNP0C14-MFBI): ACPI WMI Interface
+acpiwmibus at acpiwmi0 not configured
+acpiwmi1 at acpi0 (WMIC, PNP0C14-WMIC): ACPI WMI Interface
+acpiwmibus at acpiwmi1 not configured
+PTIO (AMDIF030) at acpi0 not configured
+acpiwmi2 at acpi0 (AOD, PNP0C14-AOD): ACPI WMI Interface
+acpiwmibus at acpiwmi2 not configured
+ACPI: Enabled 1 GPEs in block 00 to 1F
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+amdsmn0 at pci0 dev 0 function 0: AMD System Management Network
+amdzentemp0 at amdsmn0: AMD CPU Temperature Sensors (Family17h)
+AMD Family17h/7xh IOMMU (IOMMU system) at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0: AMD product 1482 (rev. 0x00)
+ppb0 at pci0 dev 1 function 3: AMD product 1483 (rev. 0x00)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x8 @ 8.0GT/s
+ppb0: link is x4 @ 8.0GT/s
+pci1 at ppb0 bus 3
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+xhci0 at pci1 dev 0 function 0: AMD product 43d5 (rev. 0x01)
+xhci0: 64-bit DMA
+xhci0: interrupting at msi0 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+ahcisata0 at pci1 dev 0 function 1: AMD 400 Series AHCI (rev. 0x01)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 8 ports, 32 slots, CAP 0xef36ff27<SXS,PSC,SSC,PMD,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SSS,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi1 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 4
+atabus3 at ahcisata0 channel 5
+ppb1 at pci1 dev 0 function 2: AMD 400 Series PCIe (rev. 0x01)
+ppb1: PCI Express capability version 2 <Upstream Port of PCI-E Switch>
+pci2 at ppb1 bus 32
+pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb2 at pci2 dev 0 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb2: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci3 at ppb2 bus 33
+pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb3 at pci2 dev 1 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb3: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+ppb3: link is x1 @ 2.5GT/s
+pci4 at ppb3 bus 34
+pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci4 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x15)
+re0: interrupting at msix2 vec 0
+re0: RTL8168H/8111H (0x5400)
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8251 1000BASE-T media interface, rev. 0
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+ppb4 at pci2 dev 4 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb4: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci5 at ppb4 bus 37
+pci5: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb5 at pci2 dev 5 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb5: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci6 at ppb5 bus 38
+pci6: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb6 at pci2 dev 6 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb6: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci7 at ppb6 bus 39
+pci7: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb7 at pci2 dev 7 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb7: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci8 at ppb7 bus 40
+pci8: i/o space, memory space enabled, rd/line, wr/inv ok
+pchb1 at pci0 dev 2 function 0: AMD product 1482 (rev. 0x00)
+pchb2 at pci0 dev 3 function 0: AMD product 1482 (rev. 0x00)
+ppb8 at pci0 dev 3 function 1: AMD product 1483 (rev. 0x00)
+ppb8: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+ppb8: link is x8 @ 8.0GT/s
+pci9 at ppb8 bus 41
+pci9: i/o space, memory space enabled, rd/line, wr/inv ok
+genfb0 at pci9 dev 0 function 0: ATI Technologies product 699f (rev. 0xc7)
+genfb0: framebuffer at 0xd0000000, size 1024x768, depth 32, stride 4096
+genfb0: shadow framebuffer enabled, size 3072 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+hdaudio0 at pci9 dev 0 function 1: HD Audio Controller
+hdaudio0: interrupting at msi3 vec 0
+hdaudio0: HDA ver. 1.0, OSS 5, ISS 0, BSS 0, SDO 1, 64-bit
+hdafg0 at hdaudio0: vendor 1002 product aa01
+hdafg0: HDMI00 2ch: Digital Out [Jack]
+hdafg0: HDMI01 2ch: Digital Out [Jack]
+hdafg0: HDMI02 2ch: Digital Out [Jack]
+hdafg0: HDMI03 2ch: Digital Out [Jack]
+hdafg0: HDMI04 2ch: Digital Out [Jack]
+hdafg0: 2ch/0ch 32000Hz 44100Hz 48000Hz PCM16 AC3
+pchb3 at pci0 dev 4 function 0: AMD product 1482 (rev. 0x00)
+pchb4 at pci0 dev 5 function 0: AMD product 1482 (rev. 0x00)
+pchb5 at pci0 dev 7 function 0: AMD product 1482 (rev. 0x00)
+ppb9 at pci0 dev 7 function 1: AMD product 1484 (rev. 0x00)
+ppb9: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 16.0GT/s
+pci10 at ppb9 bus 42
+pci10: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD product 148a (non-essential instrumentation, subclass 0x00) at pci10 dev 0 function 0 not configured
+pchb6 at pci0 dev 8 function 0: AMD product 1482 (rev. 0x00)
+ppb10 at pci0 dev 8 function 1: AMD product 1484 (rev. 0x00)
+ppb10: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 16.0GT/s
+pci11 at ppb10 bus 43
+pci11: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD Family17h/7xh Reserved SPP (non-essential instrumentation, subclass 0x00) at pci11 dev 0 function 0 not configured
+amdccp0 at pci11 dev 0 function 1: AMD Cryptographic Coprocessor
+xhci1 at pci11 dev 0 function 3: AMD Family17h/7xh USB 3.0 Host Controller (rev. 0x00)
+xhci1: 64-bit DMA
+xhci1: interrupting at msix4 vec 0
+xhci1: xHCI version 1.10
+usb2 at xhci1: USB revision 3.1
+usb3 at xhci1: USB revision 2.0
+hdaudio1 at pci11 dev 0 function 4: HD Audio Controller
+hdaudio1: interrupting at msi5 vec 0
+hdaudio1: HDA ver. 1.0, OSS 4, ISS 4, BSS 0, SDO 1, 64-bit
+hdafg1 at hdaudio1: vendor 10ec product 0897
+hdafg1: DAC00 8ch: Speaker [Jack]
+hdafg1: DAC01 2ch: HP Out [Jack]
+hdafg1: ADC02 2ch: Line In [Jack], Mic In [Jack]
+hdafg1: ADC03 2ch: Mic In [Jack]
+hdafg1: 8ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg1: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+piixpm0 at pci0 dev 20 function 0: AMD X370/X399 SMBus Controller (rev. 0x61)
+piixpm0: interrupting at SMI, 
+iic0 at piixpm0 port 0: I2C bus
+iic1 at piixpm0 port 1: I2C bus
+pcib0 at pci0 dev 20 function 3: AMD FCH LPC (rev. 0x51)
+pchb7 at pci0 dev 24 function 0: AMD product 1440 (rev. 0x00)
+pchb8 at pci0 dev 24 function 1: AMD product 1441 (rev. 0x00)
+pchb9 at pci0 dev 24 function 2: AMD product 1442 (rev. 0x00)
+pchb10 at pci0 dev 24 function 3: AMD product 1443 (rev. 0x00)
+pchb11 at pci0 dev 24 function 4: AMD product 1444 (rev. 0x00)
+pchb12 at pci0 dev 24 function 5: AMD product 1445 (rev. 0x00)
+pchb13 at pci0 dev 24 function 6: AMD product 1446 (rev. 0x00)
+pchb14 at pci0 dev 24 function 7: AMD product 1447 (rev. 0x00)
+isa0 at pcib0
+lpt0 at isa0 port 0x378-0x37b irq 7
+com0 at isa0 port 0x3f8-0x3ff irq 4: ns16550a, 1-byte FIFO
+pckbc0 at isa0 port 0x60-0x64
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow     0 mW
+acpicpu0: C2: I/O, lat 400 us, pow     0 mW
+acpicpu0: P0: FFH, lat   1 us, pow  3960 mW, 3600 MHz
+acpicpu0: P1: FFH, lat   1 us, pow  2800 mW, 2800 MHz
+acpicpu0: P2: FFH, lat   1 us, pow  1980 mW, 2200 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+acpicpu1 at cpu1: ACPI CPU
+acpicpu2 at cpu2: ACPI CPU
+acpicpu3 at cpu3: ACPI CPU
+acpicpu4 at cpu4: ACPI CPU
+acpicpu5 at cpu5: ACPI CPU
+acpicpu6 at cpu6: ACPI CPU
+acpicpu7 at cpu7: ACPI CPU
+acpicpu8 at cpu8: ACPI CPU
+acpicpu9 at cpu9: ACPI CPU
+acpicpu10 at cpu10: ACPI CPU
+acpicpu11 at cpu11: ACPI CPU
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 3600001000 Hz quality 3000
+uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 4 ports with 4 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 10 ports with 10 removable, self powered
+uhub2 at usb2: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub2: 4 ports with 4 removable, self powered
+uhub3 at usb3: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub3: 4 ports with 4 removable, self powered
+IPsec: Initialized Security Association Processing.
+aes: Intel AES-NI
+chacha: x86 SSE2 ChaCha
+adiantum: self-test passed
+aes_ccm: self-test passed
+blake2s: self-test passed
+ahcisata0 port 1: device present, speed: 6.0Gb/s
+ahcisata0 port 0: device present, speed: 6.0Gb/s
+wd0 at atabus0 drive 0
+wd0: <KINGSTON SHFS37A240G>
+wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+wd0: 223 GB, 465141 cyl, 16 head, 63 sec, 512 bytes/sect x 468862128 sectors
+wd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at wd0: "EFI system partition", 204800 blocks at 2048, type: msdos
+dk1 at wd0: "Microsoft reserved partition", 32768 blocks at 206848, type: ntfs
+dk2 at wd0: "Basic data partition", 417229942 blocks at 239616, type: ntfs
+dk3 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 1056768 blocks at 467802112, type: <unknown>
+dk4 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 50331648 blocks at 417470464, type: ffs
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags) w/PRIO
+wd0(ahcisata0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags) w/PRIO
+wd1 at atabus1 drive 0
+wd1: <WDC WD10EZEX-60WN4A0>
+wd1: drive supports 16-sector PIO transfers, LBA48 addressing
+wd1: 931 GB, 1938021 cyl, 16 head, 63 sec, 512 bytes/sect x 1953525168 sectors (4096 bytes/physsect)
+uhidev0 at uhub1 port 1 configuration 1 interface 0
+uhidev0: CHICONY (0x03f0) HP Basic USB Keyboard (0x0024), rev 2.00/1.30, addr 1, iclass 3/1
+ukbd0 at uhidev0
+wd1: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100), NCQ (32 tags)
+wd1(ahcisata0:1:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100) (using DMA), NCQ (31 tags)
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub1 port 2 configuration 1 interface 0
+uhidev1: PixArt (0x093a) USB Optical Mouse (0x2510), rev 2.00/1.00, addr 2, iclass 3/1
+ums0 at uhidev1: 3 buttons and Z dir
+wsmouse0 at ums0 mux 0
+umass0 at uhub1 port 10 configuration 1 interface 0
+umass0: Generic (0x058f) Mass Storage (0x6387), rev 2.00/1.01, addr 3
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, 1 lun per target
+sd0 at scsibus0 target 0 lun 0: <Generic, Flash Disk, 8.07> disk removable
+sd0: fabricating a geometry
+sd0: 3840 MB, 3840 cyl, 64 head, 32 sec, 512 bytes/sect x 7864320 sectors
+sd0: fabricating a geometry
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk5 at sd0: "EFI system", 262144 blocks at 2048, type: msdos
+dk6 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 2908160 blocks at 264192, type: ffs
+cgd: self-test aes-xts-256
+cgd: self-test aes-xts-512
+cgd: self-test aes-cbc-128
+cgd: self-test aes-cbc-256
+cgd: self-test 3des-cbc-192
+cgd: self-test blowfish-cbc-448
+cgd: self-test aes-cbc-128 (encblkno8)
+cgd: self-tests passed
+WARNING: 4 errors while detecting hardware; check system log.
+boot device: wd0
+root on dk4
+root file system type: ffs
+kern.module.path=/stand/amd64/9.99.85/modules
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020, 2021 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.99.85 (GENERIC) #0: Tue Jun 22 16:39:33 CEST 2021
+	jaapb@localhost:/sources/src/sys/arch/amd64/compile/obj/GENERIC
+total memory = 16309 MB
+avail memory = 15775 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+RTC BIOS diagnostic error 0xf<fixed_disk,invalid_time>
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+efi: systbl at pa cdd56018
+Micro-Star International Co., Ltd MS-7B86 (4.0)
+mainbus0 (root)
+ACPI: RSDP 0x00000000CCDF0014 000024 (v02 ALASKA)
+ACPI: XSDT 0x00000000CCDEF728 0000BC (v01 ALASKA A M I    01072009 AMI  01000013)
+ACPI: FACP 0x00000000CB6F9000 000114 (v06 ALASKA A M I    01072009 AMI  00010013)
+ACPI: DSDT 0x00000000CB6F2000 006F19 (v02 ALASKA A M I    01072009 INTL 20120913)
+ACPI: FACS 0x00000000CCDEA000 000040
+ACPI: SSDT 0x00000000CB6FF000 008C98 (v02 AMD    AmdTable 00000002 MSFT 04000000)
+ACPI: SSDT 0x00000000CB6FB000 003BA2 (v01 AMD    AMD AOD  00000001 INTL 20120913)
+ACPI: SSDT 0x00000000CB6FA000 0000C8 (v02 ALASKA CPUSSDT  01072009 AMI  01072009)
+ACPI: FIDT 0x00000000CB6F1000 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: MCFG 0x00000000CB6F0000 00003C (v01 ALASKA A M I    01072009 MSFT 00010013)
+ACPI: HPET 0x00000000CB6EF000 000038 (v01 ALASKA A M I    01072009 AMI  00000005)
+ACPI: IVRS 0x00000000CB6EE000 0000D0 (v02 AMD    AmdTable 00000001 AMD  00000000)
+ACPI: PCCT 0x00000000CB6ED000 00006E (v02 AMD    AmdTable 00000001 AMD  00000000)
+ACPI: SSDT 0x00000000CB6EA000 002F29 (v02 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: CRAT 0x00000000CB6E9000 000B58 (v01 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: CDIT 0x00000000CB6E8000 000029 (v01 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: BGRT 0x00000000CB6E7000 000038 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x00000000CB6E3000 0034A4 (v01 AMD    MYRTLE   00000001 INTL 20120913)
+ACPI: SSDT 0x00000000CB6E2000 0000BF (v01 AMD    AmdTable 00001000 INTL 20120913)
+ACPI: WSMT 0x00000000CB6E1000 000028 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: APIC 0x00000000CB6E0000 00015E (v03 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x00000000CB6DE000 0010AF (v01 AMD    MYRTLE   00000001 INTL 20120913)
+ACPI: FPDT 0x00000000CB6DD000 000044 (v01 ALASKA A M I    01072009 AMI  01000013)
+ACPI: 8 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 13: pa 0xfec00000, version 0x21, 24 pins
+ioapic1 at mainbus0 apid 14: pa 0xfec01000, version 0x21, 32 pins
+cpu0 at mainbus0 apid 0
+cpu0: Use mfence to serialize rdtsc
+cpu0: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu0: node 0, package 0, core 0, smt 0
+cpu0: SVM disabled by the BIOS
+cpu1 at mainbus0 apid 2
+cpu1: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu1: node 0, package 0, core 1, smt 0
+cpu2 at mainbus0 apid 4
+cpu2: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu2: node 0, package 0, core 2, smt 0
+cpu3 at mainbus0 apid 8
+cpu3: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu3: node 0, package 0, core 4, smt 0
+cpu4 at mainbus0 apid 10
+cpu4: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu4: node 0, package 0, core 5, smt 0
+cpu5 at mainbus0 apid 12
+cpu5: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu5: node 0, package 0, core 6, smt 0
+cpu6 at mainbus0 apid 1
+cpu6: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu6: node 0, package 0, core 0, smt 1
+cpu7 at mainbus0 apid 3
+cpu7: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu7: node 0, package 0, core 1, smt 1
+cpu8 at mainbus0 apid 5
+cpu8: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu8: node 0, package 0, core 2, smt 1
+cpu9 at mainbus0 apid 9
+cpu9: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu9: node 0, package 0, core 4, smt 1
+cpu10 at mainbus0 apid 11
+cpu10: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu10: node 0, package 0, core 5, smt 1
+cpu11 at mainbus0 apid 13
+cpu11: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu11: node 0, package 0, core 6, smt 1
+acpi0 at mainbus0: Intel ACPICA 20210331
+acpi0: X/RSDT: OemId <ALASKA,  A M I ,01072009>, AslId <AMI ,01000013>
+acpi0: autoconfiguration error: invalid PCI address for D012
+acpi0: autoconfiguration error: invalid PCI address for D043
+acpi0: autoconfiguration error: invalid PCI address for D047
+acpi0: autoconfiguration error: invalid PCI address for D044
+acpi0: MCFG: segment 0, bus 0-127, address 0x00000000f0000000
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+AMDN (PNP0C01) at acpi0 not configured
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+spkr0 at pcppi1: PC Speaker
+wsbell at spkr0 not configured
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+LPTE (PNP0400) at acpi0 not configured
+UAR1 (PNP0501) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+GPIO (AMDI0030) at acpi0 not configured
+acpiwmi0 at acpi0 (WMIO, PNP0C14-MFBI): ACPI WMI Interface
+acpiwmibus at acpiwmi0 not configured
+acpiwmi1 at acpi0 (WMIC, PNP0C14-WMIC): ACPI WMI Interface
+acpiwmibus at acpiwmi1 not configured
+PTIO (AMDIF030) at acpi0 not configured
+acpiwmi2 at acpi0 (AOD, PNP0C14-AOD): ACPI WMI Interface
+acpiwmibus at acpiwmi2 not configured
+ACPI: Enabled 1 GPEs in block 00 to 1F
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+amdsmn0 at pci0 dev 0 function 0: AMD System Management Network
+amdzentemp0 at amdsmn0: AMD CPU Temperature Sensors (Family17h)
+AMD Family17h/7xh IOMMU (IOMMU system) at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0: AMD product 1482 (rev. 0x00)
+ppb0 at pci0 dev 1 function 3: AMD product 1483 (rev. 0x00)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x8 @ 8.0GT/s
+ppb0: link is x4 @ 8.0GT/s
+pci1 at ppb0 bus 3
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+xhci0 at pci1 dev 0 function 0: AMD product 43d5 (rev. 0x01)
+xhci0: 64-bit DMA
+xhci0: interrupting at msi0 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+ahcisata0 at pci1 dev 0 function 1: AMD 400 Series AHCI (rev. 0x01)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 8 ports, 32 slots, CAP 0xef36ff27<SXS,PSC,SSC,PMD,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SSS,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi1 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 4
+atabus3 at ahcisata0 channel 5
+ppb1 at pci1 dev 0 function 2: AMD 400 Series PCIe (rev. 0x01)
+ppb1: PCI Express capability version 2 <Upstream Port of PCI-E Switch>
+pci2 at ppb1 bus 32
+pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb2 at pci2 dev 0 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb2: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci3 at ppb2 bus 33
+pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb3 at pci2 dev 1 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb3: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+ppb3: link is x1 @ 2.5GT/s
+pci4 at ppb3 bus 34
+pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci4 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x15)
+re0: interrupting at msix2 vec 0
+re0: RTL8168H/8111H (0x5400)
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8251 1000BASE-T media interface, rev. 0
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+ppb4 at pci2 dev 4 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb4: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci5 at ppb4 bus 37
+pci5: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb5 at pci2 dev 5 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb5: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci6 at ppb5 bus 38
+pci6: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb6 at pci2 dev 6 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb6: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci7 at ppb6 bus 39
+pci7: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb7 at pci2 dev 7 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb7: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci8 at ppb7 bus 40
+pci8: i/o space, memory space enabled, rd/line, wr/inv ok
+pchb1 at pci0 dev 2 function 0: AMD product 1482 (rev. 0x00)
+pchb2 at pci0 dev 3 function 0: AMD product 1482 (rev. 0x00)
+ppb8 at pci0 dev 3 function 1: AMD product 1483 (rev. 0x00)
+ppb8: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+ppb8: link is x8 @ 8.0GT/s
+pci9 at ppb8 bus 41
+pci9: i/o space, memory space enabled, rd/line, wr/inv ok
+genfb0 at pci9 dev 0 function 0: ATI Technologies product 699f (rev. 0xc7)
+genfb0: framebuffer at 0xd0000000, size 1024x768, depth 32, stride 4096
+genfb0: shadow framebuffer enabled, size 3072 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+hdaudio0 at pci9 dev 0 function 1: HD Audio Controller
+hdaudio0: interrupting at msi3 vec 0
+hdaudio0: HDA ver. 1.0, OSS 5, ISS 0, BSS 0, SDO 1, 64-bit
+hdafg0 at hdaudio0: vendor 1002 product aa01
+hdafg0: HDMI00 2ch: Digital Out [Jack]
+hdafg0: HDMI01 2ch: Digital Out [Jack]
+hdafg0: HDMI02 2ch: Digital Out [Jack]
+hdafg0: HDMI03 2ch: Digital Out [Jack]
+hdafg0: HDMI04 2ch: Digital Out [Jack]
+hdafg0: 2ch/0ch 32000Hz 44100Hz 48000Hz PCM16 AC3
+pchb3 at pci0 dev 4 function 0: AMD product 1482 (rev. 0x00)
+pchb4 at pci0 dev 5 function 0: AMD product 1482 (rev. 0x00)
+pchb5 at pci0 dev 7 function 0: AMD product 1482 (rev. 0x00)
+ppb9 at pci0 dev 7 function 1: AMD product 1484 (rev. 0x00)
+ppb9: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 16.0GT/s
+pci10 at ppb9 bus 42
+pci10: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD product 148a (non-essential instrumentation, subclass 0x00) at pci10 dev 0 function 0 not configured
+pchb6 at pci0 dev 8 function 0: AMD product 1482 (rev. 0x00)
+ppb10 at pci0 dev 8 function 1: AMD product 1484 (rev. 0x00)
+ppb10: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 16.0GT/s
+pci11 at ppb10 bus 43
+pci11: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD Family17h/7xh Reserved SPP (non-essential instrumentation, subclass 0x00) at pci11 dev 0 function 0 not configured
+amdccp0 at pci11 dev 0 function 1: AMD Cryptographic Coprocessor
+xhci1 at pci11 dev 0 function 3: AMD Family17h/7xh USB 3.0 Host Controller (rev. 0x00)
+xhci1: 64-bit DMA
+xhci1: interrupting at msix4 vec 0
+xhci1: xHCI version 1.10
+usb2 at xhci1: USB revision 3.1
+usb3 at xhci1: USB revision 2.0
+hdaudio1 at pci11 dev 0 function 4: HD Audio Controller
+hdaudio1: interrupting at msi5 vec 0
+hdaudio1: HDA ver. 1.0, OSS 4, ISS 4, BSS 0, SDO 1, 64-bit
+hdafg1 at hdaudio1: vendor 10ec product 0897
+hdafg1: DAC00 8ch: Speaker [Jack]
+hdafg1: DAC01 2ch: HP Out [Jack]
+hdafg1: ADC02 2ch: Line In [Jack], Mic In [Jack]
+hdafg1: ADC03 2ch: Mic In [Jack]
+hdafg1: 8ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg1: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+piixpm0 at pci0 dev 20 function 0: AMD X370/X399 SMBus Controller (rev. 0x61)
+piixpm0: interrupting at SMI, 
+iic0 at piixpm0 port 0: I2C bus
+iic1 at piixpm0 port 1: I2C bus
+pcib0 at pci0 dev 20 function 3: AMD FCH LPC (rev. 0x51)
+pchb7 at pci0 dev 24 function 0: AMD product 1440 (rev. 0x00)
+pchb8 at pci0 dev 24 function 1: AMD product 1441 (rev. 0x00)
+pchb9 at pci0 dev 24 function 2: AMD product 1442 (rev. 0x00)
+pchb10 at pci0 dev 24 function 3: AMD product 1443 (rev. 0x00)
+pchb11 at pci0 dev 24 function 4: AMD product 1444 (rev. 0x00)
+pchb12 at pci0 dev 24 function 5: AMD product 1445 (rev. 0x00)
+pchb13 at pci0 dev 24 function 6: AMD product 1446 (rev. 0x00)
+pchb14 at pci0 dev 24 function 7: AMD product 1447 (rev. 0x00)
+isa0 at pcib0
+lpt0 at isa0 port 0x378-0x37b irq 7
+com0 at isa0 port 0x3f8-0x3ff irq 4: ns16550a, 1-byte FIFO
+pckbc0 at isa0 port 0x60-0x64
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow     0 mW
+acpicpu0: C2: I/O, lat 400 us, pow     0 mW
+acpicpu0: P0: FFH, lat   1 us, pow  3960 mW, 3600 MHz
+acpicpu0: P1: FFH, lat   1 us, pow  2800 mW, 2800 MHz
+acpicpu0: P2: FFH, lat   1 us, pow  1980 mW, 2200 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+acpicpu1 at cpu1: ACPI CPU
+acpicpu2 at cpu2: ACPI CPU
+acpicpu3 at cpu3: ACPI CPU
+acpicpu4 at cpu4: ACPI CPU
+acpicpu5 at cpu5: ACPI CPU
+acpicpu6 at cpu6: ACPI CPU
+acpicpu7 at cpu7: ACPI CPU
+acpicpu8 at cpu8: ACPI CPU
+acpicpu9 at cpu9: ACPI CPU
+acpicpu10 at cpu10: ACPI CPU
+acpicpu11 at cpu11: ACPI CPU
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 3600000000 Hz quality 3000
+uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 4 ports with 4 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 10 ports with 10 removable, self powered
+uhub2 at usb2: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub2: 4 ports with 4 removable, self powered
+uhub3 at usb3: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub3: 4 ports with 4 removable, self powered
+IPsec: Initialized Security Association Processing.
+aes: Intel AES-NI
+chacha: x86 SSE2 ChaCha
+adiantum: self-test passed
+aes_ccm: self-test passed
+blake2s: self-test passed
+ahcisata0 port 1: device present, speed: 6.0Gb/s
+ahcisata0 port 0: device present, speed: 6.0Gb/s
+wd0 at atabus0 drive 0
+wd0: <KINGSTON SHFS37A240G>
+wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+wd0: 223 GB, 465141 cyl, 16 head, 63 sec, 512 bytes/sect x 468862128 sectors
+wd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at wd0: "EFI system partition", 204800 blocks at 2048, type: msdos
+dk1 at wd0: "Microsoft reserved partition", 32768 blocks at 206848, type: ntfs
+dk2 at wd0: "Basic data partition", 417229942 blocks at 239616, type: ntfs
+dk3 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 1056768 blocks at 467802112, type: <unknown>
+dk4 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 50331648 blocks at 417470464, type: ffs
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags) w/PRIO
+wd0(ahcisata0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags) w/PRIO
+wd1 at atabus1 drive 0
+wd1: <WDC WD10EZEX-60WN4A0>
+wd1: drive supports 16-sector PIO transfers, LBA48 addressing
+wd1: 931 GB, 1938021 cyl, 16 head, 63 sec, 512 bytes/sect x 1953525168 sectors (4096 bytes/physsect)
+uhidev0 at uhub1 port 1 configuration 1 interface 0
+uhidev0: CHICONY (0x03f0) HP Basic USB Keyboard (0x0024), rev 2.00/1.30, addr 1, iclass 3/1
+ukbd0 at uhidev0
+wd1: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100), NCQ (32 tags)
+wd1(ahcisata0:1:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100) (using DMA), NCQ (31 tags)
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub1 port 2 configuration 1 interface 0
+uhidev1: PixArt (0x093a) USB Optical Mouse (0x2510), rev 2.00/1.00, addr 2, iclass 3/1
+ums0 at uhidev1: 3 buttons and Z dir
+wsmouse0 at ums0 mux 0
+umass0 at uhub1 port 10 configuration 1 interface 0
+umass0: Generic (0x058f) Mass Storage (0x6387), rev 2.00/1.01, addr 3
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, 1 lun per target
+sd0 at scsibus0 target 0 lun 0: <Generic, Flash Disk, 8.07> disk removable
+sd0: fabricating a geometry
+sd0: 3840 MB, 3840 cyl, 64 head, 32 sec, 512 bytes/sect x 7864320 sectors
+sd0: fabricating a geometry
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk5 at sd0: "EFI system", 262144 blocks at 2048, type: msdos
+dk6 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 2908160 blocks at 264192, type: ffs
+cgd: self-test aes-xts-256
+cgd: self-test aes-xts-512
+cgd: self-test aes-cbc-128
+cgd: self-test aes-cbc-256
+cgd: self-test 3des-cbc-192
+cgd: self-test blowfish-cbc-448
+cgd: self-test aes-cbc-128 (encblkno8)
+cgd: self-tests passed
+WARNING: 4 errors while detecting hardware; check system log.
+boot device: wd0
+root on dk4
+/: replaying log to memory
+root file system type: ffs
+kern.module.path=/stand/amd64/9.99.85/modules
+/: replaying log to disk
+/sources: replaying log to disk
+syncing disks... done
+unmounted /dev/wd1a on /sources type ffs
+unmounted tmpfs on /var/shm type tmpfs
+unmounted procfs on /proc type procfs
+unmounted ptyfs on /dev/pts type ptyfs
+unmounted kernfs on /kern type kernfs
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020, 2021 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.99.85 (JOFFRE) #0: Tue Jun 22 22:46:39 CEST 2021
+	XXX@XXX:/sources/src/sys/arch/amd64/compile/obj/JOFFRE
+total memory = 16309 MB
+avail memory = 15779 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+RTC BIOS diagnostic error 0xf<fixed_disk,invalid_time>
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+efi: systbl at pa cdd56018
+Micro-Star International Co., Ltd MS-7B86 (4.0)
+mainbus0 (root)
+ACPI: RSDP 0x00000000CCDF0014 000024 (v02 ALASKA)
+ACPI: XSDT 0x00000000CCDEF728 0000BC (v01 ALASKA A M I    01072009 AMI  01000013)
+ACPI: FACP 0x00000000CB6F9000 000114 (v06 ALASKA A M I    01072009 AMI  00010013)
+ACPI: DSDT 0x00000000CB6F2000 006F19 (v02 ALASKA A M I    01072009 INTL 20120913)
+ACPI: FACS 0x00000000CCDEA000 000040
+ACPI: SSDT 0x00000000CB6FF000 008C98 (v02 AMD    AmdTable 00000002 MSFT 04000000)
+ACPI: SSDT 0x00000000CB6FB000 003BA2 (v01 AMD    AMD AOD  00000001 INTL 20120913)
+ACPI: SSDT 0x00000000CB6FA000 0000C8 (v02 ALASKA CPUSSDT  01072009 AMI  01072009)
+ACPI: FIDT 0x00000000CB6F1000 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: MCFG 0x00000000CB6F0000 00003C (v01 ALASKA A M I    01072009 MSFT 00010013)
+ACPI: HPET 0x00000000CB6EF000 000038 (v01 ALASKA A M I    01072009 AMI  00000005)
+ACPI: IVRS 0x00000000CB6EE000 0000D0 (v02 AMD    AmdTable 00000001 AMD  00000000)
+ACPI: PCCT 0x00000000CB6ED000 00006E (v02 AMD    AmdTable 00000001 AMD  00000000)
+ACPI: SSDT 0x00000000CB6EA000 002F29 (v02 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: CRAT 0x00000000CB6E9000 000B58 (v01 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: CDIT 0x00000000CB6E8000 000029 (v01 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: BGRT 0x00000000CB6E7000 000038 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x00000000CB6E3000 0034A4 (v01 AMD    MYRTLE   00000001 INTL 20120913)
+ACPI: SSDT 0x00000000CB6E2000 0000BF (v01 AMD    AmdTable 00001000 INTL 20120913)
+ACPI: WSMT 0x00000000CB6E1000 000028 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: APIC 0x00000000CB6E0000 00015E (v03 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x00000000CB6DE000 0010AF (v01 AMD    MYRTLE   00000001 INTL 20120913)
+ACPI: FPDT 0x00000000CB6DD000 000044 (v01 ALASKA A M I    01072009 AMI  01000013)
+ACPI: 8 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 13: pa 0xfec00000, version 0x21, 24 pins
+ioapic1 at mainbus0 apid 14: pa 0xfec01000, version 0x21, 32 pins
+cpu0 at mainbus0 apid 0
+cpu0: Use mfence to serialize rdtsc
+cpu0: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu0: node 0, package 0, core 0, smt 0
+cpu0: SVM disabled by the BIOS
+cpu1 at mainbus0 apid 2
+cpu1: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu1: node 0, package 0, core 1, smt 0
+cpu2 at mainbus0 apid 4
+cpu2: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu2: node 0, package 0, core 2, smt 0
+cpu3 at mainbus0 apid 8
+cpu3: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu3: node 0, package 0, core 4, smt 0
+cpu4 at mainbus0 apid 10
+cpu4: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu4: node 0, package 0, core 5, smt 0
+cpu5 at mainbus0 apid 12
+cpu5: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu5: node 0, package 0, core 6, smt 0
+cpu6 at mainbus0 apid 1
+cpu6: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu6: node 0, package 0, core 0, smt 1
+cpu7 at mainbus0 apid 3
+cpu7: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu7: node 0, package 0, core 1, smt 1
+cpu8 at mainbus0 apid 5
+cpu8: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu8: node 0, package 0, core 2, smt 1
+cpu9 at mainbus0 apid 9
+cpu9: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu9: node 0, package 0, core 4, smt 1
+cpu10 at mainbus0 apid 11
+cpu10: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu10: node 0, package 0, core 5, smt 1
+cpu11 at mainbus0 apid 13
+cpu11: AMD Ryzen 5 3600 6-Core Processor              , id 0x870f10
+cpu11: node 0, package 0, core 6, smt 1
+acpi0 at mainbus0: Intel ACPICA 20210331
+acpi0: X/RSDT: OemId <ALASKA,  A M I ,01072009>, AslId <AMI ,01000013>
+acpi0: autoconfiguration error: invalid PCI address for D012
+acpi0: autoconfiguration error: invalid PCI address for D043
+acpi0: autoconfiguration error: invalid PCI address for D047
+acpi0: autoconfiguration error: invalid PCI address for D044
+acpi0: MCFG: segment 0, bus 0-127, address 0x00000000f0000000
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+AMDN (PNP0C01) at acpi0 not configured
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+spkr0 at pcppi1: PC Speaker
+wsbell at spkr0 not configured
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+LPTE (PNP0400) at acpi0 not configured
+UAR1 (PNP0501) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+GPIO (AMDI0030) at acpi0 not configured
+acpiwmi0 at acpi0 (WMIO, PNP0C14-MFBI): ACPI WMI Interface
+acpiwmibus at acpiwmi0 not configured
+acpiwmi1 at acpi0 (WMIC, PNP0C14-WMIC): ACPI WMI Interface
+acpiwmibus at acpiwmi1 not configured
+PTIO (AMDIF030) at acpi0 not configured
+acpiwmi2 at acpi0 (AOD, PNP0C14-AOD): ACPI WMI Interface
+acpiwmibus at acpiwmi2 not configured
+ACPI: Enabled 1 GPEs in block 00 to 1F
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+amdsmn0 at pci0 dev 0 function 0: AMD System Management Network
+amdzentemp0 at amdsmn0: AMD CPU Temperature Sensors (Family17h)
+AMD Family17h/7xh IOMMU (IOMMU system) at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0: AMD product 1482 (rev. 0x00)
+ppb0 at pci0 dev 1 function 3: AMD product 1483 (rev. 0x00)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x8 @ 8.0GT/s
+ppb0: link is x4 @ 8.0GT/s
+pci1 at ppb0 bus 3
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+xhci0 at pci1 dev 0 function 0: AMD product 43d5 (rev. 0x01)
+xhci0: 64-bit DMA
+xhci0: interrupting at msi0 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+ahcisata0 at pci1 dev 0 function 1: AMD 400 Series AHCI (rev. 0x01)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 8 ports, 32 slots, CAP 0xef36ff27<SXS,PSC,SSC,PMD,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SSS,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi1 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 4
+atabus3 at ahcisata0 channel 5
+ppb1 at pci1 dev 0 function 2: AMD 400 Series PCIe (rev. 0x01)
+ppb1: PCI Express capability version 2 <Upstream Port of PCI-E Switch>
+pci2 at ppb1 bus 32
+pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb2 at pci2 dev 0 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb2: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci3 at ppb2 bus 33
+pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb3 at pci2 dev 1 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb3: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+ppb3: link is x1 @ 2.5GT/s
+pci4 at ppb3 bus 34
+pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci4 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x15)
+re0: interrupting at msix2 vec 0
+re0: RTL8168H/8111H (0x5400)
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8251 1000BASE-T media interface, rev. 0
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+ppb4 at pci2 dev 4 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb4: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci5 at ppb4 bus 37
+pci5: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb5 at pci2 dev 5 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb5: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci6 at ppb5 bus 38
+pci6: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb6 at pci2 dev 6 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb6: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci7 at ppb6 bus 39
+pci7: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb7 at pci2 dev 7 function 0: AMD 400 Series PCIe (rev. 0x01)
+ppb7: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci8 at ppb7 bus 40
+pci8: i/o space, memory space enabled, rd/line, wr/inv ok
+pchb1 at pci0 dev 2 function 0: AMD product 1482 (rev. 0x00)
+pchb2 at pci0 dev 3 function 0: AMD product 1482 (rev. 0x00)
+ppb8 at pci0 dev 3 function 1: AMD product 1483 (rev. 0x00)
+ppb8: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+ppb8: link is x8 @ 8.0GT/s
+pci9 at ppb8 bus 41
+pci9: i/o space, memory space enabled, rd/line, wr/inv ok
+genfb0 at pci9 dev 0 function 0: ATI Technologies product 699f (rev. 0xc7)
+genfb0: framebuffer at 0xd0000000, size 1024x768, depth 32, stride 4096
+genfb0: shadow framebuffer enabled, size 3072 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+hdaudio0 at pci9 dev 0 function 1: HD Audio Controller
+hdaudio0: interrupting at msi3 vec 0
+hdaudio0: HDA ver. 1.0, OSS 5, ISS 0, BSS 0, SDO 1, 64-bit
+hdafg0 at hdaudio0: vendor 1002 product aa01
+hdafg0: HDMI00 2ch: Digital Out [Jack]
+hdafg0: HDMI01 2ch: Digital Out [Jack]
+hdafg0: HDMI02 2ch: Digital Out [Jack]
+hdafg0: HDMI03 2ch: Digital Out [Jack]
+hdafg0: HDMI04 2ch: Digital Out [Jack]
+hdafg0: 2ch/0ch 32000Hz 44100Hz 48000Hz PCM16 AC3
+pchb3 at pci0 dev 4 function 0: AMD product 1482 (rev. 0x00)
+pchb4 at pci0 dev 5 function 0: AMD product 1482 (rev. 0x00)
+pchb5 at pci0 dev 7 function 0: AMD product 1482 (rev. 0x00)
+ppb9 at pci0 dev 7 function 1: AMD product 1484 (rev. 0x00)
+ppb9: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 16.0GT/s
+pci10 at ppb9 bus 42
+pci10: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD product 148a (non-essential instrumentation, subclass 0x00) at pci10 dev 0 function 0 not configured
+pchb6 at pci0 dev 8 function 0: AMD product 1482 (rev. 0x00)
+ppb10 at pci0 dev 8 function 1: AMD product 1484 (rev. 0x00)
+ppb10: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 16.0GT/s
+pci11 at ppb10 bus 43
+pci11: i/o space, memory space enabled, rd/line, wr/inv ok
+AMD Family17h/7xh Reserved SPP (non-essential instrumentation, subclass 0x00) at pci11 dev 0 function 0 not configured
+amdccp0 at pci11 dev 0 function 1: AMD Cryptographic Coprocessor
+xhci1 at pci11 dev 0 function 3: AMD Family17h/7xh USB 3.0 Host Controller (rev. 0x00)
+xhci1: 64-bit DMA
+xhci1: interrupting at msix4 vec 0
+xhci1: xHCI version 1.10
+usb2 at xhci1: USB revision 3.1
+usb3 at xhci1: USB revision 2.0
+hdaudio1 at pci11 dev 0 function 4: HD Audio Controller
+hdaudio1: interrupting at msi5 vec 0
+hdaudio1: HDA ver. 1.0, OSS 4, ISS 4, BSS 0, SDO 1, 64-bit
+hdafg1 at hdaudio1: vendor 10ec product 0897
+hdafg1: DAC00 8ch: Speaker [Jack]
+hdafg1: DAC01 2ch: HP Out [Jack]
+hdafg1: ADC02 2ch: Line In [Jack], Mic In [Jack]
+hdafg1: ADC03 2ch: Mic In [Jack]
+hdafg1: 8ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg1: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+piixpm0 at pci0 dev 20 function 0: AMD X370/X399 SMBus Controller (rev. 0x61)
+piixpm0: interrupting at SMI, 
+iic0 at piixpm0 port 0: I2C bus
+iic1 at piixpm0 port 1: I2C bus
+pcib0 at pci0 dev 20 function 3: AMD FCH LPC (rev. 0x51)
+pchb7 at pci0 dev 24 function 0: AMD product 1440 (rev. 0x00)
+pchb8 at pci0 dev 24 function 1: AMD product 1441 (rev. 0x00)
+pchb9 at pci0 dev 24 function 2: AMD product 1442 (rev. 0x00)
+pchb10 at pci0 dev 24 function 3: AMD product 1443 (rev. 0x00)
+pchb11 at pci0 dev 24 function 4: AMD product 1444 (rev. 0x00)
+pchb12 at pci0 dev 24 function 5: AMD product 1445 (rev. 0x00)
+pchb13 at pci0 dev 24 function 6: AMD product 1446 (rev. 0x00)
+pchb14 at pci0 dev 24 function 7: AMD product 1447 (rev. 0x00)
+isa0 at pcib0
+lpt0 at isa0 port 0x378-0x37b irq 7
+com0 at isa0 port 0x3f8-0x3ff irq 4: ns16550a, 1-byte FIFO
+pckbc0 at isa0 port 0x60-0x64
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow     0 mW
+acpicpu0: C2: I/O, lat 400 us, pow     0 mW
+acpicpu0: P0: FFH, lat   1 us, pow  3960 mW, 3600 MHz
+acpicpu0: P1: FFH, lat   1 us, pow  2800 mW, 2800 MHz
+acpicpu0: P2: FFH, lat   1 us, pow  1980 mW, 2200 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+acpicpu1 at cpu1: ACPI CPU
+acpicpu2 at cpu2: ACPI CPU
+acpicpu3 at cpu3: ACPI CPU
+acpicpu4 at cpu4: ACPI CPU
+acpicpu5 at cpu5: ACPI CPU
+acpicpu6 at cpu6: ACPI CPU
+acpicpu7 at cpu7: ACPI CPU
+acpicpu8 at cpu8: ACPI CPU
+acpicpu9 at cpu9: ACPI CPU
+acpicpu10 at cpu10: ACPI CPU
+acpicpu11 at cpu11: ACPI CPU
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 3600001000 Hz quality 3000
+uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 4 ports with 4 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 10 ports with 10 removable, self powered
+uhub2 at usb2: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub2: 4 ports with 4 removable, self powered
+uhub3 at usb3: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub3: 4 ports with 4 removable, self powered
+IPsec: Initialized Security Association Processing.
+aes: Intel AES-NI
+chacha: x86 SSE2 ChaCha
+adiantum: self-test passed
+aes_ccm: self-test passed
+blake2s: self-test passed
+ahcisata0 port 1: device present, speed: 6.0Gb/s
+ahcisata0 port 0: device present, speed: 6.0Gb/s
+wd0 at atabus0 drive 0
+wd0: <KINGSTON SHFS37A240G>
+wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+wd0: 223 GB, 465141 cyl, 16 head, 63 sec, 512 bytes/sect x 468862128 sectors
+wd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at wd0: "EFI system partition", 204800 blocks at 2048, type: msdos
+dk1 at wd0: "Microsoft reserved partition", 32768 blocks at 206848, type: ntfs
+dk2 at wd0: "Basic data partition", 417229942 blocks at 239616, type: ntfs
+dk3 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 1056768 blocks at 467802112, type: <unknown>
+dk4 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 50331648 blocks at 417470464, type: ffs
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags) w/PRIO
+wd0(ahcisata0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags) w/PRIO
+wd1 at atabus1 drive 0
+wd1: <WDC WD10EZEX-60WN4A0>
+wd1: drive supports 16-sector PIO transfers, LBA48 addressing
+wd1: 931 GB, 1938021 cyl, 16 head, 63 sec, 512 bytes/sect x 1953525168 sectors (4096 bytes/physsect)
+uhidev0 at uhub1 port 1 configuration 1 interface 0
+uhidev0: CHICONY (0x03f0) HP Basic USB Keyboard (0x0024), rev 2.00/1.30, addr 1, iclass 3/1
+ukbd0 at uhidev0
+wd1: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100), NCQ (32 tags)
+wd1(ahcisata0:1:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100) (using DMA), NCQ (31 tags)
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub1 port 2 configuration 1 interface 0
+uhidev1: PixArt (0x093a) USB Optical Mouse (0x2510), rev 2.00/1.00, addr 2, iclass 3/1
+ums0 at uhidev1: 3 buttons and Z dir
+wsmouse0 at ums0 mux 0
+umass0 at uhub1 port 10 configuration 1 interface 0
+umass0: Generic (0x058f) Mass Storage (0x6387), rev 2.00/1.01, addr 3
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, 1 lun per target
+sd0 at scsibus0 target 0 lun 0: <Generic, Flash Disk, 8.07> disk removable
+sd0: fabricating a geometry
+sd0: 3840 MB, 3840 cyl, 64 head, 32 sec, 512 bytes/sect x 7864320 sectors
+sd0: fabricating a geometry
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk5 at sd0: "EFI system", 262144 blocks at 2048, type: msdos
+dk6 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 2908160 blocks at 264192, type: ffs
+cgd: self-test aes-xts-256
+cgd: self-test aes-xts-512
+cgd: self-test aes-cbc-128
+cgd: self-test aes-cbc-256
+cgd: self-test 3des-cbc-192
+cgd: self-test blowfish-cbc-448
+cgd: self-test aes-cbc-128 (encblkno8)
+cgd: self-tests passed
+WARNING: 4 errors while detecting hardware; check system log.
+boot device: wd0
+root on dk4
+root file system type: ffs
+kern.module.path=/stand/amd64/9.99.85/modules

@@ -1,0 +1,413 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p12-HBSD #0  0857355c1c2(stable/20.7)-dirty: Mon Jan 18 18:12:55 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Atom(TM) CPU C3758 @ 2.20GHz (2200.07-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506f1  Family=0x6  Model=0x5f  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x4ff8ebbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,CX16,xTPR,PDCM,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2294e283<FSGSBASE,TSCADJ,SMEP,ERMS,NFPUSG,MPX,PQE,RDSEED,SMAP,CLFLUSHOPT,PROCTRACE,SHA>
+  Structured Extended Features3=0xac000000<IBPB,STIBP,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x9<RDCL_NO,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33311850496 (31768 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  TIANO   >
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 8 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 7 1 3 2 6 5 4
+Timecounter "TSC-low" frequency 1100035565 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 6.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <processor> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> mem 0xdf180000-0xdf19ffff irq 16 at device 9.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+uart2: <MosChip MCS9922 PCIe to Peripheral Controller> port 0xd010-0xd017 mem 0xdef03000-0xdef03fff,0xdef02000-0xdef02fff irq 16 at device 0.0 on pci2
+uart2: Using 1 MSI message
+uart3: <MosChip MCS9922 PCIe to Peripheral Controller> port 0xd000-0xd007 mem 0xdef01000-0xdef01fff,0xdef00000-0xdef00fff irq 17 at device 0.1 on pci2
+uart3: Using 1 MSI message
+pcib3: <ACPI PCI-PCI bridge> mem 0xdf160000-0xdf17ffff irq 20 at device 14.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> irq 20 at device 0.0 on pci3
+pci4: <PCI bus> on pcib4
+vgapci0: <VGA-compatible display> port 0xc000-0xc07f mem 0xdd000000-0xddffffff,0xde040000-0xde05ffff irq 20 at device 0.0 on pci4
+vgapci0: Boot video device
+pcib5: <ACPI PCI-PCI bridge> mem 0xdf140000-0xdf15ffff irq 21 at device 15.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+pcib6: <PCI-PCI bridge> irq 21 at device 0.0 on pci5
+pci6: <PCI bus> on pcib6
+pcib7: <PCI-PCI bridge> irq 20 at device 3.0 on pci6
+pci7: <PCI bus> on pcib7
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb000-0xb01f mem 0xdea00000-0xdeafffff,0xdeb00000-0xdeb03fff irq 20 at device 0.0 on pci7
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib8: <PCI-PCI bridge> irq 20 at device 7.0 on pci6
+pci8: <PCI bus> on pcib8
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xa000-0xa01f mem 0xdec00000-0xdec1ffff,0xdec20000-0xdec23fff irq 20 at device 0.0 on pci8
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib9: <ACPI PCI-PCI bridge> mem 0xdf120000-0xdf13ffff irq 22 at device 16.0 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pcib10: <PCI-PCI bridge> irq 22 at device 0.0 on pci9
+pci10: <PCI bus> on pcib10
+pcib11: <PCI-PCI bridge> irq 22 at device 0.0 on pci10
+pci11: <PCI bus> on pcib11
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x9000-0x901f mem 0xde800000-0xde81ffff,0xde820000-0xde823fff irq 22 at device 0.0 on pci11
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib12: <PCI-PCI bridge> irq 20 at device 2.0 on pci10
+pci12: <PCI bus> on pcib12
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x8000-0x801f mem 0xde700000-0xde71ffff,0xde720000-0xde723fff irq 20 at device 0.0 on pci12
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib13: <PCI-PCI bridge> irq 20 at device 6.0 on pci10
+pci13: <PCI bus> on pcib13
+igb4: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x7000-0x701f mem 0xde600000-0xde61ffff,0xde620000-0xde623fff irq 20 at device 0.0 on pci13
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib14: <PCI-PCI bridge> irq 20 at device 14.0 on pci10
+pci14: <PCI bus> on pcib14
+igb5: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x6000-0x601f mem 0xde500000-0xde51ffff,0xde520000-0xde523fff irq 20 at device 0.0 on pci14
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib15: <ACPI PCI-PCI bridge> mem 0xdf100000-0xdf11ffff irq 23 at device 17.0 on pci0
+pci15: <ACPI PCI bus> on pcib15
+pcib16: <PCI-PCI bridge> irq 23 at device 0.0 on pci15
+pci16: <PCI bus> on pcib16
+pcib17: <PCI-PCI bridge> irq 23 at device 0.0 on pci16
+pci17: <PCI bus> on pcib17
+igb6: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5000-0x501f mem 0xde400000-0xde41ffff,0xde420000-0xde423fff irq 23 at device 0.0 on pci17
+igb6: Using 1024 TX descriptors and 1024 RX descriptors
+igb6: Using 2 RX queues 2 TX queues
+igb6: Using MSI-X interrupts with 3 vectors
+igb6: Ethernet address: ...
+igb6: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib18: <PCI-PCI bridge> irq 21 at device 2.0 on pci16
+pci18: <PCI bus> on pcib18
+igb7: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x4000-0x401f mem 0xde300000-0xde31ffff,0xde320000-0xde323fff irq 21 at device 0.0 on pci18
+igb7: Using 1024 TX descriptors and 1024 RX descriptors
+igb7: Using 2 RX queues 2 TX queues
+igb7: Using MSI-X interrupts with 3 vectors
+igb7: Ethernet address: ...
+igb7: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib19: <PCI-PCI bridge> irq 21 at device 6.0 on pci16
+pci19: <PCI bus> on pcib19
+igb8: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x3000-0x301f mem 0xde200000-0xde21ffff,0xde220000-0xde223fff irq 21 at device 0.0 on pci19
+igb8: Using 1024 TX descriptors and 1024 RX descriptors
+igb8: Using 2 RX queues 2 TX queues
+igb8: Using MSI-X interrupts with 3 vectors
+igb8: Ethernet address: ...
+igb8: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib20: <PCI-PCI bridge> irq 21 at device 14.0 on pci16
+pci20: <PCI bus> on pcib20
+igb9: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x2000-0x201f mem 0xde100000-0xde11ffff,0xde120000-0xde123fff irq 21 at device 0.0 on pci20
+igb9: Using 1024 TX descriptors and 1024 RX descriptors
+igb9: Using 2 RX queues 2 TX queues
+igb9: Using MSI-X interrupts with 3 vectors
+igb9: Ethernet address: ...
+igb9: netmap queues/slots: TX 2/1024, RX 2/1024
+ahci0: <Intel Denverton AHCI SATA controller> port 0xe0a0-0xe0a7,0xe090-0xe093,0xe040-0xe05f mem 0xdf1b6000-0xdf1b7fff,0xdf1be000-0xdf1be0ff,0xdf1bd000-0xdf1bd7ff irq 20 at device 19.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier supported
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahcich7: <AHCI channel> at channel 7 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+ahci1: <Intel Denverton AHCI SATA controller> port 0xe080-0xe087,0xe070-0xe073,0xe020-0xe03f mem 0xdf1b4000-0xdf1b5fff,0xdf1bc000-0xdf1bc0ff,0xdf1bb000-0xdf1bb7ff irq 21 at device 20.0 on pci0
+ahci1: AHCI v1.31 with 2 6Gbps ports, Port Multiplier supported
+ahcich12: <AHCI channel> at channel 4 on ahci1
+ahcich13: <AHCI channel> at channel 5 on ahci1
+ahciem1: <AHCI enclosure management bridge> at channel 2147483647 on ahci1
+device_attach: ahciem1 attach returned 6
+xhci0: <Intel Denverton USB 3.0 controller> mem 0xdf1a0000-0xdf1affff irq 19 at device 21.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib21: <ACPI PCI-PCI bridge> irq 16 at device 22.0 on pci0
+pci21: <ACPI PCI bus> on pcib21
+ix0: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xdfc00000-0xdfdfffff,0xdfe04000-0xdfe07fff irq 16 at device 0.0 on pci21
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 8 RX queues 8 TX queues
+ix0: Using MSI-X interrupts with 9 vectors
+ix0: allocated for 8 queues
+ix0: allocated for 8 rx queues
+ix0: Ethernet address: ...
+ix0: netmap queues/slots: TX 8/2048, RX 8/2048
+ix1: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xdfa00000-0xdfbfffff,0xdfe00000-0xdfe03fff irq 17 at device 0.1 on pci21
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 8 RX queues 8 TX queues
+ix1: Using MSI-X interrupts with 9 vectors
+ix1: allocated for 8 queues
+ix1: allocated for 8 rx queues
+ix1: Ethernet address: ...
+ix1: netmap queues/slots: TX 8/2048, RX 8/2048
+pcib22: <ACPI PCI-PCI bridge> irq 16 at device 23.0 on pci0
+pci22: <ACPI PCI bus> on pcib22
+ix2: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xdf600000-0xdf7fffff,0xdf804000-0xdf807fff irq 16 at device 0.0 on pci22
+ix2: Using 2048 TX descriptors and 2048 RX descriptors
+ix2: Using 8 RX queues 8 TX queues
+ix2: Using MSI-X interrupts with 9 vectors
+ix2: allocated for 8 queues
+ix2: allocated for 8 rx queues
+ix2: Ethernet address: ...
+ix2: netmap queues/slots: TX 8/2048, RX 8/2048
+ix3: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xdf400000-0xdf5fffff,0xdf800000-0xdf803fff irq 17 at device 0.1 on pci22
+ix3: Using 2048 TX descriptors and 2048 RX descriptors
+ix3: Using 8 RX queues 8 TX queues
+ix3: Using MSI-X interrupts with 9 vectors
+ix3: allocated for 8 queues
+ix3: allocated for 8 rx queues
+ix3: Ethernet address: ...
+ix3: netmap queues/slots: TX 8/2048, RX 8/2048
+pci0: <simple comms> at device 24.0 (no driver attached)
+pci0: <simple comms, UART> at device 26.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_tz0: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 10 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich5 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 860 PRO 256GB RVM01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 244198MB (500118192 512 byte sectors)
+ada1 at ahcich12 bus 0 scbus2 target 0 lun 0
+ada1: <Samsung SSD 860 PRO 256GB RVM01B6Q> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 244198MB (500118192 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 8 ports with 8 removable, self powered
+ugen0.2: <GENESYS USB 2.0 HUB> at usbus0
+uhub1 on uhub0
+uhub1: <GENESYS USB 2.0 HUB, class 9/0, rev 2.00/32.98, addr 1> on usbus0
+uhub1: 3 ports with 2 removable, self powered
+ugen0.3: <vendor 0x0566 product 0x3013> at usbus0
+ukbd0 on uhub1
+ukbd0: <vendor 0x0566 product 0x3013, class 0/0, rev 1.10/3.06, addr 2> on usbus0
+kbd2 at ukbd0
+igb0: link state changed to UP
+igb1: link state changed to UP
+igb2: link state changed to UP
+uhid0 on uhub1
+uhid0: <vendor 0x0566 product 0x3013, class 0/0, rev 1.10/3.06, addr 2> on usbus0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+vlan0: changing name to 'ix1_vlan1'
+vlan1: changing name to 'ix1_vlan100'
+vlan2: changing name to 'ix1_vlan99'
+igb0: link state changed to DOWN
+igb0: link state changed to UP
+ix1: link state changed to UP
+ix1_vlan1: link state changed to UP
+ix1_vlan100: link state changed to UP
+ix1_vlan99: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb0: link state changed to DOWN
+igb0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ix1: link state changed to DOWN
+ix1_vlan1: link state changed to DOWN
+ix1_vlan100: link state changed to DOWN
+ix1_vlan99: link state changed to DOWN
+ix1: link state changed to UP
+ix1_vlan1: link state changed to UP
+ix1_vlan100: link state changed to UP
+ix1_vlan99: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ix1: promiscuous mode enabled
+ix1_vlan1: promiscuous mode enabled
+ix1: promiscuous mode disabled
+ix1_vlan1: promiscuous mode disabled
+ix1: promiscuous mode enabled
+ix1_vlan1: promiscuous mode enabled
+ix1: promiscuous mode disabled
+ix1_vlan1: promiscuous mode disabled
+ix1: promiscuous mode enabled
+ix1_vlan1: promiscuous mode enabled
+ix1: promiscuous mode disabled
+ix1_vlan1: promiscuous mode disabled
+ix1: promiscuous mode enabled
+ix1_vlan1: promiscuous mode enabled
+ix1: promiscuous mode disabled
+ix1_vlan1: promiscuous mode disabled
+ix1: promiscuous mode enabled
+ix1_vlan1: promiscuous mode enabled
+ix1: promiscuous mode disabled
+ix1_vlan1: promiscuous mode disabled
+ix1: promiscuous mode enabled
+ix1_vlan1: promiscuous mode enabled
+igb0: promiscuous mode enabled
+ix1_vlan99: promiscuous mode enabled
+ix1_vlan100: promiscuous mode enabled
+lo0: promiscuous mode enabled
+ix1_vlan1: promiscuous mode disabled
+igb0: promiscuous mode disabled
+ix1_vlan99: promiscuous mode disabled
+ix1: promiscuous mode disabled
+ix1_vlan100: promiscuous mode disabled
+lo0: promiscuous mode disabled
+ix1: promiscuous mode enabled
+ix1_vlan1: promiscuous mode enabled
+igb0: promiscuous mode enabled
+ix1_vlan99: promiscuous mode enabled
+ix1_vlan100: promiscuous mode enabled
+lo0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ix1_vlan1: promiscuous mode disabled
+igb0: promiscuous mode disabled
+ix1_vlan99: promiscuous mode disabled
+ix1: promiscuous mode disabled
+ix1_vlan100: promiscuous mode disabled
+lo0: promiscuous mode disabled
+ix1: promiscuous mode enabled
+ix1_vlan1: promiscuous mode enabled
+igb0: promiscuous mode enabled
+ix1_vlan99: promiscuous mode enabled
+ix1_vlan100: promiscuous mode enabled
+lo0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+ix1: link state changed to DOWN
+ix1_vlan1: link state changed to DOWN
+ix1_vlan100: link state changed to DOWN
+ix1_vlan99: link state changed to DOWN
+ix1: link state changed to UP
+ix1_vlan1: link state changed to UP
+ix1_vlan100: link state changed to UP
+ix1_vlan99: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ng0: changing name to 'pppoe0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+igb0: link state changed to DOWN
+igb0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

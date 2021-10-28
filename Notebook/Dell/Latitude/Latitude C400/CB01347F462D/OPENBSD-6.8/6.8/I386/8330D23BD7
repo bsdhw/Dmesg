@@ -1,0 +1,92 @@
+OpenBSD 6.8 (GENERIC) #427: Sun Oct  4 18:20:41 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 266731520 (254MB)
+avail mem = 245567488 (234MB)
+User Kernel Config
+UKC> disable inteldrm
+254 inteldrm* disabled
+UKC> quit
+Continuing...
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 03/01/04, BIOS32 rev. 0 @ 0xffe90, SMBIOS rev. 2.3 @ 0xf7760 (58 entries)
+bios0: vendor Dell Computer Corporation version "A12" date 03/01/2004
+bios0: Dell Computer Corporation Latitude C400
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S3 S4 S5
+acpi0: tables DSDT FACP BOOT
+acpi0: wakeup devices LID_(S3) PBTN(S4) PCI0(S3) UAR1(S3) USB0(S1) USB1(S1) USB2(S1) MODM(S3) PCIE(S3) MPCI(S3)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (PCIE)
+acpiprt2 at acpi0: bus -1 (MPCI)
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "CGA-E/401" serial ... type LION oem "Panasonic"
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PBTN
+acpibtn2 at acpi0: SBTN
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"SMCF010" at acpi0 not configured
+acpipwrres0 at acpi0: PADA, resource for ADPT
+acpitz0 at acpi0: critical temperature is 100 degC
+acpidock0 at acpi0: GDCK not docked (0)
+acpivideo0 at acpi0: VID_
+acpivideo1 at acpi0: VID2
+bios0: ROM list: 0xc0000/0xc800! 0xcc800/0x800! 0xcd000/0x800 0xcd800/0x800 0xce000/0x800 0xce800/0x800 0xcf000/0x800 0xcf800/0x800
+cpu0 at mainbus0: (uniprocessor)
+cpu0: Mobile Intel(R) Pentium(R) III CPU - M 1200MHz ("GenuineIntel" 686-class) 1.20 GHz, 06-0b-04
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,SEP,MTRR,PGE,MCA,CMOV,PSE36,MMX,FXSR,SSE,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82830M Host" rev 0x04
+vga1 at pci0 dev 2 function 0 "Intel 82830M Video" rev 0x04
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+"Intel 82830M Video" rev 0x00 at pci0 dev 2 function 1 not configured
+uhci0 at pci0 dev 29 function 0 "Intel 82801CA/CAM USB" rev 0x02: irq 11
+ppb0 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0x42
+pci1 at ppb0 bus 2
+xl0 at pci1 dev 0 function 0 "3Com 3c905C" rev 0x78: irq 11, address XXX
+exphy0 at xl0 phy 24: 3Com internal media interface
+cbb0 at pci1 dev 1 function 0 "TI PCI1410 CardBus" rev 0x02: irq 11
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 5 device 0 cacheline 0x8, lattimer 0x20
+pcmcia0 at cardslot0
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801CAM LPC" rev 0x02
+pciide0 at pci0 dev 31 function 1 "Intel 82801CAM IDE" rev 0x02: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide0 channel 0 drive 0: <TOSHIBA MK1517GAP>
+wd0: 16-sector PIO, LBA, 14403MB, 29498112 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 4
+pciide0: channel 1 disabled (no drives)
+auich0 at pci0 dev 31 function 5 "Intel 82801CA/CAM AC97" rev 0x02: irq 11, ICH3
+ac97: codec id 0x4352595b (Cirrus Logic CS4205 rev 3)
+ac97: codec features mic channel, tone, simulated stereo, bass boost, 20 bit DAC, 18 bit ADC, SRS 3D
+audio0 at auich0
+"Intel 82801CA/CAM Modem" rev 0x02 at pci0 dev 31 function 6 not configured
+usb0 at uhci0: USB revision 1.0
+uhub0 at usb0 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 5.7, 0x9b46b1 0x0 0x0 0x804793 0x0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+malo0 at cardbus0 dev 0 function 0 "Marvell Libertas 88W8335" rev 0x03: irq 11, address XXX
+root on wd0a (975adaee81933a32.a) swap on wd0b dump on wd0b

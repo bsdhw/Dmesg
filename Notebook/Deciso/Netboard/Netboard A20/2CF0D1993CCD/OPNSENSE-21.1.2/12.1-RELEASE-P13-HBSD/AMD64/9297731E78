@@ -1,0 +1,744 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p13-HBSD #0  5a415173060(stable/21.1)-dirty: Fri Feb  5 16:41:22 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: AMD EPYC 3201 8-Core Processor                  (1497.22-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x800f12  Family=0x17  Model=0x1  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16461991936 (15699 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INSYDE WALLABY>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 4 core(s)
+random: unblocking device.
+ioapic0: Changing APIC ID to 128
+ioapic1: Changing APIC ID to 129
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+Launching APs: 6 4 5 7 2 1 3
+Timecounter "TSC" frequency 1497223740 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <INSYDE WALLABY> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.3 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5000-0x501f mem 0x80800000-0x8081ffff,0x80820000-0x80823fff at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib2: <ACPI PCI-PCI bridge> at device 1.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x4000-0x401f mem 0x80700000-0x8071ffff,0x80720000-0x80723fff at device 0.0 on pci2
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib3: <ACPI PCI-PCI bridge> at device 1.5 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x3000-0x301f mem 0x80600000-0x8061ffff,0x80620000-0x80623fff at device 0.0 on pci3
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib4: <ACPI PCI-PCI bridge> at device 1.6 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x2000-0x201f mem 0x80500000-0x8051ffff,0x80520000-0x80523fff at device 0.0 on pci4
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib5: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci5: <ACPI PCI bus> on pcib5
+pci5: <unknown> at device 0.0 (no driver attached)
+pci5: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x80200000-0x802fffff at device 0.3 on pci5
+xhci0: 64 bytes context size, 64-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus0: waiting for BIOS to give up control
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib6: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci6: <ACPI PCI bus> on pcib6
+pci6: <unknown> at device 0.0 (no driver attached)
+pci6: <encrypt/decrypt> at device 0.1 (no driver attached)
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0x8018e000-0x8018efff at device 0.2 on pci6
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+hdac0: <AMD (0x1457) HDA Controller> mem 0x80180000-0x80187fff at device 0.3 on pci6
+ax0: <AMD 10 Gigabit Ethernet Driver> mem 0x80160000-0x8017ffff,0x80140000-0x8015ffff,0x80188000-0x80189fff at device 0.4 on pci6
+ax0: Using 2048 TX descriptors and 2048 RX descriptors
+ax0: Using 8 RX queues 8 TX queues
+ax0: Using MSI-X interrupts with 12 vectors
+ax0: Ethernet address: ...
+ax0: xgbe_config_sph_mode: SPH disabled in channel 0
+ax0: xgbe_config_sph_mode: SPH disabled in channel 1
+ax0: xgbe_config_sph_mode: SPH disabled in channel 2
+ax0: xgbe_config_sph_mode: SPH disabled in channel 3
+ax0: xgbe_config_sph_mode: SPH disabled in channel 4
+ax0: xgbe_config_sph_mode: SPH disabled in channel 5
+ax0: xgbe_config_sph_mode: SPH disabled in channel 6
+ax0: xgbe_config_sph_mode: SPH disabled in channel 7
+ax0: RSS Enabled
+ax0: Receive checksum offload Enabled
+ax0: VLAN filtering Enabled
+ax0: VLAN Stripping Enabled
+ax0: xgbe_phy_sfp_signals: port_sfp_inputs: 0x7
+ax0: xgbe_phy_sfp_detect: mod absent
+ax0: netmap queues/slots: TX 8/2048, RX 8/2048
+ax1: <AMD 10 Gigabit Ethernet Driver> mem 0x80120000-0x8013ffff,0x80100000-0x8011ffff,0x8018a000-0x8018bfff at device 0.5 on pci6
+ax1: Using 2048 TX descriptors and 2048 RX descriptors
+ax1: Using 8 RX queues 8 TX queues
+ax1: Using MSI-X interrupts with 12 vectors
+ax1: Ethernet address: ...
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+ax1: netmap queues/slots: TX 8/2048, RX 8/2048
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+uart0: <8250 or 16450 or compatible> port 0x3f8-0x3ff irq 3 flags 0x10 on acpi0
+uart0: console (4430,n,8,1)
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TS256GMTS952T2 02J0T4GB> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 1024bytes)
+ada0: Command Queueing enabled
+ada0: 244198MB (500118192 512 byte sectors)
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ax1: Link is UP - 10Gbps/Full - flow control rx/tx
+ax1: link state changed to UP
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 8 ports with 8 removable, self powered
+igb0: link state changed to UP
+igb1: link state changed to UP
+igb3: link state changed to UP
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+ax1: Link is DOWN
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+ax1: link state changed to DOWN
+vlan0: changing name to 'ax1_vlan1060'
+ax1: Registering VLAN 1060
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan1: changing name to 'ax1_vlan101'
+ax1: Registering VLAN 101
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan2: changing name to 'ax1_vlan4094'
+ax1: Registering VLAN 4094
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan3: changing name to 'ax1_vlan121'
+ax1: Registering VLAN 121
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan4: changing name to 'ax1_vlan2001'
+ax1: Registering VLAN 2001
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan5: changing name to 'ax1_vlan1030'
+ax1: Registering VLAN 1030
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan6: changing name to 'ax1_vlan1010'
+ax1: Registering VLAN 1010
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan7: changing name to 'ax1_vlan1020'
+ax1: Registering VLAN 1020
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan8: changing name to 'ax1_vlan1040'
+ax1: Registering VLAN 1040
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan9: changing name to 'ax1_vlan1050'
+ax1: Registering VLAN 1050
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan10: changing name to 'ax1_vlan1070'
+ax1: Registering VLAN 1070
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan11: changing name to 'ax1_vlan1080'
+ax1: Registering VLAN 1080
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan12: changing name to 'ax1_vlan131'
+ax1: Registering VLAN 131
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan13: changing name to 'ax1_vlan141'
+ax1: Registering VLAN 141
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan14: changing name to 'ax1_vlan151'
+ax1: Registering VLAN 151
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan15: changing name to 'ax1_vlan2002'
+ax1: Registering VLAN 2002
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan16: changing name to 'ax1_vlan2003'
+ax1: Registering VLAN 2003
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan17: changing name to 'ax1_vlan2004'
+ax1: Registering VLAN 2004
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan18: changing name to 'ax1_vlan2005'
+ax1: Registering VLAN 2005
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+vlan19: changing name to 'ax1_vlan2101'
+ax1: Registering VLAN 2101
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+igb1: link state changed to DOWN
+vlan20: changing name to 'igb1_vlan3111'
+igb3: link state changed to DOWN
+vlan21: changing name to 'igb3_vlan201'
+vlan22: changing name to 'igb3_vlan211'
+vlan23: changing name to 'igb3_vlan220'
+vlan24: changing name to 'igb3_vlan221'
+vlan25: changing name to 'igb3_vlan222'
+ax1: Link is UP - 10Gbps/Full - flow control rx/tx
+ax1: link state changed to UP
+ax1_vlan1020: link state changed to UP
+ax1_vlan1030: link state changed to UP
+ax1_vlan1060: link state changed to UP
+ax1_vlan101: link state changed to UP
+ax1_vlan141: link state changed to UP
+ax1_vlan1040: link state changed to UP
+ax1_vlan2002: link state changed to UP
+ax1_vlan1070: link state changed to UP
+ax1_vlan2003: link state changed to UP
+ax1_vlan131: link state changed to UP
+ax1_vlan2001: link state changed to UP
+ax1_vlan2101: link state changed to UP
+ax1_vlan2004: link state changed to UP
+ax1_vlan151: link state changed to UP
+ax1_vlan1010: link state changed to UP
+ax1_vlan121: link state changed to UP
+ax1_vlan4094: link state changed to UP
+ax1_vlan2005: link state changed to UP
+ax1_vlan1080: link state changed to UP
+ax1_vlan1050: link state changed to UP
+vlan26: changing name to 'igb3_vlan223'
+vlan27: changing name to 'igb3_vlan224'
+vlan28: changing name to 'igb3_vlan225'
+vlan29: changing name to 'igb3_vlan226'
+vlan30: changing name to 'igb3_vlan227'
+vlan31: changing name to 'igb3_vlan228'
+ax1: Link is DOWN
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Enabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+ax1: link state changed to DOWN
+ax1_vlan1020: link state changed to DOWN
+ax1_vlan1030: link state changed to DOWN
+ax1_vlan1060: link state changed to DOWN
+ax1_vlan101: link state changed to DOWN
+ax1_vlan141: link state changed to DOWN
+ax1_vlan1040: link state changed to DOWN
+ax1_vlan2002: link state changed to DOWN
+ax1_vlan1070: link state changed to DOWN
+ax1_vlan2003: link state changed to DOWN
+ax1_vlan131: link state changed to DOWN
+ax1_vlan2001: link state changed to DOWN
+ax1_vlan2101: link state changed to DOWN
+ax1_vlan2004: link state changed to DOWN
+ax1_vlan151: link state changed to DOWN
+ax1_vlan1010: link state changed to DOWN
+ax1_vlan121: link state changed to DOWN
+ax1_vlan4094: link state changed to DOWN
+ax1_vlan2005: link state changed to DOWN
+ax1_vlan1080: link state changed to DOWN
+ax1_vlan1050: link state changed to DOWN
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Disabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Disabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+ax1: xgbe_config_sph_mode: SPH disabled in channel 0
+ax1: xgbe_config_sph_mode: SPH disabled in channel 1
+ax1: xgbe_config_sph_mode: SPH disabled in channel 2
+ax1: xgbe_config_sph_mode: SPH disabled in channel 3
+ax1: xgbe_config_sph_mode: SPH disabled in channel 4
+ax1: xgbe_config_sph_mode: SPH disabled in channel 5
+ax1: xgbe_config_sph_mode: SPH disabled in channel 6
+ax1: xgbe_config_sph_mode: SPH disabled in channel 7
+ax1: RSS Enabled
+ax1: Receive checksum offload Disabled
+ax1: VLAN filtering Enabled
+ax1: VLAN Stripping Enabled
+ax1: Link is UP - 10Gbps/Full - flow control rx/tx
+ax1: link state changed to UP
+ax1_vlan1020: link state changed to UP
+ax1_vlan1030: link state changed to UP
+ax1_vlan1060: link state changed to UP
+ax1_vlan101: link state changed to UP
+ax1_vlan141: link state changed to UP
+ax1_vlan1040: link state changed to UP
+ax1_vlan2002: link state changed to UP
+ax1_vlan1070: link state changed to UP
+ax1_vlan2003: link state changed to UP
+ax1_vlan131: link state changed to UP
+ax1_vlan2001: link state changed to UP
+ax1_vlan2101: link state changed to UP
+ax1_vlan2004: link state changed to UP
+ax1_vlan151: link state changed to UP
+ax1_vlan1010: link state changed to UP
+ax1_vlan121: link state changed to UP
+ax1_vlan4094: link state changed to UP
+ax1_vlan2005: link state changed to UP
+ax1_vlan1080: link state changed to UP
+ax1_vlan1050: link state changed to UP
+igb1: link state changed to UP
+igb1_vlan3111: link state changed to UP
+igb1: link state changed to DOWN
+igb1_vlan3111: link state changed to DOWN
+igb0: link state changed to DOWN
+igb3: link state changed to UP
+igb3_vlan221: link state changed to UP
+igb3_vlan220: link state changed to UP
+igb3_vlan223: link state changed to UP
+igb3_vlan222: link state changed to UP
+igb3_vlan201: link state changed to UP
+igb3_vlan228: link state changed to UP
+igb3_vlan226: link state changed to UP
+igb3_vlan227: link state changed to UP
+igb3_vlan224: link state changed to UP
+igb3_vlan211: link state changed to UP
+igb3_vlan225: link state changed to UP
+igb1: link state changed to UP
+igb1_vlan3111: link state changed to UP
+igb0: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+394.988863 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1070 created (prev was NULL)
+395.343211 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1070 destroyed
+395.686505 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan131 created (prev was NULL)
+396.039787 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan131 destroyed
+ax1_vlan1070: permanently promiscuous mode enabled
+396.504066 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2005 created (prev was NULL)
+ax1: promiscuous mode enabled
+396.985342 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan2005 destroyed
+397.324453 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1010 created (prev was NULL)
+397.556698 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1010 destroyed
+397.893621 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1050 created (prev was NULL)
+398.252564 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1050 destroyed
+398.717946 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1070 created (prev was NULL)
+399.197837 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan1070 activated
+399.397567 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan121 created (prev was NULL)
+399.875299 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan121 destroyed
+400.339436 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2101 created (prev was NULL)
+400.695499 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan2101 destroyed
+401.032131 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1060 created (prev was NULL)
+401.387884 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1060 destroyed
+401.724669 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1080 created (prev was NULL)
+402.200614 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1080 destroyed
+402.661149 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2003 created (prev was NULL)
+403.144248 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan2003 destroyed
+403.483576 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2001 created (prev was NULL)
+403.968203 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan2001 destroyed
+404.435961 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1020 created (prev was NULL)
+404.914217 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1020 destroyed
+405.378399 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2002 created (prev was NULL)
+405.858268 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan2002 destroyed
+406.322454 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan151 created (prev was NULL)
+ax1_vlan2005: permanently promiscuous mode enabled
+406.556185 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan151 destroyed
+406.890298 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1030 created (prev was NULL)
+ax1_vlan2101: permanently promiscuous mode enabled
+407.242762 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1030 destroyed
+407.579497 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2101 created (prev was NULL)
+ax1_vlan1010: permanently promiscuous mode enabled
+408.062589 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan2101 activated
+408.389089 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1010 created (prev was NULL)
+ax1_vlan121: permanently promiscuous mode enabled
+408.747504 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan1010 activated
+409.082577 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2005 created (prev was NULL)
+ax1_vlan1060: permanently promiscuous mode enabled
+409.436602 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan2005 activated
+409.757947 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan121 created (prev was NULL)
+410.236121 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan121 activated
+410.248470 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1060 created (prev was NULL)
+410.258462 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan1060 activated
+ax1_vlan151: permanently promiscuous mode enabled
+ax1_vlan1050: permanently promiscuous mode enabled
+ax1_vlan131: permanently promiscuous mode enabled
+410.266999 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan151 created (prev was NULL)
+410.403641 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan151 activated
+410.412093 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1040 created (prev was NULL)
+410.422041 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1040 destroyed
+410.431313 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1050 created (prev was NULL)
+410.568360 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan1050 activated
+410.576925 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan131 created (prev was NULL)
+410.586881 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan131 activated
+410.595264 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2004 created (prev was NULL)
+410.605251 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan2004 destroyed
+ax1_vlan1040: permanently promiscuous mode enabled
+410.741312 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan101 created (prev was NULL)
+410.751111 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan101 destroyed
+410.760315 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1040 created (prev was NULL)
+ax1_vlan2004: permanently promiscuous mode enabled
+410.770454 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan1040 activated
+410.905631 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2004 created (prev was NULL)
+411.042371 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan2004 activated
+ax1_vlan2002: permanently promiscuous mode enabled
+411.051008 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2002 created (prev was NULL)
+ax1_vlan1080: permanently promiscuous mode enabled
+411.061010 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan2002 activated
+411.069516 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1080 created (prev was NULL)
+ax1_vlan101: permanently promiscuous mode enabled
+411.206246 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan1080 activated
+411.214739 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan101 created (prev was NULL)
+411.224742 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan101 activated
+411.236295 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan141 created (prev was NULL)
+411.372742 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan141 destroyed
+ax1_vlan2001: permanently promiscuous mode enabled
+410.666634 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2001 created (prev was NULL)
+410.676683 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan2001 activated
+ax1_vlan141: permanently promiscuous mode enabled
+410.685252 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan141 created (prev was NULL)
+pid 31455 (eastpect), jid 0, uid 0: exited on signal 11
+410.821897 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan141 activated
+ax1_vlan1020: permanently promiscuous mode enabled
+410.830365 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1020 created (prev was NULL)
+410.840511 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan1020 activated
+ax1_vlan1030: permanently promiscuous mode enabled
+410.849073 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1030 created (prev was NULL)
+410.985920 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan1030 activated
+410.994547 [ 295] generic_netmap_unregister Emulated adapter for ax1_vlan1070 deactivated
+ax1_vlan2003: permanently promiscuous mode enabled
+411.003293 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1070 destroyed
+411.012521 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan2003 created (prev was NULL)
+411.022658 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan2003 activated
+411.164868 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan4094 created (prev was NULL)
+411.174709 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan4094 destroyed
+ax1_vlan4094: permanently promiscuous mode enabled
+411.186230 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan4094 created (prev was NULL)
+411.323076 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan4094 activated
+424.794490 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1070 created (prev was NULL)
+424.804312 [1035] generic_netmap_dtor       Emulated netmap adapter for ax1_vlan1070 destroyed
+424.815875 [1130] generic_netmap_attach     Emulated adapter for ax1_vlan1070 created (prev was NULL)
+424.825808 [ 320] generic_netmap_register   Emulated adapter for ax1_vlan1070 activated
+[HBSD SEGVGUARD] [/usr/local/sensei//bin//eastpect (29667)] Suspension expired.
+ -> pid: 29667 ppid: 5626 p_pax: 0xa50<SEGVGUARD,ASLR,NOSHLIBRANDOM,NODISALLOWMAP32BIT> 
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

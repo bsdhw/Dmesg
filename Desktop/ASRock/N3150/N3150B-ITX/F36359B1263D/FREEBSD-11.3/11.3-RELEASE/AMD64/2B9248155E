@@ -1,0 +1,176 @@
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 11.3-RELEASE #0 r349754: Fri Jul  5 04:45:24 UTC 2019
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.0 (tags/RELEASE_800/final 356365) (based on LLVM 8.0.0)
+VT: init without driver.
+CPU: Intel(R) Celeron(R) CPU  N3150  @ 1.60GHz (1599.99-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x406c3  Family=0x6  Model=0x4c  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x43d8e3bf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,AESNI,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2282<TSCADJ,SMEP,ERMS,NFPUSG>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3915563008 (3734 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+WARNING: L1 data cache covers less APIC IDs than a core
+0 < 1
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 128/32 (20171214/tbfadt-748)
+ioapic0 <Version 2.0> irqs 0-114 on motherboard
+SMP: AP CPU #2 Launched!
+SMP: AP CPU #1 Launched!
+SMP: AP CPU #3 Launched!
+Timecounter "TSC" frequency 1599994860 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000029 [4213] netmap_init               netmap: loaded module
+module_register_init: MOD_LOAD (vesa, 0xffffffff81005eb0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+nexus0
+cryptosoft0: <software crypto> on motherboard
+acpi0: <> on motherboard
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+cpu1: <ACPI CPU> on acpi0
+cpu2: <ACPI CPU> on acpi0
+cpu3: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0x90000000-0x90ffffff,0x80000000-0x8fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Braswell USB 3.0 controller> mem 0x91300000-0x9130ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <encrypt/decrypt> at device 26.0 (no driver attached)
+hdac0: <Intel (0x2284) HDA Controller> mem 0x91310000-0x91313fff at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pcib1: [GIANT-LOCKED]
+pcib2: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+pci1: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xe000-0xe0ff mem 0x91204000-0x91204fff,0x91200000-0x91203fff at device 0.0 on pci1
+re0: Using 1 MSI-X message
+re0: Chip rev. 0x4c000000
+re0: MAC rev. 0x00000000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+ppc0: cannot reserve I/O port range
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est1: <Enhanced SpeedStep Frequency Control> on cpu1
+est2: <Enhanced SpeedStep Frequency Control> on cpu2
+est3: <Enhanced SpeedStep Frequency Control> on cpu3
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <Realtek ALC887 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC887 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC887 (Analog)> at nid 21 and 24,26 on hdaa0
+pcm1: <Realtek ALC887 (Analog)> at nid 20 and 25 on hdaa0
+pcm2: <Realtek ALC887 (Front Analog Headphones)> at nid 27 on hdaa0
+hdacc1: <Intel (0x2883) HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel (0x2883) Audio Function Group> at nid 1 on hdacc1
+pcm3: <Intel (0x2883) (HDMI/DP 8ch)> at nid 5 on hdaa1
+pcm4: <Intel (0x2883) (HDMI/DP 8ch)> at nid 6 on hdaa1
+pcm5: <Intel (0x2883) (HDMI/DP 8ch)> at nid 7 on hdaa1
+Trying to mount root from zfs:zroot/ROOT/11.3-RELEASE []...
+Root mount waiting for: usbus0
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub0: 13 ports with 13 removable, self powered
+Root mount waiting for: usbus0
+usb_alloc_device: set address 2 failed (USB_ERR_IOERROR, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 2 failed, USB_ERR_IOERROR
+usbd_req_re_enumerate: addr=2, set address failed! (USB_ERR_IOERROR, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 2 failed, USB_ERR_IOERROR
+Root mount waiting for: usbus0
+usbd_req_re_enumerate: addr=2, set address failed! (USB_ERR_IOERROR, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 2 failed, USB_ERR_IOERROR
+Root mount waiting for: usbus0
+usbd_req_re_enumerate: addr=2, set address failed! (USB_ERR_IOERROR, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 2 failed, USB_ERR_IOERROR
+Root mount waiting for: usbus0
+usbd_req_re_enumerate: addr=2, set address failed! (USB_ERR_IOERROR, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 2 failed, USB_ERR_IOERROR
+ugen0.2: <Unknown > at usbus0 (disconnected)
+uhub_reattach_port: could not allocate new device
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub1: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/88.31, addr 2> on usbus0
+Root mount waiting for: usbus0
+uhub1: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+ugen0.3: <SanDisk Cruzer Fit> at usbus0
+umass0 on uhub1
+umass0: <SanDisk Cruzer Fit, class 0/0, rev 2.00/1.00, addr 3> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc100
+umass0:0:0: Attached to scbus0
+da0 at umass-sim0 bus 0 scbus0 target 0 lun 0
+da0: <SanDisk Cruzer Fit 1.00> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 15060MB (30842880 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM: da0: the secondary GPT header is not in the last LBA.
+Root mount waiting for: usbus0
+ugen0.4: <Seagate M3 Portable> at usbus0
+umass1 on uhub0
+umass1: <Seagate M3 Portable, class 0/0, rev 3.00/0.00, addr 4> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0x0100
+umass1:1:1: Attached to scbus1
+da1 at umass-sim1 bus 1 scbus1 target 0 lun 0
+da1: <Seagate M3 Portable 9300> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 400.000MB/s transfers
+da1: 3815447MB (7814037167 512 byte sectors)
+da1: quirks=0x2<NO_6_BYTE>
+random: unblocking device.
+aesni0: <AES-CBC,AES-XTS,AES-GCM,AES-ICM> on motherboard
+fuse-freebsd: version 0.4.4, FUSE ABI 7.8
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+coretemp1: <CPU On-Die Thermal Sensors> on cpu1
+coretemp2: <CPU On-Die Thermal Sensors> on cpu2
+coretemp3: <CPU On-Die Thermal Sensors> on cpu3
+ichsmb0: <Intel Braswell SMBus controller> port 0xf040-0xf05f mem 0x91314000-0x9131401f at device 31.3 on pci0
+smbus0: <System Management Bus> on ichsmb0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+GEOM_ELI: Device da1p2.eli created.
+GEOM_ELI: Encryption: AES-CBC 128
+GEOM_ELI:     Crypto: hardware

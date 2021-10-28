@@ -1,0 +1,73 @@
+OpenBSD 6.7 (GENERIC.MP) #1: Sat May 16 15:59:24 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/arm64/compile/GENERIC.MP
+real mem  = 3067633664 (2925MB)
+avail mem = 2943336448 (2806MB)
+mainbus0 at root: ACPI
+cpu0 at mainbus0 mpidr 0: ARM Cortex-A72 r0p3
+cpu0: 48KB 64b/line 3-way L1 PIPT I-cache, 32KB 64b/line 2-way L1 D-cache
+cpu0: 1024KB 64b/line 16-way L2 cache
+efi0 at mainbus0: UEFI 2.7
+efi0: https://github.com/pftf/RPi4 rev 0x10000
+smbios0 at efi0: SMBIOS 3.3.0
+smbios0: vendor https://github.com/pftf/RPi4 version "UEFI Firmware v1.13" date May 13 2020 10:40:33
+smbios0: Sony UK Raspberry Pi 4 Model B
+apm0 at mainbus0
+psci0 at mainbus0: PSCI 1.1, SMCCC 1.2
+ampintc0 at mainbus0 nirq 256, ncpu 4 ipi: 0, 1: "interrupt-controller"
+agtimer0 at mainbus0: tick rate 54000 KHz
+acpi0 at mainbus0: ACPI 6.3
+acpi0: sleep states
+acpi0: tables DSDT FACP CSRT DBG2 GTDT APIC PPTT SPCR
+acpi0: wakeup devices
+"BCM2849" at acpi0 not configured
+"BCM2835" at acpi0 not configured
+"BCM2854" at acpi0 not configured
+"ACPI0004" at acpi0 not configured
+xhci0 at acpi0 XHC0 addr 0x600000000/0x1000 irq 175, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Generic xHCI root hub" rev 3.00/1.00 addr 1
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0004" at acpi0 not configured
+"BCM2848" at acpi0 not configured
+"BCM2850" at acpi0 not configured
+"BCM2856" at acpi0 not configured
+"BCM2845" at acpi0 not configured
+"BCM2841" at acpi0 not configured
+"BCM2841" at acpi0 not configured
+"BCM2838" at acpi0 not configured
+"BCM2839" at acpi0 not configured
+"BCM2844" at acpi0 not configured
+pluart0 at acpi0 URT0 addr 0xfe201000/0x1000 irq 153: console
+"BCM2836" at acpi0 not configured
+"BCM2EA6" at acpi0 not configured
+"MSFT8000" at acpi0 not configured
+"BCM2847" at acpi0 not configured
+"BCM2855" at acpi0 not configured
+bse0 at acpi0 ETH0 addr 0xfd580000/0x10000 irq 189: address XXX
+brgphy0 at bse0 phy 1: BCM54210E 10/100/1000baseT PHY, rev. 2
+cpu1 at mainbus0 mpidr 1: ARM Cortex-A72 r0p3
+cpu1: 48KB 64b/line 3-way L1 PIPT I-cache, 32KB 64b/line 2-way L1 D-cache
+cpu1: 1024KB 64b/line 16-way L2 cache
+cpu2 at mainbus0 mpidr 2: ARM Cortex-A72 r0p3
+cpu2: 48KB 64b/line 3-way L1 PIPT I-cache, 32KB 64b/line 2-way L1 D-cache
+cpu2: 1024KB 64b/line 16-way L2 cache
+cpu3 at mainbus0 mpidr 3: ARM Cortex-A72 r0p3
+cpu3: 48KB 64b/line 3-way L1 PIPT I-cache, 32KB 64b/line 2-way L1 D-cache
+cpu3: 1024KB 64b/line 16-way L2 cache
+uhub1 at uhub0 port 1 configuration 1 interface 0 "VIA Labs USB2.0 Hub" rev 2.10/4.21 addr 2
+umass0 at uhub0 port 3 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 3.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, initiator 0
+sd0 at scsibus0 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd0: 61188MB, 512 bytes/sector, 125313283 sectors
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+bootfile: sd0a:/bsd
+boot device: sd0
+root on sd0a (6cb714d423116f53.a) swap on sd0b dump on sd0b
+WARNING: / was not properly unmounted

@@ -1,0 +1,320 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0 releng/13.0-n244733-ea31abc261f: Fri Apr  9 03:54:53 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX arm64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 1824x984
+module firmware already present!
+real memory  = 4146868224 (3954 MB)
+avail memory = 4022030336 (3835 MB)
+Starting CPU 1 (1)
+Starting CPU 2 (2)
+Starting CPU 3 (3)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+random: unblocking device.
+random: entropy device external interface
+MAP 39e38000 mode 2 pages 1
+MAP 39e3c000 mode 2 pages 3
+MAP 39e40000 mode 2 pages 4
+MAP 3b250000 mode 2 pages 16
+MAP fe100000 mode 0 pages 1
+WARNING: Device "openfirm" is Giant locked and may be deleted before FreeBSD 14.0.
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd0 at kbdmux0
+ofwbus0: <Open Firmware Device Tree>
+simplebus0: <Flattened device tree simple bus> on ofwbus0
+ofw_clkbus0: <OFW clocks bus> on ofwbus0
+clk_fixed0: <Fixed clock> on ofw_clkbus0
+clk_fixed1: <Fixed clock> on ofw_clkbus0
+clk_fixed2: <Fixed clock> on ofwbus0
+clk_fixed3: <Fixed clock> on ofwbus0
+simplebus1: <Flattened device tree simple bus> on ofwbus0
+simplebus2: <Flattened device tree simple bus> on ofwbus0
+regfix0: <Fixed Regulator> on ofwbus0
+regfix1: <Fixed Regulator> on ofwbus0
+regfix2: <Fixed Regulator> on ofwbus0
+simplebus3: <Flattened device tree simple bus> on ofwbus0
+simple_mfd0: <Simple MFD (Multi-Functions Device)> mem 0x7d5d2000-0x7d5d2eff on simplebus0
+bcm2835_firmware0: <BCM2835 Firmware> on simplebus0
+ofw_clkbus1: <OFW clocks bus> on bcm2835_firmware0
+psci0: <ARM Power State Co-ordination Interface Driver> on ofwbus0
+gic0: <ARM Generic Interrupt Controller> mem 0x40041000-0x40041fff,0x40042000-0x40043fff,0x40044000-0x40045fff,0x40046000-0x40047fff irq 30 on simplebus0
+gic0: pn 0x2, arch 0x2, rev 0x1, implementer 0x43b irqs 256
+gpio0: <BCM2708/2835 GPIO controller> mem 0x7e200000-0x7e2000b3 irq 14,15 on simplebus0
+gpiobus0: <OFW GPIO bus> on gpio0
+gpio1: <Raspberry Pi Firmware GPIO controller> on bcm2835_firmware0
+gpiobus1: <GPIO bus> on gpio1
+regfix0: Cannot set GPIO pin: 6
+REGNODE_INIT failed: 6
+regfix0: Cannot register regulator.
+mbox0: <BCM2835 VideoCore Mailbox> mem 0x7e00b880-0x7e00b8bf irq 13 on simplebus0
+gpioregulator0: <GPIO controlled regulator> on ofwbus0
+generic_timer0: <ARMv8 Generic Timer> irq 4,5,6,7 on ofwbus0
+Timecounter "ARM MPCore Timecounter" frequency 54000000 Hz quality 1000
+Event timer "ARM MPCore Eventtimer" frequency 54000000 Hz quality 1000
+usb_nop_xceiv0: <USB NOP PHY> on ofwbus0
+gpioc0: <GPIO controller> on gpio0
+uart0: <PrimeCell UART (PL011)> mem 0x7e201000-0x7e2011ff irq 16 on simplebus0
+uart0: console (115200,n,8,1)
+spi0: <BCM2708/2835 SPI controller> mem 0x7e204000-0x7e2041ff irq 18 on simplebus0
+spibus0: <OFW SPI bus> on spi0
+spibus0: <unknown card> at cs 0 mode 0
+spibus0: <unknown card> at cs 1 mode 0
+iichb0: <BCM2708/2835 BSC controller> mem 0x7e804000-0x7e804fff irq 26 on simplebus0
+bcm_dma0: <BCM2835 DMA Controller> mem 0x7e007000-0x7e007aff irq 31,32,33,34,35,36,37,38,39,40,41 on simplebus0
+bcmwd0: <BCM2708/2835 Watchdog> mem 0x7e100000-0x7e100113,0x7e00a000-0x7e00a023,0x7ec11000-0x7ec1101f on simplebus0
+gpioc1: <GPIO controller> on gpio1
+sdhci_bcm0: <Broadcom 2708 SDHCI controller> mem 0x7e300000-0x7e3000ff irq 73 on simplebus0
+mmc0: <MMC/SD bus> on sdhci_bcm0
+fb0: <BCM2835 VT framebuffer driver> on simplebus0
+fb0: keeping existing fb bpp of 32
+fbd0 on fb0
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 14.0.
+VT: Replacing driver "efifb" with new "fb".
+fb0: 1824x984(XXX@XXX) 32bpp
+fb0: fbswap: 1, pitch 7296, base 0x3e40f000, screen_size 7237632
+sdhci_bcm1: <Broadcom 2708 SDHCI controller> mem 0x7e340000-0x7e3400ff irq 79 on simplebus1
+mmc1: <MMC/SD bus> on sdhci_bcm1
+pmu0: <Performance Monitoring Unit> irq 0,1,2,3 on ofwbus0
+cpulist0: <Open Firmware CPU Group> on ofwbus0
+cpu0: <Open Firmware CPU> on cpulist0
+bcm2835_cpufreq0: <CPU Frequency Control> on cpu0
+cpu1: <Open Firmware CPU> on cpulist0
+cpu2: <Open Firmware CPU> on cpulist0
+cpu3: <Open Firmware CPU> on cpulist0
+pcib0: <BCM2838-compatible PCI-express controller> mem 0x7d500000-0x7d50930f irq 80,81 on simplebus2
+pcib0: hardware identifies as revision 0x304.
+pci1: <PCI bus> on pcib0
+pcib1: <PCI-PCI bridge> irq 91 at device 0.0 on pci1
+pci2: <PCI bus> on pcib1
+bcm_xhci0: <VL805 USB 3.0 controller (on the Raspberry Pi 4b)> irq 92 at device 0.0 on pci2
+bcm_xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on bcm_xhci0
+pci0: <PCI bus> on pcib0
+pci0: failed to allocate bus number
+device_attach: pci0 attach returned 6
+genet0: <RPi4 Gigabit Ethernet> mem 0x7d580000-0x7d58ffff irq 82,83 on simplebus2
+genet0: GENET version 5.0 phy 0x0000
+miibus0: <MII bus> on genet0
+brgphy0: <BCM54213PE 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto
+genet0: Ethernet address: XXX
+gpioled0: <GPIO LEDs> on ofwbus0
+cryptosoft0: <software crypto>
+armv8crypto0: CPU lacks AES instructions
+Timecounters tick every 1.000 msec
+iicbus0: <OFW I2C bus> on iichb0
+iic0: <I2C generic I/O> on iicbus0
+usbus0: 5.0Gbps Super Speed USB v3.0
+sdhci_bcm0-slot0: Got command interrupt 0x00030000, but there is no active command.
+sdhci_bcm0-slot0: ============== REGISTER DUMP ==============
+sdhci_bcm0-slot0: Sys addr: 0x00000000 | Version:  0x00009902
+sdhci_bcm0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_bcm0-slot0: Argument: 0x000001aa | Trn mode: 0x00000000
+sdhci_bcm0-slot0: Present:  0x000f0000 | Host ctl: 0x00000001
+sdhci_bcm0-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_bcm0-slot0: Wake-up:  0x00000000 | Clock:    0x00003947
+sdhci_bcm0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_bcm0-slot0: Int enab: 0x01ff00bb | Sig enab: 0x01ff00bb
+sdhci_bcm0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_bcm0-slot0: Caps:     0x00000000 | Caps2:    0x00000000
+sdhci_bcm0-slot0: Max curr: 0x00000001 | ADMA err: 0x00000000
+sdhci_bcm0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_bcm0-slot0: ===========================================
+ugen0.1: <0x1106 XHCI root HUB> at usbus0
+sdhci_bcm0-slot0: Got command interrupt 0x00030000, but there is no active command.
+sdhci_bcm0-slot0: ============== REGISTER DUMP ==============
+sdhci_bcm0-slot0: Sys addr: 0x00000000 | Version:  0x00009902
+sdhci_bcm0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_bcm0-slot0: Argument: 0x000001aa | Trn mode: 0x00000000
+sdhci_bcm0-slot0: Present:  0x000f0000 | Host ctl: 0x00000001
+sdhci_bcm0-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_bcm0-slot0: Wake-up:  0x00000000 | Clock:    0x00003947
+sdhci_bcm0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_bcm0-slot0: Int enab: 0x01ff00bb | Sig enab: 0x01ff00bb
+sdhci_bcm0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_bcm0-slot0: Caps:     0x00000000 | Caps2:    0x00000000
+sdhci_bcm0-slot0: Max curr: 0x00000001 | ADMA err: 0x00000000
+sdhci_bcm0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_bcm0-slot0: ===========================================
+uhub0 on usbus0
+uhub0: <0x1106 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+sdhci_bcm0-slot0: Got command interrupt 0x00030000, but there is no active command.
+sdhci_bcm0-slot0: ============== REGISTER DUMP ==============
+sdhci_bcm0-slot0: Sys addr: 0x00000000 | Version:  0x00009902
+sdhci_bcm0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_bcm0-slot0: Argument: 0x000001aa | Trn mode: 0x00000000
+sdhci_bcm0-slot0: Present:  0x000f0000 | Host ctl: 0x00000001
+sdhci_bcm0-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_bcm0-slot0: Wake-up:  0x00000000 | Clock:    0x00003947
+sdhci_bcm0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_bcm0-slot0: Int enab: 0x01ff00bb | Sig enab: 0x01ff00bb
+sdhci_bcm0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_bcm0-slot0: Caps:     0x00000000 | Caps2:    0x00000000
+sdhci_bcm0-slot0: Max curr: 0x00000001 | ADMA err: 0x00000000
+sdhci_bcm0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_bcm0-slot0: ===========================================
+sdhci_bcm0-slot0: Got command interrupt 0x00030000, but there is no active command.
+sdhci_bcm0-slot0: ============== REGISTER DUMP ==============
+sdhci_bcm0-slot0: Sys addr: 0x00000000 | Version:  0x00009902
+sdhci_bcm0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_bcm0-slot0: Argument: 0x000001aa | Trn mode: 0x00000000
+sdhci_bcm0-slot0: Present:  0x000f0000 | Host ctl: 0x00000001
+sdhci_bcm0-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_bcm0-slot0: Wake-up:  0x00000000 | Clock:    0x00003947
+sdhci_bcm0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_bcm0-slot0: Int enab: 0x01ff00bb | Sig enab: 0x01ff00bb
+sdhci_bcm0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_bcm0-slot0: Caps:     0x00000000 | Caps2:    0x00000000
+sdhci_bcm0-slot0: Max curr: 0x00000001 | ADMA err: 0x00000000
+sdhci_bcm0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_bcm0-slot0: ===========================================
+sdhci_bcm0-slot0: Got command interrupt 0x00030000, but there is no active command.
+sdhci_bcm0-slot0: ============== REGISTER DUMP ==============
+sdhci_bcm0-slot0: Sys addr: 0x00000000 | Version:  0x00009902
+sdhci_bcm0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_bcm0-slot0: Argument: 0x00000000 | Trn mode: 0x00000000
+sdhci_bcm0-slot0: Present:  0x000f0000 | Host ctl: 0x00000001
+sdhci_bcm0-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_bcm0-slot0: Wake-up:  0x00000000 | Clock:    0x00003947
+sdhci_bcm0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_bcm0-slot0: Int enab: 0x01ff00bb | Sig enab: 0x01ff00bb
+sdhci_bcm0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_bcm0-slot0: Caps:     0x00000000 | Caps2:    0x00000000
+sdhci_bcm0-slot0: Max curr: 0x00000001 | ADMA err: 0x00000000
+sdhci_bcm0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_bcm0-slot0: ===========================================
+sdhci_bcm0-slot0: Got command interrupt 0x00030000, but there is no active command.
+sdhci_bcm0-slot0: ============== REGISTER DUMP ==============
+sdhci_bcm0-slot0: Sys addr: 0x00000000 | Version:  0x00009902
+sdhci_bcm0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_bcm0-slot0: Argument: 0x00000000 | Trn mode: 0x00000000
+sdhci_bcm0-slot0: Present:  0x000f0000 | Host ctl: 0x00000001
+sdhci_bcm0-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_bcm0-slot0: Wake-up:  0x00000000 | Clock:    0x00003947
+sdhci_bcm0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_bcm0-slot0: Int enab: 0x01ff00bb | Sig enab: 0x01ff00bb
+sdhci_bcm0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_bcm0-slot0: Caps:     0x00000000 | Caps2:    0x00000000
+sdhci_bcm0-slot0: Max curr: 0x00000001 | ADMA err: 0x00000000
+sdhci_bcm0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_bcm0-slot0: ===========================================
+sdhci_bcm0-slot0: Got command interrupt 0x00030000, but there is no active command.
+sdhci_bcm0-slot0: ============== REGISTER DUMP ==============
+sdhci_bcm0-slot0: Sys addr: 0x00000000 | Version:  0x00009902
+sdhci_bcm0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_bcm0-slot0: Argument: 0x00000000 | Trn mode: 0x00000000
+sdhci_bcm0-slot0: Present:  0x000f0000 | Host ctl: 0x00000001
+sdhci_bcm0-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_bcm0-slot0: Wake-up:  0x00000000 | Clock:    0x00003947
+sdhci_bcm0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_bcm0-slot0: Int enab: 0x01ff00bb | Sig enab: 0x01ff00bb
+sdhci_bcm0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_bcm0-slot0: Caps:     0x00000000 | Caps2:    0x00000000
+sdhci_bcm0-slot0: Max curr: 0x00000001 | ADMA err: 0x00000000
+sdhci_bcm0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_bcm0-slot0: ===========================================
+sdhci_bcm0-slot0: Got command interrupt 0x00030000, but there is no active command.
+sdhci_bcm0-slot0: ============== REGISTER DUMP ==============
+sdhci_bcm0-slot0: Sys addr: 0x00000000 | Version:  0x00009902
+sdhci_bcm0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_bcm0-slot0: Argument: 0x00000000 | Trn mode: 0x00000000
+sdhci_bcm0-slot0: Present:  0x000f0000 | Host ctl: 0x00000001
+sdhci_bcm0-slot0: Power:    0x0000000f | Blk gap:  0x00000000
+sdhci_bcm0-slot0: Wake-up:  0x00000000 | Clock:    0x00003947
+sdhci_bcm0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_bcm0-slot0: Int enab: 0x01ff00bb | Sig enab: 0x01ff00bb
+sdhci_bcm0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_bcm0-slot0: Caps:     0x00000000 | Caps2:    0x00000000
+sdhci_bcm0-slot0: Max curr: 0x00000001 | ADMA err: 0x00000000
+sdhci_bcm0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_bcm0-slot0: ===========================================
+mmc0: No compatible cards found on bus
+mmc1: No compatible cards found on bus
+bcm2835_cpufreq0: ARM 600MHz, Core 200MHz, SDRAM 400MHz, Turbo OFF
+Release APs...done
+Trying to mount root from ufs:/dev/ufs/rootfs [rw]...
+CPU  0: ARM Cortex-A72 r0p3 affinity:  0
+Root mount waiting for:                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,PIPT ICache,64 byte ERG,64 byte CWG>
+ usbus0 Instruction Set Attributes 0 = <CRC32>
+
+ Instruction Set Attributes 1 = <>
+         Processor Features 0 = <AdvSIMD,FP,EL3 32,EL2 32,EL1 32,EL0 32>
+         Processor Features 1 = <>
+      Memory Model Features 0 = <TGran4,TGran64,SNSMem,BigEnd,16bit ASID,16TB PA>
+      Memory Model Features 1 = <8bit VMID>
+      Memory Model Features 2 = <32bit CCIDX,48bit VA>
+             Debug Features 0 = <2 CTX BKPTs,4 Watchpoints,6 Breakpoints,PMUv3,Debugv8>
+             Debug Features 1 = <>
+         Auxiliary Features 0 = <>
+         Auxiliary Features 1 = <>
+CPU  1: ARM Cortex-A72 r0p3 affinity:  1
+CPU  2: ARM Cortex-A72 r0p3 affinity:  2
+CPU  3: ARM Cortex-A72 r0p3 affinity:  3
+uhub0: 5 ports with 4 removable, self powered
+ugen0.2: <vendor 0x2109 USB2.0 Hub> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x2109 USB2.0 Hub, class 9/0, rev 2.10/4.21, addr 1> on usbus0
+Root mount waiting for: usbus0
+uhub1: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.3: <PixArt USB Optical Mouse> at usbus0
+ugen0.4: <vendor 0x04d9 Raspberry Pi Internal Keyboard> at usbus0
+ukbd0 on uhub1
+ukbd0: <vendor 0x04d9 Raspberry Pi Internal Keyboard, class 0/0, rev 2.00/1.61, addr 3> on usbus0
+kbd1 at ukbd0
+Root mount waiting for: usbus0
+ugen0.5: <Samsung Flash Drive FIT> at usbus0
+umass0 on uhub0
+umass0: <Samsung Flash Drive FIT, class 0/0, rev 3.10/11.00, addr 4> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:0:0: Attached to scbus0
+da0 at umass-sim0 bus 0 scbus0 target 0 lun 0
+da0: <Samsung Flash Drive FIT 1100> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 30594MB (62656641 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+mountroot: waiting for device /dev/ufs/rootfs...
+Warning: no time-of-day clock registered, system time will not be set accurately
+Dual Console: Serial Primary, Video Secondary
+lo0: link state changed to UP
+genet0: link state changed to DOWN
+genet0: link state changed to UP
+ums0 on uhub1
+ums0: <PixArt USB Optical Mouse, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhid0 on uhub1
+uhid0: <vendor 0x04d9 Raspberry Pi Internal Keyboard, class 0/0, rev 2.00/1.61, addr 3> on usbus0
+Security policy loaded: MAC/ntpd (mac_ntpd)
+genet0: link state changed to DOWN
+genet0: link state changed to UP
+pid 91441 (gibson), jid 0, uid 1002: exited on signal 11 (core dumped)
+pid 91616 (sctd), jid 0, uid 1002: exited on signal 11 (core dumped)
+pid 91705 (sctd), jid 0, uid 1002: exited on signal 11 (core dumped)
+ugen0.6: <Yubico Yubikey NEO OTP+U2F+CCID> at usbus0
+ukbd1 on uhub1
+ukbd1: <Yubico Yubikey NEO OTP+U2F+CCID, class 0/0, rev 2.00/3.40, addr 5> on usbus0
+kbd2 at ukbd1
+uhid1 on uhub1
+uhid1: <Yubico Yubikey NEO OTP+U2F+CCID, class 0/0, rev 2.00/3.40, addr 5> on usbus0
+ugen0.6: <Yubico Yubikey NEO OTP+U2F+CCID> at usbus0 (disconnected)
+ukbd1: at uhub1, port 1, addr 5 (disconnected)
+ukbd1: detached
+uhid1: at uhub1, port 1, addr 5 (disconnected)
+uhid1: detached
+ugen0.6: <Yubico Yubikey NEO OTP+U2F+CCID> at usbus0
+ukbd1 on uhub1
+ukbd1: <Yubico Yubikey NEO OTP+U2F+CCID, class 0/0, rev 2.00/3.40, addr 5> on usbus0
+kbd2 at ukbd1
+uhid1 on uhub1
+uhid1: <Yubico Yubikey NEO OTP+U2F+CCID, class 0/0, rev 2.00/3.40, addr 5> on usbus0
+ugen0.6: <Yubico Yubikey NEO OTP+U2F+CCID> at usbus0 (disconnected)
+ukbd1: at uhub1, port 1, addr 5 (disconnected)
+ukbd1: detached
+uhid1: at uhub1, port 1, addr 5 (disconnected)
+uhid1: detached
+pid 5026 (sctd), jid 0, uid 1002: exited on signal 11 (core dumped)

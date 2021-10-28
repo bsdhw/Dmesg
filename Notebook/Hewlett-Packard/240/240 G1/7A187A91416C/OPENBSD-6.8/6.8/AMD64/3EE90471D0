@@ -1,0 +1,698 @@
+OpenBSD 6.8 (RAMDISK_CD) #94: Sun Oct  4 18:21:11 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8463835136 (8071MB)
+avail mem = 8203300864 (7823MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xe6da0 (62 entries)
+bios0: vendor Insyde version "F.35" date 05/13/2013
+bios0: Hewlett-Packard HP 240 G1 Notebook PC
+acpi0 at bios0: ACPI 5.0
+acpi0: tables DSDT FACP UEFI ASF! HPET APIC MCFG SSDT BOOT ASPT DBGP FPDT SSDT SSDT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.97 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 0 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P1)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus -1 (RP02)
+acpiprt4 at acpi0: bus 2 (RP03)
+acpiprt5 at acpi0: bus 8 (RP04)
+acpiprt6 at acpi0: bus -1 (RP05)
+acpiprt7 at acpi0: bus -1 (RP06)
+acpiprt8 at acpi0: bus -1 (RP07)
+acpiprt9 at acpi0: bus -1 (RP08)
+acpiprt10 at acpi0: bus -1 (PEG0)
+acpiprt11 at acpi0: bus -1 (PEG1)
+acpiprt12 at acpi0: bus -1 (PEG2)
+acpiprt13 at acpi0: bus -1 (PEG3)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"SYN1E6A" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"PNP0C0A" at acpi0 not configured
+"ACPI0003" at acpi0 not configured
+"HPQ6001" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using IvyBridge MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+vga1 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 0 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel 7 Series HD Audio" rev 0x04 at pci0 dev 27 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ral0 at pci1 dev 0 function 0 "Ralink RT3290" rev 0x00: apic 0 int 16, address XXX
+ral0: MAC/BBP RT3290 (rev 0x0015), RF RT3290 (MIMO 1T1R)
+"Ralink Bluetooth" rev 0x00 at pci1 dev 0 function 1 not configured
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 2
+rtsx0 at pci2 dev 0 function 0 "Realtek RTS5229 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb2 at pci0 dev 28 function 3 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 8
+re0 at pci3 dev 0 function 0 "Realtek 8168" rev 0x07: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 0 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel HM75 LPC" rev 0x04 at pci0 dev 31 function 0 not configured
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, ST500LT012-9WS14, 0001> naa.5000c5006a668da7
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+cd0 at scsibus0 targ 2 lun 0: <hp, DVD A DS8A9SH, EH61> removable
+"Intel 7 Series SMBus" rev 0x04 at pci0 dev 31 function 3 not configured
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+uhub2 at uhub0 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+uhidev0 at uhub2 port 2 configuration 1 interface 0 "vendor 0x4423 USB OPTICAL MOUSE" rev 1.10/1.00 addr 3
+uhidev0: iclass 3/1, 1 report id
+uhid at uhidev0 reportid 1 not configured
+uhidev1 at uhub2 port 2 configuration 1 interface 1 "vendor 0x4423 USB OPTICAL MOUSE" rev 1.10/1.00 addr 3
+uhidev1: iclass 3/1, 5 report ids
+uhid at uhidev1 reportid 2 not configured
+ukbd0 at uhidev1 reportid 3
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay1
+uhid at uhidev1 reportid 4 not configured
+uhid at uhidev1 reportid 5 not configured
+uhub3 at uhub1 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+umass0 at uhub3 port 1 configuration 1 interface 0 "USB Disk 2.0" rev 2.00/2.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <VendorCo, ProductCode, 2.00> removable serial....
+sd1: 3840MB, 512 bytes/sector, 7864320 sectors
+uhidev2 at uhub3 port 2 configuration 1 interface 0 "SEMICO USB Keyboard" rev 1.10/1.10 addr 4
+uhidev2: iclass 3/1
+ukbd1 at uhidev2
+wskbd2 at ukbd1 mux 1
+wskbd2: connecting to wsdisplay1
+uhidev3 at uhub3 port 2 configuration 1 interface 1 "SEMICO USB Keyboard" rev 1.10/1.10 addr 4
+uhidev3: iclass 3/1, 6 report ids
+uhid at uhidev3 reportid 1 not configured
+uhid at uhidev3 reportid 2 not configured
+uhid at uhidev3 reportid 3 not configured
+ukbd2 at uhidev3 reportid 4
+wskbd3 at ukbd2 mux 1
+wskbd3: connecting to wsdisplay1
+ukbd3 at uhidev3 reportid 5
+wskbd4 at ukbd3 mux 1
+wskbd4: connecting to wsdisplay1
+ukbd4 at uhidev3 reportid 6
+wskbd5 at ukbd4 mux 1
+wskbd5: connecting to wsdisplay1
+"SuYin HP TrueVision HD" rev 2.00/1.05 addr 5 at uhub3 port 3 not configured
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks... done
+rebooting...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8457543680 (8065MB)
+avail mem = 8186179584 (7806MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xaaebc000 (62 entries)
+bios0: vendor Insyde version "F.35" date 05/13/2013
+bios0: Hewlett-Packard HP 240 G1 Notebook PC
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI ASF! HPET APIC MCFG SSDT BOOT ASPT DBGP FPDT SSDT SSDT BGRT
+acpi0: wakeup devices P0P1(S4) EHC1(S3) EHC2(S3) XHC_(S3) HDEF(S0) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) NIC_(S5) RP05(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.93 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.57 MHz, 06-3a-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: disabling user TSC (skew=-760)
+cpu1: smt 1, core 0, package 0
+cpu2 at mainbus0: apid 2 (application processor)
+cpu2: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.57 MHz, 06-3a-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 1, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.57 MHz, 06-3a-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 0 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P1)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus -1 (RP02)
+acpiprt4 at acpi0: bus 2 (RP03)
+acpiprt5 at acpi0: bus 8 (RP04)
+acpiprt6 at acpi0: bus -1 (RP05)
+acpiprt7 at acpi0: bus -1 (RP06)
+acpiprt8 at acpi0: bus -1 (RP07)
+acpiprt9 at acpi0: bus -1 (RP08)
+acpiprt10 at acpi0: bus -1 (PEG0)
+acpiprt11 at acpi0: bus -1 (PEG1)
+acpiprt12 at acpi0: bus -1 (PEG2)
+acpiprt13 at acpi0: bus -1 (PEG3)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"SYN1E6A" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PWRB
+acpibat0 at acpi0: BAT0 model "Primary" serial ... type LIon oem "Hewlett-Packard"
+acpiac0 at acpi0: AC unit online
+"HPQ6001" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: FN00, resource for FAN0
+acpitz0 at acpi0: critical temperature is 110 degC
+acpitz1 at acpi0: critical temperature is 127 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 2394 MHz: speeds: 2400, 2300, 2200, 2100, 2000, 1900, 1800, 1700, 1600, 1500, 1400, 1300, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, IVYBRIDGE, gen 7
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 0 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 7 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2806, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ral0 at pci1 dev 0 function 0 "Ralink RT3290" rev 0x00: apic 0 int 16, address XXX
+ral0: MAC/BBP RT3290 (rev 0x0015), RF RT3290 (MIMO 1T1R)
+"Ralink Bluetooth" rev 0x00 at pci1 dev 0 function 1 not configured
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 2
+rtsx0 at pci2 dev 0 function 0 "Realtek RTS5229 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb2 at pci0 dev 28 function 3 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 8
+re0 at pci3 dev 0 function 0 "Realtek 8168" rev 0x07: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 0 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel HM75 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, ST500LT012-9WS14, 0001> naa.5000c5006a668da7
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+cd0 at scsibus1 targ 2 lun 0: <hp, DVD A DS8A9SH, EH61> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 7 Series SMBus" rev 0x04: apic 0 int 21
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-12800 SO-DIMM
+spdmem1 at iic0 addr 0x52: 4GB DDR3 SDRAM PC3-12800 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.5, 0x1e0b1 0x240000 0x201340 0xf00173 0xa2400
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT (using slow L1TF mitigation)
+efifb at mainbus0 not configured
+uhub2 at uhub0 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev0 at uhub2 port 2 configuration 1 interface 0 "vendor 0x4423 USB OPTICAL MOUSE" rev 1.10/1.00 addr 3
+uhidev0: iclass 3/1, 1 report id
+ums0 at uhidev0 reportid 1: 5 buttons, Z dir
+wsmouse1 at ums0 mux 0
+uhidev1 at uhub2 port 2 configuration 1 interface 1 "vendor 0x4423 USB OPTICAL MOUSE" rev 1.10/1.00 addr 3
+uhidev1: iclass 3/1, 5 report ids
+uhid0 at uhidev1 reportid 2: input=2, output=0, feature=0
+ukbd0 at uhidev1 reportid 3: 8 variable keys, 5 key codes
+wskbd1 at ukbd0 mux 1
+uhid1 at uhidev1 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 5: input=0, output=0, feature=7
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev2 at uhub3 port 2 configuration 1 interface 0 "SEMICO USB Keyboard" rev 1.10/1.10 addr 3
+uhidev2: iclass 3/1
+ukbd1 at uhidev2: 8 variable keys, 6 key codes
+wskbd2 at ukbd1 mux 1
+uhidev3 at uhub3 port 2 configuration 1 interface 1 "SEMICO USB Keyboard" rev 1.10/1.10 addr 3
+uhidev3: iclass 3/1, 6 report ids
+uhid3 at uhidev3 reportid 1: input=2, output=0, feature=0
+uhid4 at uhidev3 reportid 2: input=1, output=0, feature=0
+uhid5 at uhidev3 reportid 3: input=1, output=0, feature=0
+ukbd2 at uhidev3 reportid 4: 48 variable keys, 0 key codes
+wskbd3 at ukbd2 mux 1
+ukbd3 at uhidev3 reportid 5: 56 variable keys, 0 key codes
+wskbd4 at ukbd3 mux 1
+ukbd4 at uhidev3 reportid 6: 56 variable keys, 0 key codes
+wskbd5 at ukbd4 mux 1
+uvideo0 at uhub3 port 3 configuration 1 interface 0 "SuYin HP TrueVision HD" rev 2.00/1.05 addr 4
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (c04eb555b2a7a545.a) swap on sd0b dump on sd0b
+drm:pid81951:ivb_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared fifo underrun on pipe A
+drm:pid81951:intel_cpu_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* CPU pipe A FIFO underrun
+drm:pid81951:ivb_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared fifo underrun on pipe B
+drm:pid81951:intel_cpu_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* CPU pipe B FIFO underrun
+drm:pid81951:cpt_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared pch fifo underrun on pch transcoder A
+drm:pid81951:intel_pch_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* PCH transcoder A FIFO underrun
+drm:pid81951:cpt_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared pch fifo underrun on pch transcoder B
+drm:pid81951:intel_pch_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* PCH transcoder B FIFO underrun
+inteldrm0: 1360x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wskbd2: connecting to wsdisplay0
+wskbd3: connecting to wsdisplay0
+wskbd4: connecting to wsdisplay0
+wskbd5: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+uaudio0 at uhub3 port 1 configuration 1 interface 1 "C-Media Electronics Inc. USB PnP Sound Device" rev 1.10/1.00 addr 5
+uaudio0: class v1, full-speed, sync, channels: 2 play, 1 rec, 6 ctls
+audio1 at uaudio0
+uhidev4 at uhub3 port 1 configuration 1 interface 3 "C-Media Electronics Inc. USB PnP Sound Device" rev 1.10/1.00 addr 5
+uhidev4: iclass 3/0
+uhid6 at uhidev4: input=4, output=4, feature=0
+audio1 detached
+uaudio0 detached
+uhid6 detached
+uhidev4 detached
+syncing disks... done
+rebooting...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8457543680 (8065MB)
+avail mem = 8186159104 (7806MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xaaebc000 (62 entries)
+bios0: vendor Insyde version "F.35" date 05/13/2013
+bios0: Hewlett-Packard HP 240 G1 Notebook PC
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI ASF! HPET APIC MCFG SSDT BOOT ASPT DBGP FPDT SSDT SSDT BGRT
+acpi0: wakeup devices P0P1(S4) EHC1(S3) EHC2(S3) XHC_(S3) HDEF(S0) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) NIC_(S5) RP05(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.95 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.57 MHz, 06-3a-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 1, core 0, package 0
+cpu2 at mainbus0: apid 2 (application processor)
+cpu2: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.58 MHz, 06-3a-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 1, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.58 MHz, 06-3a-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 0 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P1)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus -1 (RP02)
+acpiprt4 at acpi0: bus 2 (RP03)
+acpiprt5 at acpi0: bus 8 (RP04)
+acpiprt6 at acpi0: bus -1 (RP05)
+acpiprt7 at acpi0: bus -1 (RP06)
+acpiprt8 at acpi0: bus -1 (RP07)
+acpiprt9 at acpi0: bus -1 (RP08)
+acpiprt10 at acpi0: bus -1 (PEG0)
+acpiprt11 at acpi0: bus -1 (PEG1)
+acpiprt12 at acpi0: bus -1 (PEG2)
+acpiprt13 at acpi0: bus -1 (PEG3)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"SYN1E6A" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PWRB
+acpibat0 at acpi0: BAT0 model "Primary" serial ... type LIon oem "Hewlett-Packard"
+acpiac0 at acpi0: AC unit online
+"HPQ6001" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: FN00, resource for FAN0
+acpitz0 at acpi0: critical temperature is 110 degC
+acpitz1 at acpi0: critical temperature is 127 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2394 MHz: speeds: 2400, 2300, 2200, 2100, 2000, 1900, 1800, 1700, 1600, 1500, 1400, 1300, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, IVYBRIDGE, gen 7
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 0 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 7 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2806, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ral0 at pci1 dev 0 function 0 "Ralink RT3290" rev 0x00: apic 0 int 16, address XXX
+ral0: MAC/BBP RT3290 (rev 0x0015), RF RT3290 (MIMO 1T1R)
+"Ralink Bluetooth" rev 0x00 at pci1 dev 0 function 1 not configured
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 2
+rtsx0 at pci2 dev 0 function 0 "Realtek RTS5229 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb2 at pci0 dev 28 function 3 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 8
+re0 at pci3 dev 0 function 0 "Realtek 8168" rev 0x07: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 0 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel HM75 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, ST500LT012-9WS14, 0001> naa.5000c5006a668da7
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+cd0 at scsibus1 targ 2 lun 0: <hp, DVD A DS8A9SH, EH61> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 7 Series SMBus" rev 0x04: apic 0 int 21
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-12800 SO-DIMM
+spdmem1 at iic0 addr 0x52: 4GB DDR3 SDRAM PC3-12800 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.5, 0x1e0b1 0x240000 0x20130c 0xf00173 0xa2400
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub2 at uhub0 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev0 at uhub2 port 2 configuration 1 interface 0 "vendor 0x4423 USB OPTICAL MOUSE" rev 1.10/1.00 addr 3
+uhidev0: iclass 3/1, 1 report id
+ums0 at uhidev0 reportid 1: 5 buttons, Z dir
+wsmouse1 at ums0 mux 0
+uhidev1 at uhub2 port 2 configuration 1 interface 1 "vendor 0x4423 USB OPTICAL MOUSE" rev 1.10/1.00 addr 3
+uhidev1: iclass 3/1, 5 report ids
+uhid0 at uhidev1 reportid 2: input=2, output=0, feature=0
+ukbd0 at uhidev1 reportid 3: 8 variable keys, 5 key codes
+wskbd1 at ukbd0 mux 1
+uhid1 at uhidev1 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 5: input=0, output=0, feature=7
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev2 at uhub3 port 2 configuration 1 interface 0 "SEMICO USB Keyboard" rev 1.10/1.10 addr 3
+uhidev2: iclass 3/1
+ukbd1 at uhidev2: 8 variable keys, 6 key codes
+wskbd2 at ukbd1 mux 1
+uhidev3 at uhub3 port 2 configuration 1 interface 1 "SEMICO USB Keyboard" rev 1.10/1.10 addr 3
+uhidev3: iclass 3/1, 6 report ids
+uhid3 at uhidev3 reportid 1: input=2, output=0, feature=0
+uhid4 at uhidev3 reportid 2: input=1, output=0, feature=0
+uhid5 at uhidev3 reportid 3: input=1, output=0, feature=0
+ukbd2 at uhidev3 reportid 4: 48 variable keys, 0 key codes
+wskbd3 at ukbd2 mux 1
+ukbd3 at uhidev3 reportid 5: 56 variable keys, 0 key codes
+wskbd4 at ukbd3 mux 1
+ukbd4 at uhidev3 reportid 6: 56 variable keys, 0 key codes
+wskbd5 at ukbd4 mux 1
+uvideo0 at uhub3 port 3 configuration 1 interface 0 "SuYin HP TrueVision HD" rev 2.00/1.05 addr 4
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (c04eb555b2a7a545.a) swap on sd0b dump on sd0b
+drm:pid39391:ivb_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared fifo underrun on pipe A
+drm:pid39391:intel_cpu_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* CPU pipe A FIFO underrun
+drm:pid39391:ivb_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared fifo underrun on pipe B
+drm:pid39391:intel_cpu_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* CPU pipe B FIFO underrun
+drm:pid39391:cpt_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared pch fifo underrun on pch transcoder A
+drm:pid39391:intel_pch_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* PCH transcoder A FIFO underrun
+drm:pid39391:cpt_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared pch fifo underrun on pch transcoder B
+drm:pid39391:intel_pch_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* PCH transcoder B FIFO underrun
+inteldrm0: 1360x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wskbd2: connecting to wsdisplay0
+wskbd3: connecting to wsdisplay0
+wskbd4: connecting to wsdisplay0
+wskbd5: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+syncing disks... done
+rebooting...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8457543680 (8065MB)
+avail mem = 8186171392 (7806MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xaaebc000 (62 entries)
+bios0: vendor Insyde version "F.35" date 05/13/2013
+bios0: Hewlett-Packard HP 240 G1 Notebook PC
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI ASF! HPET APIC MCFG SSDT BOOT ASPT DBGP FPDT SSDT SSDT BGRT
+acpi0: wakeup devices P0P1(S4) EHC1(S3) EHC2(S3) XHC_(S3) HDEF(S0) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) NIC_(S5) RP05(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.95 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.57 MHz, 06-3a-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 1, core 0, package 0
+cpu2 at mainbus0: apid 2 (application processor)
+cpu2: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.58 MHz, 06-3a-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 1, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i3-3110M CPU @ 2.40GHz, 2394.57 MHz, 06-3a-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,XSAVE,AVX,F16C,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 0 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P1)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus -1 (RP02)
+acpiprt4 at acpi0: bus 2 (RP03)
+acpiprt5 at acpi0: bus 8 (RP04)
+acpiprt6 at acpi0: bus -1 (RP05)
+acpiprt7 at acpi0: bus -1 (RP06)
+acpiprt8 at acpi0: bus -1 (RP07)
+acpiprt9 at acpi0: bus -1 (RP08)
+acpiprt10 at acpi0: bus -1 (PEG0)
+acpiprt11 at acpi0: bus -1 (PEG1)
+acpiprt12 at acpi0: bus -1 (PEG2)
+acpiprt13 at acpi0: bus -1 (PEG3)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"SYN1E6A" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PWRB
+acpibat0 at acpi0: BAT0 model "Primary" serial ... type LIon oem "Hewlett-Packard"
+acpiac0 at acpi0: AC unit online
+"HPQ6001" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C2(350@80 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: FN00, resource for FAN0
+acpitz0 at acpi0: critical temperature is 110 degC
+acpitz1 at acpi0: critical temperature is 127 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2394 MHz: speeds: 2400, 2300, 2200, 2100, 2000, 1900, 1800, 1700, 1600, 1500, 1400, 1300, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, IVYBRIDGE, gen 7
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 0 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 7 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2806, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ral0 at pci1 dev 0 function 0 "Ralink RT3290" rev 0x00: apic 0 int 16, address XXX
+ral0: MAC/BBP RT3290 (rev 0x0015), RF RT3290 (MIMO 1T1R)
+"Ralink Bluetooth" rev 0x00 at pci1 dev 0 function 1 not configured
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 2
+rtsx0 at pci2 dev 0 function 0 "Realtek RTS5229 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ppb2 at pci0 dev 28 function 3 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 8
+re0 at pci3 dev 0 function 0 "Realtek 8168" rev 0x07: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 0 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel HM75 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, ST500LT012-9WS14, 0001> naa.5000c5006a668da7
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+cd0 at scsibus1 targ 2 lun 0: <hp, DVD A DS8A9SH, EH61> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 7 Series SMBus" rev 0x04: apic 0 int 21
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-12800 SO-DIMM
+spdmem1 at iic0 addr 0x52: 4GB DDR3 SDRAM PC3-12800 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.5, 0x1e0b1 0x240000 0x20130c 0xf00173 0xa2400
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub2 at uhub0 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev0 at uhub2 port 2 configuration 1 interface 0 "vendor 0x4423 USB OPTICAL MOUSE" rev 1.10/1.00 addr 3
+uhidev0: iclass 3/1, 1 report id
+ums0 at uhidev0 reportid 1: 5 buttons, Z dir
+wsmouse1 at ums0 mux 0
+uhidev1 at uhub2 port 2 configuration 1 interface 1 "vendor 0x4423 USB OPTICAL MOUSE" rev 1.10/1.00 addr 3
+uhidev1: iclass 3/1, 5 report ids
+uhid0 at uhidev1 reportid 2: input=2, output=0, feature=0
+ukbd0 at uhidev1 reportid 3: 8 variable keys, 5 key codes
+wskbd1 at ukbd0 mux 1
+uhid1 at uhidev1 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 5: input=0, output=0, feature=7
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev2 at uhub3 port 2 configuration 1 interface 0 "SEMICO USB Keyboard" rev 1.10/1.10 addr 3
+uhidev2: iclass 3/1
+ukbd1 at uhidev2: 8 variable keys, 6 key codes
+wskbd2 at ukbd1 mux 1
+uhidev3 at uhub3 port 2 configuration 1 interface 1 "SEMICO USB Keyboard" rev 1.10/1.10 addr 3
+uhidev3: iclass 3/1, 6 report ids
+uhid3 at uhidev3 reportid 1: input=2, output=0, feature=0
+uhid4 at uhidev3 reportid 2: input=1, output=0, feature=0
+uhid5 at uhidev3 reportid 3: input=1, output=0, feature=0
+ukbd2 at uhidev3 reportid 4: 48 variable keys, 0 key codes
+wskbd3 at ukbd2 mux 1
+ukbd3 at uhidev3 reportid 5: 56 variable keys, 0 key codes
+wskbd4 at ukbd3 mux 1
+ukbd4 at uhidev3 reportid 6: 56 variable keys, 0 key codes
+wskbd5 at ukbd4 mux 1
+uvideo0 at uhub3 port 3 configuration 1 interface 0 "SuYin HP TrueVision HD" rev 2.00/1.05 addr 4
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (c04eb555b2a7a545.a) swap on sd0b dump on sd0b
+drm:pid10231:ivb_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared fifo underrun on pipe A
+drm:pid10231:intel_cpu_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* CPU pipe A FIFO underrun
+drm:pid10231:ivb_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared fifo underrun on pipe B
+drm:pid10231:intel_cpu_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* CPU pipe B FIFO underrun
+drm:pid10231:cpt_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared pch fifo underrun on pch transcoder A
+drm:pid10231:intel_pch_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* PCH transcoder A FIFO underrun
+drm:pid10231:cpt_set_fifo_underrun_reporting *ERROR* [drm] *ERROR* uncleared pch fifo underrun on pch transcoder B
+drm:pid10231:intel_pch_fifo_underrun_irq_handler *ERROR* [drm] *ERROR* PCH transcoder B FIFO underrun
+inteldrm0: 1360x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wskbd2: connecting to wsdisplay0
+wskbd3: connecting to wsdisplay0
+wskbd4: connecting to wsdisplay0
+wskbd5: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

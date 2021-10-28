@@ -1,0 +1,732 @@
+Copyright (c) 14CD-DA4F The DragonFly Project.
+Copyright (c) 7252-14A5 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+DragonFly vXXX.XXX.XXX.XXX.gd0dff-DEVELOPMENT #0: Fri May 29 09:20:25 EDT 2020
+    root@DragonFly.X220:/usr/obj/usr/src/sys/X86_64_GENERIC
+acpi_hpet: frequency 14318180
+Using cputimer HPET for TSC calibration
+Timer latency (in TSC ticks): 1505 min=1280 max=1556
+TSC invariant clock: 2491905579 Hz
+CPU: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz (2491.91-MHz K8-class CPU)
+  Origin = "GenuineIntel"  Id = 0x206a7  Stepping = 7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x17bae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,AVX>
+  AMD Features=0x28000800<SYSCALL,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Thermal and PM Features=0x77<SENSOR,TURBO,ARAT,PLN,ECMD,PTM>
+  MONITOR/MWAIT Features=0x3<CST,INTBRK>
+real memory  = 8467509248 (8075 MB)
+avail memory = 8142016512 (7764 MB)
+LAPIC: enter X2APIC mode
+madt_lapic_probe: lapic_count=4 x2apic_count=0
+ACPI CPUS = 4
+lapic: TSC Deadline Mode: shift 1, frequency 1245952789 Hz
+CPU Topology: cores_per_chip: 2; threads_per_core: 2; chips_per_package: 1;
+srat_probe: can't locate SRAT
+Initialize MI interrupts for 4 cpus
+TSC testing MP synchronization ...
+TSC MPSYNC TEST 174 4 -> 43 (10uS=24919)
+TSC is MP synchronized
+TSC: cputimer freq 77872049, shift 5
+Spectre: support=( IBRS STIBP IBPB ) req=0000 operating=( none )
+MDS: support=( none ) req=ffff operating=( none )
+VMM: available, disabled by default
+machdep.meltdown_mitigation enabled to protect against (mostly Intel) meltdown bug
+system call performance will be impacted
+interrupt uses mplock: swi_taskq
+wdog: In-kernel automatic watchdog reset enabled
+md0: Malloc disk
+evdev device loaded.
+kbd1 at kbdmux0
+ACPI: RSDP 0x00000000DAFFE014 000024 (v02 LENOVO)
+ACPI: XSDT 0x00000000DAFFE120 0000AC (v01 LENOVO TP-8D    00001460 PTEC 00000002)
+ACPI: FACP 0x00000000DAFE7000 0000F4 (v04 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: DSDT 0x00000000DAFEA000 00FA89 (v01 LENOVO TP-8D    00001460 INTL 20061109)
+ACPI: FACS 0x00000000DAF2D000 000040
+ACPI: SLIC 0x00000000DAFFD000 000176 (v01 LENOVO TP-8D    00001460 PTEC 00000001)
+ACPI: SSDT 0x00000000DAFFC000 000249 (v01 LENOVO TP-SSDT2 00000200 INTL 20061109)
+ACPI: SSDT 0x00000000DAFFB000 000033 (v01 LENOVO TP-SSDT1 00000100 INTL 20061109)
+ACPI: SSDT 0x00000000DAFFA000 0007D1 (v01 LENOVO SataAhci 00001000 INTL 20061109)
+ACPI: HPET 0x00000000DAFE6000 000038 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: APIC 0x00000000DAFE5000 000098 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: MCFG 0x00000000DAFE4000 00003C (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: ECDT 0x00000000DAFE3000 000052 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: ASF! 0x00000000DAFE9000 0000A5 (v32 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: TCPA 0x00000000DAFE2000 000032 (v02 PTL    LENOVO   06040000 LNVO 00000001)
+ACPI: SSDT 0x00000000DAFE1000 000A27 (v01 PmRef  Cpu0Ist  00003000 INTL 20061109)
+ACPI: SSDT 0x00000000DAFE0000 000996 (v01 PmRef  CpuPm    00003000 INTL 20061109)
+ACPI: DMAR 0x00000000DAFDF000 0000E8 (v01 INTEL  SNB      00000001 INTL 00000001)
+ACPI: UEFI 0x00000000DAFDE000 00003E (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: UEFI 0x00000000DAFDD000 000042 (v01 PTL    COMBUF   00000001 PTL  00000001)
+ACPI: UEFI 0x00000000DAFDC000 000292 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+sc0: <System console> on motherboard
+sc0: EFI_FB <16 virtual consoles, flags=0x700>
+cryptosoft0: <software crypto> on motherboard
+acpi0: <LENOVO TP-8D> on motherboard
+ACPI: 6 ACPI AML tables successfully acquired and loaded
+ACPI FADT: SCI testing interrupt mode ...
+ACPI FADT: SCI select level/high
+acpi_ec0: <Embedded Controller: GPE 0x11, ECDT> port 0x66,0x62 on acpi0
+AcpiOsUnmapMemory: Warning, deallocation did not track allocation: 0xfffff800cf235dd0/00000230 (actual was 0xfffff800cf236000/00000249)
+acpi0: Power Button (fixed)
+acpi_hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+acpi_timer0 on acpi0
+cpu0: <ACPI CPU> on acpi0
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF800CF0C2E00 0008C0 (v01 PmRef  Cpu0Cst  00003001 INTL 20061109)
+cpu_cst0: <ACPI CPU C-State> on cpu0
+cpu_pst0: <ACPI CPU P-State> on cpu0
+clockmod0: <CPU clock modulation> on cpu0
+perfbias0: <CPU perf-energy bias> on cpu0
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+cpu1: <ACPI CPU> on acpi0
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF800C7DEF140 000303 (v01 PmRef  ApIst    00003000 INTL 20061109)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF80059CD82A0 000119 (v01 PmRef  ApCst    00003000 INTL 20061109)
+cpu_cst1: <ACPI CPU C-State> on cpu1
+cpu_pst1: <ACPI CPU P-State> on cpu1
+clockmod1: <CPU clock modulation> on cpu1
+perfbias1: <CPU perf-energy bias> on cpu1
+coretemp1: <CPU On-Die Thermal Sensors> on cpu1
+cpu2: <ACPI CPU> on acpi0
+cpu_cst2: <ACPI CPU C-State> on cpu2
+cpu_pst2: <ACPI CPU P-State> on cpu2
+clockmod2: <CPU clock modulation> on cpu2
+perfbias2: <CPU perf-energy bias> on cpu2
+coretemp2: <CPU On-Die Thermal Sensors> on cpu2
+cpu3: <ACPI CPU> on acpi0
+cpu_cst3: <ACPI CPU C-State> on cpu3
+cpu_pst3: <ACPI CPU P-State> on cpu3
+clockmod3: <CPU clock modulation> on cpu3
+perfbias3: <CPU perf-energy bias> on cpu3
+coretemp3: <CPU On-Die Thermal Sensors> on cpu3
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_button0: <Sleep Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x5000-0x503f mem 0xe0000000-0xefffffff,0xf0000000-0xf03fffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+pci0: <simple comms> (vendor 0x8086, dev 0x1c3a) at device 22.0
+em0: <Intel(R) PRO/1000 Network Connection PCH2_LV_LM 7.6.2> port 0x5080-0x509f mem 0xf252b000-0xf252bfff,0xf2500000-0xf251ffff at device 25.0 on pci0
+em0: MAC address: XXX
+ehci0: <EHCI (generic) USB 2.0 controller> mem 0xf252a000-0xf252a3ff at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pci0: <multimedia, HDA> (vendor 0x8086, dev 0x1c20) at device 27.0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib1
+ugen0.1: <Intel> at usbus0
+pcib2: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+pci3: <ACPI PCI bus> on pcib2
+iwn0: <Intel Centrino Wireless-N 1000> mem 0xf2400000-0xf2401fff at device 0.0 on pci3
+pcib3: <ACPI PCI-PCI bridge> at device 28.3 on pci0
+pcib3: Disable PCI Express hot-plug interrupts(0x0008)
+pci5: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pcib4: Disable PCI Express hot-plug interrupts(0x0008)
+pci13: <ACPI PCI bus> on pcib4
+sdhci_pci0: <RICOH R5CE823 SD> mem 0xf1400000-0xf14000ff at device 0.0 on pci13
+sdhci_pci0: 1 slot(s) allocated
+ehci1: <EHCI (generic) USB 2.0 controller> mem 0xf2529000-0xf25293ff at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ugen1.1: <Intel> at usbus1
+ahci0: <AHCI-PCI-SATA> port 0x5060-0x507f,0x50b8-0x50bb,0x50a0-0x50a7,0x50bc-0x50bf,0x50a8-0x50af mem 0xf2528000-0xf25287ff at device 31.2 on pci0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ahci0: Intel hocus pocus
+ahci0: AHCI 1.3 cap 0xff30ff65<S64A,NCQ,SSNTF,SMPS,SSS,SALP,SAL,SCLO,PMD,SSC,PSC,EMS,SXS> cap2 0x4<APST>, 6 ports, 32 tags/port, gen 3 (6Gbps)
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087> at usbus0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087> at usbus1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <UPEK> at usbus0
+ahci0.0: Found SSD "SPCC Solid State Disk SBFM61.3" serial=...
+ahci0.0: tags=32/32 satacap=850e satacap2=0006 satafea=004c NCQ=YES capacity=244198.33MB
+ahci0.0: f85=7469 f86=bc01 f87=4063 WC=enabled RA=enabled SEC=frozen
+ugen1.3: <SCM Microsystems Inc.> at usbus1
+ugen0.4: <Broadcom Corp> at usbus0
+ugen0.5: <Chicony Electronics Co., Ltd.> at usbus0
+ahci0.1: No device detected
+ahci0.4: No device detected
+pci0: <serial bus, SMBus> (vendor 0x8086, dev 0x1c22) at device 31.3
+atkbdc0: <Keyboard controller (i8042)> port 0x64,0x60 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+interrupt uses mplock: psm0
+psm0: model Generic PS/2 mouse, device ID 0
+ACPI: Enabled 4 GPEs in block 00 to 3F
+aesni0: <AES-CBC,AES-XTS> on motherboard
+padlock0: No ACE support.
+rdrand0: No RdRand support.
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcffff on isa0
+sio0: can't drain, serial port might not exist, disabling
+sio1: can't drain, serial port might not exist, disabling
+hpt27xx: no controller detected.
+CAM: Configuring 3 busses
+CAM: finished configuring all busses
+da0 at ahci0 bus 0 target 0 lun 0
+da0: <SATA SPCC Solid State SBFM> Fixed Direct Access SCSI-4 device 
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: 244198MB (500118192 512 byte sectors: 255H 63S/T 31130C)
+da0: supports TRIM
+Mounting root from hammer2:serno/XXXXXXXXXXXXXXXXXXXXXXXX
+hammer2_mount: root 'serno/XXXXXXXXXXXXXXXXXXXXXXXX'
+hammer2_mount: dev="serno/XXXXXXXXXXXXXXXXXXXXXXXX" label="ROOT" rdonly=1
+hammer2: using volume header #1
+hammer2_mount hmp=0xfffff800d5ba0000 pmp=0xfffff800d3480200
+DMA space used: 11072k, remaining available: 131072k
+Mounting devfs
+hammer2_mount: '/dev/serno/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+hammer2_mount: dev="/dev/serno/XXXXXXXXXXXXXXXXXXXXXXXX" label="ROOT" rdonly=1
+hammer2 mount "serno/XXXXXXXXXXXXXXXXXXXXXXXX":  no recovery needed
+[drm] Initialized
+[drm] pdev:  vendor=0x8086  device=0x0126 rev=0x09
+[drm]       svendor=0x17aa sdevice=0x21da irq=18
+WARN_ON(domain->wake_count == 0)<6>[drm] Memory usable by graphics device = 2048M
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+tunable drm.video.LVDS-1 is not set
+tunable drm.video.VGA-1 is not set
+tunable drm.video.HDMI-A-1 is not set
+tunable drm.video.DP-1 is not set
+tunable drm.video.HDMI-A-2 is not set
+tunable drm.video.HDMI-A-3 is not set
+tunable drm.video.DP-2 is not set
+tunable drm.video.DP-3 is not set
+[drm] taking over the fictitious range 0xe0000000-0x10000000
+kms console: xpixels 1366 ypixels 768
+[drm] Initialized i915 1.6.0 20161024 for (null) on minor 0
+drm0 on vgapci0
+hdac0: <Intel Cougar Point HDA Controller> mem 0xf2520000-0xf2523fff at device 27.0 on pci0
+hdac0: link ctrl 0x800
+hdac0: disable nosnoop
+hdacc0: <Conexant CX20590 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant CX20590 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant CX20590 (Analog 2.0+HP/2.0)> at nid 31,25 and 35,27 on hdaa0
+hdacc1: <Intel Cougar Point HDA CODEC> at cad 3 on hdac0
+hdaa1: <Intel Cougar Point Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel Cougar Point (HDMI/DP 8ch)> at nid 5 on hdaa1
+pcm2: <Intel Cougar Point (HDMI/DP 8ch)> at nid 6 on hdaa1
+pcm3: <Intel Cougar Point (HDMI/DP 8ch)> at nid 7 on hdaa1
+wlan0: driver didn't set altq_maxlen
+wlan0: MAC address: XXX
+iwn0: iwn_read_firmware: ucode rev=0x271f0501
+iwn0: iwn_read_firmware: ucode rev=0x271f0501
+swap low/high-water marks set to 83883/125825
+system power profile changed to 'economy'
+interface virtio.1 already present in the KLD 'kernel'!
+linker_load_file: Unsupported file type
+boot() called on cpu#2
+Switching to cpu #0 for shutdown
+Waiting (max 60 seconds) for system thread swapcached to stop...stopped
+Waiting (max 60 seconds) for system thread vnlru to stop...stopped
+Waiting (max 60 seconds) for system thread consttyd to stop...stopped
+Waiting (max 60 seconds) for system thread bufdaemon to stop...stopped
+Waiting (max 60 seconds) for system thread bufdaemon_hw to stop...stopped
+
+syncing disks... 0 0 0 
+done
+hammer2_unmount(A): devvp serno/XXXXXXXXXXXXXXXXXXXXXXXX rbdirty 0 ronly=0
+hammer2_unmount(B): devvp serno/XXXXXXXXXXXXXXXXXXXXXXXX rbdirty 0
+v-chain 0xfffff800d5ba04c0.255 0000000000000000/0 mir=00000000000001bc
+      [00002000] (?) refs=1
+f-chain 0xfffff800d5ba0680.254 0000000000000000/0 mir=00000000000001bc
+      [00002000] (?) refs=0
+malloc_uninit: 120 bytes of 'HAMMER2-cler shutdown
+uhub0: at usbus0, port 1, addr 1 (disconnected)
+ugeected)
+ugen0.4: <Broadcom Corp> at usbus0 (disconnected)
+ugen0.5: <Chicony Electronics Co., Ltd.> at usbus0 (disconnected)
+uhub2: detached
+uhub0: detached
+usbus0: Controller shutdown complete
+Copyright (c) 14CD-DA4F The DragonFly Project.
+Copyright (c) 7252-14A5 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+DragonFly vXXX.XXX.XXX.XXX.gd0dff-DEVELOPMENT #0: Fri May 29 09:20:25 EDT 2020
+    root@DragonFly.X220:/usr/obj/usr/src/sys/X86_64_GENERIC
+acpi_hpet: frequency 14318180
+Using cputimer HPET for TSC calibration
+Timer latency (in TSC ticks): 1816 min=1763 max=1938
+TSC invariant clock: 2491905888 Hz
+CPU: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz (2491.91-MHz K8-class CPU)
+  Origin = "GenuineIntel"  Id = 0x206a7  Stepping = 7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x17bae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,AVX>
+  AMD Features=0x28000800<SYSCALL,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Thermal and PM Features=0x77<SENSOR,TURBO,ARAT,PLN,ECMD,PTM>
+  MONITOR/MWAIT Features=0x3<CST,INTBRK>
+real memory  = 8467509248 (8075 MB)
+avail memory = 8142016512 (7764 MB)
+LAPIC: enter X2APIC mode
+madt_lapic_probe: lapic_count=4 x2apic_count=0
+ACPI CPUS = 4
+lapic: TSC Deadline Mode: shift 1, frequency 1245952944 Hz
+CPU Topology: cores_per_chip: 2; threads_per_core: 2; chips_per_package: 1;
+srat_probe: can't locate SRAT
+Initialize MI interrupts for 4 cpus
+TSC testing MP synchronization ...
+TSC MPSYNC TEST 424 4 -> 106 (10uS=24919)
+TSC is MP synchronized
+TSC: cputimer freq 77872059, shift 5
+Spectre: support=( IBRS STIBP IBPB ) req=0000 operating=( none )
+MDS: support=( none ) req=ffff operating=( none )
+VMM: available, disabled by default
+machdep.meltdown_mitigation enabled to protect against (mostly Intel) meltdown bug
+system call performance will be impacted
+interrupt uses mplock: swi_taskq
+wdog: In-kernel automatic watchdog reset enabled
+md0: Malloc disk
+evdev device loaded.
+kbd1 at kbdmux0
+ACPI: RSDP 0x00000000DAFFE014 000024 (v02 LENOVO)
+ACPI: XSDT 0x00000000DAFFE120 0000AC (v01 LENOVO TP-8D    00001460 PTEC 00000002)
+ACPI: FACP 0x00000000DAFE7000 0000F4 (v04 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: DSDT 0x00000000DAFEA000 00FA89 (v01 LENOVO TP-8D    00001460 INTL 20061109)
+ACPI: FACS 0x00000000DAF2D000 000040
+ACPI: SLIC 0x00000000DAFFD000 000176 (v01 LENOVO TP-8D    00001460 PTEC 00000001)
+ACPI: SSDT 0x00000000DAFFC000 000249 (v01 LENOVO TP-SSDT2 00000200 INTL 20061109)
+ACPI: SSDT 0x00000000DAFFB000 000033 (v01 LENOVO TP-SSDT1 00000100 INTL 20061109)
+ACPI: SSDT 0x00000000DAFFA000 0007D1 (v01 LENOVO SataAhci 00001000 INTL 20061109)
+ACPI: HPET 0x00000000DAFE6000 000038 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: APIC 0x00000000DAFE5000 000098 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: MCFG 0x00000000DAFE4000 00003C (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: ECDT 0x00000000DAFE3000 000052 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: ASF! 0x00000000DAFE9000 0000A5 (v32 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: TCPA 0x00000000DAFE2000 000032 (v02 PTL    LENOVO   06040000 LNVO 00000001)
+ACPI: SSDT 0x00000000DAFE1000 000A27 (v01 PmRef  Cpu0Ist  00003000 INTL 20061109)
+ACPI: SSDT 0x00000000DAFE0000 000996 (v01 PmRef  CpuPm    00003000 INTL 20061109)
+ACPI: DMAR 0x00000000DAFDF000 0000E8 (v01 INTEL  SNB      00000001 INTL 00000001)
+ACPI: UEFI 0x00000000DAFDE000 00003E (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: UEFI 0x00000000DAFDD000 000042 (v01 PTL    COMBUF   00000001 PTL  00000001)
+ACPI: UEFI 0x00000000DAFDC000 000292 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+sc0: <System console> on motherboard
+sc0: EFI_FB <16 virtual consoles, flags=0x700>
+cryptosoft0: <software crypto> on motherboard
+acpi0: <LENOVO TP-8D> on motherboard
+ACPI: 6 ACPI AML tables successfully acquired and loaded
+ACPI FADT: SCI testing interrupt mode ...
+ACPI FADT: SCI select level/high
+acpi_ec0: <Embedded Controller: GPE 0x11, ECDT> port 0x66,0x62 on acpi0
+AcpiOsUnmapMemory: Warning, deallocation did not track allocation: 0xfffff800cf235dd0/00000230 (actual was 0xfffff800cf236000/00000249)
+acpi0: Power Button (fixed)
+acpi_hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+acpi_timer0 on acpi0
+cpu0: <ACPI CPU> on acpi0
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF800CF0C2E00 0008C0 (v01 PmRef  Cpu0Cst  00003001 INTL 20061109)
+cpu_cst0: <ACPI CPU C-State> on cpu0
+cpu_pst0: <ACPI CPU P-State> on cpu0
+clockmod0: <CPU clock modulation> on cpu0
+perfbias0: <CPU perf-energy bias> on cpu0
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+cpu1: <ACPI CPU> on acpi0
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF800C7DEF140 000303 (v01 PmRef  ApIst    00003000 INTL 20061109)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF80059CD82A0 000119 (v01 PmRef  ApCst    00003000 INTL 20061109)
+cpu_cst1: <ACPI CPU C-State> on cpu1
+cpu_pst1: <ACPI CPU P-State> on cpu1
+clockmod1: <CPU clock modulation> on cpu1
+perfbias1: <CPU perf-energy bias> on cpu1
+coretemp1: <CPU On-Die Thermal Sensors> on cpu1
+cpu2: <ACPI CPU> on acpi0
+cpu_cst2: <ACPI CPU C-State> on cpu2
+cpu_pst2: <ACPI CPU P-State> on cpu2
+clockmod2: <CPU clock modulation> on cpu2
+perfbias2: <CPU perf-energy bias> on cpu2
+coretemp2: <CPU On-Die Thermal Sensors> on cpu2
+cpu3: <ACPI CPU> on acpi0
+cpu_cst3: <ACPI CPU C-State> on cpu3
+cpu_pst3: <ACPI CPU P-State> on cpu3
+clockmod3: <CPU clock modulation> on cpu3
+perfbias3: <CPU perf-energy bias> on cpu3
+coretemp3: <CPU On-Die Thermal Sensors> on cpu3
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_button0: <Sleep Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x5000-0x503f mem 0xe0000000-0xefffffff,0xf0000000-0xf03fffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+pci0: <simple comms> (vendor 0x8086, dev 0x1c3a) at device 22.0
+em0: <Intel(R) PRO/1000 Network Connection PCH2_LV_LM 7.6.2> port 0x5080-0x509f mem 0xf252b000-0xf252bfff,0xf2500000-0xf251ffff at device 25.0 on pci0
+em0: MAC address: XXX
+ehci0: <EHCI (generic) USB 2.0 controller> mem 0xf252a000-0xf252a3ff at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pci0: <multimedia, HDA> (vendor 0x8086, dev 0x1c20) at device 27.0
+ugen0.1: <Intel> at usbus0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+pci2: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+pci3: <ACPI PCI bus> on pcib2
+iwn0: <Intel Centrino Wireless-N 1000> mem 0xf2400000-0xf2401fff at device 0.0 on pci3
+pcib3: <ACPI PCI-PCI bridge> at device 28.3 on pci0
+pcib3: Disable PCI Express hot-plug interrupts(0x0008)
+pci5: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pcib4: Disable PCI Express hot-plug interrupts(0x0008)
+pci13: <ACPI PCI bus> on pcib4
+sdhci_pci0: <RICOH R5CE823 SD> mem 0xf1400000-0xf14000ff at device 0.0 on pci13
+sdhci_pci0: 1 slot(s) allocated
+ehci1: <EHCI (generic) USB 2.0 controller> mem 0xf2529000-0xf25293ff at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ugen1.1: <Intel> at usbus1
+ahci0: <AHCI-PCI-SATA> port 0x5060-0x507f,0x50b8-0x50bb,0x50a0-0x50a7,0x50bc-0x50bf,0x50a8-0x50af mem 0xf2528000-0xf25287ff at device 31.2 on pci0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ahci0: Intel hocus pocus
+ahci0: AHCI 1.3 cap 0xff30ff65<S64A,NCQ,SSNTF,SMPS,SSS,SALP,SAL,SCLO,PMD,SSC,PSC,EMS,SXS> cap2 0x4<APST>, 6 ports, 32 tags/port, gen 3 (6Gbps)
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087> at usbus0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087> at usbus1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+ugen0.3: <UPEK> at usbus0
+uhub3: 8 ports with 8 removable, self powered
+ahci0.0: Found SSD "SPCC Solid State Disk SBFM61.3" serial=...
+ahci0.0: tags=32/32 satacap=850e satacap2=0006 satafea=004c NCQ=YES capacity=244198.33MB
+ahci0.0: f85=7469 f86=bc01 f87=4063 WC=enabled RA=enabled SEC=frozen
+ugen0.4: <Broadcom Corp> at usbus0
+ugen1.3: <SCM Microsystems Inc.> at usbus1
+ugen0.5: <Chicony Electronics Co., Ltd.> at usbus0
+ahci0.1: No device detected
+ahci0.4: No device detected
+pci0: <serial bus, SMBus> (vendor 0x8086, dev 0x1c22) at device 31.3
+atkbdc0: <Keyboard controller (i8042)> port 0x64,0x60 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+interrupt uses mplock: psm0
+psm0: model Generic PS/2 mouse, device ID 0
+ACPI: Enabled 4 GPEs in block 00 to 3F
+aesni0: <AES-CBC,AES-XTS> on motherboard
+padlock0: No ACE support.
+rdrand0: No RdRand support.
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcffff on isa0
+sio0: can't drain, serial port might not exist, disabling
+sio1: can't drain, serial port might not exist, disabling
+hpt27xx: no controller detected.
+CAM: Configuring 3 busses
+CAM: finished configuring all busses
+da0 at ahci0 bus 0 target 0 lun 0
+da0: <SATA SPCC Solid State SBFM> Fixed Direct Access SCSI-4 device 
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: 244198MB (500118192 512 byte sectors: 255H 63S/T 31130C)
+da0: supports TRIM
+system power profile changed to 'economy'
+Mounting root from hammer2:serno/XXXXXXXXXXXXXXXXXXXXXXXX
+hammer2_mount: root 'serno/XXXXXXXXXXXXXXXXXXXXXXXX'
+hammer2_mount: dev="serno/XXXXXXXXXXXXXXXXXXXXXXXX" label="ROOT" rdonly=1
+hammer2: using volume header #0
+hammer2_mount hmp=0xfffff800d5ba0000 pmp=0xfffff800d3480200
+DMA space used: 11072k, remaining available: 131072k
+Mounting devfs
+hammer2_mount: '/dev/serno/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+hammer2_mount: dev="/dev/serno/XXXXXXXXXXXXXXXXXXXXXXXX" label="ROOT" rdonly=1
+hammer2 mount "serno/XXXXXXXXXXXXXXXXXXXXXXXX":  no recovery needed
+[drm] Initialized
+[drm] pdev:  vendor=0x8086  device=0x0126 rev=0x09
+[drm]       svendor=0x17aa sdevice=0x21da irq=18
+WARN_ON(domain->wake_count == 0)<6>[drm] Memory usable by graphics device = 2048M
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+tunable drm.video.LVDS-1 is not set
+tunable drm.video.VGA-1 is not set
+tunable drm.video.HDMI-A-1 is not set
+tunable drm.video.DP-1 is not set
+tunable drm.video.HDMI-A-2 is not set
+tunable drm.video.HDMI-A-3 is not set
+tunable drm.video.DP-2 is not set
+tunable drm.video.DP-3 is not set
+[drm] taking over the fictitious range 0xe0000000-0x10000000
+kms console: xpixels 1366 ypixels 768
+[drm] Initialized i915 1.6.0 20161024 for (null) on minor 0
+drm0 on vgapci0
+hdac0: <Intel Cougar Point HDA Controller> mem 0xf2520000-0xf2523fff at device 27.0 on pci0
+hdac0: link ctrl 0x800
+hdac0: disable nosnoop
+hdacc0: <Conexant CX20590 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant CX20590 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant CX20590 (Analog 2.0+HP/2.0)> at nid 31,25 and 35,27 on hdaa0
+hdacc1: <Intel Cougar Point HDA CODEC> at cad 3 on hdac0
+hdaa1: <Intel Cougar Point Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel Cougar Point (HDMI/DP 8ch)> at nid 5 on hdaa1
+pcm2: <Intel Cougar Point (HDMI/DP 8ch)> at nid 6 on hdaa1
+pcm3: <Intel Cougar Point (HDMI/DP 8ch)> at nid 7 on hdaa1
+wlan0: driver didn't set altq_maxlen
+wlan0: MAC address: XXX
+iwn0: iwn_read_firmware: ucode rev=0x271f0501
+iwn0: iwn_read_firmware: ucode rev=0x271f0501
+swap low/high-water marks set to 83883/125825
+boot() called on cpu#3
+Switching to cpu #0 for shutdown
+Waiting (max 60 seconds) for system thread swapcached to stop...stopped
+Waiting (max 60 seconds) for system thread vnlru to stop...stopped
+Waiting (max 60 seconds) for system thread consttyd to stop...stopped
+Waiting (max 60 seconds) for system thread bufdaemon to stop...stopped
+Waiting (max 60 seconds) for system thread bufdaemon_hw to stop...stopped
+
+syncing disks... 0 0 0 
+done
+Copyright (c) 14CD-DA4F The DragonFly Project.
+Copyright (c) 7252-14A5 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+DragonFly vXXX.XXX.XXX.XXX.gd0dff-DEVELOPMENT #0: Fri May 29 09:20:25 EDT 2020
+    root@DragonFly.X220:/usr/obj/usr/src/sys/X86_64_GENERIC
+acpi_hpet: frequency 14318180
+Using cputimer HPET for TSC calibration
+Timer latency (in TSC ticks): 1814 min=1700 max=1962
+TSC invariant clock: 2491906034 Hz
+CPU: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz (2491.91-MHz K8-class CPU)
+  Origin = "GenuineIntel"  Id = 0x206a7  Stepping = 7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x17bae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,AVX>
+  AMD Features=0x28000800<SYSCALL,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Thermal and PM Features=0x77<SENSOR,TURBO,ARAT,PLN,ECMD,PTM>
+  MONITOR/MWAIT Features=0x3<CST,INTBRK>
+real memory  = 8467509248 (8075 MB)
+avail memory = 8142016512 (7764 MB)
+LAPIC: enter X2APIC mode
+madt_lapic_probe: lapic_count=4 x2apic_count=0
+ACPI CPUS = 4
+lapic: TSC Deadline Mode: shift 1, frequency 1245953017 Hz
+CPU Topology: cores_per_chip: 2; threads_per_core: 2; chips_per_package: 1;
+srat_probe: can't locate SRAT
+Initialize MI interrupts for 4 cpus
+TSC testing MP synchronization ...
+TSC MPSYNC TEST 225 4 -> 56 (10uS=24919)
+TSC is MP synchronized
+TSC: cputimer freq 77872063, shift 5
+Spectre: support=( IBRS STIBP IBPB ) req=0000 operating=( none )
+MDS: support=( none ) req=ffff operating=( none )
+VMM: available, disabled by default
+machdep.meltdown_mitigation enabled to protect against (mostly Intel) meltdown bug
+system call performance will be impacted
+interrupt uses mplock: swi_taskq
+wdog: In-kernel automatic watchdog reset enabled
+md0: Malloc disk
+evdev device loaded.
+kbd1 at kbdmux0
+ACPI: RSDP 0x00000000DAFFE014 000024 (v02 LENOVO)
+ACPI: XSDT 0x00000000DAFFE120 0000AC (v01 LENOVO TP-8D    00001460 PTEC 00000002)
+ACPI: FACP 0x00000000DAFE7000 0000F4 (v04 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: DSDT 0x00000000DAFEA000 00FA89 (v01 LENOVO TP-8D    00001460 INTL 20061109)
+ACPI: FACS 0x00000000DAF2D000 000040
+ACPI: SLIC 0x00000000DAFFD000 000176 (v01 LENOVO TP-8D    00001460 PTEC 00000001)
+ACPI: SSDT 0x00000000DAFFC000 000249 (v01 LENOVO TP-SSDT2 00000200 INTL 20061109)
+ACPI: SSDT 0x00000000DAFFB000 000033 (v01 LENOVO TP-SSDT1 00000100 INTL 20061109)
+ACPI: SSDT 0x00000000DAFFA000 0007D1 (v01 LENOVO SataAhci 00001000 INTL 20061109)
+ACPI: HPET 0x00000000DAFE6000 000038 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: APIC 0x00000000DAFE5000 000098 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: MCFG 0x00000000DAFE4000 00003C (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: ECDT 0x00000000DAFE3000 000052 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: ASF! 0x00000000DAFE9000 0000A5 (v32 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: TCPA 0x00000000DAFE2000 000032 (v02 PTL    LENOVO   06040000 LNVO 00000001)
+ACPI: SSDT 0x00000000DAFE1000 000A27 (v01 PmRef  Cpu0Ist  00003000 INTL 20061109)
+ACPI: SSDT 0x00000000DAFE0000 000996 (v01 PmRef  CpuPm    00003000 INTL 20061109)
+ACPI: DMAR 0x00000000DAFDF000 0000E8 (v01 INTEL  SNB      00000001 INTL 00000001)
+ACPI: UEFI 0x00000000DAFDE000 00003E (v01 LENOVO TP-8D    00001460 PTL  00000002)
+ACPI: UEFI 0x00000000DAFDD000 000042 (v01 PTL    COMBUF   00000001 PTL  00000001)
+ACPI: UEFI 0x00000000DAFDC000 000292 (v01 LENOVO TP-8D    00001460 PTL  00000002)
+sc0: <System console> on motherboard
+sc0: EFI_FB <16 virtual consoles, flags=0x700>
+cryptosoft0: <software crypto> on motherboard
+acpi0: <LENOVO TP-8D> on motherboard
+ACPI: 6 ACPI AML tables successfully acquired and loaded
+ACPI FADT: SCI testing interrupt mode ...
+ACPI FADT: SCI select level/high
+acpi_ec0: <Embedded Controller: GPE 0x11, ECDT> port 0x66,0x62 on acpi0
+AcpiOsUnmapMemory: Warning, deallocation did not track allocation: 0xfffff800cf235dd0/00000230 (actual was 0xfffff800cf236000/00000249)
+acpi0: Power Button (fixed)
+acpi_hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+acpi_timer0 on acpi0
+cpu0: <ACPI CPU> on acpi0
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF800CF0C2E00 0008C0 (v01 PmRef  Cpu0Cst  00003001 INTL 20061109)
+cpu_cst0: <ACPI CPU C-State> on cpu0
+cpu_pst0: <ACPI CPU P-State> on cpu0
+clockmod0: <CPU clock modulation> on cpu0
+perfbias0: <CPU perf-energy bias> on cpu0
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+cpu1: <ACPI CPU> on acpi0
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF800C7DEF140 000303 (v01 PmRef  ApIst    00003000 INTL 20061109)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF80059CD82A0 000119 (v01 PmRef  ApCst    00003000 INTL 20061109)
+cpu_cst1: <ACPI CPU C-State> on cpu1
+cpu_pst1: <ACPI CPU P-State> on cpu1
+clockmod1: <CPU clock modulation> on cpu1
+perfbias1: <CPU perf-energy bias> on cpu1
+coretemp1: <CPU On-Die Thermal Sensors> on cpu1
+cpu2: <ACPI CPU> on acpi0
+cpu_cst2: <ACPI CPU C-State> on cpu2
+cpu_pst2: <ACPI CPU P-State> on cpu2
+clockmod2: <CPU clock modulation> on cpu2
+perfbias2: <CPU perf-energy bias> on cpu2
+coretemp2: <CPU On-Die Thermal Sensors> on cpu2
+cpu3: <ACPI CPU> on acpi0
+cpu_cst3: <ACPI CPU C-State> on cpu3
+cpu_pst3: <ACPI CPU P-State> on cpu3
+clockmod3: <CPU clock modulation> on cpu3
+perfbias3: <CPU perf-energy bias> on cpu3
+coretemp3: <CPU On-Die Thermal Sensors> on cpu3
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_button0: <Sleep Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x5000-0x503f mem 0xe0000000-0xefffffff,0xf0000000-0xf03fffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+pci0: <simple comms> (vendor 0x8086, dev 0x1c3a) at device 22.0
+em0: <Intel(R) PRO/1000 Network Connection PCH2_LV_LM 7.6.2> port 0x5080-0x509f mem 0xf252b000-0xf252bfff,0xf2500000-0xf251ffff at device 25.0 on pci0
+em0: MAC address: XXX
+ehci0: <EHCI (generic) USB 2.0 controller> mem 0xf252a000-0xf252a3ff at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pci0: <multimedia, HDA> (vendor 0x8086, dev 0x1c20) at device 27.0
+ugen0.1: <Intel> at usbus0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+pci2: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+pci3: <ACPI PCI bus> on pcib2
+iwn0: <Intel Centrino Wireless-N 1000> mem 0xf2400000-0xf2401fff at device 0.0 on pci3
+pcib3: <ACPI PCI-PCI bridge> at device 28.3 on pci0
+pcib3: Disable PCI Express hot-plug interrupts(0x0008)
+pci5: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pcib4: Disable PCI Express hot-plug interrupts(0x0008)
+pci13: <ACPI PCI bus> on pcib4
+sdhci_pci0: <RICOH R5CE823 SD> mem 0xf1400000-0xf14000ff at device 0.0 on pci13
+sdhci_pci0: 1 slot(s) allocated
+ehci1: <EHCI (generic) USB 2.0 controller> mem 0xf2529000-0xf25293ff at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ugen1.1: <Intel> at usbus1
+ahci0: <AHCI-PCI-SATA> port 0x5060-0x507f,0x50b8-0x50bb,0x50a0-0x50a7,0x50bc-0x50bf,0x50a8-0x50af mem 0xf2528000-0xf25287ff at device 31.2 on pci0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ahci0: Intel hocus pocus
+ahci0: AHCI 1.3 cap 0xff30ff65<S64A,NCQ,SSNTF,SMPS,SSS,SALP,SAL,SCLO,PMD,SSC,PSC,EMS,SXS> cap2 0x4<APST>, 6 ports, 32 tags/port, gen 3 (6Gbps)
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087> at usbus0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087> at usbus1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+ugen0.3: <UPEK> at usbus0
+uhub3: 8 ports with 8 removable, self powered
+ahci0.0: Found SSD "SPCC Solid State Disk SBFM61.3" serial=...
+ahci0.0: tags=32/32 satacap=850e satacap2=0006 satafea=004c NCQ=YES capacity=244198.33MB
+ahci0.0: f85=7469 f86=bc01 f87=4063 WC=enabled RA=enabled SEC=frozen
+ugen0.4: <Broadcom Corp> at usbus0
+ugen1.3: <SCM Microsystems Inc.> at usbus1
+ugen0.5: <Chicony Electronics Co., Ltd.> at usbus0
+ahci0.1: No device detected
+ahci0.4: No device detected
+pci0: <serial bus, SMBus> (vendor 0x8086, dev 0x1c22) at device 31.3
+atkbdc0: <Keyboard controller (i8042)> port 0x64,0x60 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+interrupt uses mplock: psm0
+psm0: model Generic PS/2 mouse, device ID 0
+ACPI: Enabled 4 GPEs in block 00 to 3F
+aesni0: <AES-CBC,AES-XTS> on motherboard
+padlock0: No ACE support.
+rdrand0: No RdRand support.
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcffff on isa0
+sio0: can't drain, serial port might not exist, disabling
+sio1: can't drain, serial port might not exist, disabling
+hpt27xx: no controller detected.
+CAM: Configuring 3 busses
+CAM: finished configuring all busses
+da0 at ahci0 bus 0 target 0 lun 0
+da0: <SATA SPCC Solid State SBFM> Fixed Direct Access SCSI-4 device 
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: 244198MB (500118192 512 byte sectors: 255H 63S/T 31130C)
+da0: supports TRIM
+system power profile changed to 'economy'
+Mounting root from hammer2:serno/XXXXXXXXXXXXXXXXXXXXXXXX
+hammer2_mount: root 'serno/XXXXXXXXXXXXXXXXXXXXXXXX'
+hammer2_mount: dev="serno/XXXXXXXXXXXXXXXXXXXXXXXX" label="ROOT" rdonly=1
+hammer2: using volume header #1
+hammer2_mount hmp=0xfffff800d5b60000 pmp=0xfffff800d3480200
+DMA space used: 11072k, remaining available: 131072k
+Mounting devfs
+hammer2_mount: '/dev/serno/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+hammer2_mount: dev="/dev/serno/XXXXXXXXXXXXXXXXXXXXXXXX" label="ROOT" rdonly=1
+hammer2 mount "serno/XXXXXXXXXXXXXXXXXXXXXXXX":  no recovery needed
+[drm] Initialized
+[drm] pdev:  vendor=0x8086  device=0x0126 rev=0x09
+[drm]       svendor=0x17aa sdevice=0x21da irq=18
+WARN_ON(domain->wake_count == 0)<6>[drm] Memory usable by graphics device = 2048M
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+tunable drm.video.LVDS-1 is not set
+tunable drm.video.VGA-1 is not set
+tunable drm.video.HDMI-A-1 is not set
+tunable drm.video.DP-1 is not set
+tunable drm.video.HDMI-A-2 is not set
+tunable drm.video.HDMI-A-3 is not set
+tunable drm.video.DP-2 is not set
+tunable drm.video.DP-3 is not set
+[drm] taking over the fictitious range 0xe0000000-0x10000000
+kms console: xpixels 1366 ypixels 768
+[drm] Initialized i915 1.6.0 20161024 for (null) on minor 0
+drm0 on vgapci0
+hdac0: <Intel Cougar Point HDA Controller> mem 0xf2520000-0xf2523fff at device 27.0 on pci0
+hdac0: link ctrl 0x800
+hdac0: disable nosnoop
+hdacc0: <Conexant CX20590 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant CX20590 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant CX20590 (Analog 2.0+HP/2.0)> at nid 31,25 and 35,27 on hdaa0
+hdacc1: <Intel Cougar Point HDA CODEC> at cad 3 on hdac0
+hdaa1: <Intel Cougar Point Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel Cougar Point (HDMI/DP 8ch)> at nid 5 on hdaa1
+pcm2: <Intel Cougar Point (HDMI/DP 8ch)> at nid 6 on hdaa1
+pcm3: <Intel Cougar Point (HDMI/DP 8ch)> at nid 7 on hdaa1
+wlan0: driver didn't set altq_maxlen
+wlan0: MAC address: XXX
+iwn0: iwn_read_firmware: ucode rev=0x271f0501
+iwn0: iwn_read_firmware: ucode rev=0x271f0501
+swap low/high-water marks set to 83883/125825

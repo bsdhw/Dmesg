@@ -1,0 +1,160 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.1 (GENERIC) #0: Sun Oct 18 19:24:30 UTC 2020
+	XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+total memory = 255 MB
+avail memory = 231 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+running cgd selftest aes-xts-256 aes-xts-512 done
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+Hewlett-Packard HP Vectra (VL400)
+mainbus0 (root)
+ACPI: RSDP 0x00000000000F7380 000014 (v00 PTLTD )
+ACPI: RSDT 0x000000000FFFCECE 000028 (v01 PTLTD    RSDT   06040000  LTP 00000000)
+ACPI: FACP 0x000000000FFFFB8C 000074 (v01 HP     HPBDD_IP 06040000 PTL  000F4240)
+ACPI: DSDT 0x000000000FFFCEF6 002C96 (v01 INTEL  Whitney  06040000 MSFT 0100000B)
+ACPI: FACS 0x000000000FFFFFC0 000040
+ACPI: 1 ACPI AML tables successfully acquired and loaded
+cpu0 at mainbus0
+cpu0: Intel 686-class, 730MHz, id 0x686
+cpu0: package 0, core 0, smt 0
+acpi0 at mainbus0: Intel ACPICA 20190405
+acpi0: X/RSDT: OemId <PTLTD ,  RSDT  ,06040000>, AslId < LTP,00000000>
+LNKB: ACPI: Found matching pin for 0.31.INTB at func 3: 9
+LNKD: ACPI: Found matching pin for 0.31.INTD at func 2: 11
+LNKA: ACPI: Found matching pin for 2.0.INTA at func 0: 10
+LNKD: ACPI: Found matching pin for 1.0.INTA at func 0: 11
+LNKC: ACPI: Found matching pin for 1.4.INTA at func 0: 5
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+FWH (INT0800) at acpi0 not configured
+MBRD (PNP0C02) at acpi0 not configured
+MATH (PNP0C04) at acpi0 not configured
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+attimer1 at acpi0 (TIME, PNP0100): io 0x40-0x43 irq 0
+pckbc1 at acpi0 (KBC0, PNP0303-17) (kbd port): io 0x60,0x64 irq 1
+FDC (PNP0700) at acpi0 not configured
+COMA (PNP0501) at acpi0 not configured
+COMB (PNP0501) at acpi0 not configured
+LEPP (PNP0400) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C): ACPI Power Button
+apm0 at acpi0: Power Management spec V1.2
+ACPI: Enabled 1 GPEs in block 10 to 1F
+attimer1: attached to pcppi1
+pckbd0 at pckbc1 (kbd slot)
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: This pci host supports neither MSI nor MSI-X.
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: vendor 8086 product 1130 (rev. 0x02)
+agp0 at pchb0: using generic initialization for Intel AGP
+agp0: : aperture at 0xec000000, size 0x2400000
+ppb0 at pci0 dev 1 function 0: vendor 8086 product 1131 (rev. 0x02)
+pci1 at ppb0 bus 2
+pci1: This pci host supports neither MSI nor MSI-X.
+pci1: i/o space, memory space enabled
+nouveau0 at pci1 dev 0 function 0: vendor 10de product 0181 (rev. 0xc1)
+ppb1 at pci0 dev 30 function 0: vendor 8086 product 2418 (rev. 0x02)
+pci2 at ppb1 bus 1
+pci2: This pci host supports neither MSI nor MSI-X.
+pci2: i/o space, memory space enabled
+rtk0 at pci2 dev 0 function 0: Realtek 8139 10/100BaseTX (rev. 0x10)
+rtk0: interrupting at irq 11
+rtk0: Ethernet address XXX
+rlphy0 at rtk0 phy 7: Realtek internal PHY
+rlphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+ex0 at pci2 dev 4 function 0: 3Com 3c905C-TX 10/100 Ethernet with mngmt (rev. 0x78)
+ex0: interrupting at irq 5
+ex0: MAC address XXX
+bmtphy0 at ex0 phy 24: Broadcom 3c905C internal PHY, rev. 7
+bmtphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+ichlpcib0 at pci0 dev 31 function 0: vendor 8086 product 2410 (rev. 0x02)
+timecounter: Timecounter "ichlpcib0" frequency 3579545 Hz quality 1000
+ichlpcib0: 24-bit timer
+tco0 at ichlpcib0: TCO (watchdog) timer configured.
+tco0: Min/Max interval 2/37 seconds
+piixide0 at pci0 dev 31 function 1: Intel 82801AA IDE Controller (ICH) (rev. 0x02)
+piixide0: bus-master DMA support present
+piixide0: primary channel wired to compatibility mode
+piixide0: primary channel interrupting at irq 14
+atabus0 at piixide0 channel 0
+piixide0: secondary channel wired to compatibility mode
+piixide0: secondary channel interrupting at irq 15
+atabus1 at piixide0 channel 1
+uhci0 at pci0 dev 31 function 2: vendor 8086 product 2412 (rev. 0x02)
+uhci0: interrupting at irq 11
+usb0 at uhci0: USB revision 1.0
+ichsmb0 at pci0 dev 31 function 3: vendor 8086 product 2413 (rev. 0x02)
+ichsmb0: interrupting at irq 9
+iic0 at ichsmb0: I2C bus
+auich0 at pci0 dev 31 function 5: i82801AA (ICH) AC-97 Audio
+auich0: interrupting at irq 9
+auich0: ac97: Crystal CS4299 codec; headphone, 20 bit DAC, 18 bit ADC, Crystal Semi 3D
+auich0: ac97: ext id 0x201<AMAP,VRA>
+isa0 at ichlpcib0
+lpt0 at isa0 port 0x378-0x37b irq 7
+com0 at isa0 port 0x3f8-0x3ff irq 4: ns16550a, working fifo
+com1 at isa0 port 0x2f8-0x2ff irq 3: ns16550a, working fifo
+fdc0 at isa0 port 0x3f0-0x3f7 irq 6 drq 2
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: HLT, lat   0 us, pow     0 mW
+acpicpu0: C2: I/O, lat  10 us, pow     0 mW
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+auich0: measured ac97 link rate at 47990 Hz, will use 48000 Hz
+audio0 at auich0: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+fd0 at fdc0 drive 0: 1.44MB, 80 cyl, 2 head, 18 sec
+uhub0 at usb0: NetBSD (0000) UHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub0: 2 ports with 2 removable, self powered
+IPsec: Initialized Security Association Processing.
+wd0 at atabus0 drive 0
+wd0: <WDC WD200EB-00BHF0>
+wd0: drive supports 16-sector PIO transfers, LBA addressing
+wd0: 19091 MB, 38789 cyl, 16 head, 63 sec, 512 bytes/sect x 39100223 sectors
+wd0: 32-bit data port
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 4 (Ultra/66)
+wd0(piixide0:0:0): using PIO mode 4, Ultra-DMA mode 4 (Ultra/66) (using DMA)
+atapibus0 at atabus1: 2 targets
+cd0 at atapibus0 drive 0: <HL-DT-ST DVDRAM GSA-4167B, 894B8EB84B89, DL11> cdrom removable
+cd0: 32-bit data port
+cd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 2 (Ultra/33)
+cd0(piixide0:1:0): using PIO mode 4, Ultra-DMA mode 2 (Ultra/33) (using DMA)
+boot device: wd0
+root on wd0a dumps on wd0b
+root file system type: ffs
+kern.module.path=/stand/i386/9.1/modules
+nouveau0: info: NVIDIA NV18 (018100c1)
+nouveau0: info: bios: version XXX.XXX.XXX.XXX.00
+nouveau0: notice: tmr: unknown input clock freq
+nouveau0: info: fb: 64 MiB DDR1
+Zone  kernel: Available graphics memory: 8589928184 kiB
+nouveau0: info: DRM: VRAM: 63 MiB
+nouveau0: info: DRM: GART: 128 MiB
+nouveau0: info: DRM: BMP version 5.40
+nouveau0: info: DRM: DCB version 2.2
+nouveau0: info: DRM: DCB outp 00: 01000300 000088b8
+nouveau0: info: DRM: DCB outp 01: 02010321 00000303
+nouveau0: info: DRM: Loading NV17 power sequencing microcode
+nouveau0: info: DRM: Saving VGA fonts
+kern info: [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+kern info: [drm] Driver supports precise vblank timestamp query.
+nouveau0: info: DRM: MM: using M2MF for buffer copies
+nouveau0: info: DRM: Setting dpms mode 3 on TV encoder (output 1)
+nouveaufb0 at nouveau0
+nouveaufb0: framebuffer at 0xcf3d1000, size 1440x900, depth 16, stride 3072
+wsdisplay0 at nouveaufb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)

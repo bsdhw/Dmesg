@@ -1,0 +1,511 @@
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE r354233 GENERIC powerpc
+gcc version 4.2.1 20070831 patched [FreeBSD]
+VT(ofwfb): resolution 1920x1200
+cpu0: Motorola PowerPC 7447A revision 1.2, 1249.05 MHz
+cpu0: Features 9c000000<PPC32,ALTIVEC,FPU,MMU>
+cpu0: HID0 8450c0bc<EMCP,TBEN,NAP,DPM,ICE,DCE,SGE,BTIC,LRSTK,FOLD,BHT>
+real memory  = 504221696 (480 MB)
+avail memory = 486268928 (463 MB)
+random: unblocking device.
+random: entropy device external interface
+kbd0 at kbdmux0
+ofwbus0: <Open Firmware Device Tree> on nexus0
+cpulist0: <Open Firmware CPU Group> on ofwbus0
+cpu0: <Open Firmware CPU> on cpulist0
+dfs0: <Dynamic Frequency Switching> on cpu0
+powermac_nvram0: <Apple NVRAM> mem 0xfff04000-0xfff07fff on ofwbus0
+powermac_nvram0: bank0 generation 156, bank1 generation 155
+unin0: <Apple UniNorth System Controller> mem 0xf8000000-0xf8ffffff on ofwbus0
+unin0: Version 210
+iichb0: <Keywest I2C controller> mem 0xf8001000-0xf8001fff irq 42 on unin0
+iicbus0: <OFW I2C bus> on iichb0
+iicbus0: <unknown card> at addr 0x1c0
+pcib0: <Apple UniNorth Host-PCI bridge> mem 0xf0000000-0xf1ffffff irq 45 on ofwbus0
+pci0: <OFW PCI bus> on pcib0
+agp0: <Apple UniNorth 2 AGP Bridge> on hostb0
+vgapci0: <VGA-compatible display> port 0x400-0x4ff mem 0x98000000-0x9fffffff,0x90000000-0x9000ffff irq 48 at device 16.0 on pci0
+vgapci0: Boot video device
+pcib1: <Apple UniNorth Host-PCI bridge> mem 0xf2000000-0xf3ffffff irq 45 on ofwbus0
+pci1: <OFW PCI bus> on pcib1
+macio0: <Intrepid I/O Controller> mem 0x80000000-0x8007ffff at device 23.0 on pci1
+openpic0: <OpenPIC Interrupt Controller> mem 0x40000-0x7ffff on macio0
+macgpio0: <MacIO GPIO Controller> mem 0x50-0x7f on macio0
+pmuextint0: <Apple PMU99 External Interrupt> extint-gpio 1 irq 47 on macgpio0
+scc0: <Zilog Z8530 dual channel SCC> mem 0x13000-0x13fff,0x8400-0x84ff,0x8500-0x85ff,0x8600-0x86ff,0x8700-0x87ff irq 22,5,6,23,7,8 on macio0
+uart0: <z8530, channel A> on scc0
+uart1: <z8530, channel B> on scc0
+pcm0: <Apple I2S Audio Controller> mem 0x10000-0x10fff,0x8000-0x80ff,0x8100-0x81ff irq 30,1,2,31,3,4 on macio0
+pmu0: <Apple PMU99 Controller> mem 0x16000-0x17fff irq 25 on macio0
+pmu0: registered as a time-of-day clock, resolution 0.001000s
+iichb1: <Keywest I2C controller> mem 0x18000-0x18fff irq 26 on macio0
+iicbus1: <OFW I2C bus> on iichb1
+iicbus1: <unknown card> at addr 0x1c0
+ata0: <Apple MacIO ATA Controller> mem 0x20000-0x20fff,0x8800-0x88ff irq 24,12 on macio0
+ohci0: <Apple KeyLargo/Intrepid USB controller> mem 0x80083000-0x80083fff irq 29 at device 26.0 on pci1
+usbus0 on ohci0
+ohci1: <NEC uPD 9210 USB controller> mem 0x80082000-0x80082fff irq 63 at device 27.0 on pci1
+usbus1 on ohci1
+ohci2: <NEC uPD 9210 USB controller> mem 0x80081000-0x80081fff irq 63 at device 27.1 on pci1
+usbus2 on ohci2
+ehci0: <NEC uPD 72010x USB 2.0 controller> mem 0x80080000-0x800800ff irq 63 at device 27.2 on pci1
+usbus3: EHCI version 1.0
+usbus3 on ehci0
+ohci3: <Apple KeyLargo/Intrepid USB controller> at device 24.0 on pci1
+usbus4 on ohci3
+ohci4: <Apple KeyLargo/Intrepid USB controller> at device 25.0 on pci1
+usbus5 on ohci4
+pcib2: <Apple UniNorth Host-PCI bridge> mem 0xf4000000-0xf5ffffff irq 45 on ofwbus0
+pci2: <OFW PCI bus> on pcib2
+ata1: <Intrepid Kauai ATA Controller> mem 0xf5004000-0xf5007fff irq 39 at device 13.0 on pci2
+fwohci0: <Apple UniNorth 2> mem 0xf5000000-0xf5000fff irq 40 at device 14.0 on pci2
+fwohci0: OHCI version 1.10 (ROM=0)
+fwohci0: No. of Isochronous channels is 8.
+fwohci0: EUI64 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+fwohci0: Phy 1394a available S400, 2 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+firewire0: <IEEE1394(FireWire) bus> on fwohci0
+fwe0: <Ethernet over FireWire> on firewire0
+if_fwe0: Fake Ethernet address: ...
+fwe0: Ethernet address: ...
+sbp0: <SBP-2/SCSI over FireWire> on firewire0
+fwohci0: Initiate bus reset
+fwohci0: fwohci_intr_core: BUS reset
+fwohci0: PhysicalUpperBound register is not implemented.  Physical memory access is limited to the first 4GB
+fwohci0: PhysicalUpperBound = 0x00000000
+fwohci0: fwohci_intr_core: node_id=0x00000000, SelfID Count=2, CYCLEMASTER mode
+gem0: <Apple UniNorth2 GMAC Ethernet> mem 0xf5200000-0xf53fffff irq 41 at device 15.0 on pci2
+miibus0: <MII bus> on gem0
+bmtphy0: <BCM5221 10/100 media interface> PHY 0 on miibus0
+bmtphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+gem0: 10kB RX FIFO, 4kB TX FIFO
+gem0: Ethernet address: ...
+cryptosoft0: <software crypto> on nexus0
+Timecounter "timebase" frequency 41620997 Hz quality 0
+Event timer "decrementer" frequency 41620997 Hz quality 1000
+Timecounters tick every 1.000 msec
+firewire0: 1 nodes, maxhop <= 0 cable IRM irm(0)  (me) 
+firewire0: bus manager 0 
+usbus0: 12Mbps Full Speed USB v1.0
+usbus1: 12Mbps Full Speed USB v1.0
+ugen0.1: <Apple OHCI root HUB> at usbus0
+uhub0: <Apple OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+ugen1.1: <NEC OHCI root HUB> at usbus1
+uhub1: <NEC OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+usbus2: 12Mbps Full Speed USB v1.0
+usbus3: 480Mbps High Speed USB v2.0
+ugen2.1: <NEC OHCI root HUB> at usbus2
+uhub2: <NEC OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub0: 2 ports with 2 removable, self powered
+ugen3.1: <NEC EHCI root HUB> at usbus3
+uhub3: <NEC EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+usbus4: 12Mbps Full Speed USB v1.0
+usbus5: 12Mbps Full Speed USB v1.0
+ugen4.1: <Apple OHCI root HUB> at usbus4
+uhub4: <Apple OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub1: 3 ports with 3 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+ugen5.1: <Apple OHCI root HUB> at usbus5
+uhub5: <Apple OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+uhub4: 2 ports with 2 removable, self powered
+uhub5: 2 ports with 2 removable, self powered
+ada0 at ata1 bus 0 scbus1 target 0 lun 0
+ada0: <TS64GCF400 20140806> CFA device
+ada0: Serial Number...
+ada0: 100.000MB/s transfers (UDMA5, PIO 512bytes)
+ada0: 61064MB (125059072 512 byte sectors)
+uhub3: 5 ports with 5 removable, self powered
+cd0 at ata1 bus 0 scbus1 target 1 lun 0
+cd0: <MATSHITA CD-RW  CW-8124 DACD> Removable CD-ROM SCSI device
+cd0: 33.300MB/s transfers (UDMA2, ATAPI 12bytes, PIO 65534bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+Trying to mount root from ufs:/dev/ada0s3 [rw]...
+ugen3.2: <Apple, Inc. Keyboard Hub> at usbus3
+uhub6 on uhub3
+uhub6: <Apple, Inc. Keyboard Hub, class 9/0, rev 2.00/96.15, addr 2> on usbus3
+uhub6: 3 ports with 2 removable, bus powered
+ugen3.3: <Apple, Inc Apple Keyboard> at usbus3
+ukbd0 on uhub6
+ukbd0: <Apple, Inc Apple Keyboard, class 0/0, rev 2.00/0.69, addr 3> on usbus3
+kbd1 at ukbd0
+uhid0 on uhub6
+uhid0: <Apple, Inc Apple Keyboard, class 0/0, rev 2.00/0.69, addr 3> on usbus3
+ugen3.4: <vendor 0x05e3 USB2.0 Hub> at usbus3
+uhub7 on uhub3
+uhub7: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 4> on usbus3
+warning: total configured swap (690173 pages) exceeds maximum recommended amount (238336 pages).
+warning: increase kern.maxswzone or reduce amount of swap.
+uhub7: 4 ports with 4 removable, self powered
+ugen3.5: <SINO WEALTH USB KEYBOARD> at usbus3
+ukbd1 on uhub7
+ukbd1: <SINO WEALTH USB KEYBOARD, class 0/0, rev 1.10/1.00, addr 5> on usbus3
+kbd2 at ukbd1
+ums0 on uhub7
+ums0: <SINO WEALTH USB KEYBOARD, class 0/0, rev 1.10/1.00, addr 5> on usbus3
+ums0: 5 buttons and [XYZT] coordinates ID=1
+lo0: link state changed to UP
+gem0: link state changed to DOWN
+gem0: link state changed to UP
+Security policy loaded: MAC/ntpd (mac_ntpd)
+ugen3.2: <Apple, Inc. Keyboard Hub> at usbus3 (disconnected)
+uhub6: at uhub3, port 1, addr 2 (disconnected)
+ugen3.3: <Apple, Inc Apple Keyboard> at usbus3 (disconnected)
+ukbd0: at uhub6, port 2, addr 3 (disconnected)
+ukbd0: detached
+uhid0: at uhub6, port 2, addr 3 (disconnected)
+uhid0: detached
+uhub6: detached
+ugen3.2: <Apple, Inc. Keyboard Hub> at usbus3
+uhub6 on uhub3
+uhub6: <Apple, Inc. Keyboard Hub, class 9/0, rev 2.00/96.15, addr 2> on usbus3
+uhub6: 3 ports with 2 removable, bus powered
+ugen3.3: <Apple, Inc Apple Keyboard> at usbus3
+ukbd0 on uhub6
+ukbd0: <Apple, Inc Apple Keyboard, class 0/0, rev 2.00/0.69, addr 3> on usbus3
+kbd1 at ukbd0
+uhid0 on uhub6
+uhid0: <Apple, Inc Apple Keyboard, class 0/0, rev 2.00/0.69, addr 3> on usbus3
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 1 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE r354233 GENERIC powerpc
+gcc version 4.2.1 20070831 patched [FreeBSD]
+VT(ofwfb): resolution 1920x1200
+cpu0: Motorola PowerPC 7447A revision 1.2, 1249.04 MHz
+cpu0: Features 9c000000<PPC32,ALTIVEC,FPU,MMU>
+cpu0: HID0 8450c0bc<EMCP,TBEN,NAP,DPM,ICE,DCE,SGE,BTIC,LRSTK,FOLD,BHT>
+real memory  = 504221696 (480 MB)
+avail memory = 486268928 (463 MB)
+random: unblocking device.
+random: entropy device external interface
+kbd0 at kbdmux0
+ofwbus0: <Open Firmware Device Tree> on nexus0
+cpulist0: <Open Firmware CPU Group> on ofwbus0
+cpu0: <Open Firmware CPU> on cpulist0
+dfs0: <Dynamic Frequency Switching> on cpu0
+powermac_nvram0: <Apple NVRAM> mem 0xfff04000-0xfff07fff on ofwbus0
+powermac_nvram0: bank0 generation 156, bank1 generation 155
+unin0: <Apple UniNorth System Controller> mem 0xf8000000-0xf8ffffff on ofwbus0
+unin0: Version 210
+iichb0: <Keywest I2C controller> mem 0xf8001000-0xf8001fff irq 42 on unin0
+iicbus0: <OFW I2C bus> on iichb0
+iicbus0: <unknown card> at addr 0x1c0
+pcib0: <Apple UniNorth Host-PCI bridge> mem 0xf0000000-0xf1ffffff irq 45 on ofwbus0
+pci0: <OFW PCI bus> on pcib0
+agp0: <Apple UniNorth 2 AGP Bridge> on hostb0
+vgapci0: <VGA-compatible display> port 0x400-0x4ff mem 0x98000000-0x9fffffff,0x90000000-0x9000ffff irq 48 at device 16.0 on pci0
+vgapci0: Boot video device
+pcib1: <Apple UniNorth Host-PCI bridge> mem 0xf2000000-0xf3ffffff irq 45 on ofwbus0
+pci1: <OFW PCI bus> on pcib1
+macio0: <Intrepid I/O Controller> mem 0x80000000-0x8007ffff at device 23.0 on pci1
+openpic0: <OpenPIC Interrupt Controller> mem 0x40000-0x7ffff on macio0
+macgpio0: <MacIO GPIO Controller> mem 0x50-0x7f on macio0
+pmuextint0: <Apple PMU99 External Interrupt> extint-gpio 1 irq 47 on macgpio0
+scc0: <Zilog Z8530 dual channel SCC> mem 0x13000-0x13fff,0x8400-0x84ff,0x8500-0x85ff,0x8600-0x86ff,0x8700-0x87ff irq 22,5,6,23,7,8 on macio0
+uart0: <z8530, channel A> on scc0
+uart1: <z8530, channel B> on scc0
+pcm0: <Apple I2S Audio Controller> mem 0x10000-0x10fff,0x8000-0x80ff,0x8100-0x81ff irq 30,1,2,31,3,4 on macio0
+pmu0: <Apple PMU99 Controller> mem 0x16000-0x17fff irq 25 on macio0
+pmu0: registered as a time-of-day clock, resolution 0.001000s
+iichb1: <Keywest I2C controller> mem 0x18000-0x18fff irq 26 on macio0
+iicbus1: <OFW I2C bus> on iichb1
+iicbus1: <unknown card> at addr 0x1c0
+ata0: <Apple MacIO ATA Controller> mem 0x20000-0x20fff,0x8800-0x88ff irq 24,12 on macio0
+ohci0: <Apple KeyLargo/Intrepid USB controller> mem 0x80083000-0x80083fff irq 29 at device 26.0 on pci1
+usbus0 on ohci0
+ohci1: <NEC uPD 9210 USB controller> mem 0x80082000-0x80082fff irq 63 at device 27.0 on pci1
+usbus1 on ohci1
+ohci2: <NEC uPD 9210 USB controller> mem 0x80081000-0x80081fff irq 63 at device 27.1 on pci1
+usbus2 on ohci2
+ehci0: <NEC uPD 72010x USB 2.0 controller> mem 0x80080000-0x800800ff irq 63 at device 27.2 on pci1
+usbus3: EHCI version 1.0
+usbus3 on ehci0
+ohci3: <Apple KeyLargo/Intrepid USB controller> at device 24.0 on pci1
+usbus4 on ohci3
+ohci4: <Apple KeyLargo/Intrepid USB controller> at device 25.0 on pci1
+usbus5 on ohci4
+pcib2: <Apple UniNorth Host-PCI bridge> mem 0xf4000000-0xf5ffffff irq 45 on ofwbus0
+pci2: <OFW PCI bus> on pcib2
+ata1: <Intrepid Kauai ATA Controller> mem 0xf5004000-0xf5007fff irq 39 at device 13.0 on pci2
+fwohci0: <Apple UniNorth 2> mem 0xf5000000-0xf5000fff irq 40 at device 14.0 on pci2
+fwohci0: OHCI version 1.10 (ROM=0)
+fwohci0: No. of Isochronous channels is 8.
+fwohci0: EUI64 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+fwohci0: Phy 1394a available S400, 2 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+firewire0: <IEEE1394(FireWire) bus> on fwohci0
+fwe0: <Ethernet over FireWire> on firewire0
+if_fwe0: Fake Ethernet address: ...
+fwe0: Ethernet address: ...
+sbp0: <SBP-2/SCSI over FireWire> on firewire0
+fwohci0: Initiate bus reset
+fwohci0: fwohci_intr_core: BUS reset
+fwohci0: PhysicalUpperBound register is not implemented.  Physical memory access is limited to the first 4GB
+fwohci0: PhysicalUpperBound = 0x00000000
+fwohci0: fwohci_intr_core: node_id=0x00000000, SelfID Count=2, CYCLEMASTER mode
+gem0: <Apple UniNorth2 GMAC Ethernet> mem 0xf5200000-0xf53fffff irq 41 at device 15.0 on pci2
+miibus0: <MII bus> on gem0
+bmtphy0: <BCM5221 10/100 media interface> PHY 0 on miibus0
+bmtphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+gem0: 10kB RX FIFO, 4kB TX FIFO
+gem0: Ethernet address: ...
+cryptosoft0: <software crypto> on nexus0
+Timecounter "timebase" frequency 41620997 Hz quality 0
+Event timer "decrementer" frequency 41620997 Hz quality 1000
+Timecounters tick every 1.000 msec
+firewire0: 1 nodes, maxhop <= 0 cable IRM irm(0)  (me) 
+firewire0: bus manager 0 
+usbus0: 12Mbps Full Speed USB v1.0
+usbus1: 12Mbps Full Speed USB v1.0
+ugen0.1: <Apple OHCI root HUB> at usbus0
+uhub0: <Apple OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+ugen1.1: <NEC OHCI root HUB> at usbus1
+uhub1: <NEC OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+usbus2: 12Mbps Full Speed USB v1.0
+usbus3: 480Mbps High Speed USB v2.0
+ugen2.1: <NEC OHCI root HUB> at usbus2
+uhub2: <NEC OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub0: 2 ports with 2 removable, self powered
+ugen3.1: <NEC EHCI root HUB> at usbus3
+uhub3: <NEC EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+usbus4: 12Mbps Full Speed USB v1.0
+usbus5: 12Mbps Full Speed USB v1.0
+ugen4.1: <Apple OHCI root HUB> at usbus4
+uhub4: <Apple OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub1: 3 ports with 3 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+ugen5.1: <Apple OHCI root HUB> at usbus5
+uhub5: <Apple OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+uhub4: 2 ports with 2 removable, self powered
+uhub5: 2 ports with 2 removable, self powered
+ada0 at ata1 bus 0 scbus1 target 0 lun 0
+ada0: <TS64GCF400 20140806> CFA device
+ada0: Serial Number...
+ada0: 100.000MB/s transfers (UDMA5, PIO 512bytes)
+ada0: 61064MB (125059072 512 byte sectors)
+uhub3: 5 ports with 5 removable, self powered
+cd0 at ata1 bus 0 scbus1 target 1 lun 0
+cd0: <MATSHITA CD-RW  CW-8124 DACD> Removable CD-ROM SCSI device
+cd0: 33.300MB/s transfers (UDMA2, ATAPI 12bytes, PIO 65534bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+Trying to mount root from ufs:/dev/ada0s3 [rw]...
+ugen3.2: <Apple, Inc. Keyboard Hub> at usbus3
+uhub6 on uhub3
+uhub6: <Apple, Inc. Keyboard Hub, class 9/0, rev 2.00/96.15, addr 2> on usbus3
+warning: total configured swap (690173 pages) exceeds maximum recommended amount (238336 pages).
+warning: increase kern.maxswzone or reduce amount of swap.
+uhub6: 3 ports with 2 removable, bus powered
+.
+ukbd0 on uhub6
+ukbd0: <Apple, Inc Apple Keyboard, class 0/0, rev 2.00/0.69, addr 3> on usbus3
+kbd1 at ukbd0
+uhid0 on uhub6
+uhid0: <Apple, Inc Apple Keyboard, class 0/0, rev 2.00/0.69, addr 3> on usbus3
+uhub7 on uhub3
+uhub7: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 4> on usbus3
+uhub7: 4 ports with 4 removable, self powered
+.
+lo0: link state changed to UP
+ugen3.5: <SINO WEALTH USB KEYBOARD> at usbus3
+ukbd1 on uhub7
+ukbd1: <SINO WEALTH USB KEYBOARD, class 0/0, rev 1.10/1.00, addr 5> on usbus3
+kbd2 at ukbd1
+ums0 on uhub7
+ums0: <SINO WEALTH USB KEYBOARD, class 0/0, rev 1.10/1.00, addr 5> on usbus3
+ums0: 5 buttons and [XYZT] coordinates ID=1
+gem0: link state changed to DOWN
+gem0: link state changed to UP
+Security policy loaded: MAC/ntpd (mac_ntpd)
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on gem0
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 2 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE r354233 GENERIC powerpc
+gcc version 4.2.1 20070831 patched [FreeBSD]
+VT(ofwfb): resolution 1920x1200
+cpu0: Motorola PowerPC 7447A revision 1.2, 1249.05 MHz
+cpu0: Features 9c000000<PPC32,ALTIVEC,FPU,MMU>
+cpu0: HID0 8450c0bc<EMCP,TBEN,NAP,DPM,ICE,DCE,SGE,BTIC,LRSTK,FOLD,BHT>
+real memory  = 504221696 (480 MB)
+avail memory = 486268928 (463 MB)
+random: unblocking device.
+random: entropy device external interface
+kbd0 at kbdmux0
+ofwbus0: <Open Firmware Device Tree> on nexus0
+cpulist0: <Open Firmware CPU Group> on ofwbus0
+cpu0: <Open Firmware CPU> on cpulist0
+dfs0: <Dynamic Frequency Switching> on cpu0
+powermac_nvram0: <Apple NVRAM> mem 0xfff04000-0xfff07fff on ofwbus0
+powermac_nvram0: bank0 generation 156, bank1 generation 155
+unin0: <Apple UniNorth System Controller> mem 0xf8000000-0xf8ffffff on ofwbus0
+unin0: Version 210
+iichb0: <Keywest I2C controller> mem 0xf8001000-0xf8001fff irq 42 on unin0
+iicbus0: <OFW I2C bus> on iichb0
+iicbus0: <unknown card> at addr 0x1c0
+pcib0: <Apple UniNorth Host-PCI bridge> mem 0xf0000000-0xf1ffffff irq 45 on ofwbus0
+pci0: <OFW PCI bus> on pcib0
+agp0: <Apple UniNorth 2 AGP Bridge> on hostb0
+vgapci0: <VGA-compatible display> port 0x400-0x4ff mem 0x98000000-0x9fffffff,0x90000000-0x9000ffff irq 48 at device 16.0 on pci0
+vgapci0: Boot video device
+pcib1: <Apple UniNorth Host-PCI bridge> mem 0xf2000000-0xf3ffffff irq 45 on ofwbus0
+pci1: <OFW PCI bus> on pcib1
+macio0: <Intrepid I/O Controller> mem 0x80000000-0x8007ffff at device 23.0 on pci1
+openpic0: <OpenPIC Interrupt Controller> mem 0x40000-0x7ffff on macio0
+macgpio0: <MacIO GPIO Controller> mem 0x50-0x7f on macio0
+pmuextint0: <Apple PMU99 External Interrupt> extint-gpio 1 irq 47 on macgpio0
+scc0: <Zilog Z8530 dual channel SCC> mem 0x13000-0x13fff,0x8400-0x84ff,0x8500-0x85ff,0x8600-0x86ff,0x8700-0x87ff irq 22,5,6,23,7,8 on macio0
+uart0: <z8530, channel A> on scc0
+uart1: <z8530, channel B> on scc0
+pcm0: <Apple I2S Audio Controller> mem 0x10000-0x10fff,0x8000-0x80ff,0x8100-0x81ff irq 30,1,2,31,3,4 on macio0
+pmu0: <Apple PMU99 Controller> mem 0x16000-0x17fff irq 25 on macio0
+pmu0: registered as a time-of-day clock, resolution 0.001000s
+iichb1: <Keywest I2C controller> mem 0x18000-0x18fff irq 26 on macio0
+iicbus1: <OFW I2C bus> on iichb1
+iicbus1: <unknown card> at addr 0x1c0
+ata0: <Apple MacIO ATA Controller> mem 0x20000-0x20fff,0x8800-0x88ff irq 24,12 on macio0
+ohci0: <Apple KeyLargo/Intrepid USB controller> mem 0x80083000-0x80083fff irq 29 at device 26.0 on pci1
+usbus0 on ohci0
+ohci1: <NEC uPD 9210 USB controller> mem 0x80082000-0x80082fff irq 63 at device 27.0 on pci1
+usbus1 on ohci1
+ohci2: <NEC uPD 9210 USB controller> mem 0x80081000-0x80081fff irq 63 at device 27.1 on pci1
+usbus2 on ohci2
+ehci0: <NEC uPD 72010x USB 2.0 controller> mem 0x80080000-0x800800ff irq 63 at device 27.2 on pci1
+usbus3: EHCI version 1.0
+usbus3 on ehci0
+ohci3: <Apple KeyLargo/Intrepid USB controller> at device 24.0 on pci1
+usbus4 on ohci3
+ohci4: <Apple KeyLargo/Intrepid USB controller> at device 25.0 on pci1
+usbus5 on ohci4
+pcib2: <Apple UniNorth Host-PCI bridge> mem 0xf4000000-0xf5ffffff irq 45 on ofwbus0
+pci2: <OFW PCI bus> on pcib2
+ata1: <Intrepid Kauai ATA Controller> mem 0xf5004000-0xf5007fff irq 39 at device 13.0 on pci2
+fwohci0: <Apple UniNorth 2> mem 0xf5000000-0xf5000fff irq 40 at device 14.0 on pci2
+fwohci0: OHCI version 1.10 (ROM=0)
+fwohci0: No. of Isochronous channels is 8.
+fwohci0: EUI64 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+fwohci0: Phy 1394a available S400, 2 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+firewire0: <IEEE1394(FireWire) bus> on fwohci0
+fwe0: <Ethernet over FireWire> on firewire0
+if_fwe0: Fake Ethernet address: ...
+fwe0: Ethernet address: ...
+sbp0: <SBP-2/SCSI over FireWire> on firewire0
+fwohci0: Initiate bus reset
+fwohci0: fwohci_intr_core: BUS reset
+fwohci0: PhysicalUpperBound register is not implemented.  Physical memory access is limited to the first 4GB
+fwohci0: PhysicalUpperBound = 0x00000000
+fwohci0: fwohci_intr_core: node_id=0x00000000, SelfID Count=2, CYCLEMASTER mode
+gem0: <Apple UniNorth2 GMAC Ethernet> mem 0xf5200000-0xf53fffff irq 41 at device 15.0 on pci2
+miibus0: <MII bus> on gem0
+bmtphy0: <BCM5221 10/100 media interface> PHY 0 on miibus0
+bmtphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+gem0: 10kB RX FIFO, 4kB TX FIFO
+gem0: Ethernet address: ...
+cryptosoft0: <software crypto> on nexus0
+Timecounter "timebase" frequency 41620997 Hz quality 0
+Event timer "decrementer" frequency 41620997 Hz quality 1000
+Timecounters tick every 1.000 msec
+firewire0: 1 nodes, maxhop <= 0 cable IRM irm(0)  (me) 
+firewire0: bus manager 0 
+usbus0: 12Mbps Full Speed USB v1.0
+usbus1: 12Mbps Full Speed USB v1.0
+ugen0.1: <Apple OHCI root HUB> at usbus0
+uhub0: <Apple OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+ugen1.1: <NEC OHCI root HUB> at usbus1
+uhub1: <NEC OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+usbus2: 12Mbps Full Speed USB v1.0
+usbus3: 480Mbps High Speed USB v2.0
+ugen2.1: <NEC OHCI root HUB> at usbus2
+uhub2: <NEC OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub0: 2 ports with 2 removable, self powered
+ugen3.1: <NEC EHCI root HUB> at usbus3
+uhub3: <NEC EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+usbus4: 12Mbps Full Speed USB v1.0
+usbus5: 12Mbps Full Speed USB v1.0
+ugen4.1: <Apple OHCI root HUB> at usbus4
+uhub4: <Apple OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub1: 3 ports with 3 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+ugen5.1: <Apple OHCI root HUB> at usbus5
+uhub5: <Apple OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+uhub4: 2 ports with 2 removable, self powered
+uhub5: 2 ports with 2 removable, self powered
+ada0 at ata1 bus 0 scbus1 target 0 lun 0
+ada0: <TS64GCF400 20140806> CFA device
+ada0: Serial Number...
+ada0: 100.000MB/s transfers (UDMA5, PIO 512bytes)
+ada0: 61064MB (125059072 512 byte sectors)
+uhub3: 5 ports with 5 removable, self powered
+cd0 at ata1 bus 0 scbus1 target 1 lun 0
+cd0: <MATSHITA CD-RW  CW-8124 DACD> Removable CD-ROM SCSI device
+cd0: 33.300MB/s transfers (UDMA2, ATAPI 12bytes, PIO 65534bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+Trying to mount root from ufs:/dev/ada0s3 [rw]...
+ugen3.2: <Apple, Inc. Keyboard Hub> at usbus3
+uhub6 on uhub3
+uhub6: <Apple, Inc. Keyboard Hub, class 9/0, rev 2.00/96.15, addr 2> on usbus3
+warning: total configured swap (690173 pages) exceeds maximum recommended amount (238336 pages).
+warning: increase kern.maxswzone or reduce amount of swap.
+uhub6: 3 ports with 2 removable, bus powered
+ugen3.3: <Apple, Inc Apple Keyboard> at usbus3
+ukbd0 on uhub6
+ukbd0: <Apple, Inc Apple Keyboard, class 0/0, rev 2.00/0.69, addr 3> on usbus3
+kbd1 at ukbd0
+uhid0 on uhub6
+uhid0: <Apple, Inc Apple Keyboard, class 0/0, rev 2.00/0.69, addr 3> on usbus3
+uhub7 on uhub3
+uhub7: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 4> on usbus3
+uhub7: 4 ports with 4 removable, self powered
+.
+lo0: link state changed to UP
+ugen3.5: <SINO WEALTH USB KEYBOARD> at usbus3
+ukbd1 on uhub7
+ukbd1: <SINO WEALTH USB KEYBOARD, class 0/0, rev 1.10/1.00, addr 5> on usbus3
+kbd2 at ukbd1
+ums0 on uhub7
+ums0: <SINO WEALTH USB KEYBOARD, class 0/0, rev 1.10/1.00, addr 5> on usbus3
+ums0: 5 buttons and [XYZT] coordinates ID=1
+gem0: link state changed to DOWN
+gem0: link state changed to UP
+Security policy loaded: MAC/ntpd (mac_ntpd)

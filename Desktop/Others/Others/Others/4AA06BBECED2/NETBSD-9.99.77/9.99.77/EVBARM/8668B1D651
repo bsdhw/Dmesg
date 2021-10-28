@@ -1,0 +1,216 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.99.77 (GENERIC64) #0: Thu Dec 10 08:16:59 UTC 2020
+	XXX@XXX:/usr/src/sys/arch/evbarm/compile/GENERIC64
+total memory = 4058 MB
+avail memory = 3932 MB
+entropy: no seed from bootloader
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+armfdt0 (root)
+simplebus0 at armfdt0: Pine64 Rock64
+cpus0 at simplebus0
+simplebus1 at simplebus0
+psci0 at simplebus0: PSCI 1.0
+simplebus2 at simplebus0
+cpu0 at cpus0: Arm Cortex-A53 r0p4 (v8-A), id 0x0
+cpu0: IC enabled, DC enabled, EL0/EL1 stack Alignment check enabled
+cpu0: Cache Writeback Granule 16B, Exclusives Reservation Granule 16B
+cpu0: Dcache line 64, Icache line 64, DIC=0, IDC=0, LoUU=1, LoC=2, LoUIS=1
+cpu0: L1 32KB/64B*256L*2W VIPT Instruction cache
+cpu0: L1 32KB/64B*128L*4W PIPT Data cache
+cpu0: L2 256KB/64B*256L*16W PIPT Unified cache
+cpu0: revID=0x180, PMCv3, 4k table, 64k table, 16bit ASID
+cpu0: auxID=0x11120, FP, CRC32, SHA1, SHA256, AES+PMULL, NEON, rounding, NaN propagation, denormals, 32x64bitRegs, Fused Multiply-Add
+cpufreqdt0 at cpu0
+cpu1 at cpus0: Arm Cortex-A53 r0p4 (v8-A), id 0x1
+cpufreqdt1 at cpu1
+cpu2 at cpus0: Arm Cortex-A53 r0p4 (v8-A), id 0x2
+cpufreqdt2 at cpu2
+cpu3 at cpus0: Arm Cortex-A53 r0p4 (v8-A), id 0x3
+cpufreqdt3 at cpu3
+gic0 at simplebus0: GIC
+armgic0 at gic0: Generic Interrupt Controller, 160 sources (149 valid)
+armgic0: 16 Priorities, 128 SPIs, 6 PPIs, 15 SGIs
+syscon0 at simplebus0: System Controller Registers
+fclock0 at simplebus0: 24000000 Hz fixed clock (xin24m)
+syscon1 at simplebus0: System Controller Registers
+fclock1 at simplebus0: 125000000 Hz fixed clock (gmac_clkin)
+gtmr0 at simplebus0: Generic Timer
+gtmr0: interrupting on GIC irq 27
+armgtmr0 at gtmr0: Generic Timer (24000 kHz, virtual)
+timecounter: Timecounter "armgtmr0" frequency 24000000 Hz quality 500
+rkcru0 at simplebus0: RK3328 CRU
+rkiomux0 at simplebus0: RK3328 IOMUX control
+rkgpio0 at rkiomux0: GPIO (XXX@XXX)
+gpio0 at rkgpio0: 32 pins
+rkgpio1 at rkiomux0: GPIO (XXX@XXX)
+gpio1 at rkgpio1: 32 pins
+rkgpio2 at rkiomux0: GPIO (XXX@XXX)
+gpio2 at rkgpio2: 32 pins
+rkgpio3 at rkiomux0: GPIO (XXX@XXX)
+gpio3 at rkgpio3: 32 pins
+rkiic0 at simplebus0: Rockchip I2C (100000 Hz)
+iic0 at rkiic0: I2C bus
+rkpmic0 at iic0 addr 0x18: RK805 Power Management and Real Time Clock IC
+rkreg0 at rkpmic0: vdd_logic
+rkreg1 at rkpmic0: vdd_arm
+rkreg2 at rkpmic0: vcc_ddr
+rkreg3 at rkpmic0: vcc_io
+rkreg4 at rkpmic0: vcc_18
+rkreg5 at rkpmic0: vcc18_emmc
+rkreg6 at rkpmic0: vdd_10
+fregulator0 at simplebus0: vcc_sys
+fregulator1 at simplebus0: vcc_sd
+com0 at simplebus0: DesignWare APB UART, 64-byte FIFO
+com0: console
+com0: interrupting on GIC irq 89
+fregulator2 at simplebus0: vcc_host_5v
+fregulator3 at simplebus0: vcc_host1_5v
+rkdrm0 at simplebus0
+rkusb0 at syscon1: USB2 PHY
+rkusbphy0 at rkusb0: USB2 OTG port
+rkusbphy1 at rkusb0: USB2 host port
+/opp_table0 at simplebus0 not configured
+/i2s@ff010000 at simplebus0 not configured
+/codec@ff410000 at simplebus0 not configured
+/vop@ff370000 at simplebus0 not configured
+/hdmi@ff3c0000 at simplebus0 not configured
+/amba/dmac@ff1f0000 at simplebus1 not configured
+spdiftx0 at simplebus0: SPDIF transmitter
+rktsadc0 at simplebus0: RK3328/3399 Temperature Sensor ADC
+rktsadc0: interrupting on GIC irq 90
+/iommu@ff350800 at simplebus0 not configured
+/syscon@ff100000/power-controller at syscon0 not configured
+/iommu@ff373f00 at simplebus0 not configured
+/phy@ff430000 at simplebus0 not configured
+/efuse@ff260000 at simplebus0 not configured
+/spdif@ff030000 at simplebus0 not configured
+/syscon@ff100000/io-domains at syscon0 not configured
+/syscon@ff100000/grf-gpio at syscon0 not configured
+/spi@ff190000 at simplebus0 not configured
+dwcwdt0 at simplebus0autoconfiguration error: : couldn't enable clock
+/gpu@ff300000 at simplebus0 not configured
+/video-codec@ff350000 at simplebus0 not configured
+dwcmmc0 at simplebus0: DesignWare SD/MMC
+dwcmmc0: interrupting on GIC irq 44
+dwcmmc1 at simplebus0: DesignWare SD/MMC
+dwcmmc1: interrupting on GIC irq 46
+awge0 at simplebus0: GMAC
+awge0: Core version: 00001035
+awge0: Ethernet address XXX
+awge0: HW feature mask: d0f17
+rgephy0 at awge0 phy 0: RTL8211F 1000BASE-T media interface
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+rgephy1 at awge0 phy 1: RTL8211F 1000BASE-T media interface
+rgephy1: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+awge0: interrupting on GIC irq 56
+dwctwo0 at simplebus0: DesignWare USB2 OTG
+dwctwo0: interrupting on GIC irq 55
+ehci0 at simplebus0: EHCI
+ehci0: interrupting on GIC irq 48
+ehci0: EHCI version 1.0
+ehci0: 1 companion controller, 1 port
+usb0 at ehci0: USB revision 2.0
+ohci0 at simplebus0: OHCI
+ohci0: interrupting on GIC irq 49
+ohci0: OHCI version 1.0
+usb1 at ohci0: USB revision 1.0
+xhci0 at simplebus0: DesignWare USB3 XHCI (rev. 3.00a)
+xhci0: interrupting on GIC irq 99
+xhci0: xHCI version 1.10
+usb2 at xhci0: USB revision 3.0
+usb3 at xhci0: USB revision 2.0
+armpmu0 at simplebus0: Performance Monitor Unit
+/ir-receiver at simplebus0 not configured
+gpioleds0 at simplebus0:
+/sound at simplebus0 not configured
+/syscon@ff100000/reboot-mode at syscon0 not configured
+rkdrm0: autoconfiguration error: no display interface ports configured
+rkdrm0: autoconfiguration error: couldn't register DRM device: -6
+entropy: WARNING: extracting entropy too early
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+cpu2: IC enabled, DC enabled, EL0/EL1 stack Alignment check enabled
+cpu2: Cache Writeback Granule 16B, Exclusives Reservation Granule 16B
+cpu2: Dcache line 64, Icache line 64, DIC=0, IDC=0, LoUU=1, LoC=2, LoUIS=1
+cpu2: L1 32KB/64B*256L*2W VIPT Instruction cache
+cpu2: L1 32KB/64B*128L*4W PIPT Data cache
+cpu2: L2 256KB/64B*256L*16W PIPT Unified cache
+cpu2: revID=0x180, PMCv3, 4k table, 64k table, 16bit ASID
+cpu2: auxID=0x11120, FP, CRC32, SHA1, SHA256, AES+PMULL, NEON, rounding, NaN propagation, denormals, 32x64bitRegs, Fused Multiply-Add
+cpu1: IC enabled, DC enabled, EL0/EL1 stack Alignment check enabled
+cpu1: Cache Writeback Granule 16B, Exclusives Reservation Granule 16B
+cpu1: Dcache line 64, Icache line 64, DIC=0, IDC=0, LoUU=1, LoC=2, LoUIS=1
+cpu1: L1 32KB/64B*256L*2W VIPT Instruction cache
+cpu1: L1 32KB/64B*128L*4W PIPT Data cache
+cpu1: L2 256KB/64B*256L*16W PIPT Unified cache
+cpu1: revID=0x180, PMCv3, 4k table, 64k table, 16bit ASID
+cpu1: auxID=0x11120, FP, CRC32, SHA1, SHA256, AES+PMULL, NEON, rounding, NaN propagation, denormals, 32x64bitRegs, Fused Multiply-Add
+cpu3: IC enabled, DC enabled, EL0/EL1 stack Alignment check enabled
+cpu3: Cache Writeback Granule 16B, Exclusives Reservation Granule 16B
+cpu3: Dcache line 64, Icache line 64, DIC=0, IDC=0, LoUU=1, LoC=2, LoUIS=1
+cpu3: L1 32KB/64B*256L*2W VIPT Instruction cache
+cpu3: L1 32KB/64B*128L*4W PIPT Data cache
+cpu3: L2 256KB/64B*256L*16W PIPT Unified cache
+cpu3: revID=0x180, PMCv3, 4k table, 64k table, 16bit ASID
+cpu3: auxID=0x11120, FP, CRC32, SHA1, SHA256, AES+PMULL, NEON, rounding, NaN propagation, denormals, 32x64bitRegs, Fused Multiply-Add
+cpufreqdt0: rate: 1296.000 MHz, 1300000 uV
+sdmmc0 at dwcmmc0
+sdmmc1 at dwcmmc1
+dwctwo0: Core Release: 3.10a (snpsid=4f54310a)
+usb4 at dwctwo0: USB revision 2.0
+uhub0 at usb2: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 1 port with 1 removable, self powered
+uhub1 at usb3: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 1 port with 1 removable, self powered
+armpmu0: interrupting on GIC irq 132
+armpmu0: interrupting on GIC irq 133
+armpmu0: interrupting on GIC irq 134
+armpmu0: interrupting on GIC irq 135
+uhub2 at usb4: NetBSD (0x0000) DWC2 root hub (0x0000), class 9/0, rev 2.00/1.00, addr 1
+uhub2: 1 port with 1 removable, self powered
+uhub3 at usb0: NetBSD (0x0000) EHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 1
+uhub3: 1 port with 1 removable, self powered
+uhub4 at usb1: NetBSD (0x0000) OHCI root hub (0x0000), class 9/0, rev 1.00/1.00, addr 1
+uhub4: 1 port with 1 removable, self powered
+IPsec: Initialized Security Association Processing.
+aes: ARMv8.0-AES
+chacha: ARM NEON ChaCha
+adiantum: self-test passed
+aes_ccm: self-test passed
+blake2s: self-test passed
+sdmmc0: sdmmc_mem_enable failed with error 60
+sdmmc0: autoconfiguration error: couldn't enable card: 60
+sdmmc1: sdmmc_mem_enable failed with error 60
+sdmmc1: autoconfiguration error: couldn't enable card: 60
+umass0 at uhub0 port 1 configuration 1 interface 0
+umass0: Verbatim (0x18a5) Desktop USB3.0 Drive (0x022a), rev 3.00/1.00, addr 1
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, 1 lun per target
+sd0 at scsibus0 target 0 lun 0: <CT240BX5, 00SSD1, 0010> disk fixed
+sd0: 223 GB, 16383 cyl, 16 head, 63 sec, 512 bytes/sect x 468862128 sectors
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at sd0: "EFI", 163840 blocks at 32768, type: msdos
+dk1 at sd0: "netbsd-root", 468664320 blocks at 196608, type: ffs
+cgd: self-test aes-xts-256
+cgd: self-test aes-xts-512
+cgd: self-test aes-cbc-128
+cgd: self-test aes-cbc-256
+cgd: self-test 3des-cbc-192
+cgd: self-test blowfish-cbc-448
+cgd: self-test aes-cbc-128 (encblkno8)
+cgd: self-tests passed
+WARNING: 5 errors while detecting hardware; check system log.
+boot device: dk1
+root on dk1
+root file system type: ffs
+kern.module.path=/stand/evbarm/9.99.77/modules
+WARNING: clock lost 1791 days
+WARNING: using filesystem time
+WARNING: CHECK AND RESET THE DATE!
+iscsi: attached.  major = 203
+entropy: ready

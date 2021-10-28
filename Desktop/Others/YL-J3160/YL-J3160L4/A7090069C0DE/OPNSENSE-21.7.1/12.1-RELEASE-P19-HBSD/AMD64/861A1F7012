@@ -1,0 +1,154 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD #0  f692db99f3c(stable/21.7)-dirty: Mon Aug  2 13:29:29 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+[1] VT(vga): resolution 640x480
+[1] HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+[1] CPU: Intel(R) Celeron(R) CPU  J3160  @ 1.60GHz (1600.05-MHz K8-class CPU)
+[1]   Origin="GenuineIntel"  Id=0x406c4  Family=0x6  Model=0x4c  Stepping=4
+[1]   Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+[1]   Features2=0x43d8e3bf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,AESNI,RDRAND>
+[1]   AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+[1]   AMD Features2=0x101<LAHF,Prefetch>
+[1]   Structured Extended Features=0x2282<TSCADJ,SMEP,ERMS,NFPUSG>
+[1]   Structured Extended Features3=0xc000000<IBPB,STIBP>
+[1]   VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+[1]   TSC: P-state invariant, performance statistics
+[1] real memory  = 4294967296 (4096 MB)
+[1] avail memory = 3995750400 (3810 MB)
+[1] Event timer "LAPIC" quality 600
+[1] ACPI APIC Table: <ALASKA A M I >
+[1] WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+[1] FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+[1] FreeBSD/SMP: 1 package(s) x 4 core(s)
+[1] random: unblocking device.
+[1] ioapic0 <Version 2.0> irqs 0-114 on motherboard
+[1] Launching APs: 3 1 2
+[1] Timecounter "TSC" frequency 1600051380 Hz quality 1000
+[1] wlan: mac acl policy registered
+[1] random: entropy device external interface
+[1] kbd0 at kbdmux0
+[1] module_register_init: MOD_LOAD (vesa, 0xffffffff812907f0, 0) error 19
+[1] random: registering fast source Intel Secure Key RNG
+[1] random: fast provider: "Intel Secure Key RNG"
+[1] 000.000054 [4344] netmap_init               netmap: loaded module
+[1] [ath_hal] loaded
+[1] nexus0
+[1] cryptosoft0: <software crypto> on motherboard
+[1] acpi0: <ALASKA A M I > on motherboard
+[1] acpi0: Power Button (fixed)
+[1] unknown: I/O range not supported
+[1] cpu0: <ACPI CPU> on acpi0
+[1] atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+[1] atrtc0: Warning: Couldn't map I/O.
+[1] atrtc0: registered as a time-of-day clock, resolution 1.000000s
+[1] Event timer "RTC" frequency 32768 Hz quality 0
+[1] attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+[1] Timecounter "i8254" frequency 1193182 Hz quality 0
+[1] Event timer "i8254" frequency 1193182 Hz quality 100
+[1] Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+[1] acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+[1] pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+[1] pci0: <ACPI PCI bus> on pcib0
+[1] vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xb0000000-0xb0ffffff,0xb8000000-0xbfffffff irq 16 at device 2.0 on pci0
+[1] vgapci0: Boot video device
+[1] ahci0: <AHCI SATA controller> port 0xf060-0xf07f mem 0xb1615000-0xb16157ff irq 19 at device 19.0 on pci0
+[1] ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+[1] ahcich0: <AHCI channel> at channel 0 on ahci0
+[1] ahcich1: <AHCI channel> at channel 1 on ahci0
+[1] xhci0: <Intel Braswell USB 3.0 controller> mem 0xb1600000-0xb160ffff irq 20 at device 20.0 on pci0
+[1] xhci0: 32 bytes context size, 64-bit DMA
+[1] usbus0: waiting for BIOS to give up control
+[1] usbus0 on xhci0
+[1] usbus0: 5.0Gbps Super Speed USB v3.0
+[1] pci0: <encrypt/decrypt> at device 26.0 (no driver attached)
+[1] hdac0: <Intel (0x2284) HDA Controller> mem 0xb1610000-0xb1613fff irq 22 at device 27.0 on pci0
+[1] pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+[1] pci1: <ACPI PCI bus> on pcib1
+[1] igb0: <Intel(R) I210 Flashless (Copper)> port 0xe000-0xe01f mem 0xb1500000-0xb151ffff,0xb1520000-0xb1523fff irq 16 at device 0.0 on pci1
+[1] igb0: Using 1024 TX descriptors and 1024 RX descriptors
+[1] igb0: Using 4 RX queues 4 TX queues
+[1] igb0: Using MSI-X interrupts with 5 vectors
+[1] igb0: Ethernet address: ...
+[1] igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+[1] pcib2: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+[1] pcib2: [GIANT-LOCKED]
+[1] pci2: <ACPI PCI bus> on pcib2
+[1] igb1: <Intel(R) I210 Flashless (Copper)> port 0xd000-0xd01f mem 0xb1400000-0xb141ffff,0xb1420000-0xb1423fff irq 17 at device 0.0 on pci2
+[1] igb1: Using 1024 TX descriptors and 1024 RX descriptors
+[1] igb1: Using 4 RX queues 4 TX queues
+[1] igb1: Using MSI-X interrupts with 5 vectors
+[1] igb1: Ethernet address: ...
+[1] igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+[1] pcib3: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+[1] pci3: <ACPI PCI bus> on pcib3
+[1] igb2: <Intel(R) I210 Flashless (Copper)> port 0xc000-0xc01f mem 0xb1300000-0xb131ffff,0xb1320000-0xb1323fff irq 18 at device 0.0 on pci3
+[1] igb2: Using 1024 TX descriptors and 1024 RX descriptors
+[1] igb2: Using 4 RX queues 4 TX queues
+[1] igb2: Using MSI-X interrupts with 5 vectors
+[1] igb2: Ethernet address: ...
+[1] igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+[1] pcib4: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+[1] pci4: <ACPI PCI bus> on pcib4
+[1] igb3: <Intel(R) I210 Flashless (Copper)> port 0xb000-0xb01f mem 0xb1200000-0xb121ffff,0xb1220000-0xb1223fff irq 19 at device 0.0 on pci4
+[1] igb3: Using 1024 TX descriptors and 1024 RX descriptors
+[1] igb3: Using 4 RX queues 4 TX queues
+[1] igb3: Using MSI-X interrupts with 5 vectors
+[1] igb3: Ethernet address: ...
+[1] igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+[1] isab0: <PCI-ISA bridge> at device 31.0 on pci0
+[1] isa0: <ISA bus> on isab0
+[1] acpi_button0: <Sleep Button> on acpi0
+[1] acpi_tz0: <Thermal Zone> on acpi0
+[1] uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+[1] uart0: console (115200,n,8,1)
+[1] vga0: <Generic ISA VGA> at port 0x3c0-0x3df iomem 0xa0000-0xbffff pnpid PNP0900 on isa0
+[1] est0: <Enhanced SpeedStep Frequency Control> on cpu0
+[1] Timecounters tick every 1.000 msec
+[1] hdacc0: <Realtek ALC662 HDA CODEC> at cad 0ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+[1] ada0: <Hoodisk SSD SBFM61.3> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 61057MB (125045424 512 byte sectors)
+[1]  on hdac0
+[1] hdaa0: <Realtek ALC662 Audio Function Group> at nid 1 on hdacc0
+[1] pcm0: <Realtek ALC662 (Analog)> at nid 20 and 25 on hdaa0
+[1] hdacc1: <Intel (0x2883) HDA CODEC> at cad 2 on hdac0
+[1] hdaa1: <Intel (0x2883) Audio Function Group> at nid 1 on hdacc1
+[1] pcm1: <Intel (0x2883) (HDMI/DP 8ch)> at nid 7 on hdaa1
+[1] pcm2: <Intel (0x2883) (HDMI/DP 8ch)> at nid 5 on hdaa1
+[1] pcm3: <Intel (0x2883) (HDMI/DP 8ch)> at nid 6 on hdaa1
+[1] Trying to mount root from ufs:/dev/gpt/rootfs [rw,noatime]...
+[1] ugen0.1: <0x8086 XHCI root HUB> at usbus0
+[1] uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+[1] uhub0: 13 ports with 13 removable, self powered
+[23] igb0: link state changed to UP
+[25] igb1: link state changed to UP
+[30] lo0: link state changed to UP
+[30] aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+[30] coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+[32] tun1: changing name to 'ovpns1'
+[32] igb1: link state changed to DOWN
+[33] igb0: link state changed to DOWN
+[34] pflog0: permanently promiscuous mode enabled
+[37] igb1: link state changed to UP
+[38] igb0: link state changed to UP
+[43] ovpns1: link state changed to UP
+[663263] igb0: link state changed to DOWN
+[663279] igb0: link state changed to UP
+[663281] ovpns1: link state changed to DOWN
+[663282] ovpns1: link state changed to UP
+[663309] igb0: link state changed to DOWN
+[663336] igb0: link state changed to UP
+[690252] igb0: link state changed to DOWN
+[690260] igb0: link state changed to UP
+[690291] igb0: link state changed to DOWN
+[690318] igb0: link state changed to UP
+[1448739] ovpns1: link state changed to DOWN
+[1448741] ovpns1: link state changed to UP

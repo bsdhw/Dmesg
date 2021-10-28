@@ -1,0 +1,977 @@
+oard (0x2010), rev 1.10/2.00, addr 2, iclass 3/1
+ukbd0 at uhidev0
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub6 port 1 configuration 1 interface 1
+uhidev1: Dell (0x413c) Dell USB Keyboard (0x2010), rev 1.10/2.00, addr 2, iclass 3/0
+uhidev1: 3 report ids
+uhid0 at uhidev1 reportid 1: input=1, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 3: input=3, output=0, feature=0
+uhidev2 at uhub6 port 2 configuration 1 interface 0
+uhidev2: vendor 0461 (0x461) USB Optical Mouse (0x4d15), rev 2.00/2.00, addr 3, iclass 3/1
+ums0 at uhidev2: 3 buttons and Z dir
+wsmouse0 at ums0 mux 0
+boot device: sd0
+root on dk4 dumps on dk2
+root file system type: ffs
+kern.module.path=/stand/amd64/9.2/modules
+WARNING: clock gained 2 days
+/dev/dk4: file system not clean (fs_clean=0x4); please fsck(8)
+/dev/dk4: lost blocks 0 files 0
+dk2 at ld0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk1 at ld0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk0 at ld0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+ld0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 245720 blocks at 40, type: ntfs
+dk1 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32767936 blocks at 245824, type: ffs
+dk2 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 217014863 blocks at 33054784, type: other
+dk2 at ld0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk1 at ld0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk0 at ld0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+syncing disks... 7 4 done
+unmounted /dev/dk1 on /targetroot type ffs
+unmounted tmpfs on /tmp type tmpfs
+pci6: detached
+pci4: detached
+pci3: detached
+wd0: detached
+uhub5: detached
+uhub4: detached
+uhub2: detached
+uhub0: detached
+ppb5: detached
+ppb3: detached
+ppb2: detached
+atabus4: detached
+usb5: detached
+usb4: detached
+usb2: detached
+atabus3: detached
+atabus2: detached
+atabus1: detached
+atabus0: detached
+usb0: detached
+ahcisata1: detached
+xhci2: detached
+ahcisata0: detached
+iic1: detached
+iic0: detached
+pci9: detached
+sysbeep0: detached
+midi0: detached
+pchb9: detached
+pchb8: detached
+pchb7: detached
+pchb6: detached
+pchb5: detached
+pchb4: detached
+pchb3: detached
+pchb2: detached
+ppb8: detached
+pchb1: detached
+pchb0: detached
+dk3 at sd0 (EFI system) deleted
+dk3: detached
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.2 (GENERIC) #0: Wed May 12 13:15:55 UTC 2021
+	XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+total memory = 14270 MB
+avail memory = 13829 MB
+cpu_rng: RDSEED
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+running cgd selftest aes-xts-256 aes-xts-512 done
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+efi: systbl at pa 5b6cc018
+System manufacturer System Product Name (System Version)
+mainbus0 (root)
+ACPI: RSDP 0x000000004A933000 000024 (v02 ALASKA)
+ACPI: XSDT 0x000000004A9330A0 0000BC (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: FACP 0x000000004A93E8B0 000114 (v06 ALASKA A M I    01072009 AMI  00010013)
+ACPI: DSDT 0x000000004A9331F8 00B6B8 (v02 ALASKA A M I    01072009 INTL 20120913)
+ACPI: FACS 0x000000005A976E00 000040
+ACPI: APIC 0x000000004A93E9C8 00015E (v03 ALASKA A M I    01072009 AMI  00010013)
+ACPI: FPDT 0x000000004A93EB28 000044 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: FIDT 0x000000004A93EB70 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x000000004A93EC10 000060 (v02 ALASKA CPUSSDT  01072009 AMI  01072009)
+ACPI: SSDT 0x000000004A94C510 0000BF (v01 AMD    AMD PT   00001000 INTL 20120913)
+ACPI: SSDT 0x000000004A93ECC8 005419 (v02 AMD    AmdTable 00000002 MSFT 04000000)
+ACPI: SSDT 0x000000004A9440E8 00378A (v01 AMD    AMD AOD  00000001 INTL 20120913)
+ACPI: MCFG 0x000000004A947878 00003C (v01 ALASKA A M I    01072009 MSFT 00010013)
+ACPI: HPET 0x000000004A9478B8 000038 (v01 ALASKA A M I    01072009 AMI  00000005)
+ACPI: UEFI 0x000000004A9478F0 000042 (v01                 00000000      00000000)
+ACPI: BGRT 0x000000004A947938 000038 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: IVRS 0x000000004A947970 0000D0 (v02 AMD    AMD IVRS 00000001 AMD  00000000)
+ACPI: SSDT 0x000000004A947A40 000854 (v01 AMD    AMD CPU  00000001 AMD  00000001)
+ACPI: CRAT 0x000000004A948298 000810 (v01 AMD    AMD CRAT 00000001 AMD  00000001)
+ACPI: CDIT 0x000000004A948AA8 000029 (v01 AMD    AMD CDIT 00000001 AMD  00000001)
+ACPI: SSDT 0x000000004A948AD8 000C34 (v01 AMD    AmdTable 00000001 INTL 20120913)
+ACPI: SSDT 0x000000004A949710 0010AC (v01 AMD    AmdTable 00000001 INTL 20120913)
+ACPI: SSDT 0x000000004A94A7C0 001D4A (v01 AMD    AmdTable 00000001 INTL 20120913)
+ACPI: 9 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 5: pa 0xfec00000, version 0x21, 24 pins
+ioapic1 at mainbus0 apid 6: pa 0xfec01000, version 0x21, 32 pins
+cpu0 at mainbus0 apid 0
+cpu0: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu0: package 0, core 0, smt 0
+cpu1 at mainbus0 apid 1
+cpu1: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu1: package 0, core 1, smt 0
+cpu2 at mainbus0 apid 2
+cpu2: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu2: package 0, core 2, smt 0
+cpu3 at mainbus0 apid 3
+cpu3: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu3: package 0, core 3, smt 0
+acpi0 at mainbus0: Intel ACPICA 20190405
+acpi0: X/RSDT: OemId <ALASKA,  A M I ,01072009>, AslId <AMI ,00010013>
+acpi0: MCFG: segment 0, bus 0-63, address 0x00000000f8000000
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+AMDN (PNP0C01) at acpi0 not configured
+IOMA (PNP0C02) at acpi0 not configured
+BROD (PNP0C02) at acpi0 not configured
+APSP (PNP0C02) at acpi0 not configured
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+spkr0 at pcppi1: PC Speaker
+wsbell at spkr0 not configured
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+SIO1 (PNP0C02) at acpi0 not configured
+S900 (PNP0C02) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+GPIO (AMDI0030) at acpi0 not configured
+PTIO (AMDIF030) at acpi0 not configured
+AWR0 (PNP0C02) at acpi0 not configured
+ABR0 (PNP0C02) at acpi0 not configured
+ABR1 (PNP0C02) at acpi0 not configured
+ABR2 (PNP0C02) at acpi0 not configured
+ABR3 (PNP0C02) at acpi0 not configured
+ABR4 (PNP0C02) at acpi0 not configured
+ABR5 (PNP0C02) at acpi0 not configured
+ABR6 (PNP0C02) at acpi0 not configured
+acpiwmi0 at acpi0 (AMW0, PNP0C14-ASUSWMI): ACPI WMI Interface
+wmieeepc0 at acpiwmi0: Asus Eee PC WMI mappings
+acpiwmi1 at acpi0 (ACCE, PNP0C14-ASUSCONTROLCENTER): ACPI WMI Interface
+acpiwmibus at acpiwmi1 not configured
+acpiwmi2 at acpi0 (AOD, PNP0C14-AOD): ACPI WMI Interface
+acpiwmibus at acpiwmi2 not configured
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+amdsmn0 at pci0 dev 0 function 0: AMD System Management Network
+amdzentemp0 at amdsmn0: AMD CPU Temperature Sensors (Family17h)
+vendor 1022 product 15d1 (IOMMU system) at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0: vendor 1022 product 1452 (rev. 0x00)
+ppb0 at pci0 dev 1 function 2: vendor 1022 product 15d3 (rev. 0x00)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 8.0GT/s
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+xhci0 at pci1 dev 0 function 0: vendor 1022 product 43bc (rev. 0x02)
+xhci0: interrupting at msi0 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+ahcisata0 at pci1 dev 0 function 1: vendor 1022 product 43b8 (rev. 0x02)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 8 ports, 32 slots, CAP 0xef36ff27<SXS,PSC,SSC,PMD,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SSS,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi1 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 4
+atabus3 at ahcisata0 channel 5
+ppb1 at pci1 dev 0 function 2: vendor 1022 product 43b3 (rev. 0x02)
+ppb1: PCI Express capability version 2 <Upstream Port of PCI-E Switch>
+pci2 at ppb1 bus 2
+pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb2 at pci2 dev 4 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb2: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci3 at ppb2 bus 3
+pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb3 at pci2 dev 5 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb3: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci4 at ppb3 bus 4
+pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb4 at pci2 dev 6 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb4: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+ppb4: link is x1 @ 2.5GT/s
+pci5 at ppb4 bus 5
+pci5: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci5 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x15)
+re0: interrupting at msix2 vec 0
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8251 1000BASE-T media interface, rev. 0
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+ppb5 at pci2 dev 7 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb5: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci6 at ppb5 bus 6
+pci6: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb6 at pci0 dev 1 function 6: vendor 1022 product 15d3 (rev. 0x00)
+ppb6: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 8.0GT/s
+pci7 at ppb6 bus 7
+pci7: i/o space, memory space enabled, rd/line, wr/inv ok
+nvme0 at pci7 dev 0 function 0: vendor 126f product 2263 (rev. 0x03)
+nvme0: NVMe 1.3
+nvme0: for admin queue interrupting at msix3 vec 0
+nvme0: NVME SSD 128GB, firmware T0707A0L, serial ...
+nvme0: for io queue 1 interrupting at msix3 vec 1 affinity to cpu0
+nvme0: for io queue 2 interrupting at msix3 vec 2 affinity to cpu1
+nvme0: for io queue 3 interrupting at msix3 vec 3 affinity to cpu2
+nvme0: for io queue 4 interrupting at msix3 vec 4 affinity to cpu3
+ld0 at nvme0 nsid 1
+ld0: 119 GB, 15566 cyl, 255 head, 63 sec, 512 bytes/sect x 250069680 sectors
+pchb1 at pci0 dev 8 function 0: vendor 1022 product 1452 (rev. 0x00)
+ppb7 at pci0 dev 8 function 1: vendor 1022 product 15db (rev. 0x00)
+ppb7: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci8 at ppb7 bus 8
+pci8: i/o space, memory space enabled, rd/line, wr/inv ok
+genfb0 at pci8 dev 0 function 0: vendor 1002 product 15dd (rev. 0xc8)
+genfb0: framebuffer at 0xe0000000, size 1024x768, depth 32, stride 4096
+genfb0: shadow framebuffer enabled, size 3072 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+hdaudio0 at pci8 dev 0 function 1: HD Audio Controller
+hdaudio0: interrupting at msi4 vec 0
+hdafg0 at hdaudio0: vendor 1002 product aa01
+hdafg0: HDMI00 2ch: Digital Out [Jack]
+hdafg0: 2ch/0ch 32000Hz 44100Hz 48000Hz PCM16 AC3
+vendor 1022 product 15df (miscellaneous crypto) at pci8 dev 0 function 2 not configured
+xhci1 at pci8 dev 0 function 3: vendor 1022 product 15e0 (rev. 0x00)
+xhci1: interrupting at msix5 vec 0
+xhci1: xHCI version 1.10
+usb2 at xhci1: USB revision 3.1
+usb3 at xhci1: USB revision 2.0
+xhci2 at pci8 dev 0 function 4: vendor 1022 product 15e1 (rev. 0x00)
+xhci2: interrupting at msix6 vec 0
+xhci2: xHCI version 1.10
+usb4 at xhci2: USB revision 3.1
+usb5 at xhci2: USB revision 2.0
+hdaudio1 at pci8 dev 0 function 6: HD Audio Controller
+hdaudio1: interrupting at msi7 vec 0
+hdafg1 at hdaudio1: vendor 10ec product 0887
+hdafg1: DAC00 2ch: Speaker [Jack]
+hdafg1: DAC01 2ch: HP Out [Jack]
+hdafg1: DIG02 2ch: SPDIF Out [Built-In]
+hdafg1: ADC03 2ch: Line In [Jack], Mic In [Jack]
+hdafg1: ADC04 2ch: Mic In [Jack]
+hdafg1: 2ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg1: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+ppb8 at pci0 dev 8 function 2: vendor 1022 product 15dc (rev. 0x00)
+ppb8: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci9 at ppb8 bus 9
+pci9: i/o space, memory space enabled, rd/line, wr/inv ok
+ahcisata1 at pci9 dev 0 function 0: vendor 1022 product 7901 (rev. 0x61)
+ahcisata1: 64-bit DMA
+ahcisata1: AHCI revision 1.31, 1 port, 32 slots, CAP 0xf737ff00<PSC,SSC,PMD,FBSS,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SMPS,SSNTF,SNCQ,S64A>
+allocated pic msi8 type edge pin 0 level 6 to cpu1 slot 1 idt entry 107
+ahcisata1: interrupting at msi8 vec 0
+atabus4 at ahcisata1 channel 0
+piixpm0 at pci0 dev 20 function 0: vendor 1022 product 790b (rev. 0x61)
+piixpm0: interrupting at SMI, 
+iic0 at piixpm0 port 0: I2C bus
+iic1 at piixpm0 port 1: I2C bus
+pcib0 at pci0 dev 20 function 3: vendor 1022 product 790e (rev. 0x51)
+pchb2 at pci0 dev 24 function 0: vendor 1022 product 15e8 (rev. 0x00)
+pchb3 at pci0 dev 24 function 1: vendor 1022 product 15e9 (rev. 0x00)
+pchb4 at pci0 dev 24 function 2: vendor 1022 product 15ea (rev. 0x00)
+pchb5 at pci0 dev 24 function 3: vendor 1022 product 15eb (rev. 0x00)
+pchb6 at pci0 dev 24 function 4: vendor 1022 product 15ec (rev. 0x00)
+pchb7 at pci0 dev 24 function 5: vendor 1022 product 15ed (rev. 0x00)
+pchb8 at pci0 dev 24 function 6: vendor 1022 product 15ee (rev. 0x00)
+pchb9 at pci0 dev 24 function 7: vendor 1022 product 15ef (rev. 0x00)
+isa0 at pcib0
+pckbc0 at isa0 port 0x60-0x64
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow     0 mW
+acpicpu0: C2: I/O, lat 400 us, pow     0 mW
+acpicpu0: P0: FFH, lat   1 us, pow  4900 mW, 3500 MHz
+acpicpu0: P1: FFH, lat   1 us, pow  2242 mW, 2300 MHz
+acpicpu0: P2: FFH, lat   1 us, pow  1400 mW, 1600 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+acpicpu1 at cpu1: ACPI CPU
+acpicpu2 at cpu2: ACPI CPU
+acpicpu3 at cpu3: ACPI CPU
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 3493832300 Hz quality 3000
+uhub0 at usb0: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 3 ports with 3 removable, self powered
+uhub1 at usb1: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 9 ports with 9 removable, self powered
+uhub2 at usb2: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 3.00/1.00, addr 0
+uhub2: 4 ports with 4 removable, self powered
+uhub3 at usb3: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 0
+uhub3: 4 ports with 4 removable, self powered
+uhub4 at usb4: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 3.00/1.00, addr 0
+uhub4: 1 port with 1 removable, self powered
+uhub5 at usb5: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 0
+uhub5: 1 port with 1 removable, self powered
+IPsec: Initialized Security Association Processing.
+ahcisata0 port 0: device present, speed: 6.0Gb/s
+wd0 at atabus0 drive 0
+wd0: <Samsung SSD 860 EVO 500GB>
+wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+wd0: 465 GB, 969021 cyl, 16 head, 63 sec, 512 bytes/sect x 976773168 sectors
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags)
+wd0(ahcisata0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+umass0 at uhub0 port 3 configuration 1 interface 0
+umass0: SanDisk (0x781) Ultra (0x5581), rev 3.00/1.00, addr 1
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, 1 lun per target
+sd0 at scsibus0 target 0 lun 0: <SanDisk, Ultra, 1.00> disk removable
+sd0: 29664 MB, 60269 cyl, 16 head, 63 sec, 512 bytes/sect x 60751872 sectors
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+uhub6 at uhub3 port 3: Dell (0x413c) Dell USB Keyboard Hub (0x1003), class 9/0, rev 1.10/2.00, addr 1
+dk0 at sd0: "EFI system", 262144 blocks at 2048, type: msdos
+dk1 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 2908160 blocks at 264192, type: ffs
+uhub6: 3 ports with 2 removable, bus powered
+uhidev0 at uhub6 port 1 configuration 1 interface 0
+uhidev0: Dell (0x413c) Dell USB Keyboard (0x2010), rev 1.10/2.00, addr 2, iclass 3/1
+ukbd0 at uhidev0
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub6 port 1 configuration 1 interface 1
+uhidev1: Dell (0x413c) Dell USB Keyboard (0x2010), rev 1.10/2.00, addr 2, iclass 3/0
+uhidev1: 3 report ids
+uhid0 at uhidev1 reportid 1: input=1, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 3: input=3, output=0, feature=0
+uhidev2 at uhub6 port 2 configuration 1 interface 0
+uhidev2: vendor 0461 (0x461) USB Optical Mouse (0x4d15), rev 2.00/2.00, addr 3, iclass 3/1
+ums0 at uhidev2: 3 buttons and Z dir
+wsmouse0 at ums0 mux 0
+boot device: sd0
+root on dk1
+root file system type: ffs
+kern.module.path=/stand/amd64/9.2/modules
+/dev/dk1: file system not clean (fs_clean=0x8); please fsck(8)
+/dev/dk1: lost blocks 0 files 0
+dk2 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32767936 blocks at 262208, type: ffs
+dk3 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262144 blocks at 64, type: msdos
+dk3 at ld0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk2 at ld0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk2 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32767936 blocks at 262208, type: ffs
+dk2 at ld0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk2 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32767936 blocks at 262208, type: ffs
+dk3 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262144 blocks at 64, type: msdos
+syncing disks... 10 6 done
+unmounted tmpfs on /tmp type tmpfs
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.2 (GENERIC) #0: Wed May 12 13:15:55 UTC 2021
+	XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+total memory = 14270 MB
+avail memory = 13829 MB
+cpu_rng: RDSEED
+rnd: seeded with 256 bits
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+running cgd selftest aes-xts-256 aes-xts-512 done
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+efi: systbl at pa 5b6cc018
+System manufacturer System Product Name (System Version)
+mainbus0 (root)
+ACPI: RSDP 0x000000004A927000 000024 (v02 ALASKA)
+ACPI: XSDT 0x000000004A9270A0 0000BC (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: FACP 0x000000004A9328B0 000114 (v06 ALASKA A M I    01072009 AMI  00010013)
+ACPI: DSDT 0x000000004A9271F8 00B6B8 (v02 ALASKA A M I    01072009 INTL 20120913)
+ACPI: FACS 0x000000005A976E00 000040
+ACPI: APIC 0x000000004A9329C8 00015E (v03 ALASKA A M I    01072009 AMI  00010013)
+ACPI: FPDT 0x000000004A932B28 000044 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: FIDT 0x000000004A932B70 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x000000004A932C10 000060 (v02 ALASKA CPUSSDT  01072009 AMI  01072009)
+ACPI: SSDT 0x000000004A940510 0000BF (v01 AMD    AMD PT   00001000 INTL 20120913)
+ACPI: SSDT 0x000000004A932CC8 005419 (v02 AMD    AmdTable 00000002 MSFT 04000000)
+ACPI: SSDT 0x000000004A9380E8 00378A (v01 AMD    AMD AOD  00000001 INTL 20120913)
+ACPI: MCFG 0x000000004A93B878 00003C (v01 ALASKA A M I    01072009 MSFT 00010013)
+ACPI: HPET 0x000000004A93B8B8 000038 (v01 ALASKA A M I    01072009 AMI  00000005)
+ACPI: UEFI 0x000000004A93B8F0 000042 (v01                 00000000      00000000)
+ACPI: BGRT 0x000000004A93B938 000038 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: IVRS 0x000000004A93B970 0000D0 (v02 AMD    AMD IVRS 00000001 AMD  00000000)
+ACPI: SSDT 0x000000004A93BA40 000854 (v01 AMD    AMD CPU  00000001 AMD  00000001)
+ACPI: CRAT 0x000000004A93C298 000810 (v01 AMD    AMD CRAT 00000001 AMD  00000001)
+ACPI: CDIT 0x000000004A93CAA8 000029 (v01 AMD    AMD CDIT 00000001 AMD  00000001)
+ACPI: SSDT 0x000000004A93CAD8 000C34 (v01 AMD    AmdTable 00000001 INTL 20120913)
+ACPI: SSDT 0x000000004A93D710 0010AC (v01 AMD    AmdTable 00000001 INTL 20120913)
+ACPI: SSDT 0x000000004A93E7C0 001D4A (v01 AMD    AmdTable 00000001 INTL 20120913)
+ACPI: 9 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 5: pa 0xfec00000, version 0x21, 24 pins
+ioapic1 at mainbus0 apid 6: pa 0xfec01000, version 0x21, 32 pins
+cpu0 at mainbus0 apid 0
+cpu0: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu0: package 0, core 0, smt 0
+cpu1 at mainbus0 apid 1
+cpu1: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu1: package 0, core 1, smt 0
+cpu2 at mainbus0 apid 2
+cpu2: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu2: package 0, core 2, smt 0
+cpu3 at mainbus0 apid 3
+cpu3: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu3: package 0, core 3, smt 0
+acpi0 at mainbus0: Intel ACPICA 20190405
+acpi0: X/RSDT: OemId <ALASKA,  A M I ,01072009>, AslId <AMI ,00010013>
+acpi0: MCFG: segment 0, bus 0-63, address 0x00000000f8000000
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+AMDN (PNP0C01) at acpi0 not configured
+IOMA (PNP0C02) at acpi0 not configured
+BROD (PNP0C02) at acpi0 not configured
+APSP (PNP0C02) at acpi0 not configured
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+spkr0 at pcppi1: PC Speaker
+wsbell at spkr0 not configured
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+SIO1 (PNP0C02) at acpi0 not configured
+S900 (PNP0C02) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+GPIO (AMDI0030) at acpi0 not configured
+PTIO (AMDIF030) at acpi0 not configured
+AWR0 (PNP0C02) at acpi0 not configured
+ABR0 (PNP0C02) at acpi0 not configured
+ABR1 (PNP0C02) at acpi0 not configured
+ABR2 (PNP0C02) at acpi0 not configured
+ABR3 (PNP0C02) at acpi0 not configured
+ABR4 (PNP0C02) at acpi0 not configured
+ABR5 (PNP0C02) at acpi0 not configured
+ABR6 (PNP0C02) at acpi0 not configured
+acpiwmi0 at acpi0 (AMW0, PNP0C14-ASUSWMI): ACPI WMI Interface
+wmieeepc0 at acpiwmi0: Asus Eee PC WMI mappings
+acpiwmi1 at acpi0 (ACCE, PNP0C14-ASUSCONTROLCENTER): ACPI WMI Interface
+acpiwmibus at acpiwmi1 not configured
+acpiwmi2 at acpi0 (AOD, PNP0C14-AOD): ACPI WMI Interface
+acpiwmibus at acpiwmi2 not configured
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+amdsmn0 at pci0 dev 0 function 0: AMD System Management Network
+amdzentemp0 at amdsmn0: AMD CPU Temperature Sensors (Family17h)
+vendor 1022 product 15d1 (IOMMU system) at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0: vendor 1022 product 1452 (rev. 0x00)
+ppb0 at pci0 dev 1 function 2: vendor 1022 product 15d3 (rev. 0x00)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 8.0GT/s
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+xhci0 at pci1 dev 0 function 0: vendor 1022 product 43bc (rev. 0x02)
+xhci0: interrupting at msi0 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+ahcisata0 at pci1 dev 0 function 1: vendor 1022 product 43b8 (rev. 0x02)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 8 ports, 32 slots, CAP 0xef36ff27<SXS,PSC,SSC,PMD,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SSS,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi1 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 4
+atabus3 at ahcisata0 channel 5
+ppb1 at pci1 dev 0 function 2: vendor 1022 product 43b3 (rev. 0x02)
+ppb1: PCI Express capability version 2 <Upstream Port of PCI-E Switch>
+pci2 at ppb1 bus 2
+pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb2 at pci2 dev 4 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb2: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci3 at ppb2 bus 3
+pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb3 at pci2 dev 5 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb3: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci4 at ppb3 bus 4
+pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb4 at pci2 dev 6 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb4: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+ppb4: link is x1 @ 2.5GT/s
+pci5 at ppb4 bus 5
+pci5: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci5 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x15)
+re0: interrupting at msix2 vec 0
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8251 1000BASE-T media interface, rev. 0
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+ppb5 at pci2 dev 7 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb5: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci6 at ppb5 bus 6
+pci6: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb6 at pci0 dev 1 function 6: vendor 1022 product 15d3 (rev. 0x00)
+ppb6: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 8.0GT/s
+pci7 at ppb6 bus 7
+pci7: i/o space, memory space enabled, rd/line, wr/inv ok
+nvme0 at pci7 dev 0 function 0: vendor 126f product 2263 (rev. 0x03)
+nvme0: NVMe 1.3
+nvme0: for admin queue interrupting at msix3 vec 0
+nvme0: NVME SSD 128GB, firmware T0707A0L, serial ...
+nvme0: for io queue 1 interrupting at msix3 vec 1 affinity to cpu0
+nvme0: for io queue 2 interrupting at msix3 vec 2 affinity to cpu1
+nvme0: for io queue 3 interrupting at msix3 vec 3 affinity to cpu2
+nvme0: for io queue 4 interrupting at msix3 vec 4 affinity to cpu3
+ld0 at nvme0 nsid 1
+ld0: 119 GB, 15566 cyl, 255 head, 63 sec, 512 bytes/sect x 250069680 sectors
+pchb1 at pci0 dev 8 function 0: vendor 1022 product 1452 (rev. 0x00)
+ppb7 at pci0 dev 8 function 1: vendor 1022 product 15db (rev. 0x00)
+ppb7: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci8 at ppb7 bus 8
+pci8: i/o space, memory space enabled, rd/line, wr/inv ok
+genfb0 at pci8 dev 0 function 0: vendor 1002 product 15dd (rev. 0xc8)
+genfb0: framebuffer at 0xe0000000, size 1024x768, depth 32, stride 4096
+genfb0: shadow framebuffer enabled, size 3072 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+hdaudio0 at pci8 dev 0 function 1: HD Audio Controller
+hdaudio0: interrupting at msi4 vec 0
+hdafg0 at hdaudio0: vendor 1002 product aa01
+hdafg0: HDMI00 2ch: Digital Out [Jack]
+hdafg0: 2ch/0ch 32000Hz 44100Hz 48000Hz PCM16 AC3
+vendor 1022 product 15df (miscellaneous crypto) at pci8 dev 0 function 2 not configured
+xhci1 at pci8 dev 0 function 3: vendor 1022 product 15e0 (rev. 0x00)
+xhci1: interrupting at msix5 vec 0
+xhci1: xHCI version 1.10
+usb2 at xhci1: USB revision 3.1
+usb3 at xhci1: USB revision 2.0
+xhci2 at pci8 dev 0 function 4: vendor 1022 product 15e1 (rev. 0x00)
+xhci2: interrupting at msix6 vec 0
+xhci2: xHCI version 1.10
+usb4 at xhci2: USB revision 3.1
+usb5 at xhci2: USB revision 2.0
+hdaudio1 at pci8 dev 0 function 6: HD Audio Controller
+hdaudio1: interrupting at msi7 vec 0
+hdafg1 at hdaudio1: vendor 10ec product 0887
+hdafg1: DAC00 2ch: Speaker [Jack]
+hdafg1: DAC01 2ch: HP Out [Jack]
+hdafg1: DIG02 2ch: SPDIF Out [Built-In]
+hdafg1: ADC03 2ch: Line In [Jack], Mic In [Jack]
+hdafg1: ADC04 2ch: Mic In [Jack]
+hdafg1: 2ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg1: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+ppb8 at pci0 dev 8 function 2: vendor 1022 product 15dc (rev. 0x00)
+ppb8: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci9 at ppb8 bus 9
+pci9: i/o space, memory space enabled, rd/line, wr/inv ok
+ahcisata1 at pci9 dev 0 function 0: vendor 1022 product 7901 (rev. 0x61)
+ahcisata1: 64-bit DMA
+ahcisata1: AHCI revision 1.31, 1 port, 32 slots, CAP 0xf737ff00<PSC,SSC,PMD,FBSS,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SMPS,SSNTF,SNCQ,S64A>
+allocated pic msi8 type edge pin 0 level 6 to cpu1 slot 1 idt entry 107
+ahcisata1: interrupting at msi8 vec 0
+atabus4 at ahcisata1 channel 0
+piixpm0 at pci0 dev 20 function 0: vendor 1022 product 790b (rev. 0x61)
+piixpm0: interrupting at SMI, 
+iic0 at piixpm0 port 0: I2C bus
+iic1 at piixpm0 port 1: I2C bus
+pcib0 at pci0 dev 20 function 3: vendor 1022 product 790e (rev. 0x51)
+pchb2 at pci0 dev 24 function 0: vendor 1022 product 15e8 (rev. 0x00)
+pchb3 at pci0 dev 24 function 1: vendor 1022 product 15e9 (rev. 0x00)
+pchb4 at pci0 dev 24 function 2: vendor 1022 product 15ea (rev. 0x00)
+pchb5 at pci0 dev 24 function 3: vendor 1022 product 15eb (rev. 0x00)
+pchb6 at pci0 dev 24 function 4: vendor 1022 product 15ec (rev. 0x00)
+pchb7 at pci0 dev 24 function 5: vendor 1022 product 15ed (rev. 0x00)
+pchb8 at pci0 dev 24 function 6: vendor 1022 product 15ee (rev. 0x00)
+pchb9 at pci0 dev 24 function 7: vendor 1022 product 15ef (rev. 0x00)
+isa0 at pcib0
+pckbc0 at isa0 port 0x60-0x64
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow     0 mW
+acpicpu0: C2: I/O, lat 400 us, pow     0 mW
+acpicpu0: P0: FFH, lat   1 us, pow  4900 mW, 3500 MHz
+acpicpu0: P1: FFH, lat   1 us, pow  2242 mW, 2300 MHz
+acpicpu0: P2: FFH, lat   1 us, pow  1400 mW, 1600 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+acpicpu1 at cpu1: ACPI CPU
+acpicpu2 at cpu2: ACPI CPU
+acpicpu3 at cpu3: ACPI CPU
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 3493825650 Hz quality 3000
+uhub0 at usb0: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 3 ports with 3 removable, self powered
+uhub1 at usb1: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 9 ports with 9 removable, self powered
+uhub2 at usb2: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 3.00/1.00, addr 0
+uhub2: 4 ports with 4 removable, self powered
+uhub3 at usb3: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 0
+uhub3: 4 ports with 4 removable, self powered
+uhub4 at usb4: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 3.00/1.00, addr 0
+uhub4: 1 port with 1 removable, self powered
+uhub5 at usb5: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 0
+uhub5: 1 port with 1 removable, self powered
+ld0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262144 blocks at 64, type: msdos
+dk1 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32767936 blocks at 262208, type: ffs
+dk2 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32768000 blocks at 33030144, type: swap
+IPsec: Initialized Security Association Processing.
+ahcisata0 port 0: device present, speed: 6.0Gb/s
+wd0 at atabus0 drive 0
+umass0 at uhub0 port 3 configuration 1 interface 0
+umass0: SanDisk (0x781) Ultra (0x5581), rev 3.00/1.00, addr 1
+umass0: using SCSI over Bulk-Only
+wd0: <Samsung SSD 860 EVO 500GB>
+wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+wd0: 465 GB, 969021 cyl, 16 head, 63 sec, 512 bytes/sect x 976773168 sectors
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags)
+wd0(ahcisata0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+scsibus0 at umass0: 2 targets, 1 lun per target
+sd0 at scsibus0 target 0 lun 0: <SanDisk, Ultra, 1.00> disk removable
+sd0: 29664 MB, 60269 cyl, 16 head, 63 sec, 512 bytes/sect x 60751872 sectors
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk3 at sd0: "EFI system", 262144 blocks at 2048, type: msdos
+dk4 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 2908160 blocks at 264192, type: ffs
+uhub6 at uhub3 port 3: Dell (0x413c) Dell USB Keyboard Hub (0x1003), class 9/0, rev 1.10/2.00, addr 1
+uhub6: 3 ports with 2 removable, bus powered
+uhidev0 at uhub6 port 1 configuration 1 interface 0
+uhidev0: Dell (0x413c) Dell USB Keyboard (0x2010), rev 1.10/2.00, addr 2, iclass 3/1
+ukbd0 at uhidev0
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub6 port 1 configuration 1 interface 1
+uhidev1: Dell (0x413c) Dell USB Keyboard (0x2010), rev 1.10/2.00, addr 2, iclass 3/0
+uhidev1: 3 report ids
+uhid0 at uhidev1 reportid 1: input=1, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 3: input=3, output=0, feature=0
+uhidev2 at uhub6 port 2 configuration 1 interface 0
+uhidev2: vendor 0461 (0x461) USB Optical Mouse (0x4d15), rev 2.00/2.00, addr 3, iclass 3/1
+ums0 at uhidev2: 3 buttons and Z dir
+wsmouse0 at ums0 mux 0
+boot device: ld0
+root on dk1 dumps on dk2
+root file system type: ffs
+kern.module.path=/stand/amd64/9.2/modules
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)
+syncing disks... done
+unmounted tmpfs on /var/shm type tmpfs
+unmounted procfs on /proc type procfs
+unmounted ptyfs on /dev/pts type ptyfs
+unmounted kernfs on /kern type kernfs
+unmounted tmpfs on /tmp type tmpfs
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.2 (GENERIC) #0: Wed May 12 13:15:55 UTC 2021
+	XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+total memory = 14270 MB
+avail memory = 13829 MB
+cpu_rng: RDSEED
+rnd: seeded with 256 bits
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+running cgd selftest aes-xts-256 aes-xts-512 done
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+efi: systbl at pa 5b6cc018
+System manufacturer System Product Name (System Version)
+mainbus0 (root)
+ACPI: RSDP 0x000000004A933000 000024 (v02 ALASKA)
+ACPI: XSDT 0x000000004A9330A0 0000BC (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: FACP 0x000000004A93E8B0 000114 (v06 ALASKA A M I    01072009 AMI  00010013)
+ACPI: DSDT 0x000000004A9331F8 00B6B8 (v02 ALASKA A M I    01072009 INTL 20120913)
+ACPI: FACS 0x000000005A976E00 000040
+ACPI: APIC 0x000000004A93E9C8 00015E (v03 ALASKA A M I    01072009 AMI  00010013)
+ACPI: FPDT 0x000000004A93EB28 000044 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: FIDT 0x000000004A93EB70 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x000000004A93EC10 000060 (v02 ALASKA CPUSSDT  01072009 AMI  01072009)
+ACPI: SSDT 0x000000004A94C510 0000BF (v01 AMD    AMD PT   00001000 INTL 20120913)
+ACPI: SSDT 0x000000004A93ECC8 005419 (v02 AMD    AmdTable 00000002 MSFT 04000000)
+ACPI: SSDT 0x000000004A9440E8 00378A (v01 AMD    AMD AOD  00000001 INTL 20120913)
+ACPI: MCFG 0x000000004A947878 00003C (v01 ALASKA A M I    01072009 MSFT 00010013)
+ACPI: HPET 0x000000004A9478B8 000038 (v01 ALASKA A M I    01072009 AMI  00000005)
+ACPI: UEFI 0x000000004A9478F0 000042 (v01                 00000000      00000000)
+ACPI: BGRT 0x000000004A947938 000038 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: IVRS 0x000000004A947970 0000D0 (v02 AMD    AMD IVRS 00000001 AMD  00000000)
+ACPI: SSDT 0x000000004A947A40 000854 (v01 AMD    AMD CPU  00000001 AMD  00000001)
+ACPI: CRAT 0x000000004A948298 000810 (v01 AMD    AMD CRAT 00000001 AMD  00000001)
+ACPI: CDIT 0x000000004A948AA8 000029 (v01 AMD    AMD CDIT 00000001 AMD  00000001)
+ACPI: SSDT 0x000000004A948AD8 000C34 (v01 AMD    AmdTable 00000001 INTL 20120913)
+ACPI: SSDT 0x000000004A949710 0010AC (v01 AMD    AmdTable 00000001 INTL 20120913)
+ACPI: SSDT 0x000000004A94A7C0 001D4A (v01 AMD    AmdTable 00000001 INTL 20120913)
+ACPI: 9 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 5: pa 0xfec00000, version 0x21, 24 pins
+ioapic1 at mainbus0 apid 6: pa 0xfec01000, version 0x21, 32 pins
+cpu0 at mainbus0 apid 0
+cpu0: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu0: package 0, core 0, smt 0
+cpu1 at mainbus0 apid 1
+cpu1: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu1: package 0, core 1, smt 0
+cpu2 at mainbus0 apid 2
+cpu2: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu2: package 0, core 2, smt 0
+cpu3 at mainbus0 apid 3
+cpu3: AMD Ryzen 3 2200G with Radeon Vega Graphics    , id 0x810f10
+cpu3: package 0, core 3, smt 0
+acpi0 at mainbus0: Intel ACPICA 20190405
+acpi0: X/RSDT: OemId <ALASKA,  A M I ,01072009>, AslId <AMI ,00010013>
+acpi0: MCFG: segment 0, bus 0-63, address 0x00000000f8000000
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+AMDN (PNP0C01) at acpi0 not configured
+IOMA (PNP0C02) at acpi0 not configured
+BROD (PNP0C02) at acpi0 not configured
+APSP (PNP0C02) at acpi0 not configured
+attimer1 at acpi0 (TMR, PNP0100): io 0x40-0x43 irq 0
+pcppi1 at acpi0 (SPKR, PNP0800): io 0x61
+spkr0 at pcppi1: PC Speaker
+wsbell at spkr0 not configured
+midi0 at pcppi1: PC speaker
+sysbeep0 at pcppi1
+SIO1 (PNP0C02) at acpi0 not configured
+S900 (PNP0C02) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+GPIO (AMDI0030) at acpi0 not configured
+PTIO (AMDIF030) at acpi0 not configured
+AWR0 (PNP0C02) at acpi0 not configured
+ABR0 (PNP0C02) at acpi0 not configured
+ABR1 (PNP0C02) at acpi0 not configured
+ABR2 (PNP0C02) at acpi0 not configured
+ABR3 (PNP0C02) at acpi0 not configured
+ABR4 (PNP0C02) at acpi0 not configured
+ABR5 (PNP0C02) at acpi0 not configured
+ABR6 (PNP0C02) at acpi0 not configured
+acpiwmi0 at acpi0 (AMW0, PNP0C14-ASUSWMI): ACPI WMI Interface
+wmieeepc0 at acpiwmi0: Asus Eee PC WMI mappings
+acpiwmi1 at acpi0 (ACCE, PNP0C14-ASUSCONTROLCENTER): ACPI WMI Interface
+acpiwmibus at acpiwmi1 not configured
+acpiwmi2 at acpi0 (AOD, PNP0C14-AOD): ACPI WMI Interface
+acpiwmibus at acpiwmi2 not configured
+attimer1: attached to pcppi1
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+amdsmn0 at pci0 dev 0 function 0: AMD System Management Network
+amdzentemp0 at amdsmn0: AMD CPU Temperature Sensors (Family17h)
+vendor 1022 product 15d1 (IOMMU system) at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0: vendor 1022 product 1452 (rev. 0x00)
+ppb0 at pci0 dev 1 function 2: vendor 1022 product 15d3 (rev. 0x00)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 8.0GT/s
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+xhci0 at pci1 dev 0 function 0: vendor 1022 product 43bc (rev. 0x02)
+xhci0: interrupting at msi0 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+ahcisata0 at pci1 dev 0 function 1: vendor 1022 product 43b8 (rev. 0x02)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 8 ports, 32 slots, CAP 0xef36ff27<SXS,PSC,SSC,PMD,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SSS,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi1 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+atabus2 at ahcisata0 channel 4
+atabus3 at ahcisata0 channel 5
+ppb1 at pci1 dev 0 function 2: vendor 1022 product 43b3 (rev. 0x02)
+ppb1: PCI Express capability version 2 <Upstream Port of PCI-E Switch>
+pci2 at ppb1 bus 2
+pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb2 at pci2 dev 4 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb2: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci3 at ppb2 bus 3
+pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb3 at pci2 dev 5 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb3: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci4 at ppb3 bus 4
+pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb4 at pci2 dev 6 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb4: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+ppb4: link is x1 @ 2.5GT/s
+pci5 at ppb4 bus 5
+pci5: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci5 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x15)
+re0: interrupting at msix2 vec 0
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8251 1000BASE-T media interface, rev. 0
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+ppb5 at pci2 dev 7 function 0: vendor 1022 product 43b4 (rev. 0x02)
+ppb5: PCI Express capability version 2 <Downstream Port of PCI-E Switch> x1 @ 5.0GT/s
+pci6 at ppb5 bus 6
+pci6: i/o space, memory space enabled, rd/line, wr/inv ok
+ppb6 at pci0 dev 1 function 6: vendor 1022 product 15d3 (rev. 0x00)
+ppb6: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 8.0GT/s
+pci7 at ppb6 bus 7
+pci7: i/o space, memory space enabled, rd/line, wr/inv ok
+nvme0 at pci7 dev 0 function 0: vendor 126f product 2263 (rev. 0x03)
+nvme0: NVMe 1.3
+nvme0: for admin queue interrupting at msix3 vec 0
+nvme0: NVME SSD 128GB, firmware T0707A0L, serial ...
+nvme0: for io queue 1 interrupting at msix3 vec 1 affinity to cpu0
+nvme0: for io queue 2 interrupting at msix3 vec 2 affinity to cpu1
+nvme0: for io queue 3 interrupting at msix3 vec 3 affinity to cpu2
+nvme0: for io queue 4 interrupting at msix3 vec 4 affinity to cpu3
+ld0 at nvme0 nsid 1
+ld0: 119 GB, 15566 cyl, 255 head, 63 sec, 512 bytes/sect x 250069680 sectors
+pchb1 at pci0 dev 8 function 0: vendor 1022 product 1452 (rev. 0x00)
+ppb7 at pci0 dev 8 function 1: vendor 1022 product 15db (rev. 0x00)
+ppb7: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci8 at ppb7 bus 8
+pci8: i/o space, memory space enabled, rd/line, wr/inv ok
+genfb0 at pci8 dev 0 function 0: vendor 1002 product 15dd (rev. 0xc8)
+genfb0: framebuffer at 0xe0000000, size 1024x768, depth 32, stride 4096
+genfb0: shadow framebuffer enabled, size 3072 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+hdaudio0 at pci8 dev 0 function 1: HD Audio Controller
+hdaudio0: interrupting at msi4 vec 0
+hdafg0 at hdaudio0: vendor 1002 product aa01
+hdafg0: HDMI00 2ch: Digital Out [Jack]
+hdafg0: 2ch/0ch 32000Hz 44100Hz 48000Hz PCM16 AC3
+vendor 1022 product 15df (miscellaneous crypto) at pci8 dev 0 function 2 not configured
+xhci1 at pci8 dev 0 function 3: vendor 1022 product 15e0 (rev. 0x00)
+xhci1: interrupting at msix5 vec 0
+xhci1: xHCI version 1.10
+usb2 at xhci1: USB revision 3.1
+usb3 at xhci1: USB revision 2.0
+xhci2 at pci8 dev 0 function 4: vendor 1022 product 15e1 (rev. 0x00)
+xhci2: interrupting at msix6 vec 0
+xhci2: xHCI version 1.10
+usb4 at xhci2: USB revision 3.1
+usb5 at xhci2: USB revision 2.0
+hdaudio1 at pci8 dev 0 function 6: HD Audio Controller
+hdaudio1: interrupting at msi7 vec 0
+hdafg1 at hdaudio1: vendor 10ec product 0887
+hdafg1: DAC00 2ch: Speaker [Jack]
+hdafg1: DAC01 2ch: HP Out [Jack]
+hdafg1: DIG02 2ch: SPDIF Out [Built-In]
+hdafg1: ADC03 2ch: Line In [Jack], Mic In [Jack]
+hdafg1: ADC04 2ch: Mic In [Jack]
+hdafg1: 2ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg1: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr1 at audio0: PC Speaker (synthesized)
+wsbell at spkr1 not configured
+ppb8 at pci0 dev 8 function 2: vendor 1022 product 15dc (rev. 0x00)
+ppb8: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x16 @ 8.0GT/s
+pci9 at ppb8 bus 9
+pci9: i/o space, memory space enabled, rd/line, wr/inv ok
+ahcisata1 at pci9 dev 0 function 0: vendor 1022 product 7901 (rev. 0x61)
+ahcisata1: 64-bit DMA
+ahcisata1: AHCI revision 1.31, 1 port, 32 slots, CAP 0xf737ff00<PSC,SSC,PMD,FBSS,SPM,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SMPS,SSNTF,SNCQ,S64A>
+allocated pic msi8 type edge pin 0 level 6 to cpu1 slot 1 idt entry 107
+ahcisata1: interrupting at msi8 vec 0
+atabus4 at ahcisata1 channel 0
+piixpm0 at pci0 dev 20 function 0: vendor 1022 product 790b (rev. 0x61)
+piixpm0: interrupting at SMI, 
+iic0 at piixpm0 port 0: I2C bus
+iic1 at piixpm0 port 1: I2C bus
+pcib0 at pci0 dev 20 function 3: vendor 1022 product 790e (rev. 0x51)
+pchb2 at pci0 dev 24 function 0: vendor 1022 product 15e8 (rev. 0x00)
+pchb3 at pci0 dev 24 function 1: vendor 1022 product 15e9 (rev. 0x00)
+pchb4 at pci0 dev 24 function 2: vendor 1022 product 15ea (rev. 0x00)
+pchb5 at pci0 dev 24 function 3: vendor 1022 product 15eb (rev. 0x00)
+pchb6 at pci0 dev 24 function 4: vendor 1022 product 15ec (rev. 0x00)
+pchb7 at pci0 dev 24 function 5: vendor 1022 product 15ed (rev. 0x00)
+pchb8 at pci0 dev 24 function 6: vendor 1022 product 15ee (rev. 0x00)
+pchb9 at pci0 dev 24 function 7: vendor 1022 product 15ef (rev. 0x00)
+isa0 at pcib0
+pckbc0 at isa0 port 0x60-0x64
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow     0 mW
+acpicpu0: C2: I/O, lat 400 us, pow     0 mW
+acpicpu0: P0: FFH, lat   1 us, pow  4900 mW, 3500 MHz
+acpicpu0: P1: FFH, lat   1 us, pow  2242 mW, 2300 MHz
+acpicpu0: P2: FFH, lat   1 us, pow  1400 mW, 1600 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+acpicpu1 at cpu1: ACPI CPU
+acpicpu2 at cpu2: ACPI CPU
+acpicpu3 at cpu3: ACPI CPU
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 3493840350 Hz quality 3000
+uhub0 at usb0: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 3 ports with 3 removable, self powered
+uhub1 at usb1: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 9 ports with 9 removable, self powered
+uhub2 at usb2: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 3.00/1.00, addr 0
+uhub2: 4 ports with 4 removable, self powered
+uhub3 at usb3: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 0
+uhub3: 4 ports with 4 removable, self powered
+uhub4 at usb4: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 3.00/1.00, addr 0
+uhub4: 1 port with 1 removable, self powered
+uhub5 at usb5: NetBSD (0000) xHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 0
+uhub5: 1 port with 1 removable, self powered
+ld0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262144 blocks at 64, type: msdos
+dk1 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32767936 blocks at 262208, type: ffs
+dk2 at ld0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 32768000 blocks at 33030144, type: swap
+IPsec: Initialized Security Association Processing.
+ahcisata0 port 0: device present, speed: 6.0Gb/s
+wd0 at atabus0 drive 0
+wd0: <Samsung SSD 860 EVO 500GB>
+wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+wd0: 465 GB, 969021 cyl, 16 head, 63 sec, 512 bytes/sect x 976773168 sectors
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags)
+wd0(ahcisata0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+uhub6 at uhub3 port 3: Dell (0x413c) Dell USB Keyboard Hub (0x1003), class 9/0, rev 1.10/2.00, addr 1
+uhub6: 3 ports with 2 removable, bus powered
+uhidev0 at uhub6 port 1 configuration 1 interface 0
+uhidev0: Dell (0x413c) Dell USB Keyboard (0x2010), rev 1.10/2.00, addr 2, iclass 3/1
+ukbd0 at uhidev0
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub6 port 1 configuration 1 interface 1
+uhidev1: Dell (0x413c) Dell USB Keyboard (0x2010), rev 1.10/2.00, addr 2, iclass 3/0
+uhidev1: 3 report ids
+uhid0 at uhidev1 reportid 1: input=1, output=0, feature=0
+uhid1 at uhidev1 reportid 2: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 3: input=3, output=0, feature=0
+uhidev2 at uhub6 port 2 configuration 1 interface 0
+uhidev2: vendor 0461 (0x461) USB Optical Mouse (0x4d15), rev 2.00/2.00, addr 3, iclass 3/1
+ums0 at uhidev2: 3 buttons and Z dir
+wsmouse0 at ums0 mux 0
+boot device: ld0
+root on dk1 dumps on dk2
+root file system type: ffs
+kern.module.path=/stand/amd64/9.2/modules
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)

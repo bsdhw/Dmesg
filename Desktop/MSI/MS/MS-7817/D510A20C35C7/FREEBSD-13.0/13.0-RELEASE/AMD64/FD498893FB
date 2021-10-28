@@ -1,0 +1,177 @@
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ehci0: <Intel Lynx Point USB 2.0 controller USB-B> mem 0xf7d18000-0xf7d183ff irq 16 at device 26.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+hdac0: <Intel Lynx Point HDA Controller> mem 0xf7d10000-0xf7d13fff irq 22 at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xe000-0xe0ff mem 0xf7c00000-0xf7c00fff,0xf0000000-0xf0003fff irq 18 at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x4c000000
+re0: MAC rev. 0x00000000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+ehci1: <Intel Lynx Point USB 2.0 controller USB-A> mem 0xf7d17000-0xf7d173ff irq 23 at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Lynx Point AHCI SATA controller> port 0xf0b0-0xf0b7,0xf0a0-0xf0a3,0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xf7d16000-0xf7d167ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 4 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <Realtek ALC887 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC887 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC887 (Rear Analog)> at nid 20 and 24,26 on hdaa0
+pcm1: <Realtek ALC887 (Front Analog)> at nid 27 and 25 on hdaa0
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0 on usbus2
+uhub1 on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub2 on usbus0
+uhub2: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+Trying to mount root from ufs:/dev/ada0p2 [rw]...
+Root mount waiting for: usbus0 usbus1 usbus2 CAM
+ses0 at ahciem0 bus 0 scbus3 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <Hitachi HDS725050KLA360 K2ABCD5A> ATA-7 SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+ses0: (none) in 'Slot 00', SATA Slot: scbus0 target 0
+ses0: ada0 in 'Slot 01', SATA Slot: scbus1 target 0
+ada1 at ahcich4 bus 0 scbus2 target 0 lun 0
+ada1: <ST4000DM000-1F2168 CC54> ACS-2 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 3815447MB (7814037168 512 byte sectors)
+ada1: quirks=0x1<4K>
+ses0: ada1 in 'Slot 04', SATA Slot: scbus2 target 0
+cd0 at ahcich0 bus 0 scbus0 target 0 lun 0
+cd0: <ASUS DRW-24B1ST   i 1.00> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub2: 17 ports with 17 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus0 usbus1 usbus2
+ugen0.2: <Generic Mass Storage Device> at usbus0
+umass0 on uhub2
+umass0: <Generic Mass Storage Device, class 0/0, rev 2.00/1.29, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4001
+umass0:4:0: Attached to scbus4
+da0 at umass-sim0 bus 0 scbus4 target 0 lun 0
+da0: <Generic USB SD Reader 1.00> Removable Direct Access SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+da1 at umass-sim0 bus 0 scbus4 target 0 lun 1
+da1: <Generic USB CF Reader 1.01> Removable Direct Access SCSI device
+da1: Serial Number...
+da1: 40.000MB/s transfers
+da1: Attempt to query device size failed: NOT READY, Medium not present
+da1: quirks=0x2<NO_6_BYTE>
+da2 at umass-sim0 bus 0 scbus4 target 0 lun 2
+da2: <Generic USB SM Reader 1.02> Removable Direct Access SCSI device
+da2: Serial Number...
+da2: 40.000MB/s transfers
+da2: Attempt to query device size failed: NOT READY, Medium not present
+da2: quirks=0x2<NO_6_BYTE>
+da3 at umass-sim0 bus 0 scbus4 target 0 lun 3
+da3: <Generic USB MS Reader 1.03> Removable Direct Access SCSI device
+da3: Serial Number...
+da3: 40.000MB/s transfers
+da3: Attempt to query device size failed: NOT READY, Medium not present
+da3: quirks=0x2<NO_6_BYTE>
+ugen1.2: <vendor 0x8087 product 0x8008> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x8008, class 9/0, rev 2.00/0.05, addr 2> on usbus1
+ugen2.2: <vendor 0x8087 product 0x8000> at usbus2
+uhub4 on uhub0
+uhub4: <vendor 0x8087 product 0x8000, class 9/0, rev 2.00/0.05, addr 2> on usbus2
+uhub3: 4 ports with 4 removable, self powered
+uhub4: 6 ports with 6 removable, self powered
+mountroot: waiting for device /dev/ada0p2...
+ichsmb0: <Intel Lynx Point SMBus controller> port 0xf040-0xf05f mem 0xf7d15000-0xf7d150ff irq 18 at device 31.3 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+lo0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+pflog0: promiscuous mode enabled
+tun0: link state changed to UP
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+arp: packet with unknown hardware format 0x06 received on re0
+arp: packet with unknown hardware format 0x06 received on re0

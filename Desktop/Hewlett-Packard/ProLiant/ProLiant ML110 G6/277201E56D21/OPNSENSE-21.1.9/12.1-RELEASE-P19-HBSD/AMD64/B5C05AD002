@@ -1,0 +1,234 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD #0  0c59842367b(stable/21.1)-dirty: Mon Jul  5 15:08:43 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU           X3430  @ 2.40GHz (2394.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x106e5  Family=0x6  Model=0x1e  Stepping=5
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x98e3fd<SSE3,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8263741440 (7880 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <HP     ProLiant>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 2 3 1
+Timecounter "TSC-low" frequency 1197020440 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7f0, 0) error 19
+000.000054 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <HP ProLiant> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1008-0x100b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 3.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ehci0: <Intel PCH USB 2.0 controller USB-B> mem 0xdfe02000-0xdfe023ff irq 16 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> irq 17 at device 28.0 on pci0
+pcib2: [GIANT-LOCKED]
+pci2: <ACPI PCI bus> on pcib2
+em0: <Intel(R) PRO/1000 Network Connection> port 0x2000-0x201f mem 0xdf920000-0xdf93ffff,0xdf900000-0xdf91ffff irq 16 at device 0.0 on pci2
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 Network Connection> port 0x2020-0x203f mem 0xdf960000-0xdf97ffff,0xdf940000-0xdf95ffff irq 17 at device 0.1 on pci2
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 28.1 on pci0
+pcib3: failed to allocate initial I/O port window: 0-0xfff
+pcib3: [GIANT-LOCKED]
+pcib4: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pcib4: [GIANT-LOCKED]
+pci3: <ACPI PCI bus> on pcib4
+vgapci0: <VGA-compatible display> mem 0xde000000-0xdeffffff,0xdf800000-0xdf803fff,0xdf000000-0xdf7fffff irq 18 at device 0.0 on pci3
+vgapci0: Boot video device
+pcib5: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pcib5: [GIANT-LOCKED]
+pci4: <ACPI PCI bus> on pcib5
+bge0: <HP NC107i PCIe Gigabit Server Adapter, ASIC rev. 0x5784100> mem 0xdfb00000-0xdfb0ffff irq 19 at device 0.0 on pci4
+bge0: CHIP ID 0x05784100; ASIC REV 0x5784; CHIP REV 0x57841; PCI-E
+miibus0: <MII bus> on bge0
+brgphy0: <BCM5784 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+pcib6: <ACPI PCI-PCI bridge> irq 17 at device 28.4 on pci0
+pcib6: [GIANT-LOCKED]
+pci5: <ACPI PCI bus> on pcib6
+em2: <Intel(R) PRO/1000 Network Connection> port 0x3000-0x301f mem 0xdfa20000-0xdfa3ffff,0xdfa00000-0xdfa1ffff irq 16 at device 0.0 on pci5
+em2: Using 1024 TX descriptors and 1024 RX descriptors
+em2: Using an MSI interrupt
+em2: Ethernet address: ...
+em2: netmap queues/slots: TX 1/1024, RX 1/1024
+em3: <Intel(R) PRO/1000 Network Connection> port 0x3020-0x303f mem 0xdfa60000-0xdfa7ffff,0xdfa40000-0xdfa5ffff irq 17 at device 0.1 on pci5
+em3: Using 1024 TX descriptors and 1024 RX descriptors
+em3: Using an MSI interrupt
+em3: Ethernet address: ...
+em3: netmap queues/slots: TX 1/1024, RX 1/1024
+ehci1: <Intel PCH USB 2.0 controller USB-A> mem 0xdfe02400-0xdfe027ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib7: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci6: <ACPI PCI bus> on pcib7
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Ibex Peak AHCI SATA controller> port 0x1830-0x1837,0x1824-0x1827,0x1828-0x182f,0x1820-0x1823,0x1800-0x181f mem 0xdfe01000-0xdfe017ff irq 18 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xc8fff,0xdf000-0xdffff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich5 bus 0 scbus5 target 0 lun 0
+ada0: <KINGSTON SA400S37480G S3401103> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 457862MB (937703088 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0020> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0020> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen1.3: <ServerEngines SE USB Device> at usbus1
+ukbd0 on uhub3
+ukbd0: <ServerEngines SE USB Device, class 0/0, rev 1.10/0.01, addr 3> on usbus1
+kbd2 at ukbd0
+em0: link state changed to UP
+em1: link state changed to UP
+em2: link state changed to UP
+em3: link state changed to UP
+ums0 on uhub3
+ums0: <ServerEngines SE USB Device, class 0/0, rev 1.10/0.01, addr 3> on usbus1
+ums0: 8 buttons and [XYZ] coordinates ID=0
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+em0: link state changed to DOWN
+lagg0: IPv6 addresses on em0 have been removed before adding it as a member to prevent IPv6 address scope violation.
+lagg0: link state changed to DOWN
+em1: link state changed to DOWN
+lagg0: IPv6 addresses on em1 have been removed before adding it as a member to prevent IPv6 address scope violation.
+bge0: link state changed to DOWN
+lagg0: IPv6 addresses on bge0 have been removed before adding it as a member to prevent IPv6 address scope violation.
+vlan0: changing name to 'lagg0_vlan10'
+vlan1: changing name to 'lagg0_vlan11'
+vlan2: changing name to 'lagg0_vlan12'
+vlan3: changing name to 'lagg0_vlan13'
+vlan4: changing name to 'lagg0_vlan14'
+bge0: link state changed to UP
+vlan5: changing name to 'lagg0_vlan15'
+vlan6: changing name to 'lagg0_vlan16'
+vlan7: changing name to 'lagg0_vlan17'
+vlan8: changing name to 'lagg0_vlan18'
+vlan9: changing name to 'lagg0_vlan19'
+vlan10: changing name to 'lagg0_vlan32'
+vlan11: changing name to 'lagg0_vlan20'
+vlan12: changing name to 'lagg0_vlan21'
+vlan13: changing name to 'lagg0_vlan22'
+vlan14: changing name to 'lagg0_vlan23'
+vlan15: changing name to 'lagg0_vlan24'
+lagg0: link state changed to UP
+lagg0_vlan17: link state changed to UP
+lagg0_vlan16: link state changed to UP
+lagg0_vlan32: link state changed to UP
+lagg0_vlan19: link state changed to UP
+lagg0_vlan18: link state changed to UP
+lagg0_vlan21: link state changed to UP
+lagg0_vlan20: link state changed to UP
+lagg0_vlan23: link state changed to UP
+lagg0_vlan22: link state changed to UP
+lagg0_vlan24: link state changed to UP
+lagg0_vlan10: link state changed to UP
+lagg0_vlan11: link state changed to UP
+lagg0_vlan12: link state changed to UP
+lagg0_vlan13: link state changed to UP
+lagg0_vlan14: link state changed to UP
+lagg0_vlan15: link state changed to UP
+vlan16: changing name to 'lagg0_vlan25'
+vlan17: changing name to 'lagg0_vlan26'
+vlan18: changing name to 'lagg0_vlan200'
+vlan19: changing name to 'lagg0_vlan99'
+em2: link state changed to DOWN
+em3: link state changed to DOWN
+em0: link state changed to UP
+em1: link state changed to UP
+em2: link state changed to UP
+em3: link state changed to UP
+pflog0: promiscuous mode enabled
+em2: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+em2: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to accept, logging disabled
+load_dn_sched dn_sched FIFO loaded
+load_dn_sched dn_sched QFQ loaded
+load_dn_sched dn_sched RR loaded
+load_dn_sched dn_sched WF2Q+ loaded
+load_dn_sched dn_sched PRIO loaded
+load_dn_sched dn_sched FQ_CODEL loaded
+load_dn_sched dn_sched FQ_PIE loaded
+load_dn_aqm dn_aqm CODEL loaded
+load_dn_aqm dn_aqm PIE loaded

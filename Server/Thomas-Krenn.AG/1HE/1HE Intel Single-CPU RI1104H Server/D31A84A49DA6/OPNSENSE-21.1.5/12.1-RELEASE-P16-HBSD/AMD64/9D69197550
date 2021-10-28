@@ -1,0 +1,777 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p12-HBSD #0  3c6040c7243(stable/21.1)-dirty: Mon Jan 25 12:27:52 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E3-1270 v6 @ 3.80GHz (3792.17-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906e9  Family=0x6  Model=0x9e  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0x9c002600<MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33158320128 (31622 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: < >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 2 4 5 3 6 7
+Timecounter "TSC-low" frequency 1896083792 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128f7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SUPERM> on motherboard
+acpi0: Power Button (fixed)
+unknown: memory range not supported
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ixl0: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.1.0-k> mem 0xdd000000-0xdd7fffff,0xdd808000-0xdd80ffff irq 16 at device 0.0 on pci1
+ixl0: fw 6.0.48442 api 1.7 nvm 6.01 etid 800035cf oem 1.262.0
+ixl0: PF-ID[0]: VFs 64, MSI-X 129, VF MSI-X 5, QPs 768, I2C
+ixl0: Using 1024 TX descriptors and 1024 RX descriptors
+ixl0: Using 4 RX queues 4 TX queues
+ixl0: Using MSI-X interrupts with 5 vectors
+ixl0: Ethernet address: ...
+ixl0: Allocating 4 queues for PF LAN VSI; 4 queues active
+ixl0: PCI Express Bus: Speed 8.0GT/s Width x8
+ixl0: SR-IOV ready
+ixl0: netmap queues/slots: TX 4/1024, RX 4/1024
+ixl1: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.1.0-k> mem 0xdc800000-0xdcffffff,0xdd800000-0xdd807fff irq 16 at device 0.1 on pci1
+ixl1: fw 6.0.48442 api 1.7 nvm 6.01 etid 800035cf oem 1.262.0
+ixl1: PF-ID[1]: VFs 64, MSI-X 129, VF MSI-X 5, QPs 768, I2C
+ixl1: Using 1024 TX descriptors and 1024 RX descriptors
+ixl1: Using 4 RX queues 4 TX queues
+ixl1: Using MSI-X interrupts with 5 vectors
+ixl1: Ethernet address: ...
+ixl1: Allocating 4 queues for PF LAN VSI; 4 queues active
+ixl1: PCI Express Bus: Speed 8.0GT/s Width x8
+ixl1: SR-IOV ready
+ixl1: netmap queues/slots: TX 4/1024, RX 4/1024
+pci0: <old, non-VGA display device> at device 19.0 (no driver attached)
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xdf700000-0xdf70ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf050-0xf057,0xf040-0xf043,0xf020-0xf03f mem 0xdf710000-0xdf711fff,0xdf71e000-0xdf71e0ff,0xdf71d000-0xdf71d7ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahcich6: <AHCI channel> at channel 6 on ahci0
+ahcich7: <AHCI channel> at channel 7 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xe000-0xe01f mem 0xdf500000-0xdf57ffff,0xdf580000-0xdf583fff irq 16 at device 0.0 on pci2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib3: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xd000-0xd01f mem 0xdf400000-0xdf47ffff,0xdf480000-0xdf483fff irq 17 at device 0.0 on pci3
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib4: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xc000-0xc01f mem 0xdf300000-0xdf37ffff,0xdf380000-0xdf383fff irq 18 at device 0.0 on pci4
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib5: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb000-0xb01f mem 0xdf200000-0xdf27ffff,0xdf280000-0xdf283fff irq 19 at device 0.0 on pci5
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+ixl0: Link is up, 10 Gbps Full Duplex, Requested FEC: None, Negotiated FEC: None, Autoneg: False, Flow Control: None
+ixl0: link state changed to UP
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci6: <ACPI PCI bus> on pcib6
+nvme0: <Generic NVMe Device> mem 0xdf100000-0xdf103fff irq 16 at device 0.0 on pci6
+pcib7: <ACPI PCI-PCI bridge> irq 18 at device 28.6 on pci0
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> at device 0.0 on pci7
+pci8: <ACPI PCI bus> on pcib8
+vgapci0: <VGA-compatible display> port 0xa000-0xa07f mem 0xde000000-0xdeffffff,0xdf000000-0xdf01ffff irq 18 at device 0.0 on pci8
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xc7fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <ATP NVMe M.2 2280 SSD> NVMe namespace
+nvd0: 114473MB (234441648 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <vendor 0x0557 product 0x7000> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 1> on usbus0
+uhub1: 4 ports with 3 removable, self powered
+ugen0.3: <vendor 0x0557 product 0x2419> at usbus0
+ukbd0 on uhub1
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+kbd2 at ukbd0
+igb3: link state changed to UP
+ums0 on uhub1
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+vlan0: changing name to 'ixl0_vlan101'
+vlan1: changing name to 'ixl0_vlan102'
+vlan2: changing name to 'ixl0_vlan103'
+vlan3: changing name to 'ixl0_vlan104'
+vlan4: changing name to 'ixl0_vlan201'
+vlan5: changing name to 'ixl0_vlan202'
+vlan6: changing name to 'ixl0_vlan105'
+vlan7: changing name to 'ixl0_vlan106'
+vlan8: changing name to 'ixl0_vlan107'
+vlan9: changing name to 'ixl0_vlan108'
+vlan10: changing name to 'ixl0_vlan109'
+vlan11: changing name to 'ixl0_vlan110'
+vlan12: changing name to 'ixl0_vlan111'
+vlan13: changing name to 'ixl0_vlan112'
+vlan14: changing name to 'ixl0_vlan113'
+vlan15: changing name to 'ixl0_vlan114'
+vlan16: changing name to 'ixl0_vlan115'
+vlan17: changing name to 'ixl0_vlan116'
+vlan18: changing name to 'ixl0_vlan117'
+vlan19: changing name to 'ixl0_vlan118'
+vlan20: changing name to 'ixl0_vlan119'
+vlan21: changing name to 'ixl0_vlan120'
+vlan22: changing name to 'ixl0_vlan121'
+vlan23: changing name to 'ixl0_vlan122'
+vlan24: changing name to 'ixl0_vlan123'
+vlan25: changing name to 'ixl0_vlan124'
+vlan26: changing name to 'ixl0_vlan125'
+vlan27: changing name to 'ixl0_vlan126'
+vlan28: changing name to 'ixl0_vlan127'
+vlan29: changing name to 'ixl0_vlan128'
+vlan30: changing name to 'ixl0_vlan129'
+vlan31: changing name to 'ixl0_vlan130'
+vlan32: changing name to 'ixl0_vlan131'
+vlan33: changing name to 'ixl0_vlan132'
+vlan34: changing name to 'ixl0_vlan133'
+vlan35: changing name to 'ixl0_vlan134'
+vlan36: changing name to 'ixl0_vlan135'
+vlan37: changing name to 'ixl0_vlan136'
+vlan38: changing name to 'ixl0_vlan137'
+vlan39: changing name to 'ixl0_vlan138'
+vlan40: changing name to 'ixl0_vlan139'
+vlan41: changing name to 'ixl0_vlan140'
+vlan42: changing name to 'ixl0_vlan141'
+vlan43: changing name to 'ixl0_vlan142'
+vlan44: changing name to 'ixl0_vlan143'
+vlan45: changing name to 'ixl0_vlan144'
+vlan46: changing name to 'ixl0_vlan145'
+vlan47: changing name to 'ixl0_vlan146'
+vlan48: changing name to 'ixl0_vlan147'
+vlan49: changing name to 'ixl0_vlan148'
+vlan50: changing name to 'ixl0_vlan203'
+vlan51: changing name to 'ixl0_vlan204'
+vlan52: changing name to 'ixl0_vlan205'
+vlan53: changing name to 'ixl0_vlan206'
+vlan54: changing name to 'ixl0_vlan207'
+vlan55: changing name to 'ixl0_vlan208'
+vlan56: changing name to 'ixl0_vlan209'
+vlan57: changing name to 'ixl0_vlan210'
+vlan58: changing name to 'ixl0_vlan211'
+vlan59: changing name to 'ixl0_vlan212'
+vlan60: changing name to 'ixl0_vlan213'
+vlan61: changing name to 'ixl0_vlan214'
+vlan62: changing name to 'ixl0_vlan215'
+vlan63: changing name to 'ixl0_vlan216'
+vlan64: changing name to 'ixl0_vlan217'
+vlan65: changing name to 'ixl0_vlan218'
+vlan66: changing name to 'ixl0_vlan219'
+vlan67: changing name to 'ixl0_vlan220'
+vlan68: changing name to 'ixl0_vlan221'
+vlan69: changing name to 'ixl0_vlan222'
+vlan70: changing name to 'ixl0_vlan223'
+vlan71: changing name to 'ixl0_vlan224'
+vlan72: changing name to 'ixl0_vlan225'
+vlan73: changing name to 'ixl0_vlan226'
+vlan74: changing name to 'ixl0_vlan227'
+vlan75: changing name to 'ixl0_vlan228'
+vlan76: changing name to 'ixl0_vlan229'
+vlan77: changing name to 'ixl0_vlan230'
+vlan78: changing name to 'ixl0_vlan231'
+vlan79: changing name to 'ixl0_vlan232'
+vlan80: changing name to 'ixl0_vlan233'
+vlan81: changing name to 'ixl0_vlan234'
+vlan82: changing name to 'ixl0_vlan235'
+vlan83: changing name to 'ixl0_vlan236'
+vlan84: changing name to 'ixl0_vlan237'
+vlan85: changing name to 'ixl0_vlan238'
+vlan86: changing name to 'ixl0_vlan239'
+vlan87: changing name to 'ixl0_vlan240'
+vlan88: changing name to 'ixl0_vlan241'
+vlan89: changing name to 'ixl0_vlan242'
+vlan90: changing name to 'ixl0_vlan243'
+vlan91: changing name to 'ixl0_vlan244'
+vlan92: changing name to 'ixl0_vlan245'
+vlan93: changing name to 'ixl0_vlan246'
+vlan94: changing name to 'ixl0_vlan247'
+vlan95: changing name to 'ixl0_vlan248'
+vlan96: changing name to 'ixl0_vlan301'
+vlan97: changing name to 'ixl0_vlan302'
+vlan98: changing name to 'ixl0_vlan303'
+vlan99: changing name to 'ixl0_vlan304'
+vlan100: changing name to 'ixl0_vlan305'
+vlan101: changing name to 'ixl0_vlan306'
+vlan102: changing name to 'ixl0_vlan307'
+vlan103: changing name to 'ixl0_vlan308'
+vlan104: changing name to 'ixl0_vlan309'
+vlan105: changing name to 'ixl0_vlan310'
+vlan106: changing name to 'ixl0_vlan311'
+vlan107: changing name to 'ixl0_vlan312'
+vlan108: changing name to 'ixl0_vlan313'
+vlan109: changing name to 'ixl0_vlan314'
+vlan110: changing name to 'ixl0_vlan315'
+vlan111: changing name to 'ixl0_vlan316'
+vlan112: changing name to 'ixl0_vlan317'
+vlan113: changing name to 'ixl0_vlan318'
+vlan114: changing name to 'ixl0_vlan319'
+vlan115: changing name to 'ixl0_vlan320'
+vlan116: changing name to 'ixl0_vlan321'
+vlan117: changing name to 'ixl0_vlan322'
+vlan118: changing name to 'ixl0_vlan323'
+vlan119: changing name to 'ixl0_vlan324'
+vlan120: changing name to 'ixl0_vlan325'
+vlan121: changing name to 'ixl0_vlan326'
+vlan122: changing name to 'ixl0_vlan327'
+vlan123: changing name to 'ixl0_vlan328'
+vlan124: changing name to 'ixl0_vlan329'
+vlan125: changing name to 'ixl0_vlan330'
+vlan126: changing name to 'ixl0_vlan331'
+vlan127: changing name to 'ixl0_vlan332'
+vlan128: changing name to 'ixl0_vlan333'
+vlan129: changing name to 'ixl0_vlan334'
+vlan130: changing name to 'ixl0_vlan335'
+vlan131: changing name to 'ixl0_vlan336'
+vlan132: changing name to 'ixl0_vlan337'
+vlan133: changing name to 'ixl0_vlan338'
+vlan134: changing name to 'ixl0_vlan339'
+vlan135: changing name to 'ixl0_vlan340'
+vlan136: changing name to 'ixl0_vlan341'
+vlan137: changing name to 'ixl0_vlan342'
+vlan138: changing name to 'ixl0_vlan343'
+vlan139: changing name to 'ixl0_vlan344'
+vlan140: changing name to 'ixl0_vlan345'
+vlan141: changing name to 'ixl0_vlan346'
+vlan142: changing name to 'ixl0_vlan347'
+vlan143: changing name to 'ixl0_vlan348'
+vlan144: changing name to 'ixl0_vlan401'
+vlan145: changing name to 'ixl0_vlan402'
+vlan146: changing name to 'ixl0_vlan403'
+vlan147: changing name to 'ixl0_vlan404'
+vlan148: changing name to 'ixl0_vlan405'
+vlan149: changing name to 'ixl0_vlan406'
+vlan150: changing name to 'ixl0_vlan407'
+vlan151: changing name to 'ixl0_vlan408'
+vlan152: changing name to 'ixl0_vlan409'
+vlan153: changing name to 'ixl0_vlan410'
+vlan154: changing name to 'ixl0_vlan411'
+vlan155: changing name to 'ixl0_vlan412'
+vlan156: changing name to 'ixl0_vlan413'
+vlan157: changing name to 'ixl0_vlan414'
+vlan158: changing name to 'ixl0_vlan415'
+vlan159: changing name to 'ixl0_vlan416'
+vlan160: changing name to 'ixl0_vlan417'
+vlan161: changing name to 'ixl0_vlan418'
+vlan162: changing name to 'ixl0_vlan419'
+vlan163: changing name to 'ixl0_vlan420'
+vlan164: changing name to 'ixl0_vlan421'
+vlan165: changing name to 'ixl0_vlan422'
+vlan166: changing name to 'ixl0_vlan423'
+vlan167: changing name to 'ixl0_vlan424'
+vlan168: changing name to 'ixl0_vlan425'
+vlan169: changing name to 'ixl0_vlan426'
+vlan170: changing name to 'ixl0_vlan427'
+vlan171: changing name to 'ixl0_vlan428'
+vlan172: changing name to 'ixl0_vlan429'
+vlan173: changing name to 'ixl0_vlan430'
+vlan174: changing name to 'ixl0_vlan431'
+vlan175: changing name to 'ixl0_vlan432'
+vlan176: changing name to 'ixl0_vlan433'
+vlan177: changing name to 'ixl0_vlan434'
+vlan178: changing name to 'ixl0_vlan435'
+vlan179: changing name to 'ixl0_vlan436'
+vlan180: changing name to 'ixl0_vlan437'
+vlan181: changing name to 'ixl0_vlan438'
+vlan182: changing name to 'ixl0_vlan439'
+vlan183: changing name to 'ixl0_vlan440'
+vlan184: changing name to 'ixl0_vlan441'
+vlan185: changing name to 'ixl0_vlan442'
+vlan186: changing name to 'ixl0_vlan443'
+vlan187: changing name to 'ixl0_vlan444'
+vlan188: changing name to 'ixl0_vlan445'
+vlan189: changing name to 'ixl0_vlan446'
+vlan190: changing name to 'ixl0_vlan447'
+vlan191: changing name to 'ixl0_vlan448'
+vlan192: changing name to 'ixl0_vlan501'
+igb3: link state changed to DOWN
+igb3: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pid 34050 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+pid 3195 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+pid 42372 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+pid 98070 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+pid 19680 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+[HBSD SEGVGUARD] [syslog-ng (19680)] Suspending execution for 600 seconds after 5 crashes.
+ -> pid: 19680 ppid: 5893 p_pax: 0xa50<SEGVGUARD,ASLR,NOSHLIBRANDOM,NODISALLOWMAP32BIT> 
+[HBSD SEGVGUARD] [syslog-ng (5893)] Preventing execution due to repeated segfaults.
+ -> pid: 5893 ppid: 1 p_pax: 0xa50<SEGVGUARD,ASLR,NOSHLIBRANDOM,NODISALLOWMAP32BIT> 
+pflog0: promiscuous mode disabled
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+Uptime: 10m39s
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p16-HBSD #0  b531d3958f5(stable/21.1)-dirty: Tue Apr 20 11:00:08 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E3-1270 v6 @ 3.80GHz (3792.17-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906e9  Family=0x6  Model=0x9e  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0x9c002600<MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33158320128 (31622 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: < >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 4 2 3 7 5 6
+Timecounter "TSC-low" frequency 1896085179 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SUPERM> on motherboard
+acpi0: Power Button (fixed)
+unknown: memory range not supported
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ixl0: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.1.0-k> mem 0xdd000000-0xdd7fffff,0xdd808000-0xdd80ffff irq 16 at device 0.0 on pci1
+ixl0: fw 6.0.48442 api 1.7 nvm 6.01 etid 800035cf oem 1.262.0
+ixl0: PF-ID[0]: VFs 64, MSI-X 129, VF MSI-X 5, QPs 768, I2C
+ixl0: Using 1024 TX descriptors and 1024 RX descriptors
+ixl0: Using 4 RX queues 4 TX queues
+ixl0: Using MSI-X interrupts with 5 vectors
+ixl0: Ethernet address: ...
+ixl0: Allocating 4 queues for PF LAN VSI; 4 queues active
+ixl0: PCI Express Bus: Speed 8.0GT/s Width x8
+ixl0: SR-IOV ready
+ixl0: netmap queues/slots: TX 4/1024, RX 4/1024
+ixl1: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.1.0-k> mem 0xdc800000-0xdcffffff,0xdd800000-0xdd807fff irq 16 at device 0.1 on pci1
+ixl1: fw 6.0.48442 api 1.7 nvm 6.01 etid 800035cf oem 1.262.0
+ixl1: PF-ID[1]: VFs 64, MSI-X 129, VF MSI-X 5, QPs 768, I2C
+ixl1: Using 1024 TX descriptors and 1024 RX descriptors
+ixl1: Using 4 RX queues 4 TX queues
+ixl1: Using MSI-X interrupts with 5 vectors
+ixl1: Ethernet address: ...
+ixl1: Allocating 4 queues for PF LAN VSI; 4 queues active
+ixl1: PCI Express Bus: Speed 8.0GT/s Width x8
+ixl1: SR-IOV ready
+ixl1: netmap queues/slots: TX 4/1024, RX 4/1024
+pci0: <old, non-VGA display device> at device 19.0 (no driver attached)
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xdf700000-0xdf70ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf050-0xf057,0xf040-0xf043,0xf020-0xf03f mem 0xdf710000-0xdf711fff,0xdf71e000-0xdf71e0ff,0xdf71d000-0xdf71d7ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahcich6: <AHCI channel> at channel 6 on ahci0
+ahcich7: <AHCI channel> at channel 7 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xe000-0xe01f mem 0xdf500000-0xdf57ffff,0xdf580000-0xdf583fff irq 16 at device 0.0 on pci2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib3: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xd000-0xd01f mem 0xdf400000-0xdf47ffff,0xdf480000-0xdf483fff irq 17 at device 0.0 on pci3
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib4: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xc000-0xc01f mem 0xdf300000-0xdf37ffff,0xdf380000-0xdf383fff irq 18 at device 0.0 on pci4
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib5: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb000-0xb01f mem 0xdf200000-0xdf27ffff,0xdf280000-0xdf283fff irq 19 at device 0.0 on pci5
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+ixl0: Link is up, 10 Gbps Full Duplex, Requested FEC: None, Negotiated FEC: None, Autoneg: False, Flow Control: None
+ixl0: link state changed to UP
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci6: <ACPI PCI bus> on pcib6
+nvme0: <Generic NVMe Device> mem 0xdf100000-0xdf103fff irq 16 at device 0.0 on pci6
+pcib7: <ACPI PCI-PCI bridge> irq 18 at device 28.6 on pci0
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> at device 0.0 on pci7
+pci8: <ACPI PCI bus> on pcib8
+vgapci0: <VGA-compatible display> port 0xa000-0xa07f mem 0xde000000-0xdeffffff,0xdf000000-0xdf01ffff irq 18 at device 0.0 on pci8
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xc7fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <ATP NVMe M.2 2280 SSD> NVMe namespace
+nvd0: 114473MB (234441648 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <vendor 0x0557 product 0x7000> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 1> on usbus0
+uhub1: 4 ports with 3 removable, self powered
+ugen0.3: <vendor 0x0557 product 0x2419> at usbus0
+ukbd0 on uhub1
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+kbd2 at ukbd0
+igb3: link state changed to UP
+ums0 on uhub1
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+vlan0: changing name to 'ixl0_vlan101'
+vlan1: changing name to 'ixl0_vlan102'
+vlan2: changing name to 'ixl0_vlan103'
+vlan3: changing name to 'ixl0_vlan104'
+vlan4: changing name to 'ixl0_vlan201'
+vlan5: changing name to 'ixl0_vlan202'
+vlan6: changing name to 'ixl0_vlan105'
+vlan7: changing name to 'ixl0_vlan106'
+vlan8: changing name to 'ixl0_vlan107'
+vlan9: changing name to 'ixl0_vlan108'
+vlan10: changing name to 'ixl0_vlan109'
+vlan11: changing name to 'ixl0_vlan110'
+vlan12: changing name to 'ixl0_vlan111'
+vlan13: changing name to 'ixl0_vlan112'
+vlan14: changing name to 'ixl0_vlan113'
+vlan15: changing name to 'ixl0_vlan114'
+vlan16: changing name to 'ixl0_vlan115'
+vlan17: changing name to 'ixl0_vlan116'
+vlan18: changing name to 'ixl0_vlan117'
+vlan19: changing name to 'ixl0_vlan118'
+vlan20: changing name to 'ixl0_vlan119'
+vlan21: changing name to 'ixl0_vlan120'
+vlan22: changing name to 'ixl0_vlan121'
+vlan23: changing name to 'ixl0_vlan122'
+vlan24: changing name to 'ixl0_vlan123'
+vlan25: changing name to 'ixl0_vlan124'
+vlan26: changing name to 'ixl0_vlan125'
+vlan27: changing name to 'ixl0_vlan126'
+vlan28: changing name to 'ixl0_vlan127'
+vlan29: changing name to 'ixl0_vlan128'
+vlan30: changing name to 'ixl0_vlan129'
+vlan31: changing name to 'ixl0_vlan130'
+vlan32: changing name to 'ixl0_vlan131'
+vlan33: changing name to 'ixl0_vlan132'
+vlan34: changing name to 'ixl0_vlan133'
+vlan35: changing name to 'ixl0_vlan134'
+vlan36: changing name to 'ixl0_vlan135'
+vlan37: changing name to 'ixl0_vlan136'
+vlan38: changing name to 'ixl0_vlan137'
+vlan39: changing name to 'ixl0_vlan138'
+vlan40: changing name to 'ixl0_vlan139'
+vlan41: changing name to 'ixl0_vlan140'
+vlan42: changing name to 'ixl0_vlan141'
+vlan43: changing name to 'ixl0_vlan142'
+vlan44: changing name to 'ixl0_vlan143'
+vlan45: changing name to 'ixl0_vlan144'
+vlan46: changing name to 'ixl0_vlan145'
+vlan47: changing name to 'ixl0_vlan146'
+vlan48: changing name to 'ixl0_vlan147'
+vlan49: changing name to 'ixl0_vlan148'
+vlan50: changing name to 'ixl0_vlan203'
+vlan51: changing name to 'ixl0_vlan204'
+vlan52: changing name to 'ixl0_vlan205'
+vlan53: changing name to 'ixl0_vlan206'
+vlan54: changing name to 'ixl0_vlan207'
+vlan55: changing name to 'ixl0_vlan208'
+vlan56: changing name to 'ixl0_vlan209'
+vlan57: changing name to 'ixl0_vlan210'
+vlan58: changing name to 'ixl0_vlan211'
+vlan59: changing name to 'ixl0_vlan212'
+vlan60: changing name to 'ixl0_vlan213'
+vlan61: changing name to 'ixl0_vlan214'
+vlan62: changing name to 'ixl0_vlan215'
+vlan63: changing name to 'ixl0_vlan216'
+vlan64: changing name to 'ixl0_vlan217'
+vlan65: changing name to 'ixl0_vlan218'
+vlan66: changing name to 'ixl0_vlan219'
+vlan67: changing name to 'ixl0_vlan220'
+vlan68: changing name to 'ixl0_vlan221'
+vlan69: changing name to 'ixl0_vlan222'
+vlan70: changing name to 'ixl0_vlan223'
+vlan71: changing name to 'ixl0_vlan224'
+vlan72: changing name to 'ixl0_vlan225'
+vlan73: changing name to 'ixl0_vlan226'
+vlan74: changing name to 'ixl0_vlan227'
+vlan75: changing name to 'ixl0_vlan228'
+vlan76: changing name to 'ixl0_vlan229'
+vlan77: changing name to 'ixl0_vlan230'
+vlan78: changing name to 'ixl0_vlan231'
+vlan79: changing name to 'ixl0_vlan232'
+vlan80: changing name to 'ixl0_vlan233'
+vlan81: changing name to 'ixl0_vlan234'
+vlan82: changing name to 'ixl0_vlan235'
+vlan83: changing name to 'ixl0_vlan236'
+vlan84: changing name to 'ixl0_vlan237'
+vlan85: changing name to 'ixl0_vlan238'
+vlan86: changing name to 'ixl0_vlan239'
+vlan87: changing name to 'ixl0_vlan240'
+vlan88: changing name to 'ixl0_vlan241'
+vlan89: changing name to 'ixl0_vlan242'
+vlan90: changing name to 'ixl0_vlan243'
+vlan91: changing name to 'ixl0_vlan244'
+vlan92: changing name to 'ixl0_vlan245'
+vlan93: changing name to 'ixl0_vlan246'
+vlan94: changing name to 'ixl0_vlan247'
+vlan95: changing name to 'ixl0_vlan248'
+vlan96: changing name to 'ixl0_vlan301'
+vlan97: changing name to 'ixl0_vlan302'
+vlan98: changing name to 'ixl0_vlan303'
+vlan99: changing name to 'ixl0_vlan304'
+vlan100: changing name to 'ixl0_vlan305'
+vlan101: changing name to 'ixl0_vlan306'
+vlan102: changing name to 'ixl0_vlan307'
+vlan103: changing name to 'ixl0_vlan308'
+vlan104: changing name to 'ixl0_vlan309'
+vlan105: changing name to 'ixl0_vlan310'
+vlan106: changing name to 'ixl0_vlan311'
+vlan107: changing name to 'ixl0_vlan312'
+vlan108: changing name to 'ixl0_vlan313'
+vlan109: changing name to 'ixl0_vlan314'
+vlan110: changing name to 'ixl0_vlan315'
+vlan111: changing name to 'ixl0_vlan316'
+vlan112: changing name to 'ixl0_vlan317'
+vlan113: changing name to 'ixl0_vlan318'
+vlan114: changing name to 'ixl0_vlan319'
+vlan115: changing name to 'ixl0_vlan320'
+vlan116: changing name to 'ixl0_vlan321'
+vlan117: changing name to 'ixl0_vlan322'
+vlan118: changing name to 'ixl0_vlan323'
+vlan119: changing name to 'ixl0_vlan324'
+vlan120: changing name to 'ixl0_vlan325'
+vlan121: changing name to 'ixl0_vlan326'
+vlan122: changing name to 'ixl0_vlan327'
+vlan123: changing name to 'ixl0_vlan328'
+vlan124: changing name to 'ixl0_vlan329'
+vlan125: changing name to 'ixl0_vlan330'
+vlan126: changing name to 'ixl0_vlan331'
+vlan127: changing name to 'ixl0_vlan332'
+vlan128: changing name to 'ixl0_vlan333'
+vlan129: changing name to 'ixl0_vlan334'
+vlan130: changing name to 'ixl0_vlan335'
+vlan131: changing name to 'ixl0_vlan336'
+vlan132: changing name to 'ixl0_vlan337'
+vlan133: changing name to 'ixl0_vlan338'
+vlan134: changing name to 'ixl0_vlan339'
+vlan135: changing name to 'ixl0_vlan340'
+vlan136: changing name to 'ixl0_vlan341'
+vlan137: changing name to 'ixl0_vlan342'
+vlan138: changing name to 'ixl0_vlan343'
+vlan139: changing name to 'ixl0_vlan344'
+vlan140: changing name to 'ixl0_vlan345'
+vlan141: changing name to 'ixl0_vlan346'
+vlan142: changing name to 'ixl0_vlan347'
+vlan143: changing name to 'ixl0_vlan348'
+vlan144: changing name to 'ixl0_vlan401'
+vlan145: changing name to 'ixl0_vlan402'
+vlan146: changing name to 'ixl0_vlan403'
+vlan147: changing name to 'ixl0_vlan404'
+vlan148: changing name to 'ixl0_vlan405'
+vlan149: changing name to 'ixl0_vlan406'
+vlan150: changing name to 'ixl0_vlan407'
+vlan151: changing name to 'ixl0_vlan408'
+vlan152: changing name to 'ixl0_vlan409'
+vlan153: changing name to 'ixl0_vlan410'
+vlan154: changing name to 'ixl0_vlan411'
+vlan155: changing name to 'ixl0_vlan412'
+vlan156: changing name to 'ixl0_vlan413'
+vlan157: changing name to 'ixl0_vlan414'
+vlan158: changing name to 'ixl0_vlan415'
+vlan159: changing name to 'ixl0_vlan416'
+vlan160: changing name to 'ixl0_vlan417'
+vlan161: changing name to 'ixl0_vlan418'
+vlan162: changing name to 'ixl0_vlan419'
+vlan163: changing name to 'ixl0_vlan420'
+vlan164: changing name to 'ixl0_vlan421'
+vlan165: changing name to 'ixl0_vlan422'
+vlan166: changing name to 'ixl0_vlan423'
+vlan167: changing name to 'ixl0_vlan424'
+vlan168: changing name to 'ixl0_vlan425'
+vlan169: changing name to 'ixl0_vlan426'
+vlan170: changing name to 'ixl0_vlan427'
+vlan171: changing name to 'ixl0_vlan428'
+vlan172: changing name to 'ixl0_vlan429'
+vlan173: changing name to 'ixl0_vlan430'
+vlan174: changing name to 'ixl0_vlan431'
+vlan175: changing name to 'ixl0_vlan432'
+vlan176: changing name to 'ixl0_vlan433'
+vlan177: changing name to 'ixl0_vlan434'
+vlan178: changing name to 'ixl0_vlan435'
+vlan179: changing name to 'ixl0_vlan436'
+vlan180: changing name to 'ixl0_vlan437'
+vlan181: changing name to 'ixl0_vlan438'
+vlan182: changing name to 'ixl0_vlan439'
+vlan183: changing name to 'ixl0_vlan440'
+vlan184: changing name to 'ixl0_vlan441'
+vlan185: changing name to 'ixl0_vlan442'
+vlan186: changing name to 'ixl0_vlan443'
+vlan187: changing name to 'ixl0_vlan444'
+vlan188: changing name to 'ixl0_vlan445'
+vlan189: changing name to 'ixl0_vlan446'
+vlan190: changing name to 'ixl0_vlan447'
+vlan191: changing name to 'ixl0_vlan448'
+vlan192: changing name to 'ixl0_vlan501'
+igb3: link state changed to DOWN
+igb3: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

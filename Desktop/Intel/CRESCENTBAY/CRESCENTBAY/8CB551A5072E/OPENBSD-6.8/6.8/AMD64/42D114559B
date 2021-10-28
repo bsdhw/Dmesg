@@ -1,0 +1,518 @@
+OpenBSD 6.8 (RAMDISK_CD) #94: Sun Oct  4 18:21:11 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8474927104 (8082MB)
+avail mem = 8214056960 (7833MB)
+random: boothowto does not indicate good seed
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.8 @ 0xec100 (79 entries)
+bios0: vendor American Megatrends Inc. version "5.6.5" date 08/29/2015
+bios0: INTEL Corporation CRESCENTBAY
+acpi0 at bios0: ACPI 5.0
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT UEFI SSDT ASF! SSDT SSDT SSDT DMAR
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz, 2494.57 MHz, 06-3d-04
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,RDSEED,ADX,SMAP,PT,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 40 pins
+acpimadt0: bogus nmi for apid 0
+acpimadt0: bogus nmi for apid 2
+acpimadt0: bogus nmi for apid 1
+acpimadt0: bogus nmi for apid 3
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 1 (RP01)
+acpiprt5 at acpi0: bus -1 (RP02)
+acpiprt6 at acpi0: bus 2 (RP03)
+acpiprt7 at acpi0: bus 3 (RP04)
+acpiprt8 at acpi0: bus -1 (RP05)
+acpiprt9 at acpi0: bus 4 (RP06)
+acpiprt10 at acpi0: bus -1 (RP07)
+acpiprt11 at acpi0: bus -1 (RP08)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"INT3437" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using Broadwell MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 5G Host" rev 0x09
+"Intel HD Graphics 6000" rev 0x09 at pci0 dev 2 function 0 not configured
+"Intel Core 5G HD Audio" rev 0x09 at pci0 dev 3 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 9 Series xHCI" rev 0x03: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 9 Series HD Audio" rev 0x03 at pci0 dev 27 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 9 Series PCIE" rev 0xe3
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 2 "Intel 9 Series PCIE" rev 0xe3: msi
+pci2 at ppb1 bus 2
+re0 at pci2 dev 0 function 0 "Realtek 8168" rev 0x06: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ppb2 at pci0 dev 28 function 3 "Intel 9 Series PCIE" rev 0xe3: msi
+pci3 at ppb2 bus 3
+re1 at pci3 dev 0 function 0 "Realtek 8168" rev 0x06: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy1 at re1 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ppb3 at pci0 dev 28 function 5 "Intel 9 Series PCIE" rev 0xe3: msi
+pci4 at ppb3 bus 4
+athn0 at pci4 dev 0 function 0 "Atheros AR9287" rev 0x01: apic 2 int 16
+athn0: AR9287 rev 2 (2T2R), ROM rev 4, address XXX
+ehci0 at pci0 dev 29 function 0 "Intel 9 Series USB" rev 0x03: apic 2 int 23
+usb1 at ehci0: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel 9 Series LPC" rev 0x03 at pci0 dev 31 function 0 not configured
+ahci0 at pci0 dev 31 function 2 "Intel 9 Series AHCI" rev 0x03: msi, AHCI 1.3
+ahci0: port 0: 6.0Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, HFS256G3AMNB-220, 1010> t10.ATA_HFS256G3AMNB-2200A__EI42N144310402O79__
+sd0: 244198MB, 512 bytes/sector, 500118192 sectors, thin
+"Intel 9 Series SMBus" rev 0x03 at pci0 dev 31 function 3 not configured
+isa0 at mainbus0
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation)
+uhub2 at uhub0 port 7 configuration 1 interface 0 "vendor 0x05e3 USB2.0 Hub" rev 2.00/85.36 addr 2
+umass0 at uhub0 port 8 configuration 1 interface 0 "Generic USB Storage" rev 2.00/94.51 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <Generic, STORAGE DEVICE, 9451> removable
+uhub3 at uhub1 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x8001" rev 2.00/0.03 addr 2
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8474927104 (8082MB)
+avail mem = 8203034624 (7823MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.8 @ 0xec100 (79 entries)
+bios0: vendor American Megatrends Inc. version "5.6.5" date 08/29/2015
+bios0: INTEL Corporation CRESCENTBAY
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT UEFI SSDT ASF! SSDT SSDT SSDT DMAR
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) RP05(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz, 2494.54 MHz, 06-3d-04
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,RDSEED,ADX,SMAP,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz, 2494.24 MHz, 06-3d-04
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,RDSEED,ADX,SMAP,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz, 2494.23 MHz, 06-3d-04
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,RDSEED,ADX,SMAP,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz, 2494.24 MHz, 06-3d-04
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,RDSEED,ADX,SMAP,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 40 pins
+acpimadt0: bogus nmi for apid 0
+acpimadt0: bogus nmi for apid 2
+acpimadt0: bogus nmi for apid 1
+acpimadt0: bogus nmi for apid 3
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 1 (RP01)
+acpiprt5 at acpi0: bus -1 (RP02)
+acpiprt6 at acpi0: bus 2 (RP03)
+acpiprt7 at acpi0: bus 3 (RP04)
+acpiprt8 at acpi0: bus -1 (RP05)
+acpiprt9 at acpi0: bus 4 (RP06)
+acpiprt10 at acpi0: bus -1 (RP07)
+acpiprt11 at acpi0: bus -1 (RP08)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"INT3437" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+acpibtn1 at acpi0: PWRB
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@506 mwait.1@0x60), C2(200@148 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@506 mwait.1@0x60), C2(200@148 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@506 mwait.1@0x60), C2(200@148 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@506 mwait.1@0x60), C2(200@148 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: FN00, resource for FAN0
+acpipwrres4 at acpi0: FN01, resource for FAN1
+acpipwrres5 at acpi0: FN02, resource for FAN2
+acpipwrres6 at acpi0: FN03, resource for FAN3
+acpipwrres7 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 105 degC
+acpitz1 at acpi0: critical temperature is 105 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2494 MHz: speeds: 1601, 1600, 1500, 1400, 1300, 1200, 1100, 1000, 900, 800, 700, 600, 500 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 5G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 6000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, BROADWELL, gen 8
+azalia0 at pci0 dev 3 function 0 "Intel Core 5G HD Audio" rev 0x09: msi
+azalia0: No codecs found
+xhci0 at pci0 dev 20 function 0 "Intel 9 Series xHCI" rev 0x03: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+azalia1 at pci0 dev 27 function 0 "Intel 9 Series HD Audio" rev 0x03: msi
+azalia1: codecs: Realtek/0x0892
+audio0 at azalia1
+ppb0 at pci0 dev 28 function 0 "Intel 9 Series PCIE" rev 0xe3
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 2 "Intel 9 Series PCIE" rev 0xe3: msi
+pci2 at ppb1 bus 2
+re0 at pci2 dev 0 function 0 "Realtek 8168" rev 0x06: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ppb2 at pci0 dev 28 function 3 "Intel 9 Series PCIE" rev 0xe3: msi
+pci3 at ppb2 bus 3
+re1 at pci3 dev 0 function 0 "Realtek 8168" rev 0x06: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy1 at re1 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ppb3 at pci0 dev 28 function 5 "Intel 9 Series PCIE" rev 0xe3: msi
+pci4 at ppb3 bus 4
+athn0 at pci4 dev 0 function 0 "Atheros AR9287" rev 0x01: apic 2 int 16
+athn0: AR9287 rev 2 (2T2R), ROM rev 4, address XXX
+ehci0 at pci0 dev 29 function 0 "Intel 9 Series USB" rev 0x03: apic 2 int 23
+usb1 at ehci0: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel 9 Series LPC" rev 0x03
+ahci0 at pci0 dev 31 function 2 "Intel 9 Series AHCI" rev 0x03: msi, AHCI 1.3
+ahci0: port 0: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, HFS256G3AMNB-220, 1010> t10.ATA_HFS256G3AMNB-2200A__EI42N144310402O79__
+sd0: 244198MB, 512 bytes/sector, 500118192 sectors, thin
+ichiic0 at pci0 dev 31 function 3 "Intel 9 Series SMBus" rev 0x03: apic 2 int 18
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 8GB DDR3 SDRAM PC3-12800 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub2 at uhub0 port 7 configuration 1 interface 0 "Genesys Logic USB2.0 Hub" rev 2.00/85.36 addr 2
+umass0 at uhub0 port 8 configuration 1 interface 0 "Genesys Logic product 0x0723" rev 2.00/94.51 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd1 at scsibus2 targ 1 lun 0: <Generic, STORAGE DEVICE, 9451> removable
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.03 addr 2
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+root on sd0a (39b5859c40c97779.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x720, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation)
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+syncing disks... done
+rebooting...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8474927104 (8082MB)
+avail mem = 8203042816 (7823MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.8 @ 0xec100 (79 entries)
+bios0: vendor American Megatrends Inc. version "5.6.5" date 08/29/2015
+bios0: INTEL Corporation CRESCENTBAY
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET SSDT UEFI SSDT ASF! SSDT SSDT SSDT DMAR
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) RP05(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz, 2494.57 MHz, 06-3d-04
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,RDSEED,ADX,SMAP,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz, 2494.24 MHz, 06-3d-04
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,RDSEED,ADX,SMAP,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz, 2494.23 MHz, 06-3d-04
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,RDSEED,ADX,SMAP,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i5-5250U CPU @ 1.60GHz, 2494.23 MHz, 06-3d-04
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,RDSEED,ADX,SMAP,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 40 pins
+acpimadt0: bogus nmi for apid 0
+acpimadt0: bogus nmi for apid 2
+acpimadt0: bogus nmi for apid 1
+acpimadt0: bogus nmi for apid 3
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 1 (RP01)
+acpiprt5 at acpi0: bus -1 (RP02)
+acpiprt6 at acpi0: bus 2 (RP03)
+acpiprt7 at acpi0: bus 3 (RP04)
+acpiprt8 at acpi0: bus -1 (RP05)
+acpiprt9 at acpi0: bus 4 (RP06)
+acpiprt10 at acpi0: bus -1 (RP07)
+acpiprt11 at acpi0: bus -1 (RP08)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"INT3437" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+acpibtn1 at acpi0: PWRB
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@506 mwait.1@0x60), C2(200@148 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@506 mwait.1@0x60), C2(200@148 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@506 mwait.1@0x60), C2(200@148 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@506 mwait.1@0x60), C2(200@148 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: FN00, resource for FAN0
+acpipwrres4 at acpi0: FN01, resource for FAN1
+acpipwrres5 at acpi0: FN02, resource for FAN2
+acpipwrres6 at acpi0: FN03, resource for FAN3
+acpipwrres7 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 105 degC
+acpitz1 at acpi0: critical temperature is 105 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2494 MHz: speeds: 1601, 1600, 1500, 1400, 1300, 1200, 1100, 1000, 900, 800, 700, 600, 500 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 5G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 6000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, BROADWELL, gen 8
+azalia0 at pci0 dev 3 function 0 "Intel Core 5G HD Audio" rev 0x09: msi
+azalia0: No codecs found
+xhci0 at pci0 dev 20 function 0 "Intel 9 Series xHCI" rev 0x03: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+azalia1 at pci0 dev 27 function 0 "Intel 9 Series HD Audio" rev 0x03: msi
+azalia1: codecs: Realtek/0x0892
+audio0 at azalia1
+ppb0 at pci0 dev 28 function 0 "Intel 9 Series PCIE" rev 0xe3
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 2 "Intel 9 Series PCIE" rev 0xe3: msi
+pci2 at ppb1 bus 2
+re0 at pci2 dev 0 function 0 "Realtek 8168" rev 0x06: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ppb2 at pci0 dev 28 function 3 "Intel 9 Series PCIE" rev 0xe3: msi
+pci3 at ppb2 bus 3
+re1 at pci3 dev 0 function 0 "Realtek 8168" rev 0x06: RTL8168E/8111E-VL (0x2c80), msi, address XXX
+rgephy1 at re1 phy 7: RTL8169S/8110S/8211 PHY, rev. 5
+ppb3 at pci0 dev 28 function 5 "Intel 9 Series PCIE" rev 0xe3: msi
+pci4 at ppb3 bus 4
+athn0 at pci4 dev 0 function 0 "Atheros AR9287" rev 0x01: apic 2 int 16
+athn0: AR9287 rev 2 (2T2R), ROM rev 4, address XXX
+ehci0 at pci0 dev 29 function 0 "Intel 9 Series USB" rev 0x03: apic 2 int 23
+usb1 at ehci0: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel 9 Series LPC" rev 0x03
+ahci0 at pci0 dev 31 function 2 "Intel 9 Series AHCI" rev 0x03: msi, AHCI 1.3
+ahci0: port 0: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, HFS256G3AMNB-220, 1010> t10.ATA_HFS256G3AMNB-2200A__EI42N144310402O79__
+sd0: 244198MB, 512 bytes/sector, 500118192 sectors, thin
+ichiic0 at pci0 dev 31 function 3 "Intel 9 Series SMBus" rev 0x03: apic 2 int 18
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 8GB DDR3 SDRAM PC3-12800 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub2 at uhub0 port 7 configuration 1 interface 0 "Genesys Logic USB2.0 Hub" rev 2.00/85.36 addr 2
+uhub0: device problem, disabling port 8
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.03 addr 2
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (39b5859c40c97779.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x720, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation)
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+nfs server XXX.XXX.XXX.XXX:/EncMail: not responding
+drm:pid71302:connector_bad_edid *WARNING* HDMI-A-1: EDID is invalid:
+	[00] ZERO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	[00] ZERO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	[00] ZERO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	[00] ZERO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	[00] ZERO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	[00] ZERO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	[00] ZERO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+	[00] ZERO 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "Microsoft Microsoft Basic Optical Mouse v2.0" rev 1.10/1.04 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+wsmouse0 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "Microsoft Microsoft Basic Optical Mouse v2.0" rev 1.10/1.04 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+uhidev1 at uhub0 port 2 configuration 1 interface 0 "Microdia / Sonix Technology Co., Ltd. USB Keyboard" rev 2.00/1.05 addr 4
+uhidev1: iclass 3/1
+ukbd0 at uhidev1: 8 variable keys, 6 key codes
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev2 at uhub0 port 2 configuration 1 interface 1 "Microdia / Sonix Technology Co., Ltd. USB Keyboard" rev 2.00/1.05 addr 4
+uhidev2: iclass 3/1, 10 report ids
+uhid0 at uhidev2 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev2 reportid 2: input=1, output=0, feature=0
+ukbd1 at uhidev2 reportid 4: 48 variable keys, 0 key codes
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+ukbd2 at uhidev2 reportid 5: 56 variable keys, 0 key codes
+wskbd2 at ukbd2 mux 1
+wskbd2: connecting to wsdisplay0
+ukbd3 at uhidev2 reportid 6: 56 variable keys, 0 key codes
+wskbd3 at ukbd3 mux 1
+wskbd3: connecting to wsdisplay0
+uhid2 at uhidev2 reportid 10: input=0, output=0, feature=7
+ukbd0: was console keyboard
+wskbd0 detached
+ukbd0 detached
+uhidev1 detached
+uhid0 detached
+uhid1 detached
+wskbd1: disconnecting from wsdisplay0
+wskbd1 detached
+ukbd1 detached
+wskbd2: disconnecting from wsdisplay0
+wskbd2 detached
+ukbd2 detached
+wskbd3: disconnecting from wsdisplay0
+wskbd3 detached
+ukbd3 detached
+uhid2 detached
+uhidev2 detached
+uhidev1 at uhub0 port 2 configuration 1 interface 0 "Microdia / Sonix Technology Co., Ltd. USB Keyboard" rev 2.00/1.05 addr 4
+uhidev1: iclass 3/1
+ukbd0 at uhidev1: 8 variable keys, 6 key codes
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev2 at uhub0 port 2 configuration 1 interface 1 "Microdia / Sonix Technology Co., Ltd. USB Keyboard" rev 2.00/1.05 addr 4
+uhidev2: iclass 3/1, 10 report ids
+uhid0 at uhidev2 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev2 reportid 2: input=1, output=0, feature=0
+ukbd1 at uhidev2 reportid 4: 48 variable keys, 0 key codes
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+ukbd2 at uhidev2 reportid 5: 56 variable keys, 0 key codes
+wskbd2 at ukbd2 mux 1
+wskbd2: connecting to wsdisplay0
+ukbd3 at uhidev2 reportid 6: 56 variable keys, 0 key codes
+wskbd3 at ukbd3 mux 1
+wskbd3: connecting to wsdisplay0
+uhid2 at uhidev2 reportid 10: input=0, output=0, feature=7
+wsmouse0 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "Microsoft Microsoft Basic Optical Mouse v2.0" rev 1.10/1.04 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+wsmouse0 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "Microsoft Microsoft Basic Optical Mouse v2.0" rev 1.10/1.04 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+wsmouse0 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "Microsoft Microsoft Basic Optical Mouse v2.0" rev 1.10/1.04 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+wsmouse0 detached
+ums0 detached
+uhidev0 detached
+ukbd0: was console keyboard
+wskbd0 detached
+ukbd0 detached
+uhidev1 detached
+uhid0 detached
+uhid1 detached
+wskbd1: disconnecting from wsdisplay0
+wskbd1 detached
+ukbd1 detached
+wskbd2: disconnecting from wsdisplay0
+wskbd2 detached
+ukbd2 detached
+wskbd3: disconnecting from wsdisplay0
+wskbd3 detached
+ukbd3 detached
+uhid2 detached
+uhidev2 detached
+nfs server XXX.XXX.XXX.XXX:/EncMedia: not responding

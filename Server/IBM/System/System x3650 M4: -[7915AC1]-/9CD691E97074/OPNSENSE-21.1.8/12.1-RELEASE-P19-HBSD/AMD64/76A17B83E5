@@ -1,0 +1,412 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD #0  0c59842367b(stable/21.1)-dirty: Mon Jul  5 15:08:43 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1024x768
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz (2000.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206d7  Family=0x6  Model=0x2d  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 51539607552 (49152 MB)
+avail memory = 49896546304 (47585 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <IBM    SERMEGAL>
+FreeBSD/SMP: Multiprocessor System Detected: 24 CPUs
+FreeBSD/SMP: 2 package(s) x 6 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 24-47 on motherboard
+ioapic2 <Version 2.0> irqs 48-71 on motherboard
+Launching APs: 14 23 7 15 3 8 9 22 2 20 12 13 1 19 11 6 10 21 5 4 16 17 18
+Timecounter "TSC" frequency 2000044296 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7f0, 0) error 19
+000.000074 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <IBM SERMEGAL> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x71,0x74-0x77 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 2.0 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pcib3: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci2
+pci3: <PCI bus> numa-domain 0 on pcib3
+pci3: <network, ethernet> at device 1.0 (no driver attached)
+pci3: <network> at device 1.1 (no driver attached)
+pci3: <network, ethernet> at device 1.2 (no driver attached)
+pci3: <network> at device 1.3 (no driver attached)
+pcib4: <PCI-PCI bridge> mem 0xc41ff000-0xc41ff07f at device 0.1 numa-domain 0 on pci2
+pci4: <PCI bus> numa-domain 0 on pcib4
+pcib5: <ACPI PCI-PCI bridge> at device 2.2 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+AVAGO MegaRAID SAS FreeBSD mrsas driver version: XXX.XXX.XXX.XXX-fbsd
+mfi0: <ThunderBolt> port 0x3f00-0x3fff mem 0xc43bc000-0xc43bffff,0xc43c0000-0xc43fffff at device 0.0 numa-domain 0 on pci5
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: FW MaxCmds = 256, limiting to 128
+mfi0: MaxCmd = 256, Drv MaxCmd = 128, MaxSgl = 70, state = 0xb73c0100
+mfi0: 33135 (679951169s/0x0020/info) - Shutdown command received from host
+mfi0: 33136 (boot + 10s/0x0020/info) - Firmware initialization started (PCI ID 005b/1000/0412/1014)
+mfi0: 33137 (boot + 10s/0x0020/info) - Firmware version 3.340.74-3371
+mfi0: 33138 (boot + 12s/0x0020/info) - Package version 23.22.0-0024
+mfi0: 33139 (boot + 12s/0x0020/info) - Board Revision  00Y8457
+mfi0: 33140 (boot + 31s/0x0002/info) - Inserted: PD 00(e0x3e/s0)
+pcib6: <ACPI PCI-PCI bridge> at device 3.0 numa-domain 0 on pci0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+bce0: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xc8000000-0xc9ffffff at device 0.0 numa-domain 0 on pci6
+miibus0: <MII bus> numa-domain 0 on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (5.2.3); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xc6000000-0xc7ffffff at device 0.1 numa-domain 0 on pci6
+miibus1: <MII bus> numa-domain 0 on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (5.2.3); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+pcib7: <ACPI PCI-PCI bridge> at device 3.2 numa-domain 0 on pci0
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+em0: <Intel(R) PRO/1000 Network Connection> port 0x4fc0-0x4fdf mem 0xc4480000-0xc449ffff,0xc44a0000-0xc44bffff at device 0.0 numa-domain 0 on pci7
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 Network Connection> port 0x4fe0-0x4fff mem 0xc44c0000-0xc44dffff,0xc44e0000-0xc44fffff at device 0.1 numa-domain 0 on pci7
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib8: <PCI-PCI bridge> at device 17.0 numa-domain 0 on pci0
+pci8: <PCI bus> numa-domain 0 on pcib8
+ehci0: <Intel Patsburg USB 2.0 controller> mem 0xc40fd000-0xc40fd3ff at device 26.0 numa-domain 0 on pci0
+usbus0: EHCI version 1.0
+usbus0 numa-domain 0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib9: <ACPI PCI-PCI bridge> at device 28.0 numa-domain 0 on pci0
+pci9: <ACPI PCI bus> numa-domain 0 on pcib9
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5f80-0x5f9f mem 0xc4580000-0xc459ffff,0xc4570000-0xc4573fff at device 0.0 numa-domain 0 on pci9
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 6 RX queues 6 TX queues
+igb0: Using MSI-X interrupts with 7 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 6/1024, RX 6/1024
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5fa0-0x5fbf mem 0xc45a0000-0xc45bffff,0xc4574000-0xc4577fff at device 0.1 numa-domain 0 on pci9
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 6 RX queues 6 TX queues
+igb1: Using MSI-X interrupts with 7 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 6/1024, RX 6/1024
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5fc0-0x5fdf mem 0xc45c0000-0xc45dffff,0xc4578000-0xc457bfff at device 0.2 numa-domain 0 on pci9
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 6 RX queues 6 TX queues
+igb2: Using MSI-X interrupts with 7 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 6/1024, RX 6/1024
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5fe0-0x5fff mem 0xc45e0000-0xc45fffff,0xc457c000-0xc457ffff at device 0.3 numa-domain 0 on pci9
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 6 RX queues 6 TX queues
+igb3: Using MSI-X interrupts with 7 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 6/1024, RX 6/1024
+pcib10: <ACPI PCI-PCI bridge> at device 28.7 numa-domain 0 on pci0
+pci10: <ACPI PCI bus> numa-domain 0 on pcib10
+pcib11: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 0 on pci10
+pci11: <ACPI PCI bus> numa-domain 0 on pcib11
+pcib12: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 0 on pci11
+pci12: <ACPI PCI bus> numa-domain 0 on pcib12
+pcib13: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 0 on pci12
+pci13: <ACPI PCI bus> numa-domain 0 on pcib13
+vgapci0: <VGA-compatible display> mem 0xc5000000-0xc5ffffff,0xc47fc000-0xc47fffff,0xc4800000-0xc4ffffff irq 20 at device 0.0 numa-domain 0 on pci13
+vgapci0: Boot video device
+pcib14: <PCI-PCI bridge> at device 1.0 numa-domain 0 on pci11
+pci14: <PCI bus> numa-domain 0 on pcib14
+ehci1: <Intel Patsburg USB 2.0 controller> mem 0xc40fe000-0xc40fe3ff at device 29.0 numa-domain 0 on pci0
+usbus1: EHCI version 1.0
+usbus1 numa-domain 0 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib15: <ACPI PCI-PCI bridge> at device 30.0 numa-domain 0 on pci0
+pci15: <ACPI PCI bus> numa-domain 0 on pcib15
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+pcib16: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci16: <ACPI PCI bus> numa-domain 1 on pcib16
+pcib17: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 1 on pci16
+pci17: <ACPI PCI bus> numa-domain 1 on pcib17
+pcib18: <ACPI PCI-PCI bridge> at device 2.0 numa-domain 1 on pci16
+pci18: <ACPI PCI bus> numa-domain 1 on pcib18
+pcib19: <ACPI PCI-PCI bridge> at device 2.2 numa-domain 1 on pci16
+pci19: <ACPI PCI bus> numa-domain 1 on pcib19
+pcib20: <ACPI PCI-PCI bridge> at device 3.0 numa-domain 1 on pci16
+pci20: <ACPI PCI bus> numa-domain 1 on pcib20
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xc7fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+Timecounters tick every 1.000 msec
+mfisyspd0 numa-domain 0 on mfi0
+mfisyspd0: 114473MB (234441648 sectors) SYSPD volume (deviceid: 0)
+mfisyspd0:  SYSPD volume attached
+mfi0: 33141 (boot + 31s/0x0002/info) - Inserted: PD 00(e0x3e/s0) Info: enclPd=3e, scsiType=0, portMap=00, sasAddr=4433221100000000,0ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+000000000000000
+mfi0: 33142 (boot + 31s/0x0002/info) - Unexpected sense: PD 00(e0x3e/s0) Path 4433221100000000, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+mfi0: 33143 (boot + 31s/0x0002/info) - Unexpected sense: PD 00(e0x3e/s0) Path 4433221100000000, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+mfi0: 33144 (boot + 31s/0x0002/info) - Unexpected sense: PD 00(e0x3e/s0) Path 4433221100000000, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+mfi0: 33145 (boot + 31s/0x0002/info) - Unexpected sense: PD 00(e0x3e/s0) Path 4433221100000000, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+mfi0: 33146 (boot + 31s/0x0002/info) - Unexpected sense: PD 00(e0x3e/s0) Path 4433221100000000, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+mfi0: 33147 (boot + 31s/0x0002/info) - Unexpected sense: PD 00(e0x3e/s0) Path 4433221100000000, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+mfi0: 33148 (679951264s/0x0020/info) - Time established as 07/18/21 19:21:04; (32 seconds since power on)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: 3 ports with 3 removable, self powered
+uhub0: 3 ports with 3 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 numa-domain 0 on uhub1
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 numa-domain 0 on uhub0
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen1.3: <no manufacturer Gadget USB HUB> at usbus1
+uhub4 numa-domain 0 on uhub3
+uhub4: <no manufacturer Gadget USB HUB, class 9/0, rev 2.00/0.00, addr 3> on usbus1
+uhub4: 6 ports with 6 removable, self powered
+ugen1.4: <IBM RNDIS/Ethernet Gadget> at usbus1
+em0: link state changed to UP
+em1: link state changed to UP
+ioat0: <SNB IOAT Ch0> mem 0xca0e0000-0xca0e3fff at device 4.0 numa-domain 0 on pci0
+ioat0: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat1: <SNB IOAT Ch1> mem 0xca0e4000-0xca0e7fff at device 4.1 numa-domain 0 on pci0
+ioat1: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat2: <SNB IOAT Ch2> mem 0xca0e8000-0xca0ebfff at device 4.2 numa-domain 0 on pci0
+ioat2: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat3: <SNB IOAT Ch3> mem 0xca0ec000-0xca0effff at device 4.3 numa-domain 0 on pci0
+ioat3: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat4: <SNB IOAT Ch4> mem 0xca0f0000-0xca0f3fff at device 4.4 numa-domain 0 on pci0
+ioat4: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat5: <SNB IOAT Ch5> mem 0xca0f4000-0xca0f7fff at device 4.5 numa-domain 0 on pci0
+ioat5: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat6: <SNB IOAT Ch6> mem 0xca0f8000-0xca0fbfff at device 4.6 numa-domain 0 on pci0
+ioat6: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat7: <SNB IOAT Ch7> mem 0xca0fc000-0xca0fffff at device 4.7 numa-domain 0 on pci0
+ioat7: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat8: <SNB IOAT Ch0> mem 0x90000000-0x90003fff at device 4.0 numa-domain 1 on pci16
+ioat8: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat9: <SNB IOAT Ch1> mem 0x90004000-0x90007fff at device 4.1 numa-domain 1 on pci16
+ioat9: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat10: <SNB IOAT Ch2> mem 0x90008000-0x9000bfff at device 4.2 numa-domain 1 on pci16
+ioat10: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat11: <SNB IOAT Ch3> mem 0x9000c000-0x9000ffff at device 4.3 numa-domain 1 on pci16
+ioat11: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat12: <SNB IOAT Ch4> mem 0x90010000-0x90013fff at device 4.4 numa-domain 1 on pci16
+ioat12: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat13: <SNB IOAT Ch5> mem 0x90014000-0x90017fff at device 4.5 numa-domain 1 on pci16
+ioat13: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat14: <SNB IOAT Ch6> mem 0x90018000-0x9001bfff at device 4.6 numa-domain 1 on pci16
+ioat14: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat15: <SNB IOAT Ch7> mem 0x9001c000-0x9001ffff at device 4.7 numa-domain 1 on pci16
+ioat15: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+urndis0 numa-domain 0 on uhub4
+urndis0: <RNDIS Communications Control> on usbus1
+ue0: <USB Ethernet> on urndis0
+ue0: Ethernet address: ...
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+em1: link state changed to DOWN
+em0: link state changed to DOWN
+em1: link state changed to UP
+em0: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+em0: promiscuous mode enabled
+em1: promiscuous mode enabled
+lo0: promiscuous mode enabled
+bce0: promiscuous mode enabled
+enc0: promiscuous mode enabled
+pfsync0: promiscuous mode enabled
+ue0: promiscuous mode enabled
+bce1: promiscuous mode enabled
+igb0: promiscuous mode enabled
+igb1: promiscuous mode enabled
+igb2: promiscuous mode enabled
+igb3: promiscuous mode enabled
+em0: link state changed to DOWN
+em0: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+em1: permanently promiscuous mode enabled
+em1: link state changed to DOWN
+em1: link state changed to UP
+506.768245 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+506.768279 [1035] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+bce0: permanently promiscuous mode enabled
+506.768707 [1130] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+506.768951 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+506.770041 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+506.770070 [1035] generic_netmap_dtor       Emulated netmap adapter for bce1 destroyed
+bce1: permanently promiscuous mode enabled
+506.770407 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+506.770656 [ 320] generic_netmap_register   Emulated adapter for bce1 activated
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+tun1: changing name to 'ovpns1'
+ovpns1: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on em1

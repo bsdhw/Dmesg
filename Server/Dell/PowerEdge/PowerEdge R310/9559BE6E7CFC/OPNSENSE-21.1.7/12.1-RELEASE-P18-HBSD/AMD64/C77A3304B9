@@ -1,0 +1,265 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p18-HBSD #1  815defa6fd0(stable/21.1)-dirty: Mon Jun 14 09:17:18 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU           X3430  @ 2.40GHz (2395.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x106e5  Family=0x6  Model=0x1e  Stepping=5
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x98e3fd<SSE3,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16606998528 (15837 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 2 3 1
+Timecounter "TSC-low" frequency 1197524820 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7f0, 0) error 19
+000.000054 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 3.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ix0: <Intel(R) PRO/10GbE PCI-Express Network Driver> port 0xfcc0-0xfcdf mem 0xd9900000-0xd997ffff,0xd98f8000-0xd98fbfff irq 16 at device 0.0 on pci1
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) PRO/10GbE PCI-Express Network Driver> port 0xfce0-0xfcff mem 0xd9980000-0xd99fffff,0xd98fc000-0xd98fffff irq 17 at device 0.1 on pci1
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+pcib2: <ACPI PCI-PCI bridge> at device 5.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+mfi0: <Dell PERC H700 Adapter> port 0xec00-0xecff mem 0xdf1bc000-0xdf1bffff,0xdf1c0000-0xdf1fffff irq 16 at device 0.0 on pci2
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: FW MaxCmds = 1008, limiting to 128
+mfi0: 4606 (678020148s/0x0020/info) - Shutdown command received from host
+mfi0: 4607 (boot + 34s/0x0020/info) - Firmware initialization started (PCI ID 0079/1000/1f16/1028)
+mfi0: 4608 (boot + 34s/0x0020/info) - Firmware version 2.100.03-2514
+mfi0: 4609 (boot + 35s/0x0008/info) - Battery Present
+mfi0: 4610 (boot + 35s/0x0020/info) - Package version 12.10.6-0001
+mfi0: 4611 (boot + 35s/0x0020/info) - Board Revision A06
+mfi0: 4612 (boot + 63s/0x0004/info) - Enclosure PD 20(c None/p0) communication restored
+mfi0: 4613 (boot + 63s/0x0002/info) - Inserted: Encl PD 20
+mfi0: 4614 (boot + 63s/0x0002/info) - Inserted: PD 20(c None/p0) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=5e4ae0208480bc00,0000000000000000
+mfi0: 4615 (boot + 63s/0x0002/info) - Inserted: PD 00(e0x20/s0)
+mfi0: 4616 (boot + 63s/0x0002/info) - Inserted: PD 00(e0x20/s0) Info: enclPd=20, scsiType=0, portMap=01, sasAddr=4433221107000000,0000000000000000
+mfi0: 4617 (boot + 63s/0x0002/info) - Inserted: PD 01(e0x20/s1)
+mfi0: 4618 (boot + 63s/0x0002/info) - Inserted: PD 01(e0x20/s1) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=4433221106000000,0000000000000000
+mfi0: 4619 (678020220s/0x0020/info) - Time established as 06/26/21 10:57:00; (64 seconds since power on)
+ehci0: <Intel PCH USB 2.0 controller USB-B> mem 0xdf0fa000-0xdf0fa3ff irq 22 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+bce0: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xda000000-0xdbffffff irq 16 at device 0.0 on pci4
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (5.2.3); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xdc000000-0xddffffff irq 17 at device 0.1 on pci4
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (5.2.3); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel PCH USB 2.0 controller USB-A> mem 0xdf0fc000-0xdf0fc3ff irq 22 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib5: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+vgapci0: <VGA-compatible display> mem 0xd9000000-0xd97fffff,0xde7fc000-0xde7fffff,0xde800000-0xdeffffff irq 19 at device 3.0 on pci5
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Ibex Peak (RAID) AHCI SATA controller> port 0xdcd0-0xdcd7,0xdcc8-0xdccb,0xdcd8-0xdcdf,0xdccc-0xdccf,0xdce0-0xdcff mem 0xdf0fe000-0xdf0fe7ff irq 20 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xc8fff,0xcc000-0xcffff,0xd0000-0xd5fff,0xec000-0xeffff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 12
+device_attach: est3 attach returned 6
+Timecounters tick every 1.000 msec
+mfid0 on mfi0
+mfid0: 457344MB (936640512 sectors) RAID volume (no label) is optimal
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+cd0 at ahcich4 bus 0 scbus4 target 0 lun 0
+cd0: <TSSTcorp DVD+-RW TS-L633J D250> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0020> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0020> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <vendor 0x0424 product 0x2514> at usbus0
+uhub4 on uhub2
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 3> on usbus0
+uhub4: MTT enabled
+ugen1.3: <Avocent USB Composite Device-0> at usbus1
+ukbd0 on uhub3
+ukbd0: <Keyboard> on usbus1
+kbd2 at ukbd0
+uhub4: 4 ports with 4 removable, self powered
+mfi0: 4620 (678020256s/0x0008/info) - Battery temperature is normal
+mfi0: 4621 (678020256s/0x0008/info) - Current capacity of the battery is above threshold
+mfi0: 4622 (678020256s/0x0008/info) - Battery started charging
+ums0 on uhub3
+ums0: <Mouse> on usbus1
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+lagg0: IPv6 addresses on ix0 have been removed before adding it as a member to prevent IPv6 address scope violation.
+lagg0: link state changed to DOWN
+lagg0: IPv6 addresses on ix1 have been removed before adding it as a member to prevent IPv6 address scope violation.
+ix0: link state changed to UP
+lagg0: link state changed to UP
+vlan0: changing name to 'lagg0_vlan1338'
+vlan1: changing name to 'lagg0_vlan2070'
+pflog0: promiscuous mode enabled
+ix1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce0: link state changed to UP
+bce0: Gigabit link up!
+bce0: Gigabit link up!
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+mfi0: 4623 (678020841s/0x0008/info) - Battery charge complete
+886.972711 [1130] generic_netmap_attach     Emulated adapter for lagg0 created (prev was NULL)
+886.972739 [1035] generic_netmap_dtor       Emulated netmap adapter for lagg0 destroyed
+lagg0: permanently promiscuous mode enabled
+ix0: promiscuous mode enabled
+ix1: promiscuous mode enabled
+886.975845 [1130] generic_netmap_attach     Emulated adapter for lagg0 created (prev was NULL)
+887.062984 [ 320] generic_netmap_register   Emulated adapter for lagg0 activated
+887.448951 [ 295] generic_netmap_unregister Emulated adapter for lagg0 deactivated
+887.449522 [1035] generic_netmap_dtor       Emulated netmap adapter for lagg0 destroyed
+968.149974 [1130] generic_netmap_attach     Emulated adapter for lagg0 created (prev was NULL)
+968.150000 [1035] generic_netmap_dtor       Emulated netmap adapter for lagg0 destroyed
+968.152727 [1130] generic_netmap_attach     Emulated adapter for lagg0 created (prev was NULL)
+968.152825 [ 320] generic_netmap_register   Emulated adapter for lagg0 activated
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+lagg0_vlan1338: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

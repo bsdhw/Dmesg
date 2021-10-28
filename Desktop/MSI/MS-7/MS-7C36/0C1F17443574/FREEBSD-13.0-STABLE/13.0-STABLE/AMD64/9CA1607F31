@@ -1,0 +1,359 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE #0 stable/13-n244483-106efdb060a: Sat Feb  6 11:34:32 JST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 3840x2160
+CPU: AMD Ryzen 9 5950X 16-Core Processor             (3400.07-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0xa20f10  Family=0x19  Model=0x21  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c97a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x40068c<UMIP,PKU,VAES,VPCLMULQDQ,RDPID>
+  Structured Extended Features3=0x10<FSRM>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x111ef657<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,IBRS,STIBP,STIBP_ALWAYSON,PREFER_IBRS,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 137434759168 (131068 MB)
+avail memory = 133703811072 (127509 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 32 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 8 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 18 25 23 26 16 1 3 6 17 14 19 10 22 15 9 24 8 5 27 13 4 7 11 12 2 29 20 31 21 30 28
+Timecounter "TSC-low" frequency 1700035785 Hz quality 1000
+KTLS: Initialized 32 threads
+random: entropy device external interface
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd1 at kbdmux0
+000.000076 [4350] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+AMD-Vi: IVRS Info VAsize = 64 PAsize = 48 GVAsize = 2 flags:0
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+amdsmn0: <AMD Family 19h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xfc500000-0xfc503fff at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 1.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+nvme1: <Generic NVMe Device> mem 0xfc100000-0xfc103fff,0xfc104000-0xfc1040ff at device 0.0 on pci4
+pcib5: <ACPI PCI-PCI bridge> at device 2.0 on pci3
+pci5: <ACPI PCI bus> on pcib5
+pci5: <network, ethernet> at device 0.0 (no driver attached)
+pcib6: <ACPI PCI-PCI bridge> at device 3.0 on pci3
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 0.0 on pci6
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <PCI-PCI bridge> at device 1.0 on pci7
+pci8: <PCI bus> on pcib8
+pcib9: <PCI-PCI bridge> at device 3.0 on pci7
+pci9: <PCI bus> on pcib9
+pcib10: <PCI-PCI bridge> at device 5.0 on pci7
+pci10: <PCI bus> on pcib10
+pcib11: <PCI-PCI bridge> at device 7.0 on pci7
+pci11: <PCI bus> on pcib11
+pcib12: <ACPI PCI-PCI bridge> at device 4.0 on pci3
+pci12: <ACPI PCI bus> on pcib12
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xd000-0xd01f mem 0xfc000000-0xfc01ffff,0xfc020000-0xfc023fff at device 0.0 on pci12
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib13: <ACPI PCI-PCI bridge> at device 5.0 on pci3
+pci13: <ACPI PCI bus> on pcib13
+ahci0: <ASMedia ASM1062 AHCI SATA controller> port 0xc050-0xc057,0xc040-0xc043,0xc030-0xc037,0xc020-0xc023,0xc000-0xc01f mem 0xfbf00000-0xfbf001ff at device 0.0 on pci13
+ahci0: AHCI v1.20 with 2 6Gbps ports, Port Multiplier supported
+ahci0: quirks=0xc00000<NOCCS,NOAUX>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib14: <ACPI PCI-PCI bridge> at device 6.0 on pci3
+pci14: <ACPI PCI bus> on pcib14
+pci14: <network> at device 0.0 (no driver attached)
+pcib15: <ACPI PCI-PCI bridge> at device 8.0 on pci3
+pci15: <ACPI PCI bus> on pcib15
+pci15: <unknown> at device 0.0 (no driver attached)
+ppt0 mem 0xfbb00000-0xfbbfffff at device 0.1 on pci15
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfba00000-0xfbafffff at device 0.3 on pci15
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib16: <PCI-PCI bridge> at device 9.0 on pci3
+pci16: <PCI bus> on pcib16
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xfbd00000-0xfbd007ff at device 0.0 on pci16
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich2: <AHCI channel> at channel 0 on ahci1
+pcib17: <PCI-PCI bridge> at device 10.0 on pci3
+pci17: <PCI bus> on pcib17
+ahci2: <AMD KERNCZ AHCI SATA controller> mem 0xfbc00000-0xfbc007ff at device 0.0 on pci17
+ahci2: AHCI v1.31 with 4 6Gbps ports, Port Multiplier supported with FBS
+ahcich3: <AHCI channel> at channel 0 on ahci2
+ahcich4: <AHCI channel> at channel 1 on ahci2
+ahcich7: <AHCI channel> at channel 4 on ahci2
+ahcich8: <AHCI channel> at channel 5 on ahci2
+pcib18: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci18: <ACPI PCI bus> on pcib18
+vgapci0: <VGA-compatible display> port 0xf000-0xf07f mem 0xfa000000-0xfaffffff,0xb0000000-0xbfffffff,0xc0000000-0xc1ffffff at device 0.0 on pci18
+hdac0: <NVIDIA (0x1aeb) HDA Controller> mem 0xfb080000-0xfb083fff at device 0.1 on pci18
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xc2000000-0xc203ffff,0xc2040000-0xc204ffff at device 0.2 on pci18
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pci18: <serial bus> at device 0.3 (no driver attached)
+pcib19: <ACPI PCI-PCI bridge> at device 3.2 on pci0
+pci19: <ACPI PCI bus> on pcib19
+ppt1 port 0xe000-0xe07f mem 0xf8000000-0xf8ffffff,0xd0000000-0xdfffffff,0xe0000000-0xe1ffffff at device 0.0 on pci19
+ppt2 mem 0xf9080000-0xf9083fff at device 0.1 on pci19
+pcib20: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci20: <ACPI PCI bus> on pcib20
+pci20: <unknown> at device 0.0 (no driver attached)
+pcib21: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci21: <ACPI PCI bus> on pcib21
+pci21: <unknown> at device 0.0 (no driver attached)
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xfc300000-0xfc3fffff at device 0.3 on pci21
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+hdac1: <AMD X570 HDA Controller> mem 0xfc400000-0xfc407fff at device 0.4 on pci21
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart2: <16x50 with 256 byte FIFO> iomem 0xfedc9000-0xfedc9fff,0xfedc7000-0xfedc7fff irq 3 on acpi0
+uart3: <16x50 with 256 byte FIFO> iomem 0xfedca000-0xfedcafff,0xfedc8000-0xfedc8fff irq 4 on acpi0
+uart4: <16x50 with 256 byte FIFO> iomem 0xfedce000-0xfedcefff,0xfedcc000-0xfedccfff irq 3 on acpi0
+uart5: <16x50 with 256 byte FIFO> iomem 0xfedcf000-0xfedcffff,0xfedcd000-0xfedcdfff irq 4 on acpi0
+ivhd0: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd0: Flag:b0<IotlbSup,Coherent>
+ivhd0: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd0: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd0: Extended features[62:32]:58f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd0: supported paging level:7, will use only: 4
+ivhd0: device range: 0x0 - 0xffff
+ivhd0: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 10.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen2.1: <0x1022 XHCI root HUB> at usbus2
+ugen1.1: <0x10de XHCI root HUB> at usbus1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub0 on usbus2
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub1 on usbus1
+uhub1: <0x10de XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub2 on usbus0
+uhub2: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <WDS100T1X0E-00AFY0> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+uhub1: 6 ports with 6 removable, self powered
+uhub0: 8 ports with 8 removable, self powered
+nvd1: <WDS100T3X0C-00SJG0> NVMe namespace
+nvd1: 953869MB (1953525168 512 byte sectors)
+hdacc0: <NVIDIA (0x0099) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0099) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0099) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0099) (HDMI/DP 8ch)> at nid 5 on hdaa0
+pcm2: <NVIDIA (0x0099) (HDMI/DP 8ch)> at nid 6 on hdaa0
+pcm3: <NVIDIA (0x0099) (HDMI/DP 8ch)> at nid 7 on hdaa0
+hdacc1: <Realtek ALC1220 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC1220 Audio Function Group> at nid 1 on hdacc1
+pcm4: <Realtek ALC1220 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm5: <Realtek ALC1220 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm6: <Realtek ALC1220 (Rear Digital)> at nid 30 on hdaa1
+hwpmc: SOFT/16/64/0x67<INT,USR,SYS,REA,WRI> TSC/1/64/0x20<REA> K8/16/48/0x1ff<INT,USR,SYS,EDG,THR,REA,WRI,INV,QUA>
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: CAM usbus0 usbus2
+uhub2: 10 ports with 10 removable, self powered
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <WDC WD60EZRZ-00GZ5B1 80.00A80> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 5723166MB (11721045168 512 byte sectors)
+ada1 at ahcich3 bus 0 scbus3 target 0 lun 0
+ada1: <WDC WD60EZRZ-00GZ5B1 80.00A80> ACS-2 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 5723166MB (11721045168 512 byte sectors)
+ada2 at ahcich4 bus 0 scbus4 target 0 lun 0
+ada2: <WDC WD60EZRZ-00GZ5B1 80.00A80> ACS-2 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 5723166MB (11721045168 512 byte sectors)
+ada3 at ahcich7 bus 0 scbus5 target 0 lun 0
+ada3: <WDC WD60EZRZ-00GZ5B1 80.00A80> ACS-2 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 5723166MB (11721045168 512 byte sectors)
+ada4 at ahcich8 bus 0 scbus6 target 0 lun 0
+ada4: <WDC WD60EZRZ-00GZ5B1 80.00A80> ACS-2 ATA SATA 3.x device
+ada4: Serial Number...
+ada4: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada4: Command Queueing enabled
+ada4: 5723166MB (11721045168 512 byte sectors)
+ugen2.2: <GenesysLogic USB2.1 Hub> at usbus2
+uhub3 on uhub0
+uhub3: <GenesysLogic USB2.1 Hub, class 9/0, rev 2.10/93.06, addr 1> on usbus2
+uhub3: MTT enabled
+ugen0.2: <MSI MYSTIC LIGHT> at usbus0
+uhub3: 4 ports with 4 removable, self powered
+ugen0.3: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub4 on uhub2
+uhub4: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/88.32, addr 2> on usbus0
+Root mount waiting for: usbus0 usbus2
+ugen2.3: <GenesysLogic USB2.1 Hub> at usbus2
+uhub5 on uhub3
+uhub5: <GenesysLogic USB2.1 Hub, class 9/0, rev 2.10/93.06, addr 2> on usbus2
+uhub5: MTT enabled
+uhub4: 4 ports with 4 removable, self powered
+uhub5: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus2
+ugen2.4: <Prolific Technology Inc. USB-Serial Controller> at usbus2
+ugen2.5: <GenesysLogic USB2.1 Hub> at usbus2
+uhub6 on uhub3
+uhub6: <GenesysLogic USB2.1 Hub, class 9/0, rev 2.10/93.06, addr 4> on usbus2
+uhub6: MTT enabled
+Root mount waiting for: usbus2
+uhub6: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus2
+ugen2.6: <Satechi Satechi wired keyboard> at usbus2
+ukbd0 on uhub6
+ukbd0: <Satechi Satechi wired keyboard, class 0/0, rev 1.10/1.01, addr 5> on usbus2
+kbd2 at ukbd0
+ugen2.7: <Logitech Gaming Mouse G600> at usbus2
+ukbd1 on uhub6
+ukbd1: <Logitech Gaming Mouse G600, class 0/0, rev 2.00/77.02, addr 6> on usbus2
+kbd3 at ukbd1
+Root mount waiting for: usbus2
+ugen2.8: <vendor 0x1a86 USB2.0-Serial> at usbus2
+Root mount waiting for: usbus2
+ugen2.9: <GenesysLogic USB3.1 Hub> at usbus2
+uhub7 on uhub0
+uhub7: <GenesysLogic USB3.1 Hub, class 9/0, rev 3.10/93.06, addr 8> on usbus2
+Root mount waiting for: usbus2
+uhub7: 4 ports with 4 removable, self powered
+ugen2.10: <GenesysLogic USB3.1 Hub> at usbus2
+uhub8 on uhub7
+uhub8: <GenesysLogic USB3.1 Hub, class 9/0, rev 3.10/93.06, addr 9> on usbus2
+Root mount waiting for: usbus2
+uhub8: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus2
+ugen2.11: <GenesysLogic USB3.1 Hub> at usbus2
+uhub9 on uhub7
+uhub9: <GenesysLogic USB3.1 Hub, class 9/0, rev 3.10/93.06, addr 10> on usbus2
+uhub9: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus2
+ugen2.12: <USB Flash Disk> at usbus2
+umass0 on uhub9
+umass0: <USB Flash Disk, class 0/0, rev 3.00/11.00, addr 11> on usbus2
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:7:0: Attached to scbus7
+da0 at umass-sim0 bus 0 scbus7 target 0 lun 0
+da0: <USB Flash Disk 1100> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 7800MB (15974400 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+nvidia0: <Unknown> on vgapci0
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: child nvidia0 requested pci_enable_io
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  440.100  Fri May 29 08:11:49 UTC 2020
+link_elf_obj: symbol if_multiaddr_count undefined
+linker_load_file: /boot/modules/if_atlantic.ko - unsupported file type
+Cuse v0.1.36 @ /dev/cuse
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: cannot find EC device
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WMIC.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: cannot find EC device
+lo1: changing name to 'cbsd0'
+lo2: changing name to 'bastille0'
+lo0: link state changed to UP
+pflog0: promiscuous mode enabled
+uhid0 on uhub2
+uhid0: <MSI MYSTIC LIGHT, class 0/0, rev 1.10/0.01, addr 1> on usbus0
+uhid1 on uhub6
+uhid1: <Satechi Satechi wired keyboard, class 0/0, rev 1.10/1.01, addr 5> on usbus2
+uplcom0 on uhub5
+uplcom0: <Prolific Technology Inc. USB-Serial Controller, class 0/0, rev 1.10/3.00, addr 3> on usbus2
+igb0: link state changed to UP
+ums0 on uhub6
+ums0: <Logitech Gaming Mouse G600, class 0/0, rev 2.00/77.02, addr 6> on usbus2
+ums0: 16 buttons and [XYZT] coordinates ID=0
+uchcom0 on uhub3
+uchcom0: <vendor 0x1a86 USB2.0-Serial, rev 1.10/2.54, addr 7> on usbus2
+uchcom0: CH340 detected
+bridge0: Ethernet address: ...
+bridge0: changing name to 'vm-public'
+igb0: link state changed to DOWN
+vm-public: link state changed to UP
+igb0: promiscuous mode enabled
+Security policy loaded: MAC/ntpd (mac_ntpd)
+tap0: Ethernet address: ...
+tun0: link state changed to UP
+tap0: promiscuous mode enabled
+vm-public: link state changed to DOWN
+tap0: link state changed to UP
+vm-public: link state changed to UP
+igb0: link state changed to UP
+cbsd0: link state changed to UP
+Limiting closed port RST response from 569 to 200 packets/sec

@@ -1,0 +1,377 @@
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p10 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+CPU: Intel(R) Xeon(R) CPU E3-1240 V2 @ 3.40GHz (3400.10-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306a9  Family=0x6  Model=0x3a  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17188257792 (16392 MB)
+avail memory = 16592826368 (15824 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <SUPERM SMCI--MB>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 5 3 7 6 4 2
+Timecounter "TSC-low" frequency 1700047656 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112f0f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SMCI--MB> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+mps0: <Avago Technologies (LSI) SAS2008> port 0xe000-0xe0ff mem 0xdf600000-0xdf603fff,0xdf580000-0xdf5bffff irq 16 at device 0.0 on pci1
+mps0: Firmware: XXX.XXX.XXX.XXX, Driver: XXX.XXX.XXX.XXX-fbsd
+mps0: IOCCapabilities: 1285c<ScsiTaskFull,DiagTrace,SnapBuf,EEDP,TransRetry,EventReplay,HostDisc>
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xdfe00000-0xdfe01fff irq 17 at device 0.0 on pci2
+xhci0: 64 bytes context size, 32-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib3: <ACPI PCI-PCI bridge> irq 19 at device 6.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> at device 0.0 on pci3
+pci4: <PCI bus> on pcib4
+pci4: <network, ethernet> at device 8.0 (no driver attached)
+em0: <Intel(R) PRO/1000 Network Connection> port 0xf020-0xf03f mem 0xdff00000-0xdff1ffff,0xdff25000-0xdff25fff irq 20 at device 25.0 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xdff24000-0xdff243ff irq 16 at device 26.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+ix0: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xde200000-0xde3fffff,0xde404000-0xde407fff irq 17 at device 0.0 on pci5
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x4
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xde000000-0xde1fffff,0xde400000-0xde403fff irq 16 at device 0.1 on pci5
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x4
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci6: <ACPI PCI bus> on pcib6
+em1: <Intel(R) PRO/1000 Network Connection> port 0xc000-0xc01f mem 0xdfc00000-0xdfc1ffff,0xdfc20000-0xdfc23fff irq 16 at device 0.0 on pci6
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using 2 RX queues 2 TX queues
+em1: Using MSI-X interrupts with 3 vectors
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 2/1024, RX 2/1024
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xdff23000-0xdff233ff irq 23 at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+pcib7: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci7: <ACPI PCI bus> on pcib7
+vgapci0: <VGA-compatible display> mem 0xdd000000-0xddffffff,0xdf000000-0xdf003fff,0xde800000-0xdeffffff irq 23 at device 3.0 on pci7
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0xf070-0xf077,0xf060-0xf063,0xf050-0xf057,0xf040-0xf043,0xf000-0xf01f mem 0xdff22000-0xdff227ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+psm0: model Generic PS/2 mouse, device ID 0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (9600,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+uart2: <16550 or compatible> port 0x3e8-0x3ef irq 10 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xc7fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen0.1: <0x1912 XHCI root HUB> at usbus0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub2: <0x1912 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2: 8 ports with 8 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub0
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen2.2: <vendor 0x8087 product 0x0024> at usbus2
+uhub4 on uhub1
+uhub4: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus2
+uhub3: 6 ports with 6 removable, self powered
+uhub4: 6 ports with 6 removable, self powered
+ugen1.3: <Winbond Electronics Corp Hermon USB hidmouse Device> at usbus1
+ukbd0 on uhub3
+ukbd0: <Winbond Electronics Corp Hermon USB hidmouse Device, class 0/0, rev 1.10/0.01, addr 3> on usbus1
+kbd2 at ukbd0
+ada0 at ahcich2 bus 0 scbus3 target 0 lun 0
+ada0: <Samsung SSD 840 PRO Series DXM05B0Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 122104MB (250069680 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ada1 at ahcich3 bus 0 scbus4 target 0 lun 0
+ada1: <Samsung SSD 850 PRO 512GB EXM02B6Q> ACS-2 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 488386MB (1000215216 512 byte sectors)
+ada1: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ada2 at ahcich4 bus 0 scbus5 target 0 lun 0
+ada2: <INTEL SSDSC2CT180A4 335u> ACS-2 ATA SATA 2.x device
+ada2: Serial Number...
+ada2: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 171705MB (351651888 512 byte sectors)
+ada2: quirks=0x1<4K>
+GEOM: ada1: the primary GPT table is corrupt or invalid.
+ada3 at ahcich5 bus 0 scbus6 target 0 lun 0
+ada3: <Samsung SSD 840 PRO Series DXM05B0Q> ACS-2 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 122104MB (250069680 512 byte sectors)
+ada3: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+GEOM: ada1: using the secondary instead -- recovery strongly advised.
+ses0 at mps0 bus 0 scbus0 target 12 lun 0
+ses0: <LSI CORP SAS2X36 0717> Fixed Enclosure Services SPC-3 SCSI device
+ses0: Serial Number...
+... 600.000MB/s transfers
+ses0: Command Queueing enabled
+ses0: SES Device
+da13 at mps0 bus 0 scbus0 target 23 lun 0
+da13: <SEAGATE ST4000NM0023 A001> Fixed Direct Access SPC-4 SCSI device
+da13: Serial Number...
+da13: 600.000MB/s transfers
+da13: Command Queueing enabled
+da13: 3815447MB (7814037168 512 byte sectors)
+da16 at mps0 bus 0 scbus0 target 26 lun 0
+da16: <SEAGATE ST4000NM0023 0003> Fixed Direct Access SPC-4 SCSI device
+da16: Serial Number...
+da16: 600.000MB/s transfers
+da16: Command Queueing enabled
+da16: 3815447MB (7814037168 512 byte sectors)
+da15 at mps0 bus 0 scbus0 target 25 lun 0
+da15: <SEAGATE ST4000NM0023 0003> Fixed Direct Access SPC-4 SCSI device
+da15: Serial Number...
+da15: 600.000MB/s transfers
+da15: Command Queueing enabled
+da15: 3815447MB (7814037168 512 byte sectors)
+da14 at mps0 bus 0 scbus0 target 24 lun 0
+da14: <SEAGATE ST4000NM0023 0003> Fixed Direct Access SPC-4 SCSI device
+da14: Serial Number...
+da14: 600.000MB/s transfers
+da14: Command Queueing enabled
+da14: 3815447MB (7814037168 512 byte sectors)
+da2 at mps0 bus 0 scbus0 target 11 lun 0
+da2: <SEAGATE ST4000NM0023 0004> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 600.000MB/s transfers
+da2: Command Queueing enabled
+da2: 3815447MB (7814037168 512 byte sectors)
+da0 at mps0 bus 0 scbus0 target 8 lun 0
+da0: <SEAGATE ST4000NM0023 0004> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: Command Queueing enabled
+da0: 3815447MB (7814037168 512 byte sectors)
+da3 at mps0 bus 0 scbus0 target 13 lun 0
+da3: <SEAGATE ST4000NM0023 0006> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 600.000MB/s transfers
+da3: Command Queueing enabled
+da3: 3815447MB (7814037168 512 byte sectors)
+da1 at mps0 bus 0 scbus0 target 9 lun 0
+da1: <SEAGATE ST4000NM0023 0004> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 600.000MB/s transfers
+da1: Command Queueing enabled
+da1: 3815447MB (7814037168 512 byte sectors)
+da12 at mps0 bus 0 scbus0 target 22 lun 0
+da12: <ATA Hitachi HDS72107 A70M> Fixed Direct Access SPC-4 SCSI device
+da12: Serial Number...
+da12: 300.000MB/s transfers
+da12: Command Queueing enabled
+da12: 715404MB (1465149168 512 byte sectors)
+da7 at mps0 bus 0 scbus0 target 17 lun 0
+da7: <ATA Hitachi HDS72107 A70M> Fixed Direct Access SPC-4 SCSI device
+da7: Serial Number...
+da7: 300.000MB/s transfers
+da7: Command Queueing enabled
+da7: 715404MB (1465149168 512 byte sectors)
+da10 at mps0 bus 0 scbus0 target 20 lun 0
+da10: <ATA Hitachi HDS72107 A70M> Fixed Direct Access SPC-4 SCSI device
+da10: Serial Number...
+da10: 300.000MB/s transfers
+da10: Command Queueing enabled
+da10: 715404MB (1465149168 512 byte sectors)
+da5 at mps0 bus 0 scbus0 target 15 lun 0
+da5: <ATA Hitachi HDS72107 A70M> Fixed Direct Access SPC-4 SCSI device
+da5: Serial Number...
+da5: 300.000MB/s transfers
+da5: Command Queueing enabled
+da5: 715404MB (1465149168 512 byte sectors)
+da4 at mps0 bus 0 scbus0 target 14 lun 0
+da4: <ATA Hitachi HDS72107 A70M> Fixed Direct Access SPC-4 SCSI device
+da4: Serial Number...
+da4: 300.000MB/s transfers
+da4: Command Queueing enabled
+da4: 715404MB (1465149168 512 byte sectors)
+da11 at mps0 bus 0 scbus0 target 21 lun 0
+da11: <ATA Hitachi HDS72107 A70M> Fixed Direct Access SPC-4 SCSI device
+da11: Serial Number...
+da11: 300.000MB/s transfers
+da11: Command Queueing enabled
+da11: 715404MB (1465149168 512 byte sectors)
+da8 at mps0 bus 0 scbus0 target 18 lun 0
+da8: <ATA Hitachi HDS72107 A70M> Fixed Direct Access SPC-4 SCSI device
+da8: Serial Number...
+da8: 300.000MB/s transfers
+da8: Command Queueing enabled
+da8: 715404MB (1465149168 512 byte sectors)
+da9 at mps0 bus 0 scbus0 target 19 lun 0
+da9: <ATA Hitachi HDS72107 A70M> Fixed Direct Access SPC-4 SCSI device
+da9: Serial Number...
+da9: 300.000MB/s transfers
+da9: Command Queueing enabled
+da9: 715404MB (1465149168 512 byte sectors)
+da6 at mps0 bus 0 scbus0 target 16 lun 0
+da6: <ATA Hitachi HDS72107 A70M> Fixed Direct Access SPC-4 SCSI device
+da6: Serial Number...
+da6: 300.000MB/s transfers
+da6: Command Queueing enabled
+da6: 715404MB (1465149168 512 byte sectors)
+ses0: da0,pass0 in 'Slot 01', SAS Slot: 1 phys at slot 0
+GEOM: ada2: the primary GPT table is corrupt or invalid.
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+GEOM: ada2: using the secondary instead -- recovery strongly advised.
+ses0:  phy 0: parent 5003048000ee3bff addr 5000c50063223285
+ses0: da13,pass14 in 'Slot 02', SAS Slot: 1 phys at slot 1
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 5003048000ee3bff addr 5000c500565f42dd
+ses0: da4,pass5 in 'Slot 04', SAS Slot: 1 phys at slot 3
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 5003048000ee3bff addr 5003048000ee3bcf
+ses0: da8,pass9 in 'Slot 05', SAS Slot: 1 phys at slot 4
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 5003048000ee3bff addr 5003048000ee3bd0
+ses0: da12,pass13 in 'Slot 06', SAS Slot: 1 phys at slot 5
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 5003048000ee3bff addr 5003048000ee3bd1
+ses0: da1,pass1 in 'Slot 07', SAS Slot: 1 phys at slot 6
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 5003048000ee3bff addr 5000c5006328a059
+ses0: da14,pass15 in 'Slot 08', SAS Slot: 1 phys at slot 7
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 5003048000ee3bff addr 5000c50056c58641
+ses0: da7,pass8 in 'Slot 11', SAS Slot: 1 phys at slot 10
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 5003048000ee3bff addr 5003048000ee3bd6
+ses0: da11,pass12 in 'Slot 12', SAS Slot: 1 phys at slot 11
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 5003048000ee3bff addr 5003048000ee3bd7
+ses0: da3,pass4 in 'Slot 13', SAS Slot: 1 phys at slot 12
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 5003048000ee3bff addr 5000c5008d70bb99
+ses0: da15,pass16 in 'Slot 14', SAS Slot: 1 phys at slot 13
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 5003048000ee3bff addr 5000c50056d21571
+ses0: da6,pass7 in 'Slot 17', SAS Slot: 1 phys at slot 16
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 5003048000ee3bff addr 5003048000ee3bdc
+ses0: da10,pass11 in 'Slot 18', SAS Slot: 1 phys at slot 17
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 5003048000ee3bff addr 5003048000ee3bdd
+ses0: da2,pass2 in 'Slot 19', SAS Slot: 1 phys at slot 18
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 5003048000ee3bff addr 5000c50063275185
+ses0: da16,pass17 in 'Slot 20', SAS Slot: 1 phys at slot 19
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 5003048000ee3bff addr 5000c50056c95d99
+ses0: da5,pass6 in 'Slot 23', SAS Slot: 1 phys at slot 22
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 5003048000ee3bff addr 5003048000ee3be2
+ses0: da9,pass10 in 'Slot 24', SAS Slot: 1 phys at slot 23
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 5003048000ee3bff addr 5003048000ee3be3
+Trying to mount root from zfs:zroot/ROOT/default []...
+lo0: link state changed to UP
+ix1: link state changed to UP
+ix1: link state changed to DOWN
+ums0 on uhub3
+ums0: <Winbond Electronics Corp Hermon USB hidmouse Device, class 0/0, rev 1.10/0.01, addr 3> on usbus1
+ums0: 3 buttons and [Z] coordinates ID=0
+ix1: link state changed to UP
+Security policy loaded: MAC/ntpd (mac_ntpd)
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix1

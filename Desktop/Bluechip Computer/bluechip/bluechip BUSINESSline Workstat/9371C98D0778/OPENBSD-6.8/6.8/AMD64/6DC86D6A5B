@@ -1,0 +1,567 @@
+OpenBSD 6.8 (RAMDISK_CD) #94: Sun Oct  4 18:21:11 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 68430864384 (65260MB)
+avail mem = 66352922624 (63279MB)
+random: boothowto does not indicate good seed
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x89bfc000 (58 entries)
+bios0: vendor FUJITSU // American Megatrends Inc. version "VXXX.XXX.XXX.XXX R1.8.0 for D3646-S1x" date 01/16/2020
+bios0: bluechip Computer AG bluechip BUSINESSline Workstat
+acpi0 at bios0: ACPI 6.1
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG SSDT SSDT HPET SSDT UEFI LPIT SSDT SSDT DBGP DBG2 DMAR SSDT TPM2 ASF! SSDT SSDT WSMT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3393.91 MHz, 06-9e-0d
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 4 (RP04)
+acpiprt5 at acpi0: bus -1 (RP06)
+acpiprt6 at acpi0: bus 6 (RP07)
+acpiprt7 at acpi0: bus -1 (RP08)
+acpiprt8 at acpi0: bus -1 (RP09)
+acpiprt9 at acpi0: bus -1 (RP20)
+acpiprt10 at acpi0: bus 2 (RP21)
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"PNP0C0E" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"FUJ0430" at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 8G Host" rev 0x0d
+"Intel UHD Graphics P630" rev 0x02 at pci0 dev 2 function 0 not configured
+"Intel 300 Series Thermal" rev 0x10 at pci0 dev 18 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 300 Series xHCI" rev 0x10: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 300 Series Shared SRAM" rev 0x10 at pci0 dev 20 function 2 not configured
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 300 Series AHCI" rev 0x10: msi, AHCI 1.3.1
+ahci0: port 0: 6.0Gb/s
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: PHY offline on port 3
+ahci0: PHY offline on port 4
+ahci0: PHY offline on port 5
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, WDC WD20EFAX-68F, 82.0> naa.50014ee2bbf4e2b4
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors, thin
+sd1 at scsibus0 targ 1 lun 0: <ATA, WDC WD20EFAX-68F, 82.0> naa.50014ee2bbf4e0c1
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors, thin
+sd2 at scsibus0 targ 2 lun 0: <ATA, WDC WD20EFAX-68F, 82.0> naa.50014ee2bbf4d911
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors, thin
+ppb0 at pci0 dev 27 function 0 "Intel 300 Series PCIE" rev 0xf0
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 27 function 4 "Intel 300 Series PCIE" rev 0xf0: msi
+pci2 at ppb1 bus 2
+nvme0 at pci2 dev 0 function 0 "Intel NVMe" rev 0x03: msix, NVMe 1.3
+nvme0: INTEL SSDPEKKW128G8, firmware 004C, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd3 at scsibus1 targ 1 lun 0: <NVMe, INTEL SSDPEKKW12, 004C>
+sd3: 122104MB, 512 bytes/sector, 250069680 sectors
+ppb2 at pci0 dev 28 function 0 "Intel 300 Series PCIE" rev 0xf0
+pci3 at ppb2 bus 3
+ppb3 at pci0 dev 28 function 3 "Intel 300 Series PCIE" rev 0xf0: msi
+pci4 at ppb3 bus 4
+ppb4 at pci4 dev 0 function 0 vendor "Pericom", unknown product 0xe113 rev 0x00
+pci5 at ppb4 bus 5
+ppb5 at pci0 dev 28 function 6 "Intel 300 Series PCIE" rev 0xf0: msi
+pci6 at ppb5 bus 6
+em0 at pci6 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+"Intel C246 LPC" rev 0x10 at pci0 dev 31 function 0 not configured
+"Intel 300 Series cAVS" rev 0x10 at pci0 dev 31 function 3 not configured
+"Intel 300 Series SMBus" rev 0x10 at pci0 dev 31 function 4 not configured
+"Intel 300 Series SPI" rev 0x10 at pci0 dev 31 function 5 not configured
+em1 at pci0 dev 31 function 6 "Intel I219-LM" rev 0x10: msi, address XXX
+isa0 at mainbus0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+sd4 at scsibus2 targ 1 lun 0: <OPENBSD, SR RAID 5, 006>
+sd4: 3815452MB, 512 bytes/sector, 7814046720 sectors
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 68430864384 (65260MB)
+avail mem = 66341900288 (63268MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x89bfc000 (58 entries)
+bios0: vendor FUJITSU // American Megatrends Inc. version "VXXX.XXX.XXX.XXX R1.8.0 for D3646-S1x" date 01/16/2020
+bios0: bluechip Computer AG bluechip BUSINESSline Workstat
+acpi0 at bios0: ACPI 6.1
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG SSDT SSDT HPET SSDT UEFI LPIT SSDT SSDT DBGP DBG2 DMAR SSDT TPM2 ASF! SSDT SSDT WSMT
+acpi0: wakeup devices RP01(S4) PXSX(S4) RP04(S4) PXSX(S4) RP06(S4) PXSX(S4) RP07(S4) PXSX(S4) RP08(S4) PXSX(S4) RP09(S4) PXSX(S4) RP19(S4) PXSX(S4) RP20(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3394.88 MHz, 06-9e-0d
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+cpu4 at mainbus0: apid 8 (application processor)
+cpu4: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.11 MHz, 06-9e-0d
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu4: 256KB 64b/line 8-way L2 cache
+cpu4: smt 0, core 4, package 0
+cpu5 at mainbus0: apid 10 (application processor)
+cpu5: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu5: 256KB 64b/line 8-way L2 cache
+cpu5: smt 0, core 5, package 0
+cpu6 at mainbus0: apid 12 (application processor)
+cpu6: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu6: 256KB 64b/line 8-way L2 cache
+cpu6: smt 0, core 6, package 0
+cpu7 at mainbus0: apid 14 (application processor)
+cpu7: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu7: 256KB 64b/line 8-way L2 cache
+cpu7: smt 0, core 7, package 0
+cpu8 at mainbus0: apid 1 (application processor)
+cpu8: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.12 MHz, 06-9e-0d
+cpu8: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu8: 256KB 64b/line 8-way L2 cache
+cpu8: smt 1, core 0, package 0
+cpu9 at mainbus0: apid 3 (application processor)
+cpu9: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu9: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu9: 256KB 64b/line 8-way L2 cache
+cpu9: smt 1, core 1, package 0
+cpu10 at mainbus0: apid 5 (application processor)
+cpu10: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu10: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu10: 256KB 64b/line 8-way L2 cache
+cpu10: smt 1, core 2, package 0
+cpu11 at mainbus0: apid 7 (application processor)
+cpu11: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu11: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu11: 256KB 64b/line 8-way L2 cache
+cpu11: smt 1, core 3, package 0
+cpu12 at mainbus0: apid 9 (application processor)
+cpu12: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu12: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu12: 256KB 64b/line 8-way L2 cache
+cpu12: smt 1, core 4, package 0
+cpu13 at mainbus0: apid 11 (application processor)
+cpu13: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu13: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu13: 256KB 64b/line 8-way L2 cache
+cpu13: smt 1, core 5, package 0
+cpu14 at mainbus0: apid 13 (application processor)
+cpu14: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu14: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu14: 256KB 64b/line 8-way L2 cache
+cpu14: smt 1, core 6, package 0
+cpu15 at mainbus0: apid 15 (application processor)
+cpu15: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu15: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu15: 256KB 64b/line 8-way L2 cache
+cpu15: smt 1, core 7, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 4 (RP04)
+acpiprt5 at acpi0: bus -1 (RP06)
+acpiprt6 at acpi0: bus 6 (RP07)
+acpiprt7 at acpi0: bus -1 (RP08)
+acpiprt8 at acpi0: bus -1 (RP09)
+acpiprt9 at acpi0: bus -1 (RP20)
+acpiprt10 at acpi0: bus 2 (RP21)
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+acpibtn0 at acpi0: SLPB
+acpibtn1 at acpi0: PWRB
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"FUJ0430" at acpi0 not configured
+acpipwrres0 at acpi0: USBC, resource for XDCI
+acpipwrres1 at acpi0: V0PR
+acpipwrres2 at acpi0: V1PR
+acpipwrres3 at acpi0: V2PR
+acpipwrres4 at acpi0: WRST
+acpicpu0 at acpi0: C1(@1 halt!)
+acpicpu1 at acpi0: C1(@1 halt!)
+acpicpu2 at acpi0: C1(@1 halt!)
+acpicpu3 at acpi0: C1(@1 halt!)
+acpicpu4 at acpi0: C1(@1 halt!)
+acpicpu5 at acpi0: C1(@1 halt!)
+acpicpu6 at acpi0: C1(@1 halt!)
+acpicpu7 at acpi0: C1(@1 halt!)
+acpicpu8 at acpi0: C1(@1 halt!)
+acpicpu9 at acpi0: C1(@1 halt!)
+acpicpu10 at acpi0: C1(@1 halt!)
+acpicpu11 at acpi0: C1(@1 halt!)
+acpicpu12 at acpi0: C1(@1 halt!)
+acpicpu13 at acpi0: C1(@1 halt!)
+acpicpu14 at acpi0: C1(@1 halt!)
+acpicpu15 at acpi0: C1(@1 halt!)
+acpipwrres5 at acpi0: PIN_
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 8G Host" rev 0x0d
+inteldrm0 at pci0 dev 2 function 0 "Intel UHD Graphics P630" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, COFFEELAKE, gen 9
+"Intel 300 Series Thermal" rev 0x10 at pci0 dev 18 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 300 Series xHCI" rev 0x10: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 300 Series Shared SRAM" rev 0x10 at pci0 dev 20 function 2 not configured
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 300 Series AHCI" rev 0x10: msi, AHCI 1.3.1
+ahci0: port 0: 6.0Gb/s
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: PHY offline on port 3
+ahci0: PHY offline on port 4
+ahci0: PHY offline on port 5
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD20EFAX-68F, 82.0> naa.50014ee2bbf4e2b4
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors, thin
+sd1 at scsibus1 targ 1 lun 0: <ATA, WDC WD20EFAX-68F, 82.0> naa.50014ee2bbf4e0c1
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors, thin
+sd2 at scsibus1 targ 2 lun 0: <ATA, WDC WD20EFAX-68F, 82.0> naa.50014ee2bbf4d911
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors, thin
+ppb0 at pci0 dev 27 function 0 "Intel 300 Series PCIE" rev 0xf0
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 27 function 4 "Intel 300 Series PCIE" rev 0xf0: msi
+pci2 at ppb1 bus 2
+nvme0 at pci2 dev 0 function 0 "Intel NVMe" rev 0x03: msix, NVMe 1.3
+nvme0: INTEL SSDPEKKW128G8, firmware 004C, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, INTEL SSDPEKKW12, 004C>
+sd3: 122104MB, 512 bytes/sector, 250069680 sectors
+ppb2 at pci0 dev 28 function 0 "Intel 300 Series PCIE" rev 0xf0
+pci3 at ppb2 bus 3
+ppb3 at pci0 dev 28 function 3 "Intel 300 Series PCIE" rev 0xf0: msi
+pci4 at ppb3 bus 4
+ppb4 at pci4 dev 0 function 0 vendor "Pericom", unknown product 0xe113 rev 0x00
+pci5 at ppb4 bus 5
+ppb5 at pci0 dev 28 function 6 "Intel 300 Series PCIE" rev 0xf0: msi
+pci6 at ppb5 bus 6
+em0 at pci6 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+pcib0 at pci0 dev 31 function 0 "Intel C246 LPC" rev 0x10
+azalia0 at pci0 dev 31 function 3 "Intel 300 Series cAVS" rev 0x10: msi
+azalia0: codecs: Realtek/0x0671, Intel/0x280b, using Realtek/0x0671
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 300 Series SMBus" rev 0x10: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x19: stts2004
+sdtemp2 at iic0 addr 0x1a: stts2004
+sdtemp3 at iic0 addr 0x1b: stts2004
+"Intel 300 Series SPI" rev 0x10 at pci0 dev 31 function 5 not configured
+em1 at pci0 dev 31 function 6 "Intel I219-LM" rev 0x10: msi, address XXX
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT5104D rev 0x53
+wbsio0 port 0xa10/2 not configured
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+sd4 at scsibus4 targ 1 lun 0: <OPENBSD, SR RAID 5, 006>
+sd4: 3815452MB, 512 bytes/sector, 7814046720 sectors
+root on sd3a (02f36d5883225f4f.a) swap on sd3b dump on sd3b
+inteldrm0: 1024x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+syncing disks... done
+rebooting...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 68430864384 (65260MB)
+avail mem = 66341916672 (63268MB)
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x89bfc000 (58 entries)
+bios0: vendor FUJITSU // American Megatrends Inc. version "VXXX.XXX.XXX.XXX R1.8.0 for D3646-S1x" date 01/16/2020
+bios0: bluechip Computer AG bluechip BUSINESSline Workstat
+acpi0 at bios0: ACPI 6.1
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG SSDT SSDT HPET SSDT UEFI LPIT SSDT SSDT DBGP DBG2 DMAR SSDT TPM2 ASF! SSDT SSDT WSMT
+acpi0: wakeup devices RP01(S4) PXSX(S4) RP04(S4) PXSX(S4) RP06(S4) PXSX(S4) RP07(S4) PXSX(S4) RP08(S4) PXSX(S4) RP09(S4) PXSX(S4) RP19(S4) PXSX(S4) RP20(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3394.69 MHz, 06-9e-0d
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.11 MHz, 06-9e-0d
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+cpu4 at mainbus0: apid 8 (application processor)
+cpu4: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu4: 256KB 64b/line 8-way L2 cache
+cpu4: smt 0, core 4, package 0
+cpu5 at mainbus0: apid 10 (application processor)
+cpu5: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu5: 256KB 64b/line 8-way L2 cache
+cpu5: smt 0, core 5, package 0
+cpu6 at mainbus0: apid 12 (application processor)
+cpu6: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu6: 256KB 64b/line 8-way L2 cache
+cpu6: smt 0, core 6, package 0
+cpu7 at mainbus0: apid 14 (application processor)
+cpu7: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu7: 256KB 64b/line 8-way L2 cache
+cpu7: smt 0, core 7, package 0
+cpu8 at mainbus0: apid 1 (application processor)
+cpu8: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu8: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu8: 256KB 64b/line 8-way L2 cache
+cpu8: smt 1, core 0, package 0
+cpu9 at mainbus0: apid 3 (application processor)
+cpu9: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu9: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu9: 256KB 64b/line 8-way L2 cache
+cpu9: smt 1, core 1, package 0
+cpu10 at mainbus0: apid 5 (application processor)
+cpu10: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu10: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu10: 256KB 64b/line 8-way L2 cache
+cpu10: smt 1, core 2, package 0
+cpu11 at mainbus0: apid 7 (application processor)
+cpu11: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu11: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu11: 256KB 64b/line 8-way L2 cache
+cpu11: smt 1, core 3, package 0
+cpu12 at mainbus0: apid 9 (application processor)
+cpu12: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu12: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu12: 256KB 64b/line 8-way L2 cache
+cpu12: smt 1, core 4, package 0
+cpu13 at mainbus0: apid 11 (application processor)
+cpu13: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu13: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu13: 256KB 64b/line 8-way L2 cache
+cpu13: smt 1, core 5, package 0
+cpu14 at mainbus0: apid 13 (application processor)
+cpu14: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu14: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu14: 256KB 64b/line 8-way L2 cache
+cpu14: smt 1, core 6, package 0
+cpu15 at mainbus0: apid 15 (application processor)
+cpu15: Intel(R) Xeon(R) E-2278G CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0d
+cpu15: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu15: 256KB 64b/line 8-way L2 cache
+cpu15: smt 1, core 7, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 4 (RP04)
+acpiprt5 at acpi0: bus -1 (RP06)
+acpiprt6 at acpi0: bus 6 (RP07)
+acpiprt7 at acpi0: bus -1 (RP08)
+acpiprt8 at acpi0: bus -1 (RP09)
+acpiprt9 at acpi0: bus -1 (RP20)
+acpiprt10 at acpi0: bus 2 (RP21)
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+acpibtn0 at acpi0: SLPB
+acpibtn1 at acpi0: PWRB
+"MSFT0101" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"FUJ0430" at acpi0 not configured
+acpipwrres0 at acpi0: USBC, resource for XDCI
+acpipwrres1 at acpi0: V0PR
+acpipwrres2 at acpi0: V1PR
+acpipwrres3 at acpi0: V2PR
+acpipwrres4 at acpi0: WRST
+acpicpu0 at acpi0: C1(@1 halt!)
+acpicpu1 at acpi0: C1(@1 halt!)
+acpicpu2 at acpi0: C1(@1 halt!)
+acpicpu3 at acpi0: C1(@1 halt!)
+acpicpu4 at acpi0: C1(@1 halt!)
+acpicpu5 at acpi0: C1(@1 halt!)
+acpicpu6 at acpi0: C1(@1 halt!)
+acpicpu7 at acpi0: C1(@1 halt!)
+acpicpu8 at acpi0: C1(@1 halt!)
+acpicpu9 at acpi0: C1(@1 halt!)
+acpicpu10 at acpi0: C1(@1 halt!)
+acpicpu11 at acpi0: C1(@1 halt!)
+acpicpu12 at acpi0: C1(@1 halt!)
+acpicpu13 at acpi0: C1(@1 halt!)
+acpicpu14 at acpi0: C1(@1 halt!)
+acpicpu15 at acpi0: C1(@1 halt!)
+acpipwrres5 at acpi0: PIN_
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 8G Host" rev 0x0d
+inteldrm0 at pci0 dev 2 function 0 "Intel UHD Graphics P630" rev 0x02
+drm0 at inteldrm0
+inteldrm0: msi, COFFEELAKE, gen 9
+"Intel 300 Series Thermal" rev 0x10 at pci0 dev 18 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 300 Series xHCI" rev 0x10: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 300 Series Shared SRAM" rev 0x10 at pci0 dev 20 function 2 not configured
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 300 Series AHCI" rev 0x10: msi, AHCI 1.3.1
+ahci0: port 0: 6.0Gb/s
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: PHY offline on port 3
+ahci0: PHY offline on port 4
+ahci0: PHY offline on port 5
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD20EFAX-68F, 82.0> naa.50014ee2bbf4e2b4
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors, thin
+sd1 at scsibus1 targ 1 lun 0: <ATA, WDC WD20EFAX-68F, 82.0> naa.50014ee2bbf4e0c1
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors, thin
+sd2 at scsibus1 targ 2 lun 0: <ATA, WDC WD20EFAX-68F, 82.0> naa.50014ee2bbf4d911
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors, thin
+ppb0 at pci0 dev 27 function 0 "Intel 300 Series PCIE" rev 0xf0
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 27 function 4 "Intel 300 Series PCIE" rev 0xf0: msi
+pci2 at ppb1 bus 2
+nvme0 at pci2 dev 0 function 0 "Intel NVMe" rev 0x03: msix, NVMe 1.3
+nvme0: INTEL SSDPEKKW128G8, firmware 004C, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, INTEL SSDPEKKW12, 004C>
+sd3: 122104MB, 512 bytes/sector, 250069680 sectors
+ppb2 at pci0 dev 28 function 0 "Intel 300 Series PCIE" rev 0xf0
+pci3 at ppb2 bus 3
+ppb3 at pci0 dev 28 function 3 "Intel 300 Series PCIE" rev 0xf0: msi
+pci4 at ppb3 bus 4
+ppb4 at pci4 dev 0 function 0 vendor "Pericom", unknown product 0xe113 rev 0x00
+pci5 at ppb4 bus 5
+ppb5 at pci0 dev 28 function 6 "Intel 300 Series PCIE" rev 0xf0: msi
+pci6 at ppb5 bus 6
+em0 at pci6 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+pcib0 at pci0 dev 31 function 0 "Intel C246 LPC" rev 0x10
+azalia0 at pci0 dev 31 function 3 "Intel 300 Series cAVS" rev 0x10: msi
+azalia0: codecs: Realtek/0x0671, Intel/0x280b, using Realtek/0x0671
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 300 Series SMBus" rev 0x10: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x19: stts2004
+sdtemp2 at iic0 addr 0x1a: stts2004
+sdtemp3 at iic0 addr 0x1b: stts2004
+"Intel 300 Series SPI" rev 0x10 at pci0 dev 31 function 5 not configured
+em1 at pci0 dev 31 function 6 "Intel I219-LM" rev 0x10: msi, address XXX
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT5104D rev 0x53
+wbsio0 port 0xa10/2 not configured
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+sd4 at scsibus4 targ 1 lun 0: <OPENBSD, SR RAID 5, 006>
+sd4: 3815452MB, 512 bytes/sector, 7814046720 sectors
+root on sd3a (02f36d5883225f4f.a) swap on sd3b dump on sd3b
+inteldrm0: 1024x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

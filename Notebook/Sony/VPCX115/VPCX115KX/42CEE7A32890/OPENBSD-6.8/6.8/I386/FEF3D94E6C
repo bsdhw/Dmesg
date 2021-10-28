@@ -1,0 +1,222 @@
+OpenBSD 6.8 (GENERIC.MP) #440: Sun Oct  4 18:33:20 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC.MP
+RTC BIOS diagnostic error 80<clock_battery>
+real mem  = 2136805376 (2037MB)
+avail mem = 2081497088 (1985MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 12/17/09, SMBIOS rev. 2.4 @ 0xfec60 (16 entries)
+bios0: vendor INSYDE version "R0084U4" date 12/17/2009
+bios0: Sony Corporation VPCX115KX
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP HPET APIC MCFG SLIC ASF! BOOT SSDT
+acpi0: wakeup devices WLAN(S3) MLAN(S3) USB1(S3) USB2(S3) USB3(S3) EHC1(S3)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Atom(TM) CPU Z550 @ 2.00GHz ("GenuineIntel" 686-class) 2.01 GHz, 06-1c-02
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,SENSOR,MELTDOWN
+mtrr: Pentium Pro MTRR support, 7 var ranges, 88 fixed ranges
+cpu0: apic clock running at 133MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.0.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Atom(TM) CPU Z550 @ 2.00GHz ("GenuineIntel" 686-class) 2 GHz, 06-1c-02
+cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,SENSOR,MELTDOWN
+ioapic0 at mainbus0: apid 8 pa 0xfec00000, version 20, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiec0 at acpi0
+acpisony0 at acpi0: SNC_
+acpibat0 at acpi0: BAT0 type Lion oem "Sony Corporation"
+acpiac0 at acpi0: AC unit offline
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PWRB
+"PNP0A08" at acpi0 not configured
+"SNY6001" at acpi0 not configured
+acpicmos0 at acpi0
+"SNY5001" at acpi0 not configured
+acpicpu0 at acpi0: !C3(10@140 mwait.3@0x52), !C3(100@100 mwait.3@0x30), !C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: !C3(10@140 mwait.3@0x52), !C3(100@100 mwait.3@0x30), !C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 100 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD04
+bios0: ROM list: 0xc0000/0x10000!
+cpu0: Enhanced SpeedStep 2000 MHz: speeds: 2000, 1600, 1333, 1066, 800 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel US15W Host" rev 0x06
+vga1 at pci0 dev 2 function 0 "Intel US15W Video" rev 0x06
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+azalia0 at pci0 dev 27 function 0 "Intel SCH HD Audio" rev 0x06: apic 8 int 19
+azalia0: codecs: Realtek ALC262
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel SCH PCIE" rev 0x06: apic 8 int 16
+pci1 at ppb0 bus 1
+athn0 at pci1 dev 0 function 0 "Atheros AR9285" rev 0x01: apic 8 int 16
+athn0: AR9285 rev 2 (1T1R), ROM rev 13, address XXX
+ppb1 at pci0 dev 28 function 1 "Intel SCH PCIE" rev 0x06: apic 8 int 17
+pci2 at ppb1 bus 2
+2:0:0: rom address conflict 0xfffe0000/0x20000
+mskc0 at pci2 dev 0 function 0 "Marvell Yukon 88E8057" rev 0x10, Yukon-2 Ultra 2 (0x0): msi
+msk0 at mskc0 port A: address XXX
+eephy0 at msk0 phy 0: 88E1149 Gigabit PHY, rev. 1
+uhci0 at pci0 dev 29 function 0 "Intel SCH USB" rev 0x06: apic 8 int 21
+uhci1 at pci0 dev 29 function 1 "Intel SCH USB" rev 0x06: apic 8 int 22
+uhci2 at pci0 dev 29 function 2 "Intel SCH USB" rev 0x06: apic 8 int 23
+ehci0 at pci0 dev 29 function 7 "Intel SCH USB" rev 0x06: apic 8 int 20
+ehci0: timed out waiting for BIOS
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel SCH LPC" rev 0x06
+pciide0 at pci0 dev 31 function 1 "Intel SCH IDE" rev 0x06: DMA, channel 0 wired to compatibility
+wd0 at pciide0 channel 0 drive 0: <SAMSUNG MMCRE28GFMXP-MVB>
+wd0: 16-sector PIO, LBA48, 122104MB, 250069680 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+umass0 at uhub0 port 1 configuration 1 interface 0 "UFD 2.0 Silicon-Power16G" rev 2.00/11.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <UFD 2.0, Silicon-Power16G, 1100> removable serial....
+sd0: 15600MB, 512 bytes/sector, 31950720 sectors
+uvideo0 at uhub0 port 8 configuration 1 interface 0 "Ricoh co. Ltd. product 0x18b6" rev 2.00/0.20 addr 3
+video0 at uvideo0
+ugen0 at uhub2 port 2 "Broadcom Corp BCM2046 Bluetooth Device" rev 2.00/2.27 addr 2
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (169a096c94166783.a) swap on sd0b dump on sd0b
+syncing disks... done
+rebooting...
+OpenBSD 6.8 (GENERIC.MP) #1: Tue Nov  3 09:06:20 MST 2020
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC.MP
+RTC BIOS diagnostic error 80<clock_battery>
+real mem  = 2136805376 (2037MB)
+avail mem = 2081484800 (1985MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 12/17/09, SMBIOS rev. 2.4 @ 0xfec60 (16 entries)
+bios0: vendor INSYDE version "R0084U4" date 12/17/2009
+bios0: Sony Corporation VPCX115KX
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP HPET APIC MCFG SLIC ASF! BOOT SSDT
+acpi0: wakeup devices WLAN(S3) MLAN(S3) USB1(S3) USB2(S3) USB3(S3) EHC1(S3)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Atom(TM) CPU Z550 @ 2.00GHz ("GenuineIntel" 686-class) 2.01 GHz, 06-1c-02
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,SENSOR,MELTDOWN
+mtrr: Pentium Pro MTRR support, 7 var ranges, 88 fixed ranges
+cpu0: apic clock running at 133MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.0.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Atom(TM) CPU Z550 @ 2.00GHz ("GenuineIntel" 686-class) 2 GHz, 06-1c-02
+cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,SENSOR,MELTDOWN
+ioapic0 at mainbus0: apid 8 pa 0xfec00000, version 20, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiec0 at acpi0
+acpisony0 at acpi0: SNC_
+acpibat0 at acpi0: BAT0 type Lion oem "Sony Corporation"
+acpiac0 at acpi0: AC unit offline
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PWRB
+"PNP0A08" at acpi0 not configured
+"SNY6001" at acpi0 not configured
+acpicmos0 at acpi0
+"SNY5001" at acpi0 not configured
+acpicpu0 at acpi0: !C3(10@140 mwait.3@0x52), !C3(100@100 mwait.3@0x30), !C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: !C3(10@140 mwait.3@0x52), !C3(100@100 mwait.3@0x30), !C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 100 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD04
+bios0: ROM list: 0xc0000/0x10000!
+cpu0: Enhanced SpeedStep 2000 MHz: speeds: 2000, 1600, 1333, 1066, 800 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel US15W Host" rev 0x06
+vga1 at pci0 dev 2 function 0 "Intel US15W Video" rev 0x06
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+azalia0 at pci0 dev 27 function 0 "Intel SCH HD Audio" rev 0x06: apic 8 int 19
+azalia0: codecs: Realtek ALC262
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel SCH PCIE" rev 0x06: apic 8 int 16
+pci1 at ppb0 bus 1
+athn0 at pci1 dev 0 function 0 "Atheros AR9285" rev 0x01: apic 8 int 16
+athn0: AR9285 rev 2 (1T1R), ROM rev 13, address XXX
+ppb1 at pci0 dev 28 function 1 "Intel SCH PCIE" rev 0x06: apic 8 int 17
+pci2 at ppb1 bus 2
+2:0:0: rom address conflict 0xfffe0000/0x20000
+mskc0 at pci2 dev 0 function 0 "Marvell Yukon 88E8057" rev 0x10, Yukon-2 Ultra 2 (0x0): msi
+msk0 at mskc0 port A: address XXX
+eephy0 at msk0 phy 0: 88E1149 Gigabit PHY, rev. 1
+uhci0 at pci0 dev 29 function 0 "Intel SCH USB" rev 0x06: apic 8 int 21
+uhci1 at pci0 dev 29 function 1 "Intel SCH USB" rev 0x06: apic 8 int 22
+uhci2 at pci0 dev 29 function 2 "Intel SCH USB" rev 0x06: apic 8 int 23
+ehci0 at pci0 dev 29 function 7 "Intel SCH USB" rev 0x06: apic 8 int 20
+ehci0: timed out waiting for BIOS
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel SCH LPC" rev 0x06
+pciide0 at pci0 dev 31 function 1 "Intel SCH IDE" rev 0x06: DMA, channel 0 wired to compatibility
+wd0 at pciide0 channel 0 drive 0: <SAMSUNG MMCRE28GFMXP-MVB>
+wd0: 16-sector PIO, LBA48, 122104MB, 250069680 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+umass0 at uhub0 port 1 configuration 1 interface 0 "UFD 2.0 Silicon-Power16G" rev 2.00/11.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <UFD 2.0, Silicon-Power16G, 1100> removable serial....
+sd0: 15600MB, 512 bytes/sector, 31950720 sectors
+uvideo0 at uhub0 port 8 configuration 1 interface 0 "Ricoh co. Ltd. product 0x18b6" rev 2.00/0.20 addr 3
+video0 at uvideo0
+ugen0 at uhub2 port 2 "Broadcom Corp BCM2046 Bluetooth Device" rev 2.00/2.27 addr 2
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (169a096c94166783.a) swap on sd0b dump on sd0b

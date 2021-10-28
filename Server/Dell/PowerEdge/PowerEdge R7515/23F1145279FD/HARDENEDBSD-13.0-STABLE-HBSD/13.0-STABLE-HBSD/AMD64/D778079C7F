@@ -1,0 +1,331 @@
+[1] ---<<BOOT>>---
+[1] Copyright (c) DDFB-79F5 The HardenedBSD Project.
+[1] Copyright (c) 02B2-369B The FreeBSD Project.
+[1] Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+[1] 	The Regents of the University of California. All rights reserved.
+[1] FreeBSD is a registered trademark of The FreeBSD Foundation.
+[1] FreeBSD 13.0-STABLE-HBSD #199  hardened/13-stable/master-n190552-85622ee559c: Sun Sep 19 12:06:21 EDT 2021
+[1]     XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+[1] FreeBSD clang version 12.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-12.0.1-0-gfed41342a82f)
+[1] VT(efifb): resolution 1024x768
+[1] HardenedBSD: initialize and check features (__HardenedBSD_version 1300061 __FreeBSD_version 1300514).
+[1] CPU: AMD EPYC 7402P 24-Core Processor                (2794.81-MHz K8-class CPU)
+[1]   Origin="AuthenticAMD"  Id=0x830f10  Family=0x17  Model=0x31  Stepping=0
+[1]   Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+[1]   Features2=0x7ef8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+[1]   AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+[1]   AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+[1]   Structured Extended Features=0x219c91a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+[1]   Structured Extended Features2=0x400004<UMIP,RDPID>
+[1]   XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+[1]   AMD Extended Feature Extensions ID EBX=0x18cf757<CLZERO,IRPerf,XSaveErPtr,RDPRU,MCOMMIT,WBNOINVD,IBPB,IBRS,STIBP,PREFER_IBRS,PPIN,SSBD>
+[1]   SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+[1]   TSC: P-state invariant, performance statistics
+[1] real memory  = 68719476736 (65536 MB)
+[1] avail memory = 66384556032 (63309 MB)
+[1] Event timer "LAPIC" quality 600
+[1] ACPI APIC Table: <DELL   PE_SC3  >
+[1] FreeBSD/SMP: Multiprocessor System Detected: 24 CPUs
+[1] FreeBSD/SMP: 1 package(s) x 8 cache groups x 3 core(s) x 2 hardware threads
+[1] FreeBSD/SMP Online: 1 package(s) x 8 cache groups x 3 core(s)
+[1] random: registering fast source Intel Secure Key RNG
+[1] random: fast provider: "Intel Secure Key RNG"
+[1] random: unblocking device.
+[1] ioapic0: MADT APIC ID 240 != hw id 0
+[1] ioapic1: MADT APIC ID 241 != hw id 0
+[1] ioapic2: MADT APIC ID 242 != hw id 0
+[1] ioapic3: MADT APIC ID 243 != hw id 0
+[1] ioapic4: MADT APIC ID 244 != hw id 0
+[1] ioapic0 <Version 2.1> irqs 0-23
+[1] ioapic1 <Version 2.1> irqs 120-151
+[1] ioapic2 <Version 2.1> irqs 88-119
+[1] ioapic3 <Version 2.1> irqs 56-87
+[1] ioapic4 <Version 2.1> irqs 24-55
+[1] Launching APs: 18 20 19 1 2 8 14 13 6 7 21 23 22 5 4 3 12 17 15 16 10 11 9
+[1] Timecounter "TSC-low" frequency 1397404344 Hz quality 1000
+[1] random: entropy device external interface
+[1] kbd0 at kbdmux0
+[1] mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+[1] efirtc0: <EFI Realtime Clock>
+[1] efirtc0: registered as a time-of-day clock, resolution 1.000000s
+[1] aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+[1] acpi0: <DELL PE_SC3>
+[1] acpi0: Power Button (fixed)
+[1] hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed001ff on acpi0
+[1] hpet0: memory region width 512 too small
+[1] device_attach: hpet0 attach returned 6
+[1] attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+[1] Timecounter "i8254" frequency 1193182 Hz quality 0
+[1] Event timer "i8254" frequency 1193182 Hz quality 100
+[1] atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+[1] atrtc0: registered as a time-of-day clock, resolution 1.000000s
+[1] Event timer "RTC" frequency 32768 Hz quality 0
+[1] Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+[1] acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+[1] apei0: <ACPI Platform Error Interface> on acpi0
+[1] acpi_button0: <Power Button> on acpi0
+[1] pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+[1] pci0: <ACPI PCI bus> on pcib0
+[1] pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+[1] pcib1: <ACPI PCI-PCI bridge> at device 3.2 on pci0
+[1] pci1: <ACPI PCI bus> on pcib1
+[1] AVAGO MegaRAID SAS FreeBSD mrsas driver version: XXX.XXX.XXX.XXX-fbsd
+[1] mfi0: <Invader> port 0x1000-0x10ff mem 0xf7400000-0xf740ffff,0xf7300000-0xf73fffff at device 0.0 on pci1
+[1] mfi0: Using MSI
+[1] mfi0: Megaraid SAS driver Ver 4.23 
+[1] mfi0: FW MaxCmds = 928, limiting to 128
+[1] mfi0: MaxCmd = 928, Drv MaxCmd = 128, MaxSgl = 70, state = 0xb73c03a0
+[1] mfi0: 13473 (685446982s/0x0020/info) - Shutdown command received from host
+[1] mfi0: 13474 (boot + 10s/0x0020/info) - Firmware initialization started (PCI ID 005d/1000/1f47/1028)
+[1] mfi0: 13475 (boot + 10s/0x0020/info) - Firmware version 4.300.00-8366
+[1] mfi0: 13476 (boot + 11s/0x0008/info) - Battery Present
+[1] mfi0: 13477 (boot + 11s/0x0020/info) - Package version XXX.XXX.XXX.XXX
+[1] mfi0: 13478 (boot + 11s/0x0020/info) - Board Revision A07
+[1] mfi0: 13479 (boot + 15s/0x0008/info) - Battery temperature is normal
+[1] mfi0: 13480 (boot + 15s/0x0008/info) - Current capacity of the battery is above threshold
+[1] mfi0: 13481 (boot + 27s/0x0004/info) - Enclosure PD 20(c None/p1) communication restored
+[1] mfi0: 13482 (boot + 27s/0x0002/info) - Inserted: Encl PD 20
+[1] pcib2: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+[1] pci2: <ACPI PCI bus> on pcib2
+[1] pci2: <unknown> at device 0.0 (no driver attached)
+[1] pci2: <encrypt/decrypt> at device 0.2 (no driver attached)
+[1] pcib3: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+[1] pci3: <ACPI PCI bus> on pcib3
+[1] pci3: <unknown> at device 0.0 (no driver attached)
+[1] pci3: <encrypt/decrypt> at device 0.2 (no driver attached)
+[1] xhci0: <XHCI (generic) USB 3.0 controller> mem 0xf7000000-0xf70fffff at device 0.3 on pci3
+[1] xhci0: 64 bytes context size, 64-bit DMA
+[1] usbus0 on xhci0
+[1] usbus0: 5.0Gbps Super Speed USB v3.0
+[1] isab0: <PCI-ISA bridge> at device 20.3 on pci0
+[1] isa0: <ISA bus> on isab0
+[1] pcib4: <ACPI Host-PCI bridge> on acpi0
+[1] pci4: <ACPI PCI bus> on pcib4
+[1] pci4: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+[1] pcib5: <ACPI PCI-PCI bridge> at device 7.1 on pci4
+[1] pci5: <ACPI PCI bus> on pcib5
+[1] pci5: <unknown> at device 0.0 (no driver attached)
+[1] pci5: <encrypt/decrypt> at device 0.2 (no driver attached)
+[1] pcib6: <ACPI PCI-PCI bridge> at device 8.1 on pci4
+[1] pci6: <ACPI PCI bus> on pcib6
+[1] pci6: <unknown> at device 0.0 (no driver attached)
+[1] pci6: <encrypt/decrypt> at device 0.1 (no driver attached)
+[1] pci6: <encrypt/decrypt> at device 0.2 (no driver attached)
+[1] xhci1: <XHCI (generic) USB 3.0 controller> mem 0xa4000000-0xa40fffff at device 0.3 on pci6
+[1] xhci1: 64 bytes context size, 64-bit DMA
+[1] usbus1 on xhci1
+[1] usbus1: 5.0Gbps Super Speed USB v3.0
+[1] pcib7: <ACPI Host-PCI bridge> on acpi0
+[1] pci7: <ACPI PCI bus> on pcib7
+[1] pci7: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+[1] pcib8: <ACPI PCI-PCI bridge> at device 3.1 on pci7
+[1] pci8: <ACPI PCI bus> on pcib8
+[1] nvme0: <Generic NVMe Device> mem 0xbf400000-0xbf403fff at device 0.0 on pci8
+[1] pcib9: <ACPI PCI-PCI bridge> at device 7.1 on pci7
+[1] pci9: <ACPI PCI bus> on pcib9
+[1] pci9: <unknown> at device 0.0 (no driver attached)
+[1] pci9: <encrypt/decrypt> at device 0.2 (no driver attached)
+[1] pcib10: <ACPI PCI-PCI bridge> at device 8.1 on pci7
+[1] pci10: <ACPI PCI bus> on pcib10
+[1] pci10: <unknown> at device 0.0 (no driver attached)
+[1] pci10: <encrypt/decrypt> at device 0.2 (no driver attached)
+[1] pcib11: <ACPI PCI-PCI bridge> at device 8.2 on pci7
+[1] pci11: <ACPI PCI bus> on pcib11
+[1] ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xbf100000-0xbf1007ff at device 0.0 on pci11
+[1] ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported with FBS
+[1] ahcich0: <AHCI channel> at channel 0 on ahci0
+[1] ahcich1: <AHCI channel> at channel 1 on ahci0
+[1] ahcich2: <AHCI channel> at channel 2 on ahci0
+[1] ahcich3: <AHCI channel> at channel 3 on ahci0
+[1] ahcich4: <AHCI channel> at channel 4 on ahci0
+[1] ahcich5: <AHCI channel> at channel 5 on ahci0
+[1] ahcich6: <AHCI channel> at channel 6 on ahci0
+[1] ahcich7: <AHCI channel> at channel 7 on ahci0
+[1] pcib12: <ACPI PCI-PCI bridge> at device 8.3 on pci7
+[1] pci12: <ACPI PCI bus> on pcib12
+[1] ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xbf000000-0xbf0007ff at device 0.0 on pci12
+[1] ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+[1] ahcich8: <AHCI channel> at channel 0 on ahci1
+[1] pcib13: <ACPI Host-PCI bridge> on acpi0
+[1] pci13: <ACPI PCI bus> on pcib13
+[1] pci13: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+[1] pcib14: <ACPI PCI-PCI bridge> at device 5.1 on pci13
+[1] pci14: <ACPI PCI bus> on pcib14
+[1] bge0: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xc7030000-0xc703ffff,0xc7040000-0xc704ffff,0xc7050000-0xc705ffff at device 0.0 on pci14
+[1] bge0: APE FW version: NCSI vXXX.XXX.XXX.XXX
+[1] bge0: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+[1] miibus0: <MII bus> on bge0
+[1] brgphy0: <BCM5720C 1000BASE-T media interface> PHY 1 on miibus0
+[1] brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+[1] bge0: Using defaults for TSO: 65518/35/2048
+[1] bge0: Ethernet address: ...
+[1] bge1: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xc7000000-0xc700ffff,0xc7010000-0xc701ffff,0xc7020000-0xc702ffff at device 0.1 on pci14
+[1] bge1: APE FW version: NCSI vXXX.XXX.XXX.XXX
+[1] bge1: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+[1] miibus1: <MII bus> on bge1
+[1] brgphy1: <BCM5720C 1000BASE-T media interface> PHY 2 on miibus1
+[1] brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+[1] bge1: Using defaults for TSO: 65518/35/2048
+[1] bge1: Ethernet address: ...
+[1] pcib15: <ACPI PCI-PCI bridge> at device 5.2 on pci13
+[1] pci15: <ACPI PCI bus> on pcib15
+[1] pcib16: <PCI-PCI bridge> at device 0.0 on pci15
+[1] pci16: <PCI bus> on pcib16
+[1] vgapci0: <VGA-compatible display> mem 0xc6000000-0xc6ffffff,0xda808000-0xda80bfff,0xda000000-0xda7fffff at device 0.0 on pci16
+[1] vgapci0: Boot video device
+[1] pcib17: <ACPI PCI-PCI bridge> at device 7.1 on pci13
+[1] pci17: <ACPI PCI bus> on pcib17
+[1] pci17: <unknown> at device 0.0 (no driver attached)
+[1] pci17: <encrypt/decrypt> at device 0.2 (no driver attached)
+[1] pcib18: <ACPI PCI-PCI bridge> at device 8.1 on pci13
+[1] pci18: <ACPI PCI bus> on pcib18
+[1] pci18: <unknown> at device 0.0 (no driver attached)
+[1] pci18: <encrypt/decrypt> at device 0.2 (no driver attached)
+[1] cpu0: <ACPI CPU> on acpi0
+[1] uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+[1] uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+[1] orm0: <ISA Option ROM> at iomem 0xed800-0xf17ff pnpid ORM0000 on isa0
+[1] vga0: <Generic ISA VGA> at port 0x3b0-0x3bb iomem 0xb0000-0xb7fff pnpid PNP0900 on isa0
+[1] hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+[1] Timecounters tick every 1.000 msec
+[1] ZFS filesystem version: 5
+[1] ZFS storage pool version: features support (5000)
+[1] mfisyspd0 on mfi0
+[1] mfisyspd0: 238475MB (488397168 sectors) SYSPD volume (deviceid: 0)
+[1] mfisyspd0:  SYSPD volume attached
+[1] ugen0.1: <0x1022 XHCI root HUB> at usbus0
+[1] ugen1.1: <0x1022 XHCI root HUB> at usbus1
+[1] mfisyspd1 on mfi0
+[1] mfisyspd1: 238475MB (488397168 sectors) SYSPD volume (deviceid: 1)
+[1] mfisyspd1:  SYSPD volume attached
+[1] uhub0 on usbus0
+[1] uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+[1] mfisyspd2 on mfi0
+[1] mfisyspd2: 915715MB (1875385008 sectors) SYSPD volume (deviceid: 2)
+[1] mfisyspd2:  SYSPD volume attached
+[1] mfisyspd3 on mfi0
+[1] mfisyspd3: 915715MB (1875385008 sectors) SYSPD volume (deviceid: 3)
+[1] mfisyspd3:  SYSPD volume attached
+[1] uhub1 on usbus1
+[1] uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+[1] mfisyspd4 on mfi0
+[1] mfisyspd4: 915715MB (1875385008 sectors) SYSPD volume (deviceid: 4)
+[1] mfisyspd4:  SYSPD volume attached
+[1] mfisyspd5 on mfi0
+[1] mfisyspd5: 915715MB (1875385008 sectors) SYSPD volume (deviceid: 5)
+[1] mfisyspd5:  SYSPD volume attached
+[1] mfisyspd6 on mfi0
+[1] mfisyspd6: 915715MB (1875385008 sectors) SYSPD volume (deviceid: 6)
+[1] mfisyspd6:  SYSPD volume attached
+[1] mfisyspd7 on mfi0
+[1] mfisyspd7: 915715MB (1875385008 sectors) SYSPD volume (deviceid: 7)
+[1] mfisyspd7:  SYSPD volume attached
+[1] mfi0: 13483 (boot + 27s/0x0002/info) - Inserted: PD 20(c None/p1) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=500056b3044dc2fd,0000000000000000
+[1] mfi0: 13484 (boot + 27s/0x0002/info) - Inserted: PD 00(e0x20/s0)
+[1] mfi0: 13485 (boot + 27s/0x0002/info) - Inserted: PD 00(e0x20/s0) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b3044dc2c0,0000000000000000
+[1] mfi0: 13486 (boot + 27s/0x0002/WARN) - PD 00(e0x20/s0) is not a certified drive
+[1] mfi0: 13487 (boot + 27s/0x0002/info) - Inserted: PD 01(e0x20/s1)
+[1] mfi0: 13488 (boot + 27s/0x0002/info) - Inserted: PD 01(e0x20/s1) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b3044dc2c1,0000000000000000
+[1] mfi0: 13489 (boot + 27s/0x0002/WARN) - PD 01(e0x20/s1) is not a certified drive
+[1] mfi0: 13490 (boot + 27s/0x0002/info) - Inserted: PD 02(e0x20/s2)
+[1] mfi0: 13491 (boot + 27s/0x0002/info) - Inserted: PD 02(e0x20/s2) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b3044dc2c2,0000000000000000
+[1] mfi0: 13492 (boot + 27s/0x0002/WARN) - PD 02(e0x20/s2) is not a certified drive
+[1] mfi0: 13493 (boot + 27s/0x0002/info) - Inserted: PD 03(e0x20/s3)
+[1] mfi0: 13494 (boot + 27s/0x0002/info) - Inserted: PD 03(e0x20/s3) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b3044dc2c3,0000000000000000
+[1] mfi0: 13495 (boot + 27s/0x0002/WARN) - PD 03(e0x20/s3) is not a certified drive
+[1] mfi0: 13496 (boot + 27s/0x0002/info) - Inserted: PD 04(e0x20/s4)
+[1] mfi0: 13497 (boot + 27s/0x0002/info) - Inserted: PD 04(e0x20/s4) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b3044dc2c4,0000000000000000
+[1] mfi0: 13498 (boot + 27s/0x0002/WARN) - PD 04(e0x20/s4) is not a certified drive
+[1] mfi0: 13499 (boot + 27s/0x0002/info) - Inserted: PD 05(e0x20/s5)
+[1] mfi0: 13500 (boot + 27s/0x0002/info) - Inserted: PD 05(e0x20/s5) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b3044dc2c5,0000000000000000
+[1] mfi0: 13501 (boot + 27s/0x0002/WARN) - PD 05(e0x20/s5) is not a certified drive
+[1] uhub0: 4 ports with 4 removable, self powered
+[1] mfi0: 13502 (boot + 27s/0x0002/info) - Inserted: PD 06(e0x20/s6)
+[1] mfi0: 13503 (boot + 27s/0x0002/info) - Inserted: PD 06(e0x20/s6) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b3044dc2c6,0000000000000000
+[1] mfi0: 13504 (boot + 27s/0x0002/WARN) - PD 06(e0x20/s6) is not a certified drive
+[1] mfi0: 13505 (boot + 27s/0x0002/info) - Inserted: PD 07(e0x20/s7)
+[1] mfi0: 13506 (boot + 27s/0x0002/info) - Inserted: PD 07(e0x20/s7) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b3044dc2c7,0000000000000000
+[1] mfi0: 13507 (boot + 27s/0x0002/WARN) - PD 07(e0x20/s7) is not a certified drive
+[1] mfi0: 13508 (boot + 27s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 500056b3044dc2c1, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13509 (boot + 27s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 500056b3044dc2c0, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13510 (boot + 27s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 500056b3044dc2c1, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13511 (boot + 27s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 500056b3044dc2c0, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13512 (boot + 27s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 500056b3044dc2c1, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13513 (boot + 27s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 500056b3044dc2c0, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13514 (boot + 27s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 500056b3044dc2c1, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13515 (boot + 27s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 500056b3044dc2c0, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13516 (boot + 27s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 500056b3044dc2c1, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13517 (boot + 27s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 500056b3044dc2c0, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13518 (boot + 27s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 500056b3044dc2c1, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13519 (boot + 27s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 500056b3044dc2c0, CDB: b5 02 07 fe 80 00 00 00 00 01 00 00, Sense: b/00/00
+[1] mfi0: 13520 (boot + 27s/0x0020/info) - Controller operating temperature within normal range, full operation restored
+[1] mfi0: 13521 (685447070s/0x0020/info) - Time established as 09/20/21  9:57:50; (27 seconds since power on)
+[1] uhub1: 4 ports with 4 removable, self powered
+[1] mfi0: 13522 (685447101s/0x0020/info) - Host driver is loaded and operational
+[1] nvd0: <INTEL SSDPE21D280GA> NVMe namespace
+[1] nvd0: 267090MB (547002288 512 byte sectors)
+[2] Trying to mount root from zfs:rpool/ROOT/default []...
+[2] Root mount waiting for: usbus0 usbus1
+[2] ugen0.2: <Microchip Tech USB2734> at usbus0
+[2] uhub2 on uhub0
+[2] uhub2: <Microchip Tech USB2734, class 9/0, rev 2.10/1.21, addr 1> on usbus0
+[2] uhub2: MTT enabled
+[2] ugen1.2: <vendor 0x1604 product 0x10c0> at usbus1
+[2] uhub3 on uhub1
+[2] uhub3: <vendor 0x1604 product 0x10c0, class 9/0, rev 2.00/0.00, addr 1> on usbus1
+[2] uhub2: 4 ports with 4 removable, self powered
+[3] Root mount waiting for: usbus0 usbus1
+[3] ugen0.3: <Generic USB Keyboard> at usbus0
+[3] ukbd0 on uhub2
+[3] ukbd0: <Generic USB Keyboard, class 0/0, rev 1.10/2.05, addr 2> on usbus0
+[3] kbd1 at ukbd0
+[3] ugen0.4: <Microchip Tech USB5734> at usbus0
+[3] uhub4 on uhub0
+[3] uhub4: <Microchip Tech USB5734, class 9/0, rev 3.00/1.21, addr 3> on usbus0
+[4] Root mount waiting for: usbus0 usbus1
+[4] uhub4: 4 ports with 4 removable, self powered
+[4] uhub3: 4 ports with 4 removable, self powered
+[5] ugen1.3: <vendor 0x1604 product 0x10c0> at usbus1
+[5] uhub5 on uhub3
+[5] uhub5: <vendor 0x1604 product 0x10c0, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+[5] Root mount waiting for: usbus1
+[6] Root mount waiting for: usbus1
+[7] uhub5: 4 ports with 4 removable, self powered
+[7] Root mount waiting for: usbus1
+[7] ugen1.4: <Avocent Keyboard/Mouse Function> at usbus1
+[7] ukbd1 on uhub5
+[7] ukbd1: <Keyboard> on usbus1
+[7] kbd2 at ukbd1
+[8] ugen1.5: <vendor 0x1604 product 0x10c0> at usbus1
+[8] uhub6 on uhub3
+[8] uhub6: <vendor 0x1604 product 0x10c0, class 9/0, rev 2.00/0.00, addr 4> on usbus1
+[8] Root mount waiting for: usbus1
+[9] Root mount waiting for: usbus1
+[10] uhub6: 4 ports with 4 removable, self powered
+[11] hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed001ff on acpi0
+[11] hpet0: memory region width 512 too small
+[11] device_attach: hpet0 attach returned 6
+[11] acpi_wmi0: <ACPI-WMI mapping> on acpi0
+[11] acpi_wmi0: cannot find EC device
+[11] acpi_wmi0: Embedded MOF found
+[11] ACPI: \134_SB.AMW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+[11] intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+[11] smbus0: <System Management Bus> on intsmb0
+[11] lo0: link state changed to UP
+[11] bge0: link state changed to DOWN
+[15] bge0: link state changed to UP
+[19] ums0 on uhub5
+[19] ums0: <Mouse> on usbus1
+[19] ums1 on uhub2
+[19] ums1: <Generic USB Keyboard, class 0/0, rev 1.10/2.05, addr 2> on usbus0
+[19] ums0: 3 buttons and [Z] coordinates ID=0
+[19] ums1: 0 buttons and [XYZ] coordinates ID=3
+[19] Security policy loaded: MAC/ntpd (mac_ntpd)
+[33] ugen1.4: <Avocent Keyboard/Mouse Function> at usbus1 (disconnected)
+[33] ukbd1: at uhub5, port 1, addr 3 (disconnected)
+[33] ukbd1: detached
+[33] ums0: at uhub5, port 1, addr 3 (disconnected)
+[33] ums0: detached
+[84] mfi0: 13523 (685447188s/0x0008/info) - Battery relearn pending: Battery is under charge
+[149] mfi0: 13524 (685447253s/0x0008/info) - Battery relearn started
+[214] mfi0: 13525 (685447318s/0x0008/info) - Battery relearn in progress

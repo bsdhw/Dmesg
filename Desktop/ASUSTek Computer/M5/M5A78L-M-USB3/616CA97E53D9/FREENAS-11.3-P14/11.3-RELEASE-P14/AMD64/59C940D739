@@ -1,0 +1,943 @@
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 11.3-RELEASE-p14 #0 r325575+c936002dbe2(HEAD): Mon Sep 28 10:46:56 EDT 2020
+    XXX@XXX:/freenas-releng/freenas/_BE/objs/freenas-releng/freenas/_BE/os/sys/FreeNAS.amd64 amd64
+FreeBSD clang version 8.0.0 (tags/RELEASE_800/final 356365) (based on LLVM 8.0.0)
+VT(vga): text 80x25
+CPU: AMD FX-8320E Eight-Core Processor               (3214.49-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x600f20  Family=0x15  Model=0x2  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x3e98320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1ebbfff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,XOP,SKINIT,WDT,LWP,FMA4,TCE,NodeId,TBM,Topology,PCXC,PNXC>
+  Structured Extended Features=0x8<BMI1>
+  SVM: (disabled in BIOS) NP,NRIP,VClean,AFlush,DAssist,NAsids=65536
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33020018688 (31490 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <091114 APIC1103>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 8 core(s)
+WARNING: VIMAGE (virtualized network stack) is a highly experimental feature.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20171214/tbfadt-796)
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 64/32 (20171214/tbfadt-748)
+ioapic0: Changing APIC ID to 24
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+SMP: AP CPU #1 Launched!
+SMP: AP CPU #4 Launched!
+SMP: AP CPU #5 Launched!
+SMP: AP CPU #6 Launched!
+SMP: AP CPU #2 Launched!
+SMP: AP CPU #7 Launched!
+SMP: AP CPU #3 Launched!
+Timecounter "TSC-low" frequency 1607246609 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+mlx5en: Mellanox Ethernet driver 3.5.1 (April 2019)
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+aesni0: <AES-CBC,AES-XTS,AES-GCM,AES-ICM> on motherboard
+padlock0: No ACE support.
+acpi0: <091114 XSDT1103> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+cpu1: <ACPI CPU> on acpi0
+cpu2: <ACPI CPU> on acpi0
+cpu3: <ACPI CPU> on acpi0
+cpu4: <ACPI CPU> on acpi0
+cpu5: <ACPI CPU> on acpi0
+cpu6: <ACPI CPU> on acpi0
+cpu7: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xc000-0xc0ff mem 0xd0000000-0xdfffffff,0xfe9f0000-0xfe9fffff,0xfe800000-0xfe8fffff irq 18 at device 5.0 on pci1
+vgapci0: Boot video device
+pci1: <multimedia, HDA> at device 5.1 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> irq 19 at device 7.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+xhci0: <ASMedia ASM1042A USB 3.0 controller> mem 0xfeaf0000-0xfeaf7fff irq 19 at device 0.0 on pci2
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib3: <ACPI PCI-PCI bridge> irq 18 at device 10.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xd800-0xd8ff mem 0xfdfff000-0xfdffffff,0xfdff8000-0xfdffbfff irq 18 at device 0.0 on pci3
+re0: Using 1 MSI-X message
+re0: Chip rev. 0x48000000
+re0: MAC rev. 0x00000000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0xb000-0xb007,0xa000-0xa003,0x9000-0x9007,0x8000-0x8003,0x7000-0x700f mem 0xfe7ffc00-0xfe7fffff irq 22 at device 17.0 on pci0
+ahci0: AHCI v1.10 with 4 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe7fe000-0xfe7fefff irq 16 at device 18.0 on pci0
+usbus1 on ohci0
+usbus1: 12Mbps Full Speed USB v1.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe7fd000-0xfe7fdfff irq 16 at device 18.1 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfe7ff800-0xfe7ff8ff irq 17 at device 18.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci0
+usbus3: 480Mbps High Speed USB v2.0
+ohci2: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe7fc000-0xfe7fcfff irq 18 at device 19.0 on pci0
+usbus4 on ohci2
+usbus4: 12Mbps Full Speed USB v1.0
+ohci3: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe7fb000-0xfe7fbfff irq 18 at device 19.1 on pci0
+usbus5 on ohci3
+usbus5: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfe7ff400-0xfe7ff4ff irq 19 at device 19.2 on pci0
+usbus6: EHCI version 1.0
+usbus6 on ehci1
+usbus6: 480Mbps High Speed USB v2.0
+atapci0: <ATI IXP700/800 UDMA133 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xff00-0xff0f at device 20.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+ata1: <ATA channel> at channel 1 on atapci0
+pci0: <multimedia, HDA> at device 20.2 (no driver attached)
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib4: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+em0: <Intel(R) PRO/1000 Legacy Network Connection 1.1.0> port 0xec00-0xec3f mem 0xfebe0000-0xfebfffff,0xfebc0000-0xfebdffff irq 20 at device 5.0 on pci4
+em0: Ethernet address: ...
+atapci1: <SiI 3114 SATA150 controller> port 0xe880-0xe887,0xe800-0xe803,0xe480-0xe487,0xe400-0xe403,0xe080-0xe08f mem 0xfeb9fc00-0xfeb9ffff irq 21 at device 6.0 on pci4
+ata2: <ATA channel> at channel 0 on atapci1
+ata3: <ATA channel> at channel 1 on atapci1
+ata4: <ATA channel> at channel 2 on atapci1
+ata5: <ATA channel> at channel 3 on atapci1
+ohci4: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe7fa000-0xfe7fafff irq 18 at device 20.5 on pci0
+(noperiph:ata2:0:-1:ffffffff): rescan already queued
+(noperiph:ata3:0:-1:ffffffff): rescan already queued
+usbus7 on ohci4
+usbus7: 12Mbps Full Speed USB v1.0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb4
+acpi_button0: <Power Button> on acpi0
+(noperiph:ata4:0:-1:ffffffff): rescan already queued
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xcf000-0xcffff,0xd0000-0xd4fff on isa0
+amdsbwd0: Previous Reset was caused by Watchdog
+amdsbwd0: <AMD SB600/SB7xx Watchdog Timer> at iomem 0xfec000f0-0xfec000f3,0xfec000f4-0xfec000f7 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+freenas_sysctl: adding account.
+freenas_sysctl: adding directoryservice.
+freenas_sysctl: adding middlewared.
+freenas_sysctl: adding network.
+freenas_sysctl: adding services.
+ipfw2 (+ipv6) initialized, divert enabled, nat enabled, default to accept, logging disabled
+ugen3.1: <ATI EHCI root HUB> at usbus3
+ugen5.1: <ATI OHCI root HUB> at usbus5
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+ugen7.1: <ATI OHCI root HUB> at usbus7
+ugen2.1: <ATI OHCI root HUB> at usbus2
+ugen0.1: <0x1b21 XHCI root HUB> at usbus0
+ugen1.1: <ATI OHCI root HUB> at usbus1
+ugen6.1: <ATI EHCI root HUB> at usbus6
+ugen4.1: <ATI OHCI root HUB> at usbus4
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus7
+uhub3: <0x1b21 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub5: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub6: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus6
+uhub7: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub2: 2 ports with 2 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+uhub7: 3 ports with 3 removable, self powered
+uhub5: 3 ports with 3 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+uhub6: 6 ports with 6 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+ugen1.2: <American Power Conversion Back-UPS XS 1300 LCD FW836.H8 .D USB FWH8> at usbus1
+random: unblocking device.
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <SanDisk SDSSDHII120G X31200RL> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114472MB (234439535 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <WDC WD40EFRX-68N32N0 82.00A82> ACS-3 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 3815447MB (7814037168 512 byte sectors)
+ada1: quirks=0x1<4K>
+ada2 at ahcich2 bus 0 scbus2 target 0 lun 0
+ada2: <KINGSTON SA400S37120G SBFKB1D1> ACS-4 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 114473MB (234441648 512 byte sectors)
+ada3 at ahcich3 bus 0 scbus3 target 0 lun 0
+ada3: <WDC WD40EFRX-68WT0N0 82.00A82> ACS-2 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 3815447MB (7814037168 512 byte sectors)
+ada3: quirks=0x1<4K>
+ada4 at ata1 bus 0 scbus5 target 0 lun 0
+ada4: <WDC WD30EFRX-68EUZN0 82.00A82> ACS-2 ATA SATA 3.x device
+ada4: Serial Number...
+ada4: 150.000MB/s transfers (SATA, UDMA6, PIO 8192bytes)
+ada4: 2861588MB (5860533168 512 byte sectors)
+ada4: quirks=0x1<4K>
+ada5 at ata1 bus 0 scbus5 target 1 lun 0
+ada5: <WDC WD30EFRX-68EUZN0 82.00A82> ACS-2 ATA SATA 3.x device
+ada5: Serial Number...
+ada5: 150.000MB/s transfers (SATA, UDMA6, PIO 8192bytes)
+ada5: 2861588MB (5860533168 512 byte sectors)
+ada5: quirks=0x1<4K>
+ada6 at ata2 bus 0 scbus6 target 0 lun 0
+ada6: <WDC WD20EFRX-68AX9N0 80.00A80> ACS-2 ATA SATA 3.x device
+ada6: Serial Number...
+ada6: 150.000MB/s transfers (SATA 1.x, UDMA5, PIO 8192bytes)
+ada6: 1907729MB (3907029168 512 byte sectors)
+ada6: quirks=0x1<4K>
+ada7 at ata3 bus 0 scbus7 target 0 lun 0
+ada7: <WDC WD20EFRX-68AX9N0 80.00A80> ACS-2 ATA SATA 3.x device
+ada7: Serial Number...
+ada7: 150.000MB/s transfers (SATA 1.x, UDMA5, PIO 8192bytes)
+ada7: 1907729MB (3907029168 512 byte sectors)
+ada7: quirks=0x1<4K>
+ada8 at ata4 bus 0 scbus8 target 0 lun 0
+ada8: <WDC WD40EFRX-68N32N0 82.00A82> ACS-3 ATA SATA 3.x device
+ada8: Serial Number...
+ada8: 150.000MB/s transfers (SATA 1.x, UDMA5, PIO 8192bytes)
+ada8: 3815447MB (7814037168 512 byte sectors)
+ada8: quirks=0x1<4K>
+Trying to mount root from zfs:freenas-boot/ROOT/11.3-U5 []...
+lo0: link state changed to UP
+re0: link state changed to DOWN
+em0: link state changed to UP
+SVM: disabled by BIOS.
+module_register_init: MOD_LOAD (vmm, 0xffffffff82e1e7f0, 0) error 6
+GEOM_MIRROR: Device mirror/swap0 launched (2/2).
+GEOM_ELI: Device mirror/swap0.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: hardware
+GEOM_MIRROR: Device mirror/swap1 launched (2/2).
+GEOM_MIRROR: Device mirror/swap2 launched (2/2).
+GEOM_ELI: Device mirror/swap1.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: hardware
+GEOM_ELI: Device mirror/swap2.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: hardware
+pmc: Unknown AMD64 CPU.
+pmc: Unknown AMD CPU.
+hwpmc: SOFT/16/64/0x67<INT,USR,SYS,REA,WRI>
+em0: link state changed to DOWN
+em0: link state changed to UP
+CPU: AMD FX-8320E Eight-Core Processor               (3214.49-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x600f20  Family=0x15  Model=0x2  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x3e98320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1ebbfff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,XOP,SKINIT,WDT,LWP,FMA4,TCE,NodeId,TBM,Topology,PCXC,PNXC>
+  Structured Extended Features=0x8<BMI1>
+  SVM: (disabled in BIOS) NP,NRIP,VClean,AFlush,DAssist,NAsids=65536
+  TSC: P-state invariant, performance statistics
+bridge0: Ethernet address: ...
+epair0a: Ethernet address: ...
+epair0b: Ethernet address: ...
+epair0a: link state changed to UP
+epair0b: link state changed to UP
+epair0a: changing name to 'vnet0.1'
+em0: promiscuous mode enabled
+bridge0: link state changed to UP
+em0: link state changed to DOWN
+vnet0.1: promiscuous mode enabled
+lo0: link state changed to UP
+em0: link state changed to UP
+epair1a: Ethernet address: ...
+epair1b: Ethernet address: ...
+epair1a: link state changed to UP
+epair1b: link state changed to UP
+epair1a: changing name to 'vnet0.2'
+epair1b: changing name to 'epair0b'
+vnet0.2: promiscuous mode enabled
+lo0: link state changed to UP
+Limiting closed port RST response from 1457 to 200 packets/sec
+Limiting closed port RST response from 1049 to 200 packets/sec
+Limiting closed port RST response from 1283 to 200 packets/sec
+Limiting closed port RST response from 291 to 200 packets/sec
+Limiting closed port RST response from 1365 to 200 packets/sec
+Limiting closed port RST response from 553 to 200 packets/sec
+Limiting closed port RST response from 1576 to 200 packets/sec
+Limiting closed port RST response from 1206 to 200 packets/sec
+Limiting closed port RST response from 1358 to 200 packets/sec
+Limiting closed port RST response from 837 to 200 packets/sec
+Limiting closed port RST response from 1107 to 200 packets/sec
+Limiting closed port RST response from 1303 to 200 packets/sec
+Limiting closed port RST response from 386 to 200 packets/sec
+Limiting closed port RST response from 1327 to 200 packets/sec
+Limiting closed port RST response from 1344 to 200 packets/sec
+Limiting closed port RST response from 1571 to 200 packets/sec
+Limiting closed port RST response from 1357 to 200 packets/sec
+Limiting closed port RST response from 1390 to 200 packets/sec
+Limiting closed port RST response from 1417 to 200 packets/sec
+Limiting closed port RST response from 976 to 200 packets/sec
+Limiting closed port RST response from 410 to 200 packets/sec
+Limiting closed port RST response from 1250 to 200 packets/sec
+Limiting closed port RST response from 867 to 200 packets/sec
+Limiting closed port RST response from 1475 to 200 packets/sec
+Limiting closed port RST response from 1180 to 200 packets/sec
+Limiting closed port RST response from 254 to 200 packets/sec
+Limiting closed port RST response from 1481 to 200 packets/sec
+Limiting closed port RST response from 1058 to 200 packets/sec
+Limiting closed port RST response from 720 to 200 packets/sec
+Limiting closed port RST response from 855 to 200 packets/sec
+Limiting closed port RST response from 1209 to 200 packets/sec
+Limiting closed port RST response from 1353 to 200 packets/sec
+Limiting closed port RST response from 1464 to 200 packets/sec
+Limiting closed port RST response from 1429 to 200 packets/sec
+Limiting closed port RST response from 1480 to 200 packets/sec
+Limiting closed port RST response from 1160 to 200 packets/sec
+Limiting closed port RST response from 1392 to 200 packets/sec
+Limiting closed port RST response from 1331 to 200 packets/sec
+Limiting closed port RST response from 1258 to 200 packets/sec
+Limiting closed port RST response from 1458 to 200 packets/sec
+Limiting closed port RST response from 1289 to 200 packets/sec
+Limiting closed port RST response from 1474 to 200 packets/sec
+Limiting closed port RST response from 1456 to 200 packets/sec
+Limiting closed port RST response from 851 to 200 packets/sec
+Limiting closed port RST response from 1589 to 200 packets/sec
+Limiting closed port RST response from 300 to 200 packets/sec
+Limiting closed port RST response from 463 to 200 packets/sec
+Limiting closed port RST response from 1446 to 200 packets/sec
+Limiting closed port RST response from 332 to 200 packets/sec
+Limiting closed port RST response from 1204 to 200 packets/sec
+Limiting closed port RST response from 1173 to 200 packets/sec
+Limiting closed port RST response from 1535 to 200 packets/sec
+Limiting closed port RST response from 740 to 200 packets/sec
+Limiting closed port RST response from 1468 to 200 packets/sec
+Limiting closed port RST response from 278 to 200 packets/sec
+Limiting closed port RST response from 704 to 200 packets/sec
+Limiting closed port RST response from 364 to 200 packets/sec
+Limiting closed port RST response from 1244 to 200 packets/sec
+Limiting closed port RST response from 1443 to 200 packets/sec
+Limiting closed port RST response from 1124 to 200 packets/sec
+Limiting closed port RST response from 1448 to 200 packets/sec
+Limiting closed port RST response from 285 to 200 packets/sec
+Limiting closed port RST response from 1317 to 200 packets/sec
+Limiting closed port RST response from 719 to 200 packets/sec
+Limiting closed port RST response from 1365 to 200 packets/sec
+Limiting closed port RST response from 442 to 200 packets/sec
+Limiting closed port RST response from 1233 to 200 packets/sec
+Limiting closed port RST response from 476 to 200 packets/sec
+Limiting closed port RST response from 894 to 200 packets/sec
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+Limiting closed port RST response from 204 to 200 packets/sec
+Limiting closed port RST response from 1189 to 200 packets/sec
+Limiting closed port RST response from 1508 to 200 packets/sec
+Limiting closed port RST response from 1510 to 200 packets/sec
+Limiting closed port RST response from 1290 to 200 packets/sec
+Limiting closed port RST response from 436 to 200 packets/sec
+Limiting closed port RST response from 1376 to 200 packets/sec
+Limiting closed port RST response from 292 to 200 packets/sec
+Limiting closed port RST response from 564 to 200 packets/sec
+Limiting closed port RST response from 1036 to 200 packets/sec
+Limiting closed port RST response from 1440 to 200 packets/sec
+Limiting closed port RST response from 1402 to 200 packets/sec
+Limiting closed port RST response from 1317 to 200 packets/sec
+Limiting closed port RST response from 1230 to 200 packets/sec
+Limiting closed port RST response from 1229 to 200 packets/sec
+Limiting closed port RST response from 334 to 200 packets/sec
+Limiting closed port RST response from 1469 to 200 packets/sec
+Limiting closed port RST response from 236 to 200 packets/sec
+Limiting closed port RST response from 1386 to 200 packets/sec
+Limiting closed port RST response from 1201 to 200 packets/sec
+Limiting closed port RST response from 1295 to 200 packets/sec
+Limiting closed port RST response from 1322 to 200 packets/sec
+Limiting closed port RST response from 1057 to 200 packets/sec
+Limiting closed port RST response from 739 to 200 packets/sec
+Limiting closed port RST response from 1534 to 200 packets/sec
+Limiting closed port RST response from 1401 to 200 packets/sec
+Limiting closed port RST response from 1232 to 200 packets/sec
+Limiting closed port RST response from 232 to 200 packets/sec
+Limiting closed port RST response from 255 to 200 packets/sec
+Limiting closed port RST response from 1129 to 200 packets/sec
+Limiting closed port RST response from 1274 to 200 packets/sec
+Limiting closed port RST response from 1359 to 200 packets/sec
+Limiting closed port RST response from 1157 to 200 packets/sec
+Limiting closed port RST response from 1340 to 200 packets/sec
+Limiting closed port RST response from 284 to 200 packets/sec
+Limiting closed port RST response from 952 to 200 packets/sec
+Limiting closed port RST response from 904 to 200 packets/sec
+Limiting closed port RST response from 1212 to 200 packets/sec
+Limiting closed port RST response from 435 to 200 packets/sec
+Limiting closed port RST response from 1208 to 200 packets/sec
+Limiting closed port RST response from 715 to 200 packets/sec
+Limiting closed port RST response from 435 to 200 packets/sec
+Limiting closed port RST response from 533 to 200 packets/sec
+Limiting closed port RST response from 233 to 200 packets/sec
+Limiting closed port RST response from 1417 to 200 packets/sec
+Limiting closed port RST response from 1480 to 200 packets/sec
+Limiting closed port RST response from 769 to 200 packets/sec
+Limiting closed port RST response from 932 to 200 packets/sec
+Limiting closed port RST response from 1497 to 200 packets/sec
+Limiting closed port RST response from 1460 to 200 packets/sec
+Limiting closed port RST response from 1410 to 200 packets/sec
+Limiting closed port RST response from 904 to 200 packets/sec
+Limiting closed port RST response from 459 to 200 packets/sec
+Limiting closed port RST response from 570 to 200 packets/sec
+Limiting closed port RST response from 1111 to 200 packets/sec
+Limiting closed port RST response from 798 to 200 packets/sec
+Limiting closed port RST response from 1408 to 200 packets/sec
+Limiting closed port RST response from 225 to 200 packets/sec
+Limiting closed port RST response from 329 to 200 packets/sec
+Limiting closed port RST response from 418 to 200 packets/sec
+Limiting closed port RST response from 626 to 200 packets/sec
+Limiting closed port RST response from 1236 to 200 packets/sec
+Limiting closed port RST response from 1321 to 200 packets/sec
+Limiting closed port RST response from 466 to 200 packets/sec
+Limiting closed port RST response from 1464 to 200 packets/sec
+Limiting closed port RST response from 423 to 200 packets/sec
+Limiting closed port RST response from 294 to 200 packets/sec
+Limiting closed port RST response from 508 to 200 packets/sec
+Limiting closed port RST response from 325 to 200 packets/sec
+Limiting closed port RST response from 652 to 200 packets/sec
+Limiting closed port RST response from 1294 to 200 packets/sec
+Limiting closed port RST response from 777 to 200 packets/sec
+Limiting closed port RST response from 1209 to 200 packets/sec
+Limiting closed port RST response from 643 to 200 packets/sec
+Limiting closed port RST response from 213 to 200 packets/sec
+Limiting closed port RST response from 229 to 200 packets/sec
+Limiting closed port RST response from 1508 to 200 packets/sec
+Limiting closed port RST response from 1538 to 200 packets/sec
+Limiting closed port RST response from 1689 to 200 packets/sec
+Limiting closed port RST response from 379 to 200 packets/sec
+Limiting closed port RST response from 524 to 200 packets/sec
+Limiting closed port RST response from 551 to 200 packets/sec
+Limiting closed port RST response from 1449 to 200 packets/sec
+Limiting closed port RST response from 1032 to 200 packets/sec
+Limiting closed port RST response from 1470 to 200 packets/sec
+Limiting closed port RST response from 291 to 200 packets/sec
+Limiting closed port RST response from 636 to 200 packets/sec
+Limiting closed port RST response from 1566 to 200 packets/sec
+Limiting closed port RST response from 1564 to 200 packets/sec
+Limiting closed port RST response from 700 to 200 packets/sec
+Limiting closed port RST response from 1289 to 200 packets/sec
+Limiting closed port RST response from 1165 to 200 packets/sec
+Limiting closed port RST response from 1067 to 200 packets/sec
+Limiting closed port RST response from 281 to 200 packets/sec
+Limiting closed port RST response from 363 to 200 packets/sec
+Limiting closed port RST response from 917 to 200 packets/sec
+Limiting closed port RST response from 1381 to 200 packets/sec
+Limiting closed port RST response from 708 to 200 packets/sec
+Limiting closed port RST response from 1160 to 200 packets/sec
+Limiting closed port RST response from 533 to 200 packets/sec
+Limiting closed port RST response from 1526 to 200 packets/sec
+Limiting closed port RST response from 923 to 200 packets/sec
+Limiting closed port RST response from 1671 to 200 packets/sec
+Limiting closed port RST response from 1414 to 200 packets/sec
+Limiting closed port RST response from 1413 to 200 packets/sec
+Limiting closed port RST response from 959 to 200 packets/sec
+Limiting closed port RST response from 438 to 200 packets/sec
+Limiting closed port RST response from 611 to 200 packets/sec
+Limiting closed port RST response from 482 to 200 packets/sec
+Limiting closed port RST response from 1299 to 200 packets/sec
+Limiting closed port RST response from 1368 to 200 packets/sec
+Limiting closed port RST response from 1353 to 200 packets/sec
+Limiting closed port RST response from 1487 to 200 packets/sec
+Limiting closed port RST response from 1247 to 200 packets/sec
+Limiting closed port RST response from 1450 to 200 packets/sec
+Limiting closed port RST response from 454 to 200 packets/sec
+Limiting closed port RST response from 590 to 200 packets/sec
+Limiting closed port RST response from 1409 to 200 packets/sec
+Limiting closed port RST response from 515 to 200 packets/sec
+Limiting closed port RST response from 273 to 200 packets/sec
+Limiting closed port RST response from 863 to 200 packets/sec
+Limiting closed port RST response from 650 to 200 packets/sec
+Limiting closed port RST response from 1042 to 200 packets/sec
+Limiting closed port RST response from 1045 to 200 packets/sec
+Limiting closed port RST response from 1339 to 200 packets/sec
+Limiting closed port RST response from 1318 to 200 packets/sec
+Limiting closed port RST response from 1204 to 200 packets/sec
+Limiting closed port RST response from 1402 to 200 packets/sec
+Limiting closed port RST response from 1262 to 200 packets/sec
+Limiting closed port RST response from 1090 to 200 packets/sec
+Limiting closed port RST response from 1444 to 200 packets/sec
+Limiting closed port RST response from 612 to 200 packets/sec
+Limiting closed port RST response from 735 to 200 packets/sec
+Limiting closed port RST response from 1399 to 200 packets/sec
+Limiting closed port RST response from 1387 to 200 packets/sec
+Limiting closed port RST response from 1354 to 200 packets/sec
+Limiting closed port RST response from 1501 to 200 packets/sec
+Limiting closed port RST response from 1563 to 200 packets/sec
+Limiting closed port RST response from 1421 to 200 packets/sec
+Limiting closed port RST response from 338 to 200 packets/sec
+Limiting closed port RST response from 1228 to 200 packets/sec
+Limiting closed port RST response from 1429 to 200 packets/sec
+Limiting closed port RST response from 365 to 200 packets/sec
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+Limiting closed port RST response from 429 to 200 packets/sec
+Limiting closed port RST response from 1354 to 200 packets/sec
+Limiting closed port RST response from 1296 to 200 packets/sec
+Limiting closed port RST response from 619 to 200 packets/sec
+Limiting closed port RST response from 1430 to 200 packets/sec
+Limiting closed port RST response from 1338 to 200 packets/sec
+Limiting closed port RST response from 927 to 200 packets/sec
+Limiting closed port RST response from 1351 to 200 packets/sec
+Limiting closed port RST response from 1152 to 200 packets/sec
+Limiting closed port RST response from 1130 to 200 packets/sec
+Limiting closed port RST response from 253 to 200 packets/sec
+Limiting closed port RST response from 1315 to 200 packets/sec
+Limiting closed port RST response from 1381 to 200 packets/sec
+Limiting closed port RST response from 620 to 200 packets/sec
+Limiting closed port RST response from 1262 to 200 packets/sec
+Limiting closed port RST response from 1389 to 200 packets/sec
+Limiting closed port RST response from 612 to 200 packets/sec
+Limiting closed port RST response from 1308 to 200 packets/sec
+Limiting closed port RST response from 1118 to 200 packets/sec
+Limiting closed port RST response from 738 to 200 packets/sec
+Limiting closed port RST response from 400 to 200 packets/sec
+Limiting closed port RST response from 1313 to 200 packets/sec
+Limiting closed port RST response from 1522 to 200 packets/sec
+Limiting closed port RST response from 665 to 200 packets/sec
+Limiting closed port RST response from 354 to 200 packets/sec
+Limiting closed port RST response from 1025 to 200 packets/sec
+Limiting closed port RST response from 1062 to 200 packets/sec
+Limiting closed port RST response from 382 to 200 packets/sec
+Limiting closed port RST response from 1188 to 200 packets/sec
+Limiting closed port RST response from 958 to 200 packets/sec
+Limiting closed port RST response from 768 to 200 packets/sec
+Limiting closed port RST response from 1024 to 200 packets/sec
+Limiting closed port RST response from 927 to 200 packets/sec
+Limiting closed port RST response from 1207 to 200 packets/sec
+Limiting closed port RST response from 220 to 200 packets/sec
+Limiting closed port RST response from 1507 to 200 packets/sec
+Limiting closed port RST response from 1345 to 200 packets/sec
+Limiting closed port RST response from 897 to 200 packets/sec
+Limiting closed port RST response from 1309 to 200 packets/sec
+Limiting closed port RST response from 257 to 200 packets/sec
+Limiting closed port RST response from 1027 to 200 packets/sec
+Limiting closed port RST response from 1052 to 200 packets/sec
+Limiting closed port RST response from 720 to 200 packets/sec
+Limiting closed port RST response from 993 to 200 packets/sec
+Limiting closed port RST response from 1306 to 200 packets/sec
+Limiting closed port RST response from 1612 to 200 packets/sec
+Limiting closed port RST response from 1208 to 200 packets/sec
+Limiting closed port RST response from 350 to 200 packets/sec
+Limiting closed port RST response from 1276 to 200 packets/sec
+Limiting closed port RST response from 1356 to 200 packets/sec
+Limiting closed port RST response from 473 to 200 packets/sec
+Limiting closed port RST response from 1486 to 200 packets/sec
+Limiting closed port RST response from 365 to 200 packets/sec
+Limiting closed port RST response from 793 to 200 packets/sec
+Limiting closed port RST response from 1262 to 200 packets/sec
+Limiting closed port RST response from 986 to 200 packets/sec
+Limiting closed port RST response from 1224 to 200 packets/sec
+Limiting closed port RST response from 1492 to 200 packets/sec
+Limiting closed port RST response from 1535 to 200 packets/sec
+Limiting closed port RST response from 1416 to 200 packets/sec
+Limiting closed port RST response from 1482 to 200 packets/sec
+Limiting closed port RST response from 1433 to 200 packets/sec
+Limiting closed port RST response from 1572 to 200 packets/sec
+Limiting closed port RST response from 1450 to 200 packets/sec
+Limiting closed port RST response from 1530 to 200 packets/sec
+Limiting closed port RST response from 1257 to 200 packets/sec
+Limiting closed port RST response from 264 to 200 packets/sec
+Limiting closed port RST response from 1422 to 200 packets/sec
+Limiting closed port RST response from 1271 to 200 packets/sec
+Limiting closed port RST response from 1309 to 200 packets/sec
+Limiting closed port RST response from 1006 to 200 packets/sec
+Limiting closed port RST response from 467 to 200 packets/sec
+Limiting closed port RST response from 1460 to 200 packets/sec
+Limiting closed port RST response from 1336 to 200 packets/sec
+Limiting closed port RST response from 222 to 200 packets/sec
+Limiting closed port RST response from 708 to 200 packets/sec
+Limiting closed port RST response from 895 to 200 packets/sec
+Limiting closed port RST response from 1180 to 200 packets/sec
+Limiting closed port RST response from 764 to 200 packets/sec
+Limiting closed port RST response from 1409 to 200 packets/sec
+Limiting closed port RST response from 1065 to 200 packets/sec
+Limiting closed port RST response from 1395 to 200 packets/sec
+Limiting closed port RST response from 893 to 200 packets/sec
+Limiting closed port RST response from 326 to 200 packets/sec
+Limiting closed port RST response from 842 to 200 packets/sec
+Limiting closed port RST response from 757 to 200 packets/sec
+Limiting closed port RST response from 411 to 200 packets/sec
+Limiting closed port RST response from 1126 to 200 packets/sec
+Limiting closed port RST response from 1350 to 200 packets/sec
+Limiting closed port RST response from 410 to 200 packets/sec
+Limiting closed port RST response from 358 to 200 packets/sec
+Limiting closed port RST response from 1488 to 200 packets/sec
+Limiting closed port RST response from 1545 to 200 packets/sec
+Limiting closed port RST response from 750 to 200 packets/sec
+Limiting closed port RST response from 1006 to 200 packets/sec
+Limiting closed port RST response from 350 to 200 packets/sec
+Limiting closed port RST response from 915 to 200 packets/sec
+Limiting closed port RST response from 215 to 200 packets/sec
+Limiting closed port RST response from 1214 to 200 packets/sec
+Limiting closed port RST response from 1403 to 200 packets/sec
+Limiting closed port RST response from 358 to 200 packets/sec
+Limiting closed port RST response from 1445 to 200 packets/sec
+Limiting closed port RST response from 1359 to 200 packets/sec
+Limiting closed port RST response from 321 to 200 packets/sec
+Limiting closed port RST response from 401 to 200 packets/sec
+Limiting closed port RST response from 1288 to 200 packets/sec
+Limiting closed port RST response from 420 to 200 packets/sec
+Limiting closed port RST response from 368 to 200 packets/sec
+Limiting closed port RST response from 1411 to 200 packets/sec
+Limiting closed port RST response from 1285 to 200 packets/sec
+Limiting closed port RST response from 1050 to 200 packets/sec
+Limiting closed port RST response from 464 to 200 packets/sec
+Limiting closed port RST response from 1275 to 200 packets/sec
+Limiting closed port RST response from 1341 to 200 packets/sec
+ugen0.2: <Vantec D300S3> at usbus0
+umass0 on uhub3
+umass0: <Vantec D300S3, class 0/0, rev 3.00/1.00, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4100
+umass0:11:0: Attached to scbus11
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ugen0.2: <Vantec D300S3> at usbus0 (disconnected)
+umass0: at uhub3, port 2, addr 1 (disconnected)
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> s/n ... detached
+(da0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+ugen0.2: <Vantec D300S3> at usbus0
+umass0 on uhub3
+umass0: <Vantec D300S3, class 0/0, rev 3.00/1.00, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc101
+umass0:11:0: Attached to scbus11
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 953869MB (1953525168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+MCA: Bank 4, Status 0x9c5440005b080813
+MCA: Global Cap 0x0000000000000107, Status 0x0000000000000000
+MCA: Vendor "AuthenticAMD", ID 0x600f20, APIC ID 16
+MCA: CPU 0 COR BUSLG Source RD Memory
+MCA: Address 0x3cad549c0
+MCA: Misc 0xc01b0fff01000000
+Limiting closed port RST response from 1429 to 200 packets/sec
+Limiting closed port RST response from 1562 to 200 packets/sec
+Limiting closed port RST response from 1353 to 200 packets/sec
+Limiting closed port RST response from 1194 to 200 packets/sec
+ugen0.2: <Vantec D300S3> at usbus0 (disconnected)
+umass0: at uhub3, port 2, addr 1 (disconnected)
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> s/n ... detached
+(da0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+ugen0.2: <Vantec D300S3> at usbus0
+umass0 on uhub3
+umass0: <Vantec D300S3, class 0/0, rev 3.00/1.00, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc101
+umass0:11:0: Attached to scbus11
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 1430799MB (2930277168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+Limiting closed port RST response from 896 to 200 packets/sec
+Limiting closed port RST response from 427 to 200 packets/sec
+Limiting closed port RST response from 560 to 200 packets/sec
+ugen0.2: <Vantec D300S3> at usbus0 (disconnected)
+umass0: at uhub3, port 2, addr 1 (disconnected)
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> s/n ... detached
+(da0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+Limiting closed port RST response from 901 to 200 packets/sec
+Limiting closed port RST response from 1453 to 200 packets/sec
+Limiting closed port RST response from 294 to 200 packets/sec
+Limiting closed port RST response from 1565 to 200 packets/sec
+Limiting closed port RST response from 1720 to 200 packets/sec
+Limiting closed port RST response from 323 to 200 packets/sec
+Limiting closed port RST response from 601 to 200 packets/sec
+Limiting closed port RST response from 1414 to 200 packets/sec
+Limiting closed port RST response from 1211 to 200 packets/sec
+Limiting closed port RST response from 384 to 200 packets/sec
+Limiting closed port RST response from 214 to 200 packets/sec
+Limiting closed port RST response from 289 to 200 packets/sec
+Limiting closed port RST response from 894 to 200 packets/sec
+Limiting closed port RST response from 1295 to 200 packets/sec
+Limiting closed port RST response from 540 to 200 packets/sec
+Limiting closed port RST response from 1432 to 200 packets/sec
+Limiting closed port RST response from 277 to 200 packets/sec
+Limiting closed port RST response from 1288 to 200 packets/sec
+Limiting closed port RST response from 623 to 200 packets/sec
+Limiting closed port RST response from 1358 to 200 packets/sec
+Limiting closed port RST response from 1015 to 200 packets/sec
+Limiting closed port RST response from 1073 to 200 packets/sec
+Limiting closed port RST response from 936 to 200 packets/sec
+Limiting closed port RST response from 1288 to 200 packets/sec
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+Limiting closed port RST response from 639 to 200 packets/sec
+Limiting closed port RST response from 1331 to 200 packets/sec
+Limiting closed port RST response from 1341 to 200 packets/sec
+Limiting closed port RST response from 1483 to 200 packets/sec
+Limiting closed port RST response from 1323 to 200 packets/sec
+Limiting closed port RST response from 976 to 200 packets/sec
+Limiting closed port RST response from 1432 to 200 packets/sec
+Limiting closed port RST response from 1524 to 200 packets/sec
+Limiting closed port RST response from 1064 to 200 packets/sec
+Limiting closed port RST response from 1439 to 200 packets/sec
+Limiting closed port RST response from 802 to 200 packets/sec
+Limiting closed port RST response from 563 to 200 packets/sec
+Limiting closed port RST response from 447 to 200 packets/sec
+Limiting closed port RST response from 1521 to 200 packets/sec
+Limiting closed port RST response from 946 to 200 packets/sec
+Limiting closed port RST response from 560 to 200 packets/sec
+Limiting closed port RST response from 1621 to 200 packets/sec
+Limiting closed port RST response from 1352 to 200 packets/sec
+Limiting closed port RST response from 1306 to 200 packets/sec
+Limiting closed port RST response from 854 to 200 packets/sec
+Limiting closed port RST response from 1323 to 200 packets/sec
+Limiting closed port RST response from 1671 to 200 packets/sec
+Limiting closed port RST response from 1260 to 200 packets/sec
+Limiting closed port RST response from 1564 to 200 packets/sec
+Limiting closed port RST response from 453 to 200 packets/sec
+Limiting closed port RST response from 1442 to 200 packets/sec
+Limiting closed port RST response from 1437 to 200 packets/sec
+Limiting closed port RST response from 997 to 200 packets/sec
+Limiting closed port RST response from 728 to 200 packets/sec
+Limiting closed port RST response from 323 to 200 packets/sec
+Limiting closed port RST response from 1413 to 200 packets/sec
+Limiting closed port RST response from 212 to 200 packets/sec
+Limiting closed port RST response from 893 to 200 packets/sec
+Limiting closed port RST response from 856 to 200 packets/sec
+Limiting closed port RST response from 964 to 200 packets/sec
+Limiting closed port RST response from 1109 to 200 packets/sec
+Limiting closed port RST response from 854 to 200 packets/sec
+Limiting closed port RST response from 1371 to 200 packets/sec
+Limiting closed port RST response from 1317 to 200 packets/sec
+Limiting closed port RST response from 1157 to 200 packets/sec
+Limiting closed port RST response from 384 to 200 packets/sec
+Limiting closed port RST response from 1608 to 200 packets/sec
+Limiting closed port RST response from 1583 to 200 packets/sec
+Limiting closed port RST response from 377 to 200 packets/sec
+Limiting closed port RST response from 276 to 200 packets/sec
+Limiting closed port RST response from 865 to 200 packets/sec
+Limiting closed port RST response from 1325 to 200 packets/sec
+Limiting closed port RST response from 373 to 200 packets/sec
+Limiting closed port RST response from 1203 to 200 packets/sec
+Limiting closed port RST response from 531 to 200 packets/sec
+Limiting closed port RST response from 779 to 200 packets/sec
+Limiting closed port RST response from 1214 to 200 packets/sec
+Limiting closed port RST response from 1335 to 200 packets/sec
+Limiting closed port RST response from 745 to 200 packets/sec
+Limiting closed port RST response from 1343 to 200 packets/sec
+Limiting closed port RST response from 1473 to 200 packets/sec
+Limiting closed port RST response from 1007 to 200 packets/sec
+Limiting closed port RST response from 1172 to 200 packets/sec
+Limiting closed port RST response from 1196 to 200 packets/sec
+Limiting closed port RST response from 1365 to 200 packets/sec
+Limiting closed port RST response from 830 to 200 packets/sec
+Limiting closed port RST response from 679 to 200 packets/sec
+Limiting closed port RST response from 1248 to 200 packets/sec
+Limiting closed port RST response from 505 to 200 packets/sec
+Limiting closed port RST response from 1429 to 200 packets/sec
+Limiting closed port RST response from 1459 to 200 packets/sec
+Limiting closed port RST response from 283 to 200 packets/sec
+Limiting closed port RST response from 1349 to 200 packets/sec
+Limiting closed port RST response from 1350 to 200 packets/sec
+Limiting closed port RST response from 664 to 200 packets/sec
+Limiting closed port RST response from 1417 to 200 packets/sec
+Limiting closed port RST response from 442 to 200 packets/sec
+Limiting closed port RST response from 1346 to 200 packets/sec
+Limiting closed port RST response from 236 to 200 packets/sec
+Limiting closed port RST response from 1294 to 200 packets/sec
+Limiting closed port RST response from 958 to 200 packets/sec
+Limiting closed port RST response from 778 to 200 packets/sec
+Limiting closed port RST response from 975 to 200 packets/sec
+Limiting closed port RST response from 1137 to 200 packets/sec
+Limiting closed port RST response from 1365 to 200 packets/sec
+Limiting closed port RST response from 456 to 200 packets/sec
+Limiting closed port RST response from 363 to 200 packets/sec
+Limiting closed port RST response from 679 to 200 packets/sec
+Limiting closed port RST response from 847 to 200 packets/sec
+Limiting closed port RST response from 1496 to 200 packets/sec
+Limiting closed port RST response from 1353 to 200 packets/sec
+Limiting closed port RST response from 557 to 200 packets/sec
+Limiting closed port RST response from 1228 to 200 packets/sec
+Limiting closed port RST response from 737 to 200 packets/sec
+Limiting closed port RST response from 1339 to 200 packets/sec
+Limiting closed port RST response from 1410 to 200 packets/sec
+Limiting closed port RST response from 1574 to 200 packets/sec
+Limiting closed port RST response from 1464 to 200 packets/sec
+Limiting closed port RST response from 1321 to 200 packets/sec
+Limiting closed port RST response from 1423 to 200 packets/sec
+Limiting closed port RST response from 860 to 200 packets/sec
+Limiting closed port RST response from 1442 to 200 packets/sec
+Limiting closed port RST response from 370 to 200 packets/sec
+Limiting closed port RST response from 1329 to 200 packets/sec
+Limiting closed port RST response from 813 to 200 packets/sec
+Limiting closed port RST response from 1104 to 200 packets/sec
+Limiting closed port RST response from 581 to 200 packets/sec
+Limiting closed port RST response from 710 to 200 packets/sec
+Limiting closed port RST response from 444 to 200 packets/sec
+Limiting closed port RST response from 1022 to 200 packets/sec
+Limiting closed port RST response from 376 to 200 packets/sec
+Limiting closed port RST response from 342 to 200 packets/sec
+Limiting closed port RST response from 1270 to 200 packets/sec
+Limiting closed port RST response from 1368 to 200 packets/sec
+Limiting closed port RST response from 701 to 200 packets/sec
+Limiting closed port RST response from 1529 to 200 packets/sec
+Limiting closed port RST response from 921 to 200 packets/sec
+Limiting closed port RST response from 1459 to 200 packets/sec
+Limiting closed port RST response from 1366 to 200 packets/sec
+Limiting closed port RST response from 1412 to 200 packets/sec
+Limiting closed port RST response from 1430 to 200 packets/sec
+Limiting closed port RST response from 1367 to 200 packets/sec
+Limiting closed port RST response from 1385 to 200 packets/sec
+Limiting closed port RST response from 1350 to 200 packets/sec
+Limiting closed port RST response from 349 to 200 packets/sec
+Limiting closed port RST response from 499 to 200 packets/sec
+Limiting closed port RST response from 1188 to 200 packets/sec
+Limiting closed port RST response from 1170 to 200 packets/sec
+Limiting closed port RST response from 1299 to 200 packets/sec
+Limiting closed port RST response from 500 to 200 packets/sec
+Limiting closed port RST response from 1254 to 200 packets/sec
+ugen0.2: <Vantec D300S3> at usbus0
+umass0 on uhub3
+umass0: <Vantec D300S3, class 0/0, rev 3.00/1.00, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4100
+umass0:11:0: Attached to scbus11
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ugen0.2: <Vantec D300S3> at usbus0 (disconnected)
+umass0: at uhub3, port 2, addr 1 (disconnected)
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> s/n ... detached
+(da0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+ugen0.2: <Vantec D300S3> at usbus0
+umass0 on uhub3
+umass0: <Vantec D300S3, class 0/0, rev 3.00/1.00, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc101
+umass0:11:0: Attached to scbus11
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 1430799MB (2930277168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+Limiting closed port RST response from 334 to 200 packets/sec
+Limiting closed port RST response from 555 to 200 packets/sec
+Limiting closed port RST response from 562 to 200 packets/sec
+Limiting closed port RST response from 379 to 200 packets/sec
+Limiting closed port RST response from 1248 to 200 packets/sec
+Limiting closed port RST response from 1039 to 200 packets/sec
+Limiting closed port RST response from 1113 to 200 packets/sec
+Limiting closed port RST response from 1375 to 200 packets/sec
+Limiting closed port RST response from 1482 to 200 packets/sec
+Limiting closed port RST response from 1364 to 200 packets/sec
+Limiting closed port RST response from 1353 to 200 packets/sec
+Limiting closed port RST response from 1141 to 200 packets/sec
+Limiting closed port RST response from 1422 to 200 packets/sec
+Limiting closed port RST response from 1461 to 200 packets/sec
+Limiting closed port RST response from 1501 to 200 packets/sec
+Limiting closed port RST response from 1310 to 200 packets/sec
+ugen0.2: <Vantec D300S3> at usbus0 (disconnected)
+umass0: at uhub3, port 2, addr 1 (disconnected)
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> s/n ... detached
+(da0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+ugen0.2: <Vantec D300S3> at usbus0
+umass0 on uhub3
+umass0: <Vantec D300S3, class 0/0, rev 3.00/1.00, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc101
+umass0:11:0: Attached to scbus11
+da0 at umass-sim0 bus 0 scbus11 target 0 lun 0
+da0: <ASMT 2105 0> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 1430799MB (2930277168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+Limiting closed port RST response from 755 to 200 packets/sec
+Limiting closed port RST response from 334 to 200 packets/sec
+Limiting closed port RST response from 1376 to 200 packets/sec
+Limiting closed port RST response from 646 to 200 packets/sec
+Limiting closed port RST response from 1187 to 200 packets/sec
+Limiting closed port RST response from 219 to 200 packets/sec
+Limiting closed port RST response from 1185 to 200 packets/sec
+Limiting closed port RST response from 1007 to 200 packets/sec
+Limiting closed port RST response from 552 to 200 packets/sec
+Limiting closed port RST response from 1071 to 200 packets/sec
+Limiting closed port RST response from 829 to 200 packets/sec
+Limiting closed port RST response from 299 to 200 packets/sec
+Limiting closed port RST response from 499 to 200 packets/sec
+Limiting closed port RST response from 1222 to 200 packets/sec
+Limiting closed port RST response from 1505 to 200 packets/sec
+Limiting closed port RST response from 1422 to 200 packets/sec
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+Limiting closed port RST response from 998 to 200 packets/sec
+Limiting closed port RST response from 1482 to 200 packets/sec
+Limiting closed port RST response from 1325 to 200 packets/sec
+Limiting closed port RST response from 1406 to 200 packets/sec
+Limiting closed port RST response from 713 to 200 packets/sec
+epair2a: Ethernet address: ...
+epair2b: Ethernet address: ...
+epair2a: link state changed to UP
+epair2b: link state changed to UP
+epair2a: changing name to 'vnet0.3'
+epair2b: changing name to 'epair0b'
+vnet0.3: promiscuous mode enabled
+lo0: link state changed to UP
+Limiting closed port RST response from 1606 to 200 packets/sec
+Limiting closed port RST response from 1221 to 200 packets/sec
+Limiting closed port RST response from 1287 to 200 packets/sec

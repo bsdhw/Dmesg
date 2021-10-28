@@ -1,0 +1,151 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p12-HBSD #0  3c6040c7243(stable/21.1)-dirty: Mon Jan 25 12:27:52 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: AMD Athlon(tm) 64 X2 Dual Core Processor 4200+ (2210.10-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x60fb2  Family=0xf  Model=0x6b  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x2001<SSE3,CX16>
+  AMD Features=0xea500800<SYSCALL,NX,MMX+,FFXSR,RDTSCP,LM,3DNow!+,3DNow!>
+  AMD Features2=0x11f<LAHF,CMP,SVM,ExtAPIC,CR8,Prefetch>
+  SVM: (disabled in BIOS) NAsids=64
+real memory  = 2147483648 (2048 MB)
+avail memory = 1974800384 (1883 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <GBT    NVDAACPI>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0: Changing APIC ID to 2
+ioapic0 <Version 1.1> irqs 0-23 on motherboard
+Launching APs: 1
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128f7c0, 0) error 19
+000.000052 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <GBT NVDAACPI> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfeff0000-0xfeff03ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 25000000 Hz quality 950
+atrtc0: <AT realtime clock> port 0x70-0x73 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1008-0x100b on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <memory, RAM> at device 0.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 1.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory, RAM> at device 1.2 (no driver attached)
+ohci0: <nVidia nForce MCP61 USB Controller> mem 0xfbfff000-0xfbffffff irq 21 at device 2.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <NVIDIA nForce MCP61 USB 2.0 controller> mem 0xfbffe000-0xfbffe0ff irq 22 at device 2.1 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib1: <ACPI PCI-PCI bridge> at device 4.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+dc0: <Davicom DM9102A 10/100BaseTX> port 0xcc00-0xccff mem 0xfbeff000-0xfbeff0ff irq 16 at device 6.0 on pci1
+miibus0: <MII bus> on dc0
+amphy0: <DM9102 10/100 media interface> PHY 1 on miibus0
+amphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+dc0: Ethernet address: ...
+fxp0: <Intel 82559 Pro/100 Ethernet> port 0xc800-0xc83f mem 0xfbefe000-0xfbefefff,0xfbd00000-0xfbdfffff irq 17 at device 7.0 on pci1
+miibus1: <MII bus> on fxp0
+inphy0: <i82555 10/100 media interface> PHY 1 on miibus1
+inphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+fxp0: Ethernet address: ...
+hdac0: <NVIDIA MCP61 HDA Controller> mem 0xfbff8000-0xfbffbfff irq 23 at device 5.0 on pci0
+atapci0: <nVidia nForce MCP61 UDMA133 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xf000-0xf00f at device 6.0 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+ata1: <ATA channel> at channel 1 on atapci0
+nfe0: <NVIDIA nForce MCP61 Networking Adapter> port 0xec00-0xec07 mem 0xfbffd000-0xfbffdfff irq 20 at device 7.0 on pci0
+miibus2: <MII bus> on nfe0
+rlphy0: <RTL8201L 10/100 media interface> PHY 1 on miibus2
+rlphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+nfe0: Ethernet address: ...
+atapci1: <nVidia nForce MCP61 SATA300 controller> port 0x9f0-0x9f7,0xbf0-0xbf3,0x970-0x977,0xb70-0xb73,0xd800-0xd80f mem 0xfbffc000-0xfbffcfff irq 21 at device 8.0 on pci0
+ata2: <ATA channel> at channel 0 on atapci1
+ata3: <ATA channel> at channel 1 on atapci1
+vgapci0: <VGA-compatible display> mem 0xf9000000-0xf9ffffff,0xe0000000-0xefffffff,0xfa000000-0xfaffffff irq 22 at device 13.0 on pci0
+vgapci0: Boot video device
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+orm0: <ISA Option ROM> at iomem 0xd0000-0xd17ff pnpid ORM0000 on isa0
+powernow0: <PowerNow! K8> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <Realtek ALC662 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC662 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC662 (Analog 2.0+HP/2.0)> at nid 20,27 and 24,25,26 on hdaa0
+pcm1: <Realtek ALC662 (Rear Digital)> at nid 30 on hdaa0
+ugen0.1: <nVidia OHCI root HUB> at usbus0
+ugen1.1: <nVidia EHCI root HUB> at usbus1
+uhub0: <nVidia OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub1: <nVidia EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: 10 ports with 10 removable, self powered
+uhub1: 10 ports with 10 removable, self powered
+ada0 at ata0 bus 0 scbus0 target 0 lun 0
+ada0: <WDC WD400BB-08JHC0 06.01C06> ATA-6 device
+ada0: Serial Number...
+ada0: 100.000MB/s transfers (UDMA5, PIO 8192bytes)
+ada0: 38158MB (78148031 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+dc0: link state changed to UP
+fxp0: link state changed to DOWN
+nfe0: link state changed to UP
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+nfe0: link state changed to DOWN
+nfe0: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

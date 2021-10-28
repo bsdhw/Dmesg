@@ -1,0 +1,2213 @@
+---<<BOOT>>---
+APIC: Using the MADT enumerator.
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 main-n244793-5ae8b018321-dirty: Sat Feb 13 01:49:29 EET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+PPIM 0: PA=0xe1000000, VA=0xffffffff85110000, size=0x7e9000, mode=0x1
+pmap: large map 8 PML4 slots (4096 GB)
+VT(efifb): resolution 1920x1080
+Preloaded elf kernel "/boot/kernel/kernel" at 0xffffffff84e90000.
+Preloaded elf obj module "/boot/modules/nvidia-modeset.ko" at 0xffffffff84e9ceb8.
+Preloaded elf obj module "/boot/kernel/linux_common.ko" at 0xffffffff84e9d528.
+Preloaded elf obj module "/boot/kernel/linux.ko" at 0xffffffff84e9de18.
+Preloaded elf obj module "/boot/modules/nvidia.ko" at 0xffffffff84e9e680.
+Preloaded elf obj module "/boot/kernel/cuse.ko" at 0xffffffff84e9ece8.
+Preloaded elf obj module "/boot/kernel/cc_cdg.ko" at 0xffffffff84e9f3d0.
+Preloaded elf obj module "/boot/kernel/h_ertt.ko" at 0xffffffff84e9fab8.
+Preloaded elf obj module "/boot/kernel/zfs.ko" at 0xffffffff84ea0060.
+Preloaded elf obj module "/boot/kernel/cc_htcp.ko" at 0xffffffff84ea0848.
+Preloaded elf obj module "/boot/modules/vboxdrv.ko" at 0xffffffff84ea0f30.
+Preloaded elf obj module "/boot/kernel/hwpmc.ko" at 0xffffffff84ea1520.
+Preloaded elf obj module "/boot/kernel/msdosfs_iconv.ko" at 0xffffffff84ea1bc8.
+Preloaded elf obj module "/boot/kernel/libiconv.ko" at 0xffffffff84ea2138.
+Preloaded hostuuid "/etc/hostid" at 0xffffffff84ea2828.
+Preloaded boot_entropy_cache "/boot/entropy" at 0xffffffff84ea2878.
+Calibrating TSC clock ... TSC clock: 3700315203 Hz
+CPU: AMD Ryzen 9 5900X 12-Core Processor             (3700.32-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0xa20f10  Family=0x19  Model=0x21  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c97a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x40068c<UMIP,PKU,VAES,VPCLMULQDQ,RDPID>
+  Structured Extended Features3=0x10<FSRM>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x111ef657<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,IBRS,STIBP,STIBP_ALWAYSON,PREFER_IBRS,SSBD>
+  SVM: Features=0x1bbcff<NP,LbrVirt,SVML,NRIPS,TscRateMsr,VmcbClean,FlushByAsid,DecodeAssist,PauseFilter,EncryptedMcodePatch,PauseFilterThreshold,AVIC,V_VMSAVE_VMLOAD,vGIF,GMET,<b19>,GuesSpecCtl>
+Revision=1, ASIDs=32768
+  TSC: P-state invariant, performance statistics
+L1 2MB data TLB: 64 entries, fully associative
+L1 2MB instruction TLB: 64 entries, fully associative
+L1 4KB data TLB: 64 entries, fully associative
+L1 4KB instruction TLB: 64 entries, fully associative
+L1 data cache: 32 kbytes, 64 bytes/line, 1 lines/tag, 8-way associative
+L1 instruction cache: 32 kbytes, 64 bytes/line, 1 lines/tag, 8-way associative
+L2 2MB data TLB: 2048 entries, 4-way associative
+L2 2MB instruction TLB: 512 entries, 4-way associative
+L2 4KB data TLB: 2048 entries, 8-way associative
+L2 4KB instruction TLB: 2048 entries, 8-way associative
+L2 unified cache: 512 kbytes, 64 bytes/line, 1 lines/tag, 8-way associative
+real memory  = 34359738368 (32768 MB)
+Physical memory chunk(s):
+0x0000000000010000 - 0x000000000009efff, 585728 bytes (143 pages)
+0x0000000000100000 - 0x00000000001fffff, 1048576 bytes (256 pages)
+0x0000000005100000 - 0x0000000009e1ffff, 80871424 bytes (19744 pages)
+0x000000000a000000 - 0x000000000a1fffff, 2097152 bytes (512 pages)
+0x000000000a20e000 - 0x00000000bc4a3fff, 2989056000 bytes (729750 pages)
+0x00000000bdc03000 - 0x00000000beffffff, 20959232 bytes (5117 pages)
+0x0000000100001000 - 0x000000080936bfff, 30219350016 bytes (7377771 pages)
+0x000000083f000000 - 0x000000083f1dffff, 1966080 bytes (480 pages)
+avail memory = 33230528512 (31691 MB)
+MADT: Found CPU APIC ID 0 ACPI ID 0: enabled
+SMP: Added CPU 0 (AP)
+MADT: Found CPU APIC ID 2 ACPI ID 2: enabled
+SMP: Added CPU 2 (AP)
+MADT: Found CPU APIC ID 4 ACPI ID 4: enabled
+SMP: Added CPU 4 (AP)
+MADT: Found CPU APIC ID 6 ACPI ID 6: enabled
+SMP: Added CPU 6 (AP)
+MADT: Found CPU APIC ID 8 ACPI ID 8: enabled
+SMP: Added CPU 8 (AP)
+MADT: Found CPU APIC ID 10 ACPI ID 10: enabled
+SMP: Added CPU 10 (AP)
+MADT: Found CPU APIC ID 16 ACPI ID 12: enabled
+SMP: Added CPU 16 (AP)
+MADT: Found CPU APIC ID 18 ACPI ID 14: enabled
+SMP: Added CPU 18 (AP)
+MADT: Found CPU APIC ID 20 ACPI ID 16: enabled
+SMP: Added CPU 20 (AP)
+MADT: Found CPU APIC ID 22 ACPI ID 18: enabled
+SMP: Added CPU 22 (AP)
+MADT: Found CPU APIC ID 24 ACPI ID 20: enabled
+SMP: Added CPU 24 (AP)
+MADT: Found CPU APIC ID 26 ACPI ID 22: enabled
+SMP: Added CPU 26 (AP)
+MADT: Found CPU APIC ID 1 ACPI ID 1: enabled
+SMP: Added CPU 1 (AP)
+MADT: Found CPU APIC ID 3 ACPI ID 3: enabled
+SMP: Added CPU 3 (AP)
+MADT: Found CPU APIC ID 5 ACPI ID 5: enabled
+SMP: Added CPU 5 (AP)
+MADT: Found CPU APIC ID 7 ACPI ID 7: enabled
+SMP: Added CPU 7 (AP)
+MADT: Found CPU APIC ID 9 ACPI ID 9: enabled
+SMP: Added CPU 9 (AP)
+MADT: Found CPU APIC ID 11 ACPI ID 11: enabled
+SMP: Added CPU 11 (AP)
+MADT: Found CPU APIC ID 17 ACPI ID 13: enabled
+SMP: Added CPU 17 (AP)
+MADT: Found CPU APIC ID 19 ACPI ID 15: enabled
+SMP: Added CPU 19 (AP)
+MADT: Found CPU APIC ID 21 ACPI ID 17: enabled
+SMP: Added CPU 21 (AP)
+MADT: Found CPU APIC ID 23 ACPI ID 19: enabled
+SMP: Added CPU 23 (AP)
+MADT: Found CPU APIC ID 25 ACPI ID 21: enabled
+SMP: Added CPU 25 (AP)
+MADT: Found CPU APIC ID 27 ACPI ID 23: enabled
+SMP: Added CPU 27 (AP)
+MADT: Found CPU APIC ID 0 ACPI ID 24: disabled
+MADT: Found CPU APIC ID 0 ACPI ID 25: disabled
+MADT: Found CPU APIC ID 0 ACPI ID 26: disabled
+MADT: Found CPU APIC ID 0 ACPI ID 27: disabled
+MADT: Found CPU APIC ID 0 ACPI ID 28: disabled
+MADT: Found CPU APIC ID 0 ACPI ID 29: disabled
+MADT: Found CPU APIC ID 0 ACPI ID 30: disabled
+MADT: Found CPU APIC ID 0 ACPI ID 31: disabled
+Event timer "LAPIC" quality 600
+LAPIC: ipi_wait() us multiplier 20 (r 17684890 tsc 3700315203)
+ACPI APIC Table: <ALASKA A M I >
+Package ID shift: 5
+L3 cache ID shift: 4
+L2 cache ID shift: 1
+L1 cache ID shift: 1
+Core ID shift: 1
+INTR: Adding local APIC 2 as a target
+INTR: Adding local APIC 4 as a target
+INTR: Adding local APIC 6 as a target
+INTR: Adding local APIC 8 as a target
+INTR: Adding local APIC 10 as a target
+INTR: Adding local APIC 16 as a target
+INTR: Adding local APIC 18 as a target
+INTR: Adding local APIC 20 as a target
+INTR: Adding local APIC 22 as a target
+INTR: Adding local APIC 24 as a target
+INTR: Adding local APIC 26 as a target
+FreeBSD/SMP: Multiprocessor System Detected: 24 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 6 core(s) x 2 hardware threads
+Package HW ID = 0
+	Core HW ID = 0
+		CPU0 (BSP): APIC ID: 0
+		CPU1 (AP/HT): APIC ID: 1
+	Core HW ID = 1
+		CPU2 (AP): APIC ID: 2
+		CPU3 (AP/HT): APIC ID: 3
+	Core HW ID = 2
+		CPU4 (AP): APIC ID: 4
+		CPU5 (AP/HT): APIC ID: 5
+	Core HW ID = 3
+		CPU6 (AP): APIC ID: 6
+		CPU7 (AP/HT): APIC ID: 7
+	Core HW ID = 4
+		CPU8 (AP): APIC ID: 8
+		CPU9 (AP/HT): APIC ID: 9
+	Core HW ID = 5
+		CPU10 (AP): APIC ID: 10
+		CPU11 (AP/HT): APIC ID: 11
+	Core HW ID = 8
+		CPU12 (AP): APIC ID: 16
+		CPU13 (AP/HT): APIC ID: 17
+	Core HW ID = 9
+		CPU14 (AP): APIC ID: 18
+		CPU15 (AP/HT): APIC ID: 19
+	Core HW ID = 10
+		CPU16 (AP): APIC ID: 20
+		CPU17 (AP/HT): APIC ID: 21
+	Core HW ID = 11
+		CPU18 (AP): APIC ID: 22
+		CPU19 (AP/HT): APIC ID: 23
+	Core HW ID = 12
+		CPU20 (AP): APIC ID: 24
+		CPU21 (AP/HT): APIC ID: 25
+	Core HW ID = 13
+		CPU22 (AP): APIC ID: 26
+		CPU23 (AP/HT): APIC ID: 27
+APIC: CPU 0 has ACPI ID 0
+APIC: CPU 1 has ACPI ID 1
+APIC: CPU 2 has ACPI ID 2
+APIC: CPU 3 has ACPI ID 3
+APIC: CPU 4 has ACPI ID 4
+APIC: CPU 5 has ACPI ID 5
+APIC: CPU 6 has ACPI ID 6
+APIC: CPU 7 has ACPI ID 7
+APIC: CPU 8 has ACPI ID 8
+APIC: CPU 9 has ACPI ID 9
+APIC: CPU 10 has ACPI ID 10
+APIC: CPU 11 has ACPI ID 11
+APIC: CPU 12 has ACPI ID 12
+APIC: CPU 13 has ACPI ID 13
+APIC: CPU 14 has ACPI ID 14
+APIC: CPU 15 has ACPI ID 15
+APIC: CPU 16 has ACPI ID 16
+APIC: CPU 17 has ACPI ID 17
+APIC: CPU 18 has ACPI ID 18
+APIC: CPU 19 has ACPI ID 19
+APIC: CPU 20 has ACPI ID 20
+APIC: CPU 21 has ACPI ID 21
+APIC: CPU 22 has ACPI ID 22
+APIC: CPU 23 has ACPI ID 23
+x86bios:  IVT 0x000000-0x0004ff at 0xfffff80000000000
+x86bios: SSEG 0x09c000-0x09cfff at 0xfffffe003a696000
+x86bios: EBDA 0x09d000-0x09ffff at 0xfffff8000009d000
+x86bios:  ROM 0x0a0000-0x0fefff at 0xfffff800000a0000
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 7
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 8
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 9
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 10
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 11
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 12
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 13
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 14
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 15
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 16
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 17
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 18
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 19
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 20
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 22
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 24
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 25
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 26
+lapic0: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 27
+Pentium Pro MTRR support enabled
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: read 4096 bytes from preloaded cache
+random: unblocking device.
+VIMAGE (virtualized network stack) enabled
+hostuuid: using XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ULE: setup cpu 0
+ULE: setup cpu 1
+ULE: setup cpu 2
+ULE: setup cpu 3
+ULE: setup cpu 4
+ULE: setup cpu 5
+ULE: setup cpu 6
+ULE: setup cpu 7
+ULE: setup cpu 8
+ULE: setup cpu 9
+ULE: setup cpu 10
+ULE: setup cpu 11
+ULE: setup cpu 12
+ULE: setup cpu 13
+ULE: setup cpu 14
+ULE: setup cpu 15
+ULE: setup cpu 16
+ULE: setup cpu 17
+ULE: setup cpu 18
+ULE: setup cpu 19
+ULE: setup cpu 20
+ULE: setup cpu 21
+ULE: setup cpu 22
+ULE: setup cpu 23
+ACPI: RSDP 0x00000000BCF13014 000024 (v02 ALASKA)
+ACPI: XSDT 0x00000000BCF12728 0000C4 (v01 ALASKA A M I    01072009 AMI  01000013)
+ACPI: FACP 0x00000000BC881000 000114 (v06 ALASKA A M I    01072009 AMI  00010013)
+ACPI: DSDT 0x00000000BC87A000 006305 (v02 ALASKA A M I    01072009 INTL 20190509)
+ACPI: FACS 0x00000000BCF0D000 000040
+ACPI: SSDT 0x00000000BC890000 00B10B (v01 GBT    GSWApp   00000001 INTL 20190509)
+ACPI: SSDT 0x00000000BC887000 008C98 (v02 AMD    AmdTable 00000002 MSFT 04000000)
+ACPI: SSDT 0x00000000BC883000 003C65 (v01 AMD    AMD AOD  00000001 INTL 20190509)
+ACPI: SSDT 0x00000000BC882000 000164 (v02 ALASKA CPUSSDT  01072009 AMI  01072009)
+ACPI: FIDT 0x00000000BC879000 00009C (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: MCFG 0x00000000BC878000 00003C (v01 ALASKA A M I    01072009 MSFT 00010013)
+ACPI: HPET 0x00000000BC877000 000038 (v01 ALASKA A M I    01072009 AMI  00000005)
+ACPI: SSDT 0x00000000BC876000 000024 (v01 AMD    BIXBY    00001000 INTL 20190509)
+ACPI: IVRS 0x00000000BC875000 0000D0 (v02 AMD    AmdTable 00000001 AMD  00000000)
+ACPI: PCCT 0x00000000BC874000 00006E (v02 AMD    AmdTable 00000001 AMD  00000000)
+ACPI: SSDT 0x00000000BC86E000 005EF9 (v02 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: CRAT 0x00000000BC86C000 001118 (v01 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: CDIT 0x00000000BC86B000 000029 (v01 AMD    AmdTable 00000001 AMD  00000001)
+ACPI: SSDT 0x00000000BC86A000 0005F6 (v01 AMD    QOGIRDGP 00000001 INTL 20190509)
+ACPI: SSDT 0x00000000BC866000 0036E3 (v01 AMD    QOGIRN   00000001 INTL 20190509)
+ACPI: WSMT 0x00000000BC865000 000028 (v01 ALASKA A M I    01072009 AMI  00010013)
+ACPI: APIC 0x00000000BC864000 00015E (v03 ALASKA A M I    01072009 AMI  00010013)
+ACPI: SSDT 0x00000000BC862000 00147F (v01 AMD    QOGIRC   00000001 INTL 20190509)
+ACPI: FPDT 0x00000000BC861000 000044 (v01 ALASKA A M I    01072009 AMI  01000013)
+MADT: Found IO APIC ID 25, Interrupt 0 at 0xfec00000
+ioapic0: ver 0x21 maxredir 0x17
+ioapic0: Routing external 8259A's -> intpin 0
+MADT: Found IO APIC ID 26, Interrupt 24 at 0xfec01000
+ioapic1: ver 0x21 maxredir 0x1f
+lapic: Routing NMI -> LINT1
+lapic: LINT1 trigger: edge
+lapic: LINT1 polarity: high
+MADT: Interrupt override: source 0, irq 2
+ioapic0: Routing IRQ 0 -> intpin 2
+MADT: Interrupt override: source 9, irq 9
+ioapic0: intpin 9 trigger: level
+ioapic0: intpin 9 polarity: low
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+lapic: Divisor 2, Frequency 50004256 Hz
+cpu0 BSP:
+     ID: 0x00000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic20: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic20: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic20: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic20: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic20: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic20: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #16 Launched!
+cpu16 AP:
+     ID: 0x14000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic11: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic11: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic11: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic11: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic11: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic11: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #11 Launched!
+cpu11 AP:
+     ID: 0x0b000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic10: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic10: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic10: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic10: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic10: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic10: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #10 Launched!
+cpu10 AP:
+     ID: 0x0a000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic26: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic26: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic26: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic26: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic26: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic26: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #22 Launched!
+cpu22 AP:
+     ID: 0x1a000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic1: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic1: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic1: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic1: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic1: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic1: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #1 Launched!
+cpu1 AP:
+     ID: 0x01000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic7: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic7: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic7: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic7: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic7: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic7: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #7 Launched!
+cpu7 AP:
+     ID: 0x07000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic19: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic19: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic19: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic19: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic19: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic19: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #15 Launched!
+cpu15 AP:
+     ID: 0x13000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic24: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic24: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic24: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic24: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic24: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic24: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #20 Launched!
+cpu20 AP:
+     ID: 0x18000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic21: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic21: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic21: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic21: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic21: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic21: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #17 Launched!
+cpu17 AP:
+     ID: 0x15000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic3: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic3: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic3: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic3: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic3: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic3: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #3 Launched!
+cpu3 AP:
+     ID: 0x03000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic8: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic8: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic8: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic8: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic8: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic8: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #8 Launched!
+cpu8 AP:
+     ID: 0x08000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic17: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic17: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic17: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic17: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic17: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic17: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #13 Launched!
+cpu13 AP:
+     ID: 0x11000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic27: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic27: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic27: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic27: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic27: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic27: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #23 Launched!
+cpu23 AP:
+     ID: 0x1b000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic4: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic4: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic4: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic4: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic4: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic4: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #4 Launched!
+cpu4 AP:
+     ID: 0x04000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic9: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic9: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic9: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic9: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic9: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic9: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #9 Launched!
+cpu9 AP:
+     ID: 0x09000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic16: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic16: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic16: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic16: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic16: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic16: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #12 Launched!
+cpu12 AP:
+     ID: 0x10000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic22: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic22: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic22: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic22: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic22: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic22: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #18 Launched!
+cpu18 AP:
+     ID: 0x16000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic2: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic2: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic2: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic2: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic2: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic2: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #2 Launched!
+cpu2 AP:
+     ID: 0x02000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic6: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic6: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic6: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic6: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic6: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic6: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #6 Launched!
+cpu6 AP:
+     ID: 0x06000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic25: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic25: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic25: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic25: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic25: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic25: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #21 Launched!
+cpu21 AP:
+     ID: 0x19000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic5: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic5: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic5: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic5: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic5: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic5: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #5 Launched!
+cpu5 AP:
+     ID: 0x05000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic18: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic18: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic18: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic18: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic18: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic18: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #14 Launched!
+cpu14 AP:
+     ID: 0x12000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+lapic23: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 0
+lapic23: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 1
+lapic23: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 2
+lapic23: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 3
+lapic23: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 5
+lapic23: MCE Thresholding ELVT unmasked
+amd_thresholding_monitor: Starting AMD thresholding on bank 6
+SMP: AP CPU #19 Launched!
+cpu19 AP:
+     ID: 0x17000000   VER: 0x80050010 LDR: 0x00000000 DFR: 0xffffffff
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000001ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   AMD ext features: 0x00040007
+   AMD elvt0: 0x00010000
+   AMD elvt1: 0x000000f2
+   AMD elvt2: 0x00010000
+   AMD elvt3: 0x00010000
+SMP: passed TSC synchronization test
+TSC timecounter discards lower 1 bit(s)
+Timecounter "TSC-low" frequency 1850157601 Hz quality 1000
+KTLS: Initialized 24 threads
+Cuse v0.1.36 @ /dev/cuse
+wlan: <802.11 Link Layer>
+snd_unit_init() u=0x00ff8000 [512] d=0x00007c00 [32] c=0x000003ff [1024]
+feeder_register: snd_unit=-1 snd_maxautovchans=16 latency=2 feeder_rate_min=1 feeder_rate_max=2016000 feeder_rate_round=25
+random: entropy device external interface
+null: <full device, null device, zero device>
+crypto: <crypto core>
+[ath_hal] loaded
+tcp_log: tcp_log device
+io: <I/O>
+kbd: new array size 4
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd1 at kbdmux0
+mem: <memory>
+000.000079 [4350] netmap_init               netmap: loaded module
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  460.39  Thu Jan 21 21:42:44 UTC 2021
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+crypto: assign cryptosoft0 driver id 0, flags 0x6000000
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+crypto: assign aesni0 driver id 1, flags 0xe000000
+acpi0: <ALASKA A M I >
+ACPI: 10 ACPI AML tables successfully acquired and loaded
+PCIe: Memory Mapped configuration base @ 0xf0000000
+ioapic0: routing intpin 9 (ISA IRQ 9) to lapic 0 vector 48
+acpi0: Power Button (fixed)
+acpi0: wakeup code va 0xfffffe003a595000 pa 0x9d000
+cpu0: Processor \134_PR_.C000 (ACPI ID 0) -> APIC ID 0
+cpu0: <ACPI CPU> on acpi0
+cpu1: Processor \134_PR_.C001 (ACPI ID 1) -> APIC ID 1
+cpu1: <ACPI CPU> on acpi0
+cpu2: Processor \134_PR_.C002 (ACPI ID 2) -> APIC ID 2
+cpu2: <ACPI CPU> on acpi0
+cpu3: Processor \134_PR_.C003 (ACPI ID 3) -> APIC ID 3
+cpu3: <ACPI CPU> on acpi0
+cpu4: Processor \134_PR_.C004 (ACPI ID 4) -> APIC ID 4
+cpu4: <ACPI CPU> on acpi0
+cpu5: Processor \134_PR_.C005 (ACPI ID 5) -> APIC ID 5
+cpu5: <ACPI CPU> on acpi0
+cpu6: Processor \134_PR_.C006 (ACPI ID 6) -> APIC ID 6
+cpu6: <ACPI CPU> on acpi0
+cpu7: Processor \134_PR_.C007 (ACPI ID 7) -> APIC ID 7
+cpu7: <ACPI CPU> on acpi0
+cpu8: Processor \134_PR_.C008 (ACPI ID 8) -> APIC ID 8
+cpu8: <ACPI CPU> on acpi0
+cpu9: Processor \134_PR_.C009 (ACPI ID 9) -> APIC ID 9
+cpu9: <ACPI CPU> on acpi0
+cpu10: Processor \134_PR_.C00A (ACPI ID 10) -> APIC ID 10
+cpu10: <ACPI CPU> on acpi0
+cpu11: Processor \134_PR_.C00B (ACPI ID 11) -> APIC ID 11
+cpu11: <ACPI CPU> on acpi0
+cpu12: Processor \134_PR_.C00C (ACPI ID 12) -> APIC ID 12
+cpu12: <ACPI CPU> on acpi0
+cpu13: Processor \134_PR_.C00D (ACPI ID 13) -> APIC ID 13
+cpu13: <ACPI CPU> on acpi0
+cpu14: Processor \134_PR_.C00E (ACPI ID 14) -> APIC ID 14
+cpu14: <ACPI CPU> on acpi0
+cpu15: Processor \134_PR_.C00F (ACPI ID 15) -> APIC ID 15
+cpu15: <ACPI CPU> on acpi0
+cpu16: Processor \134_PR_.C010 (ACPI ID 16) -> APIC ID 16
+cpu16: <ACPI CPU> on acpi0
+cpu17: Processor \134_PR_.C011 (ACPI ID 17) -> APIC ID 17
+cpu17: <ACPI CPU> on acpi0
+cpu18: Processor \134_PR_.C012 (ACPI ID 18) -> APIC ID 18
+cpu18: <ACPI CPU> on acpi0
+cpu19: Processor \134_PR_.C013 (ACPI ID 19) -> APIC ID 19
+cpu19: <ACPI CPU> on acpi0
+cpu20: Processor \134_PR_.C014 (ACPI ID 20) -> APIC ID 20
+cpu20: <ACPI CPU> on acpi0
+cpu21: Processor \134_PR_.C015 (ACPI ID 21) -> APIC ID 21
+cpu21: <ACPI CPU> on acpi0
+cpu22: Processor \134_PR_.C016 (ACPI ID 22) -> APIC ID 22
+cpu22: <ACPI CPU> on acpi0
+cpu23: Processor \134_PR_.C017 (ACPI ID 23) -> APIC ID 23
+cpu23: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+ioapic0: routing intpin 2 (ISA IRQ 0) to lapic 2 vector 48
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+ioapic0: routing intpin 8 (ISA IRQ 8) to lapic 4 vector 48
+ioapic0: routing intpin 8 (ISA IRQ 8) to lapic 0 vector 49
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+hpet0: vendor 0x1022, rev 0x1, 14318180Hz, 3 timers, legacy route
+hpet0:  t0: irqs 0x00c00000 (0), MSI, periodic
+hpet0:  t1: irqs 0x00c00000 (0), MSI, periodic
+hpet0:  t2: irqs 0x00c00000 (0), MSI, periodic
+Timecounter "HPET" frequency 14318180 Hz quality 950
+msi: routing MSI-X IRQ 56 to local APIC 6 vector 48
+msi: routing MSI-X IRQ 57 to local APIC 8 vector 48
+msi: routing MSI-X IRQ 58 to local APIC 10 vector 48
+msi: Assigning MSI-X IRQ 56 to local APIC 0 vector 50
+msi: Assigning MSI-X IRQ 57 to local APIC 0 vector 51
+msi: Assigning MSI-X IRQ 58 to local APIC 0 vector 52
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+ACPI timer: 1/1 1/1 1/2 1/2 1/2 1/2 1/2 1/3 1/2 1/2 -> 10
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pci_link0:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0  255   N     0  4 5 7 10 11 14 15
+  Validation          0  255   N     0  4 5 7 10 11 14 15
+  After Disable       0  255   N     0  4 5 7 10 11 14 15
+pci_link1:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0  255   N     0  4 5 7 10 11 14 15
+  Validation          0  255   N     0  4 5 7 10 11 14 15
+  After Disable       0  255   N     0  4 5 7 10 11 14 15
+pci_link2:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0  255   N     0  4 5 7 10 11 14 15
+  Validation          0  255   N     0  4 5 7 10 11 14 15
+  After Disable       0  255   N     0  4 5 7 10 11 14 15
+pci_link3:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0  255   N     0  4 5 7 10 11 14 15
+  Validation          0  255   N     0  4 5 7 10 11 14 15
+  After Disable       0  255   N     0  4 5 7 10 11 14 15
+pci_link4:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0  255   N     0  4 5 7 10 11 14 15
+  Validation          0  255   N     0  4 5 7 10 11 14 15
+  After Disable       0  255   N     0  4 5 7 10 11 14 15
+pci_link5:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0  255   N     0  4 5 7 10 11 14 15
+  Validation          0  255   N     0  4 5 7 10 11 14 15
+  After Disable       0  255   N     0  4 5 7 10 11 14 15
+pci_link6:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0  255   N     0  4 5 7 10 11 14 15
+  Validation          0  255   N     0  4 5 7 10 11 14 15
+  After Disable       0  255   N     0  4 5 7 10 11 14 15
+pci_link7:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0  255   N     0  4 5 7 10 11 14 15
+  Validation          0  255   N     0  4 5 7 10 11 14 15
+  After Disable       0  255   N     0  4 5 7 10 11 14 15
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pcib0: decoding 5 range 0-0xff
+pcib0: decoding 4 range 0-0x3af
+pcib0: decoding 4 range 0x3e0-0xcf7
+pcib0: decoding 4 range 0x3b0-0x3df
+pcib0: decoding 4 range 0xd00-0xffff
+pcib0: decoding 3 range 0xa0000-0xbffff
+pcib0: decoding 3 range 0xc0000-0xdffff
+pcib0: decoding 3 range 0xc0000000-0xfec02fff
+pcib0: decoding 3 range 0xfee00000-0xffffffff
+pci0: <ACPI PCI bus> on pcib0
+pci0: domain=0, physical bus=0
+found->	vendor=0x1022, dev=0x1480, revid=0x00
+	domain=0, bus=0, slot=0, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1481, revid=0x00
+	domain=0, bus=0, slot=0, func=2
+	class=08-06-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0040, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	MSI supports 4 messages, 64 bit
+found->	vendor=0x1022, dev=0x1482, revid=0x00
+	domain=0, bus=0, slot=1, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1483, revid=0x00
+	domain=0, bus=0, slot=1, func=2
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	secbus=1, subbus=8
+found->	vendor=0x1022, dev=0x1482, revid=0x00
+	domain=0, bus=0, slot=2, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1482, revid=0x00
+	domain=0, bus=0, slot=3, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1483, revid=0x00
+	domain=0, bus=0, slot=3, func=1
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	secbus=9, subbus=9
+found->	vendor=0x1022, dev=0x1482, revid=0x00
+	domain=0, bus=0, slot=4, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1482, revid=0x00
+	domain=0, bus=0, slot=5, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1482, revid=0x00
+	domain=0, bus=0, slot=7, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1484, revid=0x00
+	domain=0, bus=0, slot=7, func=1
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	secbus=10, subbus=10
+found->	vendor=0x1022, dev=0x1482, revid=0x00
+	domain=0, bus=0, slot=8, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1484, revid=0x00
+	domain=0, bus=0, slot=8, func=1
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	secbus=11, subbus=11
+found->	vendor=0x1022, dev=0x790b, revid=0x61
+	domain=0, bus=0, slot=20, func=0
+	class=0c-05-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0403, statreg=0x0220, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x790e, revid=0x51
+	domain=0, bus=0, slot=20, func=3
+	class=06-01-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x000f, statreg=0x0220, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1440, revid=0x00
+	domain=0, bus=0, slot=24, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1441, revid=0x00
+	domain=0, bus=0, slot=24, func=1
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1442, revid=0x00
+	domain=0, bus=0, slot=24, func=2
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1443, revid=0x00
+	domain=0, bus=0, slot=24, func=3
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1444, revid=0x00
+	domain=0, bus=0, slot=24, func=4
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1445, revid=0x00
+	domain=0, bus=0, slot=24, func=5
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1446, revid=0x00
+	domain=0, bus=0, slot=24, func=6
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x1022, dev=0x1447, revid=0x00
+	domain=0, bus=0, slot=24, func=7
+	class=06-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+amdsmn0: <AMD Family 19h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+amdtemp0: Found 24 cores and 1 sensors.
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pcib0: allocated type 4 (0xd000-0xefff) for rid 1c of pcib1
+pcib0: allocated type 3 (0xfc200000-0xfc8fffff) for rid 20 of pcib1
+pcib1:   domain            0
+pcib1:   secondary bus     1
+pcib1:   subordinate bus   8
+pcib1:   I/O decode        0xd000-0xefff
+pcib1:   memory decode     0xfc200000-0xfc8fffff
+pci1: <ACPI PCI bus> on pcib1
+pcib1: allocated bus range (1-1) for rid 0 of pci1
+pci1: domain=0, physical bus=1
+found->	vendor=0x1022, dev=0x57ad, revid=0x00
+	domain=0, bus=1, slot=0, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=0
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=11
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pcib1: matched entry for 1.0.INTA
+pcib1: slot 0 INTA hardwired to IRQ 28
+	secbus=2, subbus=8
+pcib1: allocated bus range (2-8) for rid 0 of pci0:1:0:0
+pcib2: <ACPI PCI-PCI bridge> irq 28 at device 0.0 on pci1
+pcib1: allocated I/O port range (0xd000-0xefff) for rid 1c of pcib2
+pcib1: allocated memory range (0xfc200000-0xfc8fffff) for rid 20 of pcib2
+pcib2:   domain            0
+pcib2:   secondary bus     2
+pcib2:   subordinate bus   8
+pcib2:   I/O decode        0xd000-0xefff
+pcib2:   memory decode     0xfc200000-0xfc8fffff
+pcib2: could not get PCI interrupt routing table for \134_SB_.PCI0.BXBR.BYUP - AE_NOT_FOUND
+pci2: <ACPI PCI bus> on pcib2
+pcib2: allocated bus range (2-2) for rid 0 of pci2
+pci2: domain=0, physical bus=2
+found->	vendor=0x1022, dev=0x57a3, revid=0x00
+	domain=0, bus=2, slot=3, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	secbus=3, subbus=3
+pcib2: allocated bus range (3-3) for rid 0 of pci0:2:3:0
+found->	vendor=0x1022, dev=0x57a3, revid=0x00
+	domain=0, bus=2, slot=4, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	secbus=4, subbus=4
+pcib2: allocated bus range (4-4) for rid 0 of pci0:2:4:0
+found->	vendor=0x1022, dev=0x57a3, revid=0x00
+	domain=0, bus=2, slot=5, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	secbus=5, subbus=5
+pcib2: allocated bus range (5-5) for rid 0 of pci0:2:5:0
+found->	vendor=0x1022, dev=0x57a4, revid=0x00
+	domain=0, bus=2, slot=8, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=11
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pcib1: matched entry for 1.0.INTA
+pcib1: slot 0 INTA hardwired to IRQ 28
+pcib2: slot 8 INTA is routed to irq 28
+	secbus=6, subbus=6
+pcib2: allocated bus range (6-6) for rid 0 of pci0:2:8:0
+found->	vendor=0x1022, dev=0x57a4, revid=0x00
+	domain=0, bus=2, slot=9, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=5
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pcib1: matched entry for 1.0.INTB
+pcib1: slot 0 INTB hardwired to IRQ 29
+pcib2: slot 9 INTA is routed to irq 29
+	secbus=7, subbus=7
+pcib2: allocated bus range (7-7) for rid 0 of pci0:2:9:0
+found->	vendor=0x1022, dev=0x57a4, revid=0x00
+	domain=0, bus=2, slot=10, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=10
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pcib1: matched entry for 1.0.INTC
+pcib1: slot 0 INTC hardwired to IRQ 30
+pcib2: slot 10 INTA is routed to irq 30
+	secbus=8, subbus=8
+pcib2: allocated bus range (8-8) for rid 0 of pci0:2:10:0
+pcib3: <ACPI PCI-PCI bridge> at device 3.0 on pci2
+pcib2: allocated memory range (0xfc800000-0xfc8fffff) for rid 20 of pcib3
+pcib3:   domain            0
+pcib3:   secondary bus     3
+pcib3:   subordinate bus   3
+pcib3:   memory decode     0xfc800000-0xfc8fffff
+pcib3: could not get PCI interrupt routing table for \134_SB_.PCI0.BXBR.BYUP.BYD3 - AE_NOT_FOUND
+pci3: <ACPI PCI bus> on pcib3
+pcib3: allocated bus range (3-3) for rid 0 of pci3
+pci3: domain=0, physical bus=3
+found->	vendor=0x8086, dev=0x2723, revid=0x1a
+	domain=0, bus=3, slot=0, func=0
+	class=02-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=11
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	MSI-X supports 16 messages in map 0x10
+	map[10]: type Memory, range 64, base 0xfc800000, size 14, memory disabled
+pcib3: allocated memory range (0xfc800000-0xfc803fff) for rid 10 of pci0:3:0:0
+pcib1: matched entry for 1.0.INTD
+pcib1: slot 0 INTD hardwired to IRQ 31
+pcib2: slot 3 INTA is routed to irq 31
+pcib3: slot 0 INTA is routed to irq 31
+pci3: <network> at device 0.0 (no driver attached)
+pcib4: <ACPI PCI-PCI bridge> at device 4.0 on pci2
+pcib2: allocated I/O port range (0xe000-0xefff) for rid 1c of pcib4
+pcib2: allocated memory range (0xfc700000-0xfc7fffff) for rid 20 of pcib4
+pcib4:   domain            0
+pcib4:   secondary bus     4
+pcib4:   subordinate bus   4
+pcib4:   I/O decode        0xe000-0xefff
+pcib4:   memory decode     0xfc700000-0xfc7fffff
+pcib4: could not get PCI interrupt routing table for \134_SB_.PCI0.BXBR.BYUP.BYD4 - AE_NOT_FOUND
+pci4: <ACPI PCI bus> on pcib4
+pcib4: allocated bus range (4-4) for rid 0 of pci4
+pci4: domain=0, physical bus=4
+found->	vendor=0x8086, dev=0x1539, revid=0x03
+	domain=0, bus=4, slot=0, func=0
+	class=02-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=11
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit, vector masks
+	MSI-X supports 5 messages in map 0x1c
+	map[10]: type Memory, range 32, base 0xfc700000, size 17, enabled
+pcib4: allocated memory range (0xfc700000-0xfc71ffff) for rid 10 of pci0:4:0:0
+	map[18]: type I/O Port, range 32, base 0xe000, size  5, enabled
+pcib4: allocated I/O port range (0xe000-0xe01f) for rid 18 of pci0:4:0:0
+	map[1c]: type Memory, range 32, base 0xfc720000, size 14, enabled
+pcib4: allocated memory range (0xfc720000-0xfc723fff) for rid 1c of pci0:4:0:0
+pcib1: matched entry for 1.0.INTA
+pcib1: slot 0 INTA hardwired to IRQ 28
+pcib2: slot 4 INTA is routed to irq 28
+pcib4: slot 0 INTA is routed to irq 28
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xe000-0xe01f mem 0xfc700000-0xfc71ffff,0xfc720000-0xfc723fff irq 28 at device 0.0 on pci4
+igb0: attach_pre capping queues at 2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: msix_init qsets capped at 2
+igb0: intr CPUs: 12 queue msgs: 4 admincnt: 1
+igb0: Using 2 RX queues 2 TX queues
+igb0: attempting to allocate 3 MSI-X vectors (5 supported)
+msi: routing MSI-X IRQ 59 to local APIC 16 vector 48
+msi: routing MSI-X IRQ 60 to local APIC 18 vector 48
+msi: routing MSI-X IRQ 61 to local APIC 20 vector 48
+igb0: using IRQs 59-61 for MSI-X
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: allocated for 2 tx_queues
+igb0: allocated for 2 rx_queues
+msi: Assigning MSI-X IRQ 59 to local APIC 0 vector 53
+msi: Assigning MSI-X IRQ 60 to local APIC 2 vector 49
+msi: Assigning MSI-X IRQ 59 to local APIC 1 vector 48
+msi: Assigning MSI-X IRQ 60 to local APIC 3 vector 48
+igb0: bpf attached
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib5: <ACPI PCI-PCI bridge> at device 5.0 on pci2
+pcib2: allocated I/O port range (0xd000-0xdfff) for rid 1c of pcib5
+pcib2: allocated memory range (0xfc600000-0xfc6fffff) for rid 20 of pcib5
+pcib5:   domain            0
+pcib5:   secondary bus     5
+pcib5:   subordinate bus   5
+pcib5:   I/O decode        0xd000-0xdfff
+pcib5:   memory decode     0xfc600000-0xfc6fffff
+pcib5: could not get PCI interrupt routing table for \134_SB_.PCI0.BXBR.BYUP.BYD5 - AE_NOT_FOUND
+pci5: <ACPI PCI bus> on pcib5
+pcib5: allocated bus range (5-5) for rid 0 of pci5
+pci5: domain=0, physical bus=5
+found->	vendor=0x10ec, dev=0x8125, revid=0x05
+	domain=0, bus=5, slot=0, func=0
+	class=02-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=11
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 1 message, 64 bit, vector masks
+	MSI-X supports 32 messages in map 0x20
+	map[10]: type I/O Port, range 32, base 0xd000, size  8, enabled
+pcib5: allocated I/O port range (0xd000-0xd0ff) for rid 10 of pci0:5:0:0
+	map[18]: type Memory, range 64, base 0xfc600000, size 16, enabled
+pcib5: allocated memory range (0xfc600000-0xfc60ffff) for rid 18 of pci0:5:0:0
+	map[20]: type Memory, range 64, base 0xfc610000, size 14, enabled
+pcib5: allocated memory range (0xfc610000-0xfc613fff) for rid 20 of pci0:5:0:0
+pcib1: matched entry for 1.0.INTB
+pcib1: slot 0 INTB hardwired to IRQ 29
+pcib2: slot 5 INTA is routed to irq 29
+pcib5: slot 0 INTA is routed to irq 29
+pci5: <network, ethernet> at device 0.0 (no driver attached)
+pcib6: <ACPI PCI-PCI bridge> irq 28 at device 8.0 on pci2
+pcib2: allocated memory range (0xfc200000-0xfc3fffff) for rid 20 of pcib6
+pcib6:   domain            0
+pcib6:   secondary bus     6
+pcib6:   subordinate bus   6
+pcib6:   memory decode     0xfc200000-0xfc3fffff
+pcib6: could not get PCI interrupt routing table for \134_SB_.PCI0.BXBR.BYUP.BYD8 - AE_NOT_FOUND
+pci6: <ACPI PCI bus> on pcib6
+pcib6: allocated bus range (6-6) for rid 0 of pci6
+pci6: domain=0, physical bus=6
+found->	vendor=0x1022, dev=0x1485, revid=0x00
+	domain=0, bus=6, slot=0, func=0
+	class=13-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+found->	vendor=0x1022, dev=0x149c, revid=0x00
+	domain=0, bus=6, slot=0, func=1
+	class=0c-03-30, hdrtype=0x00, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=11
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[10]: type Memory, range 64, base 0xfc300000, size 20, enabled
+pcib6: allocated memory range (0xfc300000-0xfc3fffff) for rid 10 of pci0:6:0:1
+pcib1: matched entry for 1.0.INTA
+pcib1: slot 0 INTA hardwired to IRQ 28
+pcib2: slot 8 INTA is routed to irq 28
+pcib6: slot 0 INTA is routed to irq 28
+found->	vendor=0x1022, dev=0x149c, revid=0x00
+	domain=0, bus=6, slot=0, func=3
+	class=0c-03-30, hdrtype=0x00, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=c, irq=10
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 8 messages, 64 bit
+	MSI-X supports 8 messages in map 0x10
+	map[10]: type Memory, range 64, base 0xfc200000, size 20, enabled
+pcib6: allocated memory range (0xfc200000-0xfc2fffff) for rid 10 of pci0:6:0:3
+pcib1: matched entry for 1.0.INTC
+pcib1: slot 0 INTC hardwired to IRQ 30
+pcib2: slot 8 INTC is routed to irq 30
+pcib6: slot 0 INTC is routed to irq 30
+pci6: <unknown> at device 0.0 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfc300000-0xfc3fffff irq 28 at device 0.1 on pci6
+xhci0: 64 bytes context size, 64-bit DMA
+xhci0: attempting to allocate 1 MSI vectors (1 supported)
+msi: routing MSI IRQ 62 to local APIC 22 vector 48
+xhci0: using IRQ 62 for MSI
+xhci0: MSI enabled
+usbus0 on xhci0
+xhci0: usbpf: Attached
+usbus0: 5.0Gbps Super Speed USB v3.0
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xfc200000-0xfc2fffff irq 30 at device 0.3 on pci6
+xhci1: 64 bytes context size, 64-bit DMA
+xhci1: attempting to allocate 1 MSI-X vectors (8 supported)
+msi: routing MSI-X IRQ 63 to local APIC 24 vector 48
+xhci1: using IRQ 63 for MSI-X
+xhci1: MSI-X enabled
+usbus1 on xhci1
+xhci1: usbpf: Attached
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib7: <PCI-PCI bridge> irq 29 at device 9.0 on pci2
+pcib2: allocated memory range (0xfc500000-0xfc5fffff) for rid 20 of pcib7
+pcib7:   domain            0
+pcib7:   secondary bus     7
+pcib7:   subordinate bus   7
+pcib7:   memory decode     0xfc500000-0xfc5fffff
+pci7: <PCI bus> on pcib7
+pcib7: allocated bus range (7-7) for rid 0 of pci7
+pci7: domain=0, physical bus=7
+found->	vendor=0x1022, dev=0x7901, revid=0x51
+	domain=0, bus=7, slot=0, func=0
+	class=01-06-01, hdrtype=0x00, mfdev=0
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=11
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 16 messages, 64 bit
+	map[24]: type Memory, range 32, base 0xfc500000, size 11, enabled
+pcib7: allocated memory range (0xfc500000-0xfc5007ff) for rid 24 of pci0:7:0:0
+pcib1: matched entry for 1.0.INTB
+pcib1: slot 0 INTB hardwired to IRQ 29
+pcib2: slot 9 INTA is routed to irq 29
+pcib7: slot 0 INTA is routed to irq 29
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xfc500000-0xfc5007ff irq 29 at device 0.0 on pci7
+ahci0: attempting to allocate 16 MSI vectors (16 supported)
+msi: routing MSI IRQ 64 to local APIC 26 vector 48
+msi: routing MSI IRQ 65 to local APIC 26 vector 49
+msi: routing MSI IRQ 66 to local APIC 26 vector 50
+msi: routing MSI IRQ 67 to local APIC 26 vector 51
+msi: routing MSI IRQ 68 to local APIC 26 vector 52
+msi: routing MSI IRQ 69 to local APIC 26 vector 53
+msi: routing MSI IRQ 70 to local APIC 26 vector 54
+msi: routing MSI IRQ 71 to local APIC 26 vector 55
+msi: routing MSI IRQ 72 to local APIC 26 vector 56
+msi: routing MSI IRQ 73 to local APIC 26 vector 57
+msi: routing MSI IRQ 74 to local APIC 26 vector 58
+msi: routing MSI IRQ 75 to local APIC 26 vector 59
+msi: routing MSI IRQ 76 to local APIC 26 vector 60
+msi: routing MSI IRQ 77 to local APIC 26 vector 61
+msi: routing MSI IRQ 78 to local APIC 26 vector 62
+msi: routing MSI IRQ 79 to local APIC 26 vector 63
+ahci0: using IRQs 64-79 for MSI
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier supported with FBS
+ahci0: Caps: 64bit NCQ SNTF MPS ALP AL CLO 6Gbps PM FBS PMD SSC PSC 32cmd eSATA 2ports
+ahci0: Caps2:
+ahcich0: not probed (disabled)
+ahcich1: not probed (disabled)
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich2: Caps: ESP FBSCP
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich3: Caps: ESP FBSCP
+pcib8: <PCI-PCI bridge> irq 30 at device 10.0 on pci2
+pcib2: allocated memory range (0xfc400000-0xfc4fffff) for rid 20 of pcib8
+pcib8:   domain            0
+pcib8:   secondary bus     8
+pcib8:   subordinate bus   8
+pcib8:   memory decode     0xfc400000-0xfc4fffff
+pci8: <PCI bus> on pcib8
+pcib8: allocated bus range (8-8) for rid 0 of pci8
+pci8: domain=0, physical bus=8
+found->	vendor=0x1022, dev=0x7901, revid=0x51
+	domain=0, bus=8, slot=0, func=0
+	class=01-06-01, hdrtype=0x00, mfdev=0
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=11
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 16 messages, 64 bit
+	map[24]: type Memory, range 32, base 0xfc400000, size 11, enabled
+pcib8: allocated memory range (0xfc400000-0xfc4007ff) for rid 24 of pci0:8:0:0
+pcib1: matched entry for 1.0.INTC
+pcib1: slot 0 INTC hardwired to IRQ 30
+pcib2: slot 10 INTA is routed to irq 30
+pcib8: slot 0 INTA is routed to irq 30
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xfc400000-0xfc4007ff irq 30 at device 0.0 on pci8
+ahci1: attempting to allocate 16 MSI vectors (16 supported)
+msi: routing MSI IRQ 80 to local APIC 0 vector 64
+msi: routing MSI IRQ 81 to local APIC 0 vector 65
+msi: routing MSI IRQ 82 to local APIC 0 vector 66
+msi: routing MSI IRQ 83 to local APIC 0 vector 67
+msi: routing MSI IRQ 84 to local APIC 0 vector 68
+msi: routing MSI IRQ 85 to local APIC 0 vector 69
+msi: routing MSI IRQ 86 to local APIC 0 vector 70
+msi: routing MSI IRQ 87 to local APIC 0 vector 71
+msi: routing MSI IRQ 88 to local APIC 0 vector 72
+msi: routing MSI IRQ 89 to local APIC 0 vector 73
+msi: routing MSI IRQ 90 to local APIC 0 vector 74
+msi: routing MSI IRQ 91 to local APIC 0 vector 75
+msi: routing MSI IRQ 92 to local APIC 0 vector 76
+msi: routing MSI IRQ 93 to local APIC 0 vector 77
+msi: routing MSI IRQ 94 to local APIC 0 vector 78
+msi: routing MSI IRQ 95 to local APIC 0 vector 79
+ahci1: using IRQs 80-95 for MSI
+ahci1: AHCI v1.31 with 4 6Gbps ports, Port Multiplier supported with FBS
+ahci1: Caps: 64bit NCQ SNTF MPS ALP AL CLO 6Gbps PM FBS PMD SSC PSC 32cmd eSATA 4ports
+ahci1: Caps2:
+ahcich4: <AHCI channel> at channel 0 on ahci1
+ahcich4: Caps: ESP FBSCP
+ahcich5: <AHCI channel> at channel 1 on ahci1
+ahcich5: Caps: ESP FBSCP
+ahcich6: not probed (disabled)
+ahcich7: not probed (disabled)
+ahcich8: <AHCI channel> at channel 4 on ahci1
+ahcich8: Caps: ESP FBSCP
+ahcich9: <AHCI channel> at channel 5 on ahci1
+ahcich9: Caps: ESP FBSCP
+pcib9: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pcib0: allocated type 4 (0xf000-0xffff) for rid 1c of pcib9
+pcib0: allocated type 3 (0xfb000000-0xfc0fffff) for rid 20 of pcib9
+pcib0: allocated type 3 (0xd0000000-0xe1ffffff) for rid 24 of pcib9
+pcib9:   domain            0
+pcib9:   secondary bus     9
+pcib9:   subordinate bus   9
+pcib9:   I/O decode        0xf000-0xffff
+pcib9:   memory decode     0xfb000000-0xfc0fffff
+pcib9:   prefetched decode 0xd0000000-0xe1ffffff
+pcib9:   special decode    VGA
+pci9: <ACPI PCI bus> on pcib9
+pcib9: allocated bus range (9-9) for rid 0 of pci9
+pci9: domain=0, physical bus=9
+found->	vendor=0x10de, dev=0x1c02, revid=0xa1
+	domain=0, bus=9, slot=0, func=0
+	class=03-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=10
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[10]: type Memory, range 32, base 0xfb000000, size 24, enabled
+pcib9: allocated memory range (0xfb000000-0xfbffffff) for rid 10 of pci0:9:0:0
+	map[14]: type Prefetchable Memory, range 64, base 0xd0000000, size 28, enabled
+pcib9: allocated prefetch range (0xd0000000-0xdfffffff) for rid 14 of pci0:9:0:0
+	map[1c]: type Prefetchable Memory, range 64, base 0xe0000000, size 25, enabled
+pcib9: allocated prefetch range (0xe0000000-0xe1ffffff) for rid 1c of pci0:9:0:0
+	map[24]: type I/O Port, range 32, base 0xf000, size  7, enabled
+pcib9: allocated I/O port range (0xf000-0xf07f) for rid 24 of pci0:9:0:0
+pcib9: matched entry for 9.0.INTA
+pcib9: slot 0 INTA hardwired to IRQ 54
+found->	vendor=0x10de, dev=0x10f1, revid=0xa1
+	domain=0, bus=9, slot=0, func=1
+	class=04-03-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0006, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=b, irq=4
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[10]: type Memory, range 32, base 0xfc080000, size 14, enabled
+pcib9: allocated memory range (0xfc080000-0xfc083fff) for rid 10 of pci0:9:0:1
+pcib9: matched entry for 9.0.INTB
+pcib9: slot 0 INTB hardwired to IRQ 55
+vgapci0: <VGA-compatible display> port 0xf000-0xf07f mem 0xfb000000-0xfbffffff,0xd0000000-0xdfffffff,0xe0000000-0xe1ffffff irq 54 at device 0.0 on pci9
+nvidia0: <GeForce GTX 1060 3GB> on vgapci0
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: attempting to allocate 1 MSI vectors (1 supported)
+msi: routing MSI IRQ 96 to local APIC 2 vector 49
+vgapci0: using IRQ 96 for MSI
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: Boot video device
+pci9: <multimedia, HDA> at device 0.1 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pcib10:   domain            0
+pcib10:   secondary bus     10
+pcib10:   subordinate bus   10
+pci10: <ACPI PCI bus> on pcib10
+pcib10: allocated bus range (10-10) for rid 0 of pci10
+pci10: domain=0, physical bus=10
+found->	vendor=0x1022, dev=0x148a, revid=0x00
+	domain=0, bus=10, slot=0, func=0
+	class=13-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+pci10: <unknown> at device 0.0 (no driver attached)
+pcib11: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pcib0: allocated type 3 (0xfc900000-0xfcbfffff) for rid 20 of pcib11
+pcib11:   domain            0
+pcib11:   secondary bus     11
+pcib11:   subordinate bus   11
+pcib11:   memory decode     0xfc900000-0xfcbfffff
+pci11: <ACPI PCI bus> on pcib11
+pcib11: allocated bus range (11-11) for rid 0 of pci11
+pci11: domain=0, physical bus=11
+found->	vendor=0x1022, dev=0x1485, revid=0x00
+	domain=0, bus=11, slot=0, func=0
+	class=13-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+found->	vendor=0x1022, dev=0x1486, revid=0x00
+	domain=0, bus=11, slot=0, func=1
+	class=10-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=5
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	MSI-X supports 2 messages in map 0x24
+	map[18]: type Memory, range 32, base 0xfca00000, size 20, memory disabled
+pcib11: allocated memory range (0xfca00000-0xfcafffff) for rid 18 of pci0:11:0:1
+	map[24]: type Memory, range 32, base 0xfcb08000, size 13, enabled
+pcib11: allocated memory range (0xfcb08000-0xfcb09fff) for rid 24 of pci0:11:0:1
+pcib11: matched entry for 11.0.INTA
+pcib11: slot 0 INTA hardwired to IRQ 37
+found->	vendor=0x1022, dev=0x149c, revid=0x00
+	domain=0, bus=11, slot=0, func=3
+	class=0c-03-30, hdrtype=0x00, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=c, irq=4
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 8 messages, 64 bit
+	MSI-X supports 8 messages in map 0x10
+	map[10]: type Memory, range 64, base 0xfc900000, size 20, enabled
+pcib11: allocated memory range (0xfc900000-0xfc9fffff) for rid 10 of pci0:11:0:3
+pcib11: matched entry for 11.0.INTC
+pcib11: slot 0 INTC hardwired to IRQ 39
+found->	vendor=0x1022, dev=0x1487, revid=0x00
+	domain=0, bus=11, slot=0, func=4
+	class=04-03-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=d, irq=11
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[10]: type Memory, range 32, base 0xfcb00000, size 15, memory disabled
+pcib11: allocated memory range (0xfcb00000-0xfcb07fff) for rid 10 of pci0:11:0:4
+pcib11: matched entry for 11.0.INTD
+pcib11: slot 0 INTD hardwired to IRQ 36
+pci11: <unknown> at device 0.0 (no driver attached)
+pci11: <encrypt/decrypt> at device 0.1 (no driver attached)
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xfc900000-0xfc9fffff irq 39 at device 0.3 on pci11
+xhci2: 64 bytes context size, 64-bit DMA
+xhci2: attempting to allocate 1 MSI-X vectors (8 supported)
+msi: routing MSI-X IRQ 97 to local APIC 4 vector 48
+xhci2: using IRQ 97 for MSI-X
+xhci2: MSI-X enabled
+usbus2 on xhci2
+xhci2: usbpf: Attached
+usbus2: 5.0Gbps Super Speed USB v3.0
+pci11: <multimedia, HDA> at device 0.4 (no driver attached)
+pci0: <serial bus, SMBus> at device 20.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+pcib0: allocated type 3 (0xa0000-0xa07ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa0800-0xa0fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa1000-0xa17ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa1800-0xa1fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa2000-0xa27ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa2800-0xa2fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa3000-0xa37ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa3800-0xa3fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa4000-0xa47ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa4800-0xa4fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa5000-0xa57ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa5800-0xa5fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa6000-0xa67ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa6800-0xa6fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa7000-0xa77ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa7800-0xa7fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa8000-0xa87ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa8800-0xa8fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa9000-0xa97ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa9800-0xa9fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xaa000-0xaa7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xaa800-0xaafff) for rid 0 of orm0
+pcib0: allocated type 3 (0xab000-0xab7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xab800-0xabfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xac000-0xac7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xac800-0xacfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xad000-0xad7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xad800-0xadfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xae000-0xae7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xae800-0xaefff) for rid 0 of orm0
+pcib0: allocated type 3 (0xaf000-0xaf7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xaf800-0xaffff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb0000-0xb07ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb0800-0xb0fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb1000-0xb17ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb1800-0xb1fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb2000-0xb27ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb2800-0xb2fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb3000-0xb37ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb3800-0xb3fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb4000-0xb47ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb4800-0xb4fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb5000-0xb57ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb5800-0xb5fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb6000-0xb67ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb6800-0xb6fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb7000-0xb77ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb7800-0xb7fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb8000-0xb87ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb8800-0xb8fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb9000-0xb97ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb9800-0xb9fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xba000-0xba7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xba800-0xbafff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbb000-0xbb7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbb800-0xbbfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbc000-0xbc7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbc800-0xbcfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbd000-0xbd7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbd800-0xbdfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbe000-0xbe7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbe800-0xbefff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbf000-0xbf7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbf800-0xbffff) for rid 0 of orm0
+pcib0: allocated type 3 (0xc0000-0xc07ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xc0000-0xce7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xce800-0xcefff) for rid 1 of orm0
+pcib0: allocated type 3 (0xcf000-0xcf7ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xcf800-0xcffff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd0000-0xd07ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd0800-0xd0fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd1000-0xd17ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd1800-0xd1fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd2000-0xd27ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd2800-0xd2fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd3000-0xd37ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd3800-0xd3fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd4000-0xd47ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd4800-0xd4fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd5000-0xd57ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd5800-0xd5fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd6000-0xd67ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd6800-0xd6fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd7000-0xd77ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd7800-0xd7fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd8000-0xd87ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd8800-0xd8fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd9000-0xd97ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xd9800-0xd9fff) for rid 1 of orm0
+pcib0: allocated type 3 (0xda000-0xda7ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xda800-0xdafff) for rid 1 of orm0
+pcib0: allocated type 3 (0xdb000-0xdb7ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xdb800-0xdbfff) for rid 1 of orm0
+pcib0: allocated type 3 (0xdc000-0xdc7ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xdc800-0xdcfff) for rid 1 of orm0
+pcib0: allocated type 3 (0xdd000-0xdd7ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xdd800-0xddfff) for rid 1 of orm0
+pcib0: allocated type 3 (0xde000-0xde7ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xde800-0xdefff) for rid 1 of orm0
+pcib0: allocated type 3 (0xdf000-0xdf7ff) for rid 1 of orm0
+pcib0: allocated type 3 (0xdf800-0xdffff) for rid 1 of orm0
+isa_probe_children: disabling PnP devices
+atrtc: atrtc0 already exists; skipping it
+attimer: attimer0 already exists; skipping it
+sc: sc0 already exists; skipping it
+isa_probe_children: probing non-PnP devices
+orm0: <ISA Option ROM> at iomem 0xc0000-0xce7ff pnpid ORM0000 on isa0
+sc0 failed to probe on isa0
+vga0 failed to probe on isa0
+pcib0: allocated type 4 (0x60-0x60) for rid 0 of atkbdc0
+pcib0: allocated type 4 (0x64-0x64) for rid 1 of atkbdc0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+pcib0: allocated type 4 (0x60-0x60) for rid 0 of atkbdc0
+pcib0: allocated type 4 (0x64-0x64) for rid 1 of atkbdc0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+kbd0: atkbd0, generic (0), config:0x0, flags:0x1f0000
+ioapic0: routing intpin 1 (ISA IRQ 1) to lapic 6 vector 48
+atkbd0: [GIANT-LOCKED]
+psm0: unable to allocate IRQ
+pcib0: allocated type 4 (0x3f0-0x3f5) for rid 0 of fdc0
+pcib0: allocated type 4 (0x3f7-0x3f7) for rid 1 of fdc0
+fdc0 failed to probe at port 0x3f0-0x3f5,0x3f7 irq 6 drq 2 on isa0
+ppc0: cannot reserve I/O port range
+ppc0 failed to probe at irq 7 on isa0
+pcib0: allocated type 4 (0x3f8-0x3f8) for rid 0 of uart0
+uart0 failed to probe at port 0x3f8 irq 4 on isa0
+pcib0: allocated type 4 (0x2f8-0x2f8) for rid 0 of uart1
+uart1 failed to probe at port 0x2f8 irq 3 on isa0
+isa_probe_children: probing PnP devices
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+AcpiOsExecute: task queue not started
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Device configuration finished.
+procfs registered
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+lo0: bpf attached
+vlan: initialized, using hash tables with chaining
+ugen2.1: <0x1022 XHCI root HUB> at usbus2
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub0 on usbus2
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub1 on usbus0
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2 on usbus1
+uhub2: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+Linux ELF exec handler installed
+tcp_init: net.inet.tcp.tcbhashsize auto tuned to 262144
+IPsec: Initialized Security Association Processing.
+ipfw2 (+ipv6) initialized, divert enabled, nat enabled, default to accept, logging disabled
+load_dn_sched dn_sched RR loaded
+load_dn_sched dn_sched WF2Q+ loaded
+load_dn_sched dn_sched FIFO loaded
+load_dn_sched dn_sched FQ_CODEL loaded
+load_dn_sched dn_sched FQ_PIE loaded
+load_dn_sched dn_sched PRIO loaded
+load_dn_sched dn_sched QFQ loaded
+load_dn_aqm dn_aqm CODEL loaded
+load_dn_aqm dn_aqm PIE loaded
+AcpiOsExecute: enqueue 24 pending tasks
+ahcich2: AHCI reset...
+ahcich2: SATA connect time=100us status=00000133
+ahcich2: AHCI reset: device found
+ahcich3: AHCI reset...
+ahcich3: SATA connect time=100us status=00000133
+ahcich3: AHCI reset: device found
+ahcich4: AHCI reset...
+ahcich4: SATA connect time=100us status=00000133
+ahcich4: AHCI reset: device found
+ahcich5: AHCI reset...
+ahcich5: SATA connect time=100us status=00000133
+ahcich5: AHCI reset: device found
+ahcich8: AHCI reset...
+ahcich8: SATA connect time=100us status=00000133
+ahcich8: AHCI reset: device found
+ahcich9: AHCI reset...
+ahcich9: SATA connect time=100us status=00000133
+ahcich9: AHCI reset: device found
+hwpmc: SOFT/16/64/0x67<INT,USR,SYS,REA,WRI> TSC/1/64/0x20<REA> K8/16/48/0x1ff<INT,USR,SYS,EDG,THR,REA,WRI,INV,QUA>
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: CAM
+ahcich2: AHCI reset: device ready after 100ms
+ahcich3: AHCI reset: device ready after 100ms
+ahcich4: AHCI reset: device ready after 100ms
+ahcich5: AHCI reset: device ready after 100ms
+ahcich8: AHCI reset: device ready after 100ms
+ahcich9: AHCI reset: device ready after 100ms
+GEOM: new disk ada0
+ada0 at ahcich2 bus 0 scbus0 target 0 lun 0
+ada0: <WDC WD30EFRX-68EUZN0 80.00A80> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 2861588MB (5860533168 512 byte sectors)
+ada0: quirks=0x1<4K>
+ada1 at ahcich3 bus 0 scbus1 target 0 lun 0
+ada1: <ST3000DM001-1ER166 CC25> ACS-2 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 2861588MB (5860533168 512 byte sectors)
+ada1: quirks=0x1<4K>
+ada2 at ahcich4 bus 0 scbus2 target 0 lun 0
+ada2: <Samsung SSD 860 EVO 250GB RVT01B6Q> ACS-4 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada2: Command Queueing enabled
+ada2: 238475MB (488397168 512 byte sectors)
+ada3 at ahcich5 bus 0 scbus3 target 0 lun 0
+ada3: <Samsung SSD 850 EVO 250GB EMT03B6Q> ACS-2 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada3: Command Queueing enabled
+ada3: 238475MB (488397168 512 byte sectors)
+ada3: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ada4 at ahcich8 bus 0 scbus4 target 0 lun 0
+ada4: <WDC WD120EFAX-68UNTN0 81.00A81> ACS-2 ATA SATA 3.x device
+ada4: Serial Number...
+ada4: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada4: Command Queueing enabled
+ada4: 11444224MB (23437770752 512 byte sectors)
+ada5 at ahcich9 bus 0 scbus5 target 0 lun 0
+ada5: <ST32000641AS CC13> ATA8-ACS SATA 3.x device
+ada5: Serial Number...
+ada5: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada5: Command Queueing enabled
+ada5: 1907729MB (3907029168 512 byte sectors)
+pass0 at ahcich2 bus 0 scbus0 target 0 lun 0
+pass0: <WDC WD30EFRX-68EUZN0 80.00A80> ACS-2 ATA SATA 3.x device
+pass0: Serial Number...
+pass0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+pass0: Command Queueing enabled
+pass1 at ahcich3 bus 0 scbus1 target 0 lun 0
+pass1: <ST3000DM001-1ER166 CC25> ACS-2 ATA SATA 3.x device
+pass1: Serial Number...
+pass1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+pass1: Command Queueing enabled
+pass2 at ahcich4 bus 0 scbus2 target 0 lun 0
+pass2: <Samsung SSD 860 EVO 250GB RVT01B6Q> ACS-4 ATA SATA 3.x device
+pass2: Serial Number...
+pass2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+pass2: Command Queueing enabled
+pass3 at ahcich5 bus 0 scbus3 target 0 lun 0
+pass3: <Samsung SSD 850 EVO 250GB EMT03B6Q> ACS-2 ATA SATA 3.x device
+pass3: Serial Number...
+pass3: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+pass3: Command Queueing enabled
+pass4 at ahcich8 bus 0 scbus4 target 0 lun 0
+pass4: <WDC WD120EFAX-68UNTN0 81.00A81> ACS-2 ATA SATA 3.x device
+pass4: Serial Number...
+pass4: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+pass4: Command Queueing enabled
+pass5 at ahcich9 bus 0 scbus5 target 0 lun 0
+pass5: <ST32000641AS CC13> ATA8-ACS SATA 3.x device
+pass5: Serial Number...
+pass5: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+pass5: Command Queueing enabled
+GEOM: new disk ada1
+GEOM: new disk ada2
+GEOM: new disk ada3
+GEOM: new disk ada4
+GEOM: new disk ada5
+uhub0: 8 ports with 8 removable, self powered
+uhub1: 10 ports with 10 removable, self powered
+uhub2: 10 ports with 10 removable, self powered
+ugen2.2: <vendor 0x0424 product 0x2422> at usbus2
+uhub3 on uhub0
+uhub3: <vendor 0x0424 product 0x2422, class 9/0, rev 2.00/0.a0, addr 1> on usbus2
+efirtc0: providing initial system time
+start_init: trying /sbin/init
+ugen1.2: <vendor 0x8087 product 0x0029> at usbus1
+ugen0.2: <ITE Tech. Inc. ITE Device(8595)> at usbus0
+ukbd0 on uhub1
+ukbd0: <ITE Tech. Inc. ITE Device(8595), class 0/0, rev 2.00/0.03, addr 1> on usbus0
+kbd2 at ukbd0
+kbd2: ukbd0, generic (0), config:0x0, flags:0x3d0000
+uhub3: 1 port with 0 removable, self powered
+ugen1.3: <vendor 0x05e3 USB2.0 Hub> at usbus1
+uhub4 on uhub2
+uhub4: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 2> on usbus1
+ugen0.3: <Logitech Gaming Mouse G502> at usbus0
+ukbd1 on uhub1
+ukbd1: <Logitech Gaming Mouse G502, class 0/0, rev 2.00/3.02, addr 2> on usbus0
+kbd3 at ukbd1
+kbd3: ukbd1, generic (0), config:0x0, flags:0x3d0000
+ugen2.3: <Yamaha Corporation Steinberg UR12> at usbus2
+ugen0.4: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub5 on uhub1
+uhub5: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 3> on usbus0
+uhub4: 4 ports with 4 removable, self powered
+ugen1.4: <vendor 0x13ba Barcode Reader> at usbus1
+ukbd2 on uhub4
+ukbd2: <vendor 0x13ba Barcode Reader, class 0/0, rev 1.10/0.01, addr 3> on usbus1
+uhub5: 4 ports with 4 removable, self powered
+kbd: new array size 8
+kbd4 at ukbd2
+kbd4: ukbd2, generic (0), config:0x0, flags:0x3d0000
+ugen1.5: <vendor 0x13ba Barcode Reader> at usbus1
+ukbd3 on uhub4
+ukbd3: <vendor 0x13ba Barcode Reader, class 0/0, rev 1.10/0.01, addr 4> on usbus1
+kbd5 at ukbd3
+kbd5: ukbd3, generic (0), config:0x0, flags:0x3d0000
+ugen0.5: <vendor 0x1b1c product 0x1c0c> at usbus0
+GEOM_ELI: Device gpt/sa1-geli-key.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: accelerated software
+GEOM_ELI: Device gpt/sa0-crypto.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: accelerated software
+GEOM_ELI: Device gpt/sa1-crypto.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: accelerated software
+linsysfs registered
+linprocfs registered
+ums0 on uhub4
+ums0: <vendor 0x13ba Barcode Reader, class 0/0, rev 1.10/0.01, addr 4> on usbus1
+ums0: 5 buttons and [XYZ] coordinates ID=1
+ums1 on uhub4
+ums1: <vendor 0x13ba Barcode Reader, class 0/0, rev 1.10/0.01, addr 3> on usbus1
+bridge0: bpf attached
+bridge0: Ethernet address: ...
+ums2 on uhub1
+ums2: <Logitech Gaming Mouse G502, class 0/0, rev 2.00/3.02, addr 2> on usbus0
+tap0: bpf attached
+tap0: Ethernet address: ...
+ums2: 16 buttons and [XYZT] coordinates ID=0
+ums1: 5 buttons and [XYZ] coordinates ID=1
+lo0: link state changed to UP
+igb0: Link is up 1000 Mbps Full Duplex
+igb0: link state changed to UP
+igb0: link state changed to DOWN
+igb0: promiscuous mode enabled
+bridge0: link state changed to UP
+tap0: promiscuous mode enabled
+bridge0: link state changed to DOWN
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134GSA1.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20210105/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+acpi_wmi1: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20210105/nsarguments-361)
+ppc: ppc-1 already exists; skipping it
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: cannot find EC device
+pci0: driver added
+found->	vendor=0x1022, dev=0x1481, revid=0x00
+	domain=0, bus=0, slot=0, func=2
+	class=08-06-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0040, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	MSI supports 4 messages, 64 bit
+pci0:0:0:2: reprobing on driver added
+found->	vendor=0x1022, dev=0x790b, revid=0x61
+	domain=0, bus=0, slot=20, func=0
+	class=0c-05-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0403, statreg=0x0220, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+pci0:0:20:0: reprobing on driver added
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+pcib0: allocated type 4 (0xcd6-0xcd7) for rid 0 of intsmb0
+pcib0: allocated type 4 (0xb00-0xb0f) for rid 0 of intsmb0
+smbus0: <System Management Bus> on intsmb0
+smb0: <SMBus generic I/O> on smbus0
+pci1: driver added
+pci2: driver added
+pci3: driver added
+found->	vendor=0x8086, dev=0x2723, revid=0x1a
+	domain=0, bus=3, slot=0, func=0
+	class=02-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=31
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	MSI-X supports 16 messages in map 0x10
+pci0:3:0:0: reprobing on driver added
+pci4: driver added
+pci5: driver added
+found->	vendor=0x10ec, dev=0x8125, revid=0x05
+	domain=0, bus=5, slot=0, func=0
+	class=02-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=29
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 1 message, 64 bit, vector masks
+	MSI-X supports 32 messages in map 0x20
+pci0:5:0:0: reprobing on driver added
+pci6: driver added
+found->	vendor=0x1022, dev=0x1485, revid=0x00
+	domain=0, bus=6, slot=0, func=0
+	class=13-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+pci0:6:0:0: reprobing on driver added
+pci7: driver added
+pci8: driver added
+pci9: driver added
+found->	vendor=0x10de, dev=0x10f1, revid=0xa1
+	domain=0, bus=9, slot=0, func=1
+	class=04-03-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0006, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=b, irq=55
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pci0:9:0:1: reprobing on driver added
+pci10: driver added
+found->	vendor=0x1022, dev=0x148a, revid=0x00
+	domain=0, bus=10, slot=0, func=0
+	class=13-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+pci0:10:0:0: reprobing on driver added
+pci11: driver added
+found->	vendor=0x1022, dev=0x1485, revid=0x00
+	domain=0, bus=11, slot=0, func=0
+	class=13-00-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	powerspec 3  supports D0 D3  current D0
+pci0:11:0:0: reprobing on driver added
+found->	vendor=0x1022, dev=0x1486, revid=0x00
+	domain=0, bus=11, slot=0, func=1
+	class=10-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=37
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	MSI-X supports 2 messages in map 0x24
+pci0:11:0:1: reprobing on driver added
+found->	vendor=0x1022, dev=0x1487, revid=0x00
+	domain=0, bus=11, slot=0, func=4
+	class=04-03-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=16 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=d, irq=36
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pci0:11:0:4: reprobing on driver added
+igb0: Link is up 1000 Mbps Full Duplex
+uhid0 on uhub5
+uhid0: <vendor 0x1b1c product 0x1c0c, class 0/0, rev 2.00/0.02, addr 4> on usbus0
+uaudio0 on uhub3
+uaudio0: <Yamaha Corporation Steinberg UR12, class 239/2, rev 2.00/1.01, addr 2> on usbus2
+uaudio0: Play[0]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 176400 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 88200 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 44100 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 176400 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 88200 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 44100 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm0: <USB audio> on uaudio0
+pcm0: Mixer "vol" -> "none": child=0x00000010
+pcm0: Mixer "pcm": parent="vol"
+pcm0: Soft PCM mixer ENABLED
+uaudio0: No HID volume keys found.
+igb0: link state changed to UP
+bridge0: link state changed to UP
+Linux x86-64 ELF exec handler installed
+GEOM_ELI: Device gpt/sa1-geli-key.eli destroyed.
+cpuctl: access to MSR registers/cpuid info.
+CPU: AMD Ryzen 9 5900X 12-Core Processor             (3700.32-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0xa20f10  Family=0x19  Model=0x21  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c97a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x40069c<UMIP,PKU,OSPKE,VAES,VPCLMULQDQ,RDPID>
+  Structured Extended Features3=0x10<FSRM>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x111ef657<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,IBRS,STIBP,STIBP_ALWAYSON,PREFER_IBRS,SSBD>
+  SVM: Features=0x1bbcff<NP,LbrVirt,SVML,NRIPS,TscRateMsr,VmcbClean,FlushByAsid,DecodeAssist,PauseFilter,EncryptedMcodePatch,PauseFilterThreshold,AVIC,V_VMSAVE_VMLOAD,vGIF,GMET,<b19>,GuesSpecCtl>
+Revision=1, ASIDs=32768
+  TSC: P-state invariant, performance statistics
+L1 2MB data TLB: 64 entries, fully associative
+L1 2MB instruction TLB: 64 entries, fully associative
+L1 4KB data TLB: 64 entries, fully associative
+L1 4KB instruction TLB: 64 entries, fully associative
+L1 data cache: 32 kbytes, 64 bytes/line, 1 lines/tag, 8-way associative
+L1 instruction cache: 32 kbytes, 64 bytes/line, 1 lines/tag, 8-way associative
+L2 2MB data TLB: 2048 entries, 4-way associative
+L2 2MB instruction TLB: 512 entries, 4-way associative
+L2 4KB data TLB: 2048 entries, 8-way associative
+L2 4KB instruction TLB: 2048 entries, 8-way associative
+L2 unified cache: 512 kbytes, 64 bytes/line, 1 lines/tag, 8-way associative
+ng_ubt: HCI command 0xfc05 timed out
+ubt0 on uhub2
+ubt0: <vendor 0x8087 product 0x0029, class 224/1, rev 2.01/0.01, addr 1> on usbus1
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+uaudio0: at uhub3, port 1, addr 2 (disconnected)
+pcm0: detached
+uaudio0: detached
+EFI rt_settime call faulted, error 14
+efirtc0: CLOCK_SETTIME error 14
+uaudio0 on uhub3
+uaudio0: <Yamaha Corporation Steinberg UR12, class 239/2, rev 2.00/1.01, addr 2> on usbus2
+uaudio0: Play[0]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 176400 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 88200 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 44100 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 176400 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 88200 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 44100 Hz, 2 ch, 32-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm0: <USB audio> on uaudio0
+pcm0: Mixer "vol" -> "none": child=0x00000010
+pcm0: Mixer "pcm": parent="vol"
+pcm0: Soft PCM mixer ENABLED
+uaudio0: No HID volume keys found.
+linux: jid 0 pid 2738 (hyper-dns3): syscall inotify_init1 not implemented
+linux: jid 0 pid 2738 (autocomplete_wo): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 2764 (hyper-dns3): unsupported socket(AF_NETLINK, 3, NETLINK_ROUTE)
+linux: jid 0 pid 2764 (hyper-dns3): syscall inotify_init1 not implemented
+ugen1.6: <MediaTek X5maxPRO> at usbus1
+Limiting closed port RST response from 202 to 200 packets/sec
+Limiting open port RST response from 449 to 200 packets/sec
+Limiting open port RST response from 206 to 200 packets/sec
+ugen1.6: <MediaTek X5maxPRO> at usbus1 (disconnected)
+ugen1.6: <MediaTek X5maxPRO> at usbus1

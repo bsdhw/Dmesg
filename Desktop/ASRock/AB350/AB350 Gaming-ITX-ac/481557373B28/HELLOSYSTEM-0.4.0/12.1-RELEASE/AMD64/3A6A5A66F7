@@ -1,0 +1,1108 @@
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE r354233 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1024x768
+CPU: AMD Ryzen 5 1600 Six-Core Processor             (3194.07-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x800f11  Family=0x17  Model=0x1  Stepping=1
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16543580160 (15777 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 12 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 3 core(s) x 2 hardware threads
+arc4random: no preloaded entropy cache
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20181213/tbfadt-796)
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+Launching APs: 11 6 7 8 4 5 1 9 10 2 3
+Timecounter "TSC-low" frequency 1597035952 Hz quality 1000
+random: entropy device external interface
+md0: Preloaded image </data/XXXXXXXXXXXX 14417920 bytes at 0xffffffff82a1d5b8
+000.000048 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112e050, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+kbd1 at kbdmux0
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xf7900000-0xf7903fff irq 24 at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.3 on pci0
+pci2: <ACPI PCI bus> on pcib2
+xhci0: <AMD 300 Series USB 3.0 controller> mem 0xf77a0000-0xf77a7fff irq 32 at device 0.0 on pci2
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AMD 300 Series AHCI SATA controller> mem 0xf7780000-0xf779ffff irq 33 at device 0.1 on pci2
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+pcib3: <ACPI PCI-PCI bridge> irq 34 at device 0.2 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 32 at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 33 at device 1.0 on pci3
+pci5: <ACPI PCI bus> on pcib5
+pcib6: <ACPI PCI-PCI bridge> irq 32 at device 4.0 on pci3
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> irq 33 at device 5.0 on pci3
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> irq 34 at device 6.0 on pci3
+pci8: <ACPI PCI bus> on pcib8
+pci8: <network> at device 0.0 (no driver attached)
+pcib9: <ACPI PCI-PCI bridge> irq 35 at device 7.0 on pci3
+pci9: <ACPI PCI bus> on pcib9
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xf000-0xf01f mem 0xf7500000-0xf751ffff,0xf7520000-0xf7523fff irq 35 at device 0.0 on pci9
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib10: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci10: <ACPI PCI bus> on pcib10
+vgapci0: <VGA-compatible display> port 0xe000-0xe07f mem 0xf6000000-0xf6ffffff,0xe0000000-0xefffffff,0xf0000000-0xf1ffffff irq 54 at device 0.0 on pci10
+vgapci0: Boot video device
+hdac0: <NVIDIA (0x10f1) HDA Controller> mem 0xf7080000-0xf7083fff irq 55 at device 0.1 on pci10
+pcib11: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci11: <ACPI PCI bus> on pcib11
+pci11: <unknown> at device 0.0 (no driver attached)
+pci11: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci1: <AMD KERNCZ USB 3.0 controller> mem 0xf7200000-0xf72fffff irq 37 at device 0.3 on pci11
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib12: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci12: <ACPI PCI bus> on pcib12
+pci12: <unknown> at device 0.0 (no driver attached)
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xf7808000-0xf7808fff irq 42 at device 0.2 on pci12
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich8: <AHCI channel> at channel 0 on ahci1
+hdac1: <AMD (0x1457) HDA Controller> mem 0xf7800000-0xf7807fff irq 43 at device 0.3 on pci12
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart2: <16x50 with 256 byte FIFO> iomem 0xfedc9000-0xfedc9fff,0xfedc7000-0xfedc7fff irq 3 on acpi0
+uart3: <16x50 with 256 byte FIFO> iomem 0xfedca000-0xfedcafff,0xfedc8000-0xfedc8fff irq 4 on acpi0
+uart4: <16x50 with 256 byte FIFO> iomem 0xfedce000-0xfedcefff,0xfedcc000-0xfedccfff irq 3 on acpi0
+uart5: <16x50 with 256 byte FIFO> iomem 0xfedcf000-0xfedcffff,0xfedcd000-0xfedcdfff irq 4 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xce7ff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS WARNING: Recommended minimum kmem_size is 512MB; expect unstable behavior.
+             Consider tuning vm.kmem_size and vm.kmem_size_max
+             in /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+arc4random: no preloaded entropy cache
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <Samsung SSD 960 EVO 500GB> NVMe namespace
+nvd0: 476940MB (976773168 512 byte sectors)
+hdacc0: <NVIDIA (0x0084) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0084) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 5 on hdaa0
+pcm2: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 6 on hdaa0
+pcm3: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 7 on hdaa0
+hdacc1: <Realtek ALC1220 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC1220 Audio Function Group> at nid 1 on hdacc1
+pcm4: <Realtek ALC1220 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm5: <Realtek ALC1220 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm6: <Realtek ALC1220 (Rear Digital)> at nid 30 on hdaa1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 840 PRO Series DXM05B0Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 122104MB (250069680 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+arc4random: no preloaded entropy cache
+Trying to mount root from ufs:/dev/md0 []...
+Root mount waiting for: usbus1 usbus0
+uhub0: 8 ports with 8 removable, self powered
+uhub1: 22 ports with 22 removable, self powered
+ugen1.2: <vendor 0x0451 product 0x8142> at usbus1
+uhub2 on uhub0
+uhub2: <vendor 0x0451 product 0x8142, class 9/0, rev 2.10/1.00, addr 1> on usbus1
+uhub2: MTT enabled
+Root mount waiting for: usbus1 usbus0
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen1.3: <RAMA WORKS RAMA WORKS M60-A> at usbus1
+ukbd0 on uhub2
+ukbd0: <RAMA WORKS RAMA WORKS M60-A, class 0/0, rev 1.10/0.01, addr 2> on usbus1
+kbd2 at ukbd0
+ukbd1 on uhub2
+ukbd1: <RAMA WORKS RAMA WORKS M60-A, class 0/0, rev 1.10/0.01, addr 2> on usbus1
+kbd3 at ukbd1
+ugen0.2: <SanDisk Corporation U3 Cruzer Micro> at usbus0
+umass0 on uhub1
+umass0: <SanDisk Corporation U3 Cruzer Micro, class 0/0, rev 2.00/0.10, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc000
+umass0:5:0: Attached to scbus5
+da0 at umass-sim0 bus 0 scbus5 target 0 lun 0
+da0: <SanDisk U3 Cruzer Micro 4.05> Removable Direct Access SCSI-2 device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 1952MB (3999373 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+cd0 at umass-sim0 bus 0 scbus5 target 0 lun 1
+cd0: <SanDisk U3 Cruzer Micro 4.05> Removable CD-ROM SCSI-2 device
+cd0: Serial Number...
+cd0: 40.000MB/s transfers
+cd0: 7MB (3584 2048 byte sectors)
+cd0: quirks=0x10<10_BYTE_ONLY>
+GEOM: da0: the secondary GPT header is not in the last LBA.
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+ugen1.4: <Logitech USB Receiver> at usbus1
+ukbd2 on uhub2
+ukbd2: <Logitech USB Receiver, class 0/0, rev 2.00/40.01, addr 3> on usbus1
+kbd4 at ukbd2
+ugen0.3: <ZEROPLUS Controller> at usbus0
+ugen1.5: <Mayflower Electronics ARC AMP DAC ARC AMP DAC> at usbus1
+Root mount waiting for: usbus1 usbus0
+ugen0.4: <vendor 0x8087 product 0x0aa7> at usbus0
+Root mount waiting for: usbus1 usbus0
+ugen0.5: <CPS CP1500PFCLCD> at usbus0
+ugen1.6: <Hitachi-LG Data Storage Inc Portable Super Multi Drive> at usbus1
+umass1 on uhub0
+umass1: <6238--Storage> on usbus1
+umass1:  8070i (ATAPI) over Bulk-Only; quirks = 0x0100
+umass1:6:1: Attached to scbus6
+cd1 at umass-sim1 bus 1 scbus6 target 0 lun 0
+cd1: <HL-DT-ST DVDRAM GP65NB60 PF00> Removable CD-ROM SCSI device
+cd1: 40.000MB/s transfers
+cd1: 0MB (1 0 byte sectors)
+cd1: quirks=0x10<10_BYTE_ONLY>
+ugen1.7: <vendor 0x0451 product 0x8140> at usbus1
+uhub3 on uhub0
+uhub3: <vendor 0x0451 product 0x8140, class 9/0, rev 3.00/1.00, addr 6> on usbus1
+Root mount waiting for: usbus1
+uhub3: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1
+ugen1.8: <Western Digital Elements 25A3> at usbus1
+umass2 on uhub0
+umass2: <Western Digital Elements 25A3, class 0/0, rev 3.10/10.21, addr 7> on usbus1
+umass2:  SCSI over Bulk-Only; quirks = 0x8100
+umass2:7:2: Attached to scbus7
+random: unblocking device.
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+da1 at umass-sim2 bus 2 scbus7 target 0 lun 0
+da1: <  > Fixed Direct Access SCSI device
+da1: Serial Number...
+da1: 400.000MB/s transfers
+da1: 5723134MB (11720978432 512 byte sectors)
+da1: quirks=0x2<NO_6_BYTE>
+Trying to mount root from zfs:livecd []...
+lo0: link state changed to UP
+igb0: link state changed to UP
+iwm0: <Intel(R) Dual Band Wireless AC 3168> mem 0xf7600000-0xf7601fff irq 34 at device 0.0 on pci8
+iwm0: hw rev 0x220, fw ver 22.361476.0, address XXX
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+uhid1 on uhub2
+uhid1: <RAMA WORKS RAMA WORKS M60-A, class 0/0, rev 1.10/0.01, addr 2> on usbus1
+uhid2 on uhub2
+uhid2: <Logitech USB Receiver, class 0/0, rev 2.00/40.01, addr 3> on usbus1
+hid_get_item: Local bTag=11
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Local bTag=15
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=15
+hid_get_item: Main bTag=0
+hid_get_item: Local bTag=11
+hid_get_item: Main bTag=7
+hid_get_item: Main bTag=4
+hid_get_item: default bType=3
+hid_get_item: Main bTag=14
+hid_get_item: default bType=3
+hid_get_item: Main bTag=1
+hid_get_item: bad length 65255 (data=0xfe)
+hid_get_item: Local bTag=11
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Local bTag=15
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=15
+hid_get_item: Main bTag=0
+hid_get_item: Local bTag=11
+hid_get_item: Main bTag=7
+hid_get_item: Main bTag=4
+hid_get_item: default bType=3
+hid_get_item: Main bTag=14
+hid_get_item: default bType=3
+hid_get_item: Main bTag=1
+hid_get_item: bad length 65255 (data=0xfe)
+uhid0 on uhub1
+uhid0: <ZEROPLUS Controller, rev 2.00/40.14, addr 2> on usbus0
+ums0 on uhub2
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/40.01, addr 3> on usbus1
+ums0: 16 buttons and [XYZT] coordinates ID=2
+(cd0:umass-sim0:0:0:1): READ TOC/PMA/ATIP. CDB: 43 20 00 00 00 00 01 00 0c 00 
+(cd0:umass-sim0:0:0:1): CAM status: SCSI Status Error
+(cd0:umass-sim0:0:0:1): SCSI status: Check Condition
+(cd0:umass-sim0:0:0:1): SCSI sense: ILLEGAL REQUEST asc:26,2 (Parameter value invalid)
+(cd0:umass-sim0:0:0:1): Error 22, Unretryable error
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+uaudio0 on uhub2
+uaudio0: <Mayflower Electronics ARC AMP DAC ARC AMP DAC, class 0/0, rev 2.00/2.00, addr 4> on usbus1
+uaudio0: Play: 96000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm7: <USB audio> on uaudio0
+uaudio0: No HID volume keys found.
+ubt0 on uhub1
+ubt0: <vendor 0x8087 product 0x0aa7, class 224/1, rev 2.00/0.01, addr 3> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+wlan0: Ethernet address: ...
+wlan0: Ethernet address: ...
+nvidia0: <Unknown> on vgapci0
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: child nvidia0 requested pci_enable_io
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  440.100  Fri May 29 08:11:49 UTC 2020
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+device_attach: acpi_wmi0 attach returned 6
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+interface fusefs.1 already present in the KLD 'fuse.ko'!
+linker_load_file: /boot/kernel/fusefs.ko - unsupported file type
+pid 2983 (python3.7), jid 0, uid 1000: exited on signal 6
+pid 2970 (gvfsd-trash), jid 0, uid 1000: exited on signal 5
+pid 5585 (gvfsd-computer), jid 0, uid 1000: exited on signal 5
+pid 5592 (gvfsd-dnssd), jid 0, uid 1000: exited on signal 5
+pid 5587 (gvfsd-network), jid 0, uid 1000: exited on signal 5
+pid 5712 (filer-qt), jid 0, uid 1000: exited on signal 6
+pid 5713 (cyber-dock), jid 0, uid 1000: exited on signal 6
+pid 5711 (gmenudbusmenuproxy), jid 0, uid 1000: exited on signal 6
+pid 5710 (menubar), jid 0, uid 1000: exited on signal 6
+pid 5714 (launch), jid 0, uid 1000: exited on signal 6
+pid 5715 (launch), jid 0, uid 1000: exited on signal 6
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+Uptime: 9m39s
+nvidia-modeset: Unloading
+ukbd0: detached
+uhid1: detached
+ukbd1: detached
+ukbd2: detached
+ums0: detached
+uhid2: detached
+pcm7: detached
+uaudio0: detached
+uhub2: detached
+umass1: detached
+uhub3: detached
+umass2: detached
+umass0: detached
+uhid0: detached
+ubt0: detached
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE r354233 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1024x768
+CPU: AMD Ryzen 5 1600 Six-Core Processor             (3194.07-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x800f11  Family=0x17  Model=0x1  Stepping=1
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16543580160 (15777 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 12 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 3 core(s) x 2 hardware threads
+arc4random: no preloaded entropy cache
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20181213/tbfadt-796)
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+Launching APs: 10 8 9 11 2 3 5 4 1 6 7
+Timecounter "TSC-low" frequency 1597035984 Hz quality 1000
+random: entropy device external interface
+md0: Preloaded image </data/XXXXXXXXXXXX 14417920 bytes at 0xffffffff82a3ec10
+000.000054 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112e050, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+kbd1 at kbdmux0
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xf7900000-0xf7903fff irq 24 at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.3 on pci0
+pci2: <ACPI PCI bus> on pcib2
+xhci0: <AMD 300 Series USB 3.0 controller> mem 0xf77a0000-0xf77a7fff irq 32 at device 0.0 on pci2
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AMD 300 Series AHCI SATA controller> mem 0xf7780000-0xf779ffff irq 33 at device 0.1 on pci2
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+pcib3: <ACPI PCI-PCI bridge> irq 34 at device 0.2 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 32 at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 33 at device 1.0 on pci3
+pci5: <ACPI PCI bus> on pcib5
+pcib6: <ACPI PCI-PCI bridge> irq 32 at device 4.0 on pci3
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> irq 33 at device 5.0 on pci3
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> irq 34 at device 6.0 on pci3
+pci8: <ACPI PCI bus> on pcib8
+pci8: <network> at device 0.0 (no driver attached)
+pcib9: <ACPI PCI-PCI bridge> irq 35 at device 7.0 on pci3
+pci9: <ACPI PCI bus> on pcib9
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xf000-0xf01f mem 0xf7500000-0xf751ffff,0xf7520000-0xf7523fff irq 35 at device 0.0 on pci9
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib10: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci10: <ACPI PCI bus> on pcib10
+vgapci0: <VGA-compatible display> port 0xe000-0xe07f mem 0xf6000000-0xf6ffffff,0xe0000000-0xefffffff,0xf0000000-0xf1ffffff irq 54 at device 0.0 on pci10
+vgapci0: Boot video device
+hdac0: <NVIDIA (0x10f1) HDA Controller> mem 0xf7080000-0xf7083fff irq 55 at device 0.1 on pci10
+pcib11: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci11: <ACPI PCI bus> on pcib11
+pci11: <unknown> at device 0.0 (no driver attached)
+pci11: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci1: <AMD KERNCZ USB 3.0 controller> mem 0xf7200000-0xf72fffff irq 37 at device 0.3 on pci11
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib12: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci12: <ACPI PCI bus> on pcib12
+pci12: <unknown> at device 0.0 (no driver attached)
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xf7808000-0xf7808fff irq 42 at device 0.2 on pci12
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich8: <AHCI channel> at channel 0 on ahci1
+hdac1: <AMD (0x1457) HDA Controller> mem 0xf7800000-0xf7807fff irq 43 at device 0.3 on pci12
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart2: <16x50 with 256 byte FIFO> iomem 0xfedc9000-0xfedc9fff,0xfedc7000-0xfedc7fff irq 3 on acpi0
+uart3: <16x50 with 256 byte FIFO> iomem 0xfedca000-0xfedcafff,0xfedc8000-0xfedc8fff irq 4 on acpi0
+uart4: <16x50 with 256 byte FIFO> iomem 0xfedce000-0xfedcefff,0xfedcc000-0xfedccfff irq 3 on acpi0
+uart5: <16x50 with 256 byte FIFO> iomem 0xfedcf000-0xfedcffff,0xfedcd000-0xfedcdfff irq 4 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xce7ff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS WARNING: Recommended minimum kmem_size is 512MB; expect unstable behavior.
+             Consider tuning vm.kmem_size and vm.kmem_size_max
+             in /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+arc4random: no preloaded entropy cache
+nvd0: <Samsung SSD 960 EVO 500GB> NVMe namespace
+nvd0: 476940MB (976773168 512 byte sectors)
+hdacc0: <NVIDIA (0x0084) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0084) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 5 on hdaa0
+pcm2: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 6 on hdaa0
+pcm3: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 7 on hdaa0
+hdacc1: <Realtek ALC1220 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC1220 Audio Function Group> at nid 1 on hdacc1
+pcm4: <Realtek ALC1220 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm5: <Realtek ALC1220 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm6: <Realtek ALC1220 (Rear Digital)> at nid 30 on hdaa1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 840 PRO Series DXM05B0Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 122104MB (250069680 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+arc4random: no preloaded entropy cache
+Trying to mount root from ufs:/dev/md0 []...
+Root mount waiting for: usbus1 usbus0
+uhub1: 8 ports with 8 removable, self powered
+Root mount waiting for: usbus1 usbus0
+uhub0: 22 ports with 22 removable, self powered
+ugen1.2: <vendor 0x0451 product 0x8142> at usbus1
+uhub2 on uhub1
+uhub2: <vendor 0x0451 product 0x8142, class 9/0, rev 2.10/1.00, addr 1> on usbus1
+uhub2: MTT enabled
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen1.3: <RAMA WORKS RAMA WORKS M60-A> at usbus1
+ukbd0 on uhub2
+ukbd0: <RAMA WORKS RAMA WORKS M60-A, class 0/0, rev 1.10/0.01, addr 2> on usbus1
+kbd2 at ukbd0
+ukbd1 on uhub2
+ukbd1: <RAMA WORKS RAMA WORKS M60-A, class 0/0, rev 1.10/0.01, addr 2> on usbus1
+kbd3 at ukbd1
+ugen0.2: <SanDisk Corporation U3 Cruzer Micro> at usbus0
+umass0 on uhub0
+umass0: <SanDisk Corporation U3 Cruzer Micro, class 0/0, rev 2.00/0.10, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc000
+umass0:5:0: Attached to scbus5
+da0 at umass-sim0 bus 0 scbus5 target 0 lun 0
+da0: <SanDisk U3 Cruzer Micro 4.05> Removable Direct Access SCSI-2 device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 1952MB (3999373 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+cd0 at umass-sim0 bus 0 scbus5 target 0 lun 1
+cd0: <SanDisk U3 Cruzer Micro 4.05> Removable CD-ROM SCSI-2 device
+cd0: Serial Number...
+cd0: 40.000MB/s transfers
+cd0: 7MB (3584 2048 byte sectors)
+cd0: quirks=0x10<10_BYTE_ONLY>
+GEOM: da0: the secondary GPT header is not in the last LBA.
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+Root mount waiting for: usbus1 usbus0
+ugen1.4: <Logitech USB Receiver> at usbus1
+ukbd2 on uhub2
+ukbd2: <Logitech USB Receiver, class 0/0, rev 2.00/40.01, addr 3> on usbus1
+kbd4 at ukbd2
+ugen0.3: <ZEROPLUS Controller> at usbus0
+Root mount waiting for: usbus1 usbus0
+ugen0.4: <vendor 0x8087 product 0x0aa7> at usbus0
+usb_alloc_device: set address 5 failed (USB_ERR_TIMEOUT, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 5 failed, USB_ERR_IOERROR
+Root mount waiting for: usbus1 usbus0
+ugen0.5: <CPS CP1500PFCLCD> at usbus0
+usbd_req_re_enumerate: addr=5, set address failed! (USB_ERR_TIMEOUT, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 5 failed, USB_ERR_IOERROR
+Root mount waiting for: usbus1
+Root mount waiting for: usbus1
+usbd_req_re_enumerate: addr=5, set address failed! (USB_ERR_TIMEOUT, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 5 failed, USB_ERR_STALLED
+Root mount waiting for: usbus1
+usbd_req_re_enumerate: addr=5, set address failed! (USB_ERR_TIMEOUT, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 5 failed, USB_ERR_STALLED
+Root mount waiting for: usbus1
+usbd_req_re_enumerate: addr=5, set address failed! (USB_ERR_TIMEOUT, ignored)
+usbd_setup_device_desc: getting device descriptor at addr 5 failed, USB_ERR_STALLED
+ugen1.5: <Unknown > at usbus1 (disconnected)
+uhub_reattach_port: could not allocate new device
+Root mount waiting for: usbus1
+Root mount waiting for: usbus1
+ugen1.5: <Hitachi-LG Data Storage Inc Portable Super Multi Drive> at usbus1
+umass1 on uhub1
+umass1: <6238--Storage> on usbus1
+umass1:  8070i (ATAPI) over Bulk-Only; quirks = 0x0100
+umass1:6:1: Attached to scbus6
+cd1 at umass-sim1 bus 1 scbus6 target 0 lun 0
+cd1: <HL-DT-ST DVDRAM GP65NB60 PF00> Removable CD-ROM SCSI device
+cd1: 40.000MB/s transfers
+cd1: 0MB (1 0 byte sectors)
+cd1: quirks=0x10<10_BYTE_ONLY>
+ugen1.6: <vendor 0x0451 product 0x8140> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x0451 product 0x8140, class 9/0, rev 3.00/1.00, addr 5> on usbus1
+Root mount waiting for: usbus1
+uhub3: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1
+ugen1.7: <Western Digital Elements 25A3> at usbus1
+umass2 on uhub1
+umass2: <Western Digital Elements 25A3, class 0/0, rev 3.10/10.21, addr 6> on usbus1
+umass2:  SCSI over Bulk-Only; quirks = 0x8100
+umass2:7:2: Attached to scbus7
+random: unblocking device.
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+da1 at umass-sim2 bus 2 scbus7 target 0 lun 0
+da1: <  > Fixed Direct Access SCSI device
+da1: Serial Number...
+da1: 400.000MB/s transfers
+da1: 5723134MB (11720978432 512 byte sectors)
+da1: quirks=0x2<NO_6_BYTE>
+Trying to mount root from zfs:livecd []...
+lo0: link state changed to UP
+igb0: link state changed to UP
+iwm0: <Intel(R) Dual Band Wireless AC 3168> mem 0xf7600000-0xf7601fff irq 34 at device 0.0 on pci8
+iwm0: hw rev 0x220, fw ver 22.361476.0, address XXX
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+uhid1 on uhub2
+uhid1: <RAMA WORKS RAMA WORKS M60-A, class 0/0, rev 1.10/0.01, addr 2> on usbus1
+uhid2 on uhub2
+uhid2: <Logitech USB Receiver, class 0/0, rev 2.00/40.01, addr 3> on usbus1
+hid_get_item: Local bTag=11
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Local bTag=15
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=15
+hid_get_item: Main bTag=0
+hid_get_item: Local bTag=11
+hid_get_item: Main bTag=7
+hid_get_item: Main bTag=4
+hid_get_item: default bType=3
+hid_get_item: Main bTag=14
+hid_get_item: default bType=3
+hid_get_item: Main bTag=1
+hid_get_item: bad length 65255 (data=0xfe)
+hid_get_item: Local bTag=11
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Local bTag=15
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: Main bTag=0
+hid_get_item: default bType=3
+hid_get_item: Main bTag=15
+hid_get_item: Main bTag=0
+hid_get_item: Local bTag=11
+hid_get_item: Main bTag=7
+hid_get_item: Main bTag=4
+hid_get_item: default bType=3
+hid_get_item: Main bTag=14
+hid_get_item: default bType=3
+hid_get_item: Main bTag=1
+hid_get_item: bad length 65255 (data=0xfe)
+uhid0 on uhub0
+uhid0: <ZEROPLUS Controller, rev 2.00/40.14, addr 2> on usbus0
+ums0 on uhub2
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/40.01, addr 3> on usbus1
+ums0: 16 buttons and [XYZT] coordinates ID=2
+(cd0:umass-sim0:0:0:1): READ TOC/PMA/ATIP. CDB: 43 20 00 00 00 00 01 00 0c 00 
+(cd0:umass-sim0:0:0:1): CAM status: SCSI Status Error
+(cd0:umass-sim0:0:0:1): SCSI status: Check Condition
+(cd0:umass-sim0:0:0:1): SCSI sense: ILLEGAL REQUEST asc:26,2 (Parameter value invalid)
+(cd0:umass-sim0:0:0:1): Error 22, Unretryable error
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+ubt0 on uhub0
+ubt0: <vendor 0x8087 product 0x0aa7, class 224/1, rev 2.00/0.01, addr 3> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+wlan0: Ethernet address: ...
+wlan0: Ethernet address: ...
+nvidia0: <Unknown> on vgapci0
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: child nvidia0 requested pci_enable_io
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  440.100  Fri May 29 08:11:49 UTC 2020
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+device_attach: acpi_wmi0 attach returned 6
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+interface fusefs.1 already present in the KLD 'fuse.ko'!
+linker_load_file: /boot/kernel/fusefs.ko - unsupported file type

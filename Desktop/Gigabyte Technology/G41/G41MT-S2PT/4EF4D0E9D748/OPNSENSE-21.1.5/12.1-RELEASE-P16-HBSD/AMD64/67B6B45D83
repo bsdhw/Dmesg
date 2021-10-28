@@ -1,0 +1,227 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p16-HBSD #0  b531d3958f5(stable/21.1)-dirty: Tue Apr 20 11:00:08 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Core(TM)2 Quad CPU    Q6600  @ 2.40GHz (2997.14-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x6fb  Family=0x6  Model=0xf  Stepping=11
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0xe3bd<SSE3,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM>
+  AMD Features=0x20100800<SYSCALL,NX,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: HLT,PAUSE
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8235802624 (7854 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <GBT    GBTUACPI>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0: Changing APIC ID to 2
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 2 3 1
+Timecounter "TSC-low" frequency 1498568638 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+000.000054 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <GBT GBTUACPI> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x73 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <PCI bus> on pcib1
+re0: <Realtek PCIe GbE Family Controller> port 0xae00-0xaeff mem 0xdfcff000-0xdfcfffff,0xdfafc000-0xdfafffff irq 16 at device 0.0 on pci1
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+vgapci0: <VGA-compatible display> port 0xff00-0xff07 mem 0xdf400000-0xdf7fffff,0xc0000000-0xcfffffff irq 16 at device 2.0 on pci0
+agp0: <Intel G41 SVGA controller> on vgapci0
+agp0: aperture size is 256M, detected 32764k stolen memory
+vgapci0: Boot video device
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pcib2: [GIANT-LOCKED]
+pci2: <ACPI PCI bus> on pcib2
+re1: <Realtek PCIe GbE Family Controller> port 0xce00-0xceff mem 0xdf9ff000-0xdf9fffff,0xdfefc000-0xdfefffff irq 16 at device 0.0 on pci2
+re1: Using Memory Mapping!
+re1: Using 1 MSI-X message
+re1: version:1.96.04
+re1: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re1: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pcib3: [GIANT-LOCKED]
+pci3: <ACPI PCI bus> on pcib3
+alc0: <Atheros AR8151 v2.0 PCIe Gigabit Ethernet> port 0xbf00-0xbf7f mem 0xdfdc0000-0xdfdfffff irq 17 at device 0.0 on pci3
+alc0: 11776 Tx FIFO, 12032 Rx FIFO
+alc0: Using 1 MSI message(s).
+miibus0: <MII bus> on alc0
+atphy0: <Atheros F1 10/100/1000 PHY> PHY 0 on miibus0
+atphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+alc0: Using defaults for TSO: 65518/35/2048
+alc0: Ethernet address: ...
+uhci0: <Intel 82801G (ICH7) USB controller USB-A> port 0xfe00-0xfe1f irq 23 at device 29.0 on pci0
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 82801G (ICH7) USB controller USB-B> port 0xfd00-0xfd1f irq 19 at device 29.1 on pci0
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+uhci2: <Intel 82801G (ICH7) USB controller USB-C> port 0xfc00-0xfc1f irq 18 at device 29.2 on pci0
+usbus2 on uhci2
+usbus2: 12Mbps Full Speed USB v1.0
+uhci3: <Intel 82801G (ICH7) USB controller USB-D> port 0xfb00-0xfb1f irq 16 at device 29.3 on pci0
+usbus3 on uhci3
+usbus3: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 82801GB/R (ICH7) USB 2.0 controller> mem 0xdffff000-0xdffff3ff irq 23 at device 29.7 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci0
+usbus4: 480Mbps High Speed USB v2.0
+pcib4: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+vr0: <VIA VT6105 Rhine III 10/100BaseTX> port 0xde00-0xdeff mem 0xdfbff000-0xdfbff0ff irq 19 at device 1.0 on pci4
+vr0: Quirks: 0x0
+vr0: Revision: 0x8b
+miibus1: <MII bus> on vr0
+ukphy0: <Generic IEEE 802.3u media interface> PHY 1 on miibus1
+ukphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+vr0: Ethernet address: ...
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci0: <Intel ICH7 UDMA100 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xf800-0xf80f at device 31.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+atapci1: <Intel ICH7 SATA300 controller> port 0xf700-0xf707,0xf600-0xf603,0xf500-0xf507,0xf400-0xf403,0xf300-0xf30f irq 19 at device 31.2 on pci0
+ata2: <ATA channel> at channel 0 on atapci1
+ata3: <ATA channel> at channel 1 on atapci1
+fdc0: <floppy drive controller> port 0x3f0-0x3f5,0x3f7 irq 6 drq 2 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xcc7ff,0xd0000-0xd0fff,0xd1000-0xd1fff,0xd2000-0xd2fff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 925092506000925
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 925092506000925
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 925092506000925
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 925092506000925
+device_attach: est3 attach returned 6
+Timecounters tick every 1.000 msec
+ugen4.1: <Intel EHCI root HUB> at usbus4
+ugen1.1: <Intel UHCI root HUB> at usbus1
+ugen3.1: <Intel UHCI root HUB> at usbus3
+ugen2.1: <Intel UHCI root HUB> at usbus2
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+uhub1: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub3: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen0.1: <Intel UHCI root HUB> at usbus0
+uhub2: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub4: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub3: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+uhub4: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+Trying to mount root from ufs:/dev/ufs/OPNsense [rw,noatime]...
+Root mount waiting for: usbus4
+Root mount waiting for: usbus4
+uhub0: 8 ports with 8 removable, self powered
+Root mount waiting for: usbus4
+ugen4.2: <Kingston DataTraveler 2.0> at usbus4
+umass0 on uhub0
+umass0: <Kingston DataTraveler 2.0, class 0/0, rev 2.00/1.00, addr 2> on usbus4
+umass0:  SCSI over Bulk-Only; quirks = 0xc000
+umass0:3:0: Attached to scbus3
+mountroot: waiting for device /dev/ufs/OPNsense...
+da0 at umass-sim0 bus 0 scbus3 target 0 lun 0
+da0: <Kingston DataTraveler 2.0 PMAP> Removable Direct Access SPC-2 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 14891MB (30497664 512 byte sectors)
+da0: quirks=0x3<NO_SYNC_CACHE,NO_6_BYTE>
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 925092506000925
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 925092506000925
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 925092506000925
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 925092506000925
+device_attach: est3 attach returned 6
+re1: link state changed to UP
+alc0: link state changed to DOWN
+re0: link state changed to UP
+alc0: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+858.715234 [1130] generic_netmap_attach     Emulated adapter for alc0 created (prev was NULL)
+858.715260 [1035] generic_netmap_dtor       Emulated netmap adapter for alc0 destroyed
+alc0: permanently promiscuous mode enabled
+858.715461 [1130] generic_netmap_attach     Emulated adapter for alc0 created (prev was NULL)
+858.894621 [ 320] generic_netmap_register   Emulated adapter for alc0 activated
+pid 68792 (eastpect), jid 0, uid 0: exited on signal 11
+953.803254 [ 295] generic_netmap_unregister Emulated adapter for alc0 deactivated
+953.803700 [1035] generic_netmap_dtor       Emulated netmap adapter for alc0 destroyed
+973.302451 [1130] generic_netmap_attach     Emulated adapter for alc0 created (prev was NULL)
+973.302475 [1035] generic_netmap_dtor       Emulated netmap adapter for alc0 destroyed
+973.302663 [1130] generic_netmap_attach     Emulated adapter for alc0 created (prev was NULL)
+973.302798 [ 320] generic_netmap_register   Emulated adapter for alc0 activated
+pid 59835 (eastpect), jid 0, uid 0: exited on signal 11
+020.824372 [ 295] generic_netmap_unregister Emulated adapter for alc0 deactivated
+020.824843 [1035] generic_netmap_dtor       Emulated netmap adapter for alc0 destroyed
+075.886287 [1130] generic_netmap_attach     Emulated adapter for alc0 created (prev was NULL)
+075.886322 [1035] generic_netmap_dtor       Emulated netmap adapter for alc0 destroyed
+075.891359 [1130] generic_netmap_attach     Emulated adapter for alc0 created (prev was NULL)
+075.891515 [ 320] generic_netmap_register   Emulated adapter for alc0 activated
+[HBSD SEGVGUARD] [/usr/local/sensei//bin//eastpect (2896)] Suspension expired.
+ -> pid: 2896 ppid: 74279 p_pax: 0xa50<SEGVGUARD,ASLR,NOSHLIBRANDOM,NODISALLOWMAP32BIT> 

@@ -1,0 +1,323 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE-p7 GENERIC i386
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM)2 CPU         T7400  @ 2.16GHz (2163.82-MHz 686-class CPU)
+  Origin="GenuineIntel"  Id=0x6f6  Family=0x6  Model=0xf  Stepping=6
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0xe3bd<SSE3,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM>
+  AMD Features=0x20100000<NX,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: HLT,PAUSE
+  TSC: P-state invariant, performance statistics
+real memory  = 3221225472 (3072 MB)
+avail memory = 3107954688 (2963 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <APPLE  Apple00>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0: MADT APIC ID 1 != hw id 0
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1
+Timecounter "TSC-low" frequency 1081910336 Hz quality 1000
+random: entropy device external interface
+kbd0 at kbdmux0
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0x14c8b70, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <APPLE Apple00> on motherboard
+acpi_ec0: <Embedded Controller: GPE 0x17, ECDT> port 0x62,0x66 on acpi0
+acpi0: Power Button (fixed)
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0x2000-0x20ff mem 0xc0000000-0xc7ffffff,0xc8400000-0xc840ffff irq 16 at device 0.0 on pci1
+vgapci0: Boot video device
+pci0: <dasp, performance counters> at device 7.0 (no driver attached)
+hdac0: <Intel 82801G HDA Controller> mem 0xc8500000-0xc8503fff irq 22 at device 27.0 on pci0
+pcib2: <ACPI PCI-PCI bridge> irq 17 at device 28.0 on pci0
+pcib2: failed to allocate initial I/O port window: 0x1000-0x1fff
+pci2: <ACPI PCI bus> on pcib2
+mskc0: <Marvell Yukon 88E8053 Gigabit Ethernet> mem 0xc8300000-0xc8303fff irq 16 at device 0.0 on pci2
+msk0: <Marvell Technology Group Ltd. Yukon EC Id 0xb6 Rev 0x02> on mskc0
+msk0: Using defaults for TSO: 65518/35/2048
+msk0: Ethernet address: ...
+miibus0: <MII bus> on msk0
+e1000phy0: <Marvell 88E1111 Gigabit PHY> PHY 0 on miibus0
+e1000phy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 28.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+bwn_pci0: <Broadcom BCM4321 802.11n Dual-Band Wireless> mem 0xc8200000-0xc8203fff,0xc8000000-0xc80fffff irq 17 at device 0.0 on pci3
+bhndb0: <PCI-BHND bridge> on bwn_pci0
+bhndb0: Using MSI interrupts on bwn_pci0
+bhnd_nvram0: <SPROM/OTP> mem 0xc8201000-0xc8201fff on bhndb0
+bhnd0: <BCM4321 SIBA bus> on bhndb0
+bhnd_chipc0: <Broadcom ChipCommon I/O Controller, rev 19> mem 0x18000000-0x18000dff,0x18000f00-0x18000fff,0x18000e00-0x18000eff irq 0 at core 0 on bhnd0
+bhnd_pwrctl0: <ChipCommon Power Control> on bhnd_chipc0
+gpio0: <Broadcom ChipCommon GPIO> mem 0x18000000-0x18000dff on bhnd_chipc0
+bhnd_hostb0: <Broadcom PCIe-G1 Host-PCI bridge, rev 4> mem 0x18002000-0x18002dff,0-0x7fffffff,0x18002f00-0x18002fff,0x18002e00-0x18002eff irq 2 at core 2 on bhnd0
+bwn0: <Broadcom 802.11 MAC/PHY/Radio, rev 12> mem 0x18001000-0x18001dff,0x18001f00-0x18001fff,0x18001e00-0x18001eff irq 1 at core 1 on bhnd0
+bwn0: bwn_phy_n_attach: BWN_GPL_PHY not in kernel config; no PHY-N support
+bwn0: failed
+device_attach: bwn0 attach returned 6
+uhci0: <Intel 82801G (ICH7) USB controller USB-A> port 0x30a0-0x30bf irq 23 at device 29.0 on pci0
+uhci0: LegSup = 0x3000
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 82801G (ICH7) USB controller USB-B> port 0x3080-0x309f irq 19 at device 29.1 on pci0
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+uhci2: <Intel 82801G (ICH7) USB controller USB-C> port 0x3060-0x307f irq 18 at device 29.2 on pci0
+uhci2: LegSup = 0x3000
+usbus2 on uhci2
+usbus2: 12Mbps Full Speed USB v1.0
+uhci3: <Intel 82801G (ICH7) USB controller USB-D> port 0x3040-0x305f irq 16 at device 29.3 on pci0
+usbus3 on uhci3
+usbus3: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 82801GB/R (ICH7) USB 2.0 controller> mem 0xc8505400-0xc85057ff irq 23 at device 29.7 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci0
+usbus4: 480Mbps High Speed USB v2.0
+pcib4: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+fwohci0: <Lucent FW322/323> mem 0xc8100000-0xc8100fff at device 3.0 on pci4
+fwohci0: OHCI version 1.0 (ROM=0)
+fwohci0: No. of Isochronous channels is 8.
+fwohci0: EUI64 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+fwohci0: Phy 1394a available S400, 3 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+firewire0: <IEEE1394(FireWire) bus> on fwohci0
+sbp0: <SBP-2/SCSI over FireWire> on firewire0
+fwohci0: Initiate bus reset
+fwohci0: fwohci_intr_core: BUS reset
+fwohci0: PhysicalUpperBound register is not implemented.  Physical memory access is limited to the first 4GB
+fwohci0: PhysicalUpperBound = 0x00000000
+fwohci0: fwohci_intr_core: node_id=0x00000000, SelfID Count=2, CYCLEMASTER mode
+firewire0: 1 nodes, maxhop <= 0 cable IRM irm(0)  (me) 
+firewire0: bus manager 0 
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci0: <Intel ICH7 UDMA100 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0x30c0-0x30cf irq 18 at device 31.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+atapci1: <Intel ICH7M SATA150 controller> port 0x30d8-0x30df,0x30f4-0x30f7,0x30d0-0x30d7,0x30f0-0x30f3,0x3020-0x302f mem 0xc8505000-0xc85053ff irq 19 at device 31.2 on pci0
+ata2: <ATA channel> at channel 0 on atapci1
+ata3: <ATA channel> at channel 1 on atapci1
+ppc0: parallel port not found.
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS NOTICE: Prefetch is disabled by default on i386 -- to enable,
+            add "vfs.zfs.prefetch_disable=0" to /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <Sigmatel STAC9221 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Sigmatel STAC9221 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Sigmatel STAC9221 (Internal Analog)> at nid 12 and 11 on hdaa0
+pcm1: <Sigmatel STAC9221 (Rear Analog)> at nid 10 and 15 on hdaa0
+pcm2: <Sigmatel STAC9221 (Rear Digital)> at nid 16 and 17 on hdaa0
+ugen4.1: <Intel EHCI root HUB> at usbus4
+ugen3.1: <Intel UHCI root HUB> at usbus3
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+uhub1: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+ugen1.1: <Intel UHCI root HUB> at usbus1
+ugen2.1: <Intel UHCI root HUB> at usbus2
+uhub2: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen0.1: <Intel UHCI root HUB> at usbus0
+uhub4: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 usbus1 usbus2 usbus3 usbus4 CAM
+uhub1: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+uhub3: 2 ports with 2 removable, self powered
+uhub4: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus4 CAM
+Root mount waiting for: usbus4 CAM
+Root mount waiting for: usbus4 CAM
+uhub0: 8 ports with 8 removable, self powered
+ada0 at ata2 bus 0 scbus2 target 1 lun 0
+ada0: <WDC WD2500JS-40TGB0 20.06C04> ATA-7 SATA 1.x device
+ada0: Serial Number...
+ada0: 150.000MB/s transfers (SATA 1.x, UDMA5, PIO 8192bytes)
+ada0: 238475MB (488397168 512 byte sectors)
+cd0 at ata0 bus 0 scbus1 target 0 lun 0
+cd0: <MATSHITA DVD-R   UJ-85J FCQ5> Removable CD-ROM SCSI device
+cd0: 66.700MB/s transfers (UDMA4, ATAPI 12bytes, PIO 65534bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+ugen4.2: <vendor 0x05ac product 0x8300> at usbus4
+Root mount waiting for: usbus4
+ugen4.3: <vendor 0x05e3 USB2.0 Hub> at usbus4
+uhub5 on uhub0
+uhub5: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/85.36, addr 3> on usbus4
+uhub5: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus4
+ugen4.4: <Mitsumi Electric Hub in Apple Extended USB Keyboard> at usbus4
+uhub6 on uhub5
+uhub6: <Mitsumi Electric Hub in Apple Extended USB Keyboard, class 9/0, rev 1.10/4.10, addr 4> on usbus4
+uhub6: 3 ports with 2 removable, bus powered
+Root mount waiting for: usbus4
+ugen4.5: <Mitsumi Electric Apple Extended USB Keyboard> at usbus4
+ukbd0 on uhub6
+ukbd0: <Mitsumi Electric Apple Extended USB Keyboard, class 0/0, rev 1.10/4.10, addr 5> on usbus4
+kbd1 at ukbd0
+ugen4.6: <Logitech USB Optical Mouse> at usbus4
+Root mount waiting for: usbus4
+Root mount waiting for: usbus4
+ugen3.2: <vendor 0x05ac product 0x1000> at usbus3
+ukbd1 on uhub1
+ukbd1: <vendor 0x05ac product 0x1000, class 0/0, rev 2.00/19.65, addr 2> on usbus3
+kbd2 at ukbd1
+ugen3.3: <Apple Computer, Inc. IR Receiver> at usbus3
+info: [drm] Initialized drm 1.1.0 20060810
+drmn0: =======================================================
+drmn0: This code is deprecated.  Install the graphics/drm-kmod pkg
+drmn0: =======================================================
+drmn0: Deprecated code (to be removed in FreeBSD 13): drm2 drivers
+drmn0: =======================================================
+drmn0: This code is deprecated.  Install the graphics/drm-kmod pkg
+drmn0: =======================================================
+drmn0: Deprecated code (to be removed in FreeBSD 13): drm2 drivers
+drmn0: <ATI Mobility Radeon X1600> on vgapci0
+info: [drm] RADEON_IS_PCIE
+info: [drm] initializing kernel modesetting (RV530 0x1002:0x71C5 0x106B:0x0080).
+info: [drm] register mmio base: 0xC8400000
+info: [drm] register mmio size: 65536
+info: [drm] radeon_atrm_get_bios: ===> Try ATRM...
+info: [drm] radeon_atrm_get_bios: pci_find_class() found: 0:1:0:0, vendor=1002, device=71c5
+info: [drm] radeon_atrm_get_bios: Get ACPI device handle
+info: [drm] radeon_acpi_vfct_bios: ===> Try VFCT...
+info: [drm] radeon_acpi_vfct_bios: Get "VFCT" ACPI table
+info: [drm] radeon_acpi_vfct_bios: Failed to get "VFCT" table: AE_NOT_FOUND
+info: [drm] igp_read_bios_from_vram: ===> Try IGP's VRAM...
+info: [drm] igp_read_bios_from_vram: VRAM base address: 0xc0000000
+info: [drm] igp_read_bios_from_vram: Map address: 0x1951e000 (262144 bytes)
+info: [drm] igp_read_bios_from_vram: Incorrect BIOS signature: 0x0000
+info: [drm] radeon_read_bios: ===> Try PCI Expansion ROM...
+info: [drm] radeon_read_bios: Map address: 0x4c0000 (131072 bytes)
+info: [drm] ATOM BIOS: M56P
+info: [drm] Generation 2 PCI interface, using max accessible memory
+drmn0: info: VRAM: 128M 0x0000000000000000 - 0x0000000007FFFFFF (128M used)
+drmn0: info: GTT: 512M 0x0000000008000000 - 0x0000000027FFFFFF
+info: [drm] Supports vblank timestamp caching Rev 1 (10.10.2010).
+info: [drm] Driver supports precise vblank timestamp query.
+info: [drm] MSI enabled 1 message(s)
+drmn0: info: radeon: using MSI.
+info: [drm] radeon: irq initialized.
+info: [drm] Detected VRAM RAM=128M, BAR=128M
+info: [drm] RAM width 128bits DDR
+[TTM] Zone  kernel: Available graphics memory: 9007199254192218 kiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 kiB
+[TTM] Initializing pool allocator
+info: [drm] radeon: 128M of VRAM memory ready
+info: [drm] radeon: 512M of GTT memory ready.
+info: [drm] GART: num cpu pages 131072, num gpu pages 131072
+info: [drm] radeon: 1 quad pipes, 2 z pipes initialized.
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000008000000 and cpu addr 0x0x263d0000
+info: [drm] Loading R500 Microcode
+info: [drm] radeon: ring at 0x0000000008001000
+info: [drm] ring test succeeded in 6 usecs
+info: [drm] ib test succeeded in 0 usecs
+info: [drm] radeon_device_init: Taking over the fictitious range 0xc0000000-0xc8000000
+radeon_iicbb0 on drmn0
+iicbus0: <Philips I2C bus> on iicbb0 addr 0x1
+iic0: <I2C generic I/O> on iicbus0
+radeon_iicbb1 on drmn0
+iicbus1: <Philips I2C bus> on iicbb1 addr 0x2e
+iic1: <I2C generic I/O> on iicbus1
+radeon_iicbb2 on drmn0
+iicbus2: <Philips I2C bus> on iicbb2 addr 0x28
+iic2: <I2C generic I/O> on iicbus2
+radeon_iicbb3 on drmn0
+iicbus3: <Philips I2C bus> on iicbb3 addr 0x28
+iic3: <I2C generic I/O> on iicbus3
+radeon_iicbb4 on drmn0
+iicbus4: <Philips I2C bus> on iicbb4 addr 0x2e
+iic4: <I2C generic I/O> on iicbus4
+radeon_iicbb5 on drmn0
+iicbus5: <Philips I2C bus> on iicbb5 addr 0x28
+iic5: <I2C generic I/O> on iicbus5
+radeon_iicbb6 on drmn0
+iicbus6: <Philips I2C bus> on iicbb6 addr 0x2e
+iic6: <I2C generic I/O> on iicbus6
+info: [drm] Radeon Display Connectors
+info: [drm] Connector 0:
+info: [drm]   LVDS-1
+info: [drm]   DDC: 0x7e60 0x7e60 0x7e64 0x7e64 0x7e68 0x7e68 0x7e6c 0x7e6c
+info: [drm]   Encoders:
+info: [drm]     LCD1: INTERNAL_LVTM1
+info: [drm] Connector 1:
+info: [drm]   SVIDEO-1
+info: [drm]   Encoders:
+info: [drm]     TV1: INTERNAL_KLDSCP_DAC2
+info: [drm] Connector 2:
+info: [drm]   DVI-I-1
+info: [drm]   HPD1
+info: [drm]   DDC: 0x7e40 0x7e40 0x7e44 0x7e44 0x7e48 0x7e48 0x7e4c 0x7e4c
+info: [drm]   Encoders:
+info: [drm]     CRT2: INTERNAL_KLDSCP_DAC2
+info: [drm]     DFP1: INTERNAL_KLDSCP_TMDS1
+info: [drm] Connector LVDS-1: get mode from tunables:
+info: [drm]   - kern.vt.fb.modes.LVDS-1
+info: [drm]   - kern.vt.fb.default_mode
+info: [drm] Connector SVIDEO-1: get mode from tunables:
+info: [drm]   - kern.vt.fb.modes.SVIDEO-1
+info: [drm]   - kern.vt.fb.default_mode
+info: [drm] Connector DVI-I-1: get mode from tunables:
+info: [drm]   - kern.vt.fb.modes.DVI-I-1
+info: [drm]   - kern.vt.fb.default_mode
+info: [drm] fb mappable at 0xC00C0000
+info: [drm] vram apper at 0xC0000000
+info: [drm] size 7258112
+info: [drm] fb depth is 24
+info: [drm]    pitch is 6912
+fbd0 on drmn0
+VT: Replacing driver "vga" with new "fb".
+info: [drm] Initialized radeon 2.29.0 20080528 for drmn0 on minor 0
+lo0: link state changed to UP
+msk0: link state changed to DOWN
+uhid0 on uhub6
+uhid0: <Mitsumi Electric Apple Extended USB Keyboard, class 0/0, rev 1.10/4.10, addr 5> on usbus4
+uhid1 on uhub1
+uhid1: <Apple Computer, Inc. IR Receiver, class 0/0, rev 2.00/1.10, addr 3> on usbus3
+msk0: link state changed to UP
+ums0 on uhub5
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 6> on usbus4
+ums0: 3 buttons and [XYZ] coordinates ID=0
+ums1 on uhub1
+ums1: <vendor 0x05ac product 0x1000, class 0/0, rev 2.00/19.65, addr 2> on usbus3
+ums1: 5 buttons and [XY] coordinates ID=0
+CPU: Intel(R) Core(TM)2 CPU         T7400  @ 2.16GHz (2163.82-MHz 686-class CPU)
+  Origin="GenuineIntel"  Id=0x6f6  Family=0x6  Model=0xf  Stepping=6
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0xe3bd<SSE3,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM>
+  AMD Features=0x20100000<NX,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: HLT,PAUSE
+  TSC: P-state invariant, performance statistics
+Security policy loaded: MAC/ntpd (mac_ntpd)

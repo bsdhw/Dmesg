@@ -1,0 +1,721 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p18-HBSD #1  815defa6fd0(stable/21.1)-dirty: Mon Jun 14 09:17:18 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1024x768
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz (2200.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x406f1  Family=0x6  Model=0x4f  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffefbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x21cbfbb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,PQM,NFPUSG,PQE,RDSEED,ADX,SMAP,PROCTRACE>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 137438953472 (131072 MB)
+avail memory = 133737312256 (127541 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 48 CPUs
+FreeBSD/SMP: 2 package(s) x 12 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 24-47 on motherboard
+ioapic2 <Version 2.0> irqs 48-71 on motherboard
+Launching APs: 1 3 10 46 19 17 29 9 22 34 12 18 24 20 36 40 27 6 7 8 45 39 44 33 4 41 16 21 15 30 31 26 42 37 38 2 23 11 43 28 14 5 32 35 25 47 13
+Timecounter "TSC-low" frequency 1100021788 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000098 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x71,0x74-0x77 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <dasp, performance counters> at device 8.2 (no driver attached)
+pci0: <dasp, performance counters> at device 9.2 (no driver attached)
+pci0: <dasp, performance counters> at device 11.1 (no driver attached)
+pci0: <dasp, performance counters> at device 11.2 (no driver attached)
+pci0: <dasp, performance counters> at device 16.1 (no driver attached)
+pci0: <dasp, performance counters> at device 16.6 (no driver attached)
+pci0: <dasp, performance counters> at device 18.1 (no driver attached)
+pci0: <dasp, performance counters> at device 18.5 (no driver attached)
+pcib1: <ACPI Host-PCI bridge> on acpi0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <dasp, performance counters> at device 8.2 (no driver attached)
+pci1: <dasp, performance counters> at device 9.2 (no driver attached)
+pci1: <dasp, performance counters> at device 11.1 (no driver attached)
+pci1: <dasp, performance counters> at device 11.2 (no driver attached)
+pci1: <dasp, performance counters> at device 16.1 (no driver attached)
+pci1: <dasp, performance counters> at device 16.6 (no driver attached)
+pci1: <dasp, performance counters> at device 18.1 (no driver attached)
+pci1: <dasp, performance counters> at device 18.5 (no driver attached)
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+pcib2: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 26 at device 1.0 numa-domain 0 on pci2
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+AVAGO MegaRAID SAS FreeBSD mrsas driver version: XXX.XXX.XXX.XXX-fbsd
+mfi0: <Invader> port 0x6000-0x60ff mem 0xc7b00000-0xc7b0ffff,0xc7a00000-0xc7afffff irq 26 at device 0.0 numa-domain 0 on pci3
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: FW MaxCmds = 928, limiting to 128
+mfi0: MaxCmd = 928, Drv MaxCmd = 128, MaxSgl = 70, state = 0xb73c03a0
+mfi0: 18517 (677967435s/0x0020/info) - Shutdown command received from host
+mfi0: 18518 (boot + 5s/0x0020/info) - Firmware initialization started (PCI ID 005d/1000/0809/15d9)
+mfi0: 18519 (boot + 5s/0x0020/info) - Firmware version 4.680.00-8249
+mfi0: 18520 (boot + 9s/0x0020/info) - Package version 24.21.0-0012
+mfi0: 18521 (boot + 9s/0x0020/info) - Board Revision 
+mfi0: 18522 (boot + 27s/0x0004/info) - Enclosure (SES) discovered on PD 00(c Port 0 - 3/p1)
+mfi0: 18523 (boot + 27s/0x0004/info) - Enclosure PD 00(c Port 0 - 3/p1) communication restored
+mfi0: 18524 (boot + 27s/0x0002/info) - Inserted: Encl PD 00
+mfi0: 18525 (boot + 27s/0x0002/info) - Inserted: PD 00(c Port 0 - 3/p1) Info: enclPd=00, scsiType=d, portMap=00, sasAddr=500304801841a63d,0000000000000000
+pcib4: mfi0: 18526 (boot + 27s/0x0002/info) - Encl PD 00 Inquiry info: Info- SMC  SC826P            0 GB
+mfi0: 18527 (boot + 27s/0x0002/info) - Inserted: PD 0d(e0x00/s2)
+<ACPI PCI-PCI bridge>mfi0:  irq 32 at device 2.0 numa-domain 0 on pci2
+pci4: 18528 (boot + 27s/0x0002/info) - Inserted: PD 0d(e0x00/s2) Info: enclPd=00, scsiType=0, portMap=00, sasAddr=500304801841a602,0000000000000000
+mfi0: 18529 (boot + 27s/0x0002/info) - PD 0d(e0x00/s2) Inquiry info: Info- ATA  ST6000NM0115-1YZ ZAD26KBH 5 TB
+mfi0: 18530 (boot + 27s/0x0002/info) - Inserted: PD 0e(e0x00/s3)
+<ACPI PCI bus>mfi0:  numa-domain 0 on pcib4
+18531 (boot + 27s/0x0002/info) - Inserted: PD 0e(e0x00/s3) Info: enclPd=00, scsiType=0, portMap=00, sasAddr=500304801841a603,0000000000000000
+mfi0: 18532 (boot + 27s/0x0002/info) - PD 0e(e0x00/s3) Inquiry info: Info- ATA  ST6000NM0115-1YZ ZAD1CR14 5 TB
+mfi0: 18533 (boot + 27s/0x0002/info) - Inserted: PD 0f(e0x00/s5)
+mfi0: 18534 (boot + 27s/0x0002/info) - Inserted: PD 0f(e0x00/s5) Info: enclPd=00, scsiType=0, portMap=00, sasAddr=500304801841a605,0000000000000000
+mfi0: 18535 (boot + 27s/0x0002/info) - PD 0f(e0x00/s5) Inquiry info: Info- ATA  ST6000NM0115-1YZ ZAD26L6G 5 TB
+mfi0: 18536 (boot + 27s/0x0002/info) - Inserted: PD 10(e0x00/s1)
+mfi0: pcib5: 18537 (boot + 27s/0x0002/info) - Inserted: PD 10(e0x00/s1) Info: enclPd=00, scsiType=0, portMap=00, sasAddr=500304801841a601,0000000000000000
+mfi0: 18538 (boot + 27s/0x0002/info) - PD 10(e0x00/s1) Inquiry info: Info- ATA  ST6000NM0115-1YZ ZAD272EP 5 TB
+mfi0: 18539 (boot + 27s/0x0002/info) - Inserted: PD 11(e0x00/s0)
+<ACPI PCI-PCI bridge>mfi0:  irq 32 at device 2.2 numa-domain 0 on pci2
+18540 (boot + 27s/0x0002/info) - Inserted: PD 11(e0x00/s0) Info: enclPd=00, scsiType=0, portMap=00, sasAddr=500304801841a600,0pci5: 000000000000000
+mfi0: 18541 (boot + 27s/0x0002/info) - PD 11(e0x00/s0) Inquiry info: Info- ATA  ST6000NM0115-1YZ ZAD274KK 5 TB
+mfi0: <ACPI PCI bus> numa-domain 0 on pcib5
+18542 (boot + 27s/0x0002/info) - Inserted: PD 12(e0x00/s4)
+mfi0: 18543 (boot + 27s/0x0002/info) - Inserted: PD 12(e0x00/s4) Info: enclPd=00, scsiType=0, portMap=00, sasAddr=500304801841a604,0000000000000000
+mfi0: 18544 (boot + 27s/0x0002/info) - PD 12(e0x00/s4) Inquiry info: Info- ATA  ST6000NM0115-1YZ ZAD26Y0J 5 TB
+mfi0: 18545 (boot + 27s/0x0002/info) - Inserted: PD 13(e0x00/s8)
+mfi0: 18546 (boot + 27s/0x0002/info) - Inserted: PD 13(e0x00/s8) Info: enclPd=00, scsiType=0, portMap=00, sasAddr=500304801841a608,0000000000000000
+mfi0: 18547 (boot + 27s/0x0002/info) - PD 13(e0x00/s8) Inquiry info: Info- ATA  ST1000NM0008-2F2 ZFA020ZE 931 GB
+mfi0: 18548 (boot + 27s/0x0002/info) - Inserted: PD 14(e0x00/s7)
+mfi0: 18549 (boot + 27s/0x0002/info) - Inserted: PD 14(e0x00/s7) Info: enclPd=00, scsiType=0, portMap=00, sasAddr=500304801841a607,0000000000000000
+pcib6: mfi0: 18550 (boot + 27s/0x0002/info) - PD 14(e0x00/s7) Inquiry info: Info- ATA  ST1000NM0008-2F2 ZFA01ZYH 931 GB
+mfi0: 18551 (boot + 28s/0x0020/info) - Controller operating temperature within normal range, full operation restored
+mfi0: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 0 on pci5
+18552 (677969800s/0x0020/info) - Time established as 06/25/21 20:56:40; (34 seconds since power on)
+pci6: mfi0: 18553 (677969858s/0x0020/WARN) - Host driver needs to be upgraded to enable extended LD support
+<ACPI PCI bus> numa-domain 0 on pcib6
+pcib7: <PCI-PCI bridge> at device 2.0 numa-domain 0 on pci6
+pci7: <PCI bus> numa-domain 0 on pcib7
+pci7: <network, ethernet> at device 0.0 (no driver attached)
+pcib8: <PCI-PCI bridge> at device 4.0 numa-domain 0 on pci6
+pci8: <PCI bus> numa-domain 0 on pcib8
+pci8: <network, ethernet> at device 0.0 (no driver attached)
+pcib9: <ACPI PCI-PCI bridge> irq 40 at device 3.0 numa-domain 0 on pci2
+pci9: <ACPI PCI bus> numa-domain 0 on pcib9
+pcib10: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 0 on pci9
+pci10: <ACPI PCI bus> numa-domain 0 on pcib10
+pcib11: <PCI-PCI bridge> at device 2.0 numa-domain 0 on pci10
+pci11: <PCI bus> numa-domain 0 on pcib11
+pci11: <network, ethernet> at device 0.0 (no driver attached)
+pcib12: <PCI-PCI bridge> at device 4.0 numa-domain 0 on pci10
+pci12: <PCI bus> numa-domain 0 on pcib12
+pci12: <network, ethernet> at device 0.0 (no driver attached)
+pcib13: <ACPI PCI-PCI bridge> irq 40 at device 3.2 numa-domain 0 on pci2
+pci13: <ACPI PCI bus> numa-domain 0 on pcib13
+ix0: <Intel(R) PRO/10GbE PCI-Express Network Driver> port 0x5020-0x503f mem 0xc5200000-0xc53fffff,0xc5404000-0xc5407fff irq 42 at device 0.0 numa-domain 0 on pci13
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 12 RX queues 12 TX queues
+ix0: Using MSI-X interrupts with 13 vectors
+ix0: allocated for 12 queues
+ix0: allocated for 12 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: netmap queues/slots: TX 12/2048, RX 12/2048
+ix1: <Intel(R) PRO/10GbE PCI-Express Network Driver> port 0x5000-0x501f mem 0xc5000000-0xc51fffff,0xc5400000-0xc5403fff irq 45 at device 0.1 numa-domain 0 on pci13
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 12 RX queues 12 TX queues
+ix1: Using MSI-X interrupts with 13 vectors
+ix1: allocated for 12 queues
+ix1: allocated for 12 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: netmap queues/slots: TX 12/2048, RX 12/2048
+pci2: <unknown> at device 17.0 (no driver attached)
+ahci0: <Intel Wellsburg AHCI SATA controller> port 0x7110-0x7117,0x7100-0x7103,0x70f0-0x70f7,0x70e0-0x70e3,0x7020-0x703f mem 0xc7c38000-0xc7c387ff irq 16 at device 17.4 numa-domain 0 on pci2
+ahci0: AHCI v1.30 with 4 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+xhci0: <Intel Wellsburg USB 3.0 controller> mem 0xc7c00000-0xc7c0ffff irq 19 at device 20.0 numa-domain 0 on pci2
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 numa-domain 0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci2: <simple comms> at device 22.0 (no driver attached)
+pci2: <simple comms> at device 22.1 (no driver attached)
+ehci0: <Intel Wellsburg USB 2.0 controller> mem 0xc7c34000-0xc7c343ff irq 18 at device 26.0 numa-domain 0 on pci2
+usbus1: EHCI version 1.0
+usbus1 numa-domain 0 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib14: <ACPI PCI-PCI bridge> irq 16 at device 28.0 numa-domain 0 on pci2
+pci14: <ACPI PCI bus> numa-domain 0 on pcib14
+pcib15: <ACPI PCI-PCI bridge> irq 16 at device 28.4 numa-domain 0 on pci2
+pci15: <ACPI PCI bus> numa-domain 0 on pcib15
+pcib16: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 0 on pci15
+pci16: <ACPI PCI bus> numa-domain 0 on pcib16
+vgapci0: <VGA-compatible display> port 0x4000-0x407f mem 0xc6000000-0xc6ffffff,0xc7000000-0xc701ffff irq 16 at device 0.0 numa-domain 0 on pci16
+vgapci0: Boot video device
+ehci1: <Intel Wellsburg USB 2.0 controller> mem 0xc7c33000-0xc7c333ff irq 18 at device 29.0 numa-domain 0 on pci2
+usbus2: EHCI version 1.0
+usbus2 numa-domain 0 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci2
+isa0: <ISA bus> numa-domain 0 on isab0
+ahci1: <Intel Wellsburg AHCI SATA controller> port 0x7070-0x7077,0x7060-0x7063,0x7050-0x7057,0x7040-0x7043,0x7000-0x701f mem 0xc7c32000-0xc7c327ff irq 16 at device 31.2 numa-domain 0 on pci2
+ahci1: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich4: <AHCI channel> at channel 0 on ahci1
+ahcich5: <AHCI channel> at channel 1 on ahci1
+ahcich6: <AHCI channel> at channel 2 on ahci1
+ahcich7: <AHCI channel> at channel 3 on ahci1
+ahcich8: <AHCI channel> at channel 4 on ahci1
+ahcich9: <AHCI channel> at channel 5 on ahci1
+ahciem1: <AHCI enclosure management bridge> at channel 2147483647 on ahci1
+device_attach: ahciem1 attach returned 6
+pcib17: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci17: <ACPI PCI bus> numa-domain 1 on pcib17
+pcib18: <ACPI PCI-PCI bridge> irq 50 at device 1.0 numa-domain 1 on pci17
+pci18: <ACPI PCI bus> numa-domain 1 on pcib18
+ix2: <Intel(R) PRO/10GbE PCI-Express Network Driver> port 0xf020-0xf03f mem 0xfbd80000-0xfbdfffff,0xfbe04000-0xfbe07fff irq 50 at device 0.0 numa-domain 1 on pci18
+ix2: Using 2048 TX descriptors and 2048 RX descriptors
+ix2: Using 12 RX queues 12 TX queues
+ix2: Using MSI-X interrupts with 13 vectors
+ix2: allocated for 12 queues
+ix2: allocated for 12 rx queues
+ix2: Ethernet address: ...
+ix2: PCI Express Bus: Speed 5.0GT/s Width x8
+ix2: netmap queues/slots: TX 12/2048, RX 12/2048
+ix3: <Intel(R) PRO/10GbE PCI-Express Network Driver> port 0xf000-0xf01f mem 0xfbd00000-0xfbd7ffff,0xfbe00000-0xfbe03fff irq 52 at device 0.1 numa-domain 1 on pci18
+ix3: Using 2048 TX descriptors and 2048 RX descriptors
+ix3: Using 12 RX queues 12 TX queues
+ix3: Using MSI-X interrupts with 13 vectors
+ix3: allocated for 12 queues
+ix3: allocated for 12 rx queues
+ix3: Ethernet address: ...
+ix3: PCI Express Bus: Speed 5.0GT/s Width x8
+ix3: netmap queues/slots: TX 12/2048, RX 12/2048
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xd8000-0xd8fff,0xd9000-0xd9fff,0xda000-0xdafff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen1.1: <Intel EHCI root HUB> at usbus1
+mfid0 numa-domain 0 on mfi0
+mfid0: 11445248MB (23439867904 sectors) RAID volume 'data' is optimal
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+mfid1 numa-domain 0 on mfi0
+mfid1: 953344MB (1952448512 sectors) RAID volume 'sys' is optimal
+uhub2: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+mfid2 numa-domain 0 on mfi0
+mfid2: 5722624MB (11719933952 sectors) RAID volume 'backup' is optimal
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 21 ports with 21 removable, self powered
+ugen1.2: <vendor 0x8087 product 0x800a> at usbus1
+uhub3 numa-domain 0 on uhub1
+uhub3: <vendor 0x8087 product 0x800a, class 9/0, rev 2.00/0.05, addr 2> on usbus1
+ugen2.2: <vendor 0x8087 product 0x8002> at usbus2
+uhub4 numa-domain 0 on uhub0
+uhub4: <vendor 0x8087 product 0x8002, class 9/0, rev 2.00/0.05, addr 2> on usbus2
+ugen0.2: <vendor 0x0557 product 0x7000> at usbus0
+uhub5 numa-domain 0 on uhub2
+uhub5: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 1> on usbus0
+uhub5: 4 ports with 3 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+uhub4: 8 ports with 8 removable, self powered
+ugen0.3: <vendor 0x0557 product 0x2419> at usbus0
+ukbd0 numa-domain 0 on uhub5
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+kbd2 at ukbd0
+ioat0: <BDX IOAT Ch0> mem 0xc7c2c000-0xc7c2ffff irq 31 at device 4.0 numa-domain 0 on pci2
+ioat0: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat1: <BDX IOAT Ch1> mem 0xc7c28000-0xc7c2bfff irq 39 at device 4.1 numa-domain 0 on pci2
+ioat1: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat2: <BDX IOAT Ch2> mem 0xc7c24000-0xc7c27fff irq 31 at device 4.2 numa-domain 0 on pci2
+ioat2: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat3: <BDX IOAT Ch3> mem 0xc7c20000-0xc7c23fff irq 39 at device 4.3 numa-domain 0 on pci2
+ioat3: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat4: <BDX IOAT Ch4> mem 0xc7c1c000-0xc7c1ffff irq 31 at device 4.4 numa-domain 0 on pci2
+ioat4: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat5: <BDX IOAT Ch5> mem 0xc7c18000-0xc7c1bfff irq 39 at device 4.5 numa-domain 0 on pci2
+ioat5: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat6: <BDX IOAT Ch6> mem 0xc7c14000-0xc7c17fff irq 31 at device 4.6 numa-domain 0 on pci2
+ioat6: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat7: <BDX IOAT Ch7> mem 0xc7c10000-0xc7c13fff irq 39 at device 4.7 numa-domain 0 on pci2
+ioat7: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat8: <BDX IOAT Ch0> mem 0xfbf1c000-0xfbf1ffff irq 55 at device 4.0 numa-domain 1 on pci17
+ioat8: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat9: <BDX IOAT Ch1> mem 0xfbf18000-0xfbf1bfff irq 63 at device 4.1 numa-domain 1 on pci17
+ioat9: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat10: <BDX IOAT Ch2> mem 0xfbf14000-0xfbf17fff irq 55 at device 4.2 numa-domain 1 on pci17
+ioat10: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat11: <BDX IOAT Ch3> mem 0xfbf10000-0xfbf13fff irq 63 at device 4.3 numa-domain 1 on pci17
+ioat11: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat12: <BDX IOAT Ch4> mem 0xfbf0c000-0xfbf0ffff irq 55 at device 4.4 numa-domain 1 on pci17
+ioat12: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat13: <BDX IOAT Ch5> mem 0xfbf08000-0xfbf0bfff irq 63 at device 4.5 numa-domain 1 on pci17
+ioat13: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat14: <BDX IOAT Ch6> mem 0xfbf04000-0xfbf07fff irq 55 at device 4.6 numa-domain 1 on pci17
+ioat14: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat15: <BDX IOAT Ch7> mem 0xfbf00000-0xfbf03fff irq 63 at device 4.7 numa-domain 1 on pci17
+ioat15: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ums0 numa-domain 0 on uhub5
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> numa-domain 0 on cpu0
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+pflog0: promiscuous mode enabled
+ix0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+mfi0: Failed to get command
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ix0: promiscuous mode enabled
+lo0: promiscuous mode enabled
+ix0: promiscuous mode disabled
+lo0: promiscuous mode disabled
+ix0: promiscuous mode enabled
+lo0: promiscuous mode enabled
+mfi0: 18554 (677991600s/0x0020/info) - Patrol Read started
+mfi0: 18555 (677991600s/0x0001/info) - Consistency Check started on VD 01/0
+mfi0: 18556 (677991600s/0x0001/WARN) - Consistency Check started on an inconsistent VD 01/0
+mfi0: 18557 (677991600s/0x0001/info) - Consistency Check started on VD 02/1
+mfi0: 18558 (677991600s/0x0001/WARN) - Consistency Check started on an inconsistent VD 02/1
+mfi0: 18559 (677991600s/0x0001/info) - Consistency Check started on VD 00/2
+mfi0: 18560 (677991600s/0x0001/WARN) - Consistency Check started on an inconsistent VD 00/2
+mfi0: 18706 (677998219s/0x0001/info) - Consistency Check done on VD 02/1
+mfi0: 18856 (678024605s/0x0001/info) - Consistency Check done on VD 00/2
+mfi0: 18863 (678027254s/0x0001/info) - Consistency Check done on VD 01/0
+mfi0: 18918 (678060806s/0x0020/info) - Patrol Read complete
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+lagg0: IPv6 addresses on ix2 have been removed before adding it as a member to prevent IPv6 address scope violation.
+lagg0: link state changed to DOWN
+lagg0: IPv6 addresses on ix3 have been removed before adding it as a member to prevent IPv6 address scope violation.
+ix2: link state changed to UP
+lagg0: link state changed to UP
+ix3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+vlan0: changing name to 'lagg0_vlan201'
+vlan1: changing name to 'lagg0_vlan202'
+vlan2: changing name to 'lagg0_vlan203'
+vlan3: changing name to 'lagg0_vlan204'
+vlan4: changing name to 'lagg0_vlan205'
+vlan5: changing name to 'lagg0_vlan206'
+vlan6: changing name to 'lagg0_vlan207'
+vlan7: changing name to 'lagg0_vlan208'
+vlan8: changing name to 'lagg0_vlan209'
+vlan9: changing name to 'lagg0_vlan210'
+vlan10: changing name to 'lagg0_vlan700'
+vlan11: changing name to 'lagg0_vlan306'
+vlan12: changing name to 'lagg0_vlan307'
+vlan0: changing name to 'lagg0_vlan4001'
+vlan1: changing name to 'lagg0_vlan4002'
+vlan2: changing name to 'lagg0_vlan4003'
+vlan3: changing name to 'lagg0_vlan4004'
+vlan4: changing name to 'lagg0_vlan4005'
+vlan5: changing name to 'lagg0_vlan4006'
+vlan6: changing name to 'lagg0_vlan4007'
+vlan7: changing name to 'lagg0_vlan4008'
+vlan8: changing name to 'lagg0_vlan4009'
+vlan9: changing name to 'lagg0_vlan4010'
+vlan13: changing name to 'lagg0_vlan212'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ix2: link state changed to DOWN
+ix3: link state changed to DOWN
+lagg0: link state changed to DOWN
+lagg0_vlan4005: link state changed to DOWN
+lagg0_vlan306: link state changed to DOWN
+lagg0_vlan4004: link state changed to DOWN
+lagg0_vlan307: link state changed to DOWN
+lagg0_vlan4007: link state changed to DOWN
+lagg0_vlan4006: link state changed to DOWN
+lagg0_vlan4001: link state changed to DOWN
+lagg0_vlan700: link state changed to DOWN
+lagg0_vlan4003: link state changed to DOWN
+lagg0_vlan4002: link state changed to DOWN
+lagg0_vlan212: link state changed to DOWN
+lagg0_vlan4009: link state changed to DOWN
+lagg0_vlan4008: link state changed to DOWN
+lagg0_vlan4010: link state changed to DOWN
+ix2: link state changed to UP
+lagg0: link state changed to UP
+lagg0_vlan4005: link state changed to UP
+lagg0_vlan306: link state changed to UP
+lagg0_vlan4004: link state changed to UP
+lagg0_vlan307: link state changed to UP
+lagg0_vlan4007: link state changed to UP
+lagg0_vlan4006: link state changed to UP
+lagg0_vlan4001: link state changed to UP
+lagg0_vlan700: link state changed to UP
+lagg0_vlan4003: link state changed to UP
+lagg0_vlan4002: link state changed to UP
+lagg0_vlan212: link state changed to UP
+lagg0_vlan4009: link state changed to UP
+lagg0_vlan4008: link state changed to UP
+lagg0_vlan4010: link state changed to UP
+ix3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+vlan14: changing name to 'lagg0_vlan15'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+mfi0: 18919 (678596400s/0x0020/info) - Patrol Read started
+mfi0: 18920 (678596400s/0x0001/info) - Consistency Check started on VD 01/0
+mfi0: 18921 (678596400s/0x0001/info) - Consistency Check started on VD 02/1
+mfi0: 18922 (678596400s/0x0001/info) - Consistency Check started on VD 00/2
+mfi0: 19068 (678603034s/0x0001/info) - Consistency Check done on VD 02/1
+mfi0: 19218 (678629413s/0x0001/info) - Consistency Check done on VD 00/2
+mfi0: 19226 (678632071s/0x0001/info) - Consistency Check done on VD 01/0
+mfi0: 19280 (678665623s/0x0020/info) - Patrol Read complete
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+mfi0: 19281 (679201200s/0x0020/info) - Patrol Read started
+mfi0: 19282 (679201200s/0x0001/info) - Consistency Check started on VD 01/0
+mfi0: 19283 (679201200s/0x0001/info) - Consistency Check started on VD 02/1
+mfi0: 19284 (679201200s/0x0001/info) - Consistency Check started on VD 00/2
+mfi0: 19430 (679207846s/0x0001/info) - Consistency Check done on VD 02/1
+mfi0: 19580 (679234213s/0x0001/info) - Consistency Check done on VD 00/2
+mfi0: 19588 (679236871s/0x0001/info) - Consistency Check done on VD 01/0
+mfi0: 19642 (679270421s/0x0020/info) - Patrol Read complete
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+mfi0: 19643 (679806000s/0x0020/info) - Patrol Read started
+mfi0: 19644 (679806000s/0x0001/info) - Consistency Check started on VD 01/0
+mfi0: 19645 (679806000s/0x0001/info) - Consistency Check started on VD 02/1
+mfi0: 19646 (679806000s/0x0001/info) - Consistency Check started on VD 00/2
+mfi0: 19792 (679812613s/0x0001/info) - Consistency Check done on VD 02/1
+mfi0: 19942 (679839013s/0x0001/info) - Consistency Check done on VD 00/2
+mfi0: 19950 (679841676s/0x0001/info) - Consistency Check done on VD 01/0
+mfi0: 20004 (679875226s/0x0020/info) - Patrol Read complete
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+mfi0: 20005 (680410800s/0x0020/info) - Patrol Read started
+mfi0: 20006 (680410800s/0x0001/info) - Consistency Check started on VD 01/0
+mfi0: 20007 (680410800s/0x0001/info) - Consistency Check started on VD 02/1
+mfi0: 20008 (680410800s/0x0001/info) - Consistency Check started on VD 00/2
+mfi0: 20154 (680417450s/0x0001/info) - Consistency Check done on VD 02/1
+mfi0: 20304 (680443812s/0x0001/info) - Consistency Check done on VD 00/2
+mfi0: 20312 (680446473s/0x0001/info) - Consistency Check done on VD 01/0
+mfi0: 20366 (680480022s/0x0020/info) - Patrol Read complete
+mfi0: 20367 (681015600s/0x0020/info) - Patrol Read started
+mfi0: 20368 (681015600s/0x0001/info) - Consistency Check started on VD 01/0
+mfi0: 20369 (681015600s/0x0001/info) - Consistency Check started on VD 02/1
+mfi0: 20370 (681015600s/0x0001/info) - Consistency Check started on VD 00/2
+mfi0: 20516 (681022269s/0x0001/info) - Consistency Check done on VD 02/1
+mfi0: 20666 (681048627s/0x0001/info) - Consistency Check done on VD 00/2
+mfi0: 20674 (681051269s/0x0001/info) - Consistency Check done on VD 01/0
+mfi0: 20728 (681084820s/0x0020/info) - Patrol Read complete
+mfi0: 20729 (681620400s/0x0020/info) - Patrol Read started
+mfi0: 20730 (681620400s/0x0001/info) - Consistency Check started on VD 01/0
+mfi0: 20731 (681620400s/0x0001/info) - Consistency Check started on VD 02/1
+mfi0: 20732 (681620400s/0x0001/info) - Consistency Check started on VD 00/2
+mfi0: 20878 (681627036s/0x0001/info) - Consistency Check done on VD 02/1
+mfi0: 21028 (681653436s/0x0001/info) - Consistency Check done on VD 00/2
+mfi0: 21037 (681656159s/0x0001/info) - Consistency Check done on VD 01/0
+mfi0: 21090 (681689709s/0x0020/info) - Patrol Read complete
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ix2: link state changed to DOWN
+ix3: link state changed to DOWN
+lagg0: link state changed to DOWN
+lagg0_vlan4005: link state changed to DOWN
+lagg0_vlan306: link state changed to DOWN
+lagg0_vlan4004: link state changed to DOWN
+lagg0_vlan307: link state changed to DOWN
+lagg0_vlan4007: link state changed to DOWN
+lagg0_vlan4006: link state changed to DOWN
+lagg0_vlan4001: link state changed to DOWN
+lagg0_vlan700: link state changed to DOWN
+lagg0_vlan4003: link state changed to DOWN
+lagg0_vlan4002: link state changed to DOWN
+lagg0_vlan212: link state changed to DOWN
+lagg0_vlan4009: link state changed to DOWN
+lagg0_vlan4008: link state changed to DOWN
+lagg0_vlan15: link state changed to DOWN
+lagg0_vlan4010: link state changed to DOWN
+ix2: link state changed to UP
+lagg0: link state changed to UP
+lagg0_vlan4005: link state changed to UP
+lagg0_vlan306: link state changed to UP
+lagg0_vlan4004: link state changed to UP
+lagg0_vlan307: link state changed to UP
+lagg0_vlan4007: link state changed to UP
+lagg0_vlan4006: link state changed to UP
+lagg0_vlan4001: link state changed to UP
+lagg0_vlan700: link state changed to UP
+lagg0_vlan4003: link state changed to UP
+lagg0_vlan4002: link state changed to UP
+lagg0_vlan212: link state changed to UP
+lagg0_vlan4009: link state changed to UP
+lagg0_vlan4008: link state changed to UP
+lagg0_vlan15: link state changed to UP
+lagg0_vlan4010: link state changed to UP
+ix3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: promiscuous mode enabled

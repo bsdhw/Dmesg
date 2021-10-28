@@ -1,0 +1,582 @@
+OpenBSD 6.8 (RAMDISK_CD) #94: Sun Oct  4 18:21:11 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8456339456 (8064MB)
+avail mem = 8196034560 (7816MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xeb220 (31 entries)
+bios0: vendor American Megatrends Inc. version "V2.00L11A M10" date 06/16/2011
+bios0: Panasonic Corporation CF-C1BT02EGE
+acpi0 at bios0: ACPI 4.0
+acpi0: tables DSDT FACP APIC HPET SLIC MCFG SSDT SSDT SSDT SSDT SSDT TCPA ASF! SSDT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 1670.07 MHz, 06-2a-07
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpi0: unable to load \\LDTB.TBXP
+acpi0: unable to load \\LDTB.TBSE
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus -1 (PEG3)
+acpiprt5 at acpi0: bus -1 (RP06)
+acpiprt6 at acpi0: bus 1 (RP01)
+acpiprt7 at acpi0: bus 2 (RP02)
+acpiprt8 at acpi0: bus 3 (RP03)
+acpiprt9 at acpi0: bus 4 (RP04)
+acpiprt10 at acpi0: bus -1 (RP07)
+acpiprt11 at acpi0: bus -1 (RP08)
+acpiprt12 at acpi0: bus -1 (RP05)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"IFX0102" at acpi0 not configured
+"MAT0021" at acpi0 not configured
+"MAT0019" at acpi0 not configured
+"ACPI0003" at acpi0 not configured
+"PNP0C0A" at acpi0 not configured
+"PNP0C0A" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"MAT001F" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using IvyBridge MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 2G Host" rev 0x09
+vga1 at pci0 dev 2 function 0 "Intel HD Graphics 3000" rev 0x09
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+vendor "Intel", unknown product 0x0103 (class DASP subclass miscellaneous, rev 0x09) at pci0 dev 4 function 0 not configured
+"Intel 6 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+"Intel 6 Series KT" rev 0x04 at pci0 dev 22 function 3 not configured
+em0 at pci0 dev 25 function 0 "Intel 82579LM" rev 0x04: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel 6 Series HD Audio" rev 0x04 at pci0 dev 27 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 6 Series PCIE" rev 0xb4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 6 Series PCIE" rev 0xb4: msi
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 2 "Intel 6 Series PCIE" rev 0xb4: msi
+pci3 at ppb2 bus 3
+iwn0 at pci3 dev 0 function 0 "Intel Centrino Advanced-N 6205" rev 0x34: msi, MIMO 2T2R, MoW, address XXX
+ppb3 at pci0 dev 28 function 3 "Intel 82801BAM Hub-to-PCI" rev 0xb4: msi
+pci4 at ppb3 bus 4
+cbb0 at pci4 dev 0 function 0 vendor "Ricoh", unknown product 0xe476 rev 0x02: apic 2 int 19
+sdhc0 at pci4 dev 0 function 1 "Ricoh 5U823 SD/MMC" rev 0x00: apic 2 int 16
+sdhc0: SDHC 3.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed, dma
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 5 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+ehci1 at pci0 dev 29 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel QM67 LPC" rev 0x04 at pci0 dev 31 function 0 not configured
+ahci0 at pci0 dev 31 function 2 "Intel 6 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: PHY offline on port 1
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, SanDisk SD6SB1M1, X231> naa.5001b44e47fe783e
+sd0: 122104MB, 512 bytes/sector, 250069680 sectors, thin
+"Intel 6 Series SMBus" rev 0x04 at pci0 dev 31 function 3 not configured
+"Intel 6 Series Thermal" rev 0x04 at pci0 dev 31 function 6 not configured
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+scsibus1 at sdmmc0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <SD/MMC, SD16G, 0020> removable
+sd1: 59688MB, 512 bytes/sector, 122241024 sectors
+uhub2 at uhub0 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+"ALPS UGNZ4" rev 2.00/52.76 addr 3 at uhub2 port 2 not configured
+uhub3 at uhub1 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+umass0 at uhub3 port 2 configuration 1 interface 0 "General USB Flash Disk" rev 2.00/1.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd2 at scsibus2 targ 1 lun 0: <General, USB Flash Disk, 1.0> removable serial....
+sd2: 3824MB, 512 bytes/sector, 7831552 sectors
+uhidev0 at uhub3 port 7 configuration 1 interface 0 "MosArt, Inc. A3002" rev 1.10/4.47 addr 4
+uhidev0: iclass 3/0, 9 report ids
+uhid at uhidev0 reportid 1 not configured
+uhid at uhidev0 reportid 3 not configured
+uhid at uhidev0 reportid 5 not configured
+uhid at uhidev0 reportid 6 not configured
+uhid at uhidev0 reportid 7 not configured
+uhid at uhidev0 reportid 8 not configured
+uhid at uhidev0 reportid 9 not configured
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 6.8 (RAMDISK_CD) #94: Sun Oct  4 18:21:11 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8456339456 (8064MB)
+avail mem = 8196034560 (7816MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xeb220 (31 entries)
+bios0: vendor American Megatrends Inc. version "V2.00L11A M10" date 06/16/2011
+bios0: Panasonic Corporation CF-C1BT02EGE
+acpi0 at bios0: ACPI 4.0
+acpi0: tables DSDT FACP APIC HPET SLIC MCFG SSDT SSDT SSDT SSDT SSDT TCPA ASF! SSDT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 1658.62 MHz, 06-2a-07
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpi0: unable to load \\LDTB.TBXP
+acpi0: unable to load \\LDTB.TBSE
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus -1 (PEG3)
+acpiprt5 at acpi0: bus -1 (RP06)
+acpiprt6 at acpi0: bus 1 (RP01)
+acpiprt7 at acpi0: bus 2 (RP02)
+acpiprt8 at acpi0: bus 3 (RP03)
+acpiprt9 at acpi0: bus 4 (RP04)
+acpiprt10 at acpi0: bus -1 (RP07)
+acpiprt11 at acpi0: bus -1 (RP08)
+acpiprt12 at acpi0: bus -1 (RP05)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"IFX0102" at acpi0 not configured
+"MAT0021" at acpi0 not configured
+"MAT0019" at acpi0 not configured
+"ACPI0003" at acpi0 not configured
+"PNP0C0A" at acpi0 not configured
+"PNP0C0A" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"MAT001F" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using IvyBridge MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 2G Host" rev 0x09
+vga1 at pci0 dev 2 function 0 "Intel HD Graphics 3000" rev 0x09
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+vendor "Intel", unknown product 0x0103 (class DASP subclass miscellaneous, rev 0x09) at pci0 dev 4 function 0 not configured
+"Intel 6 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+"Intel 6 Series KT" rev 0x04 at pci0 dev 22 function 3 not configured
+em0 at pci0 dev 25 function 0 "Intel 82579LM" rev 0x04: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel 6 Series HD Audio" rev 0x04 at pci0 dev 27 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 6 Series PCIE" rev 0xb4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 6 Series PCIE" rev 0xb4: msi
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 2 "Intel 6 Series PCIE" rev 0xb4: msi
+pci3 at ppb2 bus 3
+iwn0 at pci3 dev 0 function 0 "Intel Centrino Advanced-N 6205" rev 0x34: msi, MIMO 2T2R, MoW, address XXX
+ppb3 at pci0 dev 28 function 3 "Intel 82801BAM Hub-to-PCI" rev 0xb4: msi
+pci4 at ppb3 bus 4
+cbb0 at pci4 dev 0 function 0 vendor "Ricoh", unknown product 0xe476 rev 0x02: apic 2 int 19
+sdhc0 at pci4 dev 0 function 1 "Ricoh 5U823 SD/MMC" rev 0x00: apic 2 int 16
+sdhc0: SDHC 3.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed, dma
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 5 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+ehci1 at pci0 dev 29 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel QM67 LPC" rev 0x04 at pci0 dev 31 function 0 not configured
+ahci0 at pci0 dev 31 function 2 "Intel 6 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: PHY offline on port 1
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, SanDisk SD6SB1M1, X231> naa.5001b44e47fe783e
+sd0: 122104MB, 512 bytes/sector, 250069680 sectors, thin
+"Intel 6 Series SMBus" rev 0x04 at pci0 dev 31 function 3 not configured
+"Intel 6 Series Thermal" rev 0x04 at pci0 dev 31 function 6 not configured
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+scsibus1 at sdmmc0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <SD/MMC, SD16G, 0020> removable
+sd1: 59688MB, 512 bytes/sector, 122241024 sectors
+uhub2 at uhub0 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+"ALPS UGNZ4" rev 2.00/52.76 addr 3 at uhub2 port 2 not configured
+uhub3 at uhub1 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+umass0 at uhub3 port 2 configuration 1 interface 0 "General USB Flash Disk" rev 2.00/1.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd2 at scsibus2 targ 1 lun 0: <General, USB Flash Disk, 1.0> removable serial....
+sd2: 3824MB, 512 bytes/sector, 7831552 sectors
+uhidev0 at uhub3 port 7 configuration 1 interface 0 "MosArt, Inc. A3002" rev 1.10/4.47 addr 4
+uhidev0: iclass 3/0, 9 report ids
+uhid at uhidev0 reportid 1 not configured
+uhid at uhidev0 reportid 3 not configured
+uhid at uhidev0 reportid 5 not configured
+uhid at uhidev0 reportid 6 not configured
+uhid at uhidev0 reportid 7 not configured
+uhid at uhidev0 reportid 8 not configured
+uhid at uhidev0 reportid 9 not configured
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8456339456 (8064MB)
+avail mem = 8187891712 (7808MB)
+warning: no entropy supplied by boot loader
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xeb220 (31 entries)
+bios0: vendor American Megatrends Inc. version "V2.00L11A M10" date 06/16/2011
+bios0: Panasonic Corporation CF-C1BT02EGE
+acpi0 at bios0: ACPI 4.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC HPET SLIC MCFG SSDT SSDT SSDT SSDT SSDT TCPA ASF! SSDT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEG2(S4) PEG3(S4) TMCP(S4) EHC1(S3) HDEF(S3) RP06(S4) PXSX(S4) GLAN(S4) PXSX(S4) PXSX(S4) PXSX(S4) PXSX(S4) LID_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 2492.28 MHz, 06-2a-07
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 2491.92 MHz, 06-2a-07
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 2491.92 MHz, 06-2a-07
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 2491.92 MHz, 06-2a-07
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpi0: unable to load \\LDTB.TBXP
+acpi0: unable to load \\LDTB.TBSE
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus -1 (PEG3)
+acpiprt5 at acpi0: bus -1 (RP06)
+acpiprt6 at acpi0: bus 1 (RP01)
+acpiprt7 at acpi0: bus 2 (RP02)
+acpiprt8 at acpi0: bus 3 (RP03)
+acpiprt9 at acpi0: bus 4 (RP04)
+acpiprt10 at acpi0: bus -1 (RP07)
+acpiprt11 at acpi0: bus -1 (RP08)
+acpiprt12 at acpi0: bus -1 (RP05)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+tpm0 at acpi0 TPM_ addr 0x4e/0x2
+"MAT0021" at acpi0 not configured
+"MAT0019" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT1 model "CF-VZSU66" serial ... type LION oem "Panasonic"
+acpibat1 at acpi0: BAT2 model "CF-VZSU66" serial ... type LION oem "Panasonic"
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PWRB
+"MAT001F" at acpi0 not configured
+acpicpu0 at acpi0: C2(350@104 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(350@104 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C2(350@104 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C2(350@104 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 101 degC
+acpitz1 at acpi0: critical temperature is 130 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 2492 MHz: speeds: 2501, 2500, 2000, 1800, 1600, 1400, 1200, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 2G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 3000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, SANDYBRIDGE, gen 6
+vendor "Intel", unknown product 0x0103 (class DASP subclass miscellaneous, rev 0x09) at pci0 dev 4 function 0 not configured
+"Intel 6 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+puc0 at pci0 dev 22 function 3 "Intel 6 Series KT" rev 0x04: ports: 16 com
+com4 at puc0 port 0 apic 2 int 19: ns16550a, 16 byte fifo
+com4: probed fifo depth: 0 bytes
+em0 at pci0 dev 25 function 0 "Intel 82579LM" rev 0x04: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 6 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2805, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 6 Series PCIE" rev 0xb4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 6 Series PCIE" rev 0xb4: msi
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 2 "Intel 6 Series PCIE" rev 0xb4: msi
+pci3 at ppb2 bus 3
+iwn0 at pci3 dev 0 function 0 "Intel Centrino Advanced-N 6205" rev 0x34: msi, MIMO 2T2R, MoW, address XXX
+ppb3 at pci0 dev 28 function 3 "Intel 82801BAM Hub-to-PCI" rev 0xb4: msi
+pci4 at ppb3 bus 4
+cbb0 at pci4 dev 0 function 0 vendor "Ricoh", unknown product 0xe476 rev 0x02: apic 2 int 19
+sdhc0 at pci4 dev 0 function 1 "Ricoh 5U823 SD/MMC" rev 0x00: apic 2 int 16
+sdhc0: SDHC 3.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed, dma
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 5 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+ehci1 at pci0 dev 29 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel QM67 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 6 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: PHY offline on port 1
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, SanDisk SD6SB1M1, X231> naa.5001b44e47fe783e
+sd0: 122104MB, 512 bytes/sector, 250069680 sectors, thin
+ichiic0 at pci0 dev 31 function 3 "Intel 6 Series SMBus" rev 0x04: apic 2 int 18
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x52: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+"Intel 6 Series Thermal" rev 0x04 at pci0 dev 31 function 6 not configured
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 6.2, 0x39a0b2 0x200000 0x0 0xa04751 0x0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT (using slow L1TF mitigation)
+/dev/ksyms: Symbol table not valid.
+scsibus2 at sdmmc0: 2 targets, initiator 0
+sd1 at scsibus2 targ 1 lun 0: <SD/MMC, SD16G, 0020> removable
+sd1: 59688MB, 512 bytes/sector, 122241024 sectors
+uhub2 at uhub0 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+ugen0 at uhub2 port 2 "ALPS UGNZ4" rev 2.00/52.76 addr 3
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev0 at uhub3 port 7 configuration 1 interface 0 "MosArt, Inc. A3002" rev 1.10/4.47 addr 3
+uhidev0: iclass 3/0, 9 report ids
+ums0 at uhidev0 reportid 1: 1 button, tip
+wsmouse1 at ums0 mux 0
+ums1 at uhidev0 reportid 3: 2 buttons
+wsmouse2 at ums1 mux 0
+uhid0 at uhidev0 reportid 5: input=63, output=63, feature=0
+uhid1 at uhidev0 reportid 6: input=0, output=0, feature=8
+uhid2 at uhidev0 reportid 7: input=0, output=0, feature=1
+ums2 at uhidev0 reportid 8
+ums2: mouse has no X report
+uhid3 at uhidev0 reportid 9: input=0, output=0, feature=7
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+root on sd0a (01750fc73bf0c614.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x800, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+syncing disks... done
+rebooting...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8456339456 (8064MB)
+avail mem = 8187891712 (7808MB)
+warning: no entropy supplied by boot loader
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xeb220 (31 entries)
+bios0: vendor American Megatrends Inc. version "V2.00L11A M10" date 06/16/2011
+bios0: Panasonic Corporation CF-C1BT02EGE
+acpi0 at bios0: ACPI 4.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC HPET SLIC MCFG SSDT SSDT SSDT SSDT SSDT TCPA ASF! SSDT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEG2(S4) PEG3(S4) TMCP(S4) EHC1(S3) HDEF(S3) RP06(S4) PXSX(S4) GLAN(S4) PXSX(S4) PXSX(S4) PXSX(S4) PXSX(S4) LID_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 1667.59 MHz, 06-2a-07
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 2790.95 MHz, 06-2a-07
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 1443.72 MHz, 06-2a-07
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 2890.63 MHz, 06-2a-07
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpi0: unable to load \\LDTB.TBXP
+acpi0: unable to load \\LDTB.TBSE
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus -1 (PEG3)
+acpiprt5 at acpi0: bus -1 (RP06)
+acpiprt6 at acpi0: bus 1 (RP01)
+acpiprt7 at acpi0: bus 2 (RP02)
+acpiprt8 at acpi0: bus 3 (RP03)
+acpiprt9 at acpi0: bus 4 (RP04)
+acpiprt10 at acpi0: bus -1 (RP07)
+acpiprt11 at acpi0: bus -1 (RP08)
+acpiprt12 at acpi0: bus -1 (RP05)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+tpm0 at acpi0 TPM_ addr 0x4e/0x2
+"MAT0021" at acpi0 not configured
+"MAT0019" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT1 model "CF-VZSU66" serial ... type LION oem "Panasonic"
+acpibat1 at acpi0: BAT2 model "CF-VZSU66" serial ... type LION oem "Panasonic"
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PWRB
+"MAT001F" at acpi0 not configured
+acpicpu0 at acpi0: C2(350@104 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(350@104 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C2(350@104 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C2(350@104 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 101 degC
+acpitz1 at acpi0: critical temperature is 130 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 1667 MHz: speeds: 2501, 2500, 2000, 1800, 1600, 1400, 1200, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 2G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 3000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, SANDYBRIDGE, gen 6
+vendor "Intel", unknown product 0x0103 (class DASP subclass miscellaneous, rev 0x09) at pci0 dev 4 function 0 not configured
+"Intel 6 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+puc0 at pci0 dev 22 function 3 "Intel 6 Series KT" rev 0x04: ports: 16 com
+com4 at puc0 port 0 apic 2 int 19: ns16550a, 16 byte fifo
+com4: probed fifo depth: 0 bytes
+em0 at pci0 dev 25 function 0 "Intel 82579LM" rev 0x04: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 6 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2805, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 6 Series PCIE" rev 0xb4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 6 Series PCIE" rev 0xb4: msi
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 2 "Intel 6 Series PCIE" rev 0xb4: msi
+pci3 at ppb2 bus 3
+iwn0 at pci3 dev 0 function 0 "Intel Centrino Advanced-N 6205" rev 0x34: msi, MIMO 2T2R, MoW, address XXX
+ppb3 at pci0 dev 28 function 3 "Intel 82801BAM Hub-to-PCI" rev 0xb4: msi
+pci4 at ppb3 bus 4
+cbb0 at pci4 dev 0 function 0 vendor "Ricoh", unknown product 0xe476 rev 0x02: apic 2 int 19
+sdhc0 at pci4 dev 0 function 1 "Ricoh 5U822 SD/MMC" rev 0x03: apic 2 int 16
+sdhc0: SDHC 3.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed, dma
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 5 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+ehci1 at pci0 dev 29 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel QM67 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 6 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: PHY offline on port 1
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, SanDisk SD6SB1M1, X231> naa.5001b44e47fe783e
+sd0: 122104MB, 512 bytes/sector, 250069680 sectors, thin
+ichiic0 at pci0 dev 31 function 3 "Intel 6 Series SMBus" rev 0x04: apic 2 int 18
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x52: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+"Intel 6 Series Thermal" rev 0x04 at pci0 dev 31 function 6 not configured
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 6.2, 0x39a0b2 0x200000 0x0 0xa04751 0x0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT (using slow L1TF mitigation)
+/dev/ksyms: Symbol table not valid.
+scsibus2 at sdmmc0: 2 targets, initiator 0
+sd1 at scsibus2 targ 1 lun 0: <SD/MMC, SD16G, 0020> removable
+sd1: 59688MB, 512 bytes/sector, 122241024 sectors
+uhub2 at uhub0 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+ugen0 at uhub2 port 2 "ALPS UGNZ4" rev 2.00/52.76 addr 3
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev0 at uhub3 port 7 configuration 1 interface 0 "MosArt, Inc. A3002" rev 1.10/4.47 addr 3
+uhidev0: iclass 3/0, 9 report ids
+ums0 at uhidev0 reportid 1: 1 button, tip
+wsmouse1 at ums0 mux 0
+ums1 at uhidev0 reportid 3: 2 buttons
+wsmouse2 at ums1 mux 0
+uhid0 at uhidev0 reportid 5: input=63, output=63, feature=0
+uhid1 at uhidev0 reportid 6: input=0, output=0, feature=8
+uhid2 at uhidev0 reportid 7: input=0, output=0, feature=1
+ums2 at uhidev0 reportid 8
+ums2: mouse has no X report
+uhid3 at uhidev0 reportid 9: input=0, output=0, feature=7
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+root on sd0a (01750fc73bf0c614.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x800, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

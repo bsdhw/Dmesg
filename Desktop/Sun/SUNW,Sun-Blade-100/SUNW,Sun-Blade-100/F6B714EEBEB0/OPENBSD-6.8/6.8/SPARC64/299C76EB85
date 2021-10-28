@@ -1,0 +1,130 @@
+console is /pci@1f,0/isa@7/serial@0,3f8
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the University of California.  All rights reserved.
+Copyright (c) E7ED-5FC2 OpenBSD. All rights reserved.  https://www.OpenBSD.org
+
+OpenBSD 6.8 (RAMDISK) #468: Sun Oct  4 21:13:03 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/sparc64/compile/RAMDISK
+real mem = 1610612736 (1536MB)
+avail mem = 1571569664 (1498MB)
+random: boothowto does not indicate good seed
+mainbus0 at root: Sun Blade 100 (UltraSPARC-IIe)
+cpu0 at mainbus0: SUNW,UltraSPARC-IIe (rev 1.4) @ 502 MHz
+cpu0: physical 16K instruction (32 b/l), 16K data (32 b/l), 256K external (64 b/l)
+psycho0 at mainbus0: pci108e,a001, impl 0, version 0, ign 7c0
+psycho0: bus range 0-1, PCI bus 0
+psycho0: dvma map c0000000-dfffffff
+pci0 at psycho0
+ebus0 at pci0 dev 12 function 0 "Sun RIO EBus" rev 0x01
+"flashprom" at ebus0 addr 0-fffff not configured
+clock1 at ebus0 addr 0-1fff: mk48t59
+ebus1 at pci0 dev 7 function 0 "Acer Labs M1533 ISA" rev 0x00
+"dma" at ebus1 addr 0-ffff ivec 0x2a not configured
+"power" at ebus1 addr 800-82f ivec 0x20 not configured
+com0 at ebus1 addr 3f8-3ff ivec 0x2b: ns16550a, 16 byte fifo
+com0: console
+com1 at ebus1 addr 2e8-2ef ivec 0x2b: ns16550a, 16 byte fifo
+gem0 at pci0 dev 12 function 1 "Sun ERI" rev 0x01: ivec 0x7c6, address XXX
+ukphy0 at gem0 phy 1: Generic IEEE 802.3u media interface, rev. 1: OUI 0x0010dd, model 0x0002
+"Sun FireWire" rev 0x01 at pci0 dev 12 function 2 not configured
+ohci0 at pci0 dev 12 function 3 "Sun USB" rev 0x01: ivec 0x7e4, version 1.0, legacy support
+"Acer Labs M7101 Power" rev 0x00 at pci0 dev 3 function 0 not configured
+"Acer Labs M5451 Audio" rev 0x01 at pci0 dev 8 function 0 not configured
+pciide0 at pci0 dev 13 function 0 "Acer Labs M5229 UDMA IDE" rev 0xc3: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using ivec 0x7cc for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <ST315320A>
+wd0: 16-sector PIO, LBA, 14594MB, 29888820 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 2
+pciide0: channel 1 disabled (no drives)
+ppb0 at pci0 dev 5 function 0 "DEC 21152" rev 0x03
+pci1 at ppb0 bus 1
+pciide1 at pci1 dev 0 function 0 "Promise PDC40518" rev 0x02: DMA
+wd1 at pciide1 channel 3 drive 0: <APPLE HDD HTS541010A9E662>
+wd1: 16-sector PIO, LBA48, 953869MB, 1953525168 sectors
+wd1(pciide1:3:0): using BIOS timings, Ultra-DMA mode 2
+pciide1: using ivec 0x7d9 for native-PCI interrupt
+machfb0 at pci0 dev 19 function 0 "ATI Rage XL" rev 0x27
+machfb0: ATY,RageXL, 1152x900
+machfb0: aperture needed
+wsdisplay0 at machfb0
+wsdisplay0: screen 0 added (std, sun emulation)
+usb0 at ohci0: USB revision 1.0
+uhub0 at usb0 configuration 1 interface 0 "Sun OHCI root hub" rev 1.00/1.00 addr 1
+softraid0 at root
+scsibus0 at softraid0: 256 targets
+bootpath: /pci@1f,0/ide@d,0/disk@0,0
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks... done
+rebooting
+
+console is /pci@1f,0/isa@7/serial@0,3f8
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+	The Regents of the University of California.  All rights reserved.
+Copyright (c) E7ED-5FC2 OpenBSD. All rights reserved.  https://www.OpenBSD.org
+
+OpenBSD 6.8 (GENERIC) #477: Sun Oct  4 20:36:17 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/sparc64/compile/GENERIC
+real mem = 1610612736 (1536MB)
+avail mem = 1565212672 (1492MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root: Sun Blade 100 (UltraSPARC-IIe)
+cpu0 at mainbus0: SUNW,UltraSPARC-IIe (rev 1.4) @ 502 MHz
+cpu0: physical 16K instruction (32 b/l), 16K data (32 b/l), 256K external (64 b/l)
+psycho0 at mainbus0: pci108e,a001, impl 0, version 0, ign 7c0
+psycho0: bus range 0-1, PCI bus 0
+psycho0: dvma map c0000000-dfffffff
+pci0 at psycho0
+ebus0 at pci0 dev 12 function 0 "Sun RIO EBus" rev 0x01
+"flashprom" at ebus0 addr 0-fffff not configured
+clock1 at ebus0 addr 0-1fff: mk48t59
+ebus1 at pci0 dev 7 function 0 "Acer Labs M1533 ISA" rev 0x00
+"dma" at ebus1 addr 0-ffff ivec 0x2a not configured
+power0 at ebus1 addr 800-82f ivec 0x20
+com0 at ebus1 addr 3f8-3ff ivec 0x2b: ns16550a, 16 byte fifo
+com0: console
+com1 at ebus1 addr 2e8-2ef ivec 0x2b: ns16550a, 16 byte fifo
+gem0 at pci0 dev 12 function 1 "Sun ERI" rev 0x01: ivec 0x7c6, address XXX
+ukphy0 at gem0 phy 1: Generic IEEE 802.3u media interface, rev. 1: OUI 0x0010dd, model 0x0002
+"Sun FireWire" rev 0x01 at pci0 dev 12 function 2 not configured
+ohci0 at pci0 dev 12 function 3 "Sun USB" rev 0x01: ivec 0x7e4, version 1.0, legacy support
+alipm0 at pci0 dev 3 function 0 "Acer Labs M7101 Power" rev 0x00: 223KHz clock
+iic0 at alipm0
+"max1617" at alipm0 addr 0x18 skipped due to alipm0 bugs
+"scm001" at alipm0 addr 0x20 skipped due to alipm0 bugs
+spdmem0 at iic0 addr 0x50: 256MB SDRAM registered ECC PC133CL2
+spdmem1 at iic0 addr 0x51: 512MB SDRAM registered ECC PC133CL2
+spdmem2 at iic0 addr 0x52: 512MB SDRAM registered ECC PC133CL2
+spdmem3 at iic0 addr 0x53: 256MB SDRAM registered ECC PC133CL2
+autri0 at pci0 dev 8 function 0 "Acer Labs M5451 Audio" rev 0x01: ivec 0x7e3
+ac97: codec id 0x41445348 (Analog Devices AD1881A)
+ac97: codec features headphone, Analog Devices Phat Stereo
+audio0 at autri0
+midi0 at autri0: <4DWAVE MIDI UART>
+pciide0 at pci0 dev 13 function 0 "Acer Labs M5229 UDMA IDE" rev 0xc3: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using ivec 0x7cc for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <ST315320A>
+wd0: 16-sector PIO, LBA, 14594MB, 29888820 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 2
+pciide0: channel 1 disabled (no drives)
+ppb0 at pci0 dev 5 function 0 "DEC 21152" rev 0x03
+pci1 at ppb0 bus 1
+pciide1 at pci1 dev 0 function 0 "Promise PDC40518" rev 0x02: DMA
+wd1 at pciide1 channel 3 drive 0: <APPLE HDD HTS541010A9E662>
+wd1: 16-sector PIO, LBA48, 953869MB, 1953525168 sectors
+wd1(pciide1:3:0): using BIOS timings, Ultra-DMA mode 2
+pciide1: using ivec 0x7d9 for native-PCI interrupt
+machfb0 at pci0 dev 19 function 0 "ATI Rage XL" rev 0x27
+machfb0: ATY,RageXL, 1152x900
+wsdisplay0 at machfb0 mux 1
+wsdisplay0: screen 0 added (std, sun emulation)
+usb0 at ohci0: USB revision 1.0
+uhub0 at usb0 configuration 1 interface 0 "Sun OHCI root hub" rev 1.00/1.00 addr 1
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+bootpath: /pci@1f,0/ide@d,0/disk@0,0
+root on wd0a (84c7ecb9857495d1.a) swap on wd0b dump on wd0b

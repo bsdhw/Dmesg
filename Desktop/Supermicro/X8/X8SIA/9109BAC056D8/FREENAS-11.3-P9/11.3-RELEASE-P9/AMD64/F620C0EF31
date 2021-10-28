@@ -1,0 +1,318 @@
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 11.3-RELEASE-p9 #0 r325575+c153e5c9a38(HEAD): Wed May 20 16:09:43 EDT 2020
+    XXX@XXX:/freenas-releng/freenas/_BE/objs/freenas-releng/freenas/_BE/os/sys/FreeNAS.amd64 amd64
+FreeBSD clang version 8.0.0 (tags/RELEASE_800/final 356365) (based on LLVM 8.0.0)
+VT(vga): text 80x25
+CPU: Intel(R) Xeon(R) CPU           X3470  @ 2.93GHz (2933.39-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x106e5  Family=0x6  Model=0x1e  Stepping=5
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x98e3f5<SSE3,DTES64,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16561582080 (15794 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <092810 APIC1530>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+WARNING: VIMAGE (virtualized network stack) is a highly experimental feature.
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 128/64 (20171214/tbfadt-748)
+ioapic0: Changing APIC ID to 8
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+SMP: AP CPU #1 Launched!
+SMP: AP CPU #5 Launched!
+SMP: AP CPU #3 Launched!
+SMP: AP CPU #6 Launched!
+SMP: AP CPU #2 Launched!
+SMP: AP CPU #4 Launched!
+SMP: AP CPU #7 Launched!
+Timecounter "TSC-low" frequency 1466694656 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+mlx5en: Mellanox Ethernet driver 3.5.1 (April 2019)
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+aesni0: No AESNI support.
+padlock0: No ACE support.
+acpi0: <SMCI > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+cpu1: <ACPI CPU> on acpi0
+cpu2: <ACPI CPU> on acpi0
+cpu3: <ACPI CPU> on acpi0
+cpu4: <ACPI CPU> on acpi0
+cpu5: <ACPI CPU> on acpi0
+cpu6: <ACPI CPU> on acpi0
+cpu7: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pcib0: _OSC returned error 0x10
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 3.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ix0: <Intel(R) PRO/10GbE PCI-Express Network Driver, Version - 3.2.12-k> port 0xbc00-0xbc1f mem 0xfb180000-0xfb1fffff,0xfb0fc000-0xfb0fffff irq 16 at device 0.0 on pci1
+ix0: Using MSI-X interrupts with 9 vectors
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 5.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 2.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+nvme0: <Generic NVMe Device> mem 0xfb2fc000-0xfb2fffff,0xfb2fbc00-0xfb2fbcff irq 18 at device 0.0 on pci4
+pcib5: <ACPI PCI-PCI bridge> at device 4.0 on pci3
+pci5: <ACPI PCI bus> on pcib5
+mps0: <Avago Technologies (LSI) SAS2008> port 0xc000-0xc0ff mem 0xfb33c000-0xfb33ffff,0xfb340000-0xfb37ffff irq 16 at device 0.0 on pci5
+mps0: Firmware: XXX.XXX.XXX.XXX, Driver: XXX.XXX.XXX.XXX-fbsd
+mps0: IOCCapabilities: 1285c<ScsiTaskFull,DiagTrace,SnapBuf,EEDP,TransRetry,EventReplay,HostDisc>
+ehci0: <Intel PCH USB 2.0 controller USB-B> mem 0xfaffc000-0xfaffc3ff irq 21 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib6: <ACPI PCI-PCI bridge> irq 17 at device 28.0 on pci0
+pcib6: [GIANT-LOCKED]
+pcib7: <ACPI PCI-PCI bridge> irq 17 at device 28.4 on pci0
+pcib7: [GIANT-LOCKED]
+pci6: <ACPI PCI bus> on pcib7
+em0: <Intel(R) PRO/1000 Network Connection 7.6.1-k> port 0xdc00-0xdc1f mem 0xfb4e0000-0xfb4fffff,0xfb4dc000-0xfb4dffff irq 16 at device 0.0 on pci6
+em0: Using MSIX interrupts with 3 vectors
+em0: Ethernet address: ...
+pcib8: <ACPI PCI-PCI bridge> irq 16 at device 28.5 on pci0
+pcib8: [GIANT-LOCKED]
+pci7: <ACPI PCI bus> on pcib8
+em1: <Intel(R) PRO/1000 Network Connection 7.6.1-k> port 0xec00-0xec1f mem 0xfb5e0000-0xfb5fffff,0xfb5dc000-0xfb5dffff irq 17 at device 0.0 on pci7
+em1: Using MSIX interrupts with 3 vectors
+em1: Ethernet address: ...
+pcib9: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pcib9: [GIANT-LOCKED]
+pci8: <ACPI PCI bus> on pcib9
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfb6ff000-0xfb6fffff irq 19 at device 0.0 on pci8
+xhci0: 32 bytes context size, 64-bit DMA
+usbus1 on xhci0
+usbus1: 5.0Gbps Super Speed USB v3.0
+ehci1: <Intel PCH USB 2.0 controller USB-A> mem 0xfaffa000-0xfaffa3ff irq 23 at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+pcib10: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci9: <ACPI PCI bus> on pcib10
+vgapci0: <VGA-compatible display> mem 0xf9000000-0xf9ffffff,0xfb7fc000-0xfb7fffff,0xfb800000-0xfbffffff irq 19 at device 3.0 on pci9
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Ibex Peak AHCI SATA controller> port 0xa400-0xa407,0xac00-0xac03,0xa880-0xa887,0xa800-0xa803,0xa480-0xa49f mem 0xfaff8000-0xfaff87ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart2: <16550 or compatible> port 0x2e8-0x2ef irq 3 on acpi0
+uart3: <16550 or compatible> port 0x3e8-0x3ef irq 5 on acpi0
+ichwd0: <Intel 3420 watchdog timer> on isa0
+wbwd0: <Winbond 83627DHG (0xa0/0x25) Watchdog Timer> at port 0x2e-0x2f on isa0
+ipmi0: <IPMI System Interface> on isa0
+ipmi0: KCS mode found at io 0xca2 alignment 0x1 on isa
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xce000-0xcefff on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+coretemp1: <CPU On-Die Thermal Sensors> on cpu1
+est1: <Enhanced SpeedStep Frequency Control> on cpu1
+coretemp2: <CPU On-Die Thermal Sensors> on cpu2
+est2: <Enhanced SpeedStep Frequency Control> on cpu2
+coretemp3: <CPU On-Die Thermal Sensors> on cpu3
+est3: <Enhanced SpeedStep Frequency Control> on cpu3
+coretemp4: <CPU On-Die Thermal Sensors> on cpu4
+est4: <Enhanced SpeedStep Frequency Control> on cpu4
+coretemp5: <CPU On-Die Thermal Sensors> on cpu5
+est5: <Enhanced SpeedStep Frequency Control> on cpu5
+coretemp6: <CPU On-Die Thermal Sensors> on cpu6
+est6: <Enhanced SpeedStep Frequency Control> on cpu6
+coretemp7: <CPU On-Die Thermal Sensors> on cpu7
+est7: <Enhanced SpeedStep Frequency Control> on cpu7
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+freenas_sysctl: adding account.
+freenas_sysctl: adding directoryservice.
+freenas_sysctl: adding middlewared.
+freenas_sysctl: adding network.
+freenas_sysctl: adding services.
+ipfw2 (+ipv6) initialized, divert enabled, nat enabled, default to accept, logging disabled
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen1.1: <0x1106 XHCI root HUB> at usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <0x1106 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub2: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+nvd0: <WDC PC SN730 SDBQNTY-256G-1001> NVMe namespace
+nvd0: 244198MB (500118192 512 byte sectors)
+mps0: SAS Address for SATA device = a2928065777475c
+ipmi0: IPMI device rev. 1, firmware rev. 3.26, version 2.0
+mps0: SAS Address for SATA device = b2928075d5f6e68
+mps0: SAS Address for SATA device = b2928066069606f
+mps0: SAS Address for SATA device = e2928065767656c
+ipmi0: Number of channels 2
+mps0: SAS Address for SATA device = b292806686c6578
+mps0: SAS Address for SATA device = 8c824b2d06b796d8
+ipmi0: Attached watchdog
+mps0: SAS Address for SATA device = 845a735b6ab09b71
+mps0: SAS Address from SATA device = a2928065777475c
+mps0: SAS Address from SATA device = b2928075d5f6e68
+mps0: SAS Address from SATA device = b2928066069606f
+mps0: SAS Address from SATA device = e2928065767656c
+mps0: SAS Address from SATA device = b292806686c6578
+mps0: SAS Address from SATA device = 8c824b2d06b796d8
+mps0: SAS Address from SATA device = 845a735b6ab09b71
+uhub1: 5 ports with 4 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+ugen1.2: <vendor 0x2109 USB2.0 Hub> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x2109 USB2.0 Hub, class 9/0, rev 2.10/4.20, addr 1> on usbus1
+uhub2: 2 ports with 2 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+ugen2.2: <vendor 0x8087 product 0x0020> at usbus2
+uhub4 on uhub0
+uhub4: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus2
+ugen0.2: <vendor 0x8087 product 0x0020> at usbus0
+uhub5 on uhub2
+uhub5: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+uhub5: 6 ports with 6 removable, self powered
+uhub4: 8 ports with 8 removable, self powered
+ugen0.3: <Winbond Electronics Corp Hermon USB hidmouse Device> at usbus0
+ukbd0 on uhub5
+ukbd0: <Winbond Electronics Corp Hermon USB hidmouse Device, class 0/0, rev 1.10/0.01, addr 3> on usbus0
+kbd2 at ukbd0
+ugen2.3: <Avocent Avocent DSRIQ-USB> at usbus2
+ukbd1 on uhub4
+ukbd1: <EP1 Interrupt> on usbus2
+kbd3 at ukbd1
+ugen2.4: <Samsung Flash Drive> at usbus2
+umass0 on uhub4
+umass0: <Samsung Flash Drive, class 0/0, rev 2.10/11.00, addr 4> on usbus2
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:9:0: Attached to scbus9
+ugen2.5: <SanDisk Cruzer Fit> at usbus2
+umass1 on uhub4
+umass1: <SanDisk Cruzer Fit, class 0/0, rev 2.00/1.00, addr 5> on usbus2
+umass1:  SCSI over Bulk-Only; quirks = 0xc100
+umass1:10:1: Attached to scbus10
+ses0 at ahciem0 bus 0 scbus7 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+da7 at umass-sim0 bus 0 scbus9 target 0 lun 0
+da7: <Samsung Flash Drive 1100> Removable Direct Access SPC-4 SCSI device
+da7: Serial Number...
+da7: 40.000MB/s transfers
+da7: 30594MB (62656641 512 byte sectors)
+da7: quirks=0x2<NO_6_BYTE>
+da5 at mps0 bus 0 scbus0 target 12 lun 0
+da5: <ATA SAMSUNG MZ7PD128 5H6Q> Fixed Direct Access SPC-4 SCSI device
+da5: Serial Number...
+da5: 600.000MB/s transfers
+da5: Command Queueing enabled
+da5: 122104MB (250069680 512 byte sectors)
+da5: quirks=0x8<4K>
+da8 at umass-sim1 bus 1 scbus10 target 0 lun 0
+da8: <SanDisk' Cruzer Fit 1.00> Removable Direct Access SPC-4 SCSI device
+da8: Serial Number...
+da8: 40.000MB/s transfers
+da8: 29952MB (61341696 512 byte sectors)
+da8: quirks=0x2<NO_6_BYTE>
+da0 at mps0 bus 0 scbus0 target 7 lun 0
+da0: <ATA ST31500541AS CC35> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 300.000MB/s transfers
+da0: Command Queueing enabled
+da0: 1430799MB (2930277168 512 byte sectors)
+da3 at mps0 bus 0 scbus0 target 10 lun 0
+da3: <ATA ST31500541AS CC35> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 300.000MB/s transfers
+da3: Command Queueing enabled
+da3: 1430799MB (2930277168 512 byte sectors)
+da6 at mps0 bus 0 scbus0 target 13 lun 0
+da6: <ATA KINGSTON SV300S3 BBF0> Fixed Direct Access SPC-4 SCSI device
+da6: Serial Number...
+da6: 600.000MB/s transfers
+da6: Command Queueing enabled
+da6: 57241MB (117231408 512 byte sectors)
+da2 at mps0 bus 0 scbus0 target 9 lun 0
+da2: <ATA ST31500541AS CC35> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 300.000MB/s transfers
+da2: Command Queueing enabled
+da2: 1430799MB (2930277168 512 byte sectors)
+da4 at mps0 bus 0 scbus0 target 11 lun 0
+da4: <ATA ST31500541AS CC34> Fixed Direct Access SPC-4 SCSI device
+da4: Serial Number...
+da4: 300.000MB/s transfers
+da4: Command Queueing enabled
+da4: 1430799MB (2930277168 512 byte sectors)
+da1 at mps0 bus 0 scbus0 target 8 lun 0
+da1: <ATA ST31500541AS CC35> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 300.000MB/s transfers
+da1: Command Queueing enabled
+da1: 1430799MB (2930277168 512 byte sectors)
+random: unblocking device.
+Trying to mount root from zfs:freenas-boot/ROOT/default []...
+lo0: link state changed to UP
+em0: link state changed to UP
+em1: link state changed to UP
+hwpmc: SOFT/16/64/0x67<INT,USR,SYS,REA,WRI> TSC/1/64/0x20<REA> IAP/4/48/0x3ff<INT,USR,SYS,EDG,THR,REA,WRI,INV,QUA,PRC> IAF/3/48/0x67<INT,USR,SYS,REA,WRI> UCP/8/48/0x3f8<EDG,THR,REA,WRI,INV,QUA,PRC> UCF/1/48/0x60<REA,WRI>
+GEOM_MIRROR: Device mirror/swap0 launched (2/2).
+GEOM_MIRROR: Device mirror/swap1 launched (2/2).
+GEOM_ELI: Device mirror/swap0.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+GEOM_ELI: Device mirror/swap1.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: software
+em0: link state changed to DOWN
+em1: link state changed to DOWN
+ix0: link state changed to UP
+em0: link state changed to UP
+em1: link state changed to UP
+ums0 on uhub5
+ums0: <Winbond Electronics Corp Hermon USB hidmouse Device, class 0/0, rev 1.10/0.01, addr 3> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+ums1 on uhub4
+ums1: <EP2 Interrupt> on usbus2
+ums1: 5 buttons and [XYZ] coordinates ID=1
+CPU: Intel(R) Xeon(R) CPU           X3470  @ 2.93GHz (2933.39-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x106e5  Family=0x6  Model=0x1e  Stepping=5
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x98e3f5<SSE3,DTES64,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,VPID
+  TSC: P-state invariant, performance statistics
+nfsd: can't register svc name
+pid 1107 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)

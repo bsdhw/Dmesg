@@ -1,0 +1,1175 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p15-HBSD #0  5ee0fd2f334(stable/21.1)-dirty: Fri Mar 26 08:58:41 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E3-1270 V2 @ 3.50GHz (3492.15-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306a9  Family=0x6  Model=0x3a  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8235192320 (7853 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 2 3 5 4 7 6
+Timecounter "TSC-low" frequency 1746075448 Hz quality 1000
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc5180000-0xc51fffff,0xc5204000-0xc5207fff irq 16 at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc5100000-0xc517ffff,0xc5200000-0xc5203fff irq 17 at device 0.1 on pci1
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc5306000-0xc53063ff irq 20 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce0: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc0000000-0xc1ffffff irq 16 at device 0.0 on pci2
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.4.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc2000000-0xc3ffffff irq 17 at device 0.1 on pci2
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.4.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc5305000-0xc53053ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> mem 0xc4000000-0xc47fffff,0xc5000000-0xc5003fff,0xc4800000-0xc4ffffff irq 19 at device 3.0 on pci3
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x2048-0x204f,0x2054-0x2057,0x2040-0x2047,0x2050-0x2053,0x2020-0x203f mem 0xc5304000-0xc53047ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xcc7ff,0xcc800-0xcd7ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TOSHIBA DT01ACA050 MS1OA7S0> ATA8-ACS SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <Hitachi HUA721050KLA330 GK6OA74A> ATA-7 SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 476940MB (976773168 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus1 usbus0
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+Root mount waiting for: usbus1 usbus0
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen1.3: <Dell Dell USB Keyboard> at usbus1
+ukbd0 on uhub2
+ukbd0: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.06, addr 3> on usbus1
+kbd1 at ukbd0
+ugen0.3: <Avocent USB Composite Device-0> at usbus0
+ukbd1 on uhub3
+ukbd1: <Keyboard> on usbus0
+kbd2 at ukbd1
+ugen1.4: <vendor 0x0424 product 0x2514> at usbus1
+uhub4 on uhub2
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 4> on usbus1
+uhub4: MTT enabled
+Root mount waiting for: usbus1
+uhub4: 4 ports with 4 removable, self powered
+igb0: link state changed to UP
+ums0 on uhub3
+ums0: <Mouse> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+igb0: link state changed to DOWN
+igb0: link state changed to UP
+tun1: changing name to 'ovpns1'
+tun2: changing name to 'ovpns2'
+tun3: changing name to 'ovpns3'
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to UP
+ovpns2: link state changed to UP
+ovpns3: link state changed to UP
+ovpns2: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb1: link state changed to UP
+pflog0: promiscuous mode disabled
+ovpns3: link state changed to DOWN
+ovpns1: link state changed to DOWN
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+Uptime: 4m13s
+ukbd0: detached
+uhub4: detached
+uhub2: detached
+ukbd1: detached
+ums0: detached
+uhub3: detached
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p15-HBSD #0  5ee0fd2f334(stable/21.1)-dirty: Fri Mar 26 08:58:41 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E3-1270 V2 @ 3.50GHz (3492.15-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306a9  Family=0x6  Model=0x3a  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8235192320 (7853 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 4 5 2 7 3 6
+Timecounter "TSC-low" frequency 1746073540 Hz quality 1000
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc5180000-0xc51fffff,0xc5204000-0xc5207fff irq 16 at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc5100000-0xc517ffff,0xc5200000-0xc5203fff irq 17 at device 0.1 on pci1
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc5306000-0xc53063ff irq 20 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce0: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc0000000-0xc1ffffff irq 16 at device 0.0 on pci2
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.4.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc2000000-0xc3ffffff irq 17 at device 0.1 on pci2
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.4.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc5305000-0xc53053ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> mem 0xc4000000-0xc47fffff,0xc5000000-0xc5003fff,0xc4800000-0xc4ffffff irq 19 at device 3.0 on pci3
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x2048-0x204f,0x2054-0x2057,0x2040-0x2047,0x2050-0x2053,0x2020-0x203f mem 0xc5304000-0xc53047ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xcc7ff,0xcc800-0xcd7ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TOSHIBA DT01ACA050 MS1OA7S0> ATA8-ACS SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <Hitachi HUA721050KLA330 GK6OA74A> ATA-7 SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 476940MB (976773168 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus1 usbus0
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus1 usbus0
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen1.3: <Dell Dell USB Keyboard> at usbus1
+ukbd0 on uhub3
+ukbd0: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.06, addr 3> on usbus1
+ugen0.3: <Avocent USB Composite Device-0> at usbus0
+ukbd1 on uhub2
+kbd1 at ukbd0
+ukbd1: <Keyboard> on usbus0
+kbd2 at ukbd1
+ugen1.4: <vendor 0x0424 product 0x2514> at usbus1
+uhub4 on uhub3
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 4> on usbus1
+uhub4: MTT enabled
+Root mount waiting for: usbus1
+uhub4: 4 ports with 4 removable, self powered
+igb0: link state changed to UP
+igb1: link state changed to UP
+ums0 on uhub2
+ums0: <Mouse> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+igb0: link state changed to DOWN
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+igb0: link state changed to UP
+tun1: changing name to 'ovpns1'
+tun2: changing name to 'ovpns2'
+tun3: changing name to 'ovpns3'
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to UP
+ovpns2: link state changed to UP
+ovpns3: link state changed to UP
+ovpns2: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb1: link state changed to UP
+ugen1.3: <Dell Dell USB Keyboard> at usbus1 (disconnected)
+ukbd0: at uhub3, port 2, addr 3 (disconnected)
+ukbd0: detached
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+ugen1.3: <Dell Dell USB Keyboard> at usbus1
+ukbd0 on uhub3
+ukbd0: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.06, addr 3> on usbus1
+kbd1 at ukbd0
+igb1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb1: link state changed to UP
+pflog0: promiscuous mode disabled
+ovpns3: link state changed to DOWN
+ovpns1: link state changed to DOWN
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+
+Waiting (max 60 seconds) for system process `syncer' to stop... Syncing disks, vnodes remaining... 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+Uptime: 11m0s
+ukbd0: detached
+uhub4: detached
+uhub3: detached
+ukbd1: detached
+ums0: detached
+uhub2: detached
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p15-HBSD #0  5ee0fd2f334(stable/21.1)-dirty: Fri Mar 26 08:58:41 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E3-1270 V2 @ 3.50GHz (3492.15-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306a9  Family=0x6  Model=0x3a  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8235192320 (7853 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 4 5 7 3 2 6
+Timecounter "TSC-low" frequency 1746074306 Hz quality 1000
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc5180000-0xc51fffff,0xc5204000-0xc5207fff irq 16 at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc5100000-0xc517ffff,0xc5200000-0xc5203fff irq 17 at device 0.1 on pci1
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc5306000-0xc53063ff irq 20 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce0: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc0000000-0xc1ffffff irq 16 at device 0.0 on pci2
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.4.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc2000000-0xc3ffffff irq 17 at device 0.1 on pci2
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.4.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc5305000-0xc53053ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> mem 0xc4000000-0xc47fffff,0xc5000000-0xc5003fff,0xc4800000-0xc4ffffff irq 19 at device 3.0 on pci3
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x2048-0x204f,0x2054-0x2057,0x2040-0x2047,0x2050-0x2053,0x2020-0x203f mem 0xc5304000-0xc53047ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xcc7ff,0xcc800-0xcd7ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TOSHIBA DT01ACA050 MS1OA7S0> ATA8-ACS SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <Hitachi HUA721050KLA330 GK6OA74A> ATA-7 SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 476940MB (976773168 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus1 usbus0
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus1 usbus0
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen0.3: <Avocent USB Composite Device-0> at usbus0
+ukbd0 on uhub2
+ukbd0: <Keyboard> on usbus0
+kbd1 at ukbd0
+ugen1.3: <Dell Dell USB Keyboard> at usbus1
+ukbd1 on uhub3
+ukbd1: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.06, addr 3> on usbus1
+kbd2 at ukbd1
+ugen1.4: <vendor 0x0424 product 0x2514> at usbus1
+uhub4 on uhub3
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 4> on usbus1
+uhub4: MTT enabled
+Root mount waiting for: usbus1
+uhub4: 4 ports with 4 removable, self powered
+igb0: link state changed to UP
+igb1: link state changed to UP
+ums0 on uhub2
+ums0: <Mouse> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+igb0: link state changed to DOWN
+igb1: link state changed to DOWN
+igb0: link state changed to UP
+igb1: link state changed to UP
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: Gigabit link up!
+tun1: changing name to 'ovpns1'
+tun2: changing name to 'ovpns2'
+tun3: changing name to 'ovpns3'
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to UP
+ovpns2: link state changed to UP
+ovpns3: link state changed to UP
+ovpns2: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce0: Gigabit link up!
+igb1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb0: promiscuous mode enabled
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+carp: XXX@XXX: BACKUP -> MASTER (master timed out)
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb1: promiscuous mode enabled
+carp: demoted by 240 to 240 (interface down)
+carp: XXX@XXX: MASTER -> BACKUP (more frequent advertisement received)
+igb0: deletion failed: 3
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+carp: demoted by -240 to 0 (vhid removed)
+igb1: promiscuous mode disabled
+igb1: promiscuous mode enabled
+carp: demoted by 240 to 240 (interface down)
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 0 (interface up)
+igb1: link state changed to UP
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+carp: XXX@XXX: BACKUP -> INIT (hardware interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by 240 to 240 (pfsync bulk start)
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+carp: XXX@XXX: BACKUP -> MASTER (master timed out)
+carp: demoted by -240 to 0 (pfsync bulk done)
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+carp: XXX@XXX: MASTER -> INIT (hardware interface down)
+carp: demoted by 240 to 240 (interface down)
+igb1: link state changed to DOWN
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 0 (interface up)
+igb1: link state changed to UP
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+carp: XXX@XXX: BACKUP -> INIT (hardware interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by 240 to 240 (pfsync bulk start)
+carp: demoted by -240 to 0 (pfsync bulk done)
+carp: XXX@XXX: BACKUP -> MASTER (master timed out)
+carp: demoted by 240 to 240 (pfsync bulk start)
+carp: demoted by -240 to 0 (pfsync bulk done)
+carp: demoted by 240 to 240 (pfsync bulk start)
+carp: demoted by -240 to 0 (pfsync bulk done)
+carp: demoted by 240 to 240 (pfsync bulk start)
+carp: demoted by -240 to 0 (pfsync bulk done)
+carp: XXX@XXX: BACKUP -> MASTER (master timed out)
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: link state changed to DOWN
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+carp: XXX@XXX: BACKUP -> MASTER (master timed out)
+ovpns2: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns3: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns3: link state changed to DOWN
+pflog0: promiscuous mode disabled
+ovpns2: link state changed to DOWN
+ovpns1: link state changed to DOWN
+pid 42192 (syslog-ng), jid 0, uid 0: exited on signal 6 (core dumped)
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+
+Waiting (max 60 seconds) for system process `syncer' to stop... Syncing disks, vnodes remaining... 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+Uptime: 2d23h5m23s
+ukbd1: detached
+uhub4: detached
+uhub3: detached
+ukbd0: detached
+ums0: detached
+uhub2: detached
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p16-HBSD #0  b531d3958f5(stable/21.1)-dirty: Tue Apr 20 11:00:08 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E3-1270 V2 @ 3.50GHz (3492.15-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306a9  Family=0x6  Model=0x3a  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8235192320 (7853 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 7 2 3 5 4 6
+Timecounter "TSC-low" frequency 1746074022 Hz quality 1000
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc5180000-0xc51fffff,0xc5204000-0xc5207fff irq 16 at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> mem 0xc5100000-0xc517ffff,0xc5200000-0xc5203fff irq 17 at device 0.1 on pci1
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc5306000-0xc53063ff irq 20 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce0: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc0000000-0xc1ffffff irq 16 at device 0.0 on pci2
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: 
+bce0: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.4.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc2000000-0xc3ffffff irq 17 at device 0.1 on pci2
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.4.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc5305000-0xc53053ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> mem 0xc4000000-0xc47fffff,0xc5000000-0xc5003fff,0xc4800000-0xc4ffffff irq 19 at device 3.0 on pci3
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x2048-0x204f,0x2054-0x2057,0x2040-0x2047,0x2050-0x2053,0x2020-0x203f mem 0xc5304000-0xc53047ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xcc7ff,0xcc800-0xcd7ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TOSHIBA DT01ACA050 MS1OA7S0> ATA8-ACS SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <Hitachi HUA721050KLA330 GK6OA74A> ATA-7 SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 476940MB (976773168 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus1 usbus0
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 on uhub1
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 on uhub0
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus1 usbus0
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen0.3: <Avocent USB Composite Device-0> at usbus0
+ukbd0 on uhub2
+ukbd0: <Keyboard> on usbus0
+kbd1 at ukbd0
+ugen1.3: <Dell Dell USB Keyboard> at usbus1
+ukbd1 on uhub3
+ukbd1: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.06, addr 3> on usbus1
+kbd2 at ukbd1
+ugen1.4: <vendor 0x0424 product 0x2514> at usbus1
+uhub4 on uhub3
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 4> on usbus1
+uhub4: MTT enabled
+Root mount waiting for: usbus1
+uhub4: 4 ports with 4 removable, self powered
+igb0: link state changed to UP
+igb1: link state changed to UP
+ums0 on uhub2
+ums0: <Mouse> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+igb0: link state changed to DOWN
+igb0: promiscuous mode enabled
+carp: demoted by 240 to 240 (interface down)
+carp: demoted by 240 to 480 (pfsync bulk start)
+igb1: link state changed to DOWN
+igb1: promiscuous mode enabled
+carp: demoted by 240 to 720 (interface down)
+carp: demoted by 240 to 960 (interface down)
+igb0: deletion failed: 3
+igb0: deletion failed: 3
+igb0: deletion failed: 3
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+igb1: deletion failed: 3
+tun1: changing name to 'ovpns1'
+tun2: changing name to 'ovpns2'
+tun3: changing name to 'ovpns3'
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce0: 
+bce0: link state changed to UP
+Gigabit link up!
+bce0: Gigabit link up!
+bce0: Gigabit link up!
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 720 (interface up)
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 480 (interface up)
+igb1: link state changed to UP
+carp: XXX@XXX: INIT -> BACKUP (initialization complete)
+carp: demoted by -240 to 240 (interface up)
+igb0: link state changed to UP
+ovpns3: link state changed to UP
+ovpns1: link state changed to UP
+ovpns2: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to DOWN
+carp: demoted by -240 to 0 (pfsync bulk done)
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to UP
+ovpns2: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns2: link state changed to UP
+ovpns3: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

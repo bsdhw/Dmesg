@@ -1,0 +1,254 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p15-HBSD  3dc6341fe35(stable/21.1) SMP amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Core(TM) i9-10900T CPU @ 1.90GHz (1896.10-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0xa0655  Family=0x6  Model=0xa5  Stepping=5
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features2=0x40000008<PKU,SGXLC>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x2b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 34358689792 (32767 MB)
+avail memory = 33046695936 (31515 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <LENOVO TC-M2W  >
+FreeBSD/SMP: Multiprocessor System Detected: 20 CPUs
+FreeBSD/SMP: 1 package(s) x 10 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 3 5 9 15 7 13 11 2 19 14 6 18 17 10 8 4 12 16
+Timecounter "TSC" frequency 1896098203 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000070 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <LENOVO TC-M2W> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 350
+Event timer "HPET1" frequency 24000000 Hz quality 340
+Event timer "HPET2" frequency 24000000 Hz quality 340
+Event timer "HPET3" frequency 24000000 Hz quality 340
+Event timer "HPET4" frequency 24000000 Hz quality 340
+Event timer "HPET5" frequency 24000000 Hz quality 340
+Event timer "HPET6" frequency 24000000 Hz quality 340
+Event timer "HPET7" frequency 24000000 Hz quality 340
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+vgapci0: <VGA-compatible display> port 0x4000-0x403f mem 0x6062000000-0x6062ffffff,0x4000000000-0x400fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x6063000000-0x606300ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms, UART> at device 22.3 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x4090-0x4097,0x4080-0x4083,0x4060-0x407f mem 0x70220000-0x70221fff,0x70223000-0x702230ff,0x70222000-0x702227ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib3: <ACPI PCI-PCI bridge> at device 27.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+nvme0: <Generic NVMe Device> mem 0x70100000-0x70103fff at device 0.0 on pci3
+pcib4: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pcib4: [GIANT-LOCKED]
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <serial bus> at device 31.5 (no driver attached)
+pci0: <network, ethernet> at device 31.6 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <SAMSUNG MZVLB1T0HBLR-000L7> NVMe namespace
+nvd0: 976762MB (2000409264 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <vendor 0x04d9 USB-HID Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <vendor 0x04d9 USB-HID Keyboard, class 0/0, rev 2.00/3.10, addr 1> on usbus0
+kbd1 at ukbd0
+umass0 on uhub0
+umass0: <vendor 0x04d9 USB-HID Keyboard, class 0/0, rev 2.00/3.10, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x0000
+umass0:1:0: Attached to scbus1
+(probe0:umass-sim0:0:0:0): REPORT LUNS. CDB: a0 00 00 00 00 00 00 00 00 10 00 00 
+(probe0:umass-sim0:0:0:0): CAM status: SCSI Status Error
+(probe0:umass-sim0:0:0:0): SCSI status: Check Condition
+(probe0:umass-sim0:0:0:0): SCSI sense: ILLEGAL REQUEST asc:20,0 (Invalid command operation code)
+(probe0:umass-sim0:0:0:0): Error 22, Unretryable error
+da0 at umass-sim0 bus 0 scbus1 target 0 lun 0
+da0: <TEX Mass Storage 0.01> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 1.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ugen0.3: <Realtek USB 10/100/1000 LAN> at usbus0
+uhid0 on uhub0
+uhid0: <CY040407016E0301> on usbus0
+uhid1 on uhub0
+uhid1: <vendor 0x04d9 USB-HID Keyboard, class 0/0, rev 2.00/3.10, addr 1> on usbus0
+ure0 on uhub0
+ure0: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 2> on usbus0
+miibus0: <MII bus> on ure0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue0: <USB Ethernet> on ure0
+ue0: Ethernet address: ...
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+ue0: link state changed to DOWN
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+module_register: cannot register pci/em from if_igb.ko; already loaded from kernel
+Module pci/em failed to register: 17
+module_register: cannot register pci/igb from if_igb.ko; already loaded from kernel
+Module pci/igb failed to register: 17
+module_register: cannot register pci/em from if_igb.ko; already loaded from kernel
+Module pci/em failed to register: 17
+module_register: cannot register pci/igb from if_igb.ko; already loaded from kernel
+Module pci/igb failed to register: 17
+ugen0.3: <Realtek USB 10/100/1000 LAN> at usbus0 (disconnected)
+ure0: at uhub0, port 24, addr 2 (disconnected)
+rgephy0: detached
+miibus0: detached
+ure0: detached
+ugen0.3: <Realtek USB 10/100/1000 LAN> at usbus0
+ure0 on uhub0
+ure0: <Realtek USB 10/100/1000 LAN, class 0/0, rev 2.10/30.00, addr 3> on usbus0
+miibus0: <MII bus> on ure0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue0: <USB Ethernet> on ure0
+ue0: Ethernet address: ...
+ugen0.4: <ASIX Elec. Corp. AX88179> at usbus0
+axge0 on uhub0
+axge0: <NetworkInterface> on usbus0
+miibus1: <MII bus> on axge0
+rgephy1: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 3 on miibus1
+rgephy1:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+ue1: <USB Ethernet> on axge0
+ue1: Ethernet address: ...
+ue0: link state changed to UP
+ue1: link state changed to UP
+ue0: link state changed to DOWN
+ue1: link state changed to DOWN
+ue0: link state changed to UP
+ue1: link state changed to UP
+ue1: link state changed to DOWN
+ue1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+963.691173 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+963.691197 [1035] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+ue0: permanently promiscuous mode enabled
+963.693585 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+963.775620 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+974.351257 [ 295] generic_netmap_unregister Emulated adapter for ue0 deactivated
+974.351833 [1035] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+974.456552 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+974.456576 [1035] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+974.458951 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+974.459069 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+585.574325 [ 295] generic_netmap_unregister Emulated adapter for ue0 deactivated
+585.574893 [1035] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+661.644726 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+661.644750 [1035] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+661.647215 [1130] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+661.647340 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+ue1: link state changed to DOWN
+ue1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ue1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

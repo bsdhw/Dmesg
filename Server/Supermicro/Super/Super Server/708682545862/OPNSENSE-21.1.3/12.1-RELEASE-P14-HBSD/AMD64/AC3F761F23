@@ -1,0 +1,849 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p14-HBSD #0  e10a7efcee1(stable/21.1)-dirty: Mon Mar  8 14:52:22 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Atom(TM) CPU C3708 @ 1.70GHz (1700.06-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506f1  Family=0x6  Model=0x5f  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x4ff8ebbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,CX16,xTPR,PDCM,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2294e283<FSGSBASE,TSCADJ,SMEP,ERMS,NFPUSG,MPX,PQE,RDSEED,SMAP,CLFLUSHOPT,PROCTRACE,SHA>
+  Structured Extended Features3=0xac000400<MD_CLEAR,IBPB,STIBP,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x69<RDCL_NO,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 34358689792 (32767 MB)
+avail memory = 33303785472 (31760 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  TIANO   >
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 8 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 1 3 2 6 4 5 7
+Timecounter "TSC" frequency 1700055564 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SMCI--MB> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 6.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <processor> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> mem 0xdf560000-0xdf57ffff at device 9.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> mem 0xdf540000-0xdf55ffff at device 14.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+vgapci0: <VGA-compatible display> port 0xd000-0xd07f mem 0xde000000-0xdeffffff,0xdf000000-0xdf01ffff at device 0.0 on pci4
+pcib5: <ACPI PCI-PCI bridge> mem 0xdf520000-0xdf53ffff at device 15.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xc000-0xc01f mem 0xdf300000-0xdf37ffff,0xdf380000-0xdf383fff at device 0.0 on pci5
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib6: <ACPI PCI-PCI bridge> mem 0xdf500000-0xdf51ffff at device 17.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+ahci0: <Intel Denverton AHCI SATA controller> port 0xe050-0xe057,0xe040-0xe043,0xe020-0xe03f mem 0xdf594000-0xdf595fff,0xdf599000-0xdf5990ff,0xdf598000-0xdf5987ff at device 20.0 on pci0
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+xhci0: <Intel Denverton USB 3.0 controller> mem 0xdf580000-0xdf58ffff at device 21.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib7: <ACPI PCI-PCI bridge> at device 22.0 on pci0
+pci7: <ACPI PCI bus> on pcib7
+ix0: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xddc00000-0xdddfffff,0xdde04000-0xdde07fff at device 0.0 on pci7
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 8 RX queues 8 TX queues
+ix0: Using MSI-X interrupts with 9 vectors
+ix0: allocated for 8 queues
+ix0: allocated for 8 rx queues
+ix0: Ethernet address: ...
+ix0: netmap queues/slots: TX 8/2048, RX 8/2048
+ix1: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xdda00000-0xddbfffff,0xdde00000-0xdde03fff at device 0.1 on pci7
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 8 RX queues 8 TX queues
+ix1: Using MSI-X interrupts with 9 vectors
+ix1: allocated for 8 queues
+ix1: allocated for 8 rx queues
+ix1: Ethernet address: ...
+ix1: netmap queues/slots: TX 8/2048, RX 8/2048
+pcib8: <ACPI PCI-PCI bridge> at device 23.0 on pci0
+pci8: <ACPI PCI bus> on pcib8
+ix2: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xdd600000-0xdd7fffff,0xdd804000-0xdd807fff at device 0.0 on pci8
+ix2: Using 2048 TX descriptors and 2048 RX descriptors
+ix2: Using 8 RX queues 8 TX queues
+ix2: Using MSI-X interrupts with 9 vectors
+ix2: allocated for 8 queues
+ix2: allocated for 8 rx queues
+ix2: Ethernet address: ...
+ix2: netmap queues/slots: TX 8/2048, RX 8/2048
+ix3: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xdd400000-0xdd5fffff,0xdd800000-0xdd803fff at device 0.1 on pci8
+ix3: Using 2048 TX descriptors and 2048 RX descriptors
+ix3: Using 8 RX queues 8 TX queues
+ix3: Using MSI-X interrupts with 9 vectors
+ix3: allocated for 8 queues
+ix3: allocated for 8 rx queues
+ix3: Ethernet address: ...
+ix3: netmap queues/slots: TX 8/2048, RX 8/2048
+pci0: <simple comms> at device 24.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+pci0: <serial bus> at device 31.5 (no driver attached)
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich4 bus 0 scbus2 target 0 lun 0
+ada0: <SAMSUNG SSD SM841 2.5" 7mm 512GB DXM01D0Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 488386MB (1000215216 512 byte sectors)
+ada1 at ahcich5 bus 0 scbus3 target 0 lun 0
+ada1: <Samsung SSD 850 PRO 512GB EXM02B6Q> ACS-2 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 488386MB (1000215216 512 byte sectors)
+ada1: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 8 ports with 8 removable, self powered
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+ugen0.2: <vendor 0x0557 product 0x7000> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 1> on usbus0
+uhub1: 4 ports with 3 removable, self powered
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+ugen0.3: <vendor 0x0557 product 0x2419> at usbus0
+ukbd0 on uhub1
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+kbd1 at ukbd0
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+ugen0.4: <vendor 0x0451 product 0x8142> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x0451 product 0x8142, class 9/0, rev 2.10/1.00, addr 3> on usbus0
+uhub2: MTT enabled
+uhub2: 4 ports with 4 removable, self powered
+ugen0.5: <Logitech USB Receiver> at usbus0
+ukbd1 on uhub2
+ukbd1: <Logitech USB Receiver, class 0/0, rev 2.00/29.01, addr 4> on usbus0
+kbd2 at ukbd1
+ugen0.6: <SanDisk Cruzer Blade> at usbus0
+umass0 on uhub2
+umass0: <SanDisk Cruzer Blade, class 0/0, rev 2.00/1.00, addr 5> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc100
+umass0:4:0: Attached to scbus4
+da0 at umass-sim0 bus 0 scbus4 target 0 lun 0
+da0: <SanDisk Cruzer Blade 1.00> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 15264MB (31260672 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+ugen0.7: <vendor 0x0451 product 0x8142> at usbus0
+uhub3 on uhub0
+uhub3: <vendor 0x0451 product 0x8142, class 9/0, rev 2.10/1.00, addr 6> on usbus0
+uhub3: MTT enabled
+uhub3: 4 ports with 4 removable, self powered
+ugen0.8: <vendor 0x0451 product 0x8140> at usbus0
+uhub4 on uhub0
+uhub4: <vendor 0x0451 product 0x8140, class 9/0, rev 3.00/1.00, addr 7> on usbus0
+uhub4: 4 ports with 4 removable, self powered
+ugen0.9: <vendor 0x0451 product 0x8140> at usbus0
+uhub5 on uhub0
+uhub5: <vendor 0x0451 product 0x8140, class 9/0, rev 3.00/1.00, addr 8> on usbus0
+uhub5: 4 ports with 4 removable, self powered
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f7 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 f0 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f1 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 fc 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 00 75 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 69 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 6a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 6d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 6f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+igb0: link state changed to UP
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 79 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7b 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 3 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7b 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f7 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 f0 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f1 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 fc 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 00 75 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 69 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 6a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 6d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 6f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 79 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 2 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 79 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7b 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f7 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 f0 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f1 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 fc 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 00 75 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 69 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 6a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 6d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 6f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 1 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 79 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7b 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f7 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 f0 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f1 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 fc 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 00 75 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 69 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 6a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 6d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 6f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Retrying command, 0 more tries remain
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807157248, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807222784, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 73 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807255552, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807714304, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807747072, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807779840, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 77 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807812608, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807845376, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 78 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807878144, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 79 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141808074752, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141808140288, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 7a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141808173056, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7b 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141808336896, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141808369664, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 7c 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141808467968, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 7d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141808500736, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 7f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141808795648, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f7 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=142462124032, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=142462156800, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f8 9b 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=142462255104, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): SEND_FPDMA_QUEUED DATA SET MANAGEMENT. ACB: 64 01 00 00 00 40 00 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=140495060992, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 58 61 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=140495093760, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 f0 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141152550912, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 f1 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141152714752, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 fc 74 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141154058240, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 00 75 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141154680832, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 e8 69 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141805977600, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 28 6a 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141806010368, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 68 6d 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141806436352, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 6f 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141806731264, length=32768)]error = 5
+(ada0:ahcich4:0:0:0): WRITE_FPDMA_QUEUED. ACB: 61 40 a8 72 88 40 10 00 00 00 00 00
+(ada0:ahcich4:0:0:0): CAM status: Uncorrectable parity/CRC error
+(ada0:ahcich4:0:0:0): Error 5, Retries exhausted
+g_vfs_done():gpt/rootfs[WRITE(offset=141807124480, length=32768)]error = 5
+ums0 on uhub1
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+ums1 on uhub2
+ums1: <Logitech USB Receiver, class 0/0, rev 2.00/29.01, addr 4> on usbus0
+ums1: 18 buttons and [XYZT] coordinates ID=2
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+vlan0: changing name to 'ix3_vlan2'
+vlan1: changing name to 'ix3_vlan3'
+vlan2: changing name to 'ix3_vlan4'
+vlan3: changing name to 'ix3_vlan5'
+vlan4: changing name to 'ix3_vlan6'
+ipsec0: changing name to 'ipsec1'
+ix3: link state changed to UP
+ix3_vlan2: link state changed to UP
+ix3_vlan3: link state changed to UP
+ix3_vlan4: link state changed to UP
+ix3_vlan5: link state changed to UP
+ix3_vlan6: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ix1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+tun1: link state changed to UP
+tun1: changing name to 'wg1'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: promiscuous mode enabled
+ix1: promiscuous mode enabled
+ipsec1: promiscuous mode enabled
+wg1: promiscuous mode enabled
+ix3: promiscuous mode enabled
+ix3_vlan2: promiscuous mode enabled
+ix3_vlan3: promiscuous mode enabled
+ix3_vlan4: promiscuous mode enabled
+ix3_vlan5: promiscuous mode enabled
+ix3_vlan6: promiscuous mode enabled
+lo0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+WARNING: attempt to domain_add(netgraph) after domainfinalize()

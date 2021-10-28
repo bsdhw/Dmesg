@@ -1,0 +1,289 @@
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p10 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+CPU: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz (1995.24-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206d7  Family=0x6  Model=0x2d  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 42949672960 (40960 MB)
+avail memory = 41659052032 (39729 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  S2600GZ>
+FreeBSD/SMP: Multiprocessor System Detected: 24 CPUs
+FreeBSD/SMP: 2 package(s) x 6 core(s) x 2 hardware threads
+random: unblocking device.
+Firmware Warning (ACPI): Invalid length for FADT/Pm1aControlBlock: 32, using default 16 (20181213/tbfadt-850)
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 24-47 on motherboard
+ioapic2 <Version 2.0> irqs 48-71 on motherboard
+Launching APs: 19 1 18 8 11 10 7 5 13 4 23 6 15 16 17 22 3 12 20 21 9 14 2
+Timecounter "TSC" frequency 1995235788 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112f0f0, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <INTEL S2600GZ> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 47 at device 1.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+pcib2: <ACPI PCI-PCI bridge> mem 0xd0c00000-0xd0c03fff irq 26 at device 0.0 numa-domain 0 on pci1
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 26 at device 8.0 numa-domain 0 on pci2
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+isci0: <Intel(R) C600 Series Chipset SAS Controller (SATA mode)> port 0x3100-0x31ff,0x3000-0x30ff mem 0x38007f800000-0x38007f807fff,0x38007f000000-0x38007f7fffff irq 26 at device 0.0 numa-domain 0 on pci3
+pcib4: <ACPI PCI-PCI bridge> irq 47 at device 1.1 numa-domain 0 on pci0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x2060-0x207f mem 0xd0960000-0xd097ffff,0xd09b0000-0xd09b3fff irq 27 at device 0.0 numa-domain 0 on pci4
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 6 RX queues 6 TX queues
+igb0: Using MSI-X interrupts with 7 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 6/1024, RX 6/1024
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x2040-0x205f mem 0xd0940000-0xd095ffff,0xd09a0000-0xd09a3fff irq 30 at device 0.1 numa-domain 0 on pci4
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 6 RX queues 6 TX queues
+igb1: Using MSI-X interrupts with 7 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 6/1024, RX 6/1024
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x2020-0x203f mem 0xd0920000-0xd093ffff,0xd0990000-0xd0993fff irq 28 at device 0.2 numa-domain 0 on pci4
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 6 RX queues 6 TX queues
+igb2: Using MSI-X interrupts with 7 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 6/1024, RX 6/1024
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x2000-0x201f mem 0xd0900000-0xd091ffff,0xd0980000-0xd0983fff irq 29 at device 0.3 numa-domain 0 on pci4
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 6 RX queues 6 TX queues
+igb3: Using MSI-X interrupts with 7 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 6/1024, RX 6/1024
+pcib5: <ACPI PCI-PCI bridge> irq 47 at device 2.0 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+pcib6: <ACPI PCI-PCI bridge> irq 47 at device 2.2 numa-domain 0 on pci0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+pcib7: <ACPI PCI-PCI bridge> irq 16 at device 3.0 numa-domain 0 on pci0
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+pcib8: <ACPI PCI-PCI bridge> irq 16 at device 3.2 numa-domain 0 on pci0
+pci8: <ACPI PCI bus> numa-domain 0 on pcib8
+mfi0: <LSI MegaSAS Gen2> port 0x1000-0x10ff mem 0xd0d60000-0xd0d63fff,0xd0d00000-0xd0d3ffff irq 42 at device 0.0 numa-domain 0 on pci8
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: FW MaxCmds = 1008, limiting to 128
+mfi0: 22995 (654728639s/0x0020/info) - Shutdown command received from host
+mfi0: 22996 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0079/1000/9261/1000)
+mfi0: 22997 (boot + 3s/0x0020/info) - Firmware version 2.130.363-1846
+mfi0: 22998 (boot + 5s/0x0008/info) - Battery Present
+mfi0: 22999 (boot + 5s/0x0008/info) - Battery Present
+mfi0: 23000 (boot + 5s/0x0020/info) - Package version 12.12.0-0124
+mfi0: 23001 (boot + 5s/0x0020/info) - Board Revision 85B
+mfi0: 23002 (boot + 24s/0x0002/info) - Inserted: PD 0c(e0xff/s0)
+mfi0: 23003 (boot + 24s/0x0002/info) - Inserted: PD 0c(e0xff/s0) Info: enclPd=ffff, scsiType=0, portMap=03, sasAddr=5000cca022019ee1,0000000000000000
+mfi0: 23004 (boot + 24s/0x0002/info) - Inserted: PD 0e(e0xff/s7)
+mfi0: 23005 (boot + 24s/0x0002/info) - Inserted: PD 0e(e0xff/s7) Info: enclPd=ffff, scsiType=0, portMap=01, sasAddr=500000e01b2c4c62,0000000000000000
+mfi0: 23006 (boot + 24s/0x0002/info) - Inserted: PD 0f(e0xff/s6)
+mfi0: 23007 (boot + 24s/0x0002/info) - Inserted: PD 0f(e0xff/s6) Info: enclPd=ffff, scsiType=0, portMap=02, sasAddr=500000e01b2ef362,0000000000000000
+mfi0: 23008 (boot + 24s/0x0002/info) - Inserted: PD 10(e0xff/s1)
+mfi0: 23009 (boot + 24s/0x0002/info) - Inserted: PD 10(e0xff/s1) Info: enclPd=ffff, scsiType=0, portMap=00, sasAddr=5000c5003bacbf09,0000000000000000
+mfi0: 23010 (654728691s/0x0020/info) - Time established as 09/29/20 21:04:51; (42 seconds since power on)
+mfi0: 23011 (654728710s/0x0008/info) - Battery temperature is normal
+mfi0: 23012 (654728741s/0x0020/info) - Host driver is loaded and operational
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+ehci0: <Intel Patsburg USB 2.0 controller> mem 0xd0e20000-0xd0e203ff irq 22 at device 26.0 numa-domain 0 on pci0
+usbus0: EHCI version 1.0
+usbus0 numa-domain 0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib9: <ACPI PCI-PCI bridge> irq 16 at device 28.0 numa-domain 0 on pci0
+pci9: <ACPI PCI bus> numa-domain 0 on pcib9
+pcib10: <ACPI PCI-PCI bridge> irq 19 at device 28.7 numa-domain 0 on pci0
+pci10: <ACPI PCI bus> numa-domain 0 on pcib10
+vgapci0: <VGA-compatible display> mem 0xea000000-0xeaffffff,0xd0810000-0xd0813fff,0xd0000000-0xd07fffff irq 19 at device 0.0 numa-domain 0 on pci10
+vgapci0: Boot video device
+ehci1: <Intel Patsburg USB 2.0 controller> mem 0xd0e10000-0xd0e103ff irq 20 at device 29.0 numa-domain 0 on pci0
+usbus1: EHCI version 1.0
+usbus1 numa-domain 0 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib11: <ACPI PCI-PCI bridge> at device 30.0 numa-domain 0 on pci0
+pci11: <ACPI PCI bus> numa-domain 0 on pcib11
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+ahci0: <Intel Patsburg AHCI SATA controller> port 0x4070-0x4077,0x4060-0x4063,0x4050-0x4057,0x4040-0x4043,0x4020-0x403f mem 0xd0e00000-0xd0e007ff irq 21 at device 31.2 numa-domain 0 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib12: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci12: <ACPI PCI bus> numa-domain 1 on pcib12
+pcib13: <ACPI PCI-PCI bridge> irq 71 at device 1.0 numa-domain 1 on pci12
+pci13: <ACPI PCI bus> numa-domain 1 on pcib13
+pcib14: <ACPI PCI-PCI bridge> irq 71 at device 2.0 numa-domain 1 on pci12
+pci14: <ACPI PCI bus> numa-domain 1 on pcib14
+pcib15: <ACPI PCI-PCI bridge> irq 71 at device 2.2 numa-domain 1 on pci12
+pci15: <ACPI PCI bus> numa-domain 1 on pcib15
+pcib16: <ACPI PCI-PCI bridge> irq 71 at device 3.0 numa-domain 1 on pci12
+pci16: <ACPI PCI bus> numa-domain 1 on pcib16
+pcib17: <ACPI PCI-PCI bridge> irq 71 at device 3.2 numa-domain 1 on pci12
+pci17: <ACPI PCI bus> numa-domain 1 on pcib17
+acpi_button0: <Sleep Button> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+pcib18: <ACPI Host-PCI bridge> on acpi0
+pci18: <ACPI PCI bus> on pcib18
+pci18: <dasp, performance counters> at device 14.1 (no driver attached)
+pci18: <dasp, performance counters> at device 19.1 (no driver attached)
+pci18: <dasp, performance counters> at device 19.4 (no driver attached)
+pci18: <dasp, performance counters> at device 19.5 (no driver attached)
+pcib19: <ACPI Host-PCI bridge> on acpi0
+pci19: <ACPI PCI bus> on pcib19
+pci19: <dasp, performance counters> at device 14.1 (no driver attached)
+pci19: <dasp, performance counters> at device 19.1 (no driver attached)
+pci19: <dasp, performance counters> at device 19.4 (no driver attached)
+pci19: <dasp, performance counters> at device 19.5 (no driver attached)
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8800-0xc97ff,0xc9800-0xca7ff,0xca800-0xcb7ff,0xcb800-0xcc7ff,0xcc800-0xd2fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+mfid0 numa-domain 0 on mfi0
+mfid0: 571808MB (1171062784 sectors) RAID volume (no label) is optimal
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+mfid1 numa-domain 0 on mfi0
+mfid1: 139488MB (285671424 sectors) RAID volume (no label) is optimal
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+cd0 at ahcich0 bus 0 scbus2 target 0 lun 0
+cd0: <Optiarc DVD RW AD-7760H 1.00> Removable CD-ROM SCSI device
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub0: 2 ports with 2 removable, self powered
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus1 usbus0
+uhub1: 2 ports with 2 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 numa-domain 0 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 numa-domain 0 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus1 usbus0
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen1.3: <American Megatrends Inc. Virtual Keyboard and Mouse> at usbus1
+ukbd0 numa-domain 0 on uhub3
+ukbd0: <Keyboard Interface> on usbus1
+kbd2 at ukbd0
+lo0: link state changed to UP
+igb1: link state changed to UP
+igb0: link state changed to UP
+ioat0: <SNB IOAT Ch0> mem 0x38007ff90000-0x38007ff93fff irq 31 at device 4.0 numa-domain 0 on pci0
+ioat0: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat1: <SNB IOAT Ch1> mem 0x38007ff80000-0x38007ff83fff irq 39 at device 4.1 numa-domain 0 on pci0
+ioat1: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat2: <SNB IOAT Ch2> mem 0x38007ff70000-0x38007ff73fff irq 31 at device 4.2 numa-domain 0 on pci0
+ioat2: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat3: <SNB IOAT Ch3> mem 0x38007ff60000-0x38007ff63fff irq 39 at device 4.3 numa-domain 0 on pci0
+ioat3: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat4: <SNB IOAT Ch4> mem 0x38007ff50000-0x38007ff53fff irq 31 at device 4.4 numa-domain 0 on pci0
+ioat4: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat5: <SNB IOAT Ch5> mem 0x38007ff40000-0x38007ff43fff irq 39 at device 4.5 numa-domain 0 on pci0
+ioat5: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat6: <SNB IOAT Ch6> mem 0x38007ff30000-0x38007ff33fff irq 31 at device 4.6 numa-domain 0 on pci0
+ioat6: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat7: <SNB IOAT Ch7> mem 0x38007ff20000-0x38007ff23fff irq 39 at device 4.7 numa-domain 0 on pci0
+ioat7: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat8: <SNB IOAT Ch0> mem 0x3800fff70000-0x3800fff73fff irq 55 at device 4.0 numa-domain 1 on pci12
+ioat8: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat9: <SNB IOAT Ch1> mem 0x3800fff60000-0x3800fff63fff irq 63 at device 4.1 numa-domain 1 on pci12
+ioat9: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat10: <SNB IOAT Ch2> mem 0x3800fff50000-0x3800fff53fff irq 55 at device 4.2 numa-domain 1 on pci12
+ioat10: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat11: <SNB IOAT Ch3> mem 0x3800fff40000-0x3800fff43fff irq 63 at device 4.3 numa-domain 1 on pci12
+ioat11: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat12: <SNB IOAT Ch4> mem 0x3800fff30000-0x3800fff33fff irq 55 at device 4.4 numa-domain 1 on pci12
+ioat12: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat13: <SNB IOAT Ch5> mem 0x3800fff20000-0x3800fff23fff irq 63 at device 4.5 numa-domain 1 on pci12
+ioat13: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat14: <SNB IOAT Ch6> mem 0x3800fff10000-0x3800fff13fff irq 55 at device 4.6 numa-domain 1 on pci12
+ioat14: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat15: <SNB IOAT Ch7> mem 0x3800fff00000-0x3800fff03fff irq 63 at device 4.7 numa-domain 1 on pci12
+ioat15: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ums0 numa-domain 0 on uhub3
+ums0: <Mouse Interface> on usbus1
+ums0: 3 buttons and [Z] coordinates ID=0
+mfi0: 23013 (654728775s/0x0008/info) - Battery started charging
+mfi0: 23014 (654728840s/0x0008/info) - Battery charge complete
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+mfi0: 23015 (655075626s/0x0020/info) - Patrol Read started
+mfi0: 23056 (655083433s/0x0020/info) - Patrol Read complete
+mfi0: 23057 (655520345s/0x0008/info) - Battery relearn will start in 4 days
+mfi0: 23058 (655680426s/0x0020/info) - Patrol Read started
+mfi0: 23103 (655689288s/0x0020/info) - Patrol Read complete
+mfi0: 23104 (655693115s/0x0008/info) - Battery relearn will start in 2 day
+mfi0: 23105 (655779500s/0x0008/info) - Battery relearn will start in 1 day
+mfi0: 23106 (655847945s/0x0008/info) - Battery relearn will start in 5 hours
+mfi0: 23107 (655866015s/0x0008/info) - Battery relearn pending: Battery is under charge
+mfi0: 23108 (655866145s/0x0008/info) - Battery started charging
+mfi0: 23109 (655868680s/0x0008/info) - Battery charge complete
+mfi0: 23110 (655868745s/0x0008/info) - Battery relearn started
+mfi0: 23111 (655868810s/0x0008/info) - Battery is discharging
+mfi0: 23112 (655868810s/0x0008/info) - Battery relearn in progress
+mfi0: 23113 (655871800s/0x0008/WARN) - BBU disabled; changing WB virtual disks to WT, Forced WB VDs are not affected
+mfi0: 23114 (655871800s/0x0001/info) - Policy change on VD 00/0 to [ID=00,dcp=05,ccp=04,ap=0,dc=0] from [ID=00,dcp=05,ccp=05,ap=0,dc=0]
+mfi0: 23115 (655871800s/0x0001/info) - Policy change on VD 01/1 to [ID=01,dcp=05,ccp=04,ap=0,dc=0] from [ID=01,dcp=05,ccp=05,ap=0,dc=0]
+mfi0: 23116 (655872450s/0x0008/info) - Battery relearn completed
+mfi0: 23117 (655874465s/0x0008/info) - Battery started charging
+mfi0: 23118 (655874790s/0x0008/info) - BBU enabled; changing WT virtual disks to WB
+mfi0: 23119 (655874790s/0x0001/info) - Policy change on VD 00/0 to [ID=00,dcp=05,ccp=05,ap=0,dc=0] from [ID=00,dcp=05,ccp=04,ap=0,dc=0]
+mfi0: 23120 (655874790s/0x0001/info) - Policy change on VD 01/1 to [ID=01,dcp=05,ccp=05,ap=0,dc=0] from [ID=01,dcp=05,ccp=04,ap=0,dc=0]
+mfi0: 23121 (655876155s/0x0008/info) - Battery charge complete
+mfi0: 23122 (656285226s/0x0020/info) - Patrol Read started
+mfi0: 23167 (656295568s/0x0020/info) - Patrol Read complete
+mfi0: 23168 (656890026s/0x0020/info) - Patrol Read started
+mfi0: 23192 (656891650s/0x0008/info) - Battery started charging
+mfi0: 23199 (656892235s/0x0008/info) - Battery charge complete
+mfi0: 23215 (656899736s/0x0020/info) - Patrol Read complete

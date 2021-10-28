@@ -1,0 +1,485 @@
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p9 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM)2 Duo CPU     E8400  @ 3.00GHz (2394.06-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x10676  Family=0x6  Model=0x17  Stepping=6
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x8e3fd<SSE3,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1>
+  AMD Features=0x20100800<SYSCALL,NX,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: HLT,PAUSE
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3342508032 (3187 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <A_M_I  OEMAPIC >
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0 <Version 0.3> irqs 0-23 on motherboard
+ioapic1 <Version 0.3> irqs 24-47 on motherboard
+Launching APs: 1
+Timecounter "TSC-low" frequency 1197030712 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112f0f0, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <A_M_I OEMRSDT> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+device_attach: ioapic0 attach returned 6
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xe000-0xe0ff mem 0xd0000000-0xdfffffff,0xfeae0000-0xfeaeffff irq 16 at device 0.0 on pci1
+vgapci0: Boot video device
+hdac0: <ATI RV730 HDA Controller> mem 0xfeafc000-0xfeafffff irq 17 at device 0.1 on pci1
+pcib2: <ACPI PCI-PCI bridge> irq 27 at device 2.0 on pci0
+pcib2: failed to allocate initial prefetch window: 0xfdf00000-0xfdffffff
+pci2: <ACPI PCI bus> on pcib2
+atapci0: <VIA 8237 SATA300 controller> port 0xdc00-0xdc07,0xd880-0xd883,0xd800-0xd807,0xd480-0xd483,0xd400-0xd40f,0xd000-0xd0ff irq 21 at device 15.0 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+atapci1: <VIA 8237 UDMA133 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xfc00-0xfc0f at device 15.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci1
+ata1: <ATA channel> at channel 1 on atapci1
+uhci0: <VIA 83C572 USB controller> port 0xc480-0xc49f irq 20 at device 16.0 on pci0
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <VIA 83C572 USB controller> port 0xc800-0xc81f irq 22 at device 16.1 on pci0
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+uhci2: <VIA 83C572 USB controller> port 0xc880-0xc89f irq 21 at device 16.2 on pci0
+usbus2 on uhci2
+usbus2: 12Mbps Full Speed USB v1.0
+uhci3: <VIA 83C572 USB controller> port 0xcc00-0xcc1f irq 23 at device 16.3 on pci0
+usbus3 on uhci3
+usbus3: 12Mbps Full Speed USB v1.0
+ehci0: <VIA VT6202 USB 2.0 controller> mem 0xfe9ffc00-0xfe9ffcff irq 21 at device 16.4 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci0
+usbus4: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 17.0 on pci0
+isa0: <ISA bus> on isab0
+vr0: <VIA VT6102 Rhine II 10/100BaseTX> port 0xc000-0xc0ff mem 0xfe9ff800-0xfe9ff8ff irq 23 at device 18.0 on pci0
+vr0: Quirks: 0x0
+vr0: Revision: 0x7c
+miibus0: <MII bus> on vr0
+ukphy0: <Generic IEEE 802.3u media interface> PHY 1 on miibus0
+ukphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+vr0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> at device 19.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+pcib4: <ACPI Host-PCI bridge> on acpi0
+pcib4: could not evaluate _ADR - AE_NOT_FOUND
+pci4: <ACPI PCI bus> on pcib4
+hdac1: <VIA VT8251/8237A HDA Controller> mem 0xfebfc000-0xfebfffff irq 17 at device 1.0 on pci4
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcf7ff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS NOTICE: Prefetch is disabled by default if less than 4GB of RAM is present;
+            to enable, add "vfs.zfs.prefetch_disable=0" to /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC888 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC888 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC888 (Analog 8ch/2.0)> at nid 20,21,22,23 and 24,26,28 on hdaa1
+pcm2: <Realtek ALC888 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm3: <Realtek ALC888 (Rear Digital)> at nid 30 and 31 on hdaa1
+ugen0.1: <VIA UHCI root HUB> at usbus0
+ugen3.1: <VIA UHCI root HUB> at usbus3
+uhub0: <VIA UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+ugen2.1: <VIA UHCI root HUB> at usbus2
+uhub1: <VIA UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+ugen4.1: <VIA EHCI root HUB> at usbus4
+uhub2: <VIA UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub3: <VIA EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+ugen1.1: <VIA UHCI root HUB> at usbus1
+uhub4: <VIA UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+ada0 at ata2 bus 0 scbus0 target 0 lun 0
+ada0: <ExcelStor Technology J8160S P22OABEA> ATA-7 SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: 152627MB (312581808 512 byte sectors)
+uhub4: 2 ports with 2 removable, self powered
+ada1 at ata3 bus 0 scbus1 target 0 lun 0
+ada1: <ExcelStor Technology J8160S P22OABEA> ATA-7 SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada1: 152627MB (312581808 512 byte sectors)
+ada2 at ata0 bus 0 scbus2 target 0 lun 0
+ada2: <ExcelStor Technology J8160 P22OA60A> ATA-7 device
+ada2: Serial Number...
+ada2: 133.000MB/s transfers (UDMA6, PIO 8192bytes)
+ada2: 157066MB (321672960 512 byte sectors)
+ada3 at ata1 bus 0 scbus3 target 0 lun 0
+ada3: <ExcelStor Technology J8160 P22OA60A> ATA-7 device
+ada3: Serial Number...
+ada3: 133.000MB/s transfers (UDMA6, PIO 8192bytes)
+ada3: 157066MB (321672960 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus4
+Root mount waiting for: usbus4
+Root mount waiting for: usbus4
+uhub3: 8 ports with 8 removable, self powered
+Root mount waiting for: usbus4
+Root mount waiting for: usbus4
+ugen4.2: <USB2.0 External Mass Storage Device> at usbus4
+umass0 on uhub3
+umass0: <6238--Storage> on usbus4
+umass0:  8070i (ATAPI) over Bulk-Only; quirks = 0x0100
+umass0:4:0: Attached to scbus4
+cd0 at umass-sim0 bus 0 scbus4 target 0 lun 0
+cd0: <Slimtype eNAU108   8 XL0A> Removable CD-ROM SCSI device
+cd0: 40.000MB/s transfers
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+cd0: quirks=0x10<10_BYTE_ONLY>
+ugen3.2: <Logitech USB Receiver> at usbus3
+ukbd0 on uhub1
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 2> on usbus3
+kbd2 at ukbd0
+lo0: link state changed to UP
+vr0: link state changed to DOWN
+vr0: link state changed to UP
+ums0 on uhub1
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 2> on usbus3
+ums0: 16 buttons and [XYZT] coordinates ID=2
+uhid0 on uhub1
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 2> on usbus3
+pflog0: promiscuous mode enabled
+Security policy loaded: MAC/ntpd (mac_ntpd)
+pflog0: promiscuous mode disabled
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+All buffers synced.
+Uptime: 5m10s
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p9 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM)2 Duo CPU     E8400  @ 3.00GHz (2394.06-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x10676  Family=0x6  Model=0x17  Stepping=6
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x8e3fd<SSE3,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1>
+  AMD Features=0x20100800<SYSCALL,NX,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: HLT,PAUSE
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3342508032 (3187 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <A_M_I  OEMAPIC >
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0 <Version 0.3> irqs 0-23 on motherboard
+ioapic1 <Version 0.3> irqs 24-47 on motherboard
+Launching APs: 1
+Timecounter "TSC-low" frequency 1197030681 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112f0f0, 0) error 19
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <A_M_I OEMRSDT> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+device_attach: ioapic0 attach returned 6
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xe000-0xe0ff mem 0xd0000000-0xdfffffff,0xfeae0000-0xfeaeffff irq 16 at device 0.0 on pci1
+vgapci0: Boot video device
+hdac0: <ATI RV730 HDA Controller> mem 0xfeafc000-0xfeafffff irq 17 at device 0.1 on pci1
+pcib2: <ACPI PCI-PCI bridge> irq 27 at device 2.0 on pci0
+pcib2: failed to allocate initial prefetch window: 0xfdf00000-0xfdffffff
+pci2: <ACPI PCI bus> on pcib2
+atapci0: <VIA 8237 SATA300 controller> port 0xdc00-0xdc07,0xd880-0xd883,0xd800-0xd807,0xd480-0xd483,0xd400-0xd40f,0xd000-0xd0ff irq 21 at device 15.0 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+atapci1: <VIA 8237 UDMA133 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xfc00-0xfc0f at device 15.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci1
+ata1: <ATA channel> at channel 1 on atapci1
+uhci0: <VIA 83C572 USB controller> port 0xc480-0xc49f irq 20 at device 16.0 on pci0
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <VIA 83C572 USB controller> port 0xc800-0xc81f irq 22 at device 16.1 on pci0
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+uhci2: <VIA 83C572 USB controller> port 0xc880-0xc89f irq 21 at device 16.2 on pci0
+usbus2 on uhci2
+usbus2: 12Mbps Full Speed USB v1.0
+uhci3: <VIA 83C572 USB controller> port 0xcc00-0xcc1f irq 23 at device 16.3 on pci0
+usbus3 on uhci3
+usbus3: 12Mbps Full Speed USB v1.0
+ehci0: <VIA VT6202 USB 2.0 controller> mem 0xfe9ffc00-0xfe9ffcff irq 21 at device 16.4 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci0
+usbus4: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 17.0 on pci0
+isa0: <ISA bus> on isab0
+vr0: <VIA VT6102 Rhine II 10/100BaseTX> port 0xc000-0xc0ff mem 0xfe9ff800-0xfe9ff8ff irq 23 at device 18.0 on pci0
+vr0: Quirks: 0x0
+vr0: Revision: 0x7c
+miibus0: <MII bus> on vr0
+ukphy0: <Generic IEEE 802.3u media interface> PHY 1 on miibus0
+ukphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+vr0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> at device 19.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+pcib4: <ACPI Host-PCI bridge> on acpi0
+pcib4: could not evaluate _ADR - AE_NOT_FOUND
+pci4: <ACPI PCI bus> on pcib4
+hdac1: <VIA VT8251/8237A HDA Controller> mem 0xfebfc000-0xfebfffff irq 17 at device 1.0 on pci4
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcf7ff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS NOTICE: Prefetch is disabled by default if less than 4GB of RAM is present;
+            to enable, add "vfs.zfs.prefetch_disable=0" to /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC888 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC888 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC888 (Analog 8ch/2.0)> at nid 20,21,22,23 and 24,26,28 on hdaa1
+pcm2: <Realtek ALC888 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm3: <Realtek ALC888 (Rear Digital)> at nid 30 and 31 on hdaa1
+ugen3.1: <VIA UHCI root HUB> at usbus3
+ugen0.1: <VIA UHCI root HUB> at usbus0
+uhub0: <VIA UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+ugen1.1: <VIA UHCI root HUB> at usbus1
+uhub1: <VIA UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub2: <VIA UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+ugen4.1: <VIA EHCI root HUB> at usbus4
+uhub3: <VIA EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+ugen2.1: <VIA UHCI root HUB> at usbus2
+uhub4: <VIA UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+ada0 at ata2 bus 0 scbus0 target 0 lun 0
+ada0: <ExcelStor Technology J8160S P22OABEA> ATA-7 SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: 152627MB (312581808 512 byte sectors)
+ada1 at ata3 bus 0 scbus1 target 0 lun 0
+ada1: <ExcelStor Technology J8160S P22OABEA> ATA-7 SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada1: 152627MB (312581808 512 byte sectors)
+uhub4: 2 ports with 2 removable, self powered
+ada2 at ata0 bus 0 scbus2 target 0 lun 0
+ada2: <ExcelStor Technology J8160 P22OA60A> ATA-7 device
+ada2: Serial Number...
+ada2: 133.000MB/s transfers (UDMA6, PIO 8192bytes)
+ada2: 157066MB (321672960 512 byte sectors)
+ada3 at ata1 bus 0 scbus3 target 0 lun 0
+ada3: <ExcelStor Technology J8160 P22OA60A> ATA-7 device
+ada3: Serial Number...
+ada3: 133.000MB/s transfers (UDMA6, PIO 8192bytes)
+ada3: 157066MB (321672960 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus4
+Root mount waiting for: usbus4
+Root mount waiting for: usbus4
+uhub3: 8 ports with 8 removable, self powered
+Root mount waiting for: usbus4
+Root mount waiting for: usbus4
+ugen4.2: <USB2.0 External Mass Storage Device> at usbus4
+umass0 on uhub3
+umass0: <6238--Storage> on usbus4
+umass0:  8070i (ATAPI) over Bulk-Only; quirks = 0x0100
+umass0:4:0: Attached to scbus4
+cd0 at umass-sim0 bus 0 scbus4 target 0 lun 0
+cd0: <Slimtype eNAU108   8 XL0A> Removable CD-ROM SCSI device
+cd0: 40.000MB/s transfers
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+cd0: quirks=0x10<10_BYTE_ONLY>
+ugen3.2: <Logitech USB Receiver> at usbus3
+ukbd0 on uhub0
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 2> on usbus3
+kbd2 at ukbd0
+lo0: link state changed to UP
+vr0: link state changed to DOWN
+vr0: link state changed to UP
+ums0 on uhub0
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 2> on usbus3
+ums0: 16 buttons and [XYZT] coordinates ID=2
+uhid0 on uhub0
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/12.01, addr 2> on usbus3
+pflog0: promiscuous mode enabled
+Security policy loaded: MAC/ntpd (mac_ntpd)
+info: [drm] Initialized drm 1.1.0 20060810
+drmn0: =======================================================
+drmn0: This code is obsolete abandonware. Install the graphics/drm-legacy-kmod pkg
+drmn0: =======================================================
+drmn0: Deprecated code (to be removed in FreeBSD 13): drm2 drivers
+drmn0: =======================================================
+drmn0: This code is obsolete abandonware. Install the graphics/drm-legacy-kmod pkg
+drmn0: =======================================================
+drmn0: Deprecated code (to be removed in FreeBSD 13): drm2 drivers
+drmn0: <ATI Radeon HD 4600 Series> on vgapci0
+info: [drm] RADEON_IS_AGP
+info: [drm] initializing kernel modesetting (RV730 0x1002:0x9495 0x1002:0x0028).
+info: [drm] register mmio base: 0xFEAE0000
+info: [drm] register mmio size: 65536
+info: [drm] radeon_atrm_get_bios: ===> Try ATRM...
+info: [drm] radeon_atrm_get_bios: pci_find_class() found: 0:1:0:0, vendor=1002, device=9495
+info: [drm] radeon_atrm_get_bios: Get ACPI device handle
+info: [drm] radeon_acpi_vfct_bios: ===> Try VFCT...
+info: [drm] radeon_acpi_vfct_bios: Get "VFCT" ACPI table
+info: [drm] radeon_acpi_vfct_bios: Failed to get "VFCT" table: AE_NOT_FOUND
+info: [drm] igp_read_bios_from_vram: ===> Try IGP's VRAM...
+info: [drm] igp_read_bios_from_vram: VRAM base address: 0xd0000000
+info: [drm] igp_read_bios_from_vram: Map address: 0xfffff800d0000000 (262144 bytes)
+info: [drm] igp_read_bios_from_vram: Incorrect BIOS signature: 0xFFFF
+info: [drm] radeon_read_bios: ===> Try PCI Expansion ROM...
+info: [drm] radeon_read_bios: Map address: 0xfffff800000c0000 (131072 bytes)
+info: [drm] ATOM BIOS: RV730XT
+error: [drm:pid21354:radeon_agp_init] *ERROR* Unable to acquire AGP: -19
+info: [drm] Forcing AGP to PCIE mode
+drmn0: info: VRAM: 1024M 0x0000000000000000 - 0x000000003FFFFFFF (1024M used)
+drmn0: info: GTT: 512M 0x0000000040000000 - 0x000000005FFFFFFF
+info: [drm] Detected VRAM RAM=1024M, BAR=256M
+info: [drm] RAM width 128bits DDR
+[TTM] Zone  kernel: Available graphics memory: 1682040 kiB
+[TTM] Initializing pool allocator
+info: [drm] radeon: 1024M of VRAM memory ready
+info: [drm] radeon: 512M of GTT memory ready.
+info: [drm] Supports vblank timestamp caching Rev 1 (10.10.2010).
+info: [drm] Driver supports precise vblank timestamp query.
+info: [drm] radeon: irq initialized.
+info: [drm] GART: num cpu pages 131072, num gpu pages 131072
+info: [drm] Loading RV730 Microcode
+info: [drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: info: WB enabled
+drmn0: info: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8005581cc00
+drmn0: info: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8005581cc0c
+info: [drm] ring test on 0 succeeded in 1 usecs
+info: [drm] ring test on 3 succeeded in 1 usecs
+info: [drm] ib test on ring 0 succeeded in 0 usecs
+info: [drm] ib test on ring 3 succeeded in 0 usecs
+info: [drm] radeon_device_init: Taking over the fictitious range 0xd0000000-0xe0000000
+radeon_iicbb0 on drmn0
+iicbus0: <Philips I2C bus> on iicbb0 addr 0xff
+iic0: <I2C generic I/O> on iicbus0
+radeon_iicbb1 on drmn0
+iicbus1: <Philips I2C bus> on iicbb1 addr 0xff
+iic1: <I2C generic I/O> on iicbus1
+radeon_iicbb2 on drmn0
+iicbus2: <Philips I2C bus> on iicbb2 addr 0xff
+iic2: <I2C generic I/O> on iicbus2
+radeon_iicbb3 on drmn0
+iicbus3: <Philips I2C bus> on iicbb3 addr 0xff
+iic3: <I2C generic I/O> on iicbus3
+radeon_iicbb4 on drmn0
+iicbus4: <Philips I2C bus> on iicbb4 addr 0xff
+iic4: <I2C generic I/O> on iicbus4
+radeon_iicbb5 on drmn0
+iicbus5: <Philips I2C bus> on iicbb5 addr 0xff
+iic5: <I2C generic I/O> on iicbus5
+radeon_iicbb6 on drmn0
+iicbus6: <Philips I2C bus> on iicbb6 addr 0xff
+iic6: <I2C generic I/O> on iicbus6
+info: [drm] Radeon Display Connectors
+info: [drm] Connector 0:
+info: [drm]   VGA-1
+info: [drm]   DDC: 0x7e60 0x7e60 0x7e64 0x7e64 0x7e68 0x7e68 0x7e6c 0x7e6c
+info: [drm]   Encoders:
+info: [drm]     CRT2: INTERNAL_KLDSCP_DAC2
+info: [drm] Connector 1:
+info: [drm]   HDMI-A-1
+info: [drm]   HPD2
+info: [drm]   DDC: 0x7f10 0x7f10 0x7f14 0x7f14 0x7f18 0x7f18 0x7f1c 0x7f1c
+info: [drm]   Encoders:
+info: [drm]     DFP2: INTERNAL_UNIPHY1
+info: [drm] Connector 2:
+info: [drm]   DVI-I-1
+info: [drm]   HPD1
+info: [drm]   DDC: 0x7e20 0x7e20 0x7e24 0x7e24 0x7e28 0x7e28 0x7e2c 0x7e2c
+info: [drm]   Encoders:
+info: [drm]     CRT1: INTERNAL_KLDSCP_DAC1
+info: [drm]     DFP1: INTERNAL_UNIPHY
+info: [drm] Internal thermal controller without fan control
+info: [drm] radeon: power management initialized
+info: [drm] Connector VGA-1: get mode from tunables:
+info: [drm]   - kern.vt.fb.modes.VGA-1
+info: [drm]   - kern.vt.fb.default_mode
+info: [drm] Connector HDMI-A-1: get mode from tunables:
+info: [drm]   - kern.vt.fb.modes.HDMI-A-1
+info: [drm]   - kern.vt.fb.default_mode
+info: [drm] Connector DVI-I-1: get mode from tunables:
+info: [drm]   - kern.vt.fb.modes.DVI-I-1
+info: [drm]   - kern.vt.fb.default_mode
+info: [drm] fb mappable at 0xD0142000
+info: [drm] vram apper at 0xD0000000
+info: [drm] size 14745600
+info: [drm] fb depth is 24
+info: [drm]    pitch is 10240
+fbd0 on drmn0
+VT: Replacing driver "vga" with new "fb".
+info: [drm] Initialized radeon 2.29.0 20080528 for drmn0 on minor 0

@@ -1,0 +1,391 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p19-HBSD #0  0c59842367b(stable/21.1)-dirty: Mon Jul  5 15:08:43 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E3-1220 V2 @ 3.10GHz (3093.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306a9  Family=0x6  Model=0x3a  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8259866624 (7877 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 2 3 1
+Timecounter "TSC-low" frequency 1546522480 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000054 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+bce0: <QLogic NetXtreme II BCM5708 1000Base-T (B2)> mem 0xc4000000-0xc5ffffff irq 16 at device 0.0 on pci2
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5708C 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: ASIC (0x57081020); Rev (B2); Bus (PCI-X, 64-bit, 133MHz); B/C (2.9.1); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc7106000-0xc71063ff irq 20 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+bce1: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc0000000-0xc1ffffff irq 16 at device 0.0 on pci3
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: 
+bce1: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (5.2.3); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce2: <QLogic NetXtreme II BCM5716 1000Base-T (C0)> mem 0xc2000000-0xc3ffffff irq 17 at device 0.1 on pci3
+miibus2: <MII bus> on bce2
+brgphy2: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus2
+brgphy2:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce2: Using defaults for TSO: 65518/35/2048
+bce2: Ethernet address: ...
+bce2: 
+bce2: link state changed to DOWN
+ASIC (0x57092008); Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (5.2.3); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.11)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc7105000-0xc71053ff irq 23 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib4: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+vgapci0: <VGA-compatible display> mem 0xc6000000-0xc67fffff,0xc7000000-0xc7003fff,0xc6800000-0xc6ffffff irq 19 at device 3.0 on pci4
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Cougar Point AHCI SATA controller> port 0x2048-0x204f,0x2054-0x2057,0x2040-0x2047,0x2050-0x2053,0x2020-0x203f mem 0xc7104000-0xc71047ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xcc7ff,0xcc800-0xcf7ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <SPCC Solid State Disk SBFMBB.3> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 122104MB (250069680 512 byte sectors)
+<Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <SPCC Solid State Disk SBFMBB.3> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 122104MB (250069680 512 byte sectors)
+uhub1: GEOM: ada0: the secondary GPT header is not in the last LBA.
+<Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+GEOM: ada1: the secondary GPT header is not in the last LBA.
+GEOM_MIRROR: Device mirror/OPNsense launched (1/2).
+GEOM_MIRROR: Device OPNsense: rebuilding provider ada0.
+WARNING: /mnt was not properly dismounted
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub2 on uhub1
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub3 on uhub0
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+ugen1.3: <vendor 0x0424 product 0x2514> at usbus1
+uhub4 on uhub2
+uhub4: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 3> on usbus1
+uhub4: MTT enabled
+ugen0.3: <Avocent USB Composite Device-0> at usbus0
+ukbd0 on uhub3
+ukbd0: <Keyboard> on usbus0
+kbd1 at ukbd0
+uhub4: 4 ports with 4 removable, self powered
+ums0 on uhub3
+ums0: <Mouse> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+vlan0: changing name to 'bce2_vlan1000'
+vlan1: changing name to 'bce2_vlan10'
+vlan2: changing name to 'bce2_vlan20'
+vlan3: changing name to 'bce2_vlan100'
+vlan4: changing name to 'bce2_vlan1100'
+vlan5: changing name to 'bce2_vlan1500'
+tun1: changing name to 'ovpns1'
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x01030005
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x01030008
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce2: 
+bce2: link state changed to UP
+bce2_vlan100: link state changed to UP
+bce2_vlan1500: link state changed to UP
+bce2_vlan20: link state changed to UP
+bce2_vlan1000: link state changed to UP
+bce2_vlan10: link state changed to UP
+bce2_vlan1100: link state changed to UP
+Gigabit link up!
+bce2: Gigabit link up!
+bce2: Gigabit link up!
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x0103000B
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x0103000E
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce1: 
+bce1: link state changed to UP
+Gigabit link up!
+bce1: Gigabit link up!
+bce1: Gigabit link up!
+bce0: link state changed to UP
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+877.517765 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+877.525921 [1035] generic_netmap_dtor       Emulated netmap adapter for bce1 destroyed
+bce1: permanently promiscuous mode enabled
+877.535555 [1130] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+877.632987 [ 320] generic_netmap_register   Emulated adapter for bce1 activated
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+GEOM_MIRROR: Device OPNsense: rebuilding provider ada0 finished.
+wg0: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+vlan6: changing name to 'bce2_vlan5'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce1
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce1
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce1
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce1
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce0: link state changed to DOWN
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x01030011
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce0: link state changed to UP
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x01030014
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+bce0: link state changed to DOWN
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x01030017
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce0: link state changed to UP
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x0103001A
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce0: link state changed to DOWN
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x0103001D
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2
+bce0: link state changed to UP
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x01030020
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2_vlan10
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2_vlan20
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2_vlan10
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2_vlan10
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2_vlan20
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2_vlan20
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2_vlan10
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2_vlan20
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2
+bce0: link state changed to DOWN
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x01030023
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce0: link state changed to UP
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x01030026
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x01030029
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x0103002C
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2
+bce0: /usr/src/sys/dev/bce/if_bce.c(3996): Firmware synchronization timeout! msg_data = 0x0103002F
+bce0: /usr/src/sys/dev/bce/if_bce.c(7111): Block initialization failed!
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bce2
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

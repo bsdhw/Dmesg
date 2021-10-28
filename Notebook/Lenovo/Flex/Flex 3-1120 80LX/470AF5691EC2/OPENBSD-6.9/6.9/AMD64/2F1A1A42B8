@@ -1,0 +1,950 @@
+OpenBSD 6.9 (RAMDISK_CD) #456: Mon Apr 19 10:47:37 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 4156170240 (3963MB)
+avail mem = 4026187776 (3839MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xb8937000 (55 entries)
+bios0: vendor LENOVO version "C0CN31WW" date 07/30/2015
+bios0: LENOVO 80LX
+acpi0 at bios0: ACPI 5.0
+acpi0: tables DSDT FACP UEFI MSDM UEFI HPET APIC MCFG SSDT SSDT SSDT SSDT SSDT SLIC SSDT FPDT BGRT
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2167.07 MHz, 06-37-08
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,SENSOR,ARAT,MELTDOWN
+cpu0: 1MB 64b/line 16-way L2 cache
+cpu0: apic clock running at 83MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 87 pins, remapped
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiec0 at acpi0
+acpicmos0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+"PNP0C0A" at acpi0 not configured
+"CIND0C60" at acpi0 not configured
+"VPC2004" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"ACPI0003" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"DMA0F28" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+bytgpio0 at acpi0 GPO0 uid 1 addr 0xfed0c000/0x1000 irq 49, 102 pins
+bytgpio1 at acpi0 GPO1 uid 2 addr 0xfed0d000/0x1000 irq 48, 28 pins
+bytgpio2 at acpi0 GPO2 uid 3 addr 0xfed0e000/0x1000 irq 50, 44 pins
+"INTL9C60" at acpi0 not configured
+"BCM2E1A" at acpi0 not configured
+"BCM4752" at acpi0 not configured
+dwiic0 at acpi0 I2C3 addr 0xd0905000/0x1000 irq 34
+iic0 at dwiic0
+dwiic1 at acpi0 I2C4 addr 0xd0907000/0x1000 irq 35
+iic1 at dwiic1
+"DUAL250E" at iic1 addr 0x19 not configured
+"SMO91D0" at acpi0 not configured
+dwiic2 at acpi0 I2C6 addr 0xd0909000/0x1000 irq 37
+iic2 at dwiic2
+ihidev0 at iic2 addr 0x4a gpio 26, vendor 0x3eb product 0x8c3c, ATML1000
+ihidev0: 6 report ids
+hid at ihidev0 reportid 1 not configured
+hid at ihidev0 reportid 2 not configured
+hid at ihidev0 reportid 5 not configured
+hid at ihidev0 reportid 6 not configured
+"INT33BD" at acpi0 not configured
+"INT3401" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+cpu0: using Silvermont MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Bay Trail Host" rev 0x0e
+"Intel Bay Trail Video" rev 0x0e at pci0 dev 2 function 0 not configured
+ahci0 at pci0 dev 19 function 0 "Intel Bay Trail AHCI" rev 0x0e: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, WDC WD5000LPCX-2, 02.0> naa.50014ee6b0346cc4
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+xhci0 at pci0 dev 20 function 0 "Intel Bay Trail xHCI" rev 0x0e: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel Bay Trail TXE" rev 0x0e at pci0 dev 26 function 0 not configured
+"Intel Bay Trail HD Audio" rev 0x0e at pci0 dev 27 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 28 function 1 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci2 at ppb1 bus 2
+iwm0 at pci2 dev 0 function 0 "Intel AC 3160" rev 0x93, msi
+"Intel Bay Trail LPC" rev 0x0e at pci0 dev 31 function 0 not configured
+"Intel Bay Trail SMBus" rev 0x0e at pci0 dev 31 function 3 not configured
+isa0 at mainbus0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+efifb0 at mainbus0: 1366x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+"150323010590 Lenovo EasyCamera" rev 2.00/12.31 addr 2 at uhub0 port 3 not configured
+uhub1 at uhub0 port 4 configuration 1 interface 0 "vendor 0x0424 product 0x2514" rev 2.00/8.18 addr 3
+"Generic USB2.0-CRW" rev 2.00/39.60 addr 4 at uhub1 port 2 not configured
+umass0 at uhub1 port 3 configuration 1 interface 0 "SanDisk Cruzer Glide" rev 2.00/1.00 addr 5
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <SanDisk, Cruzer Glide, 1.00> removable serial....
+sd1: 29952MB, 512 bytes/sector, 61341696 sectors
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+iwm0: could not read firmware iwm-3160-17 (error 2)
+iwm0: failed to load init firmware
+syncing disks...
+OpenBSD 6.9 (RAMDISK_CD) #456: Mon Apr 19 10:47:37 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 4156170240 (3963MB)
+avail mem = 4026187776 (3839MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xb8937000 (55 entries)
+bios0: vendor LENOVO version "C0CN31WW" date 07/30/2015
+bios0: LENOVO 80LX
+acpi0 at bios0: ACPI 5.0
+acpi0: tables DSDT FACP UEFI MSDM UEFI HPET APIC MCFG SSDT SSDT SSDT SSDT SSDT SLIC SSDT FPDT BGRT
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2167.07 MHz, 06-37-08
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,SENSOR,ARAT,MELTDOWN
+cpu0: 1MB 64b/line 16-way L2 cache
+cpu0: apic clock running at 83MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 87 pins, remapped
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiec0 at acpi0
+acpicmos0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+"PNP0C0A" at acpi0 not configured
+"CIND0C60" at acpi0 not configured
+"VPC2004" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"ACPI0003" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"DMA0F28" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+bytgpio0 at acpi0 GPO0 uid 1 addr 0xfed0c000/0x1000 irq 49, 102 pins
+bytgpio1 at acpi0 GPO1 uid 2 addr 0xfed0d000/0x1000 irq 48, 28 pins
+bytgpio2 at acpi0 GPO2 uid 3 addr 0xfed0e000/0x1000 irq 50, 44 pins
+"INTL9C60" at acpi0 not configured
+"BCM2E1A" at acpi0 not configured
+"BCM4752" at acpi0 not configured
+dwiic0 at acpi0 I2C3 addr 0xd0905000/0x1000 irq 34
+iic0 at dwiic0
+dwiic1 at acpi0 I2C4 addr 0xd0907000/0x1000 irq 35
+iic1 at dwiic1
+"DUAL250E" at iic1 addr 0x19 not configured
+"SMO91D0" at acpi0 not configured
+dwiic2 at acpi0 I2C6 addr 0xd0909000/0x1000 irq 37
+iic2 at dwiic2
+ihidev0 at iic2 addr 0x4a gpio 26, vendor 0x3eb product 0x8c3c, ATML1000
+ihidev0: 6 report ids
+hid at ihidev0 reportid 1 not configured
+hid at ihidev0 reportid 2 not configured
+hid at ihidev0 reportid 5 not configured
+hid at ihidev0 reportid 6 not configured
+"INT33BD" at acpi0 not configured
+"INT3401" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+cpu0: using Silvermont MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Bay Trail Host" rev 0x0e
+"Intel Bay Trail Video" rev 0x0e at pci0 dev 2 function 0 not configured
+ahci0 at pci0 dev 19 function 0 "Intel Bay Trail AHCI" rev 0x0e: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, WDC WD5000LPCX-2, 02.0> naa.50014ee6b0346cc4
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+xhci0 at pci0 dev 20 function 0 "Intel Bay Trail xHCI" rev 0x0e: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel Bay Trail TXE" rev 0x0e at pci0 dev 26 function 0 not configured
+"Intel Bay Trail HD Audio" rev 0x0e at pci0 dev 27 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 28 function 1 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci2 at ppb1 bus 2
+iwm0 at pci2 dev 0 function 0 "Intel AC 3160" rev 0x93, msi
+"Intel Bay Trail LPC" rev 0x0e at pci0 dev 31 function 0 not configured
+"Intel Bay Trail SMBus" rev 0x0e at pci0 dev 31 function 3 not configured
+isa0 at mainbus0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+efifb0 at mainbus0: 1366x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+"150323010590 Lenovo EasyCamera" rev 2.00/12.31 addr 2 at uhub0 port 3 not configured
+uhub1 at uhub0 port 4 configuration 1 interface 0 "vendor 0x0424 product 0x2514" rev 2.00/8.18 addr 3
+"Generic USB2.0-CRW" rev 2.00/39.60 addr 4 at uhub1 port 2 not configured
+umass0 at uhub1 port 3 configuration 1 interface 0 "SanDisk Cruzer Glide" rev 2.00/1.00 addr 5
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <SanDisk, Cruzer Glide, 1.00> removable serial....
+sd1: 29952MB, 512 bytes/sector, 61341696 sectors
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+iwm0: could not read firmware iwm-3160-17 (error 2)
+iwm0: failed to load init firmware
+syncing disks...
+OpenBSD 6.9 (GENERIC.MP) #473: Mon Apr 19 10:40:28 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4156170240 (3963MB)
+avail mem = 4014829568 (3828MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xb8937000 (55 entries)
+bios0: vendor LENOVO version "C0CN31WW" date 07/30/2015
+bios0: LENOVO 80LX
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI MSDM UEFI HPET APIC MCFG SSDT SSDT SSDT SSDT SSDT SLIC SSDT FPDT BGRT
+acpi0: wakeup devices XHC1(S3) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) PWRB(S4) BRCM(S0)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2167.06 MHz, 06-37-08
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,SENSOR,ARAT,MELTDOWN
+cpu0: 1MB 64b/line 16-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 83MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2166.68 MHz, 06-37-08
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,SENSOR,ARAT,MELTDOWN
+cpu1: 1MB 64b/line 16-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 87 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiec0 at acpi0
+acpicmos0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpibat0 at acpi0: BAT1 model "L14S2P21" serial ... type LiIon               oem "SANYO"
+"CIND0C60" at acpi0 not configured
+"VPC2004" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: LID_
+"DMA0F28" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+bytgpio0 at acpi0 GPO0 uid 1 addr 0xfed0c000/0x1000 irq 49, 102 pins
+bytgpio1 at acpi0 GPO1 uid 2 addr 0xfed0d000/0x1000 irq 48, 28 pins
+bytgpio2 at acpi0 GPO2 uid 3 addr 0xfed0e000/0x1000 irq 50, 44 pins
+"INTL9C60" at acpi0 not configured
+"BCM2E1A" at acpi0 not configured
+"BCM4752" at acpi0 not configured
+dwiic0 at acpi0 I2C3 addr 0xd0905000/0x1000 irq 34
+iic0 at dwiic0
+dwiic1 at acpi0 I2C4 addr 0xd0907000/0x1000 irq 35
+iic1 at dwiic1
+"DUAL250E" at iic1 addr 0x19 not configured
+"SMO91D0" at acpi0 not configured
+dwiic2 at acpi0 I2C6 addr 0xd0909000/0x1000 irq 37
+iic2 at dwiic2
+ihidev0 at iic2 addr 0x4a gpio 26, vendor 0x3eb product 0x8c3c, ATML1000
+ihidev0: 6 report ids
+ims0 at ihidev0 reportid 1: 1 button, tip
+wsmouse0 at ims0 mux 0
+hid at ihidev0 reportid 2 not configured
+hid at ihidev0 reportid 5 not configured
+hid at ihidev0 reportid 6 not configured
+"INT33BD" at acpi0 not configured
+"INT3401" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PLPE
+acpipwrres1 at acpi0: PLPE
+acpipwrres2 at acpi0: USBC, resource for OTG1, EHC1
+acpipwrres3 at acpi0: CLK0
+acpipwrres4 at acpi0: CLK1
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using Silvermont MDS workaround
+cpu0: Enhanced SpeedStep 2167 MHz: speeds: 2159, 2158, 1992, 1826, 1660, 1494, 1328, 1162, 996, 830, 664, 498 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Bay Trail Host" rev 0x0e
+inteldrm0 at pci0 dev 2 function 0 "Intel Bay Trail Video" rev 0x0e
+drm0 at inteldrm0
+inteldrm0: msi, VALLEYVIEW, gen 7
+ahci0 at pci0 dev 19 function 0 "Intel Bay Trail AHCI" rev 0x0e: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD5000LPCX-2, 02.0> naa.50014ee6b0346cc4
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+xhci0 at pci0 dev 20 function 0 "Intel Bay Trail xHCI" rev 0x0e: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel Bay Trail TXE" rev 0x0e at pci0 dev 26 function 0 not configured
+azalia0 at pci0 dev 27 function 0 "Intel Bay Trail HD Audio" rev 0x0e: msi
+azalia0: codecs: Realtek ALC236, Intel/0x2882, using Realtek ALC236
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 28 function 1 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci2 at ppb1 bus 2
+iwm0 at pci2 dev 0 function 0 "Intel AC 3160" rev 0x93, msi
+pcib0 at pci0 dev 31 function 0 "Intel Bay Trail LPC" rev 0x0e
+ichiic0 at pci0 dev 31 function 3 "Intel Bay Trail SMBus" rev 0x0e: apic 2 int 18
+iic3 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse1 at pms0 mux 0
+pms0: Elantech Clickpad, version 4, firmware 0x595f01
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+efifb at mainbus0 not configured
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "150323010590 Lenovo EasyCamera" rev 2.00/12.31 addr 2
+video0 at uvideo0
+uhub1 at uhub0 port 4 configuration 1 interface 0 "Standard Microsystems product 0x2514" rev 2.00/8.18 addr 3
+ugen0 at uhub1 port 2 "Generic USB2.0-CRW" rev 2.00/39.60 addr 4
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (650d079c289d7bbb.a) swap on sd0b dump on sd0b
+inteldrm0: 1366x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: could not read firmware iwm-3160-17 (error 2)
+iwm0: failed to load init firmware
+iwm0: hw rev 0x160, fw ver 17.3216344376.0, address XXX
+syncing disks... done
+rebooting...
+OpenBSD 6.9 (GENERIC.MP) #473: Mon Apr 19 10:40:28 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4156170240 (3963MB)
+avail mem = 4014833664 (3828MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xb8937000 (55 entries)
+bios0: vendor LENOVO version "C0CN31WW" date 07/30/2015
+bios0: LENOVO 80LX
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI MSDM UEFI HPET APIC MCFG SSDT SSDT SSDT SSDT SSDT SLIC SSDT FPDT BGRT
+acpi0: wakeup devices XHC1(S3) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) PWRB(S4) BRCM(S0)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2167.07 MHz, 06-37-08
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,SENSOR,ARAT,MELTDOWN
+cpu0: 1MB 64b/line 16-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 83MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2166.68 MHz, 06-37-08
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,SENSOR,ARAT,MELTDOWN
+cpu1: 1MB 64b/line 16-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 87 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiec0 at acpi0
+acpicmos0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpibat0 at acpi0: BAT1 model "L14S2P21" serial ... type LiIon               oem "SANYO"
+"CIND0C60" at acpi0 not configured
+"VPC2004" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: LID_
+"DMA0F28" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+bytgpio0 at acpi0 GPO0 uid 1 addr 0xfed0c000/0x1000 irq 49, 102 pins
+bytgpio1 at acpi0 GPO1 uid 2 addr 0xfed0d000/0x1000 irq 48, 28 pins
+bytgpio2 at acpi0 GPO2 uid 3 addr 0xfed0e000/0x1000 irq 50, 44 pins
+"INTL9C60" at acpi0 not configured
+"BCM2E1A" at acpi0 not configured
+"BCM4752" at acpi0 not configured
+dwiic0 at acpi0 I2C3 addr 0xd0905000/0x1000 irq 34
+iic0 at dwiic0
+dwiic1 at acpi0 I2C4 addr 0xd0907000/0x1000 irq 35
+iic1 at dwiic1
+"DUAL250E" at iic1 addr 0x19 not configured
+"SMO91D0" at acpi0 not configured
+dwiic2 at acpi0 I2C6 addr 0xd0909000/0x1000 irq 37
+iic2 at dwiic2
+ihidev0 at iic2 addr 0x4a gpio 26, vendor 0x3eb product 0x8c3c, ATML1000
+ihidev0: 6 report ids
+ims0 at ihidev0 reportid 1: 1 button, tip
+wsmouse0 at ims0 mux 0
+hid at ihidev0 reportid 2 not configured
+hid at ihidev0 reportid 5 not configured
+hid at ihidev0 reportid 6 not configured
+"INT33BD" at acpi0 not configured
+"INT3401" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PLPE
+acpipwrres1 at acpi0: PLPE
+acpipwrres2 at acpi0: USBC, resource for OTG1, EHC1
+acpipwrres3 at acpi0: CLK0
+acpipwrres4 at acpi0: CLK1
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using VERW MDS workaround
+cpu0: Enhanced SpeedStep 2167 MHz: speeds: 2159, 2158, 1992, 1826, 1660, 1494, 1328, 1162, 996, 830, 664, 498 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Bay Trail Host" rev 0x0e
+inteldrm0 at pci0 dev 2 function 0 "Intel Bay Trail Video" rev 0x0e
+drm0 at inteldrm0
+inteldrm0: msi, VALLEYVIEW, gen 7
+ahci0 at pci0 dev 19 function 0 "Intel Bay Trail AHCI" rev 0x0e: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD5000LPCX-2, 02.0> naa.50014ee6b0346cc4
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+xhci0 at pci0 dev 20 function 0 "Intel Bay Trail xHCI" rev 0x0e: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel Bay Trail TXE" rev 0x0e at pci0 dev 26 function 0 not configured
+azalia0 at pci0 dev 27 function 0 "Intel Bay Trail HD Audio" rev 0x0e: msi
+azalia0: codecs: Realtek ALC236, Intel/0x2882, using Realtek ALC236
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 28 function 1 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci2 at ppb1 bus 2
+iwm0 at pci2 dev 0 function 0 "Intel AC 3160" rev 0x93, msi
+pcib0 at pci0 dev 31 function 0 "Intel Bay Trail LPC" rev 0x0e
+ichiic0 at pci0 dev 31 function 3 "Intel Bay Trail SMBus" rev 0x0e: apic 2 int 18
+iic3 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse1 at pms0 mux 0
+pms0: Elantech Clickpad, version 4, firmware 0x595f01
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+efifb at mainbus0 not configured
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "150323010590 Lenovo EasyCamera" rev 2.00/12.31 addr 2
+video0 at uvideo0
+uhub1 at uhub0 port 4 configuration 1 interface 0 "Standard Microsystems product 0x2514" rev 2.00/8.18 addr 3
+ugen0 at uhub1 port 2 "Generic USB2.0-CRW" rev 2.00/39.60 addr 4
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (650d079c289d7bbb.a) swap on sd0b dump on sd0b
+inteldrm0: 1366x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x160, fw ver 17.3216344376.0, address XXX
+syncing disks... done
+rebooting...
+OpenBSD 6.9 (GENERIC.MP) #4: Tue Aug 10 08:12:23 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4156170240 (3963MB)
+avail mem = 4014833664 (3828MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xb8937000 (55 entries)
+bios0: vendor LENOVO version "C0CN31WW" date 07/30/2015
+bios0: LENOVO 80LX
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI MSDM UEFI HPET APIC MCFG SSDT SSDT SSDT SSDT SSDT SLIC SSDT FPDT BGRT
+acpi0: wakeup devices XHC1(S3) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) PWRB(S4) BRCM(S0)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2167.07 MHz, 06-37-08
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,SENSOR,ARAT,MELTDOWN
+cpu0: 1MB 64b/line 16-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 83MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2166.69 MHz, 06-37-08
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,SENSOR,ARAT,MELTDOWN
+cpu1: 1MB 64b/line 16-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 87 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiec0 at acpi0
+acpicmos0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpibat0 at acpi0: BAT1 model "L14S2P21" serial ... type LiIon               oem "SANYO"
+"CIND0C60" at acpi0 not configured
+"VPC2004" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpiac0 at acpi0: AC unit offline
+acpibtn0 at acpi0: LID_
+"DMA0F28" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+bytgpio0 at acpi0 GPO0 uid 1 addr 0xfed0c000/0x1000 irq 49, 102 pins
+bytgpio1 at acpi0 GPO1 uid 2 addr 0xfed0d000/0x1000 irq 48, 28 pins
+bytgpio2 at acpi0 GPO2 uid 3 addr 0xfed0e000/0x1000 irq 50, 44 pins
+"INTL9C60" at acpi0 not configured
+"BCM2E1A" at acpi0 not configured
+"BCM4752" at acpi0 not configured
+dwiic0 at acpi0 I2C3 addr 0xd0905000/0x1000 irq 34
+iic0 at dwiic0
+dwiic1 at acpi0 I2C4 addr 0xd0907000/0x1000 irq 35
+iic1 at dwiic1
+"DUAL250E" at iic1 addr 0x19 not configured
+"SMO91D0" at acpi0 not configured
+dwiic2 at acpi0 I2C6 addr 0xd0909000/0x1000 irq 37
+iic2 at dwiic2
+ihidev0 at iic2 addr 0x4a gpio 26, vendor 0x3eb product 0x8c3c, ATML1000
+ihidev0: 6 report ids
+ims0 at ihidev0 reportid 1: 1 button, tip
+wsmouse0 at ims0 mux 0
+hid at ihidev0 reportid 2 not configured
+hid at ihidev0 reportid 5 not configured
+hid at ihidev0 reportid 6 not configured
+"INT33BD" at acpi0 not configured
+"INT3401" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PLPE
+acpipwrres1 at acpi0: PLPE
+acpipwrres2 at acpi0: USBC, resource for OTG1, EHC1
+acpipwrres3 at acpi0: CLK0
+acpipwrres4 at acpi0: CLK1
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using VERW MDS workaround
+cpu0: Enhanced SpeedStep 2167 MHz: speeds: 2159, 2158, 1992, 1826, 1660, 1494, 1328, 1162, 996, 830, 664, 498 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Bay Trail Host" rev 0x0e
+inteldrm0 at pci0 dev 2 function 0 "Intel Bay Trail Video" rev 0x0e
+drm0 at inteldrm0
+inteldrm0: msi, VALLEYVIEW, gen 7
+ahci0 at pci0 dev 19 function 0 "Intel Bay Trail AHCI" rev 0x0e: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD5000LPCX-2, 02.0> naa.50014ee6b0346cc4
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+xhci0 at pci0 dev 20 function 0 "Intel Bay Trail xHCI" rev 0x0e: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel Bay Trail TXE" rev 0x0e at pci0 dev 26 function 0 not configured
+azalia0 at pci0 dev 27 function 0 "Intel Bay Trail HD Audio" rev 0x0e: msi
+azalia0: codecs: Realtek ALC236, Intel/0x2882, using Realtek ALC236
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 28 function 1 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci2 at ppb1 bus 2
+iwm0 at pci2 dev 0 function 0 "Intel AC 3160" rev 0x93, msi
+pcib0 at pci0 dev 31 function 0 "Intel Bay Trail LPC" rev 0x0e
+ichiic0 at pci0 dev 31 function 3 "Intel Bay Trail SMBus" rev 0x0e: apic 2 int 18
+iic3 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse1 at pms0 mux 0
+pms0: Elantech Clickpad, version 4, firmware 0x595f01
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+efifb at mainbus0 not configured
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "150323010590 Lenovo EasyCamera" rev 2.00/12.31 addr 2
+video0 at uvideo0
+uhub1 at uhub0 port 4 configuration 1 interface 0 "Standard Microsystems product 0x2514" rev 2.00/8.18 addr 3
+ugen0 at uhub1 port 2 "Generic USB2.0-CRW" rev 2.00/39.60 addr 4
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (650d079c289d7bbb.a) swap on sd0b dump on sd0b
+inteldrm0: 1366x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x160, fw ver 17.3216344376.0, address XXX
+iwm0: fatal firmware error
+iwm0: could not remove MAC context (error 35)
+iwm0: fatal firmware error
+iwm0: could not remove MAC context (error 35)
+video0 detached
+uvideo0 detached
+ugen0 detached
+uhub1 detached
+uhub0 detached
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "150323010590 Lenovo EasyCamera" rev 2.00/12.31 addr 2
+video0 at uvideo0
+uhub1 at uhub0 port 4 configuration 1 interface 0 "Standard Microsystems product 0x2514" rev 2.00/8.18 addr 3
+ugen0 at uhub1 port 2 "Generic USB2.0-CRW" rev 2.00/39.60 addr 4
+iwm0: fatal firmware error
+iwm0: could not remove MAC context (error 35)
+syncing disks... done
+rebooting...
+OpenBSD 6.9 (GENERIC.MP) #4: Tue Aug 10 08:12:23 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4156170240 (3963MB)
+avail mem = 4014821376 (3828MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xb8937000 (55 entries)
+bios0: vendor LENOVO version "C0CN31WW" date 07/30/2015
+bios0: LENOVO 80LX
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI MSDM UEFI HPET APIC MCFG SSDT SSDT SSDT SSDT SSDT SLIC SSDT FPDT BGRT
+acpi0: wakeup devices XHC1(S3) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) PWRB(S4) BRCM(S0)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2167.06 MHz, 06-37-08
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,SENSOR,ARAT,MELTDOWN
+cpu0: 1MB 64b/line 16-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 83MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2166.69 MHz, 06-37-08
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,SENSOR,ARAT,MELTDOWN
+cpu1: 1MB 64b/line 16-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 87 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiec0 at acpi0
+acpicmos0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpibat0 at acpi0: BAT1 model "L14S2P21" serial ... type LiIon               oem "SANYO"
+"CIND0C60" at acpi0 not configured
+"VPC2004" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpiac0 at acpi0: AC unit offline
+acpibtn0 at acpi0: LID_
+"DMA0F28" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+bytgpio0 at acpi0 GPO0 uid 1 addr 0xfed0c000/0x1000 irq 49, 102 pins
+bytgpio1 at acpi0 GPO1 uid 2 addr 0xfed0d000/0x1000 irq 48, 28 pins
+bytgpio2 at acpi0 GPO2 uid 3 addr 0xfed0e000/0x1000 irq 50, 44 pins
+"INTL9C60" at acpi0 not configured
+"BCM2E1A" at acpi0 not configured
+"BCM4752" at acpi0 not configured
+dwiic0 at acpi0 I2C3 addr 0xd0905000/0x1000 irq 34
+iic0 at dwiic0
+dwiic1 at acpi0 I2C4 addr 0xd0907000/0x1000 irq 35
+iic1 at dwiic1
+"DUAL250E" at iic1 addr 0x19 not configured
+"SMO91D0" at acpi0 not configured
+dwiic2 at acpi0 I2C6 addr 0xd0909000/0x1000 irq 37
+iic2 at dwiic2
+ihidev0 at iic2 addr 0x4a gpio 26, vendor 0x3eb product 0x8c3c, ATML1000
+ihidev0: 6 report ids
+ims0 at ihidev0 reportid 1: 1 button, tip
+wsmouse0 at ims0 mux 0
+hid at ihidev0 reportid 2 not configured
+hid at ihidev0 reportid 5 not configured
+hid at ihidev0 reportid 6 not configured
+"INT33BD" at acpi0 not configured
+"INT3401" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PLPE
+acpipwrres1 at acpi0: PLPE
+acpipwrres2 at acpi0: USBC, resource for OTG1, EHC1
+acpipwrres3 at acpi0: CLK0
+acpipwrres4 at acpi0: CLK1
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using VERW MDS workaround
+cpu0: Enhanced SpeedStep 2167 MHz: speeds: 2159, 2158, 1992, 1826, 1660, 1494, 1328, 1162, 996, 830, 664, 498 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Bay Trail Host" rev 0x0e
+inteldrm0 at pci0 dev 2 function 0 "Intel Bay Trail Video" rev 0x0e
+drm0 at inteldrm0
+inteldrm0: msi, VALLEYVIEW, gen 7
+ahci0 at pci0 dev 19 function 0 "Intel Bay Trail AHCI" rev 0x0e: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD5000LPCX-2, 02.0> naa.50014ee6b0346cc4
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+xhci0 at pci0 dev 20 function 0 "Intel Bay Trail xHCI" rev 0x0e: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel Bay Trail TXE" rev 0x0e at pci0 dev 26 function 0 not configured
+azalia0 at pci0 dev 27 function 0 "Intel Bay Trail HD Audio" rev 0x0e: msi
+azalia0: codecs: Realtek ALC236, Intel/0x2882, using Realtek ALC236
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 28 function 1 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci2 at ppb1 bus 2
+iwm0 at pci2 dev 0 function 0 "Intel AC 3160" rev 0x93, msi
+pcib0 at pci0 dev 31 function 0 "Intel Bay Trail LPC" rev 0x0e
+ichiic0 at pci0 dev 31 function 3 "Intel Bay Trail SMBus" rev 0x0e: apic 2 int 18
+iic3 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse1 at pms0 mux 0
+pms0: Elantech Clickpad, version 4, firmware 0x595f01
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+efifb at mainbus0 not configured
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "150323010590 Lenovo EasyCamera" rev 2.00/12.31 addr 2
+video0 at uvideo0
+uhub1 at uhub0 port 4 configuration 1 interface 0 "Standard Microsystems product 0x2514" rev 2.00/8.18 addr 3
+ugen0 at uhub1 port 2 "Generic USB2.0-CRW" rev 2.00/39.60 addr 4
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (650d079c289d7bbb.a) swap on sd0b dump on sd0b
+inteldrm0: 1366x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x160, fw ver 17.3216344376.0, address XXX
+video0 detached
+uvideo0 detached
+ugen0 detached
+uhub1 detached
+uhub0 detached
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "150323010590 Lenovo EasyCamera" rev 2.00/12.31 addr 2
+video0 at uvideo0
+uhub1 at uhub0 port 4 configuration 1 interface 0 "Standard Microsystems product 0x2514" rev 2.00/8.18 addr 3
+ugen0 at uhub1 port 2 "Generic USB2.0-CRW" rev 2.00/39.60 addr 4
+syncing disks... done
+rebooting...
+OpenBSD 6.9 (GENERIC.MP) #4: Tue Aug 10 08:12:23 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4156170240 (3963MB)
+avail mem = 4014837760 (3828MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xb8937000 (55 entries)
+bios0: vendor LENOVO version "C0CN31WW" date 07/30/2015
+bios0: LENOVO 80LX
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI MSDM UEFI HPET APIC MCFG SSDT SSDT SSDT SSDT SSDT SLIC SSDT FPDT BGRT
+acpi0: wakeup devices XHC1(S3) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) PWRB(S4) BRCM(S0)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2167.07 MHz, 06-37-08
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,SENSOR,ARAT,MELTDOWN
+cpu0: 1MB 64b/line 16-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 83MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Celeron(R) CPU N2840 @ 2.16GHz, 2166.69 MHz, 06-37-08
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,MOVBE,POPCNT,DEADLINE,RDRAND,NXE,RDTSCP,LONG,LAHF,3DNOWP,PERF,ITSC,TSC_ADJUST,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,SENSOR,ARAT,MELTDOWN
+cpu1: 1MB 64b/line 16-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 87 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (RP01)
+acpiprt2 at acpi0: bus 2 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiec0 at acpi0
+acpicmos0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpibat0 at acpi0: BAT1 model "L14S2P21" serial ... type LiIon               oem "SANYO"
+"CIND0C60" at acpi0 not configured
+"VPC2004" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpiac0 at acpi0: AC unit offline
+acpibtn0 at acpi0: LID_
+"DMA0F28" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+bytgpio0 at acpi0 GPO0 uid 1 addr 0xfed0c000/0x1000 irq 49, 102 pins
+bytgpio1 at acpi0 GPO1 uid 2 addr 0xfed0d000/0x1000 irq 48, 28 pins
+bytgpio2 at acpi0 GPO2 uid 3 addr 0xfed0e000/0x1000 irq 50, 44 pins
+"INTL9C60" at acpi0 not configured
+"BCM2E1A" at acpi0 not configured
+"BCM4752" at acpi0 not configured
+dwiic0 at acpi0 I2C3 addr 0xd0905000/0x1000 irq 34
+iic0 at dwiic0
+dwiic1 at acpi0 I2C4 addr 0xd0907000/0x1000 irq 35
+iic1 at dwiic1
+"DUAL250E" at iic1 addr 0x19 not configured
+"SMO91D0" at acpi0 not configured
+dwiic2 at acpi0 I2C6 addr 0xd0909000/0x1000 irq 37
+iic2 at dwiic2
+ihidev0 at iic2 addr 0x4a gpio 26, vendor 0x3eb product 0x8c3c, ATML1000
+ihidev0: 6 report ids
+ims0 at ihidev0 reportid 1: 1 button, tip
+wsmouse0 at ims0 mux 0
+hid at ihidev0 reportid 2 not configured
+hid at ihidev0 reportid 5 not configured
+hid at ihidev0 reportid 6 not configured
+"INT33BD" at acpi0 not configured
+"INT3401" at acpi0 not configured
+"INT3400" at acpi0 not configured
+acpicpu0 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C2(10@500 mwait.1@0x51), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PLPE
+acpipwrres1 at acpi0: PLPE
+acpipwrres2 at acpi0: USBC, resource for OTG1, EHC1
+acpipwrres3 at acpi0: CLK0
+acpipwrres4 at acpi0: CLK1
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD02
+cpu0: using VERW MDS workaround
+cpu0: Enhanced SpeedStep 2167 MHz: speeds: 2159, 2158, 1992, 1826, 1660, 1494, 1328, 1162, 996, 830, 664, 498 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Bay Trail Host" rev 0x0e
+inteldrm0 at pci0 dev 2 function 0 "Intel Bay Trail Video" rev 0x0e
+drm0 at inteldrm0
+inteldrm0: msi, VALLEYVIEW, gen 7
+ahci0 at pci0 dev 19 function 0 "Intel Bay Trail AHCI" rev 0x0e: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD5000LPCX-2, 02.0> naa.50014ee6b0346cc4
+sd0: 476940MB, 512 bytes/sector, 976773168 sectors
+xhci0 at pci0 dev 20 function 0 "Intel Bay Trail xHCI" rev 0x0e: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel Bay Trail TXE" rev 0x0e at pci0 dev 26 function 0 not configured
+azalia0 at pci0 dev 27 function 0 "Intel Bay Trail HD Audio" rev 0x0e: msi
+azalia0: codecs: Realtek ALC236, Intel/0x2882, using Realtek ALC236
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 28 function 1 "Intel Bay Trail PCIE" rev 0x0e: msi
+pci2 at ppb1 bus 2
+iwm0 at pci2 dev 0 function 0 "Intel AC 3160" rev 0x93, msi
+pcib0 at pci0 dev 31 function 0 "Intel Bay Trail LPC" rev 0x0e
+ichiic0 at pci0 dev 31 function 3 "Intel Bay Trail SMBus" rev 0x0e: apic 2 int 18
+iic3 at ichiic0
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse1 at pms0 mux 0
+pms0: Elantech Clickpad, version 4, firmware 0x595f01
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+efifb at mainbus0 not configured
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "150323010590 Lenovo EasyCamera" rev 2.00/12.31 addr 2
+video0 at uvideo0
+uhub1 at uhub0 port 4 configuration 1 interface 0 "Standard Microsystems product 0x2514" rev 2.00/8.18 addr 3
+ugen0 at uhub1 port 2 "Generic USB2.0-CRW" rev 2.00/39.60 addr 4
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (650d079c289d7bbb.a) swap on sd0b dump on sd0b
+inteldrm0: 1366x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwm0: hw rev 0x160, fw ver 17.3216344376.0, address XXX

@@ -1,0 +1,107 @@
+OpenBSD 6.8 (GENERIC) #1: Tue Nov  3 09:05:20 MST 2020
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 2112569344 (2014MB)
+avail mem = 2057777152 (1962MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 09/05/05, BIOS32 rev. 0 @ 0xf0010, SMBIOS rev. 2.3 @ 0xf04b0 (67 entries)
+bios0: vendor American Megatrends Inc. version "1018.001" date 09/05/2005
+bios0: ASUSTeK Computer INC. P4P800-VM
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S1 S3 S4 S5
+acpi0: tables DSDT FACP APIC OEMB
+acpi0: wakeup devices P0P4(S4) MC97(S4) USB1(S4) USB2(S4) USB3(S4) USB4(S4) EUSB(S4) PS2K(S4) ILAN(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Pentium(R) 4 CPU 2.80GHz ("GenuineIntel" 686-class) 2.80 GHz, 0f-03-04
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,CNXT-ID,xTPR,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 132MHz
+cpu0: mwait min=64, max=64
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (P0P4)
+acpiprt2 at acpi0: bus -1 (P0P2)
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"PNPB02F" at acpi0 not configured
+"PNPB006" at acpi0 not configured
+acpibtn0 at acpi0: PWRB
+acpicpu0 at acpi0: C1(@1 halt!)
+bios0: ROM list: 0xc0000/0xa600
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82865G Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel 82865G Video" rev 0x02
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0xf0000000, size 0x8000000
+inteldrm0: apic 1 int 16, I865G, gen 2
+uhci0 at pci0 dev 29 function 0 "Intel 82801EB/ER USB" rev 0x02: apic 1 int 16
+uhci1 at pci0 dev 29 function 1 "Intel 82801EB/ER USB" rev 0x02: apic 1 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801EB/ER USB" rev 0x02: apic 1 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801EB/ER USB" rev 0x02: apic 1 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801EB/ER USB2" rev 0x02: apic 1 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb0 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xc2
+pci1 at ppb0 bus 1
+fxp0 at pci1 dev 8 function 0 "Intel PRO/100 VE" rev 0x02, i82562: apic 1 int 20, address XXX
+inphy0 at fxp0 phy 1: i82562ET 10/100 PHY, rev. 0
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801EB/ER LPC" rev 0x02
+pciide0 at pci0 dev 31 function 1 "Intel 82801EB/ER IDE" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using apic 1 int 18 for native-PCI interrupt
+pciide0: channel 0 disabled (no drives)
+pciide0: channel 1 disabled (no drives)
+pciide1 at pci0 dev 31 function 2 "Intel 82801EB SATA" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide1: using apic 1 int 18 for native-PCI interrupt
+wd0 at pciide1 channel 0 drive 0: <Hitachi HDS721010CLA332>
+wd0: 16-sector PIO, LBA48, 953869MB, 1953525168 sectors
+wd0(pciide1:0:0): using PIO mode 4, Ultra-DMA mode 6
+ichiic0 at pci0 dev 31 function 3 "Intel 82801EB/ER SMBus" rev 0x02: apic 1 int 17
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 512MB DDR SDRAM non-parity PC3200CL3.0
+spdmem1 at iic0 addr 0x51: 512MB DDR SDRAM non-parity PC3200CL3.0
+spdmem2 at iic0 addr 0x52: 512MB DDR SDRAM non-parity PC3200CL3.0
+spdmem3 at iic0 addr 0x53: 512MB DDR SDRAM non-parity PC3200CL3.0
+auich0 at pci0 dev 31 function 5 "Intel 82801EB/ER AC97" rev 0x02: apic 1 int 17, ICH5
+ac97: codec id 0x41445370 (Analog Devices AD1980)
+ac97: codec features headphone, 20 bit DAC, No 3D Stereo
+audio0 at auich0
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+mpu0 at isa0 port 0x300/2: generic MPU-401 compatible
+midi0 at mpu0: <MPU-401 MIDI UART>
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+wbsio0 at isa0 port 0x2e/2: W83627THF rev 0x84
+lm1 at wbsio0 port 0x290/8: W83627THF
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+sd0 at scsibus2 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd0: 953867MB, 512 bytes/sector, 1953520256 sectors
+root on sd0a (8ce40a2bf9500758.a) swap on sd0b dump on sd0b
+WARNING: clock gained 5 days
+WARNING: CHECK AND RESET THE DATE!
+inteldrm0: 1024x768, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

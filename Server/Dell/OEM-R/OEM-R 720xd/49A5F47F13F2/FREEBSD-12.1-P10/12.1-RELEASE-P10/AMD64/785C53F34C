@@ -1,0 +1,366 @@
+---<<BOOT>>---
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p10 GENERIC amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+CPU: Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz (2600.06-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306e4  Family=0x6  Model=0x3e  Stepping=4
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 68719476736 (65536 MB)
+avail memory = 66809049088 (63714 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELLOE DELLOSE>
+FreeBSD/SMP: Multiprocessor System Detected: 32 CPUs
+FreeBSD/SMP: 2 package(s) x 8 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic1: Changing APIC ID to 1
+ioapic2: Changing APIC ID to 2
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 32-55 on motherboard
+ioapic2 <Version 2.0> irqs 64-87 on motherboard
+Launching APs: 16 8 20 10 26 24 17 7 6 21 3 11 14 31 23 4 2 12 9 27 22 13 25 19 15 28 18 29 1 30 5
+Timecounter "TSC-low" frequency 1300027574 Hz quality 1000
+random: entropy device external interface
+kbd0 at kbdmux0
+000.000023 [4335] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8112f0f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELLOE DELLOSE> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 53 at device 1.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+bge0: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xd90a0000-0xd90affff,0xd90b0000-0xd90bffff,0xd90c0000-0xd90cffff irq 34 at device 0.0 numa-domain 0 on pci1
+bge0: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge0: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus0: <MII bus> numa-domain 0 on bge0
+brgphy0: <BCM5720C 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+bge1: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xd90d0000-0xd90dffff,0xd90e0000-0xd90effff,0xd90f0000-0xd90fffff irq 36 at device 0.1 numa-domain 0 on pci1
+bge1: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge1: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus1: <MII bus> numa-domain 0 on bge1
+brgphy1: <BCM5720C 1000BASE-T media interface> PHY 2 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge1: Using defaults for TSO: 65518/35/2048
+bge1: Ethernet address: ...
+pcib2: <ACPI PCI-PCI bridge> irq 53 at device 1.1 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+bge2: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xd91a0000-0xd91affff,0xd91b0000-0xd91bffff,0xd91c0000-0xd91cffff irq 35 at device 0.0 numa-domain 0 on pci2
+bge2: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge2: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus2: <MII bus> numa-domain 0 on bge2
+brgphy2: <BCM5720C 1000BASE-T media interface> PHY 1 on miibus2
+brgphy2:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge2: Using defaults for TSO: 65518/35/2048
+bge2: Ethernet address: ...
+bge3: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xd91d0000-0xd91dffff,0xd91e0000-0xd91effff,0xd91f0000-0xd91fffff irq 38 at device 0.1 numa-domain 0 on pci2
+bge3: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge3: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus3: <MII bus> numa-domain 0 on bge3
+brgphy3: <BCM5720C 1000BASE-T media interface> PHY 2 on miibus3
+brgphy3:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge3: Using defaults for TSO: 65518/35/2048
+bge3: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> irq 53 at device 2.0 numa-domain 0 on pci0
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 53 at device 2.2 numa-domain 0 on pci0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+AVAGO MegaRAID SAS FreeBSD mrsas driver version: XXX.XXX.XXX.XXX-fbsd
+mfi0: <Dell PERC H710P Mini (monolithics)> port 0xfc00-0xfcff mem 0xddffc000-0xddffffff,0xddf80000-0xddfbffff irq 42 at device 0.0 numa-domain 0 on pci4
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: FW MaxCmds = 1008, limiting to 128
+mfi0: MaxCmd = 1008, Drv MaxCmd = 128, MaxSgl = 70, state = 0xb73c03f0
+mfi0: 3597 (653858014s/0x0020/info) - Shutdown command received from host
+mfi0: 3598 (boot + 4s/0x0020/info) - Firmware initialization started (PCI ID 005b/1000/1f34/1028)
+mfi0: 3599 (boot + 4s/0x0020/info) - Firmware version 3.131.05-3415
+mfi0: 3600 (boot + 5s/0x0008/info) - Battery Present
+mfi0: 3601 (boot + 5s/0x0020/info) - Package version 21.3.0-0009
+mfi0: 3602 (boot + 5s/0x0020/info) - Board Revision A03
+mfi0: 3603 (boot + 6s/0x0008/info) - Battery temperature is normal
+mfi0: 3604 (boot + 6s/0x0008/info) - Current capacity of the battery is above threshold
+mfi0: 3605 (boot + 19s/0x0004/info) - Enclosure PD 20(c None/p1) communication restored
+pcib5: mfi0: 3606 (boot + 19s/0x0002/info) - Inserted: Encl PD 20
+<ACPI PCI-PCI bridge>mfi0:  irq 53 at device 3.0 numa-domain 0 on pci0
+pci5: 3607 (boot + 19s/0x0002/info) - Inserted: PD 20(c None/p1) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=5c82a020d655df00,0000000000000000
+mfi0: 3608 (boot + 19s/0x0002/info) - Inserted: PD 00(e0x20/s0)
+<ACPI PCI bus>mfi0:  numa-domain 0 on pcib5
+3609 (boot + 19s/0x0002/info) - Inserted: PD 00(e0x20/s0) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500000e110d078b2,0000000000000000
+mfi0: 3610 (boot + 19s/0x0002/WARN) - PD 00(e0x20/s0) is not a certified drive
+mfi0: 3611 (boot + 19s/0x0002/info) - Inserted: PD 01(e0x20/s1)
+mfi0: 3612 (boot + 19s/0x0002/info) - Inserted: PD 01(e0x20/s1) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500000e01e8e3942,0000000000000000
+mfi0: 3613 (boot + 19s/0x0002/WARN) - PD 01(e0x20/s1) is not a certified drive
+mfi0: 3614 (boot + 19s/0x0002/info) - Inserted: PD 02(e0x20/s2)
+mfi0: 3615 (boot + 19s/0x0002/info) - Inserted: PD 02(e0x20/s2) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000cca0387ea8f5,0000000000000000
+mfi0: 3616 (boot + 19s/0x0002/WARN) - PD 02(e0x20/s2) is not a certified drive
+mfi0: 3617 (boot + 19s/0x0002/info) - Inserted: PD 03(e0x20/s3)
+mfi0: 3618 (boot + 19s/0x0002/info) - Inserted: PD 03(e0x20/s3) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000cca03891a841,0000000000000000
+mfi0: 3619 (boot + 19s/0x0002/WARN) - PD 03(e0x20/s3) is not a certified drive
+mfi0: 3620 (boot + 19s/0x0002/info) - Inserted: PD 04(e0x20/s4)
+mfi0: 3621 (boot + 19s/0x0002/info) - Inserted: PD 04(e0x20/s4) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000cca038609c31,0000000000000000
+mfi0: 3622 (boot + 19s/0x0002/WARN) - PD 04(e0x20/s4) is not a certified drive
+mfi0: 3623 (boot + 19s/0x0002/info) - Inserted: PD 05(e0x20/s5)
+mfi0: 3624 (boot + 19s/0x0002/info) - Inserted: PD 05(e0x20/s5) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000cca0387e7d99,0000000000000000
+mfi0: 3625 (boot + 19s/0x0002/WARN) - PD 05(e0x20/s5) is not a certified drive
+mfi0: 3626 (boot + 19s/0x0002/info) - Inserted: PD 06(e0x20/s6)
+mfi0: pcib6: 3627 (boot + 19s/0x0002/info) - Inserted: PD 06(e0x20/s6) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000cca0387f1345,0000000000000000
+mfi0: 3628 (boot + 19s/0x0002/WARN) - PD 06(e0x20/s6) is not a certified drive
+mfi0: 3629 (boot + 19s/0x0002/info) - Inserted: PD 07(e0x20/s7)
+<PCI-PCI bridge>mfi0:  irq 16 at device 17.0 numa-domain 0 on pci0
+pci6: 3630 (boot + 19s/0x0002/info) - Inserted: PD 07(e0x20/s7) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000cca038537c35,0000000000000000
+mfi0: 3631 (boot + 19s/0x0002/WARN) - PD 07(e0x20/s7) is not a certified drive
+mfi0: 3632 (boot + 19s/0x0002/info) - Inserted: PD 0a(e0x20/s10)
+<PCI bus>mfi0:  numa-domain 0 on pcib6
+3633 (boot + 19s/0x0002/info) - Inserted: PD 0a(e0x20/s10) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b37789abe5,0000000000000000
+mfi0: 3634 (boot + 19s/0x0002/info) - Inserted: PD 0b(e0x20/s11)
+mfi0: 3635 (boot + 19s/0x0002/info) - Inserted: PD 0b(e0x20/s11) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b37789abe7,0000000000000000
+mfi0: 3636 (boot + 19s/0x0002/info) - Inserted: PD 21(e0x00/s0)
+mfi0: 3637 (boot + 19s/0x0002/info) - Inserted: PD 21(e0x00/s0) Info: enclPd=00, scsiType=7f, portMap=00, sasAddr=500056b37789abfd,0000000000000000
+mfi0: 3638 (boot + 39s/0x0001/info) - Background Initialization started on VD 02/2
+pci0: mfi0: 3640 (653858067s/0x0020/info) - Time established as 09/19/20 19:14:27; (40 seconds since power on)
+mfi0: 3641 (653858090s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 500000e110d078b2, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3642 (653858093s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 500000e01e8e3942, CDB: 12 01 dc 01 22 00, Sense: 5/24/0<simple comms> at device 22.0 (no driver attached)
+0
+mfi0: 3643 (653858095s/0x0002/info) - Unexpected sense: PD 02(e0x20/s2) Path 5000cca0387ea8f5, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3644 (653858097s/0x0002/info) - Unexpected sense: PD 03(e0x20/s3) Path 5000cca03891a841, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3645 (653858099s/0x0002/info) - Unexpected sense: PD 04(e0x20/s4) Path 5000cca038609c31, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3646 (653858101s/0x0002/info) - Unexpected sense: PD 05(e0x20/s5) Path 5000cca0387e7d99, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3647 (653858103s/0x0002/info) - Unexpected sense: PD 06(e0x20/s6) Path 5000cca0387f1345, CDB: 12 01 dc 01 22 00, Sense: 5/24/0pci0: 0
+mfi0: 3648 (653858105s/0x0002/info) - Unexpected sense: PD 07(e0x20/s7) Path 5000cca038537c35, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: <simple comms> at device 22.1 (no driver attached)
+3650 (653858114s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 500000e110d078b2, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3651 (653858114s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 500000e01e8e3942, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3652 (653858114s/0x0002/info) - Unexpected sense: PD 02(e0x20/s2) Path 5000cca0387ea8f5, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3653 (653858114s/0x0002/info) - Unexpected sense: PD 03(e0x20/s3) Path 5000cca03891a841, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3654 (653858114s/0x0002/info) - Unexpected sense: PD 04(e0x20/s4) Path 5000cca038609c31, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3655 (653858114s/0x0002/info) - Unexpected sense: PD 05(e0x20/s5) Path 5000cca0387e7d99, CDB: 12 01 dc 01 22 00, Sense: 5/24/0ehci0: 0
+mfi0: 3656 (653858114s/0x0002/info) - Unexpected sense: PD 06(e0x20/s6) Path 5000cca0387f1345, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+<Intel Patsburg USB 2.0 controller> mem 0xdf8fd000-0xdf8fd3ff irq 23 at device 26.0 numa-domain 0 on pci0
+mfi0: usbus0: 3657 (653858114s/0x0002/info) - Unexpected sense: PD 07(e0x20/s7) Path 5000cca038537c35, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 3658 (653858161s/0x0020/info) - Host driver is loaded and operational
+EHCI version 1.0
+usbus0 numa-domain 0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib7: <ACPI PCI-PCI bridge> at device 28.0 numa-domain 0 on pci0
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+pcib8: <ACPI PCI-PCI bridge> irq 19 at device 28.7 numa-domain 0 on pci0
+pci8: <ACPI PCI bus> numa-domain 0 on pcib8
+pcib9: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci8
+pci9: <PCI bus> numa-domain 0 on pcib9
+pcib10: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci9
+pci10: <PCI bus> numa-domain 0 on pcib10
+pcib11: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci10
+pci11: <PCI bus> numa-domain 0 on pcib11
+vgapci0: <VGA-compatible display> mem 0xd8000000-0xd8ffffff,0xdeffc000-0xdeffffff,0xde000000-0xde7fffff irq 19 at device 0.0 numa-domain 0 on pci11
+vgapci0: Boot video device
+pcib12: <PCI-PCI bridge> at device 1.0 numa-domain 0 on pci9
+pci12: <PCI bus> numa-domain 0 on pcib12
+ehci1: <Intel Patsburg USB 2.0 controller> mem 0xdf8fe000-0xdf8fe3ff irq 22 at device 29.0 numa-domain 0mfi0:  on pci0
+3659 (653858163s/0x0008/info) - Battery relearn pending: Battery is under charge
+usbus1: EHCI version 1.0
+usbus1 numa-domain 0 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib13: <PCI-PCI bridge> at device 30.0 numa-domain 0 on pci0
+pci13: <PCI bus> numa-domain 0 on pcib13
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+pcib14: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci14: <ACPI PCI bus> numa-domain 1 on pcib14
+pcib15: <ACPI PCI-PCI bridge> irq 85 at device 1.0 numa-domain 1 on pci14
+pci15: <ACPI PCI bus> numa-domain 1 on pcib15
+pcib16: <ACPI PCI-PCI bridge> irq 85 at device 2.0 numa-domain 1 on pci14
+pci16: <ACPI PCI bus> numa-domain 1 on pcib16
+pcib17: <ACPI PCI-PCI bridge> irq 85 at device 3.0 numa-domain 1 on pci14
+pci17: <ACPI PCI bus> numa-domain 1 on pcib17
+pcib18: <ACPI PCI-PCI bridge> irq 85 at device 3.2 numa-domain 1 on pci14
+pci18: <ACPI PCI bus> numa-domain 1 on pcib18
+pcib19: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci19: <ACPI PCI bus> numa-domain 0 on pcib19
+pci19: <dasp, performance counters> at device 14.1 (no driver attached)
+pci19: <dasp, performance counters> at device 19.1 (no driver attached)
+pci19: <dasp, performance counters> at device 19.5 (no driver attached)
+pcib20: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci20: <ACPI PCI bus> numa-domain 1 on pcib20
+pci20: <dasp, performance counters> at device 14.1 (no driver attached)
+pci20: <dasp, performance counters> at device 19.1 (no driver attached)
+pci20: <dasp, performance counters> at device 19.5 (no driver attached)
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8800-0xcffff,0xec000-0xeffff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+mfid0 numa-domain 0 on mfi0
+mfid0: 69376MB (142082048 sectors) RAID volume 'SYSTEM' is optimal
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+mfid1 numa-domain 0 on mfi0
+mfid1: 1715328MB (3512991744 sectors) RAID volume 'DATA' is optimal
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+mfid2 numa-domain 0 on mfi0
+mfid2: 3814912MB (7812939776 sectors) RAID volume 'DATA2' is optimal
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus1 usbus0
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 numa-domain 0 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 numa-domain 0 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus1 usbus0
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <vendor 0x0424 product 0x2512> at usbus0
+uhub4 numa-domain 0 on uhub2
+uhub4: <vendor 0x0424 product 0x2512, class 9/0, rev 2.00/b.b3, addr 3> on usbus0
+uhub4: MTT enabled
+uhub4: 1 port with 1 removable, self powered
+Root mount waiting for: usbus0
+ugen0.4: <no manufacturer Gadget USB HUB> at usbus0
+uhub5 numa-domain 0 on uhub2
+uhub5: <no manufacturer Gadget USB HUB, class 9/0, rev 2.00/0.00, addr 4> on usbus0
+Root mount waiting for: usbus0
+uhub5: 6 ports with 6 removable, self powered
+ugen0.5: <Avocent Keyboard/Mouse Function> at usbus0
+ukbd0 numa-domain 0 on uhub5
+ukbd0: <Keyboard> on usbus0
+kbd1 at ukbd0
+lo0: link state changed to UP
+bge0: link state changed to DOWN
+bge0: link state changed to UP
+ums0 numa-domain 0 on uhub5
+ums0: <Mouse> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+ums1 numa-domain 0 on uhub5
+ums1: <Mouse REL> on usbus0
+ums1: 3 buttons and [XYZ] coordinates ID=0
+mfi0: 3662 (653858228s/0x0008/info) - Battery relearn started
+mfi0: 3664 (653858293s/0x0008/info) - Battery relearn in progress
+ugen0.6: <BTC USB Multimedia Keyboard> at usbus0
+ukbd1 numa-domain 0 on uhub4
+ukbd1: <BTC USB Multimedia Keyboard, class 0/0, rev 1.10/1.00, addr 6> on usbus0
+kbd2 at ukbd1
+uhid0 numa-domain 0 on uhub4
+uhid0: <BTC USB Multimedia Keyboard, class 0/0, rev 1.10/1.00, addr 6> on usbus0
+ugen0.6: <BTC USB Multimedia Keyboard> at usbus0 (disconnected)
+ukbd1: at uhub4, port 1, addr 6 (disconnected)
+ukbd1: detached
+uhid0: at uhub4, port 1, addr 6 (disconnected)
+uhid0: detached
+mfi0: 3702 (653860373s/0x0008/info) - Battery is discharging
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bge0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on bge0
+mfi0: 3727 (653866808s/0x0008/info) - Battery relearn completed
+mfi0: 3728 (653866873s/0x0008/info) - Current capacity of the battery is above threshold
+mfi0: 3738 (653869343s/0x0008/info) - Battery started charging
+mfi0: 3752 (653872983s/0x0008/info) - Battery charge complete
+mfi0: 4036 (653969027s/0x0001/info) - Background Initialization completed on VD 02/2
+bge0: link state changed to DOWN
+bge0: link state changed to UP
+mfi0: 4037 (654374865s/0x0002/info) - Inserted: PD 08(e0x20/s8)
+mfi0: 4038 (654374865s/0x0002/info) - Inserted: PD 08(e0x20/s8) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b37789abe6,0000000000000000
+mfi0: 4039 (654374865s/0x0002/WARN) - PD 08(e0x20/s8) is not a certified drive
+mfi0: 4040 (654374881s/0x0002/info) - Inserted: PD 09(e0x20/s9)
+mfi0: 4041 (654374881s/0x0002/info) - Inserted: PD 09(e0x20/s9) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=500056b37789abe4,0000000000000000
+mfi0: 4042 (654374881s/0x0002/WARN) - PD 09(e0x20/s9) is not a certified drive
+ugen0.6: <BTC USB Multimedia Keyboard> at usbus0
+ukbd1 numa-domain 0 on uhub4
+ukbd1: <BTC USB Multimedia Keyboard, class 0/0, rev 1.10/1.00, addr 6> on usbus0
+kbd2 at ukbd1
+uhid0 numa-domain 0 on uhub4
+uhid0: <BTC USB Multimedia Keyboard, class 0/0, rev 1.10/1.00, addr 6> on usbus0
+mfi0: 4043 (654375051s/0x0002/info) - State change on PD 08(e0x20/s8) from UNCONFIGURED_GOOD(0) to ONLINE(18)
+mfi0: 4044 (654375051s/0x0002/info) - State change on PD 09(e0x20/s9) from UNCONFIGURED_GOOD(0) to ONLINE(18)
+mfi0: 4045 (654375051s/0x0001/info) - VD 03/3 is now OPTIMAL
+mfid3mfi0: 4046 (654375051s/0x0041/info) - Created VD 03/3
+ numa-domain 0 on mfi0
+mfid3: 1907200MB (3905945600 sectors) RAID volume (no label) is optimal
+mfi0: 4047 (654375051s/0x0001/info) - VD 03/3 is available
+mfi0: 4048 (654375227s/0x0001/info) - Background Initialization started on VD 03/3
+ugen0.6: <BTC USB Multimedia Keyboard> at usbus0 (disconnected)
+ukbd1: at uhub4, port 1, addr 6 (disconnected)
+ukbd1: detached
+uhid0: at uhub4, port 1, addr 6 (disconnected)
+uhid0: detached
+mfi0: 4428 (654381292s/0x0001/info) - Background Initialization completed on VD 03/3
+mfi0: 4429 (654391155s/0x0001/info) - VD 00/0 Properties updated to [ID=00,dcp=6d,ccp=0d,ap=0,dc=0,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4430 (654391156s/0x0001/info) - VD 00/0 Properties updated to [ID=00,dcp=6d,ccp=6d,ap=0,dc=2,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4431 (654391211s/0x0001/info) - VD 01/1 Properties updated to [ID=01,dcp=01,ccp=0d,ap=0,dc=0,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4432 (654391212s/0x0001/info) - VD 01/1 Properties updated to [ID=01,dcp=00,ccp=01,ap=0,dc=0,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4433 (654391212s/0x0001/info) - VD 01/1 Properties updated to [ID=01,dcp=00,ccp=00,ap=0,dc=2,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4434 (654391268s/0x0001/info) - VD 02/2 Properties updated to [ID=02,dcp=6d,ccp=0d,ap=0,dc=0,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4435 (654391268s/0x0001/info) - VD 02/2 Properties updated to [ID=02,dcp=61,ccp=6d,ap=0,dc=0,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4436 (654391268s/0x0001/info) - VD 02/2 Properties updated to [ID=02,dcp=61,ccp=61,ap=0,dc=2,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4437 (654391536s/0x0001/info) - VD 01/1 Properties updated to [ID=01,dcp=60,ccp=00,ap=0,dc=2,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4438 (654391604s/0x0001/info) - VD 02/2 Properties updated to [ID=02,dcp=6d,ccp=61,ap=0,dc=2,dbgi=0,S=0|0,dps=00,cps=fe]
+mfi0: 4439 (654391618s/0x0001/info) - VD 03/3 Properties updated to [ID=03,dcp=01,ccp=21,ap=0,dc=0,dbgi=0,S=0|1,dps=00,cps=fe]
+mfi0: 4440 (654391619s/0x0001/info) - VD 03/3 Properties updated to [ID=03,dcp=00,ccp=01,ap=0,dc=0,dbgi=0,S=0|1,dps=00,cps=fe]
+mfi0: 4441 (654391619s/0x0001/info) - VD 03/3 Properties updated to [ID=03,dcp=00,ccp=00,ap=0,dc=2,dbgi=0,S=0|1,dps=00,cps=fe]
+mfi0: 4442 (654404400s/0x0020/info) - Patrol Read started
+bge1: link state changed to DOWN
+bge1: link state changed to UP
+bge2: link state changed to DOWN
+bge2: link state changed to UP
+bge3: link state changed to DOWN
+mfi0: 4443 (654433202s/0x0020/info) - Patrol Read complete
+bge2: link state changed to DOWN
+bge2: link state changed to UP
+bge1: link state changed to DOWN
+bge1: link state changed to UP
+bge1: link state changed to DOWN
+bge1: link state changed to UP
+bge1: link state changed to DOWN
+bge1: link state changed to UP
+mfi0: 4444 (655009200s/0x0020/info) - Patrol Read started
+mfi0: 4445 (655038003s/0x0020/info) - Patrol Read complete
+mfi0: 4446 (655614000s/0x0020/info) - Patrol Read started
+mfi0: 4447 (655642797s/0x0020/info) - Patrol Read complete
+mfi0: 4448 (656218800s/0x0020/info) - Patrol Read started
+mfi0: 4449 (656247604s/0x0020/info) - Patrol Read complete
+mfi0: 4450 (656823600s/0x0020/info) - Patrol Read started
+mfi0: 4451 (656852401s/0x0020/info) - Patrol Read complete

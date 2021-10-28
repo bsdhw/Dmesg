@@ -1,0 +1,577 @@
+OpenBSD 6.8 (RAMDISK_CD) #94: Sun Oct  4 18:21:11 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 16035696640 (15292MB)
+avail mem = 15545683968 (14825MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.8 @ 0xe6890 (27 entries)
+bios0: vendor American Megatrends Inc. version "5.13" date 04/17/2018
+bios0: ECT One Computer AMD A10-7850K, 4
+acpi0 at bios0: ACPI 6.0
+acpi0: tables DSDT FACP APIC FPDT FIDT SSDT SSDT CRAT CDIT SSDT MCFG BHMB HPET UEFI TPM2 IVRS SSDT SSDT SSDT SSDT WSMT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: AMD Ryzen 3 2200G with Radeon Vega Graphics, 3494.05 MHz, 17-11-00
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA,IBPB,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 64KB 64b/line 4-way I-cache, 32KB 64b/line 8-way D-cache, 512KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: ITLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu0: DTLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=1.1, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 5 pa 0xfec00000, version 21, 24 pins
+ioapic1 at mainbus0: apid 6 pa 0xfec01000, version 21, 32 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 7 (GP17)
+acpiprt2 at acpi0: bus 8 (GP18)
+acpiprt3 at acpi0: bus -1 (GPP0)
+acpiprt4 at acpi0: bus 1 (GPP1)
+acpiprt5 at acpi0: bus -1 (GPP2)
+acpiprt6 at acpi0: bus -1 (GPP3)
+acpipci0 at acpi0 PCI0
+acpicmos0 at acpi0
+"PNP0C0C" at acpi0 not configured
+amdgpio0 at acpi0 GPIO uid 0 addr 0xfed81500/0x400 irq 7, 184 pins
+"MSFT0101" at acpi0 not configured
+"AMDIF030" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "AMD 17h/1xh Root Complex" rev 0x00
+"AMD 17h/1xh IOMMU" rev 0x00 at pci0 dev 0 function 2 not configured
+pchb1 at pci0 dev 1 function 0 "AMD 17h PCIE" rev 0x00
+ppb0 at pci0 dev 1 function 2 "AMD 17h/1xh PCIE" rev 0x00: msi
+pci1 at ppb0 bus 1
+xhci0 at pci1 dev 0 function 0 vendor "AMD", unknown product 0x43bc rev 0x02: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+ahci0 at pci1 dev 0 function 1 vendor "AMD", unknown product 0x43b8 rev 0x02: msi, AHCI 1.3.1
+ahci0: port busy after first PMP probe FIS
+ahci0: port busy after first PMP probe FIS
+ahci0: port 0: 6.0Gb/s
+ahci0: port busy after first PMP probe FIS
+ahci0: port busy after first PMP probe FIS
+ahci0: port 1: 6.0Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, CT240BX500SSD1, M6C> naa.0000000000000000
+sd0: 228936MB, 512 bytes/sector, 468862128 sectors, thin
+sd1 at scsibus0 targ 1 lun 0: <ATA, CT120BX500SSD1, M6C> naa.0000000000000000
+sd1: 114473MB, 512 bytes/sector, 234441648 sectors, thin
+ppb1 at pci1 dev 0 function 2 vendor "AMD", unknown product 0x43b3 rev 0x02
+pci2 at ppb1 bus 2
+ppb2 at pci2 dev 4 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci3 at ppb2 bus 3
+re0 at pci3 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb3 at pci2 dev 5 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci4 at ppb3 bus 4
+ppb4 at pci2 dev 6 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci5 at ppb4 bus 5
+ppb5 at pci2 dev 7 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci6 at ppb5 bus 6
+pchb2 at pci0 dev 8 function 0 "AMD 17h PCIE" rev 0x00
+ppb6 at pci0 dev 8 function 1 "AMD 17h/1xh PCIE" rev 0x00
+pci7 at ppb6 bus 7
+"ATI Radeon Vega" rev 0xc8 at pci7 dev 0 function 0 not configured
+"ATI Radeon Vega HD Audio" rev 0x00 at pci7 dev 0 function 1 not configured
+ccp0 at pci7 dev 0 function 2 "AMD 17h/1xh Crypto" rev 0x00
+xhci1 at pci7 dev 0 function 3 "AMD 17h/1xh xHCI" rev 0x00: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+xhci2 at pci7 dev 0 function 4 "AMD 17h/1xh xHCI" rev 0x00: msi, xHCI 1.10
+usb2 at xhci2: USB revision 3.0
+uhub2 at usb2 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+"AMD 17h/1xh HD Audio" rev 0x00 at pci7 dev 0 function 6 not configured
+ppb7 at pci0 dev 8 function 2 "AMD 17h/1xh PCIE" rev 0x00
+pci8 at ppb7 bus 8
+ahci1 at pci8 dev 0 function 0 "AMD FCH AHCI" rev 0x61: msi, AHCI 1.3.1
+scsibus1 at ahci1: 32 targets
+"AMD FCH SMBus" rev 0x61 at pci0 dev 20 function 0 not configured
+"AMD FCH LPC" rev 0x51 at pci0 dev 20 function 3 not configured
+pchb3 at pci0 dev 24 function 0 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb4 at pci0 dev 24 function 1 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb5 at pci0 dev 24 function 2 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb6 at pci0 dev 24 function 3 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb7 at pci0 dev 24 function 4 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb8 at pci0 dev 24 function 5 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb9 at pci0 dev 24 function 6 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb10 at pci0 dev 24 function 7 "AMD 17h/1xh Data Fabric" rev 0x00
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+umass0 at uhub0 port 5 configuration 1 interface 0 "General USB Flash Disk" rev 2.00/11.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd2 at scsibus2 targ 1 lun 0: <General, USB Flash Disk, 1100> removable serial....
+sd2: 7651MB, 512 bytes/sector, 15669248 sectors
+uhidev0 at uhub0 port 6 configuration 1 interface 0 "Cooler Master Technology Inc. MK750" rev 1.10/21.00 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub0 port 6 configuration 1 interface 1 "Cooler Master Technology Inc. MK750" rev 1.10/21.00 addr 3
+uhidev1: iclass 3/0
+uhid at uhidev1 not configured
+uhidev2 at uhub0 port 6 configuration 1 interface 2 "Cooler Master Technology Inc. MK750" rev 1.10/21.00 addr 3
+uhidev2: iclass 3/0, 4 report ids
+uhid at uhidev2 reportid 1 not configured
+uhid at uhidev2 reportid 2 not configured
+ukbd1 at uhidev2 reportid 4: no usable key codes array
+uhidev3 at uhub2 port 1 configuration 1 interface 0 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev3: iclass 3/1
+uhid at uhidev3 not configured
+uhidev4 at uhub2 port 1 configuration 1 interface 1 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev4: iclass 3/0, 5 report ids
+ukbd2 at uhidev4 reportid 1
+wskbd2 at ukbd2 mux 1
+wskbd2: connecting to wsdisplay0
+uhid at uhidev4 reportid 2 not configured
+uhid at uhidev4 reportid 3 not configured
+uhid at uhidev4 reportid 4 not configured
+uhid at uhidev4 reportid 5 not configured
+uhidev5 at uhub2 port 1 configuration 1 interface 2 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev5: iclass 3/1
+ukbd3 at uhidev5
+wskbd3 at ukbd3 mux 1
+wskbd3: connecting to wsdisplay0
+uhidev6 at uhub2 port 1 configuration 1 interface 3 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev6: iclass 3/0, 7 report ids
+uhid at uhidev6 reportid 1 not configured
+uhid at uhidev6 reportid 2 not configured
+uhid at uhidev6 reportid 3 not configured
+uhid at uhidev6 reportid 4 not configured
+uhid at uhidev6 reportid 5 not configured
+uhid at uhidev6 reportid 6 not configured
+uhid at uhidev6 reportid 7 not configured
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 16035696640 (15292MB)
+avail mem = 15534661632 (14815MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.8 @ 0xe6890 (27 entries)
+bios0: vendor American Megatrends Inc. version "5.13" date 04/17/2018
+bios0: ECT One Computer AMD A10-7850K, 4
+acpi0 at bios0: ACPI 6.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT SSDT SSDT CRAT CDIT SSDT MCFG BHMB HPET UEFI TPM2 IVRS SSDT SSDT SSDT SSDT WSMT
+acpi0: wakeup devices GP17(S4) XHC0(S4) XHC1(S4) GP18(S4) SIO1(S4) GPP0(S4) GPP1(S4) PTXH(S4) GPP2(S4) GPP3(S4)
+acpitimer0 at acpi0: 3579545 Hz, 32 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: AMD Ryzen 3 2200G with Radeon Vega Graphics, 3494.09 MHz, 17-11-00
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA,IBPB,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 64KB 64b/line 4-way I-cache, 32KB 64b/line 8-way D-cache, 512KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: ITLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu0: DTLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=1.1, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: AMD Ryzen 3 2200G with Radeon Vega Graphics, 3493.44 MHz, 17-11-00
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA,IBPB,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 64KB 64b/line 4-way I-cache, 32KB 64b/line 8-way D-cache, 512KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu1: ITLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu1: DTLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 2 (application processor)
+cpu2: AMD Ryzen 3 2200G with Radeon Vega Graphics, 3493.44 MHz, 17-11-00
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA,IBPB,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 64KB 64b/line 4-way I-cache, 32KB 64b/line 8-way D-cache, 512KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu2: ITLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu2: DTLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: AMD Ryzen 3 2200G with Radeon Vega Graphics, 3493.44 MHz, 17-11-00
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA,IBPB,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 64KB 64b/line 4-way I-cache, 32KB 64b/line 8-way D-cache, 512KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu3: ITLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu3: DTLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 5 pa 0xfec00000, version 21, 24 pins
+ioapic1 at mainbus0: apid 6 pa 0xfec01000, version 21, 32 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpihpet0 at acpi0: 14318180 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 7 (GP17)
+acpiprt2 at acpi0: bus 8 (GP18)
+acpiprt3 at acpi0: bus -1 (GPP0)
+acpiprt4 at acpi0: bus 1 (GPP1)
+acpiprt5 at acpi0: bus -1 (GPP2)
+acpiprt6 at acpi0: bus -1 (GPP3)
+acpipci0 at acpi0 PCI0
+acpicmos0 at acpi0
+acpibtn0 at acpi0: PWRB
+amdgpio0 at acpi0 GPIO uid 0 addr 0xfed81500/0x400 irq 7, 184 pins
+"MSFT0101" at acpi0 not configured
+"AMDIF030" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpicpu0 at acpi0: C2(0@400 io@0x414), C1(0@1 mwait), PSS
+acpicpu1 at acpi0: C2(0@400 io@0x414), C1(0@1 mwait), PSS
+acpicpu2 at acpi0: C2(0@400 io@0x414), C1(0@1 mwait), PSS
+acpicpu3 at acpi0: C2(0@400 io@0x414), C1(0@1 mwait), PSS
+acpipwrres0 at acpi0: P0ST, resource for SATA
+acpipwrres1 at acpi0: P3ST, resource for SATA
+acpitz0 at acpi0: critical temperature is 127 degC
+acpivideo0 at acpi0: VGA_
+acpivout0 at acpivideo0: LCD_
+cpu0: 3494 MHz: speeds: 3500 2300 1600 MHz
+pci0 at mainbus0 bus 0
+ksmn0 at pci0 dev 0 function 0 "AMD 17h/1xh Root Complex" rev 0x00
+"AMD 17h/1xh IOMMU" rev 0x00 at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0 "AMD 17h PCIE" rev 0x00
+ppb0 at pci0 dev 1 function 2 "AMD 17h/1xh PCIE" rev 0x00: msi
+pci1 at ppb0 bus 1
+xhci0 at pci1 dev 0 function 0 vendor "AMD", unknown product 0x43bc rev 0x02: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+ahci0 at pci1 dev 0 function 1 vendor "AMD", unknown product 0x43b8 rev 0x02: msi, AHCI 1.3.1
+ahci0: port busy after first PMP probe FIS
+ahci0: port busy after first PMP probe FIS
+ahci0: port 0: 6.0Gb/s
+ahci0: port busy after first PMP probe FIS
+ahci0: port busy after first PMP probe FIS
+ahci0: port 1: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, CT240BX500SSD1, M6C> naa.0000000000000000
+sd0: 228936MB, 512 bytes/sector, 468862128 sectors, thin
+sd1 at scsibus1 targ 1 lun 0: <ATA, CT120BX500SSD1, M6C> naa.0000000000000000
+sd1: 114473MB, 512 bytes/sector, 234441648 sectors, thin
+ppb1 at pci1 dev 0 function 2 vendor "AMD", unknown product 0x43b3 rev 0x02
+pci2 at ppb1 bus 2
+ppb2 at pci2 dev 4 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci3 at ppb2 bus 3
+re0 at pci3 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb3 at pci2 dev 5 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci4 at ppb3 bus 4
+ppb4 at pci2 dev 6 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci5 at ppb4 bus 5
+ppb5 at pci2 dev 7 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci6 at ppb5 bus 6
+pchb1 at pci0 dev 8 function 0 "AMD 17h PCIE" rev 0x00
+ppb6 at pci0 dev 8 function 1 "AMD 17h/1xh PCIE" rev 0x00
+pci7 at ppb6 bus 7
+amdgpu0 at pci7 dev 0 function 0 "ATI Radeon Vega" rev 0xc8
+drm0 at amdgpu0
+amdgpu0: msi
+azalia0 at pci7 dev 0 function 1 "ATI Radeon Vega HD Audio" rev 0x00: msi
+azalia0: no supported codecs
+ccp0 at pci7 dev 0 function 2 "AMD 17h/1xh Crypto" rev 0x00
+xhci1 at pci7 dev 0 function 3 "AMD 17h/1xh xHCI" rev 0x00: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+xhci2 at pci7 dev 0 function 4 "AMD 17h/1xh xHCI" rev 0x00: msi, xHCI 1.10
+usb2 at xhci2: USB revision 3.0
+uhub2 at usb2 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+azalia1 at pci7 dev 0 function 6 "AMD 17h/1xh HD Audio" rev 0x00: apic 6 int 30
+azalia1: codecs: Realtek/0x0867
+audio0 at azalia1
+ppb7 at pci0 dev 8 function 2 "AMD 17h/1xh PCIE" rev 0x00
+pci8 at ppb7 bus 8
+ahci1 at pci8 dev 0 function 0 "AMD FCH AHCI" rev 0x61: msi, AHCI 1.3.1
+scsibus2 at ahci1: 32 targets
+piixpm0 at pci0 dev 20 function 0 "AMD FCH SMBus" rev 0x61: SMI
+iic0 at piixpm0
+spdmem0 at iic0 addr 0x50: 16GB DDR4 SDRAM PC4-19200
+iic1 at piixpm0
+pcib0 at pci0 dev 20 function 3 "AMD FCH LPC" rev 0x51
+pchb2 at pci0 dev 24 function 0 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb3 at pci0 dev 24 function 1 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb4 at pci0 dev 24 function 2 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb5 at pci0 dev 24 function 3 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb6 at pci0 dev 24 function 4 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb7 at pci0 dev 24 function 5 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb8 at pci0 dev 24 function 6 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb9 at pci0 dev 24 function 7 "AMD 17h/1xh Data Fabric" rev 0x00
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: SVM/RVI
+efifb at mainbus0 not configured
+umass0 at uhub0 port 5 configuration 1 interface 0 "General USB Flash Disk" rev 2.00/11.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd2 at scsibus3 targ 1 lun 0: <General, USB Flash Disk, 1100> removable serial....
+sd2: 7651MB, 512 bytes/sector, 15669248 sectors
+uhidev0 at uhub0 port 6 configuration 1 interface 0 "Cooler Master Technology Inc. MK750" rev 1.10/21.00 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+uhidev1 at uhub0 port 6 configuration 1 interface 1 "Cooler Master Technology Inc. MK750" rev 1.10/21.00 addr 3
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+uhidev2 at uhub0 port 6 configuration 1 interface 2 "Cooler Master Technology Inc. MK750" rev 1.10/21.00 addr 3
+uhidev2: iclass 3/0, 4 report ids
+uhid1 at uhidev2 reportid 1: input=1, output=0, feature=0
+uhid2 at uhidev2 reportid 2: input=4, output=0, feature=0
+ukbd1 at uhidev2 reportid 4: no usable key codes array
+uhidev3 at uhub2 port 1 configuration 1 interface 0 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev3: iclass 3/1
+ums0 at uhidev3: 5 buttons, Z dir
+wsmouse0 at ums0 mux 0
+uhidev4 at uhub2 port 1 configuration 1 interface 1 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev4: iclass 3/0, 5 report ids
+ukbd2 at uhidev4 reportid 1: 8 variable keys, 6 key codes
+wskbd2 at ukbd2 mux 1
+uhid3 at uhidev4 reportid 2: input=15, output=0, feature=0
+uhid4 at uhidev4 reportid 3: input=15, output=0, feature=0
+uhid5 at uhidev4 reportid 4: input=15, output=0, feature=0
+uhid6 at uhidev4 reportid 5: input=15, output=0, feature=0
+uhidev5 at uhub2 port 1 configuration 1 interface 2 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev5: iclass 3/1
+ukbd3 at uhidev5: 8 variable keys, 6 key codes
+wskbd3 at ukbd3 mux 1
+uhidev6 at uhub2 port 1 configuration 1 interface 3 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev6: iclass 3/0, 7 report ids
+uhid7 at uhidev6 reportid 1: input=0, output=0, feature=22
+uhid8 at uhidev6 reportid 2: input=0, output=0, feature=2
+uhid9 at uhidev6 reportid 3: input=0, output=0, feature=27
+uhid10 at uhidev6 reportid 4: input=0, output=0, feature=42
+uhid11 at uhidev6 reportid 5: input=0, output=0, feature=8
+uhid12 at uhidev6 reportid 6: input=0, output=0, feature=1
+uhid13 at uhidev6 reportid 7: input=0, output=0, feature=63
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+root on sd0a (bfbc336200c4d350.a) swap on sd0b dump on sd0b
+initializing kernel modesetting (RAVEN 0x1002:0x15DD 0x1002:0x15DD 0xC8).
+drm:pid0:amdgpu_device_parse_gpu_info_fw *ERROR* Failed to load gpu_info firmware "amdgpu/raven_gpu_info.bin"
+drm:pid0:amdgpu_attachhook *ERROR* Fatal error during GPU init
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wskbd2: connecting to wsdisplay0
+wskbd3: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+syncing disks... done
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 16035696640 (15292MB)
+avail mem = 15534669824 (14815MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.8 @ 0xe6890 (27 entries)
+bios0: vendor American Megatrends Inc. version "5.13" date 04/17/2018
+bios0: ECT One Computer AMD A10-7850K, 4
+acpi0 at bios0: ACPI 6.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT SSDT SSDT CRAT CDIT SSDT MCFG BHMB HPET UEFI TPM2 IVRS SSDT SSDT SSDT SSDT WSMT
+acpi0: wakeup devices GP17(S4) XHC0(S4) XHC1(S4) GP18(S4) SIO1(S4) GPP0(S4) GPP1(S4) PTXH(S4) GPP2(S4) GPP3(S4)
+acpitimer0 at acpi0: 3579545 Hz, 32 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: AMD Ryzen 3 2200G with Radeon Vega Graphics, 3493.98 MHz, 17-11-00
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA,IBPB,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 64KB 64b/line 4-way I-cache, 32KB 64b/line 8-way D-cache, 512KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: ITLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu0: DTLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=1.1, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: AMD Ryzen 3 2200G with Radeon Vega Graphics, 3493.44 MHz, 17-11-00
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA,IBPB,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 64KB 64b/line 4-way I-cache, 32KB 64b/line 8-way D-cache, 512KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu1: ITLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu1: DTLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 2 (application processor)
+cpu2: AMD Ryzen 3 2200G with Radeon Vega Graphics, 3493.44 MHz, 17-11-00
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA,IBPB,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 64KB 64b/line 4-way I-cache, 32KB 64b/line 8-way D-cache, 512KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu2: ITLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu2: DTLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: AMD Ryzen 3 2200G with Radeon Vega Graphics, 3493.44 MHz, 17-11-00
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA,IBPB,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 64KB 64b/line 4-way I-cache, 32KB 64b/line 8-way D-cache, 512KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu3: ITLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu3: DTLB 64 4KB entries fully associative, 64 4MB entries fully associative
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 5 pa 0xfec00000, version 21, 24 pins
+ioapic1 at mainbus0: apid 6 pa 0xfec01000, version 21, 32 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpihpet0 at acpi0: 14318180 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 7 (GP17)
+acpiprt2 at acpi0: bus 8 (GP18)
+acpiprt3 at acpi0: bus -1 (GPP0)
+acpiprt4 at acpi0: bus 1 (GPP1)
+acpiprt5 at acpi0: bus -1 (GPP2)
+acpiprt6 at acpi0: bus -1 (GPP3)
+acpipci0 at acpi0 PCI0
+acpicmos0 at acpi0
+acpibtn0 at acpi0: PWRB
+amdgpio0 at acpi0 GPIO uid 0 addr 0xfed81500/0x400 irq 7, 184 pins
+"MSFT0101" at acpi0 not configured
+"AMDIF030" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+acpicpu0 at acpi0: C2(0@400 io@0x414), C1(0@1 mwait), PSS
+acpicpu1 at acpi0: C2(0@400 io@0x414), C1(0@1 mwait), PSS
+acpicpu2 at acpi0: C2(0@400 io@0x414), C1(0@1 mwait), PSS
+acpicpu3 at acpi0: C2(0@400 io@0x414), C1(0@1 mwait), PSS
+acpipwrres0 at acpi0: P0ST, resource for SATA
+acpipwrres1 at acpi0: P3ST, resource for SATA
+acpitz0 at acpi0: critical temperature is 127 degC
+acpivideo0 at acpi0: VGA_
+acpivout0 at acpivideo0: LCD_
+cpu0: 3493 MHz: speeds: 3500 2300 1600 MHz
+pci0 at mainbus0 bus 0
+ksmn0 at pci0 dev 0 function 0 "AMD 17h/1xh Root Complex" rev 0x00
+"AMD 17h/1xh IOMMU" rev 0x00 at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0 "AMD 17h PCIE" rev 0x00
+ppb0 at pci0 dev 1 function 2 "AMD 17h/1xh PCIE" rev 0x00: msi
+pci1 at ppb0 bus 1
+xhci0 at pci1 dev 0 function 0 vendor "AMD", unknown product 0x43bc rev 0x02: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+ahci0 at pci1 dev 0 function 1 vendor "AMD", unknown product 0x43b8 rev 0x02: msi, AHCI 1.3.1
+ahci0: port busy after first PMP probe FIS
+ahci0: port busy after first PMP probe FIS
+ahci0: port 0: 6.0Gb/s
+ahci0: port busy after first PMP probe FIS
+ahci0: port busy after first PMP probe FIS
+ahci0: port 1: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, CT240BX500SSD1, M6C> naa.0000000000000000
+sd0: 228936MB, 512 bytes/sector, 468862128 sectors, thin
+sd1 at scsibus1 targ 1 lun 0: <ATA, CT120BX500SSD1, M6C> naa.0000000000000000
+sd1: 114473MB, 512 bytes/sector, 234441648 sectors, thin
+ppb1 at pci1 dev 0 function 2 vendor "AMD", unknown product 0x43b3 rev 0x02
+pci2 at ppb1 bus 2
+ppb2 at pci2 dev 4 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci3 at ppb2 bus 3
+re0 at pci3 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb3 at pci2 dev 5 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci4 at ppb3 bus 4
+ppb4 at pci2 dev 6 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci5 at ppb4 bus 5
+ppb5 at pci2 dev 7 function 0 "AMD 300 Series PCIE" rev 0x02: msi
+pci6 at ppb5 bus 6
+pchb1 at pci0 dev 8 function 0 "AMD 17h PCIE" rev 0x00
+ppb6 at pci0 dev 8 function 1 "AMD 17h/1xh PCIE" rev 0x00
+pci7 at ppb6 bus 7
+amdgpu0 at pci7 dev 0 function 0 "ATI Radeon Vega" rev 0xc8
+drm0 at amdgpu0
+amdgpu0: msi
+azalia0 at pci7 dev 0 function 1 "ATI Radeon Vega HD Audio" rev 0x00: msi
+azalia0: no supported codecs
+ccp0 at pci7 dev 0 function 2 "AMD 17h/1xh Crypto" rev 0x00
+xhci1 at pci7 dev 0 function 3 "AMD 17h/1xh xHCI" rev 0x00: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+xhci2 at pci7 dev 0 function 4 "AMD 17h/1xh xHCI" rev 0x00: msi, xHCI 1.10
+usb2 at xhci2: USB revision 3.0
+uhub2 at usb2 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+azalia1 at pci7 dev 0 function 6 "AMD 17h/1xh HD Audio" rev 0x00: apic 6 int 30
+azalia1: codecs: Realtek/0x0867
+audio0 at azalia1
+ppb7 at pci0 dev 8 function 2 "AMD 17h/1xh PCIE" rev 0x00
+pci8 at ppb7 bus 8
+ahci1 at pci8 dev 0 function 0 "AMD FCH AHCI" rev 0x61: msi, AHCI 1.3.1
+scsibus2 at ahci1: 32 targets
+piixpm0 at pci0 dev 20 function 0 "AMD FCH SMBus" rev 0x61: SMI
+iic0 at piixpm0
+spdmem0 at iic0 addr 0x50: 16GB DDR4 SDRAM PC4-19200
+iic1 at piixpm0
+pcib0 at pci0 dev 20 function 3 "AMD FCH LPC" rev 0x51
+pchb2 at pci0 dev 24 function 0 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb3 at pci0 dev 24 function 1 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb4 at pci0 dev 24 function 2 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb5 at pci0 dev 24 function 3 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb6 at pci0 dev 24 function 4 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb7 at pci0 dev 24 function 5 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb8 at pci0 dev 24 function 6 "AMD 17h/1xh Data Fabric" rev 0x00
+pchb9 at pci0 dev 24 function 7 "AMD 17h/1xh Data Fabric" rev 0x00
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: SVM/RVI
+efifb at mainbus0 not configured
+umass0 at uhub0 port 5 configuration 1 interface 0 "General USB Flash Disk" rev 2.00/11.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd2 at scsibus3 targ 1 lun 0: <General, USB Flash Disk, 1100> removable serial....
+sd2: 7651MB, 512 bytes/sector, 15669248 sectors
+uhidev0 at uhub0 port 6 configuration 1 interface 0 "Cooler Master Technology Inc. MK750" rev 1.10/21.00 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+uhidev1 at uhub0 port 6 configuration 1 interface 1 "Cooler Master Technology Inc. MK750" rev 1.10/21.00 addr 3
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+uhidev2 at uhub0 port 6 configuration 1 interface 2 "Cooler Master Technology Inc. MK750" rev 1.10/21.00 addr 3
+uhidev2: iclass 3/0, 4 report ids
+uhid1 at uhidev2 reportid 1: input=1, output=0, feature=0
+uhid2 at uhidev2 reportid 2: input=4, output=0, feature=0
+ukbd1 at uhidev2 reportid 4: no usable key codes array
+uhidev3 at uhub2 port 1 configuration 1 interface 0 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev3: iclass 3/1
+ums0 at uhidev3: 5 buttons, Z dir
+wsmouse0 at ums0 mux 0
+uhidev4 at uhub2 port 1 configuration 1 interface 1 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev4: iclass 3/0, 5 report ids
+ukbd2 at uhidev4 reportid 1: 8 variable keys, 6 key codes
+wskbd2 at ukbd2 mux 1
+uhid3 at uhidev4 reportid 2: input=15, output=0, feature=0
+uhid4 at uhidev4 reportid 3: input=15, output=0, feature=0
+uhid5 at uhidev4 reportid 4: input=15, output=0, feature=0
+uhid6 at uhidev4 reportid 5: input=15, output=0, feature=0
+uhidev5 at uhub2 port 1 configuration 1 interface 2 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev5: iclass 3/1
+ukbd3 at uhidev5: 8 variable keys, 6 key codes
+wskbd3 at ukbd3 mux 1
+uhidev6 at uhub2 port 1 configuration 1 interface 3 "Razer Razer DeathAdder V2" rev 2.00/2.00 addr 2
+uhidev6: iclass 3/0, 7 report ids
+uhid7 at uhidev6 reportid 1: input=0, output=0, feature=22
+uhid8 at uhidev6 reportid 2: input=0, output=0, feature=2
+uhid9 at uhidev6 reportid 3: input=0, output=0, feature=27
+uhid10 at uhidev6 reportid 4: input=0, output=0, feature=42
+uhid11 at uhidev6 reportid 5: input=0, output=0, feature=8
+uhid12 at uhidev6 reportid 6: input=0, output=0, feature=1
+uhid13 at uhidev6 reportid 7: input=0, output=0, feature=63
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+root on sd0a (bfbc336200c4d350.a) swap on sd0b dump on sd0b
+initializing kernel modesetting (RAVEN 0x1002:0x15DD 0x1002:0x15DD 0xC8).
+amdgpu0: 1920x1080, 32bpp
+wsdisplay0 at amdgpu0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wskbd2: connecting to wsdisplay0
+wskbd3: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

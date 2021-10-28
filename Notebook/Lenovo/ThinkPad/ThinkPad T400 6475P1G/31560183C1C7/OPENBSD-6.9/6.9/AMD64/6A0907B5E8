@@ -1,0 +1,458 @@
+OpenBSD 6.9-beta (GENERIC.MP) #339: Wed Feb 17 22:25:30 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8530460672 (8135MB)
+avail mem = 8256569344 (7874MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x7d74a040 (16 entries)
+bios0: vendor coreboot version "CBET4000 4.13-2414-g1037e34123" date 03/02/2021
+bios0: LENOVO 6475P1G
+acpi0 at bios0: ACPI 6.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SSDT MCFG APIC DMAR HPET
+acpi0: wakeup devices HDEF(S4) USB1(S4) USB2(S4) USB3(S4) EHC1(S4) USB4(S4) USB5(S4) USB6(S4) EHC2(S4) SLT1(S4) SLT2(S4) SLT3(S4) SLT6(S4) LANC(S3) LANR(S3) SLPB(S3) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-63
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU T9400 @ 2.53GHz, 1600.35 MHz, 06-17-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 6MB 64b/line 16-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 7 var ranges, 88 fixed ranges
+cpu0: apic clock running at 266MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.1.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 Duo CPU T9400 @ 2.53GHz, 1600.06 MHz, 06-17-0a
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 6MB 64b/line 16-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpi0: WARNING EC not initialized
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEGP)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus 2 (RP02)
+acpiprt4 at acpi0: bus 3 (RP03)
+acpiprt5 at acpi0: bus 4 (RP04)
+acpiprt6 at acpi0: bus -1 (RP05)
+acpiprt7 at acpi0: bus -1 (RP06)
+acpiprt8 at acpi0: bus -1 (RP07)
+acpiprt9 at acpi0: bus -1 (RP08)
+acpiprt10 at acpi0: bus 5 (PCIB)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "42T4677" serial ... type LION oem "SANYO"
+acpibat1 at acpi0: BAT1 not present
+acpibtn0 at acpi0: SLPB
+acpibtn1 at acpi0: LID_
+acpithinkpad0 at acpi0: version 1.0
+acpicmos0 at acpi0
+"PNP0C0B" at acpi0 not configured
+"BOOT0000" at acpi0 not configured
+acpicpu0 at acpi0: !C3(250@55 mwait.1@0x20), !C2(500@1 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: !C3(250@55 mwait.1@0x20), !C2(500@1 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 100 degC
+acpipwrres0 at acpi0: FPWR, resource for FAN_
+acpitz1 at acpi0: critical temperature is 99 degC
+acpidock0 at acpi0: DOCK not docked (0)
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD0
+cpu0: Enhanced SpeedStep 1600 MHz: speeds: 2534, 2533, 1600, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel GM45 Host" rev 0x07
+inteldrm0 at pci0 dev 2 function 0 "Intel GM45 Video" rev 0x07
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0x80000000, size 0x10000000
+inteldrm0: apic 2 int 16, GM45, gen 4
+"Intel GM45 Video" rev 0x07 at pci0 dev 2 function 1 not configured
+em0 at pci0 dev 25 function 0 "Intel ICH9 IGP M AMT" rev 0x03: msi, address XXX
+uhci0 at pci0 dev 26 function 0 "Intel 82801I USB" rev 0x03: apic 2 int 16
+uhci1 at pci0 dev 26 function 1 "Intel 82801I USB" rev 0x03: apic 2 int 17
+uhci2 at pci0 dev 26 function 2 "Intel 82801I USB" rev 0x03: apic 2 int 18
+ehci0 at pci0 dev 26 function 7 "Intel 82801I USB" rev 0x03: apic 2 int 18
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 82801I HD Audio" rev 0x03: msi
+azalia0: codecs: Conexant CX20561
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 82801I PCIE" rev 0x03
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 82801I PCIE" rev 0x03
+pci2 at ppb1 bus 2
+iwn0 at pci2 dev 0 function 0 "Intel WiFi Link 5100" rev 0x00: msi, MIMO 1T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 2 "Intel 82801I PCIE" rev 0x03
+pci3 at ppb2 bus 3
+ppb3 at pci0 dev 28 function 3 "Intel 82801I PCIE" rev 0x03
+pci4 at ppb3 bus 4
+uhci3 at pci0 dev 29 function 0 "Intel 82801I USB" rev 0x03: apic 2 int 16
+uhci4 at pci0 dev 29 function 1 "Intel 82801I USB" rev 0x03: apic 2 int 17
+uhci5 at pci0 dev 29 function 2 "Intel 82801I USB" rev 0x03: apic 2 int 18
+ehci1 at pci0 dev 29 function 7 "Intel 82801I USB" rev 0x03: apic 2 int 16
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0x93
+pci5 at ppb4 bus 5
+cbb0 at pci5 dev 0 function 0 "Ricoh 5C476 CardBus" rev 0xba: apic 2 int 16
+"Ricoh 5C832 Firewire" rev 0x04 at pci5 dev 0 function 1 not configured
+sdhc0 at pci5 dev 0 function 2 "Ricoh 5C822 SD/MMC" rev 0x21: apic 2 int 18
+sdhc0: SDHC 1.0, 33 MHz base clock
+sdmmc0 at sdhc0: 4-bit
+"Ricoh 5C592 Memory Stick" rev 0x11 at pci5 dev 0 function 3 not configured
+"Ricoh 5C852 xD" rev 0x11 at pci5 dev 0 function 4 not configured
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 6 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+pcib0 at pci0 dev 31 function 0 "Intel 82801IEM LPC" rev 0x03
+ahci0 at pci0 dev 31 function 2 "Intel 82801I AHCI" rev 0x03: msi, AHCI 1.2
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, KINGSTON SA400S3, S1Z4> naa.50026b73802ee4ed
+sd0: 228936MB, 512 bytes/sector, 468862128 sectors, thin
+cd0 at scsibus1 targ 1 lun 0: <MATSHITA, DVD-RAM UJ862A, SB04> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 82801I SMBus" rev 0x03: apic 2 int 18
+iic0 at ichiic0
+usb2 at uhci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb6 at uhci4: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb7 at uhci5: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.0, 0x1c0b1 0xb00000 0x0 0xd04791 0x20000
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+aps0 at isa0 port 0x1600/31
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+umass0 at uhub0 port 1 configuration 1 interface 0 "Lexar USB Flash Drive" rev 2.00/11.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd1 at scsibus2 targ 1 lun 0: <Lexar, USB Flash Drive, 1100> removable serial....
+sd1: 7646MB, 512 bytes/sector, 15659008 sectors
+urndis0 at uhub1 port 2 configuration 1 interface 0 "Xiaomi Redmi Note 8 Pro" rev 2.10/4.04 addr 2
+urndis0: using RNDIS, address XXX
+ugen0 at uhub3 port 1 "AuthenTec Fingerprint Sensor" rev 2.00/17.03 addr 2
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+sd2 at scsibus4 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd2: 228933MB, 512 bytes/sector, 468856433 sectors
+softraid0: volume sd2 is roaming, it used to be sd1, updating metadata
+root on sd2a (9268dcdadbd0c134.a) swap on sd2b dump on sd2b
+inteldrm0: 1280x800, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+syncing disks...
+OpenBSD 6.9-beta (RAMDISK_CD) #362: Fri Mar  5 10:49:30 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8530460672 (8135MB)
+avail mem = 8267907072 (7884MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x7d74a040 (16 entries)
+bios0: vendor coreboot version "CBET4000 4.13-2414-g1037e34123" date 03/02/2021
+bios0: LENOVO 6475P1G
+acpi0 at bios0: ACPI 6.0
+acpi0: tables DSDT FACP SSDT MCFG APIC DMAR HPET
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU T9400 @ 2.53GHz, 1600.33 MHz, 06-17-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 6MB 64b/line 16-way L2 cache
+cpu0: apic clock running at 266MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.1.3, IBE
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpi0: WARNING EC not initialized
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEGP)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus 2 (RP02)
+acpiprt4 at acpi0: bus 3 (RP03)
+acpiprt5 at acpi0: bus 4 (RP04)
+acpiprt6 at acpi0: bus -1 (RP05)
+acpiprt7 at acpi0: bus -1 (RP06)
+acpiprt8 at acpi0: bus -1 (RP07)
+acpiprt9 at acpi0: bus -1 (RP08)
+acpiprt10 at acpi0: bus 5 (PCIB)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+"ACPI0003" at acpi0 not configured
+"PNP0C0A" at acpi0 not configured
+"PNP0C0A" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"IBM0068" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0C0B" at acpi0 not configured
+"BOOT0000" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpitz at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel GM45 Host" rev 0x07
+vga1 at pci0 dev 2 function 0 "Intel GM45 Video" rev 0x07
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+"Intel GM45 Video" rev 0x07 at pci0 dev 2 function 1 not configured
+em0 at pci0 dev 25 function 0 "Intel ICH9 IGP M AMT" rev 0x03: msi, address XXX
+uhci0 at pci0 dev 26 function 0 "Intel 82801I USB" rev 0x03: apic 2 int 16
+uhci1 at pci0 dev 26 function 1 "Intel 82801I USB" rev 0x03: apic 2 int 17
+uhci2 at pci0 dev 26 function 2 "Intel 82801I USB" rev 0x03: apic 2 int 18
+ehci0 at pci0 dev 26 function 7 "Intel 82801I USB" rev 0x03: apic 2 int 18
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel 82801I HD Audio" rev 0x03 at pci0 dev 27 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 82801I PCIE" rev 0x03
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 82801I PCIE" rev 0x03
+pci2 at ppb1 bus 2
+iwn0 at pci2 dev 0 function 0 "Intel WiFi Link 5100" rev 0x00: msi, MIMO 1T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 2 "Intel 82801I PCIE" rev 0x03
+pci3 at ppb2 bus 3
+ppb3 at pci0 dev 28 function 3 "Intel 82801I PCIE" rev 0x03
+pci4 at ppb3 bus 4
+uhci3 at pci0 dev 29 function 0 "Intel 82801I USB" rev 0x03: apic 2 int 16
+uhci4 at pci0 dev 29 function 1 "Intel 82801I USB" rev 0x03: apic 2 int 17
+uhci5 at pci0 dev 29 function 2 "Intel 82801I USB" rev 0x03: apic 2 int 18
+ehci1 at pci0 dev 29 function 7 "Intel 82801I USB" rev 0x03: apic 2 int 16
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0x93
+pci5 at ppb4 bus 5
+cbb0 at pci5 dev 0 function 0 "Ricoh 5C476 CardBus" rev 0xba: apic 2 int 16
+"Ricoh 5C832 Firewire" rev 0x04 at pci5 dev 0 function 1 not configured
+sdhc0 at pci5 dev 0 function 2 "Ricoh 5C822 SD/MMC" rev 0x21: apic 2 int 18
+sdhc0: SDHC 1.0, 33 MHz base clock
+sdmmc0 at sdhc0: 4-bit
+"Ricoh 5C592 Memory Stick" rev 0x11 at pci5 dev 0 function 3 not configured
+"Ricoh 5C852 xD" rev 0x11 at pci5 dev 0 function 4 not configured
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 6 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+"Intel 82801IEM LPC" rev 0x03 at pci0 dev 31 function 0 not configured
+ahci0 at pci0 dev 31 function 2 "Intel 82801I AHCI" rev 0x03: msi, AHCI 1.2
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 1.5Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, KINGSTON SA400S3, S1Z4> naa.50026b73802ee4ed
+sd0: 228936MB, 512 bytes/sector, 468862128 sectors, thin
+cd0 at scsibus0 targ 1 lun 0: <MATSHITA, DVD-RAM UJ862A, SB04> removable
+"Intel 82801I SMBus" rev 0x03 at pci0 dev 31 function 3 not configured
+usb2 at uhci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb6 at uhci4: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb7 at uhci5: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+umass0 at uhub0 port 1 configuration 1 interface 0 "Lexar USB Flash Drive" rev 2.00/11.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <Lexar, USB Flash Drive, 1100> removable serial....
+sd1: 7646MB, 512 bytes/sector, 15659008 sectors
+"Xiaomi Redmi Note 8 Pro" rev 2.10/4.04 addr 2 at uhub1 port 2 not configured
+"vendor 0x08ff Fingerprint Sensor" rev 2.00/17.03 addr 2 at uhub3 port 1 not configured
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+sd2 at scsibus2 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd2: 228933MB, 512 bytes/sector, 468856433 sectors
+root on rd0a swap on rd0b dump on rd0b
+syncing disks...
+OpenBSD 6.9-beta (GENERIC.MP) #377: Fri Mar  5 10:42:20 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8530460672 (8135MB)
+avail mem = 8256561152 (7874MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x7d74a040 (16 entries)
+bios0: vendor coreboot version "CBET4000 4.13-2414-g1037e34123" date 03/02/2021
+bios0: LENOVO 6475P1G
+acpi0 at bios0: ACPI 6.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SSDT MCFG APIC DMAR HPET
+acpi0: wakeup devices HDEF(S4) USB1(S4) USB2(S4) USB3(S4) EHC1(S4) USB4(S4) USB5(S4) USB6(S4) EHC2(S4) SLT1(S4) SLT2(S4) SLT3(S4) SLT6(S4) LANC(S3) LANR(S3) SLPB(S3) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-63
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU T9400 @ 2.53GHz, 1600.32 MHz, 06-17-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 6MB 64b/line 16-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 7 var ranges, 88 fixed ranges
+cpu0: apic clock running at 266MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.1.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 Duo CPU T9400 @ 2.53GHz, 1600.07 MHz, 06-17-0a
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 6MB 64b/line 16-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpi0: WARNING EC not initialized
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEGP)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus 2 (RP02)
+acpiprt4 at acpi0: bus 3 (RP03)
+acpiprt5 at acpi0: bus 4 (RP04)
+acpiprt6 at acpi0: bus -1 (RP05)
+acpiprt7 at acpi0: bus -1 (RP06)
+acpiprt8 at acpi0: bus -1 (RP07)
+acpiprt9 at acpi0: bus -1 (RP08)
+acpiprt10 at acpi0: bus 5 (PCIB)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 model "42T4677" serial ... type LION oem "SANYO"
+acpibat1 at acpi0: BAT1 not present
+acpibtn0 at acpi0: SLPB
+acpibtn1 at acpi0: LID_
+acpithinkpad0 at acpi0: version 1.0
+acpicmos0 at acpi0
+"PNP0C0B" at acpi0 not configured
+"BOOT0000" at acpi0 not configured
+acpicpu0 at acpi0: !C3(250@55 mwait.1@0x20), !C2(500@1 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: !C3(250@55 mwait.1@0x20), !C2(500@1 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 100 degC
+acpipwrres0 at acpi0: FPWR, resource for FAN_
+acpitz1 at acpi0: critical temperature is 99 degC
+acpidock0 at acpi0: DOCK not docked (0)
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD0
+cpu0: Enhanced SpeedStep 1600 MHz: speeds: 2534, 2533, 1600, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel GM45 Host" rev 0x07
+inteldrm0 at pci0 dev 2 function 0 "Intel GM45 Video" rev 0x07
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0x80000000, size 0x10000000
+inteldrm0: apic 2 int 16, GM45, gen 4
+"Intel GM45 Video" rev 0x07 at pci0 dev 2 function 1 not configured
+em0 at pci0 dev 25 function 0 "Intel ICH9 IGP M AMT" rev 0x03: msi, address XXX
+uhci0 at pci0 dev 26 function 0 "Intel 82801I USB" rev 0x03: apic 2 int 16
+uhci1 at pci0 dev 26 function 1 "Intel 82801I USB" rev 0x03: apic 2 int 17
+uhci2 at pci0 dev 26 function 2 "Intel 82801I USB" rev 0x03: apic 2 int 18
+ehci0 at pci0 dev 26 function 7 "Intel 82801I USB" rev 0x03: apic 2 int 18
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 82801I HD Audio" rev 0x03: msi
+azalia0: codecs: Conexant CX20561
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 82801I PCIE" rev 0x03
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 82801I PCIE" rev 0x03
+pci2 at ppb1 bus 2
+iwn0 at pci2 dev 0 function 0 "Intel WiFi Link 5100" rev 0x00: msi, MIMO 1T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 2 "Intel 82801I PCIE" rev 0x03
+pci3 at ppb2 bus 3
+ppb3 at pci0 dev 28 function 3 "Intel 82801I PCIE" rev 0x03
+pci4 at ppb3 bus 4
+uhci3 at pci0 dev 29 function 0 "Intel 82801I USB" rev 0x03: apic 2 int 16
+uhci4 at pci0 dev 29 function 1 "Intel 82801I USB" rev 0x03: apic 2 int 17
+uhci5 at pci0 dev 29 function 2 "Intel 82801I USB" rev 0x03: apic 2 int 18
+ehci1 at pci0 dev 29 function 7 "Intel 82801I USB" rev 0x03: apic 2 int 16
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0x93
+pci5 at ppb4 bus 5
+cbb0 at pci5 dev 0 function 0 "Ricoh 5C476 CardBus" rev 0xba: apic 2 int 16
+"Ricoh 5C832 Firewire" rev 0x04 at pci5 dev 0 function 1 not configured
+sdhc0 at pci5 dev 0 function 2 "Ricoh 5C822 SD/MMC" rev 0x21: apic 2 int 18
+sdhc0: SDHC 1.0, 33 MHz base clock
+sdmmc0 at sdhc0: 4-bit
+"Ricoh 5C592 Memory Stick" rev 0x11 at pci5 dev 0 function 3 not configured
+"Ricoh 5C852 xD" rev 0x11 at pci5 dev 0 function 4 not configured
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 6 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+pcib0 at pci0 dev 31 function 0 "Intel 82801IEM LPC" rev 0x03
+ahci0 at pci0 dev 31 function 2 "Intel 82801I AHCI" rev 0x03: msi, AHCI 1.2
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, KINGSTON SA400S3, S1Z4> naa.50026b73802ee4ed
+sd0: 228936MB, 512 bytes/sector, 468862128 sectors, thin
+cd0 at scsibus1 targ 1 lun 0: <MATSHITA, DVD-RAM UJ862A, SB04> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 82801I SMBus" rev 0x03: apic 2 int 18
+iic0 at ichiic0
+usb2 at uhci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb6 at uhci4: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb7 at uhci5: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.0, 0x1c0b1 0xb00000 0x0 0xd04791 0x20000
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+aps0 at isa0 port 0x1600/31
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+umass0 at uhub0 port 1 configuration 1 interface 0 "Lexar USB Flash Drive" rev 2.00/11.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd1 at scsibus2 targ 1 lun 0: <Lexar, USB Flash Drive, 1100> removable serial....
+sd1: 7646MB, 512 bytes/sector, 15659008 sectors
+ugen0 at uhub1 port 2 "Xiaomi Redmi Note 8 Pro" rev 2.10/4.04 addr 2
+ugen1 at uhub3 port 1 "AuthenTec Fingerprint Sensor" rev 2.00/17.03 addr 2
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+sd2 at scsibus4 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd2: 228933MB, 512 bytes/sector, 468856433 sectors
+root on sd2a (9268dcdadbd0c134.a) swap on sd2b dump on sd2b
+inteldrm0: 1280x800, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+ugen0 detached
+urndis0 at uhub1 port 2 configuration 1 interface 0 "Xiaomi Redmi Note 8 Pro" rev 2.10/4.04 addr 2
+urndis0: using RNDIS, address XXX

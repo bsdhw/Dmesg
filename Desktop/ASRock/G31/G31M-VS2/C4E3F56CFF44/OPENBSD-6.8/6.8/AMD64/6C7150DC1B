@@ -1,0 +1,342 @@
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4277862400 (4079MB)
+avail mem = 4133191680 (3941MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.4 @ 0xfc100 (20 entries)
+bios0: vendor American Megatrends Inc. version "P1.20" date 05/21/2012
+bios0: ASRock G31M-VS2
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S3 S4 S5
+acpi0: tables DSDT FACP APIC MCFG OEMB AAFT GSCI SSDT
+acpi0: wakeup devices P0P2(S4) P0P1(S4) PS2K(S4) PS2M(S4) USB0(S4) USB1(S4) USB2(S4) USB3(S4) EUSB(S4) MC97(S4) HDAC(S4) P0P4(S4) P0P5(S4) P0P6(S4) P0P7(S4) P0P8(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Pentium(R) Dual-Core CPU E6600 @ 3.06GHz, 3072.29 MHz, 06-17-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,XSAVE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 2MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 267MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Pentium(R) Dual-Core CPU E6600 @ 3.06GHz, 3071.92 MHz, 06-17-0a
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,XSAVE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 2MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 4 (P0P2)
+acpiprt2 at acpi0: bus 3 (P0P1)
+acpiprt3 at acpi0: bus 2 (P0P4)
+acpiprt4 at acpi0: bus 1 (P0P5)
+acpiprt5 at acpi0: bus -1 (P0P6)
+acpiprt6 at acpi0: bus -1 (P0P7)
+acpiprt7 at acpi0: bus -1 (P0P8)
+acpiprt8 at acpi0: bus -1 (P0P9)
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+acpibtn0 at acpi0: PWRB
+acpicpu0 at acpi0: C1(@1 halt!), PSS
+acpicpu1 at acpi0: C1(@1 halt!), PSS
+cpu0: Enhanced SpeedStep 3072 MHz: speeds: 3066, 2670, 2403, 2136, 1870, 1603 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel 82G33 Host" rev 0x10
+ppb0 at pci0 dev 1 function 0 "Intel 82G33 PCIE" rev 0x10: apic 2 int 16
+pci1 at ppb0 bus 4
+vga1 at pci1 dev 0 function 0 vendor "NVIDIA", unknown product 0x10c3 rev 0xa2
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+azalia0 at pci1 dev 0 function 1 vendor "NVIDIA", unknown product 0x0be3 rev 0xa1: apic 2 int 17
+azalia0: no supported codecs
+azalia1 at pci0 dev 27 function 0 "Intel 82801GB HD Audio" rev 0x01: apic 2 int 16
+azalia1: codecs: VIA/0x4397
+audio0 at azalia1
+ppb1 at pci0 dev 28 function 0 "Intel 82801GB PCIE" rev 0x01: apic 2 int 16
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 1 "Intel 82801GB PCIE" rev 0x01: apic 2 int 17
+pci3 at ppb2 bus 1
+re0 at pci3 dev 0 function 0 "Realtek 8101E" rev 0x02: RTL8102EL (0x2480), apic 2 int 17, address XXX
+rlphy0 at re0 phy 7: RTL8201L 10/100 PHY, rev. 1
+uhci0 at pci0 dev 29 function 0 "Intel 82801GB USB" rev 0x01: apic 2 int 23
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x01: apic 2 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x01: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801GB USB" rev 0x01: apic 2 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x01: apic 2 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb3 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xe1
+pci4 at ppb3 bus 3
+pcib0 at pci0 dev 31 function 0 "Intel 82801GB LPC" rev 0x01
+pciide0 at pci0 dev 31 function 1 "Intel 82801GB IDE" rev 0x01: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+pciide0: channel 0 disabled (no drives)
+pciide0: channel 1 disabled (no drives)
+pciide1 at pci0 dev 31 function 2 "Intel 82801GB SATA" rev 0x01: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide1: using apic 2 int 19 for native-PCI interrupt
+wd0 at pciide1 channel 0 drive 0: <MD3160GSATA>
+wd0: 16-sector PIO, LBA48, 152627MB, 312581808 sectors
+wd0(pciide1:0:0): using PIO mode 4, Ultra-DMA mode 6
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x01: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR2 SDRAM non-parity PC2-6400CL6
+spdmem1 at iic0 addr 0x52: 2GB DDR2 SDRAM non-parity PC2-6400CL6
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: W83627DHG-P rev 0x73
+lm1 at wbsio0 port 0x290/8: W83627DHG
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on wd0a (b0bb1375649da961.a) swap on wd0b dump on wd0b
+WARNING: / was not properly unmounted
+syncing disks...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4277862400 (4079MB)
+avail mem = 4133167104 (3941MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.4 @ 0xfc100 (20 entries)
+bios0: vendor American Megatrends Inc. version "P1.20" date 05/21/2012
+bios0: ASRock G31M-VS2
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S3 S4 S5
+acpi0: tables DSDT FACP APIC MCFG OEMB AAFT GSCI SSDT
+acpi0: wakeup devices P0P2(S4) P0P1(S4) PS2K(S4) PS2M(S4) USB0(S4) USB1(S4) USB2(S4) USB3(S4) EUSB(S4) MC97(S4) HDAC(S4) P0P4(S4) P0P5(S4) P0P6(S4) P0P7(S4) P0P8(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Pentium(R) Dual-Core CPU E6600 @ 3.06GHz, 3072.30 MHz, 06-17-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,XSAVE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 2MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 267MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Pentium(R) Dual-Core CPU E6600 @ 3.06GHz, 3071.93 MHz, 06-17-0a
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,XSAVE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 2MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 4 (P0P2)
+acpiprt2 at acpi0: bus 3 (P0P1)
+acpiprt3 at acpi0: bus 2 (P0P4)
+acpiprt4 at acpi0: bus 1 (P0P5)
+acpiprt5 at acpi0: bus -1 (P0P6)
+acpiprt6 at acpi0: bus -1 (P0P7)
+acpiprt7 at acpi0: bus -1 (P0P8)
+acpiprt8 at acpi0: bus -1 (P0P9)
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+acpibtn0 at acpi0: PWRB
+acpicpu0 at acpi0: C1(@1 halt!), PSS
+acpicpu1 at acpi0: C1(@1 halt!), PSS
+cpu0: Enhanced SpeedStep 3072 MHz: speeds: 3066, 2670, 2403, 2136, 1870, 1603 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel 82G33 Host" rev 0x10
+ppb0 at pci0 dev 1 function 0 "Intel 82G33 PCIE" rev 0x10: apic 2 int 16
+pci1 at ppb0 bus 4
+vga1 at pci1 dev 0 function 0 vendor "NVIDIA", unknown product 0x10c3 rev 0xa2
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+azalia0 at pci1 dev 0 function 1 vendor "NVIDIA", unknown product 0x0be3 rev 0xa1: apic 2 int 17
+azalia0: no supported codecs
+azalia1 at pci0 dev 27 function 0 "Intel 82801GB HD Audio" rev 0x01: apic 2 int 16
+azalia1: codecs: VIA/0x4397
+audio0 at azalia1
+ppb1 at pci0 dev 28 function 0 "Intel 82801GB PCIE" rev 0x01: apic 2 int 16
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 1 "Intel 82801GB PCIE" rev 0x01: apic 2 int 17
+pci3 at ppb2 bus 1
+re0 at pci3 dev 0 function 0 "Realtek 8101E" rev 0x02: RTL8102EL (0x2480), apic 2 int 17, address XXX
+rlphy0 at re0 phy 7: RTL8201L 10/100 PHY, rev. 1
+uhci0 at pci0 dev 29 function 0 "Intel 82801GB USB" rev 0x01: apic 2 int 23
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x01: apic 2 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x01: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801GB USB" rev 0x01: apic 2 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x01: apic 2 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb3 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xe1
+pci4 at ppb3 bus 3
+pcib0 at pci0 dev 31 function 0 "Intel 82801GB LPC" rev 0x01
+pciide0 at pci0 dev 31 function 1 "Intel 82801GB IDE" rev 0x01: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+pciide0: channel 0 disabled (no drives)
+pciide0: channel 1 disabled (no drives)
+pciide1 at pci0 dev 31 function 2 "Intel 82801GB SATA" rev 0x01: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide1: using apic 2 int 19 for native-PCI interrupt
+wd0 at pciide1 channel 0 drive 0: <MD3160GSATA>
+wd0: 16-sector PIO, LBA48, 152627MB, 312581808 sectors
+wd0(pciide1:0:0): using PIO mode 4, Ultra-DMA mode 6
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x01: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR2 SDRAM non-parity PC2-6400CL6
+spdmem1 at iic0 addr 0x52: 2GB DDR2 SDRAM non-parity PC2-6400CL6
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: W83627DHG-P rev 0x73
+lm1 at wbsio0 port 0x290/8: W83627DHG
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on wd0a (b0bb1375649da961.a) swap on wd0b dump on wd0b
+syncing disks...
+OpenBSD 6.8 (GENERIC.MP) #98: Sun Oct  4 18:13:26 MDT 2020
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4277862400 (4079MB)
+avail mem = 4133171200 (3941MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.4 @ 0xfc100 (20 entries)
+bios0: vendor American Megatrends Inc. version "P1.20" date 05/21/2012
+bios0: ASRock G31M-VS2
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S3 S4 S5
+acpi0: tables DSDT FACP APIC MCFG OEMB AAFT GSCI SSDT
+acpi0: wakeup devices P0P2(S4) P0P1(S4) PS2K(S4) PS2M(S4) USB0(S4) USB1(S4) USB2(S4) USB3(S4) EUSB(S4) MC97(S4) HDAC(S4) P0P4(S4) P0P5(S4) P0P6(S4) P0P7(S4) P0P8(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Pentium(R) Dual-Core CPU E6600 @ 3.06GHz, 3072.39 MHz, 06-17-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,XSAVE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 2MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 267MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Pentium(R) Dual-Core CPU E6600 @ 3.06GHz, 3071.93 MHz, 06-17-0a
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,XSAVE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 2MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 4 (P0P2)
+acpiprt2 at acpi0: bus 3 (P0P1)
+acpiprt3 at acpi0: bus 2 (P0P4)
+acpiprt4 at acpi0: bus 1 (P0P5)
+acpiprt5 at acpi0: bus -1 (P0P6)
+acpiprt6 at acpi0: bus -1 (P0P7)
+acpiprt7 at acpi0: bus -1 (P0P8)
+acpiprt8 at acpi0: bus -1 (P0P9)
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+acpibtn0 at acpi0: PWRB
+acpicpu0 at acpi0: C1(@1 halt!), PSS
+acpicpu1 at acpi0: C1(@1 halt!), PSS
+cpu0: Enhanced SpeedStep 3072 MHz: speeds: 3066, 2670, 2403, 2136, 1870, 1603 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel 82G33 Host" rev 0x10
+ppb0 at pci0 dev 1 function 0 "Intel 82G33 PCIE" rev 0x10: apic 2 int 16
+pci1 at ppb0 bus 4
+vga1 at pci1 dev 0 function 0 vendor "NVIDIA", unknown product 0x10c3 rev 0xa2
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+azalia0 at pci1 dev 0 function 1 vendor "NVIDIA", unknown product 0x0be3 rev 0xa1: apic 2 int 17
+azalia0: no supported codecs
+azalia1 at pci0 dev 27 function 0 "Intel 82801GB HD Audio" rev 0x01: apic 2 int 16
+azalia1: codecs: VIA/0x4397
+audio0 at azalia1
+ppb1 at pci0 dev 28 function 0 "Intel 82801GB PCIE" rev 0x01: apic 2 int 16
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 1 "Intel 82801GB PCIE" rev 0x01: apic 2 int 17
+pci3 at ppb2 bus 1
+re0 at pci3 dev 0 function 0 "Realtek 8101E" rev 0x02: RTL8102EL (0x2480), apic 2 int 17, address XXX
+rlphy0 at re0 phy 7: RTL8201L 10/100 PHY, rev. 1
+uhci0 at pci0 dev 29 function 0 "Intel 82801GB USB" rev 0x01: apic 2 int 23
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x01: apic 2 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x01: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801GB USB" rev 0x01: apic 2 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x01: apic 2 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb3 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xe1
+pci4 at ppb3 bus 3
+pcib0 at pci0 dev 31 function 0 "Intel 82801GB LPC" rev 0x01
+pciide0 at pci0 dev 31 function 1 "Intel 82801GB IDE" rev 0x01: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+pciide0: channel 0 disabled (no drives)
+pciide0: channel 1 disabled (no drives)
+pciide1 at pci0 dev 31 function 2 "Intel 82801GB SATA" rev 0x01: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide1: using apic 2 int 19 for native-PCI interrupt
+wd0 at pciide1 channel 0 drive 0: <MD3160GSATA>
+wd0: 16-sector PIO, LBA48, 152627MB, 312581808 sectors
+wd0(pciide1:0:0): using PIO mode 4, Ultra-DMA mode 6
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x01: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR2 SDRAM non-parity PC2-6400CL6
+spdmem1 at iic0 addr 0x52: 2GB DDR2 SDRAM non-parity PC2-6400CL6
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: W83627DHG-P rev 0x73
+lm1 at wbsio0 port 0x290/8: W83627DHG
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on wd0a (b0bb1375649da961.a) swap on wd0b dump on wd0b

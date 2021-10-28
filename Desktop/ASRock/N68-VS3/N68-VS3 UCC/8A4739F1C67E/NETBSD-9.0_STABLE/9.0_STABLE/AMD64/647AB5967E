@@ -1,0 +1,202 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.0_STABLE (XEN3_DOM0) #2: Wed Sep 23 21:53:13 CEST 2020
+	root@xen:/usr/src/sys/arch/amd64/compile/XEN3_DOM0
+total memory = 2048 MB
+avail memory = 1965 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+running cgd selftest aes-xts-256 aes-xts-512 done
+To Be Filled By O.E.M. To Be Filled By O.E.M. (To Be Filled By O.E.M.)
+mainbus0 (root)
+ACPI: RSDP 0x00000000000F96A0 000014 (v00 ACPIAM)
+ACPI: RSDT 0x00000000DBFB0000 000044 (v01 A_M_I  OEMRSDT  03001104 MSFT 00000097)
+ACPI: FACP 0x00000000DBFB0200 000084 (v02 A_M_I  OEMFACP  12000601 MSFT 00000097)
+ACPI: DSDT 0x00000000DBFB0460 0048D5 (v01 AS509  AS509101 00000101 INTL 20051117)
+ACPI: FACS 0x00000000DBFC0000 000040
+ACPI: APIC 0x00000000DBFB0390 000090 (v01 A_M_I  OEMAPIC  03001104 MSFT 00000097)
+ACPI: MCFG 0x00000000DBFB0420 00003C (v01 A_M_I  OEMMCFG  03001104 MSFT 00000097)
+ACPI: OEMB 0x00000000DBFC0040 000061 (v01 A_M_I  AMI_OEM  03001104 MSFT 00000097)
+ACPI: SRAT 0x00000000DBFB4D40 0000B8 (v03 AMD    FAM_F_10 00000002 AMD  00000001)
+ACPI: MSCT 0x00000000DBFB4E00 00004E (v01 A M I  OEMBOARD 00000001 AMD  00000001)
+ACPI: AAFT 0x00000000DBFB4E50 000027 (v01 A_M_I  OEMAAFT  03001104 MSFT 00000097)
+ACPI: HPET 0x00000000DBFB4E80 000038 (v01 A_M_I  OEMHPET0 03001104 MSFT 00000097)
+ACPI: 1 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 1: pa 0xfec00000, version 0x11, 24 pins
+cpu0 at mainbus0 apid 0
+hypervisor0 at mainbus0: Xen version 4.11.0nb1
+hypervisor0: features:  pae_pgdir_above_4gb mmu_pt_update_preserve_ad highmem_assist gnttab_map_avail_bits
+VIRQ_DEBUG interrupt using event channel 1
+vcpu0 at hypervisor0
+vcpu0: AMD Sempron(tm) 145 Processor, id 0x100f63
+vcpu0: package 0, core 0, smt 0
+vcpu0: SVM disabled by the BIOS
+xenbus0 at hypervisor0: Xen Virtual Bus Interface
+xencons0 at hypervisor0: Xen Virtual Console Driver
+acpi0 at hypervisor0: Intel ACPICA 20190405
+acpi0: X/RSDT: OemId <A_M_I ,OEMRSDT ,03001104>, AslId <MSFT,00000097>
+acpi0: MCFG: segment 0, bus 0-31, address 0x00000000fc000000
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+TMR (PNP0100) at acpi0 not configured
+pcppi0 at acpi0 (SPKR, PNP0800): io 0x61
+RMSC (PNP0C02) at acpi0 not configured
+OMSC (PNP0C02) at acpi0 not configured
+SIOR (PNP0C02) at acpi0 not configured
+PCIE (PNP0C02) at acpi0 not configured
+RMEM (PNP0C01) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C-170): ACPI Power Button
+ACPI: Enabled 1 GPEs in block 00 to 1F
+pci0 at hypervisor0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled
+vendor 10de product 03e2 (RAM memory, revision 0xa1) at pci0 dev 0 function 0 not configured
+pcib0 at pci0 dev 1 function 0: vendor 10de product 03e1 (rev. 0xa2)
+vendor 10de product 03eb (SMBus serial bus, revision 0xa2) at pci0 dev 1 function 1 not configured
+vendor 10de product 03f5 (RAM memory, revision 0xa2) at pci0 dev 1 function 2 not configured
+ohci0 at pci0 dev 2 function 0: vendor 10de product 03f1 (rev. 0xa3)
+LUB0: Picked IRQ 20 with weight 0
+ohci0: interrupting at ioapic0 pin 20
+ohci0: OHCI version 1.0, legacy support
+usb0 at ohci0: USB revision 1.0
+ehci0 at pci0 dev 2 function 1: vendor 10de product 03f2 (rev. 0xa3)
+LUB2: Picked IRQ 21 with weight 0
+ehci0: interrupting at ioapic0 pin 21
+ehci0: BIOS has given up ownership
+ehci0: EHCI version 1.0
+ehci0: 1 companion controller, 10 ports: ohci0
+usb1 at ehci0: USB revision 2.0
+ppb0 at pci0 dev 4 function 0: vendor 10de product 03f3 (rev. 0xa1)
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled
+viaide0 at pci0 dev 6 function 0: NVIDIA MCP61 IDE Controller (rev. 0xa2)
+viaide0: bus-master DMA support present
+viaide0: primary channel configured to compatibility mode
+viaide0: primary channel interrupting at ioapic0 pin 14
+atabus0 at viaide0 channel 0
+viaide0: secondary channel configured to compatibility mode
+viaide0: secondary channel ignored (disabled)
+nfe0 at pci0 dev 7 function 0: vendor 10de product 03ef (rev. 0xa2)
+LMAC: Picked IRQ 22 with weight 0
+nfe0: interrupting at ioapic0 pin 22
+nfe0: Ethernet address XXX
+rlphy0 at nfe0 phy 0: RTL8201L 10/100 media interface, rev. 1
+rlphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+viaide1 at pci0 dev 8 function 0: NVIDIA MCP61 Serial ATA Controller (rev. 0xa2)
+viaide1: bus-master DMA support present
+viaide1: primary channel wired to native-PCI mode
+LSA0: Picked IRQ 23 with weight 0
+viaide1: using ioapic0 pin 23 for native-PCI interrupt
+atabus1 at viaide1 channel 0
+viaide1: secondary channel wired to native-PCI mode
+atabus2 at viaide1 channel 1
+viaide2 at pci0 dev 8 function 1: NVIDIA MCP61 Serial ATA Controller (rev. 0xa2)
+viaide2: bus-master DMA support present
+viaide2: primary channel wired to native-PCI mode
+LSA1: Picked IRQ 20 with weight 1
+viaide2: using ioapic0 pin 20 for native-PCI interrupt
+atabus3 at viaide2 channel 0
+viaide2: secondary channel wired to native-PCI mode
+atabus4 at viaide2 channel 1
+ppb1 at pci0 dev 9 function 0: vendor 10de product 03e8 (rev. 0xa2)
+ppb1: PCI Express capability version 1 <Root Port of PCI-E Root Complex> x16 @ 2.5GT/s
+pci2 at ppb1 bus 2
+pci2: i/o space, memory space enabled
+ppb2 at pci0 dev 11 function 0: vendor 10de product 03e9 (rev. 0xa2)
+ppb2: PCI Express capability version 1 <Root Port of PCI-E Root Complex> x1 @ 2.5GT/s
+pci3 at ppb2 bus 3
+pci3: i/o space, memory space enabled
+ppb3 at pci0 dev 12 function 0: vendor 10de product 03e9 (rev. 0xa2)
+ppb3: PCI Express capability version 1 <Root Port of PCI-E Root Complex> x1 @ 2.5GT/s
+pci4 at ppb3 bus 4
+pci4: i/o space, memory space enabled
+vga0 at pci0 dev 13 function 0: vendor 10de product 03d6 (rev. 0xa2)
+wsdisplay0 at vga0 kbdmux 1: console (80x25, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at vga0 not configured
+pchb0 at pci0 dev 24 function 0: vendor 1022 product 1200 (rev. 0x00)
+pchb1 at pci0 dev 24 function 1: vendor 1022 product 1201 (rev. 0x00)
+pchb2 at pci0 dev 24 function 2: vendor 1022 product 1202 (rev. 0x00)
+amdnb_misc0 at pci0 dev 24 function 3: AMD NB Misc Configuration
+amdtemp0 at amdnb_misc0: AMD CPU Temperature Sensors (Family10h)
+pchb3 at pci0 dev 24 function 4: vendor 1022 product 1204 (rev. 0x00)
+isa0 at pcib0
+pckbc0 at isa0 port 0x60-0x64
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "xen_system_time" frequency 1000000000 Hz quality 10000
+Xen vcpu0 clock: using event channel 8
+xenbus0: using event channel 9
+IPsec: Initialized Security Association Processing.
+uhub0 at usb0: NetBSD (0000) OHCI root hub (0000), class 9/0, rev 1.00/1.00, addr 1
+uhub0: 10 ports with 10 removable, self powered
+uhub1 at usb1: NetBSD (0000) EHCI root hub (0000), class 9/0, rev 2.00/1.00, addr 1
+uhub1: 10 ports with 10 removable, self powered
+viaide1 port 0: device present, speed: 3.0Gb/s
+viaide1 port 1: device present, speed: 1.5Gb/s
+uhidev0 at uhub0 port 1 configuration 1 interface 0
+uhidev0: USB (0xc45) USB Device (0x800a), rev 1.10/0.01, addr 2, iclass 3/1
+uhidev0: 3 report ids
+uhid0 at uhidev0 reportid 1: input=2, output=0, feature=0
+uhid1 at uhidev0 reportid 2: input=2, output=0, feature=0
+ukbd0 at uhidev0 reportid 3
+wd0 at atabus0 drive 0
+wd0: <ST380011A>
+wd0: drive supports 16-sector PIO transfers, LBA48 addressing
+wd0: 76319 MB, 155061 cyl, 16 head, 63 sec, 512 bytes/sect x 156301488 sectors
+wd0: 32-bit data port
+wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 5 (Ultra/100)
+wd0(viaide0:0:0): using PIO mode 4, Ultra-DMA mode 5 (Ultra/100) (using DMA)
+wd1 at atabus1 drive 0
+wd1: <WDC WD2502ABYS-01B7A0>
+wd1: drive supports 16-sector PIO transfers, LBA48 addressing
+wd1: 233 GB, 486459 cyl, 16 head, 63 sec, 512 bytes/sect x 490350672 sectors
+wd1: 32-bit data port
+wd1: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags)
+wd1(viaide1:0:0): using PIO mode 4, Ultra-DMA mode 6 (Ultra/133) (using DMA), WRITE DMA FUA EXT
+wd2 at atabus2 drive 0
+wd2: <TOSHIBA DT01ACA100>
+wd2: drive supports 16-sector PIO transfers, LBA48 addressing
+wd2: 931 GB, 1938021 cyl, 16 head, 63 sec, 512 bytes/sect x 1953525168 sectors (0 bytes/physsect; first aligned sector: 8)
+wd2: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+autoconfiguration error: wd2: bad GPT partition array CRC
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub0 port 1 configuration 1 interface 1
+uhidev1: USB (0xc45) USB Device (0x800a), rev 1.10/0.01, addr 2, iclass 3/1
+wd2: 32-bit data port
+wd2: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), WRITE DMA FUA, NCQ (32 tags) w/PRIO
+wd2(viaide1:1:0): using PIO mode 4, Ultra-DMA mode 6 (Ultra/133) (using DMA), WRITE DMA FUA EXT
+ums0 at uhidev1: 5 buttons and Z dir
+wsmouse0 at ums0 mux 0
+uhidev2 at uhub0 port 1 configuration 1 interface 2
+uhidev2: USB (0xc45) USB Device (0x800a), rev 1.10/0.01, addr 2, iclass 3/1
+uhid2 at uhidev2: input=8, output=8, feature=8
+uhidev3 at uhub0 port 1 configuration 1 interface 3
+uhidev3: USB (0xc45) USB Device (0x800a), rev 1.10/0.01, addr 2, iclass 3/1
+uhid3 at uhidev3: input=12, output=4, feature=0
+WARNING: 1 error while detecting hardware; check system log.
+boot device: wd0
+root on wd1a dumps on wd1b
+Your machine does not initialize mem_clusters; sparse_dumps disabled
+/: replaying log to memory
+kern.module.path=/stand/amd64-xen/9.0/modules
+/: replaying log to disk
+uhidev4 at uhub0 port 2 configuration 1 interface 0
+uhidev4: vendor 04d9 (0x4d9) USB Keyboard (0x1603), rev 1.10/3.10, addr 3, iclass 3/1
+ukbd1 at uhidev4
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev5 at uhub0 port 2 configuration 1 interface 1
+uhidev5: vendor 04d9 (0x4d9) USB Keyboard (0x1603), rev 1.10/3.10, addr 3, iclass 3/0
+uhidev5: 2 report ids
+uhid4 at uhidev5 reportid 1: input=1, output=0, feature=0
+uhid5 at uhidev5 reportid 2: input=3, output=0, feature=0
+wsdisplay0: screen 1 added (80x25, vt100 emulation)
+wsdisplay0: screen 2 added (80x25, vt100 emulation)
+wsdisplay0: screen 3 added (80x25, vt100 emulation)
+wsdisplay0: screen 4 added (80x25, vt100 emulation)
+/home: replaying log to disk
+/xen: replaying log to disk

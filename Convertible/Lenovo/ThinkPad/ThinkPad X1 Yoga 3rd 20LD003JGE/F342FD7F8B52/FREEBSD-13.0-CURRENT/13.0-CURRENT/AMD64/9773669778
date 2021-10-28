@@ -1,0 +1,667 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-CURRENT #0 main-c255520-g8c45fe5d8ec: Sun Jan  3 01:00:46 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.0-0-g176249bd673)
+VT(efifb): resolution 2560x1440
+module_register: cannot register tmpfs from kernel; already loaded from tmpfs.ko
+Module tmpfs failed to register: 17
+CPU: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (1992.09-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0x9c002600<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16353792000 (15596 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <LENOVO TP-N25  >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 5 2 6 7 3 4
+Timecounter "TSC" frequency 1992088573 Hz quality 1000
+Cuse v0.1.36 @ /dev/cuse
+random: entropy device external interface
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd1 at kbdmux0
+000.000050 [4346] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <LENOVO TP-N25>
+acpi_ec0: <Embedded Controller: GPE 0x16, ECDT> port 0x62,0x66 on acpi0
+acpi0: Power Button (fixed)
+unknown: memory range not supported
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xe000-0xe03f mem 0x2ffe000000-0x2ffeffffff,0xc0000000-0xdfffffff irq 16 at device 2.0 on pci0
+acpi_video0: <ACPI video extension> on vgapci0
+vgapci0: Boot video device
+pci0: <old, non-VGA display device> at device 19.0 (no driver attached)
+xhci0: <Intel Sunrise Point-LP USB 3.0 controller> mem 0xe0520000-0xe052ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <network> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 28.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <wireless controller> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci3: <ACPI PCI bus> on pcib3
+nvme0: <Generic NVMe Device> mem 0xe0200000-0xe0203fff at device 0.0 on pci3
+pcib4: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake-LP HDA Controller> mem 0x2fff018000-0x2fff01bfff,0x2fff000000-0x2fff00ffff at device 31.3 on pci0
+em0: <Intel(R) PRO/1000 Network Connection> mem 0xe0500000-0xe051ffff at device 31.6 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+acpi_button0: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 13.0.
+psm0: model Synaptics Touchpad, device ID 0
+acpi_ibm0: <ThinkPad ACPI Extras> on acpi0
+acpi_ibm0: Firmware version is 0x200
+acpi_acad0: <AC Adapter> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+module_register_init: MOD_LOAD (tmpfs, 0xffffffff80ce3390, 0xffffffff82145b10) error 17
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <SAMSUNG MZVLB1T0HALR-000L7> NVMe namespace
+nvd0: 976762MB (2000409264 512 byte sectors)
+hdacc0: <Realtek ALC285 HDA CODEC> at cad 0 on hdac0
+GEOM_ELI: Device nvd0p4.eli created.
+hdaa0: <Realtek ALC285 Audio Function Group>GEOM_ELI: Encryption: AES-XTS 256
+GEOM_ELI:     Crypto: accelerated software
+ at nid 1 on hdacc0
+pcm0: <Realtek ALC285 (Analog 2.0+HP/2.0)> at nid 20,33 and 18 on hdaa0
+pcm1: <Realtek ALC285 (Right Analog Mic)> at nid 25 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+pcm2: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+sysctl_unregister_oid: failed(22) to unregister sysctl(tmpfs)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+uhub0: 18 ports with 18 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <Wacom Co.,Ltd. Intuos PTS> at usbus0
+ugen0.3: <Generic 4-Port USB 2.0 Hub> at usbus0
+uhub1 on uhub0
+uhub1: <Generic 4-Port USB 2.0 Hub, class 9/0, rev 2.10/1.04, addr 2> on usbus0
+uhub1: MTT enabled
+Root mount waiting for: usbus0
+uhub1: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.4: <La-VIEW Technology SteelSeries> at usbus0
+ukbd0 on uhub1
+ukbd0: <La-VIEW Technology SteelSeries, class 0/0, rev 2.00/0.00, addr 3> on usbus0
+kbd2 at ukbd0
+ugen0.5: <CM Storm Quickfire TKL 6keys> at usbus0
+ukbd1 on uhub1
+ukbd1: <CM Storm Quickfire TKL 6keys, class 0/0, rev 1.10/1.11, addr 4> on usbus0
+kbd3 at ukbd1
+Root mount waiting for: usbus0
+ugen0.6: <vendor 0x046d HD Pro Webcam C920> at usbus0
+ugen0.7: <Burr-Brown from TI USB Audio CODEC> at usbus0
+Root mount waiting for: usbus0
+ugen0.8: <vendor 0x8087 product 0x0a2b> at usbus0
+Root mount waiting for: usbus0
+ugen0.9: <SunplusIT Inc Integrated Camera> at usbus0
+Root mount waiting for: usbus0
+ugen0.10: <vendor 0x06cb product 0x009a> at usbus0
+ugen0.11: <Wacom Co.,Ltd. Pen and multitouch sensor> at usbus0
+Root mount waiting for: usbus0
+ugen0.12: <Generic 4-Port USB 3.0 Hub> at usbus0
+uhub2 on uhub0
+uhub2: <Interrupt In Interface> on usbus0
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.13: <Generic USB3.0-CRW> at usbus0
+umass0 on uhub0
+umass0: <Bulk-In, Bulk-Out, Interface> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:0:0: Attached to scbus0
+(probe0:umass-sim0:0:0:0): REPORT LUNS. CDB: a0 00 00 00 00 00 00 00 00 10 00 00 
+(probe0:umass-sim0:0:0:0): CAM status: SCSI Status Error
+(probe0:umass-sim0:0:0:0): SCSI status: Check Condition
+(probe0:umass-sim0:0:0:0): SCSI sense: ILLEGAL REQUEST asc:24,0 (Invalid field in CDB)
+(probe0:umass-sim0:0:0:0): Error 22, Unretryable error
+da0 at umass-sim0 bus 0 scbus0 target 0 lun 0
+da0: <Generic- SD/MMC CRW 1.00> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+GEOM_ELI: Device nvd0p3.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: accelerated software
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+Failed to add WC MTRR for [0xc0000000-0xdfffffff]: -22; performance may suffer
+[drm] Got stolen memory base 0xaa800000, size 0x2000000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector eDP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.eDP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Reducing the compressed framebuffer size. This may lead to less power savings than a non-reduced-size. Try to increase stolen memory size if available in BIOS.
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] Initialized i915 1.6.0 20190822 for drmn0 on minor 0
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 13.0.
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1440 width=2560 depth=32
+cmsize=16 size=14745600
+pbase=0xc0000000 vbase=0xfffff800c0000000
+name=drmn0 flags=0x0 stride=10240 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: i915drmfb frame buffer device
+lo0: link state changed to UP
+i915/kbl_dmc_ver1_04.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: i915/kbl_dmc_ver1_04.bin
+drmn0: successfully loaded firmware image with mapped name: i915_kbl_dmc_ver1_04_bin
+[drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+pchtherm0: <Skylake PCH Thermal Subsystem> mem 0x2fff01f000-0x2fff01ffff at device 20.2 on pci0
+ig4iic0: <Intel Sunrise Point-LP I2C Controller-0> mem 0x2fff01e000-0x2fff01efff at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+iwm0: <Intel(R) Dual Band Wireless AC 8265> mem 0xe0400000-0xe0401fff at device 0.0 on pci1
+iwm0: hw rev 0x230, fw ver 22.361476.0, address XXX
+ichsmb0: <Intel Sunrise Point-LP SMBus controller> port 0xefa0-0xefbf mem 0x2fff01c000-0x2fff01c0ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMI1.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WMI2.WQBB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134_SB.WMI3.WQBC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134_SB.AMW0.WQDD: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+uhid0 on uhub0
+uhid0: <Wacom Co.,Ltd. Intuos PTS, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+uhid1 on uhub0
+uhid1: <Wacom Co.,Ltd. Intuos PTS, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+uhid2 on uhub0
+uhid2: <Wacom Co.,Ltd. Intuos PTS, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+uhid0: at uhub0, port 1, addr 1 (disconnected)
+uhid0: detached
+uhid0 on uhub1
+uhid0: <CM Storm Quickfire TKL 6keys, class 0/0, rev 1.10/1.11, addr 4> on usbus0
+uhid3 on uhub1
+uhid3: <Burr-Brown from TI USB Audio CODEC, class 0/0, rev 1.10/1.00, addr 6> on usbus0
+wmt0 on uhub0
+wmt0: <Multitouch> on usbus0
+wmt0: Multitouch touchscreen with 0 external buttons
+wmt0: 10 contacts and [C]. Report range [0:0] - [12372:6960]
+uhid4 on uhub0
+uhid4: <Pen> on usbus0
+uhid5 on uhub0
+uhid5: <Wacom Co.,Ltd. Intuos PTS, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+ums0 on uhub1
+ums0: <La-VIEW Technology SteelSeries, class 0/0, rev 2.00/0.00, addr 3> on usbus0
+ums0: 8 buttons and [XYZT] coordinates ID=1
+uaudio0 on uhub1
+uaudio0: <vendor 0x046d HD Pro Webcam C920, class 239/2, rev 2.00/0.11, addr 5> on usbus0
+uaudio0: No playback.
+uaudio0: Record[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 24000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm3: <USB audio> on uaudio0
+uaudio0: No HID volume keys found.
+uaudio1 on uhub1
+uaudio1: <Burr-Brown from TI USB Audio CODEC, class 0/0, rev 1.10/1.00, addr 6> on usbus0
+uaudio1: Play[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 22050 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 11025 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: No MIDI sequencer.
+pcm4: <USB audio> on uaudio1
+uaudio1: HID volume keys found.
+wmt0: at uhub0, port 10, addr 10 (disconnected)
+wmt0: detached
+uhid4: at uhub0, port 10, addr 10 (disconnected)
+uhid4: detached
+wlan0: Ethernet address: ...
+wlan0: link state changed to UP
+Security policy loaded: MAC/ntpd (mac_ntpd)
+uhid5: at uhub0, port 1, addr 1 (disconnected)
+uhid5: detached
+uhid1: at uhub0, port 1, addr 1 (disconnected)
+uhid1: detached
+uhid2: at uhub0, port 1, addr 1 (disconnected)
+uhid2: detached
+uaudio0: at uhub1, port 3, addr 5 (disconnected)
+pcm3: detached
+uaudio0: detached
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+uaudio1: at uhub1, port 4, addr 6 (disconnected)
+pcm4: detached
+uaudio1: detached
+uhid3: at uhub1, port 4, addr 6 (disconnected)
+uhid3: detached
+umass0: at uhub0, port 15, addr 12 (disconnected)
+da0 at umass-sim0 bus 0 scbus0 target 0 lun 0
+da0: <Generic- SD/MMC CRW 1.00>  s/n ... detached
+(da0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+ugen0.13: <Generic USB3.0-CRW> at usbus0 (disconnected)
+pid 73348 (emacs-27.1), jid 0, uid 1001: exited on signal 6 (core dumped)
+wlan0: link state changed to DOWN
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+Uptime: 8m59s
+GEOM_ELI: Device nvd0p3.eli destroyed.
+GEOM_ELI: Detached nvd0p3.eli on last close.
+GEOM_ELI: Device nvd0p4.eli destroyed.
+GEOM_ELI: Detached nvd0p4.eli on last close.
+ums0: detached
+ukbd0: detached
+ukbd1: detached
+uhid0: detached
+uhub1: detached
+uhub2: detached
+uhub0: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-CURRENT #0 main-c255520-g8c45fe5d8ec: Sun Jan  3 01:00:46 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.0-0-g176249bd673)
+VT(efifb): resolution 2560x1440
+module_register: cannot register tmpfs from kernel; already loaded from tmpfs.ko
+Module tmpfs failed to register: 17
+CPU: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (1992.08-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0x9c002600<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16353792000 (15596 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <LENOVO TP-N25  >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 2 4 6 7 5 3
+Timecounter "TSC" frequency 1992080206 Hz quality 1000
+Cuse v0.1.36 @ /dev/cuse
+random: entropy device external interface
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd1 at kbdmux0
+000.000050 [4346] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <LENOVO TP-N25>
+acpi_ec0: <Embedded Controller: GPE 0x16, ECDT> port 0x62,0x66 on acpi0
+acpi0: Power Button (fixed)
+unknown: memory range not supported
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xe000-0xe03f mem 0x2ffe000000-0x2ffeffffff,0xc0000000-0xdfffffff irq 16 at device 2.0 on pci0
+acpi_video0: <ACPI video extension> on vgapci0
+vgapci0: Boot video device
+pci0: <old, non-VGA display device> at device 19.0 (no driver attached)
+xhci0: <Intel Sunrise Point-LP USB 3.0 controller> mem 0xe0520000-0xe052ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <network> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 28.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <wireless controller> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci3: <ACPI PCI bus> on pcib3
+nvme0: <Generic NVMe Device> mem 0xe0200000-0xe0203fff at device 0.0 on pci3
+pcib4: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake-LP HDA Controller> mem 0x2fff018000-0x2fff01bfff,0x2fff000000-0x2fff00ffff at device 31.3 on pci0
+em0: <Intel(R) PRO/1000 Network Connection> mem 0xe0500000-0xe051ffff at device 31.6 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+acpi_button0: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 13.0.
+psm0: model Synaptics Touchpad, device ID 0
+acpi_ibm0: <ThinkPad ACPI Extras> on acpi0
+acpi_ibm0: Firmware version is 0x200
+acpi_acad0: <AC Adapter> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+module_register_init: MOD_LOAD (tmpfs, 0xffffffff80ce3390, 0xffffffff818f2970) error 17
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <SAMSUNG MZVLB1T0HALR-000L7> NVMe namespace
+nvd0: 976762MB (2000409264 512 byte sectors)
+GEOM_ELI: Device nvd0p4.eli created.
+hdacc0: <Realtek ALC285 HDA CODEC>GEOM_ELI: Encryption: AES-XTS 256
+GEOM_ELI:     Crypto: accelerated software
+ at cad 0 on hdac0
+hdaa0: <Realtek ALC285 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC285 (Analog 2.0+HP/2.0)> at nid 20,33 and 18 on hdaa0
+pcm1: <Realtek ALC285 (Right Analog Mic)> at nid 25 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+pcm2: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+sysctl_unregister_oid: failed(22) to unregister sysctl(tmpfs)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+uhub0: 18 ports with 18 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <Wacom Co.,Ltd. Intuos PTS> at usbus0
+ugen0.3: <Generic 4-Port USB 2.0 Hub> at usbus0
+uhub1 on uhub0
+uhub1: <Generic 4-Port USB 2.0 Hub, class 9/0, rev 2.10/1.04, addr 2> on usbus0
+uhub1: MTT enabled
+Root mount waiting for: usbus0
+uhub1: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.4: <La-VIEW Technology SteelSeries> at usbus0
+ukbd0 on uhub1
+ukbd0: <La-VIEW Technology SteelSeries, class 0/0, rev 2.00/0.00, addr 3> on usbus0
+kbd2 at ukbd0
+ugen0.5: <CM Storm Quickfire TKL 6keys> at usbus0
+ukbd1 on uhub1
+ukbd1: <CM Storm Quickfire TKL 6keys, class 0/0, rev 1.10/1.11, addr 4> on usbus0
+kbd3 at ukbd1
+Root mount waiting for: usbus0
+ugen0.6: <vendor 0x046d HD Pro Webcam C920> at usbus0
+ugen0.7: <Burr-Brown from TI USB Audio CODEC> at usbus0
+Root mount waiting for: usbus0
+ugen0.8: <vendor 0x8087 product 0x0a2b> at usbus0
+Root mount waiting for: usbus0
+ugen0.9: <SunplusIT Inc Integrated Camera> at usbus0
+ugen0.10: <vendor 0x06cb product 0x009a> at usbus0
+Root mount waiting for: usbus0
+ugen0.11: <Wacom Co.,Ltd. Pen and multitouch sensor> at usbus0
+Root mount waiting for: usbus0
+ugen0.12: <Generic 4-Port USB 3.0 Hub> at usbus0
+uhub2 on uhub0
+uhub2: <Interrupt In Interface> on usbus0
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.13: <Generic USB3.0-CRW> at usbus0
+umass0 on uhub0
+umass0: <Bulk-In, Bulk-Out, Interface> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:0:0: Attached to scbus0
+(probe0:umass-sim0:0:0:0): REPORT LUNS. CDB: a0 00 00 00 00 00 00 00 00 10 00 00 
+(probe0:umass-sim0:0:0:0): CAM status: SCSI Status Error
+(probe0:umass-sim0:0:0:0): SCSI status: Check Condition
+(probe0:umass-sim0:0:0:0): SCSI sense: ILLEGAL REQUEST asc:24,0 (Invalid field in CDB)
+(probe0:umass-sim0:0:0:0): Error 22, Unretryable error
+da0 at umass-sim0 bus 0 scbus0 target 0 lun 0
+da0: <Generic- SD/MMC CRW 1.00> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+GEOM_ELI: Device nvd0p3.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: accelerated software
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+Failed to add WC MTRR for [0xc0000000-0xdfffffff]: -22; performance may suffer
+[drm] Got stolen memory base 0xaa800000, size 0x2000000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector eDP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.eDP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Reducing the compressed framebuffer size. This may lead to less power savings than a non-reduced-size. Try to increase stolen memory size if available in BIOS.
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] Initialized i915 1.6.0 20190822 for drmn0 on minor 0
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 13.0.
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1440 width=2560 depth=32
+cmsize=16 size=14745600
+pbase=0xc0000000 vbase=0xfffff800c0000000
+name=drmn0 flags=0x0 stride=10240 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: i915drmfb frame buffer device
+lo0: link state changed to UP
+i915/kbl_dmc_ver1_04.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: i915/kbl_dmc_ver1_04.bin
+drmn0: successfully loaded firmware image with mapped name: i915_kbl_dmc_ver1_04_bin
+[drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+pchtherm0: <Skylake PCH Thermal Subsystem> mem 0x2fff01f000-0x2fff01ffff at device 20.2 on pci0
+ig4iic0: <Intel Sunrise Point-LP I2C Controller-0> mem 0x2fff01e000-0x2fff01efff at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+iwm0: <Intel(R) Dual Band Wireless AC 8265> mem 0xe0400000-0xe0401fff at device 0.0 on pci1
+iwm0: hw rev 0x230, fw ver 22.361476.0, address XXX
+ichsmb0: <Intel Sunrise Point-LP SMBus controller> port 0xefa0-0xefbf mem 0x2fff01c000-0x2fff01c0ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMI1.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WMI2.WQBB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134_SB.WMI3.WQBC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134_SB.AMW0.WQDD: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+uhid0 on uhub0
+uhid0: <Wacom Co.,Ltd. Intuos PTS, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+uhid1 on uhub0
+uhid1: <Wacom Co.,Ltd. Intuos PTS, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+uhid2 on uhub0
+uhid2: <Wacom Co.,Ltd. Intuos PTS, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+uhid1: at uhub0, port 1, addr 1 (disconnected)
+uhid1: detached
+uhid0: at uhub0, port 1, addr 1 (disconnected)
+uhid0: detached
+uhid0 on uhub1
+uhid0: <CM Storm Quickfire TKL 6keys, class 0/0, rev 1.10/1.11, addr 4> on usbus0
+uhid1 on uhub1
+uhid1: <Burr-Brown from TI USB Audio CODEC, class 0/0, rev 1.10/1.00, addr 6> on usbus0
+wmt0 on uhub0
+wmt0: <Multitouch> on usbus0
+wmt0: Multitouch touchscreen with 0 external buttons
+wmt0: 10 contacts and [C]. Report range [0:0] - [12372:6960]
+uhid3 on uhub0
+uhid3: <Pen> on usbus0
+uhid4 on uhub0
+uhid4: <Wacom Co.,Ltd. Intuos PTS, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+uhid5 on uhub0
+uhid5: <Wacom Co.,Ltd. Intuos PTS, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+ums0 on uhub1
+ums0: <La-VIEW Technology SteelSeries, class 0/0, rev 2.00/0.00, addr 3> on usbus0
+ums0: 8 buttons and [XYZT] coordinates ID=1
+uaudio0 on uhub1
+uaudio0: <vendor 0x046d HD Pro Webcam C920, class 239/2, rev 2.00/0.11, addr 5> on usbus0
+uaudio0: No playback.
+uaudio0: Record[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 24000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm3: <USB audio> on uaudio0
+uaudio0: No HID volume keys found.
+uaudio1 on uhub1
+uaudio1: <Burr-Brown from TI USB Audio CODEC, class 0/0, rev 1.10/1.00, addr 6> on usbus0
+uaudio1: Play[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Play[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 22050 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: Record[0]: 11025 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio1: No MIDI sequencer.
+pcm4: <USB audio> on uaudio1
+uaudio1: HID volume keys found.
+wmt0: at uhub0, port 10, addr 10 (disconnected)
+wmt0: detached
+uhid3: at uhub0, port 10, addr 10 (disconnected)
+uhid3: detached
+wlan0: Ethernet address: ...
+wlan0: link state changed to UP
+Security policy loaded: MAC/ntpd (mac_ntpd)
+drm: not enough stolen space for compressed buffer (need 46448640 more bytes), disabling. Hint: you may be able to increase stolen memory size in the BIOS to avoid this.

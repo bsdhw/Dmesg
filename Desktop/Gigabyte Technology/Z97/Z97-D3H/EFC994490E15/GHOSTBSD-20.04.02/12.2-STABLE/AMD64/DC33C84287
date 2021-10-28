@@ -1,0 +1,354 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-STABLE GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz (3200.06-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306c3  Family=0x6  Model=0x3c  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x21<LAHF,ABM>
+  Structured Extended Features=0x2fbb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16539852800 (15773 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+arc4random: no preloaded entropy cache
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 2 1 3
+Timecounter "TSC-low" frequency 1600032225 Hz quality 1000
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000023 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff8119be40, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+acpi0: <ALASKA A M I> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xe000-0xe0ff mem 0xe0000000-0xefffffff,0xf0000000-0xf01fffff,0xf7e00000-0xf7e3ffff at device 0.0 on pci1
+hdac0: <ATI (0xaaf0) HDA Controller> mem 0xf7e60000-0xf7e63fff at device 0.1 on pci1
+xhci0: <Intel Wildcat Point USB 3.0 controller> mem 0xf7f20000-0xf7f2ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+em0: <Intel(R) PRO/1000 Network Connection> port 0xf040-0xf05f mem 0xf7f00000-0xf7f1ffff,0xf7f34000-0xf7f34fff at device 25.0 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+ehci0: <Intel Wildcat Point USB 2.0 controller USB-B> mem 0xf7f33000-0xf7f333ff at device 26.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 28.3 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> at device 28.7 on pci0
+pci5: <ACPI PCI bus> on pcib5
+hdac1: <Creative (0x0012) HDA Controller> mem 0xf7d04000-0xf7d07fff,0xf7d00000-0xf7d03fff at device 0.0 on pci5
+ehci1: <Intel Wildcat Point USB 2.0 controller USB-A> mem 0xf7f32000-0xf7f323ff at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Wildcat Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf070-0xf077,0xf060-0xf063,0xf020-0xf03f mem 0xf7f31000-0xf7f317ff at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 12.
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+arc4random: no preloaded entropy cache
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+pcm4: <ATI R6xx (HDMI)> at nid 11 on hdaa0
+pcm5: <ATI R6xx (HDMI)> at nid 13 on hdaa0
+hdacc1: <Realtek ALC899 HDA CODEC> at cad 1 on hdac1
+hdaa1: <Realtek ALC899 Audio Function Group> at nid 1 on hdacc1
+pcm6: <Realtek ALC899 (Analog 5.1+HP/2.0)> at nid 20,22,21,27 and 24 on hdaa1
+pcm7: <Realtek ALC899 (Front Analog Mic)> at nid 25 on hdaa1
+pcm8: <Realtek ALC899 (Rear Analog Line-in)> at nid 26 on hdaa1
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen1.1: <Intel EHCI root HUB> at usbus1
+Trying to mount root from zfs:tank/ROOT/initial []...
+Root mount waiting for: CAM
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub2: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus5 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 850 EVO 250GB EMT02B6Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 238475MB (488397168 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <SAMSUNG HD103SJ 1AJ10001> ATA8-ACS SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 953869MB (1953525168 512 byte sectors)
+ses0: ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+ada2 at ahcich3 bus 0 scbus3 target 0 lun 0
+ada2: <CT250MX500SSD1 M3CR020> ACS-3 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada2: Command Queueing enabled
+ada2: 238475MB (488397168 512 byte sectors)
+ses0: ada1 in 'Slot 01', SATA Slot: scbus1 target 0
+ses0: (none) in 'Slot 02', SATA Slot: scbus2 target 0
+ada3 at ahcich5 bus 0 scbus4 target 0 lun 0
+ada3: <SAMSUNG HD103SJ 1AJ10001> ATA8-ACS SATA 2.x device
+ada3: Serial Number...
+ada3: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 953869MB (1953525168 512 byte sectors)
+ses0: ada2 in 'Slot 03', SATA Slot: scbus3 target 0
+ses0: ada3 in 'Slot 05', SATA Slot: scbus4 target 0
+cd0 at ahcich2 bus 0 scbus2 target 0 lun 0
+cd0: <ATAPI iHAS122 ZL0C> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+random: unblocking device.
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+Cuse v0.1.36 @ /dev/cuse
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 21 ports with 21 removable, self powered
+[drm] amdgpu kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] initializing kernel modesetting (POLARIS10 0x1002:0x67DF 0x1458:0x230F 0xEF).
+[drm] register mmio base: 0xF7E00000
+[drm] register mmio size: 262144
+[drm] PCI I/O BAR is not found.
+[drm] probing gen 2 caps for device 8086:c01 = 261ad03/e
+[drm] probing mlw for device 1002:67df = 400903
+[drm] UVD is enabled in VM mode
+[drm] UVD ENC is enabled in VM mode
+[drm] VCE enabled in VM mode
+ATOM BIOS: xxx-xxx-xxx
+[drm] vm size is 64 GB, 2 levels, block size is 10-bit, fragment size is 9-bit
+ugen0.2: <Canon MP495 series> at usbus0
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_mc.bin
+drmn0: VRAM: 8192M 0x000000F400000000 - 0x000000F5FFFFFFFF (8192M used)
+drmn0: GTT: 256M 0x0000000000000000 - 0x000000000FFFFFFF
+Failed to add WC MTRR for [0xe0000000-0xefffffff]: -22; performance may suffer
+[drm] Detected VRAM RAM=8192M, BAR=256M
+[drm] RAM width 256bits GDDR5
+[TTM] Zone  kernel: Available graphics memory: 8323380 kiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 kiB
+[TTM] Initializing pool allocator
+[drm] amdgpu: 8192M of VRAM memory ready
+[drm] amdgpu: 8192M of GTT memory ready.
+i_size_write unimplemented
+[drm] GART: num cpu pages 65536, num gpu pages 65536
+[drm] PCIE GART of 256M enabled (table at 0x000000F400040000).
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-3: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-3
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DVI-D-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-D-1
+[drm]   - kern.vt.fb.default_mode
+[drm] AMDGPU Display Connectors
+[drm] Connector 0:
+[drm]   DP-1
+[drm]   HPD6
+[drm]   DDC: 0x4868 0x4868 0x4869 0x4869 0x486a 0x486a 0x486b 0x486b
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY2
+[drm] Connector 1:
+[drm]   DP-2
+[drm]   HPD4
+[drm]   DDC: 0x4870 0x4870 0x4871 0x4871 0x4872 0x4872 0x4873 0x4873
+[drm]   Encoders:
+[drm]     DFP2: INTERNAL_UNIPHY2
+[drm] Connector 2:
+[drm]   DP-3
+[drm]   HPD1
+[drm]   DDC: 0x486c 0x486c 0x486d 0x486d 0x486e 0x486e 0x486f 0x486f
+[drm]   Encoders:
+[drm]     DFP3: INTERNAL_UNIPHY1
+[drm] Connector 3:
+[drm]   HDMI-A-1
+[drm]   HPD5
+[drm]   DDC: 0x4874 0x4874 0x4875 0x4875 0x4876 0x4876 0x4877 0x4877
+[drm]   Encoders:
+[drm]     DFP4: INTERNAL_UNIPHY1
+[drm] Connector 4:
+[drm]   DVI-D-1
+[drm]   HPD3
+[drm]   DDC: 0x487c 0x487c 0x487d 0x487d 0x487e 0x487e 0x487f 0x487f
+[drm]   Encoders:
+[drm]     DFP5: INTERNAL_UNIPHY
+ugen1.2: <vendor 0x8087 product 0x8009> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x8009, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen2.2: <vendor 0x8087 product 0x8001> at usbus2
+uhub4 on uhub0
+uhub4: <vendor 0x8087 product 0x8001, class 9/0, rev 2.00/0.00, addr 2> on usbus2
+uhub3: 6 ports with 6 removable, self powered
+uhub4: 8 ports with 8 removable, self powered
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_pfp_2.bin
+ugen0.3: <Microsoft Wired Keyboard 600> at usbus0
+ukbd0 on uhub2
+ukbd0: <Microsoft Wired Keyboard 600, class 0/0, rev 2.00/3.00, addr 2> on usbus0
+kbd2 at ukbd0
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_me_2.bin
+ugen0.4: <Logitech G203 Prodigy Gaming Mouse> at usbus0
+ums0 on uhub2
+ums0: <Logitech G203 Prodigy Gaming Mouse, class 0/0, rev 2.00/7.03, addr 3> on usbus0
+ums0: 16 buttons and [XYZT] coordinates ID=0
+ukbd1 on uhub2
+ukbd1: <Logitech G203 Prodigy Gaming Mouse, class 0/0, rev 2.00/7.03, addr 3> on usbus0
+kbd3 at ukbd1
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_ce_2.bin
+[drm] Chained IB support enabled!
+ugen0.5: <Generic Mass Storage Device> at usbus0
+umass0 on uhub2
+umass0: <Generic Mass Storage Device, class 0/0, rev 2.00/1.00, addr 4> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4001
+umass0:6:0: Attached to scbus6
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <Multi Flash Reader 1.00> Removable Direct Access SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_rlc.bin
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_mec_2.bin
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_mec2_2.bin
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_sdma.bin
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_sdma1.bin
+i_size_write unimplemented
+i_size_write unimplemented
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_uvd.bin
+[drm] Found UVD firmware Version: 1.130 Family ID: 16
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_vce.bin
+[drm] Found VCE firmware Version: 53.26 Binary ID: 3
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+drmn0: successfully loaded firmware image with name: amdgpu/polaris10_k_smc.bin
+[drm] UVD and UVD ENC initialized successfully.
+[drm] VCE initialized successfully.
+[drm] fb mappable at 0xE0568000
+[drm] vram apper at 0xE0000000
+[drm] size 8294400
+[drm] fb depth is 24
+[drm]    pitch is 7680
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+cmsize=16 size=8294400
+pbase=0xe0568000 vbase=0xfffff800e0568000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: amdgpudrmfb frame buffer device
+i_size_write unimplemented
+[drm] Initialized amdgpu 3.23.0 20150101 for drmn0 on minor 0
+lo0: link state changed to UP
+em0: link state changed to UP
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to accept, logging disabled
+pid 2575 (ck-remove-directory), jid 0, uid 164: exited on signal 5
+pid 3381 (python3.7), jid 0, uid 0: exited on signal 5 (core dumped)
+pid 3380 (sudo), jid 0, uid 0: exited on signal 5
+pid 7432 (ck-remove-directory), jid 0, uid 1002: exited on signal 5
+pid 2604 (gnome-keyring-daemo), jid 0, uid 1002: exited on signal 11 (core dumped)
+pid 7447 (ck-remove-directory), jid 0, uid 164: exited on signal 5
+pid 7470 (ck-remove-directory), jid 0, uid 164: exited on signal 5
+pid 7473 (ck-remove-directory), jid 0, uid 1002: exited on signal 5
+pid 2655 (bsdisks), jid 0, uid 0: exited on signal 6 (core dumped)
+pid 11492 (gcr-prompter), jid 0, uid 1002: exited on signal 11
+ugen0.2: <Canon MP495 series> at usbus0 (disconnected)

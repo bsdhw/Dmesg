@@ -1,0 +1,195 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p18-HBSD #1  815defa6fd0(stable/21.1)-dirty: Mon Jun 14 09:17:18 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Atom(TM) CPU D2700   @ 2.13GHz (2128.28-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x30661  Family=0x6  Model=0x36  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x40e31d<SSE3,DTES64,MON,DS_CPL,TM2,SSSE3,CX16,xTPR,PDCM,MOVBE>
+  AMD Features=0x20100800<SYSCALL,NX,LM>
+  AMD Features2=0x1<LAHF>
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 4092104704 (3902 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <_ _>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 3 2 1
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7f0, 0) error 19
+000.000054 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <_> on motherboard
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf0f0-0xf0f7 mem 0xdfc00000-0xdfcfffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+hdac0: <Intel 82801G HDA Controller> mem 0xdff00000-0xdff03fff irq 22 at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pcib1: [GIANT-LOCKED]
+pcib2: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pcib2: [GIANT-LOCKED]
+pci1: <ACPI PCI bus> on pcib2
+re0: <Realtek PCIe GbE Family Controller> port 0xe000-0xe0ff mem 0xdfe04000-0xdfe04fff,0xdfe00000-0xdfe03fff irq 17 at device 0.0 on pci1
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pcib3: [GIANT-LOCKED]
+pci2: <ACPI PCI bus> on pcib3
+re1: <Realtek PCIe GbE Family Controller> port 0xd000-0xd0ff mem 0xdfd04000-0xdfd04fff,0xdfd00000-0xdfd03fff irq 18 at device 0.0 on pci2
+re1: Using Memory Mapping!
+re1: Using 1 MSI-X message
+re1: version:1.96.04
+re1: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re1: Ethernet address: ...
+pcib4: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pcib4: [GIANT-LOCKED]
+uhci0: <Intel 82801G (ICH7) USB controller USB-A> port 0xf080-0xf09f irq 23 at device 29.0 on pci0
+uhci0: LegSup = 0x2f00
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 82801G (ICH7) USB controller USB-B> port 0xf060-0xf07f irq 19 at device 29.1 on pci0
+uhci1: LegSup = 0x2f00
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+uhci2: <Intel 82801G (ICH7) USB controller USB-C> port 0xf040-0xf05f irq 18 at device 29.2 on pci0
+uhci2: LegSup = 0x2f00
+usbus2 on uhci2
+usbus2: 12Mbps Full Speed USB v1.0
+uhci3: <Intel 82801G (ICH7) USB controller USB-D> port 0xf020-0xf03f irq 16 at device 29.3 on pci0
+uhci3: LegSup = 0x2f00
+usbus3 on uhci3
+usbus3: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 82801GB/R (ICH7) USB 2.0 controller> mem 0xdff05000-0xdff053ff irq 23 at device 29.7 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci0
+usbus4: 480Mbps High Speed USB v2.0
+pcib5: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib5
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci0: <Intel ICH7 SATA300 controller> port 0xf0e0-0xf0e7,0xf0d0-0xf0d3,0xf0c0-0xf0c7,0xf0b0-0xf0b3,0xf0a0-0xf0af mem 0xdff04000-0xdff043ff irq 19 at device 31.2 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+ppc1: <Parallel port> port 0x378-0x37f irq 5 drq 3 on acpi0
+ppc1: Generic chipset (NIBBLE-only) in COMPATIBLE mode
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+battery1: <ACPI Control Method Battery> on acpi0
+Timecounters tick every 1.000 msec
+hdacc0: <Realtek ALC662 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC662 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC662 (Rear Analog)> at nid 20 and 24,26 on hdaa0
+pcm1: <Realtek ALC662 (Front Analog)> at nid 27 and 25 on hdaa0
+pcm2: <Realtek ALC662 (Rear Digital)> at nid 30 on hdaa0
+hdacc1: <Intel (0x2880) HDA CODEC> at cad 1 on hdac0
+hdaa1: <Intel (0x2880) Audio Function Group> at nid 1 on hdacc1
+pcm3: <Intel (0x2880) (HDMI 8ch)> at nid 3 on hdaa1
+ugen4.1: <Intel EHCI root HUB> at usbus4
+ugen3.1: <Intel UHCI root HUB> at usbus3
+ugen2.1: <Intel UHCI root HUB> at usbus2
+ugen1.1: <Intel UHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+uhub1: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub2: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen0.1: <Intel UHCI root HUB> at usbus0
+uhub3: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub4: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub2: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+uhub3: 2 ports with 2 removable, self powered
+uhub4: 2 ports with 2 removable, self powered
+ada0 at ata2 bus 0 scbus0 target 0 lun 0
+ada0: <OCZ-AGILITY3 2.15> ATA8-ACS SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: 57241MB (117231408 512 byte sectors)
+ada0: quirks=0x1<4K>
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 8 ports with 8 removable, self powered
+ugen4.2: <Belkin Belkin 54g USB Network Adapter> at usbus4
+rum0 on uhub0
+rum0: <Belkin Belkin 54g USB Network Adapter, class 0/0, rev 2.00/0.01, addr 2> on usbus4
+rum0: MAC/BBP RT2573 (rev 0x2573a), RF RT2528
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+wlan0: Ethernet address: ...
+wlan0: changing name to 'rum0_wlan1'
+re1: link state changed to UP
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ng0: changing name to 'pppoe1'
+re0: link state changed to UP
+bridge0: Ethernet address: ...
+bridge0: link state changed to UP
+re0: promiscuous mode enabled
+rum0_wlan1: promiscuous mode enabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+215.250309 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+215.250388 [1035] generic_netmap_dtor       Emulated netmap adapter for re0 destroyed
+215.262728 [1130] generic_netmap_attach     Emulated adapter for re0 created (prev was NULL)
+215.717878 [ 320] generic_netmap_register   Emulated adapter for re0 activated
+215.758482 [1130] generic_netmap_attach     Emulated adapter for rum0_wlan1 created (prev was NULL)
+215.761420 [1035] generic_netmap_dtor       Emulated netmap adapter for rum0_wlan1 destroyed
+215.770796 [1130] generic_netmap_attach     Emulated adapter for rum0_wlan1 created (prev was NULL)
+215.771130 [ 320] generic_netmap_register   Emulated adapter for rum0_wlan1 activated
+216.766172 [ 442] generic_mbuf_destructor   Error: no netmap adapter on device 0xfffffe002b3fc000

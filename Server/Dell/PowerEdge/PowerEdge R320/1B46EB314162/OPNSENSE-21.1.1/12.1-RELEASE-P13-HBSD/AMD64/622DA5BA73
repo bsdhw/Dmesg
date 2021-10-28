@@ -1,0 +1,241 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p13-HBSD #0  5a415173060(stable/21.1)-dirty: Fri Feb  5 16:41:22 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E5-2430 0 @ 2.20GHz (2200.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206d7  Family=0x6  Model=0x2d  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000400<MD_CLEAR,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16576045056 (15808 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 12 CPUs
+FreeBSD/SMP: 1 package(s) x 6 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic1: Changing APIC ID to 1
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 32-55 on motherboard
+Launching APs: 1 7 2 10 6 5 11 9 3 4 8
+Timecounter "TSC-low" frequency 1100021831 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+000.000062 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 53 at device 1.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+mfi0: <Drake Skinny> port 0xfc00-0xfcff mem 0xdcffc000-0xdcffffff,0xdcf80000-0xdcfbffff irq 34 at device 0.0 numa-domain 0 on pci1
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: 41258 (666952232s/0x0020/info) - Shutdown command received from host
+mfi0: 41259 (boot + 4s/0x0020/info) - Firmware initialization started (PCI ID 0073/1000/1f51/1028)
+mfi0: 41260 (boot + 4s/0x0020/info) - Firmware version 2.121.14-3811
+mfi0: 41261 (boot + 5s/0x0020/info) - Package version 20.13.1-0002
+mfi0: 41262 (boot + 5s/0x0020/info) - Board Revision A01
+mfi0: 41263 (boot + 31s/0x0004/info) - Enclosure PD 20(c None/p1) communication restored
+mfi0: 41264 (boot + 31s/0x0002/info) - Inserted: Encl PD 20
+mfi0: 41265 (boot + 31s/0x0002/info) - Inserted: PD 20(c None/p1) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=5a0b10c032a7e100,0000000000000000
+mfi0: 41266 (boot + 31s/0x0002/info) - Inserted: PD 00(e0x20/s0)
+pcib2: <ACPI PCI-PCI bridge> irq mfi0: 53 at device 3.0 numa-domain 0 on pci0
+41267 (boot + 31s/0x0002/info) - Inserted: PD 00(e0x20/s0) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000cca03036d905,0pci2: 000000000000000
+mfi0: 41268 (boot + 31s/0x0002/info) - Inserted: PD 01(e0x20/s1)
+<ACPI PCI bus> numa-domain 0 on pcib2
+mfi0: 41269 (boot + 31s/0x0002/info) - Inserted: PD 01(e0x20/s1) Info: enclPd=20, scsiType=0, portMap=01, sasAddr=5000c50097241ae5,0000000000000000
+mfi0: 41270 (666952286s/0x0020/info) - Time established as 02/18/21  8:31:26; (47 seconds since power on)
+mfi0: 41271 (666952457s/0x0020/info) - Host driver is loaded and operational
+bxe0: <QLogic NetXtreme II BCM57810 10GbE (B0) BXE v:1.78.91
+> mem 0xd9000000-0xd97fffff,0xd9800000-0xd9ffffff,0xdb7e0000-0xdb7effff irq 48 at device 0.0 numa-domain 0 on pci2
+bxe0: PCI BAR0 [10] memory allocated: 0xd9000000-0xd97fffff (8388608) -> 0xfffff800d9000000
+bxe0: PCI BAR2 [18] memory allocated: 0xd9800000-0xd9ffffff (8388608) -> 0xfffff800d9800000
+bxe0: PCI BAR4 [20] memory allocated: 0xdb7e0000-0xdb7effff (65536) -> 0xfffff800db7e0000
+bxe0: Found 10Gb Fiber media.
+bxe0: IFMEDIA flags : 20
+bxe0: Using defaults for TSO: 65518/35/2048
+bxe0: Ethernet address: ...
+bxe0: MSI-X vectors Requested 5 and Allocated 5
+bxe1: <QLogic NetXtreme II BCM57810 10GbE (B0) BXE v:1.78.91
+> mem 0xda000000-0xda7fffff,0xda800000-0xdaffffff,0xdb7f0000-0xdb7fffff irq 52 at device 0.1 numa-domain 0 on pci2
+bxe1: PCI BAR0 [10] memory allocated: 0xda000000-0xda7fffff (8388608) -> 0xfffff800da000000
+bxe1: PCI BAR2 [18] memory allocated: 0xda800000-0xdaffffff (8388608) -> 0xfffff800da800000
+bxe1: PCI BAR4 [20] memory allocated: 0xdb7f0000-0xdb7fffff (65536) -> 0xfffff800db7f0000
+bxe1: Found 10Gb Fiber media.
+bxe1: IFMEDIA flags : 20
+bxe1: Using defaults for TSO: 65518/35/2048
+bxe1: Ethernet address: ...
+bxe1: MSI-X vectors Requested 5 and Allocated 5
+pcib3: <PCI-PCI bridge> irq 16 at device 17.0 numa-domain 0 on pci0
+pci3: <PCI bus> numa-domain 0 on pcib3
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+ehci0: <Intel Patsburg USB 2.0 controller> mem 0xdf8fd000-0xdf8fd3ff irq 23 at device 26.0 numa-domain 0 on pci0
+usbus0: EHCI version 1.0
+usbus0 numa-domain 0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib4: <ACPI PCI-PCI bridge> at device 28.0 numa-domain 0 on pci0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 28.4 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+bge0: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xdb8a0000-0xdb8affff,0xdb8b0000-0xdb8bffff,0xdb8c0000-0xdb8cffff irq 16 at device 0.0 numa-domain 0 on pci5
+bge0: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge0: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus0: <MII bus> numa-domain 0 on bge0
+brgphy0: <BCM5720C 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+bge1: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xdb8d0000-0xdb8dffff,0xdb8e0000-0xdb8effff,0xdb8f0000-0xdb8fffff irq 17 at device 0.1 numa-domain 0 on pci5
+bge1: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge1: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus1: <MII bus> numa-domain 0 on bge1
+brgphy1: <BCM5720C 1000BASE-T media interface> PHY 2 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge1: Using defaults for TSO: 65518/35/2048
+bge1: Ethernet address: ...
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 28.7 numa-domain 0 on pci0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+pcib7: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci6
+pci7: <PCI bus> numa-domain 0 on pcib7
+pcib8: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci7
+pci8: <PCI bus> numa-domain 0 on pcib8
+pcib9: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci8
+pci9: <PCI bus> numa-domain 0 on pcib9
+vgapci0: <VGA-compatible display> mem 0xd8000000-0xd8ffffff,0xdeffc000-0xdeffffff,0xde000000-0xde7fffff irq 19 at device 0.0 numa-domain 0 on pci9
+vgapci0: Boot video device
+pcib10: <PCI-PCI bridge> at device 1.0 numa-domain 0 on pci7
+pci10: <PCI bus> numa-domain 0 on pcib10
+ehci1: <Intel Patsburg USB 2.0 controller> mem 0xdf8fe000-0xdf8fe3ff irq 22 at device 29.0 numa-domain 0 on pci0
+usbus1: EHCI version 1.0
+usbus1 numa-domain 0 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib11: <PCI-PCI bridge> at device 30.0 numa-domain 0 on pci0
+pci11: <PCI bus> numa-domain 0 on pcib11
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+ahci0: <Intel Patsburg AHCI SATA controller> port 0xece8-0xecef,0xecf8-0xecfb,0xecf0-0xecf7,0xecfc-0xecff,0xecc0-0xecdf mem 0xdf8ff000-0xdf8ff7ff irq 20 at device 31.2 numa-domain 0 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib12: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci12: <ACPI PCI bus> numa-domain 0 on pcib12
+pci12: <dasp, performance counters> at device 14.1 (no driver attached)
+pci12: <dasp, performance counters> at device 19.1 (no driver attached)
+pci12: <dasp, performance counters> at device 19.4 (no driver attached)
+pci12: <dasp, performance counters> at device 19.5 (no driver attached)
+pcib13: <ACPI Host-PCI bridge> on acpi0
+pci13: <ACPI PCI bus> on pcib13
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xec000-0xeffff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+mfid0 numa-domain 0 on mfi0
+mfid0: 285568MB (584843264 sectors) RAID volume 'BOOT' is optimal
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 numa-domain 0 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 numa-domain 0 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <CHICONY HP Basic USB Keyboard> at usbus0
+ukbd0 numa-domain 0 on uhub2
+ukbd0: <CHICONY HP Basic USB Keyboard, class 0/0, rev 2.00/1.30, addr 3> on usbus0
+kbd2 at ukbd0
+ugen1.3: <Areson USB Device> at usbus1
+ugen0.4: <no manufacturer Gadget USB HUB> at usbus0
+uhub4 numa-domain 0 on uhub2
+uhub4: <no manufacturer Gadget USB HUB, class 9/0, rev 2.00/0.00, addr 4> on usbus0
+uhub4: 6 ports with 6 removable, self powered
+ugen0.5: <Avocent Keyboard/Mouse Function> at usbus0
+ukbd1 numa-domain 0 on uhub4
+ukbd1: <Keyboard> on usbus0
+kbd3 at ukbd1
+ums0 numa-domain 0 on uhub3
+ums0: <Areson USB Device, class 0/0, rev 1.10/0.01, addr 3> on usbus1
+ums1 numa-domain 0 on uhub4
+ums1: <Mouse> on usbus0
+ums1: 3 buttons and [Z] coordinates ID=0
+ums0: 5 buttons and [XYZT] coordinates ID=0
+ums2 numa-domain 0 on uhub4
+ums2: <Mouse REL> on usbus0
+ums2: 3 buttons and [XYZ] coordinates ID=0
+uhid0 numa-domain 0 on uhub3
+uhid0: <Areson USB Device, class 0/0, rev 1.10/0.01, addr 3> on usbus1
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+bge0: link state changed to DOWN
+bge0: link state changed to UP
+bge1: link state changed to DOWN
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ugen1.3: <Areson USB Device> at usbus1 (disconnected)
+ums0: at uhub3, port 2, addr 3 (disconnected)
+ums0: detached
+uhid0: at uhub3, port 2, addr 3 (disconnected)
+uhid0: detached
+mfip0: <SCSI Passthrough Bus> numa-domain 0 on mfi0
+ses0 at mfi0 bus 0 scbus5 target 32 lun 0
+ses0: <DP BP12G+ 1.00> Fixed Enclosure Services SPC-3 SCSI device
+ses0: 150.000MB/s transfers
+ses0: Command Queueing enabled
+ses0: SES Device

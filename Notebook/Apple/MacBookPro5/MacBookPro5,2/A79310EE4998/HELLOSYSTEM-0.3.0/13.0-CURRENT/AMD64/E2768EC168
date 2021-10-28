@@ -1,0 +1,334 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-CURRENT #0 main-c255460-g282381aa53a: Thu Dec 31 06:08:47 UTC 2020
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.0-0-g176249bd673)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 1920x1200
+Solaris: WARNING: ignoring tunable zfs_arc_max (using 0 instead)
+CPU: Intel(R) Core(TM)2 Duo CPU     T9550  @ 2.66GHz (2653.39-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x1067a  Family=0x6  Model=0x17  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0xc08e3fd<SSE3,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,OSXSAVE>
+  AMD Features=0x20100800<SYSCALL,NX,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: HLT,PAUSE
+  TSC: P-state invariant, performance statistics
+real memory  = 6442450944 (6144 MB)
+avail memory = 5877125120 (5604 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <APPLE  Apple00>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+ioapic0: MADT APIC ID 1 != hw id 0
+ioapic0 <Version 1.1> irqs 0-23
+Launching APs: 1
+Timecounter "TSC-low" frequency 1326697185 Hz quality 1000
+random: entropy device external interface
+md0: Preloaded image </data/XXXXXXXXXXXX 16318464 bytes at 0xffffffff82117390
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd0 at kbdmux0
+000.000120 [4346] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+acpi0: <APPLE Apple00>
+acpi_ec0: <Embedded Controller: GPE 0x3f, ECDT> port 0x62,0x66 on acpi0
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 25000000 Hz quality 950
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <memory, RAM> at device 0.1 (no driver attached)
+isab0: <PCI-ISA bridge> port 0x4000-0x40ff at device 3.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory, RAM> at device 3.1 (no driver attached)
+pci0: <memory, RAM> at device 3.3 (no driver attached)
+pci0: <memory, RAM> at device 3.4 (no driver attached)
+pci0: <processor> at device 3.5 (no driver attached)
+ohci0: <nVidia nForce MCP79 USB Controller> mem 0xdf488000-0xdf488fff at device 4.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <NVIDIA nForce MCP79 USB 2.0 controller> mem 0xdf489200-0xdf4892ff at device 4.1 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ohci1: <nVidia nForce MCP79 USB Controller> mem 0xdf487000-0xdf487fff at device 6.0 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci1: <NVIDIA nForce MCP79 USB 2.0 controller> mem 0xdf489100-0xdf4891ff at device 6.1 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+usbus3: 480Mbps High Speed USB v2.0
+hdac0: <NVIDIA MCP79 HDA Controller> mem 0xdf480000-0xdf483fff at device 8.0 on pci0
+pcib1: <PCI-PCI bridge> at device 9.0 on pci0
+pci1: <PCI bus> on pcib1
+nfe0: <NVIDIA nForce MCP79 Networking Adapter> port 0x41e0-0x41e7 mem 0xdf486000-0xdf486fff,0xdf489000-0xdf4890ff,0xdf489300-0xdf48930f at device 10.0 on pci0
+miibus0: <MII bus> on nfe0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+nfe0: Using defaults for TSO: 65518/35/2048
+nfe0: Ethernet address: ...
+ahci0: <NVIDIA MCP79 AHCI SATA controller> port 0x41d8-0x41df,0x41ec-0x41ef,0x41d0-0x41d7,0x41e8-0x41eb,0x41c0-0x41cf mem 0xdf484000-0xdf485fff at device 11.0 on pci0
+ahci0: AHCI v1.20 with 6 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x200<NOAA>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib2: <ACPI PCI-PCI bridge> at device 12.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+vgapci0: <VGA-compatible display> port 0x3000-0x307f mem 0xd4000000-0xd4ffffff,0xb0000000-0xbfffffff,0xd2000000-0xd3ffffff at device 0.0 on pci2
+pcib3: <ACPI PCI-PCI bridge> at device 16.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci1: <VGA-compatible display> port 0x2000-0x207f mem 0xd6000000-0xd6ffffff,0xc0000000-0xcfffffff,0xd0000000-0xd1ffffff at device 0.0 on pci3
+pcib4: <ACPI PCI-PCI bridge> at device 21.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pci4: <network> at device 0.0 (no driver attached)
+pcib5: <ACPI PCI-PCI bridge> at device 22.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+fwohci0: <1394 Open Host Controller Interface> mem 0xdf100000-0xdf100fff at device 0.0 on pci5
+fwohci0: OHCI version 1.10 (ROM=0)
+fwohci0: No. of Isochronous channels is 8.
+fwohci0: EUI64 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+fwohci0: invalid speed 7 (fixed to 3).
+fwohci0: Phy 1394a available S800, 3 ports.
+fwohci0: Link S800, max_rec 4096 bytes.
+firewire0: <IEEE1394(FireWire) bus> on fwohci0
+fwohci0: Initiate bus reset
+fwohci0: fwohci_intr_core: BUS reset
+fwohci0: fwohci_intr_core: node_id=0x00000000, SelfID Count=2, CYCLEMASTER mode
+firewire0: 1 nodes, maxhop <= 0 cable IRM irm(0)  (me) 
+firewire0: bus manager 0 
+pcib6: <ACPI PCI-PCI bridge> at device 23.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+battery0: <ACPI Control Method Battery> on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+Solaris: WARNING: ignoring tunable zfs_arc_max (using 5038465024 instead)
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen3.1: <nVidia EHCI root HUB> at usbus3
+ugen1.1: <nVidia EHCI root HUB> at usbus1
+uhub0 on usbus3
+uhub0: <nVidia EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+uhub1 on usbus1
+uhub1: <nVidia EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ugen2.1: <nVidia OHCI root HUB> at usbus2
+ugen0.1: <nVidia OHCI root HUB> at usbus0
+uhub2 on usbus2
+uhub3 on usbus0
+uhub3: <nVidia OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub2: <nVidia OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+hdacc0: <Realtek ALC889A HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC889A Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC889A (Internal Analog 5.1/2.0)> at nid 26,23,24 and 25 on hdaa0
+pcm1: <Realtek ALC889A (Rear Analog)> at nid 20 and 21 on hdaa0
+pcm2: <Realtek ALC889A (Rear Digital)> at nid 30 and 31 on hdaa0
+pcm3: <Realtek ALC889A (Rear Analog Mic)> at nid 27 on hdaa0
+Trying to mount root from ufs:/dev/md0 []...
+Root mount waiting for: usbus0 usbus1 usbus2 usbus3 CAM
+WARNING: WITNESS option enabled, expect reduced performance.
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TOSHIBA MQ01ABD100H AUF01H> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <MATSHITA DVD-R   UJ-868 KB19> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA4, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+uhub2: 5 ports with 5 removable, self powered
+uhub3: 7 ports with 7 removable, self powered
+Root mount waiting for: usbus1 usbus3
+uhub0: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1 usbus3
+uhub1: 7 ports with 7 removable, self powered
+ugen2.2: <Apple Inc. BRCM2046 Hub> at usbus2
+uhub4 on uhub2
+uhub4: <Apple Inc. BRCM2046 Hub, class 9/0, rev 2.00/1.00, addr 2> on usbus2
+Root mount waiting for: usbus1 usbus3
+ugen3.2: <vendor 0x1a40 USB 2.0 Hub> at usbus3
+uhub5 on uhub0
+uhub5: <vendor 0x1a40 USB 2.0 Hub, class 9/0, rev 2.00/1.11, addr 2> on usbus3
+ugen1.2: <Apple Inc. Built-in iSight> at usbus1
+uhub4: 3 ports with 0 removable, self powered
+uhub5: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1 usbus3
+ugen2.3: <Apple Inc. Bluetooth USB Host Controller> at usbus2
+ugen3.3: <UFD 2.0 Silicon-Power4G> at usbus3
+umass0 on uhub5
+umass0: <UFD 2.0 Silicon-Power4G, class 0/0, rev 2.00/1.06, addr 3> on usbus3
+umass0:  SCSI over Bulk-Only; quirks = 0x4101
+umass0:2:0: Attached to scbus2
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <UFD 2.0 Silicon-Power4G 8.07> Removable Direct Access SPC-2 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 3840MB (7864320 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+ugen0.2: <Apple Computer, Inc. IR Receiver> at usbus0
+GEOM: da0: the secondary GPT header is not in the last LBA.
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+ugen2.4: <vendor 0x05ac product 0x820a> at usbus2
+ukbd0 on uhub4
+ukbd0: <vendor 0x05ac product 0x820a, class 0/0, rev 2.00/1.00, addr 4> on usbus2
+kbd1 at ukbd0
+ugen3.4: <ELECOM ELECOM Laser Mouse> at usbus3
+ugen0.3: <Apple, Inc. Apple Internal Keyboard / Trackpad> at usbus0
+ukbd1 on uhub3
+ukbd1: <Apple Internal Keyboard> on usbus0
+kbd2 at ukbd1
+ugen2.5: <vendor 0x05ac product 0x820b> at usbus2
+random: unblocking device.
+lock order reversal:
+ 1st 0xfffffe00a0aab580 bufwait (bufwait, lockmgr) @ /usr/src/sys/vm/vm_pager.c:392
+ 2nd 0xfffff80009032810 isofs (isofs, lockmgr) @ /usr/src/sys/dev/md/md.c:986
+lock order isofs -> bufwait established at:
+#0 0xffffffff80c6659d at witness_checkorder+0x46d
+#1 0xffffffff80bc7e5c at lockmgr_xlock_hard+0x6c
+#2 0xffffffff80bc8b73 at __lockmgr_args+0x613
+#3 0xffffffff80cb4c74 at getnewbuf+0x334
+#4 0xffffffff80cb201e at getblkx+0x34e
+#5 0xffffffff80cb1ac4 at breadn_flags+0x44
+#6 0xffffffff80b7579c at cd9660_blkatoff+0x5c
+#7 0xffffffff80b77bf6 at cd9660_vget_internal+0x266
+#8 0xffffffff80cd21f2 at vfs_domount+0xa32
+#9 0xffffffff80cd0df2 at vfs_donmount+0x872
+#10 0xffffffff80cd0549 at sys_nmount+0x69
+#11 0xffffffff8104bfde at amd64_syscall+0x12e
+#12 0xffffffff8101f02e at fast_syscall_common+0xf8
+lock order bufwait -> isofs attempted at:
+#0 0xffffffff80c66efc at witness_checkorder+0xdcc
+#1 0xffffffff80bc7778 at lockmgr_lock_flags+0x188
+#2 0xffffffff80cf2ec4 at _vn_lock+0x54
+#3 0xffffffff806f9939 at mdstart_vnode+0x439
+#4 0xffffffff806f7591 at md_kthread+0x1d1
+#5 0xffffffff80bb22e0 at fork_exit+0x80
+#6 0xffffffff8101f78e at fork_trampoline+0xe
+lock order reversal:
+ 1st 0xfffff800090fd810 zfs (zfs, lockmgr) @ /usr/src/sys/kern/vfs_mount.c:1033
+ 2nd 0xfffff8000953a628 devfs (devfs, lockmgr) @ /usr/src/sys/kern/vfs_mount.c:1044
+lock order zfs -> devfs attempted at:
+#0 0xffffffff80c66efc at witness_checkorder+0xdcc
+#1 0xffffffff80bc91c5 at lockmgr_xlock+0x55
+#2 0xffffffff80cf2ec4 at _vn_lock+0x54
+#3 0xffffffff80cd26a8 at vfs_domount+0xee8
+#4 0xffffffff80cd0df2 at vfs_donmount+0x872
+#5 0xffffffff80cd0549 at sys_nmount+0x69
+#6 0xffffffff8104bfde at amd64_syscall+0x12e
+#7 0xffffffff8101f02e at fast_syscall_common+0xf8
+lock order reversal:
+ 1st 0xfffff8000904e258 ufs (ufs, lockmgr) @ /usr/src/sys/kern/vfs_mount.c:1741
+ 2nd 0xfffff80006f10810 devfs (devfs, lockmgr) @ /usr/src/sys/kern/vfs_subr.c:3131
+lock order devfs -> ufs established at:
+#0 0xffffffff80c6659d at witness_checkorder+0x46d
+#1 0xffffffff80bc7778 at lockmgr_lock_flags+0x188
+#2 0xffffffff80ebdda5 at ffs_lock+0x75
+#3 0xffffffff80cf2ec4 at _vn_lock+0x54
+#4 0xffffffff80cd26a8 at vfs_domount+0xee8
+#5 0xffffffff80cd0df2 at vfs_donmount+0x872
+#6 0xffffffff80cd51b7 at kernel_mount+0x57
+#7 0xffffffff80cd7ae1 at parse_mount+0x4a1
+#8 0xffffffff80cd5fe9 at vfs_mountroot+0x589
+#9 0xffffffff80b85d5f at start_init+0x1f
+#10 0xffffffff80bb22e0 at fork_exit+0x80
+#11 0xffffffff8101f78e at fork_trampoline+0xe
+lock order ufs -> devfs attempted at:
+#0 0xffffffff80c66efc at witness_checkorder+0xdcc
+#1 0xffffffff80bc7778 at lockmgr_lock_flags+0x188
+#2 0xffffffff80cf2ec4 at _vn_lock+0x54
+#3 0xffffffff80cdc2a1 at vput_final+0x111
+#4 0xffffffff80b78cf1 at cd9660_unmount+0xb1
+#5 0xffffffff80cd378c at dounmount+0x42c
+#6 0xffffffff80cd32ec at kern_unmount+0x2fc
+#7 0xffffffff8104bfde at amd64_syscall+0x12e
+#8 0xffffffff8101f02e at fast_syscall_common+0xf8
+Trying to mount root from zfs:livecd []...
+Cuse v0.1.36 @ /dev/cuse
+asmc0: model not recognized
+lo0: link state changed to UP
+nfe0: link state changed to DOWN
+nfe0: link state changed to UP
+bwn_pci0: <Broadcom BCM4322 802.11n Dual-Band Wireless> mem 0xdf200000-0xdf203fff at device 0.0 on pci4
+bhndb0: <PCI-BHND bridge> on bwn_pci0
+bhndb0: Using MSI interrupts on bwn_pci0
+bhnd_nvram0: <SPROM/OTP> mem 0xdf201000-0xdf201fff on bhndb0
+bhnd0: <BCM4322 SIBA bus> on bhndb0
+bhnd_chipc0: <Broadcom ChipCommon I/O Controller, rev 23> mem 0x18000000-0x18000dff,0xffff0000-0xffffffff,0x1c000000-0x1dffffff,0x18000f00-0x18000fff,0x18000e00-0x18000eff irq 0 at core 0 on bhnd0
+bhnd_pmu0: <Broadcom ChipCommon PMU, rev 2> on bhnd_chipc0
+gpio0: <Broadcom ChipCommon GPIO> mem 0x18000000-0x18000dff on bhnd_chipc0
+bhnd_hostb0: <Broadcom PCIe-G1 Host-PCI bridge, rev 11> mem 0x18002000-0x18002dff,0-0x7fffffff,0x18002f00-0x18002fff,0x18002e00-0x18002eff irq 2 at core 2 on bhnd0
+bhnd0: <Broadcom Internal Memory, rev 3> mem 0x18006000-0x18006dff,0x1e000000-0x1e01ffff,0x18006f00-0x18006fff,0x18006e00-0x18006eff at core 6 (no driver attached)
+bhnd0: <Broadcom unknown, rev 0> mem 0x18005000-0x18005dff,0x18005f00-0x18005fff,0x18005e00-0x18005eff irq 5 at core 5 (no driver attached)
+bwn0: <Broadcom 802.11 MAC/PHY/Radio, rev 16> mem 0x18001000-0x18001dff,0x18001f00-0x18001fff,0x18001e00-0x18001eff irq 1 at core 1 on bhnd0
+bwn0: bwn_phy_n_attach: BWN_GPL_PHY not in kernel config; no PHY-N support
+bwn0: failed
+device_attach: bwn0 attach returned 6
+bhnd0: <Broadcom USB 2.0 Device Controller, rev 5> mem 0x18004000-0x18004dff,0x18004f00-0x18004fff,0x18004e00-0x18004eff irq 4 at core 4 (no driver attached)
+bwn0: <Broadcom 802.11 MAC/PHY/Radio, rev 16> mem 0x18001000-0x18001dff,0x18001f00-0x18001fff,0x18001e00-0x18001eff irq 1 at core 1 on bhnd0
+bwn0: bwn_phy_n_attach: BWN_GPL_PHY not in kernel config; no PHY-N support
+bwn0: failed
+device_attach: bwn0 attach returned 6
+bwn0: <Broadcom 802.11 MAC/PHY/Radio, rev 16> mem 0x18001000-0x18001dff,0x18001f00-0x18001fff,0x18001e00-0x18001eff irq 1 at core 1 on bhnd0
+bwn0: bwn_phy_n_attach: BWN_GPL_PHY not in kernel config; no PHY-N support
+bwn0: failed
+device_attach: bwn0 attach returned 6
+bwn0: <Broadcom 802.11 MAC/PHY/Radio, rev 16> mem 0x18001000-0x18001dff,0x18001f00-0x18001fff,0x18001e00-0x18001eff irq 1 at core 1 on bhnd0
+bwn0: bwn_phy_n_attach: BWN_GPL_PHY not in kernel config; no PHY-N support
+bwn0: failed
+device_attach: bwn0 attach returned 6
+bwn0: <Broadcom 802.11 MAC/PHY/Radio, rev 16> mem 0x18001000-0x18001dff,0x18001f00-0x18001fff,0x18001e00-0x18001eff irq 1 at core 1 on bhnd0
+bwn0: bwn_phy_n_attach: BWN_GPL_PHY not in kernel config; no PHY-N support
+bwn0: failed
+device_attach: bwn0 attach returned 6
+bwn0: <Broadcom 802.11 MAC/PHY/Radio, rev 16> mem 0x18001000-0x18001dff,0x18001f00-0x18001fff,0x18001e00-0x18001eff irq 1 at core 1 on bhnd0
+bwn0: bwn_phy_n_attach: BWN_GPL_PHY not in kernel config; no PHY-N support
+bwn0: failed
+device_attach: bwn0 attach returned 6
+pid 85953 (asmctl), jid 0, uid 0: exited on signal 6
+ubt0 on uhub4
+ubt0: <Apple Inc. Bluetooth USB Host Controller, rev 2.00/2.08, addr 3> on usbus2
+uhid0 on uhub3
+uhid0: <Apple Computer, Inc. IR Receiver, class 0/0, rev 2.00/0.16, addr 2> on usbus0
+uhid1 on uhub3
+uhid1: <Touchpad> on usbus0
+ums0 on uhub3
+ums1 on uhub5
+ums1: <ELECOM ELECOM Laser Mouse, class 0/0, rev 2.00/0.01, addr 4> on usbus3
+ums1: 5 buttons and [XYZT] coordinates ID=0
+ums0: <Touchpad> on usbus0
+ums2 on uhub4
+ums2: <vendor 0x05ac product 0x820b, class 0/0, rev 2.00/1.00, addr 5> on usbus2
+ums0: 3 buttons and [XY] coordinates ID=2
+ums2: 3 buttons and [XY] coordinates ID=2
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ugen2.4: <vendor 0x05ac product 0x820a> at usbus2 (disconnected)
+ukbd0: at uhub4, port 2, addr 4 (disconnected)
+ukbd0: detached
+ugen2.5: <vendor 0x05ac product 0x820b> at usbus2 (disconnected)
+ums2: at uhub4, port 3, addr 5 (disconnected)
+ums2: detached
+pid 68916 (bsdisks), jid 0, uid 0: exited on signal 6 (core dumped)

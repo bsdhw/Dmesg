@@ -1,0 +1,331 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p12-HBSD #0  3c6040c7243(stable/21.1)-dirty: Mon Jan 25 12:27:52 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+Skipping TSC calibration since no legacy devices reported by FADT and CPUID works
+CPU: Intel(R) Atom(TM) Processor E3930 @ 1.30GHz (1286.40-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506c9  Family=0x6  Model=0x5c  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x4ff8ebbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,CX16,xTPR,PDCM,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2294e283<FSGSBASE,TSCADJ,SMEP,ERMS,NFPUSG,MPX,PQE,RDSEED,SMAP,CLFLUSHOPT,PROCTRACE,SHA>
+  Structured Extended Features3=0x2c000000<IBPB,STIBP,ARCH_CAP>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x19<RDCL_NO,SKIP_L1DFL_VME,SSB_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8061784064 (7688 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: < >
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1
+Timecounter "TSC" frequency 1286400000 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128f7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000052 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 19200000 Hz quality 950
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xc0000000-0xc0ffffff,0xb0000000-0xbfffffff at device 2.0 on pci0
+vgapci0: Boot video device
+hdac0: <Intel (0x5a98) HDA Controller> mem 0x7ffff00000-0x7ffff03fff,0x7fffe00000-0x7fffefffff irq 25 at device 14.0 on pci0
+pci0: <simple comms> at device 15.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xc1210000-0xc1211fff,0xc1213000-0xc12130ff,0xc1212000-0xc12127ff at device 18.0 on pci0
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 19.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xe000-0xe01f mem 0xc1100000-0xc111ffff,0xc1120000-0xc1123fff at device 0.0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: XXX
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib2: <ACPI PCI-PCI bridge> at device 19.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xd000-0xd01f mem 0xc1000000-0xc101ffff,0xc1020000-0xc1023fff at device 0.0 on pci2
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: XXX
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+xhci0: <Intel Apollo Lake USB 3.0 controller> mem 0xc1200000-0xc120ffff irq 17 at device 21.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+sdhci_pci2: <Generic SD HCI> mem 0x7ffff06000-0x7ffff06fff,0x7ffff05000-0x7ffff05fff irq 42 at device 30.0 on pci0
+sdhci_pci2: 1 slot(s) allocated
+mmc0: <MMC/SD bus> on sdhci_pci2
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <Realtek ALC1150 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC1150 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC1150 (Rear Analog)> at nid 26 and 24 on hdaa0
+pcm1: <Realtek ALC1150 (Rear Digital)> at nid 30 on hdaa0
+hdacc1: <Intel (0x280a) HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel (0x280a) Audio Function Group> at nid 1 on hdacc1
+pcm2: <Intel (0x280a) (HDMI/DP 8ch)> at nid 3 on hdaa1
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+mmc0: No compatible cards found on bus
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TS120GMTS420S R0522A0> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 15 ports with 15 removable, self powered
+igb0: link state changed to UP
+igb1: link state changed to UP
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+igb1: link state changed to DOWN
+vlan0: changing name to 'igb1_vlan10'
+vlan1: changing name to 'igb1_vlan20'
+vlan2: changing name to 'igb1_vlan21'
+vlan3: changing name to 'igb1_vlan11'
+tun5: changing name to 'ovpnc5'
+tun4: changing name to 'ovpnc4'
+tun1: changing name to 'ovpns1'
+tun3: changing name to 'ovpnc3'
+igb0: link state changed to DOWN
+igb1: link state changed to UP
+igb1_vlan21: link state changed to UP
+igb1_vlan20: link state changed to UP
+igb1_vlan10: link state changed to UP
+igb1_vlan11: link state changed to UP
+igb0: link state changed to UP
+tun2: changing name to 'ovpns2'
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpns1: link state changed to UP
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc4: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc4: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc5: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc5: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc3: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ovpnc3: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb0: promiscuous mode enabled
+wg0: promiscuous mode enabled
+igb1: promiscuous mode enabled
+ovpns1: promiscuous mode enabled
+ovpnc3: promiscuous mode enabled
+ovpnc4: promiscuous mode enabled
+ovpnc5: promiscuous mode enabled
+igb1_vlan10: promiscuous mode enabled
+igb1_vlan11: promiscuous mode enabled
+igb1_vlan20: promiscuous mode enabled
+igb1_vlan21: promiscuous mode enabled
+lo0: promiscuous mode enabled
+enc0: promiscuous mode enabled
+pfsync0: promiscuous mode enabled
+ovpns2: promiscuous mode enabled
+igb1: link state changed to DOWN
+igb1_vlan21: link state changed to DOWN
+igb1_vlan20: link state changed to DOWN
+igb1_vlan10: link state changed to DOWN
+igb1_vlan11: link state changed to DOWN
+igb1: link state changed to UP
+igb1_vlan21: link state changed to UP
+igb1_vlan20: link state changed to UP
+igb1_vlan10: link state changed to UP
+igb1_vlan11: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+in_scrubprefix: err=65, prefix delete failed
+ovpnc4: link state changed to DOWN
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to UP
+wg0: link state changed to DOWN
+wg0: promiscuous mode disabled
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to UP
+in_scrubprefix: err=65, prefix delete failed
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+in_scrubprefix: err=65, prefix delete failed
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+ovpnc3: link state changed to DOWN
+ovpnc3: link state changed to UP
+ovpnc5: link state changed to DOWN
+ovpnc5: link state changed to UP
+wg0: deletion failed: 3
+wg0: link state changed to DOWN
+tun0: link state changed to UP
+tun0: changing name to 'wg0'
+ovpnc4: link state changed to DOWN
+ovpnc4: link state changed to UP

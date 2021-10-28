@@ -1,0 +1,509 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p20-HBSD #0  e4fc5be9c3d(stable/21.7)-dirty: Thu Sep  2 10:30:36 CEST 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU           X3430  @ 2.40GHz (2394.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x106e5  Family=0x6  Model=0x1e  Stepping=5
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x98e3fd<SSE3,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000000<IBPB,STIBP,L1DFL,SSBD>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16606887936 (15837 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 2 3 1
+Timecounter "TSC-low" frequency 1197018235 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+000.000053 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+unknown: I/O range not supported
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 3.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+re0: <Realtek PCIe 2.5GbE Family Controller> port 0xfc00-0xfcff mem 0xdf9f0000-0xdf9fffff,0xdf9ec000-0xdf9effff irq 16 at device 0.0 on pci1
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib2: <ACPI PCI-PCI bridge> at device 5.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+mpt0: <LSILogic SAS/SATA Adapter> port 0xec00-0xecff mem 0xdfbec000-0xdfbeffff,0xdfbf0000-0xdfbfffff irq 16 at device 0.0 on pci2
+mpt0: MPI Version=XXX.XXX.XXX.XXX
+mpt0: Capabilities: ( RAID-0 RAID-1E RAID-1 )
+mpt0: 1 Active Volume (2 Max)
+mpt0: 4 Hidden Drive Members (14 Max)
+mpt0:vol0(mpt0:0:0): Settings ( Hot-Plug-Spares High-Priority-ReSync )
+mpt0:vol0(mpt0:0:0): Using Spare Pool: 0
+mpt0:vol0(mpt0:0:0): 2 Members:
+      (mpt0:1:8:0): Primary Online
+      (mpt0:1:1:0): Secondary Out of Sync Online
+mpt0:vol0(mpt0:0:0): RAID-1 - Degraded
+mpt0:vol0(mpt0:0:0): Status ( Enabled Re-Syncing )
+mpt0:vol0(mpt0:0:0): High Priority Re-Sync
+mpt0:vol0(mpt0:0:0): 583898060 of 584843264 blocks remaining
+(mpt0:0:3): Physical (mpt0:0:3:0), Pass-thru (mpt0:1:0:0)
+(mpt0:0:3): Member of Hot Spare Pool: 0
+(mpt0:0:3): Online
+(mpt0:0:3): Status ( Out-Of-Sync )
+(mpt0:0:2): Physical (mpt0:0:2:0), Pass-thru (mpt0:1:1:0)
+(mpt0:0:2): Member of Hot Spare Pool: 0
+(mpt0:0:2): Online
+(mpt0:0:2): Status ( Out-Of-Sync )
+(mpt0:vol0:1): Physical (mpt0:0:1:0), Pass-thru (mpt0:1:2:0)
+(mpt0:vol0:1): Online
+(mpt0:vol0:1): Status ( Out-Of-Sync )
+(mpt0:vol0:0): Physical (mpt0:0:8:0), Pass-thru (mpt0:1:3:0)
+(mpt0:vol0:0): Online
+(noperiph:mpt0:1:-1:ffffffff): rescan already queued
+ehci0: <Intel PCH USB 2.0 controller USB-B> mem 0xdf8fa000-0xdf8fa3ff irq 22 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb0: <Intel(R) PRO/1000 82576> port 0xdcc0-0xdcdf mem 0xdefc0000-0xdefdffff,0xdf000000-0xdf3fffff,0xdefb8000-0xdefbbfff irq 16 at device 0.0 on pci3
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) PRO/1000 82576> port 0xdce0-0xdcff mem 0xdefe0000-0xdeffffff,0xdf400000-0xdf7fffff,0xdefbc000-0xdefbffff irq 17 at device 0.1 on pci3
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib4: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+bge0: <Broadcom NetXtreme Gigabit Ethernet Controller, ASIC rev. 0x00a200> mem 0xdfcf0000-0xdfcfffff irq 16 at device 0.0 on pci4
+bge0: CHIP ID 0x0000a200; ASIC REV 0x0a; CHIP REV 0xa2; PCI-E
+miibus0: <MII bus> on bge0
+brgphy0: <BCM5722 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+pcib5: <ACPI PCI-PCI bridge> at device 28.5 on pci0
+pci5: <ACPI PCI bus> on pcib5
+bge1: <Broadcom NetXtreme Gigabit Ethernet Controller, ASIC rev. 0x004200> mem 0xdfdf0000-0xdfdfffff irq 17 at device 0.0 on pci5
+bge1: CHIP ID 0x00004200; ASIC REV 0x04; CHIP REV 0x42; PCI-E
+miibus1: <MII bus> on bge1
+brgphy1: <BCM5750 1000BASE-T media interface> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge1: Ethernet address: ...
+ehci1: <Intel PCH USB 2.0 controller USB-A> mem 0xdf8fc000-0xdf8fc3ff irq 22 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib6: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+vgapci0: <VGA-compatible display> mem 0xdd000000-0xdd7fffff,0xddffc000-0xddffffff,0xde000000-0xde7fffff irq 19 at device 3.0 on pci6
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Ibex Peak AHCI SATA controller> port 0xccd0-0xccd7,0xccc8-0xcccb,0xccd8-0xccdf,0xcccc-0xcccf,0xcce0-0xccff mem 0xdf8fe000-0xdf8fe7ff irq 20 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xd1800-0xd27ff,0xd2800-0xd3fff,0xd4000-0xd4fff,0xd5000-0xd5fff,0xec000-0xeffff pnpid ORM0000 on isa0
+sc0: <System console> at flags 0x100 on isa0
+sc0: VGA <16 virtual consoles, flags=0x300>
+vga0: <Generic ISA VGA> at port 0x3c0-0x3df iomem 0xa0000-0xbffff pnpid PNP0900 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 13
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 13
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 13
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 13
+device_attach: est3 attach returned 6
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+(probe58:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe58:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe58:mpt0:1:3:0): Retrying command, 3 more tries remain
+(probe58:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe58:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe58:mpt0:1:3:0): Retrying command, 2 more tries remain
+(probe58:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe58:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe58:mpt0:1:3:0): Retrying command, 1 more tries remain
+(probe58:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe58:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe58:mpt0:1:3:0): Retrying command, 0 more tries remain
+(probe58:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe58:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe58:mpt0:1:3:0): Error 5, Retries exhausted
+(probe0:mpt0:0:0:0): REPORT LUNS. CDB: a0 00 00 00 00 00 00 00 00 10 00 00 
+(probe0:mpt0:0:0:0): CAM status: SCSI Status Error
+(probe0:mpt0:0:0:0): SCSI status: Check Condition
+(probe0:mpt0:0:0:0): SCSI sense: ILLEGAL REQUEST asc:ffffffff,ffffffff (Reserved ASC/ASCQ pair)
+(probe0:mpt0:0:0:0): Error 22, Unretryable error
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+ugen0.2: <vendor 0x8087 product 0x0020> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0020> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0020, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+uhub2: 6 ports with 6 removable, self powered
+pass1 at mpt0 bus 1 scbus1 target 0 lun 0
+pass1: <SEAGATE ST3300656SS HS0A> Fixed Uninstalled SPC-3 SCSI device
+pass1: Serial Number...
+pass1: 300.000MB/s transfers
+pass1: Command Queueing enabled
+pass2 at mpt0 bus 1 scbus1 target 1 lun 0
+pass2: <SEAGATE ST3300657SS ES01> Fixed Uninstalled SPC-3 SCSI device
+pass2: Serial Number...
+pass2: 300.000MB/s transfers
+pass2: Command Queueing enabled
+pass3 at mpt0 bus 1 scbus1 target 2 lun 0
+pass3: <SEAGATE ST3300656SS HS0A> Fixed Uninstalled SPC-3 SCSI device
+pass3: Serial Number...
+pass3: 300.000MB/s transfers
+pass3: Command Queueing enabled
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+cd0 at ahcich4 bus 0 scbus6 target 0 lun 0
+cd0: <HL-DT-ST DVD+-RW GH50N B103> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub3: 8 ports with 8 removable, self powered
+da1 at ahcich0 bus 0 scbus2 target 0 lun 0
+da1: <QUANTUM GoVault 0110> Removable Direct Access SPC-3 SCSI device
+da1: Serial Number...
+da1: 150.000MB/s transfers (SATA 1.x, UDMA4, ATAPI 12bytes, PIO 8192bytes)
+da1: Attempt to query device size failed: NOT READY, Medium not present
+ugen1.3: <vendor 0x03f0 HP USB Slim Keyboard> at usbus1
+ukbd0 on uhub3
+ukbd0: <vendor 0x03f0 HP USB Slim Keyboard, class 0/0, rev 1.10/1.10, addr 3> on usbus1
+kbd0 at ukbd0
+da0 at mpt0 bus 0 scbus0 target 0 lun 0
+da0: <Dell VIRTUAL DISK 1028> Fixed Direct Access SPC-3 SCSI device
+da0: 300.000MB/s transfers
+da0: Command Queueing enabled
+da0: 285568MB (584843264 512 byte sectors)
+uhid0 on uhub3
+uhid0: <vendor 0x03f0 HP USB Slim Keyboard, class 0/0, rev 1.10/1.10, addr 3> on usbus1
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+lagg0: IPv6 addresses on igb0 have been removed before adding it as a member to prevent IPv6 address scope violation.
+lagg0: link state changed to DOWN
+lagg0: IPv6 addresses on igb1 have been removed before adding it as a member to prevent IPv6 address scope violation.
+bge0: link state changed to DOWN
+bge1: link state changed to DOWN
+re0: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+bge0: link state changed to UP
+mpt0: IR resync update 1 completed
+mpt0: IR resync update 2 completed
+mpt0: IR resync update 3 completed
+mpt0: IR resync update 4 completed
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 13
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 13
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 13
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 13
+device_attach: est3 attach returned 6
+mpt0: IR resync update 5 completed
+mpt0: IR resync update 6 completed
+bge0: link state changed to DOWN
+mpt0: IR resync update 7 completed
+mpt0: IR resync update 8 completed
+mpt0:vol0(mpt0:0:0): RAID-1 - Degraded
+mpt0:vol0(mpt0:0:0): Status ( Enabled Re-Syncing )
+mpt0:vol0(mpt0:0:0): High Priority Re-Sync
+mpt0:vol0(mpt0:0:0): 537631180 of 584843264 blocks remaining
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 3 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 2 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 1 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 0 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Error 5, Retries exhausted
+mpt0: IR resync update 9 completed
+mpt0: IR resync update 10 completed
+mpt0: IR resync update 11 completed
+mpt0: IR resync update 12 completed
+mpt0: IR resync update 13 completed
+mpt0: IR resync update 14 completed
+mpt0: IR resync update 15 completed
+mpt0: IR resync update 16 completed
+mpt0: IR resync update 17 completed
+mpt0: IR resync update 18 completed
+mpt0: IR resync update 19 completed
+mpt0:vol0(mpt0:0:0): RAID-1 - Degraded
+mpt0:vol0(mpt0:0:0): Status ( Enabled Re-Syncing )
+mpt0:vol0(mpt0:0:0): High Priority Re-Sync
+mpt0:vol0(mpt0:0:0): 473336268 of 584843264 blocks remaining
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 3 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 2 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 1 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 0 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Error 5, Retries exhausted
+mpt0: IR resync update 20 completed
+mpt0: IR resync update 21 completed
+mpt0: IR resync update 22 completed
+mpt0: IR resync update 23 completed
+mpt0: IR resync update 24 completed
+mpt0: IR resync update 25 completed
+mpt0: IR resync update 26 completed
+mpt0: IR resync update 27 completed
+mpt0: IR resync update 28 completed
+mpt0: IR resync update 29 completed
+mpt0: IR resync update 30 completed
+mpt0:vol0(mpt0:0:0): RAID-1 - Degraded
+mpt0:vol0(mpt0:0:0): Status ( Enabled Re-Syncing )
+mpt0:vol0(mpt0:0:0): High Priority Re-Sync
+mpt0:vol0(mpt0:0:0): 408630220 of 584843264 blocks remaining
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 3 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 2 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 1 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 0 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Error 5, Retries exhausted
+mpt0: IR resync update 31 completed
+mpt0: IR resync update 32 completed
+mpt0: IR resync update 33 completed
+mpt0: IR resync update 34 completed
+mpt0: IR resync update 35 completed
+mpt0: IR resync update 36 completed
+mpt0: IR resync update 37 completed
+mpt0: IR resync update 38 completed
+mpt0: IR resync update 39 completed
+mpt0: IR resync update 40 completed
+mpt0: IR resync update 41 completed
+mpt0:vol0(mpt0:0:0): RAID-1 - Degraded
+mpt0:vol0(mpt0:0:0): Status ( Enabled Re-Syncing )
+mpt0:vol0(mpt0:0:0): High Priority Re-Sync
+mpt0:vol0(mpt0:0:0): 343493324 of 584843264 blocks remaining
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 3 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 2 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 1 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 0 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Error 5, Retries exhausted
+mpt0: IR resync update 42 completed
+mpt0: IR resync update 43 completed
+mpt0: IR resync update 44 completed
+mpt0: IR resync update 45 completed
+mpt0: IR resync update 46 completed
+mpt0: IR resync update 47 completed
+mpt0: IR resync update 48 completed
+mpt0: IR resync update 49 completed
+mpt0: IR resync update 50 completed
+mpt0: IR resync update 51 completed
+mpt0: IR resync update 52 completed
+mpt0:vol0(mpt0:0:0): RAID-1 - Degraded
+mpt0:vol0(mpt0:0:0): Status ( Enabled Re-Syncing )
+mpt0:vol0(mpt0:0:0): High Priority Re-Sync
+mpt0:vol0(mpt0:0:0): 278868940 of 584843264 blocks remaining
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 3 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 2 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 1 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 0 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Error 5, Retries exhausted
+mpt0: IR resync update 53 completed
+mpt0: IR resync update 54 completed
+mpt0: IR resync update 55 completed
+mpt0: IR resync update 56 completed
+mpt0: IR resync update 57 completed
+mpt0: IR resync update 58 completed
+mpt0: IR resync update 59 completed
+mpt0: IR resync update 60 completed
+mpt0: IR resync update 61 completed
+mpt0: IR resync update 62 completed
+mpt0: IR resync update 63 completed
+mpt0:vol0(mpt0:0:0): RAID-1 - Degraded
+mpt0:vol0(mpt0:0:0): Status ( Enabled Re-Syncing )
+mpt0:vol0(mpt0:0:0): High Priority Re-Sync
+mpt0:vol0(mpt0:0:0): 214590924 of 584843264 blocks remaining
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 3 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 2 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 1 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 0 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Error 5, Retries exhausted
+mpt0: IR resync update 64 completed
+mpt0: IR resync update 65 completed
+mpt0: IR resync update 66 completed
+mpt0: IR resync update 67 completed
+mpt0: IR resync update 68 completed
+mpt0: IR resync update 69 completed
+mpt0: IR resync update 70 completed
+bge0: link state changed to UP
+mpt0: IR resync update 71 completed
+mpt0: IR resync update 72 completed
+mpt0: IR resync update 73 completed
+mpt0:vol0(mpt0:0:0): RAID-1 - Degraded
+mpt0:vol0(mpt0:0:0): Status ( Enabled Re-Syncing )
+mpt0:vol0(mpt0:0:0): High Priority Re-Sync
+mpt0:vol0(mpt0:0:0): 153373900 of 584843264 blocks remaining
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 3 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 2 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 1 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 0 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Error 5, Retries exhausted
+mpt0: IR resync update 74 completed
+mpt0: IR resync update 75 completed
+mpt0: IR resync update 76 completed
+mpt0: IR resync update 77 completed
+mpt0: IR resync update 78 completed
+mpt0: IR resync update 79 completed
+mpt0: IR resync update 80 completed
+mpt0: IR resync update 81 completed
+mpt0: IR resync update 82 completed
+mpt0: IR resync update 83 completed
+mpt0: IR resync update 84 completed
+mpt0:vol0(mpt0:0:0): RAID-1 - Degraded
+mpt0:vol0(mpt0:0:0): Status ( Enabled Re-Syncing )
+mpt0:vol0(mpt0:0:0): High Priority Re-Sync
+mpt0:vol0(mpt0:0:0): 89062092 of 584843264 blocks remaining
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 3 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 2 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 1 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Retrying command, 0 more tries remain
+(probe3:mpt0:1:3:0): INQUIRY. CDB: 12 00 00 00 24 00 
+(probe3:mpt0:1:3:0): CAM status: Unrecoverable Host Bus Adapter Error
+(probe3:mpt0:1:3:0): Error 5, Retries exhausted
+mpt0: IR resync update 85 completed
+mpt0: IR resync update 86 completed
+mpt0: IR resync update 87 completed
+mpt0: IR resync update 88 completed
+mpt0: IR resync update 89 completed

@@ -1,0 +1,88 @@
+---<<BOOT>>---
+KDB: debugger backends: ddb
+KDB: current backend: ddb
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-CURRENT #46 48be496fd49-c271548(master)-dirty: Mon Sep 14 09:52:04 UTC 2020
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX arm64
+FreeBSD clang version 11.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.0-rc2-0-g414f32a9e86)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT: init without driver.
+module firmware already present!
+real memory  = 8402960384 (8013 MB)
+avail memory = 8166842368 (7788 MB)
+Starting CPU 1 (100)
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+random: unblocking device.
+random: entropy device external interface
+MAP 7c2e0000 mode 2 pages 272
+MAP 7f6d0000 mode 2 pages 144
+MAP 7f780000 mode 2 pages 272
+MAP 9010000 mode 0 pages 1
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 13.0.
+kbd0 at kbdmux0
+WARNING: Device "openfirm" is Giant locked and may be deleted before FreeBSD 13.0.
+acpi0: <AMAZON AMZNFACP>
+acpi0: Power Button (fixed)
+acpi0: Sleep Button (fixed)
+acpi0: Could not update all GPEs: AE_NOT_CONFIGURED
+psci0: <ARM Power State Co-ordination Interface Driver> on acpi0
+gic0: <ARM Generic Interrupt Controller v3.0> iomem 0x10000000-0x1001ffff,0x10200000-0x1ffeffff on acpi0
+its0: <ARM GIC Interrupt Translation Service> on gic0
+gpio0: <Arm PL061 GPIO Controller> iomem 0x9030000-0x9030fff irq 0 on acpi0
+gpiobus0: <ACPI GPIO bus> on gpio0
+generic_timer0: <ARM Generic Timer> irq 33,34,35 on acpi0
+Timecounter "ARM MPCore Timecounter" frequency 121875000 Hz quality 1000
+Event timer "ARM MPCore Eventtimer" frequency 121875000 Hz quality 1000
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cpu0: <ACPI CPU> on acpi0
+pcib0: <Generic PCI host controller> on acpi0
+pci0: <PCI bus> on pcib0
+uart0: <Amazon PCI serial device> mem 0x80118000-0x80118fff at device 1.0 on pci0
+nvme0: <Generic NVMe Device> mem 0x80114000-0x80117fff irq 36 at device 4.0 on pci0
+ena0: <ENA adapter> mem 0x80110000-0x80113fff,0x80000000-0x800fffff,0x80100000-0x8010ffff irq 37 at device 5.0 on pci0
+ena0: Elastic Network Adapter (ENA)ena v2.2.0
+ena0: Ethernet address: XXX
+gpioaei0: <GPIO AEI> on gpiobus0
+gpioc0: <GPIO controller> on gpio0
+acpi_button0: <Power Button> on acpi0
+cryptosoft0: <software crypto>
+Timecounters tick every 1.000 msec
+ena0: link is UP
+ena0: link state changed to UP
+usb_needs_explore_all: no devclass
+nvme0: temperature threshold not supported
+Release APs...done
+CPU  0: ARM Neoverse-N1 r3p1 affinity:  0  0
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,PIPT ICache,64 byte ERG,64 byte CWG,IDC,DIC>
+Trying to mount root from ufs:/dev/ufs/rootfs [rw]...
+ Instruction Set Attributes 0 = <DP,RDM,Atomic,CRC32,SHA2,SHA1,AES+PMULL>
+Root mount waiting for: Instruction Set Attributes 1 = <RCPC-8.3,DCPoP>
+ CAM         Processor Features 0 = <CSV3,CSV2,RASv1,GIC,AdvSIMD+HP,FP+HP,EL3,EL2,EL1,EL0 32>
+
+nda0 at nvme0 bus 0 scbus0 target 0 lun 1
+         Processor Features 1 = <PSTATE.SSBS MSR>
+nda0:       Memory Model Features 0 = <TGran4,TGran64,TGran16,SNSMem,BigEnd,16bit ASID,256TB PA>
+<Amazon Elastic Block Store 1.0 vol0f45a02b665ad7704>
+      Memory Model Features 1 = <PAN+ATS1E1,LO,HPD+TTPBHA,VH,16bit VMID,HAF+DS>
+nda0: Serial Number...
+      Memory Model Features 2 = <32bit CCIDX,48bit VA,UAO,CnP>
+nda0: nvme version 1.0 x0 (max x0) lanes PCIe Gen0 (max Gen0) link
+             Debug Features 0 = <SPE,2 CTX BKPTs,4 Watchpoints,6 Breakpoints,PMUv3+16 bit evtCount,Debugv8.2>
+nda0: 20480MB (41943040 512 byte sectors)
+             Debug Features 1 = <>
+         Auxiliary Features 0 = <>
+         Auxiliary Features 1 = <>
+CPU  1: ARM Neoverse-N1 r3p1 affinity:  1  0
+WARNING: WITNESS option enabled, expect reduced performance.
+mountroot: waiting for device /dev/ufs/rootfs...
+lo0: link state changed to UP
+ena0: device is going UP
+ena0: Creating 2 IO queues. Rx queue size: 1024, Tx queue size: 1024, LLQ is ENABLED
+ena0: device is going DOWN
+ena0: device is going UP
+ena0: Creating 2 IO queues. Rx queue size: 1024, Tx queue size: 1024, LLQ is ENABLED
+Security policy loaded: MAC/ntpd (mac_ntpd)

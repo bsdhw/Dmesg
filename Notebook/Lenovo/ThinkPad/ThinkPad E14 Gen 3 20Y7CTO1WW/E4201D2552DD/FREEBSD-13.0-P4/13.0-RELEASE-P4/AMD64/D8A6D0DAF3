@@ -1,0 +1,183 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE-p4 #0: Tue Aug 24 07:33:27 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 1920x1080
+CPU: AMD Ryzen 7 5700U with Radeon Graphics          (1796.66-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x860f81  Family=0x17  Model=0x68  Stepping=1
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c91a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x400004<UMIP,RDPID>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x90cf757<CLZERO,IRPerf,XSaveErPtr,RDPRU,MCOMMIT,WBNOINVD,IBPB,IBRS,STIBP,PREFER_IBRS,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 15390773248 (14677 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <LENOVO TP-R1O  >
+FreeBSD/SMP: Multiprocessor System Detected: 16 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 15 5 14 2 3 6 7 8 4 10 9 12 11 1 13
+Timecounter "TSC" frequency 1796659902 Hz quality 1000
+KTLS: Initialized 16 threads
+random: entropy device external interface
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000067 [4354] netmap_init               netmap: loaded module
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <LENOVO TP-R1O>
+acpi0: Power Button (fixed)
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x3> port 0x62,0x66 on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 2.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xfd600000-0xfd603fff at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 2.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0x2000-0x20ff mem 0xfd504000-0xfd504fff,0xfd500000-0xfd503fff at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x50800000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib3: <ACPI PCI-PCI bridge> at device 2.3 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <network> at device 0.0 (no driver attached)
+pcib4: <ACPI PCI-PCI bridge> at device 2.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+nvme1: <Generic NVMe Device> mem 0xfd400000-0xfd403fff,0xfd405000-0xfd405fff,0xfd404000-0xfd404fff at device 0.0 on pci4
+pcib5: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci5: <ACPI PCI bus> on pcib5
+vgapci0: <VGA-compatible display> port 0x1000-0x10ff mem 0x460000000-0x46fffffff,0x470000000-0x4701fffff,0xfd300000-0xfd37ffff at device 0.0 on pci5
+hdac0: <ATI (0x1637) HDA Controller> mem 0xfd3c8000-0xfd3cbfff at device 0.1 on pci5
+pci5: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfd000000-0xfd0fffff at device 0.3 on pci5
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xfd100000-0xfd1fffff at device 0.4 on pci5
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pci5: <multimedia> at device 0.5 (no driver attached)
+hdac1: <AMD Raven HDA Controller> mem 0xfd3c0000-0xfd3c7fff at device 0.6 on pci5
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+cpu0: <ACPI CPU> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Elantech Touchpad, device ID 0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub0 on usbus1
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub1 on usbus0
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvme0: Allocated 64MB host memory buffer
+nvd0: <SAMSUNG MZALQ512HBLU-00BL1> NVMe namespace
+nvd0: 488386MB (1000215216 512 byte sectors)
+GEOM_ELI: Device nvd0p4.eli created.
+GEOM_ELI: Encryption: AES-XTS 256
+GEOM_ELI:     Crypto: accelerated software
+nvd1: <SKHynix_HFS001TDE9X081N> NVMe namespace
+nvd1: 976762MB (2000409264 512 byte sectors)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+hdacc1: <Realtek ALC257 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC257 Audio Function Group> at nid 1 on hdacc1
+pcm3: <Realtek ALC257 (Analog 2.0+HP/2.0)> at nid 20,33 and 18 on hdaa1
+pcm4: <Realtek ALC257 (Right Analog Mic)> at nid 25 on hdaa1
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 usbus1 CAM
+uhub1: 6 ports with 6 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+ugen1.2: <MediaTek Inc. WirelessDevice> at usbus1
+ugen0.2: <Azurewave Integrated Camera> at usbus0
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.WMI1.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMI2.WQBB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WMI3.WQBC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134_SB.WMI4.WQBD: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134_SB.WMI5.WQBE: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi5: <ACPI-WMI mapping> on acpi0
+acpi_wmi5: Embedded MOF found
+ACPI: \134_SB.WMI6.WQFE: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+lo0: link state changed to UP
+re0: link state changed to DOWN
+ubt0 on uhub0
+ubt0: <BTACLIf> on usbus1
+re0: link state changed to UP
+re0.101: link state changed to UP
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to deny, logging disabled

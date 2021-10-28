@@ -1,0 +1,368 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p15-HBSD #0  5ee0fd2f334(stable/21.1)-dirty: Fri Mar 26 08:58:41 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz (2400.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x406f1  Family=0x6  Model=0x4f  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffefbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x21cbfbb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,PQM,NFPUSG,PQE,RDSEED,ADX,SMAP,PROCTRACE>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 137438953472 (131072 MB)
+avail memory = 133731827712 (127536 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <SUPERM SMCI--MB>
+FreeBSD/SMP: Multiprocessor System Detected: 56 CPUs
+FreeBSD/SMP: 2 package(s) x 14 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 24-47 on motherboard
+ioapic2 <Version 2.0> irqs 48-71 on motherboard
+Launching APs: 1 4 45 2 47 17 24 6 35 22 32 3 54 43 39 37 49 44 12 36 46 53 40 20 30 9 55 41 14 38 31 52 29 27 16 18 21 48 51 50 23 26 5 42 33 11 25 28 13 10 8 34 7 19 15
+Timecounter "TSC-low" frequency 1200024590 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128e7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000106 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x71,0x74-0x77 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <dasp, performance counters> at device 8.2 (no driver attached)
+pci0: <dasp, performance counters> at device 9.2 (no driver attached)
+pci0: <dasp, performance counters> at device 11.1 (no driver attached)
+pci0: <dasp, performance counters> at device 11.2 (no driver attached)
+pci0: <dasp, performance counters> at device 16.1 (no driver attached)
+pci0: <dasp, performance counters> at device 16.6 (no driver attached)
+pci0: <dasp, performance counters> at device 18.1 (no driver attached)
+pci0: <dasp, performance counters> at device 18.5 (no driver attached)
+pcib1: <ACPI Host-PCI bridge> on acpi0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <dasp, performance counters> at device 8.2 (no driver attached)
+pci1: <dasp, performance counters> at device 9.2 (no driver attached)
+pci1: <dasp, performance counters> at device 11.1 (no driver attached)
+pci1: <dasp, performance counters> at device 11.2 (no driver attached)
+pci1: <dasp, performance counters> at device 16.1 (no driver attached)
+pci1: <dasp, performance counters> at device 16.6 (no driver attached)
+pci1: <dasp, performance counters> at device 18.1 (no driver attached)
+pci1: <dasp, performance counters> at device 18.5 (no driver attached)
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+pcib2: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 26 at device 1.0 numa-domain 0 on pci2
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+ix0: <Intel(R) PRO/10GbE PCI-Express Network Driver> port 0x6020-0x603f mem 0xc7c00000-0xc7dfffff,0xc7e04000-0xc7e07fff irq 28 at device 0.0 numa-domain 0 on pci3
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 14 RX queues 14 TX queues
+ix0: Using MSI-X interrupts with 15 vectors
+ix0: allocated for 14 queues
+ix0: allocated for 14 rx queues
+ix0: Ethernet address: XXX
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: netmap queues/slots: TX 14/2048, RX 14/2048
+ix1: <Intel(R) PRO/10GbE PCI-Express Network Driver> port 0x6000-0x601f mem 0xc7a00000-0xc7bfffff,0xc7e00000-0xc7e03fff irq 26 at device 0.1 numa-domain 0 on pci3
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 14 RX queues 14 TX queues
+ix1: Using MSI-X interrupts with 15 vectors
+ix1: allocated for 14 queues
+ix1: allocated for 14 rx queues
+ix1: Ethernet address: XXX
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: netmap queues/slots: TX 14/2048, RX 14/2048
+pcib4: <ACPI PCI-PCI bridge> irq 40 at device 3.0 numa-domain 0 on pci2
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+pci2: <unknown> at device 17.0 (no driver attached)
+ahci0: <Intel Wellsburg AHCI SATA controller> port 0x7110-0x7117,0x7100-0x7103,0x70f0-0x70f7,0x70e0-0x70e3,0x7020-0x703f mem 0xc7438000-0xc74387ff irq 16 at device 17.4 numa-domain 0 on pci2
+ahci0: AHCI v1.30 with 4 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+xhci0: <Intel Wellsburg USB 3.0 controller> mem 0xc7400000-0xc740ffff irq 19 at device 20.0 numa-domain 0 on pci2
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 numa-domain 0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci2: <simple comms> at device 22.0 (no driver attached)
+pci2: <simple comms> at device 22.1 (no driver attached)
+ehci0: <Intel Wellsburg USB 2.0 controller> mem 0xc7434000-0xc74343ff irq 18 at device 26.0 numa-domain 0 on pci2
+usbus1: EHCI version 1.0
+usbus1 numa-domain 0 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 28.0 numa-domain 0 on pci2
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+pcib6: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 0 on pci5
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+vgapci0: <VGA-compatible display> port 0x5000-0x507f mem 0xc6000000-0xc6ffffff,0xc7000000-0xc701ffff irq 16 at device 0.0 numa-domain 0 on pci6
+vgapci0: Boot video device
+pcib7: <ACPI PCI-PCI bridge> irq 18 at device 28.2 numa-domain 0 on pci2
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x4000-0x401f mem 0xc7200000-0xc727ffff,0xc7280000-0xc7283fff irq 18 at device 0.0 numa-domain 0 on pci7
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: XXX
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib8: <ACPI PCI-PCI bridge> irq 19 at device 28.3 numa-domain 0 on pci2
+pci8: <ACPI PCI bus> numa-domain 0 on pcib8
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x3000-0x301f mem 0xc7100000-0xc717ffff,0xc7180000-0xc7183fff irq 19 at device 0.0 numa-domain 0 on pci8
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: XXX
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+ehci1: <Intel Wellsburg USB 2.0 controller> mem 0xc7433000-0xc74333ff irq 18 at device 29.0 numa-domain 0 on pci2
+usbus2: EHCI version 1.0
+usbus2 numa-domain 0 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci2
+isa0: <ISA bus> numa-domain 0 on isab0
+ahci1: <Intel Wellsburg AHCI SATA controller> port 0x7070-0x7077,0x7060-0x7063,0x7050-0x7057,0x7040-0x7043,0x7000-0x701f mem 0xc7432000-0xc74327ff irq 16 at device 31.2 numa-domain 0 on pci2
+ahci1: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich4: <AHCI channel> at channel 0 on ahci1
+ahcich5: <AHCI channel> at channel 1 on ahci1
+ahcich6: <AHCI channel> at channel 2 on ahci1
+ahcich7: <AHCI channel> at channel 3 on ahci1
+ahcich8: <AHCI channel> at channel 4 on ahci1
+ahcich9: <AHCI channel> at channel 5 on ahci1
+ahciem1: <AHCI enclosure management bridge> at channel 2147483647 on ahci1
+device_attach: ahciem1 attach returned 6
+pcib9: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci9: <ACPI PCI bus> numa-domain 1 on pcib9
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xc8fff,0xc9000-0xc9fff,0xca000-0xcafff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub2: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich4 bus 0 scbus4 target 0 lun 0
+ada0: <TOSHIBA MG03ACA100 FL1A> ATA8-ACS SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA5, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+ada1 at ahcich5 bus 0 scbus5 target 0 lun 0
+ada1: <TOSHIBA MG03ACA100 FL1A> ATA8-ACS SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA5, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 953869MB (1953525168 512 byte sectors)
+ada2 at ahcich8 bus 0 scbus8 target 0 lun 0
+ada2: <INTEL SSDSC2BX400G4 G2010140> ACS-2 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada2: Command Queueing enabled
+ada2: 381554MB (781422768 512 byte sectors)
+ada2: quirks=0x1<4K>
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub1: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+uhub0: 21 ports with 21 removable, self powered
+ugen0.2: <Raritan D2CIM-DVUSB> at usbus0
+ukbd0 numa-domain 0 on uhub0
+ukbd0: <USB Keyboard> on usbus0
+kbd2 at ukbd0
+ugen2.2: <vendor 0x8087 product 0x8002> at usbus2
+uhub3 numa-domain 0 on uhub1
+uhub3: <vendor 0x8087 product 0x8002, class 9/0, rev 2.00/0.05, addr 2> on usbus2
+ugen1.2: <vendor 0x8087 product 0x800a> at usbus1
+uhub4 numa-domain 0 on uhub2
+uhub4: <vendor 0x8087 product 0x800a, class 9/0, rev 2.00/0.05, addr 2> on usbus1
+uhub3: 8 ports with 8 removable, self powered
+uhub4: 6 ports with 6 removable, self powered
+ugen0.3: <Raritan D2CIM-DVUSB VM/CCID> at usbus0
+umass0 numa-domain 0 on uhub0
+umass0: <Mass Storage-I> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x0100
+umass0:10:0: Attached to scbus10
+umass1 numa-domain 0 on uhub0
+cd0 at umass-sim0 bus 0 scbus10 target 0 lun 0
+cd0: <Raritan Virtual Disc 1 0.01> Removable CD-ROM SCSI-3 device
+cd0: Serial Number...
+cd0: 40.000MB/s transfers
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+cd0: quirks=0x10<10_BYTE_ONLY>
+umass1: <Mass Storage-II> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0x0100
+umass1:11:1: Attached to scbus11
+da0 at umass-sim1 bus 1 scbus11 target 0 lun 0
+da0: <Raritan Virtual Disc 2 0.01> Removable Direct Access SCSI-3 device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ugen0.4: <vendor 0x0557 product 0x7000> at usbus0
+uhub5 numa-domain 0 on uhub0
+uhub5: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 3> on usbus0
+uhub5: 4 ports with 3 removable, self powered
+ugen0.5: <vendor 0x0557 product 0x2419> at usbus0
+ukbd1 numa-domain 0 on uhub5
+ukbd1: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 4> on usbus0
+kbd3 at ukbd1
+ioat0: <BDX IOAT Ch0> mem 0xc742c000-0xc742ffff irq 31 at device 4.0 numa-domain 0 on pci2
+ioat0: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat1: <BDX IOAT Ch1> mem 0xc7428000-0xc742bfff irq 39 at device 4.1 numa-domain 0 on pci2
+ioat1: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat2: <BDX IOAT Ch2> mem 0xc7424000-0xc7427fff irq 31 at device 4.2 numa-domain 0 on pci2
+ioat2: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat3: <BDX IOAT Ch3> mem 0xc7420000-0xc7423fff irq 39 at device 4.3 numa-domain 0 on pci2
+ioat3: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat4: <BDX IOAT Ch4> mem 0xc741c000-0xc741ffff irq 31 at device 4.4 numa-domain 0 on pci2
+ioat4: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat5: <BDX IOAT Ch5> mem 0xc7418000-0xc741bfff irq 39 at device 4.5 numa-domain 0 on pci2
+ioat5: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat6: <BDX IOAT Ch6> mem 0xc7414000-0xc7417fff irq 31 at device 4.6 numa-domain 0 on pci2
+ioat6: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat7: <BDX IOAT Ch7> mem 0xc7410000-0xc7413fff irq 39 at device 4.7 numa-domain 0 on pci2
+ioat7: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat8: <BDX IOAT Ch0> mem 0xfbf1c000-0xfbf1ffff irq 55 at device 4.0 numa-domain 1 on pci9
+ioat8: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat9: <BDX IOAT Ch1> mem 0xfbf18000-0xfbf1bfff irq 63 at device 4.1 numa-domain 1 on pci9
+ioat9: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat10: <BDX IOAT Ch2> mem 0xfbf14000-0xfbf17fff irq 55 at device 4.2 numa-domain 1 on pci9
+ioat10: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat11: <BDX IOAT Ch3> mem 0xfbf10000-0xfbf13fff irq 63 at device 4.3 numa-domain 1 on pci9
+ioat11: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat12: <BDX IOAT Ch4> mem 0xfbf0c000-0xfbf0ffff irq 55 at device 4.4 numa-domain 1 on pci9
+ioat12: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat13: <BDX IOAT Ch5> mem 0xfbf08000-0xfbf0bfff irq 63 at device 4.5 numa-domain 1 on pci9
+ioat13: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat14: <BDX IOAT Ch6> mem 0xfbf04000-0xfbf07fff irq 55 at device 4.6 numa-domain 1 on pci9
+ioat14: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat15: <BDX IOAT Ch7> mem 0xfbf00000-0xfbf03fff irq 63 at device 4.7 numa-domain 1 on pci9
+ioat15: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ums0 numa-domain 0 on uhub0
+ums0: <Rel+Abs Mouse> on usbus0
+ums0: 3 buttons and [XYZ] coordinates ID=2
+ums0: 3 buttons and [Z] coordinates ID=3
+ums1 numa-domain 0 on uhub5
+ums1: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 4> on usbus0
+ums1: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+ix0: link state changed to UP
+pflog0: promiscuous mode enabled
+ix0: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ix0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+ugen0.3: <Raritan D2CIM-DVUSB VM/CCID> at usbus0 (disconnected)
+umass0: at uhub0, port 12, addr 2 (disconnected)
+cd0 at umass-sim0 bus 0 scbus10 target 0 lun 0
+cd0: <Raritan Virtual Disc 1 0.01>  s/n ... detached
+(cd0:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+umass1: at uhub0, port 12, addr 2 (disconnected)
+da0 at umass-sim1 bus 1 scbus11 target 0 lun 0
+da0: <Raritan Virtual Disc 2 0.01>  s/n ... detached
+(da0:umass-sim1:1:0:0): Periph destroyed
+umass1: detached
+MCA: Bank 13, Status 0x8c000043000800c0
+MCA: Global Cap 0x0000000007000c16, Status 0x0000000000000000
+MCA: Vendor "GenuineIntel", ID 0x406f1, APIC ID 0
+MCA: CPU 0 COR (1) MS channel 0 memory error
+MCA: Address 0xdaa6a0280
+MCA: Misc 0x90000800080068c
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+MCA: Bank 13, Status 0x8c000043000800c0
+MCA: Global Cap 0x0000000007000c16, Status 0x0000000000000000
+MCA: Vendor "GenuineIntel", ID 0x406f1, APIC ID 0
+MCA: CPU 0 COR (1) MS channel 0 memory error
+MCA: Address 0xdaa6a0280
+MCA: Misc 0x90000800080068c
+MCA: Bank 13, Status 0x8c000043000800c0
+MCA: Global Cap 0x0000000007000c16, Status 0x0000000000000000
+MCA: Vendor "GenuineIntel", ID 0x406f1, APIC ID 0
+MCA: CPU 0 COR (1) MS channel 0 memory error
+MCA: Address 0xdaa6a0280
+MCA: Misc 0x90000800080068c
+MCA: Bank 13, Status 0x8c000043000800c0
+MCA: Global Cap 0x0000000007000c16, Status 0x0000000000000000
+MCA: Vendor "GenuineIntel", ID 0x406f1, APIC ID 0
+MCA: CPU 0 COR (1) MS channel 0 memory error
+MCA: Address 0xdaa6a0280
+MCA: Misc 0x90000800080068c
+MCA: Bank 13, Status 0x8c000043000800c0
+MCA: Global Cap 0x0000000007000c16, Status 0x0000000000000000
+MCA: Vendor "GenuineIntel", ID 0x406f1, APIC ID 0
+MCA: CPU 0 COR (1) MS channel 0 memory error
+MCA: Address 0xdaa6a0280
+MCA: Misc 0x90000800080068c
+MCA: Bank 13, Status 0x8c000043000800c0
+MCA: Global Cap 0x0000000007000c16, Status 0x0000000000000000
+MCA: Vendor "GenuineIntel", ID 0x406f1, APIC ID 0
+MCA: CPU 0 COR (1) MS channel 0 memory error
+MCA: Address 0xdaa6a0280
+MCA: Misc 0x90000800080068c
+MCA: Bank 13, Status 0x8c000043000800c0
+MCA: Global Cap 0x0000000007000c16, Status 0x0000000000000000
+MCA: Vendor "GenuineIntel", ID 0x406f1, APIC ID 0
+MCA: CPU 0 COR (1) MS channel 0 memory error
+MCA: Address 0xdaa6a0280
+MCA: Misc 0x90000800080068c
+MCA: Bank 13, Status 0x8c000043000800c0
+MCA: Global Cap 0x0000000007000c16, Status 0x0000000000000000
+MCA: Vendor "GenuineIntel", ID 0x406f1, APIC ID 0
+MCA: CPU 0 COR (1) MS channel 0 memory error
+MCA: Address 0xdaa6a0280
+MCA: Misc 0x90000800080068c
