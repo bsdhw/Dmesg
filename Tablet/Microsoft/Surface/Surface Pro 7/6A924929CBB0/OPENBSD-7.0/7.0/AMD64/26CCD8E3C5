@@ -1,0 +1,1641 @@
+OpenBSD 7.0-current (GENERIC.MP) #249: Tue Jan 11 21:45:06 MST 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8144207872 (7766MB)
+avail mem = 7881396224 (7516MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x7bb50000 (16 entries)
+bios0: vendor Microsoft Corporation version "8.123.140" date 05/02/2020
+bios0: Microsoft Corporation Surface Pro 7
+acpi0 at bios0: ACPI 6.1
+acpi0: sleep states S0 S4 S5
+acpi0: tables DSDT FACP SSDT MSDM SSDT SSDT SSDT HPET LPIT APIC MCFG SSDT SSDT NHLT SSDT TPM2 DMAR WSMT FPDT BGRT
+acpi0: wakeup devices XHC_(S4) XDCI(S4) HDAS(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) RP05(S4) PXSX(S4) RP06(S4) PXSX(S4) RP07(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 19200000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 1064.29 MHz, 06-7e-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 38MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 994.95 MHz, 06-7e-05
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 993.21 MHz, 06-7e-05
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: disabling user TSC (skew=123)
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.09 MHz, 06-7e-05
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+cpu4 at mainbus0: apid 1 (application processor)
+cpu4: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 997.17 MHz, 06-7e-05
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu4: 256KB 64b/line 8-way L2 cache
+cpu4: disabling user TSC (skew=-137)
+cpu4: smt 1, core 0, package 0
+cpu5 at mainbus0: apid 3 (application processor)
+cpu5: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 994.87 MHz, 06-7e-05
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu5: 256KB 64b/line 8-way L2 cache
+cpu5: smt 1, core 1, package 0
+cpu6 at mainbus0: apid 5 (application processor)
+cpu6: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.28 MHz, 06-7e-05
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu6: 256KB 64b/line 8-way L2 cache
+cpu6: disabling user TSC (skew=115)
+cpu6: smt 1, core 2, package 0
+cpu7 at mainbus0: apid 7 (application processor)
+cpu7: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 994.42 MHz, 06-7e-05
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu7: 256KB 64b/line 8-way L2 cache
+cpu7: disabling user TSC (skew=109)
+cpu7: smt 1, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (RP01)
+acpiprt2 at acpi0: bus -1 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiprt5 at acpi0: bus -1 (RP05)
+acpiprt6 at acpi0: bus -1 (RP06)
+acpiprt7 at acpi0: bus -1 (RP07)
+acpiprt8 at acpi0: bus -1 (RP08)
+acpiprt9 at acpi0: bus 1 (RP09)
+acpiprt10 at acpi0: bus -1 (RP10)
+acpiprt11 at acpi0: bus -1 (RP11)
+acpiprt12 at acpi0: bus -1 (RP12)
+acpiprt13 at acpi0: bus -1 (RP13)
+acpiprt14 at acpi0: bus -1 (RP14)
+acpiprt15 at acpi0: bus -1 (RP15)
+acpiprt16 at acpi0: bus -1 (RP16)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+"MSHW0084" at acpi0 not configured
+"INT3400" at acpi0 not configured
+"INT3455" at acpi0 not configured
+"ACPI000E" at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"MSHW0125" at acpi0 not configured
+"INT33BE" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347A" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347E" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"MSHW0184" at acpi0 not configured
+"MSHW0091" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+"MSHW0005" at acpi0 not configured
+"MSHW0116" at acpi0 not configured
+acpisurface0 at acpi0
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSHW0006" at acpi0 not configured
+"INT3407" at acpi0 not configured
+"INT3532" at acpi0 not configured
+tpm0 at acpi0 TPM_ 2.0 (TIS) addr 0xfed40000/0x5000, device 0x00fc1050 rev 0x1
+acpipwrres0 at acpi0: BTPR, resource for HS10
+acpipwrres1 at acpi0: V0PR
+acpipwrres2 at acpi0: V1PR
+acpipwrres3 at acpi0: V2PR
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: CAMP, resource for CAMF, CAMR, CAM3
+acpipwrres6 at acpi0: TBT0, resource for TDM0, TRP0, TRP1
+acpipwrres7 at acpi0: TBT1, resource for TDM1, TRP2, TRP3
+acpipwrres8 at acpi0: D3C_, resource for TXHC, TDM0, TDM1, TRP0, TRP1, TRP2, TRP3
+acpitz0 at acpi0: no critical temperature defined
+acpitz1 at acpi0: no critical temperature defined
+acpitz2 at acpi0: no critical temperature defined
+acpitz3 at acpi0: no critical temperature defined
+acpitz4 at acpi0: no critical temperature defined
+acpitz5 at acpi0: no critical temperature defined
+acpitz6 at acpi0: no critical temperature defined
+acpitz7 at acpi0: no critical temperature defined
+acpitz8 at acpi0: no critical temperature defined
+acpicpu0 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu4 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu5 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu6 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu7 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpipwrres9 at acpi0: PIN_
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+cpu0: Enhanced SpeedStep 1064 MHz: speeds: 1501, 1500, 1400, 1300, 1200, 1100, 1000, 900, 800, 700, 600, 500, 400 MHz
+pci0 at mainbus0 bus 0
+0:31:5: mem address conflict 0xfe010000/0x1000
+pchb0 at pci0 dev 0 function 0 vendor "Intel", unknown product 0x8a12 rev 0x03
+inteldrm0 at pci0 dev 2 function 0 "Intel Iris Plus" rev 0x07
+drm0 at inteldrm0
+inteldrm0: msi, ICELAKE, gen 11
+vendor "Intel", unknown product 0x8a03 (class DASP subclass miscellaneous, rev 0x03) at pci0 dev 4 function 0 not configured
+vendor "Intel", unknown product 0x8a19 (class multimedia subclass miscellaneous, rev 0x03) at pci0 dev 5 function 0 not configured
+xhci0 at pci0 dev 13 function 0 vendor "Intel", unknown product 0x8a13 rev 0x03: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series ISH" rev 0x30 at pci0 dev 18 function 0 not configured
+xhci1 at pci0 dev 20 function 0 "Intel 495 Series xHCI" rev 0x30: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series Shared SRAM" rev 0x30 at pci0 dev 20 function 2 not configured
+iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x30, msix
+dwiic0 at pci0 dev 21 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 16
+iic0 at dwiic0
+"MSHW0125" at iic0 addr 0x50 not configured
+dwiic1 at pci0 dev 21 function 2 "Intel 495 Series I2C" rev 0x30: apic 2 int 18
+iic1 at dwiic1
+"INT33BE" at iic1 addr 0x36 not configured
+"INT3472" at iic1 addr 0x0 not configured
+dwiic2 at pci0 dev 21 function 3 "Intel 495 Series I2C" rev 0x30: apic 2 int 19
+iic2 at dwiic2
+"INT347A" at iic2 addr 0xc not configured
+"INT3472" at iic2 addr 0x0 not configured
+"INT347E" at iic2 addr 0x60 not configured
+"INT3472" at iic2 addr 0x0 not configured
+"Intel 495 Series HECI" rev 0x30 at pci0 dev 22 function 0 not configured
+vendor "Intel", unknown product 0x34e4 (class communications subclass miscellaneous, rev 0x30) at pci0 dev 22 function 4 not configured
+dwiic3 at pci0 dev 25 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 32
+iic3 at dwiic3
+"MSHW0184" at iic3 addr 0x39 not configured
+ppb0 at pci0 dev 29 function 0 "Intel 495 Series PCIE" rev 0x30: msi
+pci1 at ppb0 bus 1
+nvme0 at pci1 dev 0 function 0 unknown vendor 0x1e0f product 0x0001 rev 0x00: msix, NVMe 1.3
+nvme0: KBG40ZPZ256G TOSHIBA MEMORY, firmware AEMS0102, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, KBG40ZPZ256G TOS, AEMS>
+sd0: 244198MB, 512 bytes/sector, 500118192 sectors
+"Intel 495 Series UART" rev 0x30 at pci0 dev 30 function 0 not configured
+pcib0 at pci0 dev 31 function 0 "Intel 495 Series eSPI" rev 0x30
+azalia0 at pci0 dev 31 function 3 "Intel 495 Series HD Audio" rev 0x30: msi
+azalia0: codecs: Realtek/0x0274, Intel/0x280f, using Realtek/0x0274
+audio0 at azalia0
+"Intel 495 Series SPI" rev 0x30 at pci0 dev 31 function 5 not configured
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub2 at uhub1 port 4 configuration 1 interface 0 "Terminus Technology USB 2.0 Hub" rev 2.00/1.00 addr 2
+uhidev0 at uhub2 port 1 configuration 1 interface 0 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd0 at ukbd0: console keyboard
+uhidev1 at uhub2 port 1 configuration 1 interface 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev1: iclass 3/0
+fido0 at uhidev1: input=64, output=64, feature=0
+ugen0 at uhub2 port 1 configuration 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhub3 at uhub2 port 2 configuration 1 interface 0 "Terminus Technology USB 2.0 Hub" rev 2.00/1.00 addr 4
+uhub4 at uhub3 port 3 configuration 1 interface 0 "Texas Instruments product 0x8142" rev 2.10/1.00 addr 5
+uhidev2 at uhub4 port 2 configuration 1 interface 0 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev2: iclass 3/1
+ukbd1 at uhidev2: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+uhidev3 at uhub4 port 2 configuration 1 interface 1 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev3: iclass 3/1, 3 report ids
+ums0 at uhidev3 reportid 1: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+uhid0 at uhidev3 reportid 2: input=1, output=0, feature=0
+ucc0 at uhidev3 reportid 3: 6 usages, 6 keys, enum
+wskbd2 at ucc0 mux 1
+uhub5 at uhub4 port 3 configuration 1 interface 0 "Texas Instruments product 0x8027" rev 2.10/1.10 addr 7
+uhidev4 at uhub5 port 1 configuration 1 interface 0 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev4: iclass 3/1
+ukbd2 at uhidev4: 8 variable keys, 6 key codes
+wskbd3 at ukbd2 mux 1
+uhidev5 at uhub5 port 1 configuration 1 interface 1 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev5: iclass 3/1, 8 report ids
+ums1 at uhidev5 reportid 2: 16 buttons, Z and W dir
+wsmouse1 at ums1 mux 0
+ucc1 at uhidev5 reportid 3: 652 usages, 18 keys, array
+wskbd4 at ucc1 mux 1
+uhid1 at uhidev5 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev5 reportid 8: input=1, output=0, feature=0
+uhidev6 at uhub5 port 1 configuration 1 interface 2 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev6: iclass 3/0, 33 report ids
+uhidpp0 at uhidev6 device 1 mouse "MX Master 2S" serial ...
+uhid3 at uhidev6 reportid 32: input=14, output=14, feature=0
+uhid4 at uhidev6 reportid 33: input=31, output=31, feature=0
+uhidev7 at uhub4 port 4 configuration 1 interface 0 "Texas Instruments Texas Instruments USBtoI2C Solution" rev 1.10/1.00 addr 9
+uhidev7: iclass 3/0
+uhid5 at uhidev7: input=64, output=64, feature=2
+ure0 at uhub3 port 4 configuration 1 interface 0 "Realtek USB 10/100 LAN" rev 2.10/20.00 addr 10
+ure0: RTL8152 (0x4c10), address XXX
+rlphy0 at ure0 phy 0: RTL8201E 10/100 PHY, rev. 2
+uhidev8 at uhub1 port 8 configuration 1 interface 0 "Microsoft Surface Type Cover" rev 2.10/0.07 addr 11
+uhidev8: iclass 3/0, 41 report ids
+umt0 at uhidev8: clickpad, 5 contacts
+wsmouse2 at umt0 mux 0
+ukbd3 at uhidev8 reportid 1: 8 variable keys, 6 key codes
+wskbd5 at ukbd3 mux 1
+ums2 at uhidev8 reportid 2: 5 buttons, Z and W dir
+wsmouse3 at ums2 mux 0
+umstc0 at uhidev8 reportid 3
+uhid6 at uhidev8 reportid 5: input=0, output=0, feature=33
+uhid7 at uhidev8 reportid 8: input=0, output=0, feature=1
+uhid8 at uhidev8 reportid 9: input=38, output=20, feature=1
+uhid9 at uhidev8 reportid 10: input=38, output=20, feature=0
+uhid10 at uhidev8 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev8 reportid 12: input=0, output=1, feature=0
+uhid12 at uhidev8 reportid 13: input=34, output=34, feature=0
+uhid13 at uhidev8 reportid 14: input=59, output=59, feature=0
+uhid14 at uhidev8 reportid 32: input=60, output=60, feature=60
+uhid15 at uhidev8 reportid 33: input=60, output=60, feature=60
+uhid16 at uhidev8 reportid 34: input=16, output=16, feature=16
+uhid17 at uhidev8 reportid 35: input=16, output=16, feature=16
+uhid18 at uhidev8 reportid 36: input=16, output=16, feature=16
+uhid19 at uhidev8 reportid 37: input=16, output=16, feature=16
+uhid20 at uhidev8 reportid 38: input=16, output=16, feature=16
+uhid21 at uhidev8 reportid 39: input=16, output=16, feature=16
+uhid22 at uhidev8 reportid 40: input=16, output=16, feature=16
+uhid23 at uhidev8 reportid 41: input=16, output=16, feature=16
+ugen1 at uhub1 port 10 "Intel Bluetooth" rev 2.01/0.02 addr 12
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (2b4344d1e79ad749.a) swap on sd0b dump on sd0b
+inteldrm0: 2736x1440, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wskbd2: connecting to wsdisplay0
+wskbd3: connecting to wsdisplay0
+wskbd4: connecting to wsdisplay0
+wskbd5: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwx0: hw rev 0x330, fw ver 63.c04f3485.0, address XXX
+syncing disks... done
+rebooting...
+OpenBSD 7.0-current (RAMDISK_CD) #246: Thu Jan 13 18:22:00 MST 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8144207872 (7766MB)
+avail mem = 7893360640 (7527MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x7bb50000 (16 entries)
+bios0: vendor Microsoft Corporation version "8.123.140" date 05/02/2020
+bios0: Microsoft Corporation Surface Pro 7
+acpi0 at bios0: ACPI 6.1
+acpi0: tables DSDT FACP SSDT MSDM SSDT SSDT SSDT HPET LPIT APIC MCFG SSDT SSDT NHLT SSDT TPM2 DMAR WSMT FPDT BGRT
+acpihpet0 at acpi0: 19200000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 1391.79 MHz, 06-7e-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 38MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (RP01)
+acpiprt2 at acpi0: bus -1 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiprt5 at acpi0: bus -1 (RP05)
+acpiprt6 at acpi0: bus -1 (RP06)
+acpiprt7 at acpi0: bus -1 (RP07)
+acpiprt8 at acpi0: bus -1 (RP08)
+acpiprt9 at acpi0: bus 1 (RP09)
+acpiprt10 at acpi0: bus -1 (RP10)
+acpiprt11 at acpi0: bus -1 (RP11)
+acpiprt12 at acpi0: bus -1 (RP12)
+acpiprt13 at acpi0: bus -1 (RP13)
+acpiprt14 at acpi0: bus -1 (RP14)
+acpiprt15 at acpi0: bus -1 (RP15)
+acpiprt16 at acpi0: bus -1 (RP16)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+"ACPI000E" at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"MSHW0125" at acpi0 not configured
+"INT33BE" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347A" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347E" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"MSHW0184" at acpi0 not configured
+"INT3455" at acpi0 not configured
+"MSHW0084" at acpi0 not configured
+"MSHW0091" at acpi0 not configured
+"INT3400" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"MSHW0005" at acpi0 not configured
+"MSHW0116" at acpi0 not configured
+"MSHW0040" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSHW0006" at acpi0 not configured
+"INT3407" at acpi0 not configured
+"INT3532" at acpi0 not configured
+"NTC0702" at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+pci0 at mainbus0 bus 0
+0:31:5: mem address conflict 0xfe010000/0x1000
+pchb0 at pci0 dev 0 function 0 vendor "Intel", unknown product 0x8a12 rev 0x03
+"Intel Iris Plus" rev 0x07 at pci0 dev 2 function 0 not configured
+vendor "Intel", unknown product 0x8a03 (class DASP subclass miscellaneous, rev 0x03) at pci0 dev 4 function 0 not configured
+vendor "Intel", unknown product 0x8a19 (class multimedia subclass miscellaneous, rev 0x03) at pci0 dev 5 function 0 not configured
+xhci0 at pci0 dev 13 function 0 vendor "Intel", unknown product 0x8a13 rev 0x03: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series ISH" rev 0x30 at pci0 dev 18 function 0 not configured
+xhci1 at pci0 dev 20 function 0 "Intel 495 Series xHCI" rev 0x30: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series Shared SRAM" rev 0x30 at pci0 dev 20 function 2 not configured
+iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x30, msix
+dwiic0 at pci0 dev 21 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 16
+iic0 at dwiic0
+"MSHW0125" at iic0 addr 0x50 not configured
+dwiic1 at pci0 dev 21 function 2 "Intel 495 Series I2C" rev 0x30: apic 2 int 18
+iic1 at dwiic1
+"INT33BE" at iic1 addr 0x36 not configured
+"INT3472" at iic1 addr 0x0 not configured
+dwiic2 at pci0 dev 21 function 3 "Intel 495 Series I2C" rev 0x30: apic 2 int 19
+iic2 at dwiic2
+"INT347A" at iic2 addr 0xc not configured
+"INT3472" at iic2 addr 0x0 not configured
+"INT347E" at iic2 addr 0x60 not configured
+"INT3472" at iic2 addr 0x0 not configured
+"Intel 495 Series HECI" rev 0x30 at pci0 dev 22 function 0 not configured
+vendor "Intel", unknown product 0x34e4 (class communications subclass miscellaneous, rev 0x30) at pci0 dev 22 function 4 not configured
+dwiic3 at pci0 dev 25 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 32
+iic3 at dwiic3
+"MSHW0184" at iic3 addr 0x39 not configured
+ppb0 at pci0 dev 29 function 0 "Intel 495 Series PCIE" rev 0x30: msi
+pci1 at ppb0 bus 1
+nvme0 at pci1 dev 0 function 0 unknown vendor 0x1e0f product 0x0001 rev 0x00: msix, NVMe 1.3
+nvme0: KBG40ZPZ256G TOSHIBA MEMORY, firmware AEMS0102, serial ...
+scsibus0 at nvme0: 2 targets, initiator 0
+sd0 at scsibus0 targ 1 lun 0: <NVMe, KBG40ZPZ256G TOS, AEMS>
+sd0: 244198MB, 512 bytes/sector, 500118192 sectors
+"Intel 495 Series UART" rev 0x30 at pci0 dev 30 function 0 not configured
+"Intel 495 Series eSPI" rev 0x30 at pci0 dev 31 function 0 not configured
+"Intel 495 Series HD Audio" rev 0x30 at pci0 dev 31 function 3 not configured
+"Intel 495 Series SPI" rev 0x30 at pci0 dev 31 function 5 not configured
+isa0 at mainbus0
+efifb0 at mainbus0: 2736x1824, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation)
+uhub2 at uhub1 port 4 configuration 1 interface 0 "vendor 0x1a40 USB 2.0 Hub" rev 2.00/1.00 addr 2
+uhidev0 at uhub2 port 1 configuration 1 interface 0 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub2 port 1 configuration 1 interface 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev1: iclass 3/0
+uhid at uhidev1 not configured
+"Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3 at uhub2 port 1 configuration 1 not configured
+uhub3 at uhub2 port 2 configuration 1 interface 0 "vendor 0x1a40 USB 2.0 Hub" rev 2.00/1.00 addr 4
+uhub4 at uhub3 port 3 configuration 1 interface 0 "vendor 0x0451 product 0x8142" rev 2.10/1.00 addr 5
+uhidev2 at uhub4 port 2 configuration 1 interface 0 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev2: iclass 3/1
+ukbd1 at uhidev2
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev3 at uhub4 port 2 configuration 1 interface 1 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev3: iclass 3/1, 3 report ids
+uhid at uhidev3 reportid 1 not configured
+uhid at uhidev3 reportid 2 not configured
+uhid at uhidev3 reportid 3 not configured
+uhub5 at uhub4 port 3 configuration 1 interface 0 "vendor 0x0451 product 0x8027" rev 2.10/1.10 addr 7
+uhidev4 at uhub5 port 1 configuration 1 interface 0 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev4: iclass 3/1
+ukbd2 at uhidev4
+wskbd2 at ukbd2 mux 1
+wskbd2: connecting to wsdisplay0
+uhidev5 at uhub5 port 1 configuration 1 interface 1 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev5: iclass 3/1, 8 report ids
+uhid at uhidev5 reportid 2 not configured
+uhid at uhidev5 reportid 3 not configured
+uhid at uhidev5 reportid 4 not configured
+uhid at uhidev5 reportid 8 not configured
+uhidev6 at uhub5 port 1 configuration 1 interface 2 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev6: iclass 3/0, 33 report ids
+uhid at uhidev6 reportid 16 not configured
+uhid at uhidev6 reportid 17 not configured
+uhid at uhidev6 reportid 32 not configured
+uhid at uhidev6 reportid 33 not configured
+uhidev7 at uhub4 port 4 configuration 1 interface 0 "Texas Instruments Texas Instruments USBtoI2C Solution" rev 1.10/1.00 addr 9
+uhidev7: iclass 3/0
+uhid at uhidev7 not configured
+ure0 at uhub3 port 4 configuration 1 interface 0 "Realtek USB 10/100 LAN" rev 2.10/20.00 addr 10
+ure0: RTL8152 (0x4c10), address XXX
+rlphy0 at ure0 phy 0: RTL8201E 10/100 PHY, rev. 2
+uhidev8 at uhub1 port 8 configuration 1 interface 0 "Microsoft Surface Type Cover" rev 2.10/0.07 addr 11
+uhidev8: iclass 3/0, 41 report ids
+ukbd3 at uhidev8 reportid 1
+wskbd3 at ukbd3 mux 1
+wskbd3: connecting to wsdisplay0
+uhid at uhidev8 reportid 2 not configured
+uhid at uhidev8 reportid 3 not configured
+uhid at uhidev8 reportid 4 not configured
+uhid at uhidev8 reportid 5 not configured
+uhid at uhidev8 reportid 7 not configured
+uhid at uhidev8 reportid 8 not configured
+uhid at uhidev8 reportid 9 not configured
+uhid at uhidev8 reportid 10 not configured
+uhid at uhidev8 reportid 11 not configured
+uhid at uhidev8 reportid 12 not configured
+uhid at uhidev8 reportid 13 not configured
+uhid at uhidev8 reportid 14 not configured
+uhid at uhidev8 reportid 32 not configured
+uhid at uhidev8 reportid 33 not configured
+uhid at uhidev8 reportid 34 not configured
+uhid at uhidev8 reportid 35 not configured
+uhid at uhidev8 reportid 36 not configured
+uhid at uhidev8 reportid 37 not configured
+uhid at uhidev8 reportid 38 not configured
+uhid at uhidev8 reportid 39 not configured
+uhid at uhidev8 reportid 40 not configured
+uhid at uhidev8 reportid 41 not configured
+"vendor 0x8087 product 0x0026" rev 2.01/0.02 addr 12 at uhub1 port 10 not configured
+softraid0 at root
+scsibus1 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+iwx0: could not read firmware iwx-Qu-c0-hr-b0-63 (error 2)
+iwx0: failed to load init firmware
+iwx0: hw rev 0x330, fw ver 63.c04f3485.0, address XXX
+syncing disks...
+OpenBSD 7.0-current (GENERIC.MP) #253: Thu Jan 13 18:17:08 MST 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8144207872 (7766MB)
+avail mem = 7881388032 (7516MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x7bb50000 (16 entries)
+bios0: vendor Microsoft Corporation version "8.123.140" date 05/02/2020
+bios0: Microsoft Corporation Surface Pro 7
+acpi0 at bios0: ACPI 6.1
+acpi0: sleep states S0 S4 S5
+acpi0: tables DSDT FACP SSDT MSDM SSDT SSDT SSDT HPET LPIT APIC MCFG SSDT SSDT NHLT SSDT TPM2 DMAR WSMT FPDT BGRT
+acpi0: wakeup devices XHC_(S4) XDCI(S4) HDAS(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) RP05(S4) PXSX(S4) RP06(S4) PXSX(S4) RP07(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 19200000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 1064.19 MHz, 06-7e-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 38MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 994.93 MHz, 06-7e-05
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 995.82 MHz, 06-7e-05
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 995.52 MHz, 06-7e-05
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+cpu4 at mainbus0: apid 1 (application processor)
+cpu4: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.61 MHz, 06-7e-05
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu4: 256KB 64b/line 8-way L2 cache
+cpu4: smt 1, core 0, package 0
+cpu5 at mainbus0: apid 3 (application processor)
+cpu5: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.08 MHz, 06-7e-05
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu5: 256KB 64b/line 8-way L2 cache
+cpu5: smt 1, core 1, package 0
+cpu6 at mainbus0: apid 5 (application processor)
+cpu6: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 995.70 MHz, 06-7e-05
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu6: 256KB 64b/line 8-way L2 cache
+cpu6: smt 1, core 2, package 0
+cpu7 at mainbus0: apid 7 (application processor)
+cpu7: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.16 MHz, 06-7e-05
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu7: 256KB 64b/line 8-way L2 cache
+cpu7: smt 1, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (RP01)
+acpiprt2 at acpi0: bus -1 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiprt5 at acpi0: bus -1 (RP05)
+acpiprt6 at acpi0: bus -1 (RP06)
+acpiprt7 at acpi0: bus -1 (RP07)
+acpiprt8 at acpi0: bus -1 (RP08)
+acpiprt9 at acpi0: bus 1 (RP09)
+acpiprt10 at acpi0: bus -1 (RP10)
+acpiprt11 at acpi0: bus -1 (RP11)
+acpiprt12 at acpi0: bus -1 (RP12)
+acpiprt13 at acpi0: bus -1 (RP13)
+acpiprt14 at acpi0: bus -1 (RP14)
+acpiprt15 at acpi0: bus -1 (RP15)
+acpiprt16 at acpi0: bus -1 (RP16)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+"MSHW0084" at acpi0 not configured
+"INT3400" at acpi0 not configured
+"INT3455" at acpi0 not configured
+"ACPI000E" at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"MSHW0125" at acpi0 not configured
+"INT33BE" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347A" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347E" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"MSHW0184" at acpi0 not configured
+"MSHW0091" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+"MSHW0005" at acpi0 not configured
+"MSHW0116" at acpi0 not configured
+acpisurface0 at acpi0
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSHW0006" at acpi0 not configured
+"INT3407" at acpi0 not configured
+"INT3532" at acpi0 not configured
+tpm0 at acpi0 TPM_ 2.0 (TIS) addr 0xfed40000/0x5000, device 0x00fc1050 rev 0x1
+acpipwrres0 at acpi0: BTPR, resource for HS10
+acpipwrres1 at acpi0: V0PR
+acpipwrres2 at acpi0: V1PR
+acpipwrres3 at acpi0: V2PR
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: CAMP, resource for CAMF, CAMR, CAM3
+acpipwrres6 at acpi0: TBT0, resource for TDM0, TRP0, TRP1
+acpipwrres7 at acpi0: TBT1, resource for TDM1, TRP2, TRP3
+acpipwrres8 at acpi0: D3C_, resource for TXHC, TDM0, TDM1, TRP0, TRP1, TRP2, TRP3
+acpitz0 at acpi0: no critical temperature defined
+acpitz1 at acpi0: no critical temperature defined
+acpitz2 at acpi0: no critical temperature defined
+acpitz3 at acpi0: no critical temperature defined
+acpitz4 at acpi0: no critical temperature defined
+acpitz5 at acpi0: no critical temperature defined
+acpitz6 at acpi0: no critical temperature defined
+acpitz7 at acpi0: no critical temperature defined
+acpitz8 at acpi0: no critical temperature defined
+acpicpu0 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu4 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu5 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu6 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu7 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpipwrres9 at acpi0: PIN_
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+cpu0: Enhanced SpeedStep 1064 MHz: speeds: 1501, 1500, 1400, 1300, 1200, 1100, 1000, 900, 800, 700, 600, 500, 400 MHz
+pci0 at mainbus0 bus 0
+0:31:5: mem address conflict 0xfe010000/0x1000
+pchb0 at pci0 dev 0 function 0 vendor "Intel", unknown product 0x8a12 rev 0x03
+inteldrm0 at pci0 dev 2 function 0 "Intel Iris Plus" rev 0x07
+drm0 at inteldrm0
+inteldrm0: msi, ICELAKE, gen 11
+vendor "Intel", unknown product 0x8a03 (class DASP subclass miscellaneous, rev 0x03) at pci0 dev 4 function 0 not configured
+vendor "Intel", unknown product 0x8a19 (class multimedia subclass miscellaneous, rev 0x03) at pci0 dev 5 function 0 not configured
+xhci0 at pci0 dev 13 function 0 vendor "Intel", unknown product 0x8a13 rev 0x03: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series ISH" rev 0x30 at pci0 dev 18 function 0 not configured
+xhci1 at pci0 dev 20 function 0 "Intel 495 Series xHCI" rev 0x30: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series Shared SRAM" rev 0x30 at pci0 dev 20 function 2 not configured
+iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x30, msix
+dwiic0 at pci0 dev 21 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 16
+iic0 at dwiic0
+"MSHW0125" at iic0 addr 0x50 not configured
+dwiic1 at pci0 dev 21 function 2 "Intel 495 Series I2C" rev 0x30: apic 2 int 18
+iic1 at dwiic1
+"INT33BE" at iic1 addr 0x36 not configured
+"INT3472" at iic1 addr 0x0 not configured
+dwiic2 at pci0 dev 21 function 3 "Intel 495 Series I2C" rev 0x30: apic 2 int 19
+iic2 at dwiic2
+"INT347A" at iic2 addr 0xc not configured
+"INT3472" at iic2 addr 0x0 not configured
+"INT347E" at iic2 addr 0x60 not configured
+"INT3472" at iic2 addr 0x0 not configured
+"Intel 495 Series HECI" rev 0x30 at pci0 dev 22 function 0 not configured
+vendor "Intel", unknown product 0x34e4 (class communications subclass miscellaneous, rev 0x30) at pci0 dev 22 function 4 not configured
+dwiic3 at pci0 dev 25 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 32
+iic3 at dwiic3
+"MSHW0184" at iic3 addr 0x39 not configured
+ppb0 at pci0 dev 29 function 0 "Intel 495 Series PCIE" rev 0x30: msi
+pci1 at ppb0 bus 1
+nvme0 at pci1 dev 0 function 0 unknown vendor 0x1e0f product 0x0001 rev 0x00: msix, NVMe 1.3
+nvme0: KBG40ZPZ256G TOSHIBA MEMORY, firmware AEMS0102, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, KBG40ZPZ256G TOS, AEMS>
+sd0: 244198MB, 512 bytes/sector, 500118192 sectors
+"Intel 495 Series UART" rev 0x30 at pci0 dev 30 function 0 not configured
+pcib0 at pci0 dev 31 function 0 "Intel 495 Series eSPI" rev 0x30
+azalia0 at pci0 dev 31 function 3 "Intel 495 Series HD Audio" rev 0x30: msi
+azalia0: codecs: Realtek/0x0274, Intel/0x280f, using Realtek/0x0274
+audio0 at azalia0
+"Intel 495 Series SPI" rev 0x30 at pci0 dev 31 function 5 not configured
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub2 at uhub1 port 4 configuration 1 interface 0 "Terminus Technology USB 2.0 Hub" rev 2.00/1.00 addr 2
+uhidev0 at uhub2 port 1 configuration 1 interface 0 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd0 at ukbd0: console keyboard
+uhidev1 at uhub2 port 1 configuration 1 interface 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev1: iclass 3/0
+fido0 at uhidev1: input=64, output=64, feature=0
+ugen0 at uhub2 port 1 configuration 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhub3 at uhub2 port 2 configuration 1 interface 0 "Terminus Technology USB 2.0 Hub" rev 2.00/1.00 addr 4
+uhub4 at uhub3 port 3 configuration 1 interface 0 "Texas Instruments product 0x8142" rev 2.10/1.00 addr 5
+uhidev2 at uhub4 port 2 configuration 1 interface 0 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev2: iclass 3/1
+ukbd1 at uhidev2: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+uhidev3 at uhub4 port 2 configuration 1 interface 1 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev3: iclass 3/1, 3 report ids
+ums0 at uhidev3 reportid 1: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+uhid0 at uhidev3 reportid 2: input=1, output=0, feature=0
+ucc0 at uhidev3 reportid 3: 6 usages, 6 keys, enum
+wskbd2 at ucc0 mux 1
+uhub5 at uhub4 port 3 configuration 1 interface 0 "Texas Instruments product 0x8027" rev 2.10/1.10 addr 7
+uhidev4 at uhub5 port 1 configuration 1 interface 0 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev4: iclass 3/1
+ukbd2 at uhidev4: 8 variable keys, 6 key codes
+wskbd3 at ukbd2 mux 1
+uhidev5 at uhub5 port 1 configuration 1 interface 1 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev5: iclass 3/1, 8 report ids
+ums1 at uhidev5 reportid 2: 16 buttons, Z and W dir
+wsmouse1 at ums1 mux 0
+ucc1 at uhidev5 reportid 3: 652 usages, 18 keys, array
+wskbd4 at ucc1 mux 1
+uhid1 at uhidev5 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev5 reportid 8: input=1, output=0, feature=0
+uhidev6 at uhub5 port 1 configuration 1 interface 2 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev6: iclass 3/0, 33 report ids
+uhidpp0 at uhidev6 device 1 mouse "MX Master 2S" serial ...
+uhid3 at uhidev6 reportid 32: input=14, output=14, feature=0
+uhid4 at uhidev6 reportid 33: input=31, output=31, feature=0
+uhidev7 at uhub4 port 4 configuration 1 interface 0 "Texas Instruments Texas Instruments USBtoI2C Solution" rev 1.10/1.00 addr 9
+uhidev7: iclass 3/0
+uhid5 at uhidev7: input=64, output=64, feature=2
+ure0 at uhub3 port 4 configuration 1 interface 0 "Realtek USB 10/100 LAN" rev 2.10/20.00 addr 10
+ure0: RTL8152 (0x4c10), address XXX
+rlphy0 at ure0 phy 0: RTL8201E 10/100 PHY, rev. 2
+uhidev8 at uhub1 port 8 configuration 1 interface 0 "Microsoft Surface Type Cover" rev 2.10/0.07 addr 11
+uhidev8: iclass 3/0, 41 report ids
+umt0 at uhidev8: clickpad, 5 contacts
+wsmouse2 at umt0 mux 0
+ukbd3 at uhidev8 reportid 1: 8 variable keys, 6 key codes
+wskbd5 at ukbd3 mux 1
+ums2 at uhidev8 reportid 2: 5 buttons, Z and W dir
+wsmouse3 at ums2 mux 0
+umstc0 at uhidev8 reportid 3
+uhid6 at uhidev8 reportid 5: input=0, output=0, feature=33
+uhid7 at uhidev8 reportid 8: input=0, output=0, feature=1
+uhid8 at uhidev8 reportid 9: input=38, output=20, feature=1
+uhid9 at uhidev8 reportid 10: input=38, output=20, feature=0
+uhid10 at uhidev8 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev8 reportid 12: input=0, output=1, feature=0
+uhid12 at uhidev8 reportid 13: input=34, output=34, feature=0
+uhid13 at uhidev8 reportid 14: input=59, output=59, feature=0
+uhid14 at uhidev8 reportid 32: input=60, output=60, feature=60
+uhid15 at uhidev8 reportid 33: input=60, output=60, feature=60
+uhid16 at uhidev8 reportid 34: input=16, output=16, feature=16
+uhid17 at uhidev8 reportid 35: input=16, output=16, feature=16
+uhid18 at uhidev8 reportid 36: input=16, output=16, feature=16
+uhid19 at uhidev8 reportid 37: input=16, output=16, feature=16
+uhid20 at uhidev8 reportid 38: input=16, output=16, feature=16
+uhid21 at uhidev8 reportid 39: input=16, output=16, feature=16
+uhid22 at uhidev8 reportid 40: input=16, output=16, feature=16
+uhid23 at uhidev8 reportid 41: input=16, output=16, feature=16
+ugen1 at uhub1 port 10 "Intel Bluetooth" rev 2.01/0.02 addr 12
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (2b4344d1e79ad749.a) swap on sd0b dump on sd0b
+drm:pid0:icl_sanitize_port_clk_off *NOTICE* [drm] PHY C is disabled/in DSI mode with an ungated DDI clock, gate it
+inteldrm0: 2736x1440, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wskbd2: connecting to wsdisplay0
+wskbd3: connecting to wsdisplay0
+wskbd4: connecting to wsdisplay0
+wskbd5: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwx0: hw rev 0x330, fw ver 63.c04f3485.0, address XXX
+syncing disks... done
+rebooting...
+OpenBSD 7.0-current (GENERIC.MP) #253: Thu Jan 13 18:17:08 MST 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8144207872 (7766MB)
+avail mem = 7881392128 (7516MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x7bb50000 (16 entries)
+bios0: vendor Microsoft Corporation version "8.123.140" date 05/02/2020
+bios0: Microsoft Corporation Surface Pro 7
+acpi0 at bios0: ACPI 6.1
+acpi0: sleep states S0 S4 S5
+acpi0: tables DSDT FACP SSDT MSDM SSDT SSDT SSDT HPET LPIT APIC MCFG SSDT SSDT NHLT SSDT TPM2 DMAR WSMT FPDT BGRT
+acpi0: wakeup devices XHC_(S4) XDCI(S4) HDAS(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) RP05(S4) PXSX(S4) RP06(S4) PXSX(S4) RP07(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 19200000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 1067.33 MHz, 06-7e-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 38MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 995.20 MHz, 06-7e-05
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.72 MHz, 06-7e-05
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 997.26 MHz, 06-7e-05
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+cpu4 at mainbus0: apid 1 (application processor)
+cpu4: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 994.45 MHz, 06-7e-05
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu4: 256KB 64b/line 8-way L2 cache
+cpu4: disabling user TSC (skew=103)
+cpu4: smt 1, core 0, package 0
+cpu5 at mainbus0: apid 3 (application processor)
+cpu5: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 994.80 MHz, 06-7e-05
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu5: 256KB 64b/line 8-way L2 cache
+cpu5: smt 1, core 1, package 0
+cpu6 at mainbus0: apid 5 (application processor)
+cpu6: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 994.95 MHz, 06-7e-05
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu6: 256KB 64b/line 8-way L2 cache
+cpu6: smt 1, core 2, package 0
+cpu7 at mainbus0: apid 7 (application processor)
+cpu7: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.36 MHz, 06-7e-05
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu7: 256KB 64b/line 8-way L2 cache
+cpu7: smt 1, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (RP01)
+acpiprt2 at acpi0: bus -1 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiprt5 at acpi0: bus -1 (RP05)
+acpiprt6 at acpi0: bus -1 (RP06)
+acpiprt7 at acpi0: bus -1 (RP07)
+acpiprt8 at acpi0: bus -1 (RP08)
+acpiprt9 at acpi0: bus 1 (RP09)
+acpiprt10 at acpi0: bus -1 (RP10)
+acpiprt11 at acpi0: bus -1 (RP11)
+acpiprt12 at acpi0: bus -1 (RP12)
+acpiprt13 at acpi0: bus -1 (RP13)
+acpiprt14 at acpi0: bus -1 (RP14)
+acpiprt15 at acpi0: bus -1 (RP15)
+acpiprt16 at acpi0: bus -1 (RP16)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+"MSHW0084" at acpi0 not configured
+"INT3400" at acpi0 not configured
+"INT3455" at acpi0 not configured
+"ACPI000E" at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"MSHW0125" at acpi0 not configured
+"INT33BE" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347A" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347E" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"MSHW0184" at acpi0 not configured
+"MSHW0091" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+"MSHW0005" at acpi0 not configured
+"MSHW0116" at acpi0 not configured
+acpisurface0 at acpi0
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSHW0006" at acpi0 not configured
+"INT3407" at acpi0 not configured
+"INT3532" at acpi0 not configured
+tpm0 at acpi0 TPM_ 2.0 (TIS) addr 0xfed40000/0x5000, device 0x00fc1050 rev 0x1
+acpipwrres0 at acpi0: BTPR, resource for HS10
+acpipwrres1 at acpi0: V0PR
+acpipwrres2 at acpi0: V1PR
+acpipwrres3 at acpi0: V2PR
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: CAMP, resource for CAMF, CAMR, CAM3
+acpipwrres6 at acpi0: TBT0, resource for TDM0, TRP0, TRP1
+acpipwrres7 at acpi0: TBT1, resource for TDM1, TRP2, TRP3
+acpipwrres8 at acpi0: D3C_, resource for TXHC, TDM0, TDM1, TRP0, TRP1, TRP2, TRP3
+acpitz0 at acpi0: no critical temperature defined
+acpitz1 at acpi0: no critical temperature defined
+acpitz2 at acpi0: no critical temperature defined
+acpitz3 at acpi0: no critical temperature defined
+acpitz4 at acpi0: no critical temperature defined
+acpitz5 at acpi0: no critical temperature defined
+acpitz6 at acpi0: no critical temperature defined
+acpitz7 at acpi0: no critical temperature defined
+acpitz8 at acpi0: no critical temperature defined
+acpicpu0 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu4 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu5 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu6 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu7 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpipwrres9 at acpi0: PIN_
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+cpu0: Enhanced SpeedStep 1067 MHz: speeds: 1501, 1500, 1400, 1300, 1200, 1100, 1000, 900, 800, 700, 600, 500, 400 MHz
+pci0 at mainbus0 bus 0
+0:31:5: mem address conflict 0xfe010000/0x1000
+pchb0 at pci0 dev 0 function 0 vendor "Intel", unknown product 0x8a12 rev 0x03
+inteldrm0 at pci0 dev 2 function 0 "Intel Iris Plus" rev 0x07
+drm0 at inteldrm0
+inteldrm0: msi, ICELAKE, gen 11
+vendor "Intel", unknown product 0x8a03 (class DASP subclass miscellaneous, rev 0x03) at pci0 dev 4 function 0 not configured
+vendor "Intel", unknown product 0x8a19 (class multimedia subclass miscellaneous, rev 0x03) at pci0 dev 5 function 0 not configured
+xhci0 at pci0 dev 13 function 0 vendor "Intel", unknown product 0x8a13 rev 0x03: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series ISH" rev 0x30 at pci0 dev 18 function 0 not configured
+xhci1 at pci0 dev 20 function 0 "Intel 495 Series xHCI" rev 0x30: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series Shared SRAM" rev 0x30 at pci0 dev 20 function 2 not configured
+iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x30, msix
+dwiic0 at pci0 dev 21 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 16
+iic0 at dwiic0
+"MSHW0125" at iic0 addr 0x50 not configured
+dwiic1 at pci0 dev 21 function 2 "Intel 495 Series I2C" rev 0x30: apic 2 int 18
+iic1 at dwiic1
+"INT33BE" at iic1 addr 0x36 not configured
+"INT3472" at iic1 addr 0x0 not configured
+dwiic2 at pci0 dev 21 function 3 "Intel 495 Series I2C" rev 0x30: apic 2 int 19
+iic2 at dwiic2
+"INT347A" at iic2 addr 0xc not configured
+"INT3472" at iic2 addr 0x0 not configured
+"INT347E" at iic2 addr 0x60 not configured
+"INT3472" at iic2 addr 0x0 not configured
+"Intel 495 Series HECI" rev 0x30 at pci0 dev 22 function 0 not configured
+vendor "Intel", unknown product 0x34e4 (class communications subclass miscellaneous, rev 0x30) at pci0 dev 22 function 4 not configured
+dwiic3 at pci0 dev 25 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 32
+iic3 at dwiic3
+"MSHW0184" at iic3 addr 0x39 not configured
+ppb0 at pci0 dev 29 function 0 "Intel 495 Series PCIE" rev 0x30: msi
+pci1 at ppb0 bus 1
+nvme0 at pci1 dev 0 function 0 unknown vendor 0x1e0f product 0x0001 rev 0x00: msix, NVMe 1.3
+nvme0: KBG40ZPZ256G TOSHIBA MEMORY, firmware AEMS0102, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, KBG40ZPZ256G TOS, AEMS>
+sd0: 244198MB, 512 bytes/sector, 500118192 sectors
+"Intel 495 Series UART" rev 0x30 at pci0 dev 30 function 0 not configured
+pcib0 at pci0 dev 31 function 0 "Intel 495 Series eSPI" rev 0x30
+azalia0 at pci0 dev 31 function 3 "Intel 495 Series HD Audio" rev 0x30: msi
+azalia0: codecs: Realtek/0x0274, Intel/0x280f, using Realtek/0x0274
+audio0 at azalia0
+"Intel 495 Series SPI" rev 0x30 at pci0 dev 31 function 5 not configured
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub2 at uhub1 port 4 configuration 1 interface 0 "Terminus Technology USB 2.0 Hub" rev 2.00/1.00 addr 2
+uhidev0 at uhub2 port 1 configuration 1 interface 0 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd0 at ukbd0: console keyboard
+uhidev1 at uhub2 port 1 configuration 1 interface 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev1: iclass 3/0
+fido0 at uhidev1: input=64, output=64, feature=0
+ugen0 at uhub2 port 1 configuration 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhub3 at uhub2 port 2 configuration 1 interface 0 "Terminus Technology USB 2.0 Hub" rev 2.00/1.00 addr 4
+uhub4 at uhub3 port 3 configuration 1 interface 0 "Texas Instruments product 0x8142" rev 2.10/1.00 addr 5
+uhidev2 at uhub4 port 2 configuration 1 interface 0 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev2: iclass 3/1
+ukbd1 at uhidev2: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+uhidev3 at uhub4 port 2 configuration 1 interface 1 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev3: iclass 3/1, 3 report ids
+ums0 at uhidev3 reportid 1: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+uhid0 at uhidev3 reportid 2: input=1, output=0, feature=0
+ucc0 at uhidev3 reportid 3: 6 usages, 6 keys, enum
+wskbd2 at ucc0 mux 1
+uhub5 at uhub4 port 3 configuration 1 interface 0 "Texas Instruments product 0x8027" rev 2.10/1.10 addr 7
+uhidev4 at uhub5 port 1 configuration 1 interface 0 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev4: iclass 3/1
+ukbd2 at uhidev4: 8 variable keys, 6 key codes
+wskbd3 at ukbd2 mux 1
+uhidev5 at uhub5 port 1 configuration 1 interface 1 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev5: iclass 3/1, 8 report ids
+ums1 at uhidev5 reportid 2: 16 buttons, Z and W dir
+wsmouse1 at ums1 mux 0
+ucc1 at uhidev5 reportid 3: 652 usages, 18 keys, array
+wskbd4 at ucc1 mux 1
+uhid1 at uhidev5 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev5 reportid 8: input=1, output=0, feature=0
+uhidev6 at uhub5 port 1 configuration 1 interface 2 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev6: iclass 3/0, 33 report ids
+uhidpp0 at uhidev6 device 1 mouse "MX Master 2S" serial ...
+uhid3 at uhidev6 reportid 32: input=14, output=14, feature=0
+uhid4 at uhidev6 reportid 33: input=31, output=31, feature=0
+uhidev7 at uhub4 port 4 configuration 1 interface 0 "Texas Instruments Texas Instruments USBtoI2C Solution" rev 1.10/1.00 addr 9
+uhidev7: iclass 3/0
+uhid5 at uhidev7: input=64, output=64, feature=2
+ure0 at uhub3 port 4 configuration 1 interface 0 "Realtek USB 10/100 LAN" rev 2.10/20.00 addr 10
+ure0: RTL8152 (0x4c10), address XXX
+rlphy0 at ure0 phy 0: RTL8201E 10/100 PHY, rev. 2
+uhidev8 at uhub1 port 8 configuration 1 interface 0 "Microsoft Surface Type Cover" rev 2.10/0.07 addr 11
+uhidev8: iclass 3/0, 41 report ids
+umt0 at uhidev8: clickpad, 5 contacts
+wsmouse2 at umt0 mux 0
+ukbd3 at uhidev8 reportid 1: 8 variable keys, 6 key codes
+wskbd5 at ukbd3 mux 1
+ums2 at uhidev8 reportid 2: 5 buttons, Z and W dir
+wsmouse3 at ums2 mux 0
+umstc0 at uhidev8 reportid 3
+uhid6 at uhidev8 reportid 5: input=0, output=0, feature=33
+uhid7 at uhidev8 reportid 8: input=0, output=0, feature=1
+uhid8 at uhidev8 reportid 9: input=38, output=20, feature=1
+uhid9 at uhidev8 reportid 10: input=38, output=20, feature=0
+uhid10 at uhidev8 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev8 reportid 12: input=0, output=1, feature=0
+uhid12 at uhidev8 reportid 13: input=34, output=34, feature=0
+uhid13 at uhidev8 reportid 14: input=59, output=59, feature=0
+uhid14 at uhidev8 reportid 32: input=60, output=60, feature=60
+uhid15 at uhidev8 reportid 33: input=60, output=60, feature=60
+uhid16 at uhidev8 reportid 34: input=16, output=16, feature=16
+uhid17 at uhidev8 reportid 35: input=16, output=16, feature=16
+uhid18 at uhidev8 reportid 36: input=16, output=16, feature=16
+uhid19 at uhidev8 reportid 37: input=16, output=16, feature=16
+uhid20 at uhidev8 reportid 38: input=16, output=16, feature=16
+uhid21 at uhidev8 reportid 39: input=16, output=16, feature=16
+uhid22 at uhidev8 reportid 40: input=16, output=16, feature=16
+uhid23 at uhidev8 reportid 41: input=16, output=16, feature=16
+ugen1 at uhub1 port 10 "Intel Bluetooth" rev 2.01/0.02 addr 12
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (2b4344d1e79ad749.a) swap on sd0b dump on sd0b
+drm:pid0:icl_sanitize_port_clk_off *NOTICE* [drm] PHY C is disabled/in DSI mode with an ungated DDI clock, gate it
+inteldrm0: 2736x1440, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wskbd2: connecting to wsdisplay0
+wskbd3: connecting to wsdisplay0
+wskbd4: connecting to wsdisplay0
+wskbd5: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwx0: hw rev 0x330, fw ver 63.c04f3485.0, address XXX
+syncing disks... done
+rebooting...
+OpenBSD 7.0-current (RAMDISK_CD) #252: Sun Jan 16 00:47:15 MST 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8144207872 (7766MB)
+avail mem = 7893360640 (7527MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x7bb50000 (16 entries)
+bios0: vendor Microsoft Corporation version "8.123.140" date 05/02/2020
+bios0: Microsoft Corporation Surface Pro 7
+acpi0 at bios0: ACPI 6.1
+acpi0: tables DSDT FACP SSDT MSDM SSDT SSDT SSDT HPET LPIT APIC MCFG SSDT SSDT NHLT SSDT TPM2 DMAR WSMT FPDT BGRT
+acpihpet0 at acpi0: 19200000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 1395.80 MHz, 06-7e-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 38MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (RP01)
+acpiprt2 at acpi0: bus -1 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiprt5 at acpi0: bus -1 (RP05)
+acpiprt6 at acpi0: bus -1 (RP06)
+acpiprt7 at acpi0: bus -1 (RP07)
+acpiprt8 at acpi0: bus -1 (RP08)
+acpiprt9 at acpi0: bus 1 (RP09)
+acpiprt10 at acpi0: bus -1 (RP10)
+acpiprt11 at acpi0: bus -1 (RP11)
+acpiprt12 at acpi0: bus -1 (RP12)
+acpiprt13 at acpi0: bus -1 (RP13)
+acpiprt14 at acpi0: bus -1 (RP14)
+acpiprt15 at acpi0: bus -1 (RP15)
+acpiprt16 at acpi0: bus -1 (RP16)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+"ACPI000E" at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"MSHW0125" at acpi0 not configured
+"INT33BE" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347A" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347E" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"MSHW0184" at acpi0 not configured
+"INT3455" at acpi0 not configured
+"MSHW0084" at acpi0 not configured
+"MSHW0091" at acpi0 not configured
+"INT3400" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"MSHW0005" at acpi0 not configured
+"MSHW0116" at acpi0 not configured
+"MSHW0040" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSHW0006" at acpi0 not configured
+"INT3407" at acpi0 not configured
+"INT3532" at acpi0 not configured
+"NTC0702" at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+pci0 at mainbus0 bus 0
+0:31:5: mem address conflict 0xfe010000/0x1000
+pchb0 at pci0 dev 0 function 0 vendor "Intel", unknown product 0x8a12 rev 0x03
+"Intel Iris Plus" rev 0x07 at pci0 dev 2 function 0 not configured
+vendor "Intel", unknown product 0x8a03 (class DASP subclass miscellaneous, rev 0x03) at pci0 dev 4 function 0 not configured
+vendor "Intel", unknown product 0x8a19 (class multimedia subclass miscellaneous, rev 0x03) at pci0 dev 5 function 0 not configured
+xhci0 at pci0 dev 13 function 0 vendor "Intel", unknown product 0x8a13 rev 0x03: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series ISH" rev 0x30 at pci0 dev 18 function 0 not configured
+xhci1 at pci0 dev 20 function 0 "Intel 495 Series xHCI" rev 0x30: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series Shared SRAM" rev 0x30 at pci0 dev 20 function 2 not configured
+iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x30, msix
+dwiic0 at pci0 dev 21 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 16
+iic0 at dwiic0
+"MSHW0125" at iic0 addr 0x50 not configured
+dwiic1 at pci0 dev 21 function 2 "Intel 495 Series I2C" rev 0x30: apic 2 int 18
+iic1 at dwiic1
+"INT33BE" at iic1 addr 0x36 not configured
+"INT3472" at iic1 addr 0x0 not configured
+dwiic2 at pci0 dev 21 function 3 "Intel 495 Series I2C" rev 0x30: apic 2 int 19
+iic2 at dwiic2
+"INT347A" at iic2 addr 0xc not configured
+"INT3472" at iic2 addr 0x0 not configured
+"INT347E" at iic2 addr 0x60 not configured
+"INT3472" at iic2 addr 0x0 not configured
+"Intel 495 Series HECI" rev 0x30 at pci0 dev 22 function 0 not configured
+vendor "Intel", unknown product 0x34e4 (class communications subclass miscellaneous, rev 0x30) at pci0 dev 22 function 4 not configured
+dwiic3 at pci0 dev 25 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 32
+iic3 at dwiic3
+"MSHW0184" at iic3 addr 0x39 not configured
+ppb0 at pci0 dev 29 function 0 "Intel 495 Series PCIE" rev 0x30: msi
+pci1 at ppb0 bus 1
+nvme0 at pci1 dev 0 function 0 unknown vendor 0x1e0f product 0x0001 rev 0x00: msix, NVMe 1.3
+nvme0: KBG40ZPZ256G TOSHIBA MEMORY, firmware AEMS0102, serial ...
+scsibus0 at nvme0: 2 targets, initiator 0
+sd0 at scsibus0 targ 1 lun 0: <NVMe, KBG40ZPZ256G TOS, AEMS>
+sd0: 244198MB, 512 bytes/sector, 500118192 sectors
+"Intel 495 Series UART" rev 0x30 at pci0 dev 30 function 0 not configured
+"Intel 495 Series eSPI" rev 0x30 at pci0 dev 31 function 0 not configured
+"Intel 495 Series HD Audio" rev 0x30 at pci0 dev 31 function 3 not configured
+"Intel 495 Series SPI" rev 0x30 at pci0 dev 31 function 5 not configured
+isa0 at mainbus0
+efifb0 at mainbus0: 2736x1824, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation)
+uhub2 at uhub1 port 4 configuration 1 interface 0 "vendor 0x1a40 USB 2.0 Hub" rev 2.00/1.00 addr 2
+uhidev0 at uhub2 port 1 configuration 1 interface 0 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhidev1 at uhub2 port 1 configuration 1 interface 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev1: iclass 3/0
+uhid at uhidev1 not configured
+"Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3 at uhub2 port 1 configuration 1 not configured
+uhub3 at uhub2 port 2 configuration 1 interface 0 "vendor 0x1a40 USB 2.0 Hub" rev 2.00/1.00 addr 4
+uhub4 at uhub3 port 3 configuration 1 interface 0 "vendor 0x0451 product 0x8142" rev 2.10/1.00 addr 5
+uhidev2 at uhub4 port 2 configuration 1 interface 0 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev2: iclass 3/1
+ukbd1 at uhidev2
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev3 at uhub4 port 2 configuration 1 interface 1 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev3: iclass 3/1, 3 report ids
+uhid at uhidev3 reportid 1 not configured
+uhid at uhidev3 reportid 2 not configured
+uhid at uhidev3 reportid 3 not configured
+uhub5 at uhub4 port 3 configuration 1 interface 0 "vendor 0x0451 product 0x8027" rev 2.10/1.10 addr 7
+uhidev4 at uhub5 port 1 configuration 1 interface 0 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev4: iclass 3/1
+ukbd2 at uhidev4
+wskbd2 at ukbd2 mux 1
+wskbd2: connecting to wsdisplay0
+uhidev5 at uhub5 port 1 configuration 1 interface 1 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev5: iclass 3/1, 8 report ids
+uhid at uhidev5 reportid 2 not configured
+uhid at uhidev5 reportid 3 not configured
+uhid at uhidev5 reportid 4 not configured
+uhid at uhidev5 reportid 8 not configured
+uhidev6 at uhub5 port 1 configuration 1 interface 2 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev6: iclass 3/0, 33 report ids
+uhid at uhidev6 reportid 16 not configured
+uhid at uhidev6 reportid 17 not configured
+uhid at uhidev6 reportid 32 not configured
+uhid at uhidev6 reportid 33 not configured
+uhidev7 at uhub4 port 4 configuration 1 interface 0 "Texas Instruments Texas Instruments USBtoI2C Solution" rev 1.10/1.00 addr 9
+uhidev7: iclass 3/0
+uhid at uhidev7 not configured
+ure0 at uhub3 port 4 configuration 1 interface 0 "Realtek USB 10/100 LAN" rev 2.10/20.00 addr 10
+ure0: RTL8152 (0x4c10), address XXX
+rlphy0 at ure0 phy 0: RTL8201E 10/100 PHY, rev. 2
+uhidev8 at uhub1 port 8 configuration 1 interface 0 "Microsoft Surface Type Cover" rev 2.10/0.07 addr 11
+uhidev8: iclass 3/0, 41 report ids
+ukbd3 at uhidev8 reportid 1
+wskbd3 at ukbd3 mux 1
+wskbd3: connecting to wsdisplay0
+uhid at uhidev8 reportid 2 not configured
+uhid at uhidev8 reportid 3 not configured
+uhid at uhidev8 reportid 4 not configured
+uhid at uhidev8 reportid 5 not configured
+uhid at uhidev8 reportid 7 not configured
+uhid at uhidev8 reportid 8 not configured
+uhid at uhidev8 reportid 9 not configured
+uhid at uhidev8 reportid 10 not configured
+uhid at uhidev8 reportid 11 not configured
+uhid at uhidev8 reportid 12 not configured
+uhid at uhidev8 reportid 13 not configured
+uhid at uhidev8 reportid 14 not configured
+uhid at uhidev8 reportid 32 not configured
+uhid at uhidev8 reportid 33 not configured
+uhid at uhidev8 reportid 34 not configured
+uhid at uhidev8 reportid 35 not configured
+uhid at uhidev8 reportid 36 not configured
+uhid at uhidev8 reportid 37 not configured
+uhid at uhidev8 reportid 38 not configured
+uhid at uhidev8 reportid 39 not configured
+uhid at uhidev8 reportid 40 not configured
+uhid at uhidev8 reportid 41 not configured
+"vendor 0x8087 product 0x0026" rev 2.01/0.02 addr 12 at uhub1 port 10 not configured
+softraid0 at root
+scsibus1 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+iwx0: could not read firmware iwx-Qu-c0-hr-b0-63 (error 2)
+iwx0: failed to load init firmware
+iwx0: hw rev 0x330, fw ver 63.c04f3485.0, address XXX
+syncing disks...
+OpenBSD 7.0-current (GENERIC.MP) #259: Sun Jan 16 00:42:24 MST 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8144207872 (7766MB)
+avail mem = 7880196096 (7515MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x7bb50000 (16 entries)
+bios0: vendor Microsoft Corporation version "8.123.140" date 05/02/2020
+bios0: Microsoft Corporation Surface Pro 7
+acpi0 at bios0: ACPI 6.1
+acpi0: sleep states S0 S4 S5
+acpi0: tables DSDT FACP SSDT MSDM SSDT SSDT SSDT HPET LPIT APIC MCFG SSDT SSDT NHLT SSDT TPM2 DMAR WSMT FPDT BGRT
+acpi0: wakeup devices XHC_(S4) XDCI(S4) HDAS(S4) RP01(S4) PXSX(S4) RP02(S4) PXSX(S4) RP03(S4) PXSX(S4) RP04(S4) PXSX(S4) RP05(S4) PXSX(S4) RP06(S4) PXSX(S4) RP07(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 19200000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 1063.84 MHz, 06-7e-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 38MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 997.02 MHz, 06-7e-05
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.44 MHz, 06-7e-05
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.34 MHz, 06-7e-05
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+cpu4 at mainbus0: apid 1 (application processor)
+cpu4: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 996.53 MHz, 06-7e-05
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu4: 256KB 64b/line 8-way L2 cache
+cpu4: smt 1, core 0, package 0
+cpu5 at mainbus0: apid 3 (application processor)
+cpu5: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 997.56 MHz, 06-7e-05
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu5: 256KB 64b/line 8-way L2 cache
+cpu5: smt 1, core 1, package 0
+cpu6 at mainbus0: apid 5 (application processor)
+cpu6: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 997.40 MHz, 06-7e-05
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu6: 256KB 64b/line 8-way L2 cache
+cpu6: smt 1, core 2, package 0
+cpu7 at mainbus0: apid 7 (application processor)
+cpu7: Intel(R) Core(TM) i5-1035G4 CPU @ 1.10GHz, 997.14 MHz, 06-7e-05
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PT,AVX512CD,SHA,AVX512BW,AVX512VL,AVX512VBMI,UMIP,PKU,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu7: 256KB 64b/line 8-way L2 cache
+cpu7: smt 1, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (RP01)
+acpiprt2 at acpi0: bus -1 (RP02)
+acpiprt3 at acpi0: bus -1 (RP03)
+acpiprt4 at acpi0: bus -1 (RP04)
+acpiprt5 at acpi0: bus -1 (RP05)
+acpiprt6 at acpi0: bus -1 (RP06)
+acpiprt7 at acpi0: bus -1 (RP07)
+acpiprt8 at acpi0: bus -1 (RP08)
+acpiprt9 at acpi0: bus 1 (RP09)
+acpiprt10 at acpi0: bus -1 (RP10)
+acpiprt11 at acpi0: bus -1 (RP11)
+acpiprt12 at acpi0: bus -1 (RP12)
+acpiprt13 at acpi0: bus -1 (RP13)
+acpiprt14 at acpi0: bus -1 (RP14)
+acpiprt15 at acpi0: bus -1 (RP15)
+acpiprt16 at acpi0: bus -1 (RP16)
+acpiprt17 at acpi0: bus -1 (RP17)
+acpiprt18 at acpi0: bus -1 (RP18)
+acpiprt19 at acpi0: bus -1 (RP19)
+acpiprt20 at acpi0: bus -1 (RP20)
+acpiprt21 at acpi0: bus -1 (RP21)
+acpiprt22 at acpi0: bus -1 (RP22)
+acpiprt23 at acpi0: bus -1 (RP23)
+acpiprt24 at acpi0: bus -1 (RP24)
+"MSHW0084" at acpi0 not configured
+"INT3400" at acpi0 not configured
+"INT3455" at acpi0 not configured
+"ACPI000E" at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"MSHW0125" at acpi0 not configured
+"INT33BE" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347A" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"INT347E" at acpi0 not configured
+"INT3472" at acpi0 not configured
+"MSHW0184" at acpi0 not configured
+"MSHW0091" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+"INT3403" at acpi0 not configured
+acpibtn0 at acpi0: LID0
+"MSHW0005" at acpi0 not configured
+"MSHW0116" at acpi0 not configured
+acpisurface0 at acpi0
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"MSHW0006" at acpi0 not configured
+"INT3407" at acpi0 not configured
+"INT3532" at acpi0 not configured
+tpm0 at acpi0 TPM_ 2.0 (TIS) addr 0xfed40000/0x5000, device 0x00fc1050 rev 0x1
+acpipwrres0 at acpi0: BTPR, resource for HS10
+acpipwrres1 at acpi0: V0PR
+acpipwrres2 at acpi0: V1PR
+acpipwrres3 at acpi0: V2PR
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: CAMP, resource for CAMF, CAMR, CAM3
+acpipwrres6 at acpi0: TBT0, resource for TDM0, TRP0, TRP1
+acpipwrres7 at acpi0: TBT1, resource for TDM1, TRP2, TRP3
+acpipwrres8 at acpi0: D3C_, resource for TXHC, TDM0, TDM1, TRP0, TRP1, TRP2, TRP3
+acpitz0 at acpi0: no critical temperature defined
+acpitz1 at acpi0: no critical temperature defined
+acpitz2 at acpi0: no critical temperature defined
+acpitz3 at acpi0: no critical temperature defined
+acpitz4 at acpi0: no critical temperature defined
+acpitz5 at acpi0: no critical temperature defined
+acpitz6 at acpi0: no critical temperature defined
+acpitz7 at acpi0: no critical temperature defined
+acpitz8 at acpi0: no critical temperature defined
+acpicpu0 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu4 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu5 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu6 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpicpu7 at acpi0: C3(200@1048 mwait.1@0x60), C2(200@253 mwait.1@0x31), C1(1000@1 mwait.1), PSS
+acpipwrres9 at acpi0: PIN_
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+cpu0: Enhanced SpeedStep 1063 MHz: speeds: 1501, 1500, 1400, 1300, 1200, 1100, 1000, 900, 800, 700, 600, 500, 400 MHz
+pci0 at mainbus0 bus 0
+0:31:5: mem address conflict 0xfe010000/0x1000
+pchb0 at pci0 dev 0 function 0 vendor "Intel", unknown product 0x8a12 rev 0x03
+inteldrm0 at pci0 dev 2 function 0 "Intel Iris Plus" rev 0x07
+drm0 at inteldrm0
+inteldrm0: msi, ICELAKE, gen 11
+vendor "Intel", unknown product 0x8a03 (class DASP subclass miscellaneous, rev 0x03) at pci0 dev 4 function 0 not configured
+vendor "Intel", unknown product 0x8a19 (class multimedia subclass miscellaneous, rev 0x03) at pci0 dev 5 function 0 not configured
+xhci0 at pci0 dev 13 function 0 vendor "Intel", unknown product 0x8a13 rev 0x03: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series ISH" rev 0x30 at pci0 dev 18 function 0 not configured
+xhci1 at pci0 dev 20 function 0 "Intel 495 Series xHCI" rev 0x30: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 495 Series Shared SRAM" rev 0x30 at pci0 dev 20 function 2 not configured
+iwx0 at pci0 dev 20 function 3 "Intel Wi-Fi 6 AX201" rev 0x30, msix
+dwiic0 at pci0 dev 21 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 16
+iic0 at dwiic0
+"MSHW0125" at iic0 addr 0x50 not configured
+dwiic1 at pci0 dev 21 function 2 "Intel 495 Series I2C" rev 0x30: apic 2 int 18
+iic1 at dwiic1
+"INT33BE" at iic1 addr 0x36 not configured
+"INT3472" at iic1 addr 0x0 not configured
+dwiic2 at pci0 dev 21 function 3 "Intel 495 Series I2C" rev 0x30: apic 2 int 19
+iic2 at dwiic2
+"INT347A" at iic2 addr 0xc not configured
+"INT3472" at iic2 addr 0x0 not configured
+"INT347E" at iic2 addr 0x60 not configured
+"INT3472" at iic2 addr 0x0 not configured
+"Intel 495 Series HECI" rev 0x30 at pci0 dev 22 function 0 not configured
+vendor "Intel", unknown product 0x34e4 (class communications subclass miscellaneous, rev 0x30) at pci0 dev 22 function 4 not configured
+dwiic3 at pci0 dev 25 function 0 "Intel 495 Series I2C" rev 0x30: apic 2 int 32
+iic3 at dwiic3
+"MSHW0184" at iic3 addr 0x39 not configured
+ppb0 at pci0 dev 29 function 0 "Intel 495 Series PCIE" rev 0x30: msi
+pci1 at ppb0 bus 1
+nvme0 at pci1 dev 0 function 0 unknown vendor 0x1e0f product 0x0001 rev 0x00: msix, NVMe 1.3
+nvme0: KBG40ZPZ256G TOSHIBA MEMORY, firmware AEMS0102, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, KBG40ZPZ256G TOS, AEMS>
+sd0: 244198MB, 512 bytes/sector, 500118192 sectors
+"Intel 495 Series UART" rev 0x30 at pci0 dev 30 function 0 not configured
+pcib0 at pci0 dev 31 function 0 "Intel 495 Series eSPI" rev 0x30
+azalia0 at pci0 dev 31 function 3 "Intel 495 Series HD Audio" rev 0x30: msi
+azalia0: codecs: Realtek/0x0274, Intel/0x280f, using Realtek/0x0274
+audio0 at azalia0
+"Intel 495 Series SPI" rev 0x30 at pci0 dev 31 function 5 not configured
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub2 at uhub1 port 4 configuration 1 interface 0 "Terminus Technology USB 2.0 Hub" rev 2.00/1.00 addr 2
+uhidev0 at uhub2 port 1 configuration 1 interface 0 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd0 at ukbd0: console keyboard
+uhidev1 at uhub2 port 1 configuration 1 interface 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhidev1: iclass 3/0
+fido0 at uhidev1: input=64, output=64, feature=0
+ugen0 at uhub2 port 1 configuration 1 "Yubico YubiKey OTP+FIDO+CCID" rev 2.00/5.24 addr 3
+uhub3 at uhub2 port 2 configuration 1 interface 0 "Terminus Technology USB 2.0 Hub" rev 2.00/1.00 addr 4
+uhub4 at uhub3 port 3 configuration 1 interface 0 "Texas Instruments product 0x8142" rev 2.10/1.00 addr 5
+uhidev2 at uhub4 port 2 configuration 1 interface 0 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev2: iclass 3/1
+ukbd1 at uhidev2: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+uhidev3 at uhub4 port 2 configuration 1 interface 1 "Cypress Cypress USB Keyboard / PS2 Mouse" rev 1.10/0.01 addr 6
+uhidev3: iclass 3/1, 3 report ids
+ums0 at uhidev3 reportid 1: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+uhid0 at uhidev3 reportid 2: input=1, output=0, feature=0
+ucc0 at uhidev3 reportid 3: 6 usages, 6 keys, enum
+wskbd2 at ucc0 mux 1
+uhub5 at uhub4 port 3 configuration 1 interface 0 "Texas Instruments product 0x8027" rev 2.10/1.10 addr 7
+uhidev4 at uhub5 port 1 configuration 1 interface 0 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev4: iclass 3/1
+ukbd2 at uhidev4: 8 variable keys, 6 key codes
+wskbd3 at ukbd2 mux 1
+uhidev5 at uhub5 port 1 configuration 1 interface 1 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev5: iclass 3/1, 8 report ids
+ums1 at uhidev5 reportid 2: 16 buttons, Z and W dir
+wsmouse1 at ums1 mux 0
+ucc1 at uhidev5 reportid 3: 652 usages, 18 keys, array
+wskbd4 at ucc1 mux 1
+uhid1 at uhidev5 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev5 reportid 8: input=1, output=0, feature=0
+uhidev6 at uhub5 port 1 configuration 1 interface 2 "Logitech USB Receiver" rev 2.00/24.07 addr 8
+uhidev6: iclass 3/0, 33 report ids
+uhidpp0 at uhidev6 device 1 mouse "MX Master 2S" serial ...
+uhid3 at uhidev6 reportid 32: input=14, output=14, feature=0
+uhid4 at uhidev6 reportid 33: input=31, output=31, feature=0
+uhidev7 at uhub4 port 4 configuration 1 interface 0 "Texas Instruments Texas Instruments USBtoI2C Solution" rev 1.10/1.00 addr 9
+uhidev7: iclass 3/0
+uhid5 at uhidev7: input=64, output=64, feature=2
+ure0 at uhub3 port 4 configuration 1 interface 0 "Realtek USB 10/100 LAN" rev 2.10/20.00 addr 10
+ure0: RTL8152 (0x4c10), address XXX
+rlphy0 at ure0 phy 0: RTL8201E 10/100 PHY, rev. 2
+uhidev8 at uhub1 port 8 configuration 1 interface 0 "Microsoft Surface Type Cover" rev 2.10/0.07 addr 11
+uhidev8: iclass 3/0, 41 report ids
+umt0 at uhidev8: clickpad, 5 contacts
+wsmouse2 at umt0 mux 0
+ukbd3 at uhidev8 reportid 1: 8 variable keys, 6 key codes
+wskbd5 at ukbd3 mux 1
+ums2 at uhidev8 reportid 2: 5 buttons, Z and W dir
+wsmouse3 at ums2 mux 0
+umstc0 at uhidev8 reportid 3
+uhid6 at uhidev8 reportid 5: input=0, output=0, feature=33
+uhid7 at uhidev8 reportid 8: input=0, output=0, feature=1
+uhid8 at uhidev8 reportid 9: input=38, output=20, feature=1
+uhid9 at uhidev8 reportid 10: input=38, output=20, feature=0
+uhid10 at uhidev8 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev8 reportid 12: input=0, output=1, feature=0
+uhid12 at uhidev8 reportid 13: input=34, output=34, feature=0
+uhid13 at uhidev8 reportid 14: input=59, output=59, feature=0
+uhid14 at uhidev8 reportid 32: input=60, output=60, feature=60
+uhid15 at uhidev8 reportid 33: input=60, output=60, feature=60
+uhid16 at uhidev8 reportid 34: input=16, output=16, feature=16
+uhid17 at uhidev8 reportid 35: input=16, output=16, feature=16
+uhid18 at uhidev8 reportid 36: input=16, output=16, feature=16
+uhid19 at uhidev8 reportid 37: input=16, output=16, feature=16
+uhid20 at uhidev8 reportid 38: input=16, output=16, feature=16
+uhid21 at uhidev8 reportid 39: input=16, output=16, feature=16
+uhid22 at uhidev8 reportid 40: input=16, output=16, feature=16
+uhid23 at uhidev8 reportid 41: input=16, output=16, feature=16
+ugen1 at uhub1 port 10 "Intel Bluetooth" rev 2.01/0.02 addr 12
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (2b4344d1e79ad749.a) swap on sd0b dump on sd0b
+inteldrm0: 2736x1440, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wskbd2: connecting to wsdisplay0
+wskbd3: connecting to wsdisplay0
+wskbd4: connecting to wsdisplay0
+wskbd5: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwx0: hw rev 0x330, fw ver 63.c04f3485.0, address XXX

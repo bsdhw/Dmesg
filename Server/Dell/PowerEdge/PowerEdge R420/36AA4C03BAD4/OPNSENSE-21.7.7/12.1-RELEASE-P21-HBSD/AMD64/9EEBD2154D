@@ -1,0 +1,294 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p21-HBSD #0  04bde01a034(stable/21.7)-dirty: Mon Dec 13 09:07:56 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) CPU E5-2420 0 @ 1.90GHz (1900.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206d7  Family=0x6  Model=0x2d  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features3=0x9c000400<MD_CLEAR,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 25769803776 (24576 MB)
+avail memory = 24932245504 (23777 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 24 CPUs
+FreeBSD/SMP: 2 package(s) x 6 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic1: Changing APIC ID to 1
+ioapic2: Changing APIC ID to 2
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 32-55 on motherboard
+ioapic2 <Version 2.0> irqs 64-87 on motherboard
+Launching APs: 14 13 7 4 15 17 2 11 1 22 21 3 5 16 10 19 9 20 8 18 6 23 12
+Timecounter "TSC" frequency 1900040520 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812947f0, 0) error 19
+000.000074 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 53 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+mfi0: <Drake Skinny> port 0xfc00-0xfcff mem 0xdcffc000-0xdcffffff,0xdcf80000-0xdcfbffff irq 34 at device 0.0 on pci1
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: 65049 (694289231s/0x0020/info) - Shutdown command received from host
+mfi0: 65050 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0073/1000/1f51/1028)
+mfi0: 65051 (boot + 3s/0x0020/info) - Firmware version 2.121.14-6325
+mfi0: 65052 (boot + 5s/0x0020/info) - Package version 20.13.3-0001
+mfi0: 65053 (boot + 5s/0x0020/info) - Board Revision A06
+mfi0: 65054 (boot + 31s/0x0004/info) - Enclosure PD 20(c None/p1) communication restored
+mfi0: 65055 (boot + 31s/0x0002/info) - Inserted: Encl PD 20
+mfi0: 65056 (boot + 31s/0x0002/info) - Inserted: PD 20(c None/p1) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=5c0830e0c27f4200,0000000000000000
+mfi0: 65057 (boot + 31s/0x0002/info) - Inserted: PD 00(e0x20/s0)
+mfi0: 65058 (boot + 31s/0x0002/info) - Inserted: PD 00(e0x20/s0) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000cca02a0ccd05,0pcib2: 000000000000000
+mfi0: 65059 (boot + 31s/0x0002/WARN) - PD 00(e0x20/s0) is not a certified drive
+mfi0: 65060 (boot + 31s/0x0002/info) - Inserted: PD 01(e0x20/s1)
+<ACPI PCI-PCI bridge> irq 53 at device 3.0 on pci0
+mfi0: 65061 (boot + 31s/0x0002/info) - Inserted: PD 01(e0x20/s1) Info: enclPd=20, scsiType=0, portMap=01, sasAddr=5000cca01fde3b39,0pci2: 000000000000000
+mfi0: 65062 (boot + 31s/0x0002/WARN) - PD 01(e0x20/s1) is not a certified drive
+mfi0: 65063 (boot + 31s/0x0002/info) - Inserted: PD 02(e0x20/s2)
+<ACPI PCI bus> on pcib2
+mfi0: 65064 (boot + 31s/0x0002/info) - Inserted: PD 02(e0x20/s2) Info: enclPd=20, scsiType=0, portMap=02, sasAddr=5000cca02a0ced85,0000000000000000
+mfi0: 65065 (boot + 31s/0x0002/WARN) - PD 02(e0x20/s2) is not a certified drive
+mfi0: 65066 (boot + 31s/0x0002/info) - Inserted: PD 03(e0x20/s3)
+mfi0: 65067 (boot + 31s/0x0002/info) - Inserted: PD 03(e0x20/s3) Info: enclPd=20, scsiType=0, portMap=03, sasAddr=5000cca02a0d1c9d,0000000000000000
+mfi0: 65068 (boot + 31s/0x0002/WARN) - PD 03(e0x20/s3) is not a certified drive
+mfi0: 65069 (694289289s/0x0020/info) - Time established as 12/31/21 18:08:09; (50 seconds since power on)
+mfi0: 65070 (694289341s/0x0020/info) - Host driver is loaded and operational
+pcib3: <PCI-PCI bridge> irq 16 at device 17.0 on pci0
+pci3: <PCI bus> on pcib3
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+ehci0: <Intel Patsburg USB 2.0 controller> mem 0xdf0fd000-0xdf0fd3ff irq 23 at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib4: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci5: <ACPI PCI bus> on pcib5
+bge0: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xd90a0000-0xd90affff,0xd90b0000-0xd90bffff,0xd90c0000-0xd90cffff irq 16 at device 0.0 on pci5
+bge0: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge0: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus0: <MII bus> on bge0
+brgphy0: <BCM5720C 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+bge1: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xd90d0000-0xd90dffff,0xd90e0000-0xd90effff,0xd90f0000-0xd90fffff irq 17 at device 0.1 on pci5
+bge1: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge1: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus1: <MII bus> on bge1
+brgphy1: <BCM5720C 1000BASE-T media interface> PHY 2 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge1: Using defaults for TSO: 65518/35/2048
+bge1: Ethernet address: ...
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <PCI-PCI bridge> at device 0.0 on pci6
+pci7: <PCI bus> on pcib7
+pcib8: <PCI-PCI bridge> at device 0.0 on pci7
+pci8: <PCI bus> on pcib8
+pcib9: <PCI-PCI bridge> at device 0.0 on pci8
+pci9: <PCI bus> on pcib9
+vgapci0: <VGA-compatible display> mem 0xd8000000-0xd8ffffff,0xde7fc000-0xde7fffff,0xdd800000-0xddffffff irq 19 at device 0.0 on pci9
+vgapci0: Boot video device
+pcib10: <PCI-PCI bridge> at device 1.0 on pci7
+pci10: <PCI bus> on pcib10
+ehci1: <Intel Patsburg USB 2.0 controller> mem 0xdf0fe000-0xdf0fe3ff irq 22 at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib11: <PCI-PCI bridge> at device 30.0 on pci0
+pci11: <PCI bus> on pcib11
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Patsburg AHCI SATA controller> port 0xece8-0xecef,0xecf8-0xecfb,0xecf0-0xecf7,0xecfc-0xecff,0xecc0-0xecdf mem 0xdf0ff000-0xdf0ff7ff irq 20 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib12: <ACPI Host-PCI bridge> on acpi0
+pci12: <ACPI PCI bus> on pcib12
+pcib13: <ACPI PCI-PCI bridge> irq 85 at device 3.0 on pci12
+pci13: <ACPI PCI bus> on pcib13
+pci13: <serial bus> at device 0.0 (no driver attached)
+pcib14: <ACPI Host-PCI bridge> on acpi0
+pci14: <ACPI PCI bus> on pcib14
+pci14: <dasp, performance counters> at device 14.1 (no driver attached)
+pci14: <dasp, performance counters> at device 19.1 (no driver attached)
+pci14: <dasp, performance counters> at device 19.4 (no driver attached)
+pci14: <dasp, performance counters> at device 19.5 (no driver attached)
+pcib15: <ACPI Host-PCI bridge> on acpi0
+pci15: <ACPI PCI bus> on pcib15
+pci15: <dasp, performance counters> at device 14.1 (no driver attached)
+pci15: <dasp, performance counters> at device 19.1 (no driver attached)
+pci15: <dasp, performance counters> at device 19.4 (no driver attached)
+pci15: <dasp, performance counters> at device 19.5 (no driver attached)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xec000-0xeffff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel EHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+mfid0 on mfi0
+mfid0: 1714688MB (3511681024 sectors) RAID volume 'RAID0' is optimal
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+Root mount waiting for: usbus1 usbus0
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+Root mount waiting for: usbus1 usbus0
+uhub3: 6 ports with 6 removable, self powered
+uhub2: 8 ports with 8 removable, self powered
+Root mount waiting for: usbus1 usbus0
+ugen1.3: <Logitech USB Receiver> at usbus1
+ukbd0 on uhub2
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/12.10, addr 3> on usbus1
+kbd1 at ukbd0
+Root mount waiting for: usbus1 usbus0
+ugen1.4: <Samsung Flash Drive> at usbus1
+umass0 on uhub2
+umass0: <Samsung Flash Drive, class 0/0, rev 2.10/11.00, addr 4> on usbus1
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:5:0: Attached to scbus5
+ugen0.3: <SanDisk Cruzer Fit> at usbus0
+umass1 on uhub3
+umass1: <SanDisk Cruzer Fit, class 0/0, rev 2.00/1.00, addr 3> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0xc100
+umass1:6:1: Attached to scbus6
+da0 at umass-sim1 bus 1 scbus6 target 0 lun 0
+da0: <SanDisk' Cruzer Fit 1.00> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 15264MB (31260672 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+da1 at umass-sim0 bus 0 scbus5 target 0 lun 0
+da1: <Samsung Flash Drive 1100> Removable Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 40.000MB/s transfers
+da1: 30594MB (62656641 512 byte sectors)
+da1: quirks=0x2<NO_6_BYTE>
+ugen0.4: <no manufacturer Gadget USB HUB> at usbus0
+uhub4 on uhub3
+uhub4: <no manufacturer Gadget USB HUB, class 9/0, rev 2.00/0.00, addr 4> on usbus0
+uhub4: 6 ports with 6 removable, self powered
+Root mount waiting for: usbus0
+ugen0.5: <Avocent Keyboard/Mouse Function> at usbus0
+ukbd1 on uhub4
+ukbd1: <Keyboard> on usbus0
+kbd2 at ukbd1
+Root mount waiting for: usbus0
+ugen0.6: <Dell(TM) iDRAC Virtual NIC USB Device> at usbus0
+mountroot: waiting for device /dev/gpt/rootfs...
+ioat0: <SNB IOAT Ch0> mem 0xdf0d8000-0xdf0dbfff irq 39 at device 4.0 on pci0
+ioat0: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat1: <SNB IOAT Ch1> mem 0xdf0dc000-0xdf0dffff irq 47 at device 4.1 on pci0
+ioat1: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat2: <SNB IOAT Ch2> mem 0xdf0e0000-0xdf0e3fff irq 39 at device 4.2 on pci0
+ioat2: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat3: <SNB IOAT Ch3> mem 0xdf0e4000-0xdf0e7fff irq 47 at device 4.3 on pci0
+ioat3: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat4: <SNB IOAT Ch4> mem 0xdf0e8000-0xdf0ebfff irq 39 at device 4.4 on pci0
+ioat4: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat5: <SNB IOAT Ch5> mem 0xdf0ec000-0xdf0effff irq 47 at device 4.5 on pci0
+ioat5: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat6: <SNB IOAT Ch6> mem 0xdf0f0000-0xdf0f3fff irq 39 at device 4.6 on pci0
+ioat6: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat7: <SNB IOAT Ch7> mem 0xdf0f4000-0xdf0f7fff irq 47 at device 4.7 on pci0
+ioat7: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat8: <SNB IOAT Ch0> mem 0xd41e0000-0xd41e3fff irq 71 at device 4.0 on pci12
+ioat8: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat9: <SNB IOAT Ch1> mem 0xd41e4000-0xd41e7fff irq 79 at device 4.1 on pci12
+ioat9: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat10: <SNB IOAT Ch2> mem 0xd41e8000-0xd41ebfff irq 71 at device 4.2 on pci12
+ioat10: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat11: <SNB IOAT Ch3> mem 0xd41ec000-0xd41effff irq 79 at device 4.3 on pci12
+ioat11: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat12: <SNB IOAT Ch4> mem 0xd41f0000-0xd41f3fff irq 71 at device 4.4 on pci12
+ioat12: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat13: <SNB IOAT Ch5> mem 0xd41f4000-0xd41f7fff irq 79 at device 4.5 on pci12
+ioat13: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat14: <SNB IOAT Ch6> mem 0xd41f8000-0xd41fbfff irq 71 at device 4.6 on pci12
+ioat14: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat15: <SNB IOAT Ch7> mem 0xd41fc000-0xd41fffff irq 79 at device 4.7 on pci12
+ioat15: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ums0 on uhub2
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/12.10, addr 3> on usbus1
+ums1 on uhub4
+ums1: <Mouse> on usbus0
+ums1: 3 buttons and [Z] coordinates ID=0
+ums0: 16 buttons and [XYZT] coordinates ID=2
+ums2 on uhub4
+ums2: <Mouse REL> on usbus0
+ums2: 3 buttons and [XYZ] coordinates ID=0
+uhid0 on uhub2
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/12.10, addr 3> on usbus1
+urndis0 on uhub4
+urndis0: <RNDIS Communications Control> on usbus0
+ue0: <USB Ethernet> on urndis0
+ue0: Ethernet address: ...
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+bge1: link state changed to DOWN
+bge1: link state changed to UP
+stf0: changing name to 'wan_stf'
+bge0: link state changed to DOWN
+pflog0: permanently promiscuous mode enabled
+bge0: link state changed to UP
+stf0: changing name to 'wan_stf'
+WARNING: attempt to domain_add(netgraph) after domainfinalize()

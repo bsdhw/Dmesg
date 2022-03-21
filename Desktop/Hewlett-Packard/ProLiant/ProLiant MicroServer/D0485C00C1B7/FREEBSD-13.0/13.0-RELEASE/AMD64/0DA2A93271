@@ -1,0 +1,310 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0 releng/13.0-n244733-ea31abc261f: Fri Apr  9 04:24:09 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(vga): resolution 640x480
+CPU: AMD Turion(tm) II Neo N40L Dual-Core Processor (1497.54-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x100f63  Family=0x10  Model=0x6  Stepping=3
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802009<SSE3,MON,CX16,POPCNT>
+  AMD Features=0xee500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM,3DNow!+,3DNow!>
+  AMD Features2=0x837ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,NodeId>
+  SVM: NP,NRIP,NAsids=64
+  TSC: P-state invariant
+real memory  = 17179869184 (16384 MB)
+avail memory = 16563478528 (15796 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <HP     ProLiant>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 64/32 (20201113/tbfadt-748)
+ioapic0 <Version 2.1> irqs 0-23
+Launching APs: 1
+Timecounter "TSC" frequency 1497537563 Hz quality 800
+KTLS: Initialized 2 threads
+random: entropy device external interface
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000053 [4354] netmap_init               netmap: loaded module
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+vtvga0: <VT VGA driver>
+cryptosoft0: <software crypto>
+aesni0: No AES or SHA support.
+acpi0: <HP ProLiant>
+acpi0: Power Button (fixed)
+acpi0: _OSC failed: AE_BUFFER_OVERFLOW
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+apei0: <ACPI Platform Error Interface> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xe000-0xe0ff mem 0xf8000000-0xfbffffff,0xfe6f0000-0xfe6fffff,0xfe500000-0xfe5fffff irq 18 at device 5.0 on pci1
+vgapci0: Boot video device
+pcib2: <ACPI PCI-PCI bridge> irq 18 at device 2.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfe7f8000-0xfe7fffff irq 18 at device 0.0 on pci2
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 4.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+ahci0: <AHCI SATA controller> mem 0xfe8fe000-0xfe8fffff,0xfe8fc000-0xfe8fdfff irq 16 at device 0.0 on pci3
+ahci0: AHCI v1.31 with 24 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich8: <AHCI channel> at channel 8 on ahci0
+ahcich9: <AHCI channel> at channel 9 on ahci0
+ahcich10: <AHCI channel> at channel 10 on ahci0
+ahcich11: <AHCI channel> at channel 11 on ahci0
+ahcich12: <AHCI channel> at channel 12 on ahci0
+ahcich13: <AHCI channel> at channel 13 on ahci0
+ahcich14: <AHCI channel> at channel 14 on ahci0
+ahcich15: <AHCI channel> at channel 15 on ahci0
+ahcich16: <AHCI channel> at channel 16 on ahci0
+ahcich17: <AHCI channel> at channel 17 on ahci0
+ahcich18: <AHCI channel> at channel 18 on ahci0
+ahcich19: <AHCI channel> at channel 19 on ahci0
+ahcich20: <AHCI channel> at channel 20 on ahci0
+ahcich21: <AHCI channel> at channel 21 on ahci0
+ahcich22: <AHCI channel> at channel 22 on ahci0
+ahcich23: <AHCI channel> at channel 23 on ahci0
+pcib4: <ACPI PCI-PCI bridge> irq 18 at device 6.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+bge0: <HP NC107i PCIe Gigabit Server Adapter, ASIC rev. 0x5784100> mem 0xfe9f0000-0xfe9fffff irq 18 at device 0.0 on pci4
+bge0: CHIP ID 0x05784100; ASIC REV 0x5784; CHIP REV 0x57841; PCI-E
+miibus0: <MII bus> on bge0
+brgphy0: <BCM5784 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+ahci1: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0xd000-0xd007,0xc000-0xc003,0xb000-0xb007,0xa000-0xa003,0x9000-0x900f mem 0xfe4ffc00-0xfe4fffff irq 19 at device 17.0 on pci0
+ahci1: AHCI v1.20 with 4 3Gbps ports, Port Multiplier supported
+ahci1: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich24: <AHCI channel> at channel 0 on ahci1
+ahcich25: <AHCI channel> at channel 1 on ahci1
+ahcich26: <AHCI channel> at channel 2 on ahci1
+ahcich27: <AHCI channel> at channel 3 on ahci1
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe4fe000-0xfe4fefff irq 18 at device 18.0 on pci0
+usbus1 on ohci0
+usbus1: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfe4ff800-0xfe4ff8ff irq 17 at device 18.2 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+usbus2: 480Mbps High Speed USB v2.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe4fd000-0xfe4fdfff irq 18 at device 19.0 on pci0
+usbus3 on ohci1
+usbus3: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfe4ff400-0xfe4ff4ff irq 17 at device 19.2 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci1
+usbus4: 480Mbps High Speed USB v2.0
+atapci0: <ATI IXP700/800 UDMA133 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xff00-0xff0f at device 20.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+ata1: <ATA channel> at channel 1 on atapci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib5: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci5: <ACPI PCI bus> on pcib5
+ohci2: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe4fc000-0xfe4fcfff irq 18 at device 22.0 on pci0
+usbus5 on ohci2
+usbus5: 12Mbps Full Speed USB v1.0
+ehci2: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfe4ff000-0xfe4ff0ff irq 17 at device 22.2 on pci0
+usbus6: EHCI version 1.0
+usbus6 on ehci2
+usbus6: 480Mbps High Speed USB v2.0
+acpi_button0: <Power Button> on acpi0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen3.1: <ATI OHCI root HUB> at usbus3
+ugen5.1: <ATI OHCI root HUB> at usbus5
+uhub0 on usbus3
+uhub1 on usbus5
+uhub0: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+ugen0.1: <0x1b21 XHCI root HUB> at usbus0
+ugen1.1: <ATI OHCI root HUB> at usbus1
+uhub2 on usbus0
+uhub3 on usbus1
+uhub2: <0x1b21 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+ugen2.1: <ATI EHCI root HUB> at usbus2
+uhub4 on usbus2
+uhub4: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ugen4.1: <ATI EHCI root HUB> at usbus4
+uhub5 on usbus4
+uhub5: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+ugen6.1: <ATI EHCI root HUB> at usbus6
+uhub6 on usbus6
+uhub6: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus6
+bge0: link state changed to UP
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 CAM usbus1 usbus2 usbus3 usbus4 usbus5 usbus6
+uhub1: 4 ports with 4 removable, self powered
+uhub0: 5 ports with 5 removable, self powered
+uhub3: 5 ports with 5 removable, self powered
+uhub2: 4 ports with 4 removable, self powered
+ugen0.2: <VIA Labs, Inc. USB3.1 Hub> at usbus0
+uhub7 on uhub2
+uhub7: <VIA Labs, Inc. USB3.1 Hub, class 9/0, rev 3.20/5.a3, addr 1> on usbus0
+Root mount waiting for: usbus0 CAM usbus2 usbus4 usbus6
+uhub6: 4 ports with 4 removable, self powered
+uhub4: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus0 CAM usbus4
+uhub5: 5 ports with 5 removable, self powered
+uhub7: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0 CAM
+ugen0.3: <VIA Labs,Inc. USB3.1 SATA Bridge> at usbus0
+umass0 on uhub7
+umass0: <VIA Labs,Inc. USB3.1 SATA Bridge, class 0/0, rev 3.10/6.14, addr 2> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x0100
+umass0:26:0: Attached to scbus26
+Root mount waiting for: usbus0 CAM
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 870 EVO 1TB SVT01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+ada1 at ahcich2 bus 0 scbus2 target 0 lun 0
+ada1: <Samsung SSD 870 EVO 1TB SVT01B6Q> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 953869MB (1953525168 512 byte sectors)
+ada2 at ahcich3 bus 0 scbus3 target 0 lun 0
+ada2: <Samsung SSD 840 PRO Series DXM05B0Q> ACS-2 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 244198MB (500118192 512 byte sectors)
+ada2: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+da0 at umass-sim0 bus 0 scbus26 target 0 lun 0
+da0: <WDC WD80 EFAX-68LHPN0 83.H> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 7630885MB (15628053168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+ada3 at ahcich24 bus 0 scbus20 target 0 lun 0
+ada3: <ST18000NM000J-2TV103 SNA1> ACS-4 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 17166336MB (35156656128 512 byte sectors)
+ada4 at ahcich25 bus 0 scbus21 target 0 lun 0
+ada4: <ST18000NM000J-2TV103 SNA1> ACS-4 ATA SATA 3.x device
+ada4: Serial Number...
+ada4: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada4: Command Queueing enabled
+ada4: 17166336MB (35156656128 512 byte sectors)
+ada5 at ahcich26 bus 0 scbus22 target 0 lun 0
+ada5: <ST18000NM000J-2TV103 SNA1> ACS-4 ATA SATA 3.x device
+ada5: Serial Number...
+ada5: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada5: Command Queueing enabled
+ada5: 17166336MB (35156656128 512 byte sectors)
+ada6 at ahcich27 bus 0 scbus23 target 0 lun 0
+ada6: <ST18000NM000J-2TV103 SNA1> ACS-4 ATA SATA 3.x device
+ada6: Serial Number...
+ada6: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada6: Command Queueing enabled
+ada6: 17166336MB (35156656128 512 byte sectors)
+GEOM_MIRROR: Device mirror/swap launched (2/2).
+ugen0.4: <VIA Labs,Inc. USB3.1 SATA Bridge> at usbus0
+umass1 on uhub7
+umass1: <VIA Labs,Inc. USB3.1 SATA Bridge, class 0/0, rev 3.10/6.14, addr 3> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0x0100
+umass1:27:1: Attached to scbus27
+da1 at umass-sim1 bus 1 scbus27 target 0 lun 0
+da1: <WDC WD80 EFAX-68LHPN0 83.H> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 400.000MB/s transfers
+da1: 7630885MB (15628053168 512 byte sectors)
+da1: quirks=0x2<NO_6_BYTE>
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+ugen0.5: <VIA Labs,Inc. USB3.1 SATA Bridge> at usbus0
+umass2 on uhub7
+umass2: <VIA Labs,Inc. USB3.1 SATA Bridge, class 0/0, rev 3.10/6.14, addr 4> on usbus0
+umass2:  SCSI over Bulk-Only; quirks = 0x0100
+umass2:28:2: Attached to scbus28
+da2 at umass-sim2 bus 2 scbus28 target 0 lun 0
+da2: <WDC WD80 EFAX-68LHPN0 83.H> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 400.000MB/s transfers
+da2: 7630885MB (15628053168 512 byte sectors)
+da2: quirks=0x2<NO_6_BYTE>
+Root mount waiting for: usbus0
+ugen0.6: <VIA Labs,Inc. USB3.1 SATA Bridge> at usbus0
+umass3 on uhub7
+umass3: <VIA Labs,Inc. USB3.1 SATA Bridge, class 0/0, rev 3.10/6.14, addr 5> on usbus0
+umass3:  SCSI over Bulk-Only; quirks = 0x0100
+umass3:29:3: Attached to scbus29
+da3 at umass-sim3 bus 3 scbus29 target 0 lun 0
+da3: <WDC WD80 EFAX-68LHPN0 83.H> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 400.000MB/s transfers
+da3: 7630885MB (15628053168 512 byte sectors)
+da3: quirks=0x2<NO_6_BYTE>
+ugen0.7: <VIA Labs, Inc. USB3.0 Hub> at usbus0
+uhub8 on uhub2
+uhub8: <VIA Labs, Inc. USB3.0 Hub, class 9/0, rev 3.00/91.05, addr 6> on usbus0
+Root mount waiting for: usbus0
+uhub8: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+ugen0.8: <Seagate Expansion Desk> at usbus0
+umass4 on uhub8
+umass4: <Seagate Expansion Desk, class 0/0, rev 3.00/9.15, addr 7> on usbus0
+umass4:  SCSI over Bulk-Only; quirks = 0x8100
+umass4:30:4: Attached to scbus30
+da4 at umass-sim4 bus 4 scbus30 target 0 lun 0
+da4: <Seagate Expansion Desk 0915> Fixed Direct Access SPC-4 SCSI device
+da4: Serial Number...
+da4: 400.000MB/s transfers
+da4: 15259647MB (31251759103 512 byte sectors)
+da4: quirks=0x2<NO_6_BYTE>
+ugen0.9: <VIA Labs, Inc. USB2.0 Hub> at usbus0
+uhub9 on uhub2
+uhub9: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/5.a3, addr 8> on usbus0
+uhub9: MTT enabled
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+uhub9: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus0
+ugen0.10: <VIA Labs, Inc. USB Billboard Device> at usbus0
+Root mount waiting for: usbus0
+ugen0.11: <VIA Labs, Inc. USB2.0 Hub> at usbus0
+uhub10 on uhub2
+uhub10: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/91.00, addr 10> on usbus0
+uhub10: 4 ports with 4 removable, self powered
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+bge0: link state changed to DOWN
+bge0: link state changed to UP
+pflog0: promiscuous mode enabled
+Security policy loaded: MAC/ntpd (mac_ntpd)

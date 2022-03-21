@@ -1,0 +1,295 @@
+GDB: debug ports: uart
+GDB: current port: uart
+KDB: debugger backends: ddb gdb
+KDB: current backend: ddb
+WARNING: DTB version is 5.9 while kernel expects 5.13, please update the DTB in the ESP
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 drm-base-subtree-n251924-9a6201ac2ff-dirty: Sun Dec 26 05:47:14 MSK 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX arm64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 1920x1080
+module firmware already present!
+real memory  = 4158332928 (3965 MB)
+avail memory = 4018262016 (3832 MB)
+Starting CPU 1 (1)
+Starting CPU 2 (2)
+Starting CPU 3 (3)
+Starting CPU 4 (100)
+Starting CPU 5 (101)
+FreeBSD/SMP: Multiprocessor System Detected: 6 CPUs
+random: unblocking device.
+random: entropy device external interface
+MAP f0f00000 mode 2 pages 1
+MAP f0f06000 mode 2 pages 2
+MAP f3f30000 mode 2 pages 16
+kbd0 at kbdmux0
+ofwbus0: <Open Firmware Device Tree>
+clk_fixed0: <Fixed clock> on ofwbus0
+simplebus0: <Flattened device tree simple bus> on ofwbus0
+rk_grf0: <RockChip General Register Files> mem 0xff320000-0xff320fff on ofwbus0
+rk3399_pmucru0: <Rockchip RK3399 PMU Clock and Reset Unit> mem 0xff750000-0xff750fff on ofwbus0
+rk3399_cru0: <Rockchip RK3399 Clock and Reset Unit> mem 0xff760000-0xff760fff on ofwbus0
+rk_grf1: <RockChip General Register Files> mem 0xff770000-0xff77ffff on ofwbus0
+clk_fixed1: <Fixed clock> on ofwbus0
+regfix0: <Fixed Regulator> on ofwbus0
+regfix1: <Fixed Regulator> on ofwbus0
+regfix2: <Fixed Regulator> on ofwbus0
+regfix3: <Fixed Regulator> on ofwbus0
+regfix4: <Fixed Regulator> on ofwbus0
+regfix5: <Fixed Regulator> on ofwbus0
+simple_mfd0: <Simple MFD (Multi-Functions Device)> mem 0xff310000-0xff310fff on ofwbus0
+psci0: <ARM Power State Co-ordination Interface Driver> on ofwbus0
+rk_drm0: <Rockchip Display Subsystem> on ofwbus0
+gic0: <ARM Generic Interrupt Controller v3.0> mem 0xfee00000-0xfee0ffff,0xfef00000-0xfefbffff,0xfff00000-0xfff0ffff,0xfff10000-0xfff1ffff,0xfff20000-0xfff2ffff irq 18 on ofwbus0
+its0: <ARM GIC Interrupt Translation Service> mem 0xfee20000-0xfee3ffff on gic0
+rk_iodomain0: <RockChip IO Voltage Domain> mem 0xff320000-0xff320fff on rk_grf0
+rk_iodomain1: <RockChip IO Voltage Domain> mem 0-0xff76ffff,0-0xffff on rk_grf1
+rk_pinctrl0: <RockChip Pinctrl controller> on ofwbus0
+gpio0: <RockChip GPIO Bank controller> mem 0xff720000-0xff7200ff irq 71 on rk_pinctrl0
+gpiobus0: <OFW GPIO bus> on gpio0
+gpio1: <RockChip GPIO Bank controller> mem 0xff730000-0xff7300ff irq 72 on rk_pinctrl0
+gpiobus1: <OFW GPIO bus> on gpio1
+gpio2: <RockChip GPIO Bank controller> mem 0xff780000-0xff7800ff irq 73 on rk_pinctrl0
+gpiobus2: <OFW GPIO bus> on gpio2
+gpio3: <RockChip GPIO Bank controller> mem 0xff788000-0xff7880ff irq 74 on rk_pinctrl0
+gpiobus3: <OFW GPIO bus> on gpio3
+gpio4: <RockChip GPIO Bank controller> mem 0xff790000-0xff7900ff irq 75 on rk_pinctrl0
+gpiobus4: <OFW GPIO bus> on gpio4
+rk_i2c0: <RockChip I2C> mem 0xff130000-0xff130fff irq 22 on ofwbus0
+iicbus0: <OFW I2C bus> on rk_i2c0
+rk_i2c1: <RockChip I2C> mem 0xff3d0000-0xff3d0fff irq 39 on ofwbus0
+iicbus1: <OFW I2C bus> on rk_i2c1
+fan53555_pmic0: <SYR827 PMIC> at addr 0x80 on iicbus1
+fan53555_pmic1: <SYR828 PMIC> at addr 0x82 on iicbus1
+rk_i2c2: <RockChip I2C> mem 0xff3e0000-0xff3e0fff irq 40 on ofwbus0
+iicbus2: <OFW I2C bus> on rk_i2c2
+rk808_pmu0: <RockChip RK808 PMIC> at addr 0x36 irq 76 on iicbus1
+rk_vop0: <Rockchip RK3399 Visual Output Processor> mem 0xff8f0000-0xff8f3efb irq 54 on ofwbus0
+rk_vop0: VOP version: 3068896
+panfrost0: <Mali Midgard/Bifrost GPU> mem 0xff9a0000-0xff9affff irq 64,65,66 on ofwbus0
+panfrost0: Mali GPU clock rate 500000000 Hz
+generic_timer0: <ARMv8 Generic Timer> irq 2,3,4,5 on ofwbus0
+Timecounter "ARM MPCore Timecounter" frequency 24000000 Hz quality 1000
+Event timer "ARM MPCore Eventtimer" frequency 24000000 Hz quality 1000
+rk_tsadc0: <RockChip temperature sensors> mem 0xff260000-0xff2600ff irq 35 on ofwbus0
+mmc_pwrseq0: <MMC Simple Power sequence> on ofwbus0
+rk_dw_hdmi0: <RockChip DW HDMI> mem 0xff940000-0xff95ffff irq 60 on ofwbus0
+rk_usb2phy0: <Rockchip RK3399 USB2PHY> mem 0-0xff76ffff,0-0xffff on rk_grf1
+rk_usb2phy1: <Rockchip RK3399 USB2PHY> mem 0-0xff76ffff,0-0xffff on rk_grf1
+rk_emmcphy0: <Rockchip RK3399 eMMC PHY> mem 0-0xff76ffff,0-0xffff on rk_grf1
+rk_pcie_phy0: <Rockchip RK3399 PCIe PHY> mem 0-0xff76ffff,0-0xffff on rk_grf1
+rk_typec_phy0: <Rockchip RK3399 PHY TYPEC> mem 0xff7c0000-0xff7fffff on ofwbus0
+rk_typec_phy1: <Rockchip RK3399 PHY TYPEC> mem 0xff800000-0xff83ffff on ofwbus0
+cpulist0: <Open Firmware CPU Group> on ofwbus0
+cpu0: <Open Firmware CPU> on cpulist0
+cpufreq_dt0: <Generic cpufreq driver> on cpu0
+cpufreq_dt0: Found cpu-supply
+cpu1: <Open Firmware CPU> on cpulist0
+cpufreq_dt1: <Generic cpufreq driver> on cpu1
+cpufreq_dt1: Found cpu-supply
+cpu2: <Open Firmware CPU> on cpulist0
+cpufreq_dt2: <Generic cpufreq driver> on cpu2
+cpufreq_dt2: Found cpu-supply
+cpu3: <Open Firmware CPU> on cpulist0
+cpufreq_dt3: <Generic cpufreq driver> on cpu3
+cpufreq_dt3: Found cpu-supply
+cpu4: <Open Firmware CPU> on cpulist0
+cpufreq_dt4: <Generic cpufreq driver> on cpu4
+cpufreq_dt4: Found cpu-supply
+cpu5: <Open Firmware CPU> on cpulist0
+cpufreq_dt5: <Generic cpufreq driver> on cpu5
+cpufreq_dt5: Found cpu-supply
+pmu0: <Performance Monitoring Unit> irq 0 on ofwbus0
+pmu1: <Performance Monitoring Unit> irq 1 on ofwbus0
+pcib0: <Rockchip PCIe controller> mem 0xf8000000-0xf9ffffff,0xfd000000-0xfdffffff irq 6,7,8 on ofwbus0
+pci0: <OFW PCI bus> on pcib0
+pcib1: <PCI-PCI bridge> at device 0.0 on pci0
+pcib0: failed to reserve resource for pcib1
+pcib1: failed to allocate initial memory window: 0-0xfffff
+pci1: <PCI bus> on pcib1
+nvme0: <Generic NVMe Device> at device 0.0 on pci1
+nvme0: unable to allocate MSI-X
+nvme0: unable to allocate MSI
+pcib0: route pin 1 for device 0.0 to 77
+dwc0: <Rockchip Gigabit Ethernet Controller> mem 0xfe300000-0xfe30ffff irq 9 on ofwbus0
+miibus0: <MII bus> on dwc0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 0 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+rgephy1: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 1 on miibus0
+rgephy1:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+dwc0: Ethernet address: ...
+rockchip_dwmmc0: <Synopsys DesignWare Mobile Storage Host Controller (RockChip)> mem 0xfe310000-0xfe313fff irq 10 on ofwbus0
+rockchip_dwmmc0: Hardware version ID is 270a
+rockchip_dwmmc1: <Synopsys DesignWare Mobile Storage Host Controller (RockChip)> mem 0xfe320000-0xfe323fff irq 11 on ofwbus0
+rockchip_dwmmc1: Hardware version ID is 270a
+mmc0: <MMC/SD bus> on rockchip_dwmmc1
+sdhci_fdt0: <Rockchip RK3399 fdt SDHCI controller> mem 0xfe330000-0xfe33ffff irq 12 on ofwbus0
+rk_emmcphy0: got emmcclk clock
+sdhci_fdt0-slot0: Hardware doesn't specify timeout clock frequency, setting BROKEN_TIMEOUT quirk.
+sdhci_fdt0: 1 slot(s) allocated
+mmc1: <MMC/SD bus> on sdhci_fdt0
+ehci0: <Generic EHCI Controller> mem 0xfe380000-0xfe39ffff irq 13 on ofwbus0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+ohci0: <Generic OHCI Controller> mem 0xfe3a0000-0xfe3bffff irq 14 on ofwbus0
+usbus1 on ohci0
+ehci1: <Generic EHCI Controller> mem 0xfe3c0000-0xfe3dffff irq 15 on ofwbus0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+ohci1: <Generic OHCI Controller> mem 0xfe3e0000-0xfe3fffff irq 16 on ofwbus0
+usbus3 on ohci1
+rk_dwc30: <Rockchip RK3399 DWC3> on ofwbus0
+xhci0: Only host mode is supported
+xhci0: Only host mode is supported
+rk_dwc31: <Rockchip RK3399 DWC3> on ofwbus0
+xhci0: <Synopsys Designware DWC3> mem 0xfe900000-0xfe9fffff irq 79 on rk_dwc31
+xhci0: 64 bytes context size, 32-bit DMA
+usbus4: trying to attach
+usbus4 on xhci0
+iic0: <I2C generic I/O> on iicbus0
+uart0: <Non-standard ns8250 class UART with FIFOs> mem 0xff180000-0xff1800ff irq 26 on ofwbus0
+uart0: debug port (-1,n,8,1)
+uart1: <16750 or compatible> mem 0xff1a0000-0xff1a00ff irq 28 on ofwbus0
+uart1: console (1500000,n,8,1)
+iic1: <I2C generic I/O> on iicbus1
+iic2: <I2C generic I/O> on iicbus2
+pwm0: <Rockchip PWM> mem 0xff420000-0xff42000f on ofwbus0
+pwmbus0: <OFW PWM bus> on pwm0
+pwmc0: <PWM Control> channel 0 on pwmbus0
+pwm1: <Rockchip PWM> mem 0xff420020-0xff42002f on ofwbus0
+pwmbus1: <OFW PWM bus> on pwm1
+pwmc1: <PWM Control> channel 0 on pwmbus1
+i2s0: <Rockchip I2S> mem 0xff880000-0xff880fff irq 51 on ofwbus0
+Cannot set frequency for clk: clkin_i2s, error: 34
+Cannot set frequency for clk: xin24m, error: 34
+i2s1: <Rockchip I2S> mem 0xff890000-0xff890fff irq 52 on ofwbus0
+Cannot set frequency for clk: clkin_i2s, error: 34
+Cannot set frequency for clk: xin24m, error: 34
+i2s2: <Rockchip I2S> mem 0xff8a0000-0xff8a0fff irq 53 on ofwbus0
+Cannot set frequency for clk: clkin_i2s, error: 34
+Cannot set frequency for clk: xin24m, error: 34
+pcm0: <simple-audio-card> on ofwbus0
+gpioc0: <GPIO controller> on gpio0
+gpioc1: <GPIO controller> on gpio1
+gpioc2: <GPIO controller> on gpio2
+gpioc3: <GPIO controller> on gpio3
+gpioc4: <GPIO controller> on gpio4
+gpioled0: <GPIO LEDs> on ofwbus0
+armv8crypto0: <AES-CBC,AES-XTS,AES-GCM>
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+usbus0: 480Mbps High Speed USB v2.0
+usbus1: 12Mbps Full Speed USB v1.0
+rk_drm0: port found
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+rk_drm0: Cannot find port with phandle a7
+rk_drm_fb_preinit
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] No driver support for vblank timestamp query.
+ugen1.1: <Generic OHCI root HUB> at usbus1
+ugen0.1: <Generic EHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1 on usbus1
+uhub1: <Generic OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+usbus2: 480Mbps High Speed USB v2.0
+usbus3: 12Mbps Full Speed USB v1.0
+ugen2.1: <Generic EHCI root HUB> at usbus2
+uhub2 on usbus2
+uhub2: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ugen3.1: <Generic OHCI root HUB> at usbus3
+uhub3 on usbus3
+uhub3: <Generic OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+usbus4: 5.0Gbps Super Speed USB v3.0
+ugen4.1: <Synopsys XHCI root HUB> at usbus4
+uhub4 on usbus4
+uhub4: <Synopsys XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus4
+uhub1: 1 port with 1 removable, self powered
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 14.0.
+VT: Replacing driver "efifb" with new "fb".
+[drm] Initialized rockchip 1.0.0 20201113 for rk_drm on minor 0
+rk808_pmu0: registered as a time-of-day clock, resolution 1.000000s
+panfrost0: GPU revision 2000, id 860
+panfrost0: Mali 860, major 2, minor 0, status 0
+panfrost0: Features: L2 7120206, Shader 0, Tiler 809, Mem 1, MMU 2830, AS ff, JS 7
+panfrost0: panfrost_gpu_intr: pending 600
+panfrost0: panfrost_gpu_intr: pending 600
+panfrost0: panfrost_gpu_intr: pending 600
+panfrost0: GPU is powered on
+panfrost0: panfrost_gpu_intr: pending 20000
+[drm] Initialized panfrost 1.1.0 20201124 for panfrost on minor 1
+nvme0: Allocated 64MB host memory buffer
+uhub3: 1 port with 1 removable, self powered
+uhub0: 1 port with 1 removable, self powered
+mmcsd0: 16GB <SDHC USD   1.0 SN ... MFG 12/2010 by 30 AB> at mmc0 50.0MHz/4bit/1016-block
+mmcsd1: 31GB <MMCHC BJTD4R 0.3 SN ... MFG 04/2019 by 21 0x0000> at mmc1 49.5MHz/8bit/65535-block
+mmcsd1boot0: 4MB partition 1 at mmcsd1
+mmcsd1boot1: 4MB partition 2 at mmcsd1
+mmcsd1rpmb: 4MB partition 3 at mmcsd1
+pcm0: failed to initialize codec node
+CPU  0: ARM Cortex-A53 r0p4 affinity:  0  0
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,VIPT ICache,64 byte ERG,64 byte CWG>
+ Instruction Set Attributes 0 = <CRC32,SHA2,SHA1,AES+PMULL>
+ Instruction Set Attributes 1 = <>
+         Processor Features 0 = <GIC,AdvSIMD,FP,EL3 32,EL2 32,EL1 32,EL0 32>
+         Processor Features 1 = <>
+      Memory Model Features 0 = <TGran4,TGran64,SNSMem,BigEnd,16bit ASID,1TB PA>
+      Memory Model Features 1 = <8bit VMID>
+      Memory Model Features 2 = <32bit CCIDX,48bit VA>
+             Debug Features 0 = <DoubleLock,2 CTX BKPTs,4 Watchpoints,6 Breakpoints,PMUv3,Debugv8>
+             Debug Features 1 = <>
+         Auxiliary Features 0 = <>
+         Auxiliary Features 1 = <>
+CPU  1: ARM Cortex-A53 r0p4 affinity:  0  1
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,VIPT ICache,64 byte ERG,64 byte CWG>
+      Memory Model Features 0 = <TGran4,TGran64,SNSMem,BigEnd,16bit ASID,1TB PA>
+CPU  2: ARM Cortex-A53 r0p4 affinity:  0  2
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,VIPT ICache,64 byte ERG,64 byte CWG>
+      Memory Model Features 0 = <TGran4,TGran64,SNSMem,BigEnd,16bit ASID,1TB PA>
+CPU  3: ARM Cortex-A53 r0p4 affinity:  0  3
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,VIPT ICache,64 byte ERG,64 byte CWG>
+      Memory Model Features 0 = <TGran4,TGran64,SNSMem,BigEnd,16bit ASID,1TB PA>
+CPU  4: ARM Cortex-A72 r0p2 affinity:  1  0
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,PIPT ICache,64 byte ERG,64 byte CWG>
+      Memory Model Features 0 = <TGran4,TGran64,SNSMem,BigEnd,16bit ASID,16TB PA>
+CPU  5: ARM Cortex-A72 r0p2 affinity:  1  1
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,PIPT ICache,64 byte ERG,64 byte CWG>
+      Memory Model Features 0 = <TGran4,TGran64,SNSMem,BigEnd,16bit ASID,16TB PA>
+Release APs...done
+uhub4: 2 ports with 2 removable, self powered
+uhub2: 1 port with 1 removable, self powered
+Trying to mount root from zfs:zroot/ROOT/hello-kwin []...
+GEOM: mmcsd1: the primary GPT table is corrupt or invalid.
+nda0 at nvme0 bus 0 scbus0 target 0 lun 1
+GEOM: mmcsd1: using the secondary instead -- recovery strongly advised.
+nda0: <NE-256 S0620A 9100407606414>
+nda0: Serial Number...
+nda0: nvme version 1.3 x1 (max x4) lanes PCIe Gen1 (max Gen3) link
+nda0: 244198MB (500118192 512 byte sectors)
+Root mount waiting for: usbus0
+ugen1.2: <Dell Dell Universal Receiver> at usbus1
+ukbd0 on uhub1
+ukbd0: <Dell Dell Universal Receiver, class 0/0, rev 2.00/0.12, addr 2> on usbus1
+kbd1 at ukbd0
+ums0 on uhub1
+ums0: <Dell Dell Universal Receiver, class 0/0, rev 2.00/0.12, addr 2> on usbus1
+ums0: 5 buttons and [XYZT] coordinates ID=1
+Dual Console: Serial Primary, Video Secondary
+dwwdt0: <Synopsys Designware watchdog timer> mem 0xff848000-0xff8480ff irq 48 on ofwbus0
+xhci1: Only host mode is supported
+lo0: link state changed to UP
+dwc0: link state changed to DOWN
+dwc0: link state changed to UP
+uhid0 on uhub1
+uhid0: <Dell Dell Universal Receiver, class 0/0, rev 2.00/0.12, addr 2> on usbus1
+Security policy loaded: MAC/ntpd (mac_ntpd)
+pid 1220 (Filer), jid 0, uid 1003: exited on signal 11
+pid 1632 (filer-qt), jid 0, uid 1003: exited on signal 11
+pid 1634 (Filer), jid 0, uid 1003: exited on signal 11
+pid 1648 (Filer), jid 0, uid 1003: exited on signal 11

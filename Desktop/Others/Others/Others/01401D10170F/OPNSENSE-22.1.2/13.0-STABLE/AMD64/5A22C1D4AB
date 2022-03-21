@@ -1,0 +1,676 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248059-267a40127d5 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz (2300.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ec  Family=0x6  Model=0x8e  Stepping=12
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x2b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 34358689792 (32767 MB)
+avail memory = 33210474496 (31671 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 2 4 6 7 3 5
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x9000-0x903f mem 0xb0000000-0xb0ffffff,0xa0000000-0xafffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xb1700000-0xb170ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+sdhci_pci0: <Generic SD HCI> mem 0xb1720000-0xb1720fff irq 19 at device 20.5 on pci0
+sdhci_pci0: 1 slot(s) allocated
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x9090-0x9097,0x9080-0x9083,0x9060-0x907f mem 0xb1714000-0xb1715fff,0xb171c000-0xb171c0ff,0xb171b000-0xb171b7ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pci0: <serial bus> at device 25.0 (no driver attached)
+sdhci_pci1: <Generic SD HCI> mem 0xb1719000-0xb1719fff at device 26.0 on pci0
+sdhci_pci1: 1 slot(s) allocated
+mmc0: <MMC/SD bus> on sdhci_pci1
+pcib1: <ACPI PCI-PCI bridge> irq 18 at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) I211 (Copper)> port 0x8000-0x801f mem 0xb1600000-0xb161ffff,0xb1620000-0xb1623fff irq 18 at device 0.0 on pci1
+igb0: NVM V0.6 imgtype2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib2: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb1: <Intel(R) I211 (Copper)> port 0x7000-0x701f mem 0xb1500000-0xb151ffff,0xb1520000-0xb1523fff irq 19 at device 0.0 on pci2
+igb1: NVM V0.6 imgtype2
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 29.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb2: <Intel(R) I211 (Copper)> port 0x6000-0x601f mem 0xb1400000-0xb141ffff,0xb1420000-0xb1423fff irq 16 at device 0.0 on pci3
+igb2: NVM V0.6 imgtype2
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib4: <ACPI PCI-PCI bridge> irq 17 at device 29.5 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb3: <Intel(R) I211 (Copper)> port 0x5000-0x501f mem 0xb1300000-0xb131ffff,0xb1320000-0xb1323fff irq 17 at device 0.0 on pci4
+igb3: NVM V0.6 imgtype2
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib5: <ACPI PCI-PCI bridge> irq 18 at device 29.6 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb4: <Intel(R) I211 (Copper)> port 0x4000-0x401f mem 0xb1200000-0xb121ffff,0xb1220000-0xb1223fff irq 18 at device 0.0 on pci5
+igb4: NVM V0.6 imgtype2
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 29.7 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb5: <Intel(R) I211 (Copper)> port 0x3000-0x301f mem 0xb1100000-0xb111ffff,0xb1120000-0xb1123fff irq 19 at device 0.0 on pci6
+igb5: NVM V0.6 imgtype2
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac0: <Intel Comet Lake-LP HDA Controller> mem 0xb1710000-0xb1713fff,0xb1000000-0xb10fffff irq 16 at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+ppc1: <Parallel port> port 0x378-0x37f,0x778-0x77f irq 5 drq 3 on acpi0
+ppc1: SMC-like chipset (ECP/EPP/PS2/NIBBLE) in COMPATIBLE mode
+ppc1: FIFO with 16/16/16 bytes threshold
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+acpi_syscontainer0: <System Container> on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcffff pnpid ORM0000 on isa0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC-low" frequency 1152000776 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+mmc0: No compatible cards found on bus
+hdacc0: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa0: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa0
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0Root mount waiting for: usbus0 CAM
+ on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <CT500MX500SSD1 M3CR043> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+mountroot: waiting for device /dev/gpt/rootfs...
+Dual Console: Video Primary, Serial Secondary
+igb0: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from igb0 (ifp 0xfffff80004366800), ignoring.
+igb2: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from igb2 (ifp 0xfffff800061bd800), ignoring.
+pchtherm0: <CometLake-LP Thermal Subsystem> mem 0xb1722000-0xb1722fff irq 16 at device 18.0 on pci0
+ig4iic0: <Intel Comet Lake-LP I2C Controller-0> at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+ig4iic1: <Intel Comet Lake-LP I2C Controller-1> at device 21.1 on pci0
+ig4iic1: Using MSI
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+ig4iic2: <Intel Comet Lake-LP I2C Controller-4> at device 25.0 on pci0
+ig4iic2: Using MSI
+iicbus2: <Philips I2C bus (ACPI-hinted)> on ig4iic2
+ichsmb0: <Intel Comet Lake SMBus controller> port 0xefa0-0xefbf mem 0xb1718000-0xb17180ff irq 16 at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WFDE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: cannot find EC device
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+lo0: link state changed to UP
+vlan0: changing name to 'igb4_vlan5'
+vlan1: changing name to 'igb4_vlan15'
+vlan2: changing name to 'igb4_vlan2'
+vlan3: changing name to 'igb4_vlan35'
+vlan4: changing name to 'igb4_vlan45'
+vlan5: changing name to 'igb4_vlan55'
+igb2: link state changed to DOWN
+igb0: link state changed to DOWN
+pflog0: permanently promiscuous mode enabled
+igb2: link state changed to UP
+igb0: link state changed to UP
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+igb0: promiscuous mode enabled
+igb2: promiscuous mode enabled
+lo0: promiscuous mode enabled
+igb4: promiscuous mode enabled
+igb4_vlan2: promiscuous mode enabled
+igb4_vlan5: promiscuous mode enabled
+igb4_vlan15: promiscuous mode enabled
+igb4_vlan35: promiscuous mode enabled
+igb4_vlan45: promiscuous mode enabled
+igb4_vlan55: promiscuous mode enabled
+lo0: promiscuous mode disabled
+igb4_vlan2: promiscuous mode disabled
+igb4_vlan5: promiscuous mode disabled
+igb4_vlan35: promiscuous mode disabled
+igb4_vlan15: promiscuous mode disabled
+igb0: promiscuous mode disabled
+igb4_vlan45: promiscuous mode disabled
+igb2: promiscuous mode disabled
+igb4: promiscuous mode disabled
+igb4_vlan55: promiscuous mode disabled
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 3 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248059-267a40127d5 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz (2300.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ec  Family=0x6  Model=0x8e  Stepping=12
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x2b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 34358689792 (32767 MB)
+avail memory = 33210474496 (31671 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 5 3 6 7 2 4
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x9000-0x903f mem 0xb0000000-0xb0ffffff,0xa0000000-0xafffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xb1700000-0xb170ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+sdhci_pci0: <Generic SD HCI> mem 0xb1720000-0xb1720fff irq 19 at device 20.5 on pci0
+sdhci_pci0: 1 slot(s) allocated
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x9090-0x9097,0x9080-0x9083,0x9060-0x907f mem 0xb1714000-0xb1715fff,0xb171c000-0xb171c0ff,0xb171b000-0xb171b7ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pci0: <serial bus> at device 25.0 (no driver attached)
+sdhci_pci1: <Generic SD HCI> mem 0xb1719000-0xb1719fff at device 26.0 on pci0
+sdhci_pci1: 1 slot(s) allocated
+mmc0: <MMC/SD bus> on sdhci_pci1
+pcib1: <ACPI PCI-PCI bridge> irq 18 at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) I211 (Copper)> port 0x8000-0x801f mem 0xb1600000-0xb161ffff,0xb1620000-0xb1623fff irq 18 at device 0.0 on pci1
+igb0: NVM V0.6 imgtype2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib2: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb1: <Intel(R) I211 (Copper)> port 0x7000-0x701f mem 0xb1500000-0xb151ffff,0xb1520000-0xb1523fff irq 19 at device 0.0 on pci2
+igb1: NVM V0.6 imgtype2
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 29.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb2: <Intel(R) I211 (Copper)> port 0x6000-0x601f mem 0xb1400000-0xb141ffff,0xb1420000-0xb1423fff irq 16 at device 0.0 on pci3
+igb2: NVM V0.6 imgtype2
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib4: <ACPI PCI-PCI bridge> irq 17 at device 29.5 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb3: <Intel(R) I211 (Copper)> port 0x5000-0x501f mem 0xb1300000-0xb131ffff,0xb1320000-0xb1323fff irq 17 at device 0.0 on pci4
+igb3: NVM V0.6 imgtype2
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib5: <ACPI PCI-PCI bridge> irq 18 at device 29.6 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb4: <Intel(R) I211 (Copper)> port 0x4000-0x401f mem 0xb1200000-0xb121ffff,0xb1220000-0xb1223fff irq 18 at device 0.0 on pci5
+igb4: NVM V0.6 imgtype2
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 29.7 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb5: <Intel(R) I211 (Copper)> port 0x3000-0x301f mem 0xb1100000-0xb111ffff,0xb1120000-0xb1123fff irq 19 at device 0.0 on pci6
+igb5: NVM V0.6 imgtype2
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac0: <Intel Comet Lake-LP HDA Controller> mem 0xb1710000-0xb1713fff,0xb1000000-0xb10fffff irq 16 at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+ppc1: <Parallel port> port 0x378-0x37f,0x778-0x77f irq 5 drq 3 on acpi0
+ppc1: SMC-like chipset (ECP/EPP/PS2/NIBBLE) in COMPATIBLE mode
+ppc1: FIFO with 16/16/16 bytes threshold
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+acpi_syscontainer0: <System Container> on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcffff pnpid ORM0000 on isa0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC-low" frequency 1152000937 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+mmc0: No compatible cards found on bus
+hdacc0: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa0: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa0
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0Root mount waiting for: usbus0 CAM
+ on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <CT500MX500SSD1 M3CR043> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+mountroot: waiting for device /dev/gpt/rootfs...
+Dual Console: Video Primary, Serial Secondary
+igb0: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from igb0 (ifp 0xfffff80004365800), ignoring.
+igb2: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from igb2 (ifp 0xfffff80004103800), ignoring.
+pchtherm0: <CometLake-LP Thermal Subsystem> mem 0xb1722000-0xb1722fff irq 16 at device 18.0 on pci0
+ig4iic0: <Intel Comet Lake-LP I2C Controller-0> at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+ig4iic1: <Intel Comet Lake-LP I2C Controller-1> at device 21.1 on pci0
+ig4iic1: Using MSI
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+ig4iic2: <Intel Comet Lake-LP I2C Controller-4> at device 25.0 on pci0
+ig4iic2: Using MSI
+iicbus2: <Philips I2C bus (ACPI-hinted)> on ig4iic2
+ichsmb0: <Intel Comet Lake SMBus controller> port 0xefa0-0xefbf mem 0xb1718000-0xb17180ff irq 16 at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WFDE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: cannot find EC device
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+lo0: link state changed to UP
+vlan0: changing name to 'igb4_vlan5'
+vlan1: changing name to 'igb4_vlan15'
+vlan2: changing name to 'igb4_vlan2'
+vlan3: changing name to 'igb4_vlan35'
+vlan4: changing name to 'igb4_vlan45'
+vlan5: changing name to 'igb4_vlan55'
+igb2: link state changed to DOWN
+igb0: link state changed to DOWN
+pflog0: permanently promiscuous mode enabled
+igb2: link state changed to UP
+igb0: link state changed to UP
+arp: XXX is using my IP address XXX.XXX.XXX.XXX on igb0!
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+igb0: promiscuous mode enabled
+igb2: promiscuous mode enabled
+lo0: promiscuous mode enabled
+igb4: promiscuous mode enabled
+igb4_vlan2: promiscuous mode enabled
+igb4_vlan5: promiscuous mode enabled
+igb4_vlan15: promiscuous mode enabled
+igb4_vlan35: promiscuous mode enabled
+igb4_vlan55: promiscuous mode enabled
+igb4_vlan45: promiscuous mode enabled
+lo0: promiscuous mode disabled
+igb4_vlan2: promiscuous mode disabled
+igb4_vlan5: promiscuous mode disabled
+igb4_vlan35: promiscuous mode disabled
+igb4_vlan15: promiscuous mode disabled
+igb4_vlan55: promiscuous mode disabled
+igb2: promiscuous mode disabled
+igb4: promiscuous mode disabled
+igb4_vlan45: promiscuous mode disabled
+igb0: promiscuous mode disabled
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 4 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248059-267a40127d5 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz (2300.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ec  Family=0x6  Model=0x8e  Stepping=12
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x2b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 34358689792 (32767 MB)
+avail memory = 33210474496 (31671 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 6 3 5 4 7 2
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x9000-0x903f mem 0xb0000000-0xb0ffffff,0xa0000000-0xafffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xb1700000-0xb170ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+sdhci_pci0: <Generic SD HCI> mem 0xb1720000-0xb1720fff irq 19 at device 20.5 on pci0
+sdhci_pci0: 1 slot(s) allocated
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x9090-0x9097,0x9080-0x9083,0x9060-0x907f mem 0xb1714000-0xb1715fff,0xb171c000-0xb171c0ff,0xb171b000-0xb171b7ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pci0: <serial bus> at device 25.0 (no driver attached)
+sdhci_pci1: <Generic SD HCI> mem 0xb1719000-0xb1719fff at device 26.0 on pci0
+sdhci_pci1: 1 slot(s) allocated
+mmc0: <MMC/SD bus> on sdhci_pci1
+pcib1: <ACPI PCI-PCI bridge> irq 18 at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+igb0: <Intel(R) I211 (Copper)> port 0x8000-0x801f mem 0xb1600000-0xb161ffff,0xb1620000-0xb1623fff irq 18 at device 0.0 on pci1
+igb0: NVM V0.6 imgtype2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib2: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb1: <Intel(R) I211 (Copper)> port 0x7000-0x701f mem 0xb1500000-0xb151ffff,0xb1520000-0xb1523fff irq 19 at device 0.0 on pci2
+igb1: NVM V0.6 imgtype2
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 29.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb2: <Intel(R) I211 (Copper)> port 0x6000-0x601f mem 0xb1400000-0xb141ffff,0xb1420000-0xb1423fff irq 16 at device 0.0 on pci3
+igb2: NVM V0.6 imgtype2
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib4: <ACPI PCI-PCI bridge> irq 17 at device 29.5 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb3: <Intel(R) I211 (Copper)> port 0x5000-0x501f mem 0xb1300000-0xb131ffff,0xb1320000-0xb1323fff irq 17 at device 0.0 on pci4
+igb3: NVM V0.6 imgtype2
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib5: <ACPI PCI-PCI bridge> irq 18 at device 29.6 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb4: <Intel(R) I211 (Copper)> port 0x4000-0x401f mem 0xb1200000-0xb121ffff,0xb1220000-0xb1223fff irq 18 at device 0.0 on pci5
+igb4: NVM V0.6 imgtype2
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 29.7 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb5: <Intel(R) I211 (Copper)> port 0x3000-0x301f mem 0xb1100000-0xb111ffff,0xb1120000-0xb1123fff irq 19 at device 0.0 on pci6
+igb5: NVM V0.6 imgtype2
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac0: <Intel Comet Lake-LP HDA Controller> mem 0xb1710000-0xb1713fff,0xb1000000-0xb10fffff irq 16 at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+ppc1: <Parallel port> port 0x378-0x37f,0x778-0x77f irq 5 drq 3 on acpi0
+ppc1: SMC-like chipset (ECP/EPP/PS2/NIBBLE) in COMPATIBLE mode
+ppc1: FIFO with 16/16/16 bytes threshold
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+acpi_syscontainer0: <System Container> on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xcffff pnpid ORM0000 on isa0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC-low" frequency 1152000896 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+mmc0: No compatible cards found on bus
+hdacc0: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa0: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa0
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0Root mount waiting for:ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <CT500MX500SSD1 M3CR043> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+ usbus0 CAM
+ on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub0: 18 ports with 18 removable, self powered
+mountroot: waiting for device /dev/gpt/rootfs...
+Dual Console: Video Primary, Serial Secondary

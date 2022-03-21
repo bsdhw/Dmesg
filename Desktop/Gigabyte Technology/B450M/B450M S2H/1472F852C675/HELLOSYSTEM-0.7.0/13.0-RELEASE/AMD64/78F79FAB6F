@@ -1,0 +1,407 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0 releng/13.0-n244733-ea31abc261f: Fri Apr  9 04:24:09 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 1024x768
+CPU: AMD Ryzen 3 2200G with Radeon Vega Graphics     (3493.51-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x810f10  Family=0x17  Model=0x11  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr,IBPB>
+  SVM: (disabled in BIOS) NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16581595136 (15813 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 2 1 3
+Timecounter "TSC-low" frequency 1746754887 Hz quality 1000
+KTLS: Initialized 4 threads
+random: entropy device external interface
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000058 [4354] netmap_init               netmap: loaded module
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Event timer "HPET2" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xf000-0xf07f mem 0xf6000000-0xf6ffffff,0xe0000000-0xefffffff,0xf0000000-0xf1ffffff irq 24 at device 0.0 on pci1
+vgapci0: Boot video device
+hdac0: <NVIDIA (0x10fa) HDA Controller> mem 0xf7080000-0xf7083fff irq 25 at device 0.1 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xf77a0000-0xf77a7fff irq 28 at device 0.0 on pci2
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AHCI SATA controller> mem 0xf7780000-0xf779ffff irq 29 at device 0.1 on pci2
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+pcib3: <ACPI PCI-PCI bridge> irq 30 at device 0.2 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 28 at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 29 at device 1.0 on pci3
+pci5: <ACPI PCI bus> on pcib5
+pcib6: <ACPI PCI-PCI bridge> irq 28 at device 4.0 on pci3
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> irq 29 at device 5.0 on pci3
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> irq 30 at device 6.0 on pci3
+pci8: <ACPI PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> irq 31 at device 7.0 on pci3
+pci9: <ACPI PCI bus> on pcib9
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xe000-0xe0ff mem 0xf7604000-0xf7604fff,0xf7600000-0xf7603fff irq 31 at device 0.0 on pci9
+re0: Using 1 MSI-X message
+re0: turning off MSI enable bit.
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib10: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci10: <ACPI PCI bus> on pcib10
+pci10: <unknown> at device 0.0 (no driver attached)
+pci10: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xf7300000-0xf73fffff irq 55 at device 0.3 on pci10
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xf7200000-0xf72fffff irq 52 at device 0.4 on pci10
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+hdac1: <AMD Raven HDA Controller> mem 0xf7500000-0xf7507fff irq 54 at device 0.6 on pci10
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 3 flags 0x10 on acpi0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <NVIDIA (0x0094) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0094) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0094) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0094) (HDMI/DP 8ch)> at nid 5 on hdaa0
+pcm2: <NVIDIA (0x0094) (HDMI/DP 8ch)> at nid 6 on hdaa0
+pcm3: <NVIDIA (0x0094) (HDMI/DP 8ch)> at nid 7 on hdaa0
+hdacc1: <Realtek ALC887 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC887 Audio Function Group> at nid 1 on hdacc1
+pcm4: <Realtek ALC887 (Rear Analog)> at nid 20 and 24,26 on hdaa1
+pcm5: <Realtek ALC887 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm6: <Realtek ALC887 (Onboard Digital)> at nid 17 on hdaa1
+Trying to mount root from cd9660:/dev/iso9660/LIVE []...
+Root mount waiting for: usbus0 CAM usbus1 usbus2
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+uhub0 on usbus1
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+ugen2.1: <0x1022 XHCI root HUB> at usbus2
+uhub1 on usbus2
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub2 on usbus0
+uhub2: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich5 bus 0 scbus3 target 0 lun 0
+ada0: <Patriot Burst SBFMJ1.3> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 228936MB (468862128 512 byte sectors)
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: ada0s1: no FAT signature found.
+GEOM_LABEL[1]: ext2fs file system detected on ada0s1.
+GEOM_LABEL[1]: MSDOSFS: ada0s2: no FAT signature found.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: ext2fs file system detected on diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 8 ports with 8 removable, self powered
+ugen2.2: <SONiX USB DEVICE> at usbus2
+ukbd0 on uhub1
+ukbd0: <SONiX USB DEVICE, class 0/0, rev 2.00/1.20, addr 1> on usbus2
+kbd2 at ukbd0
+uhub2: 22 ports with 22 removable, self powered
+ugen1.2: <Realtek 802.11ac WLAN Adapter> at usbus1
+ugen1.3: <vendor 0x0715 product 0x0206> at usbus1
+Root mount waiting for: usbus0 usbus1
+ugen1.4: <vendor 0x0a12 product 0x0001> at usbus1
+ugen0.2: <vendor 0x6557 USB DISK 3.0> at usbus0
+umass0 on uhub2
+umass0: <vendor 0x6557 USB DISK 3.0, class 0/0, rev 2.10/1.00, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x8100
+umass0:4:0: Attached to scbus4
+Root mount waiting for: CAM
+da0 at umass-sim0 bus 0 scbus4 target 0 lun 0
+da0: < USB DISK 3.0 PMAP> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 15120MB (30965760 512 byte sectors)
+da0: quirks=0x3<NO_SYNC_CACHE,NO_6_BYTE>
+GEOM: da0: the secondary GPT header is not in the last LBA.
+GEOM_LABEL[1]: ISO9660 file system detected on da0.
+GEOM_LABEL[1]: Label for provider da0 is iso9660/LIVE.
+GEOM_LABEL[1]: MSDOSFS: da0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da0 is diskid/XXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider da0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label for provider da0p2 is msdosfs/EFISYS.
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+GEOM: diskid/XXXXXXXXXXXXXXXXXXXXXX the secondary GPT header is not in the last LBA.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp1).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp1: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+mountroot: waiting for device /dev/iso9660/LIVE...
+random: unblocking device.
+GEOM_LABEL[1]: MSDOSFS: md0: no FAT signature found.
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: Label for provider md0.uzip is ufsid/XXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: MSDOSFS: md0.uzip: no FAT signature found.
+nvidia0: <NVIDIA GeForce GTX 1650> on vgapci0
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: child nvidia0 requested pci_enable_io
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  470.74  Tue Sep 14 00:47:44 UTC 2021
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+acpi_wmi1: Embedded MOF found
+ACPI: \134GSA1.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+acpi_video0: <ACPI video extension> on vgapci0
+Firmware Error (ACPI): Could not resolve symbol [\134_SB.PCI0.GPP0.VGA.LCD._BCM.AFN7], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Aborting method \134_SB.PCI0.GPP0.VGA.LCD._BCM due to previous error (AE_NOT_FOUND) (20201113/psparse-689)
+can't evaluate \134_SB_.PCI0.GPP0.VGA_.LCD_._BCM - AE_NOT_FOUND
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+Cuse v0.1.36 @ /dev/cuse
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+lo0: link state changed to UP
+re0: link state changed to DOWN
+ums0 on uhub1
+ums0: <SONiX USB DEVICE, class 0/0, rev 2.00/1.20, addr 1> on usbus2
+ums1 on uhub0
+ums1: <vendor 0x0715 product 0x0206, class 0/0, rev 1.10/0.01, addr 2> on usbus1
+ums0: 3 buttons and [XYZ] coordinates ID=6
+ums1: 5 buttons and [XYZT] coordinates ID=0
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: ada0s1: no FAT signature found.
+GEOM_LABEL[1]: ext2fs file system detected on ada0s1.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: ext2fs file system detected on diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+rtwn0 on uhub0
+rtwn0: <802.11ac WLAN Adapter > on usbus1
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+rtwn0: MAC/BB RTL8821AU, RF 6052 1T1R
+ubt0 on uhub0
+ubt0: <vendor 0x0a12 product 0x0001, class 224/1, rev 2.00/88.91, addr 3> on usbus1
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+wlan0: Ethernet address: ...
+wlan0: Ethernet address: ...
+wlan0: ieee80211_new_state_locked: pending INIT -> SCAN transition lost
+amdsmn0: <AMD Family 17h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+ugen1.2: <Realtek 802.11ac WLAN Adapter> at usbus1 (disconnected)
+rtwn0: at uhub0, port 2, addr 1 (disconnected)
+rtwn0: detached
+ugen1.2: <ManufacturerRealtek RTL8187BWLANAdapter> at usbus1
+urtw0 on uhub0
+urtw0: <RTL8187BWLANAdapter> on usbus1
+urtw0: could not allocate USB transfers, err=USB_ERR_NO_PIPE
+device_attach: urtw0 attach returned 6
+ugen1.2: <ManufacturerRealtek RTL8187BWLANAdapter> at usbus1 (disconnected)
+ugen1.2: <ManufacturerRealtek RTL8187BWLANAdapter> at usbus1
+urtw0 on uhub0
+urtw0: <RTL8187BWLANAdapter> on usbus1
+urtw0: could not allocate USB transfers, err=USB_ERR_NO_PIPE
+device_attach: urtw0 attach returned 6
+ugen1.2: <ManufacturerRealtek RTL8187BWLANAdapter> at usbus1 (disconnected)
+ugen1.2: <Realtek 802.11ac WLAN Adapter> at usbus1
+rtwn0 on uhub0
+rtwn0: <802.11ac WLAN Adapter > on usbus1
+rtwn0: MAC/BB RTL8821AU, RF 6052 1T1R
+wlan0: Ethernet address: ...
+wlan0: ieee80211_new_state_locked: pending INIT -> SCAN transition lost
+pid 4144 (python3.8), jid 0, uid 1000: exited on signal 11
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP

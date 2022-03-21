@@ -1,0 +1,141 @@
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020 The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.2 (MYKERNEL) #35: Wed Feb  9 18:02:43 UTC 2022
+	ubuntu@instance-20211203-1708:/home/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+total memory = 32380 KB
+avail memory = 28120 KB
+timecounter: Timecounters tick every 10.000 msec
+RTC BIOS diagnostic error 0x20<config_unit>
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+MiTAC 5033 (R07)
+PCI BIOS rev. 2.1 found at 0xeb1a0
+pcibios: config mechanism [1][x], special cycles [1][x], last bus 0
+PCI IRQ Routing Table rev. 1.0 found at 0xfe840, size 64 bytes (2 entries)
+PCI Interrupt Router at 000:01:0 (vendor 8086 product 122e compatible)
+PIR Entry 0:
+	Bus: 0  Device: 1
+		INTA: link 0x00 bitmap 0x1ef8
+		INTB: link 0x00 bitmap 0x1ef8
+		INTC: link 0x63 bitmap 0x02f8
+		INTD: link 0x63 bitmap 0x02f8
+PIR Entry 1:
+	Bus: 0  Device: 3
+		INTA: link 0x60 bitmap 0x0400
+		INTB: link 0x61 bitmap 0x0400
+		INTC: link 0x00 bitmap 0x0c00
+		INTD: link 0x00 bitmap 0x0c00
+pciintr_link_fixup: PIRQ 0x00 already connected to IRQ 10
+pciintr_link_fixup: PIRQ 0x03 not connected
+pciintr_link_fixup: PIRQ 0x01 already connected to IRQ 10
+pciintr_link_fixup (stage 3): assigning IRQ 9 to PIRQ 0x03
+pciintr_link_route: route of PIRQ 0x00 -> IRQ 10 preserved BIOS setting
+pciintr_link_route: route of PIRQ 0x01 -> IRQ 10 preserved BIOS setting
+------------------------------------------
+  device vendor product pin PIRQ IRQ stage
+------------------------------------------
+000:01:2 0x8086 0x7112   D  0x03   9  3    already assigned
+000:03:0 0x104c 0xac17   A  0x00  10  0    already assigned
+000:03:1 0x104c 0xac17   B  0x01  10  0    already assigned
+------------------------------------------
+pciintr_irq_release: fixup pciirq level/edge map 0x0600
+pciintr_irq_release: bios  pciirq level/edge map 0x0600
+pciintr_irq_release: final pciirq level/edge map 0x0600
+mainbus0 (root)
+cpu0 at mainbus0
+cpu0: AMD-K6tm w/ multimedia extensions, id 0x570
+cpu0: package 0, core 0, smt 0
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: This pci host supports neither MSI nor MSI-X.
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: vendor 8086 product 7100 (rev. 0x01)
+pcib0 at pci0 dev 1 function 0: vendor 8086 product 7110 (rev. 0x01)
+piixide0 at pci0 dev 1 function 1: Intel 82371AB IDE controller (PIIX4) (rev. 0x01)
+piixide0: bus-master DMA support present
+piixide0: primary channel wired to compatibility mode
+piixide0: primary channel interrupting at irq 14
+atabus0 at piixide0 channel 0
+piixide0: secondary channel wired to compatibility mode
+piixide0: secondary channel interrupting at irq 15
+atabus1 at piixide0 channel 1
+vendor 8086 product 7112 (USB serial ... UHCI, revision 0x01) at pci0 dev 1 function 2 not configured
+piixpm0 at pci0 dev 1 function 3: vendor 8086 product 7113 (rev. 0x01)
+timecounter: Timecounter "piixpm0" frequency 3579545 Hz quality 900
+piixpm0: 24-bit timer
+piixpm0: SMBus disabled
+vga1 at pci0 dev 2 function 0: vendor 1023 product 9660 (rev. 0xd3)
+wsdisplay0 at vga1 kbdmux 1: console (80x25, vt100 emulation)
+wsmux1: connecting to wsdisplay0
+drm at vga1 not configured
+cbb0 at pci0 dev 3 function 0: vendor 104c product ac17 (rev. 0x02)
+cbb0: Clear PME# now
+cbb1 at pci0 dev 3 function 1: vendor 104c product ac17 (rev. 0x02)
+isa at pcib0 not configured
+cbb0: cacheline 0x8 lattimer 0x40
+cbb0: bhlc 0x824008
+cbb0: interrupting at irq 10
+cardslot0 at cbb0
+cardbus0 at cardslot0: bus 1
+pcmcia0 at cardslot0
+cbb1: cacheline 0x8 lattimer 0x40
+cbb1: bhlc 0x824008
+cbb1: interrupting at irq 10
+cardslot1 at cbb1
+cardbus1 at cardslot1: bus 2
+pcmcia1 at cardslot1
+isa0 at mainbus0
+lpt0 at isa0 port 0x378-0x37b irq 7
+com0 at isa0 port 0x3f8-0x3ff irq 4: ns16550a, working fifo
+com1 at isa0 port 0x2f8-0x2ff irq 3: ns16550a, working fifo
+pckbc0 at isa0 port 0x60-0x64
+pckbd0 at pckbc0 (kbd slot)
+pckbc0: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+midi0 at pcppi0: PC speaker
+sysbeep0 at pcppi0
+isapnp0 at isa0 port 0x279
+fdc0 at isa0 port 0x3f0-0x3f7 irq 6 drq 2
+isapnp0: read port 0x203
+isapnp0: <ESS ES1869 Plug and Play AudioD, ESS0006, , > port 0x800/8 not configured
+ess0 at isapnp0 port 0x220/16,0x388/4,0x330/2 irq 5 drq 1,0
+ess0: ESS Technology ES1869 [version 0x688b]
+ess0: audio1 interrupting at irq 5
+audio0 at ess0: playback, capture, half duplex
+audio0: slinear_le:16 2ch 44100Hz, blk 1760 bytes (9.9ms) for playback
+audio0: slinear_le:16 2ch 44100Hz, blk 1760 bytes (9.9ms) for recording
+opl0 at ess0: model OPL3
+midi at opl0 not configured
+isapnp0: <ESS ES1869 Plug and Play AudioD, ESS0001, , > port 0x201/1 not configured
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+fd0 at fdc0 drive 0: 1.44MB, 80 cyl, 2 head, 18 sec
+ep0 at pcmcia0 function 0: <3Com, Megahertz 574B, B, 001>
+ep0: address XXX, 64KB word-wide FIFO, 1:1 Rx:Tx split
+tqphy0 at ep0 phy 0: 78Q2120 10/100 media interface, rev. 10
+tqphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto
+wd0 at atabus0 drive 0
+wd0: <TOSHIBA MK2104MAV>
+wd0: drive supports 16-sector PIO transfers, LBA addressing
+wd0: 2067 MB, 4200 cyl, 16 head, 63 sec, 512 bytes/sect x 4233600 sectors
+wd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 3932093 blocks at 64, type: ffs
+dk1 at wd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262111 blocks at 3932160, type: swap
+wd0: 32-bit data port
+wd0: drive supports PIO mode 4, DMA mode 2
+wd0(piixide0:0:0): using PIO mode 4, DMA mode 2 (using DMA)
+atapibus0 at atabus1: 2 targets
+cd0 at atapibus0 drive 0: <UJDA110, , 1.05> cdrom removable
+cd0: 32-bit data port
+cd0: drive supports PIO mode 4, DMA mode 1
+cd0(piixide0:1:0): using PIO mode 0, DMA mode 1 (using DMA)
+boot device: wd0
+root on dk0 dumps on dk1
+root file system type: ffs
+kern.module.path=/stand/i386/9.2/modules
+wsdisplay0: screen 1 added (80x25, vt100 emulation)
+wsdisplay0: screen 2 added (80x25, vt100 emulation)
+wsdisplay0: screen 3 added (80x25, vt100 emulation)
+wsdisplay0: screen 4 added (80x25, vt100 emulation)

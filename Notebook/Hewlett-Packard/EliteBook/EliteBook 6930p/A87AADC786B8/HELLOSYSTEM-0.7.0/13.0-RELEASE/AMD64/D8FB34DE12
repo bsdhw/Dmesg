@@ -1,0 +1,426 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0 releng/13.0-n244733-ea31abc261f: Fri Apr  9 04:24:09 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(vbefb): resolution 800x600
+CPU: Intel(R) Core(TM)2 Duo CPU     T9400  @ 2.53GHz (2527.05-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x10676  Family=0x6  Model=0x17  Stepping=6
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x8e3fd<SSE3,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1>
+  AMD Features=0x20000800<SYSCALL,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: HLT,PAUSE
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 4000231424 (3814 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <HPQOEM 30DC    >
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+ioapic0: MADT APIC ID 1 != hw id 0
+ioapic0 <Version 2.0> irqs 0-23
+Launching APs: 1
+Timecounter "TSC-low" frequency 1263525693 Hz quality 1000
+KTLS: Initialized 2 threads
+random: entropy device external interface
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000056 [4354] netmap_init               netmap: loaded module
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+cryptosoft0: <software crypto>
+aesni0: No AES or SHA support.
+acpi0: <HPQOEM SLIC-MPC>
+acpi0: Power Button (fixed)
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x16> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pcib0: could not evaluate _ADR - AE_NOT_FOUND
+pcib0: Length mismatch for 3 range: 20000000 vs 20000001
+pcib0: Length mismatch for 3 range: 11ff000 vs 11fefff
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0x7000-0x70ff mem 0xc0000000-0xcfffffff,0xd8300000-0xd830ffff irq 16 at device 0.0 on pci1
+vgapci0: Boot video device
+pci0: <simple comms> at device 3.0 (no driver attached)
+atapci0: <Intel ATA controller> port 0x8130-0x8137,0x8144-0x8147,0x8128-0x812f,0x8140-0x8143,0x8100-0x810f irq 18 at device 3.2 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+uart2: <Mobile 4 Series Chipset KT Controller> port 0x8120-0x8127 mem 0xd8425000-0xd8425fff irq 17 at device 3.3 on pci0
+uart2: Using 1 MSI message
+em0: <Intel(R) PRO/1000 Network Connection> port 0x80e0-0x80ff mem 0xd8400000-0xd841ffff,0xd8424000-0xd8424fff irq 22 at device 25.0 on pci0
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+uhci0: <Intel 82801I (ICH9) USB controller> port 0x80c0-0x80df irq 16 at device 26.0 on pci0
+uhci0: LegSup = 0x2f00
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 82801I (ICH9) USB controller> port 0x80a0-0x80bf irq 17 at device 26.1 on pci0
+uhci1: LegSup = 0x2f00
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+uhci2: <Intel 82801I (ICH9) USB controller> port 0x8080-0x809f irq 18 at device 26.2 on pci0
+uhci2: LegSup = 0x3f00
+usbus2 on uhci2
+usbus2: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 82801I (ICH9) USB 2.0 controller> mem 0xd8426c00-0xd8426fff irq 19 at device 26.7 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci0
+usbus3: 480Mbps High Speed USB v2.0
+hdac0: <Intel 82801I HDA Controller> mem 0xd8420000-0xd8423fff irq 17 at device 27.0 on pci0
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pcib3: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci2: <ACPI PCI bus> on pcib3
+iwn0: <Intel Ultimate N WiFi Link 5300> mem 0xd8100000-0xd8101fff irq 17 at device 0.0 on pci2
+pcib4: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+uhci3: <Intel 82801I (ICH9) USB controller> port 0x8060-0x807f irq 20 at device 29.0 on pci0
+uhci3: LegSup = 0x3f00
+usbus4 on uhci3
+usbus4: 12Mbps Full Speed USB v1.0
+uhci4: <Intel 82801I (ICH9) USB controller> port 0x8040-0x805f irq 22 at device 29.1 on pci0
+uhci4: LegSup = 0x3f00
+usbus5 on uhci4
+usbus5: 12Mbps Full Speed USB v1.0
+uhci5: <Intel 82801I (ICH9) USB controller> port 0x8020-0x803f irq 18 at device 29.2 on pci0
+uhci5: LegSup = 0x3f00
+usbus6 on uhci5
+usbus6: 12Mbps Full Speed USB v1.0
+ehci1: <Intel 82801I (ICH9) USB 2.0 controller> mem 0xd8426800-0xd8426bff irq 20 at device 29.7 on pci0
+usbus7: EHCI version 1.0
+usbus7 on ehci1
+usbus7: 480Mbps High Speed USB v2.0
+pcib6: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci3: <ACPI PCI bus> on pcib6
+fwohci0: <1394 Open Host Controller Interface> mem 0xd0001000-0xd00017ff irq 20 at device 9.0 on pci3
+fwohci0: OHCI version 1.10 (ROM=0)
+fwohci0: No. of Isochronous channels is 4.
+fwohci0: EUI64 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+fwohci0: Phy 1394a available S400, 1 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+firewire0: <IEEE1394(FireWire) bus> on fwohci0
+fwohci0: Initiate bus reset
+fwohci0: fwohci_intr_core: BUS reset
+fwohci0: PhysicalUpperBound register is not implemented.  Physical memory access is limited to the first 4GB
+fwohci0: PhysicalUpperBound = 0x00000000
+fwohci0: fwohci_intr_core: node_id=0x00000000, SelfID Count=1, CYCLEMASTER mode
+firewire0: 1 nodes, maxhop <= 0 cable IRM irm(0)  (me) 
+firewire0: bus manager 0 
+sdhci_pci0: <RICOH R5C822 SD> mem 0xd0001900-0xd00019ff irq 22 at device 9.1 on pci3
+sdhci_pci0: 1 slot(s) allocated
+cbb0: <RF5C476 PCI-CardBus Bridge> mem 0xd0000000-0xd0000fff irq 22 at device 9.3 on pci3
+cardbus0: <CardBus bus> on cbb0
+pccard0: <16-bit PCCard bus> on cbb0
+pccard0: Obsolete code will be removed soon: PC Card to be removed.
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel ICH9M AHCI SATA controller> port 0x8118-0x811f,0x813c-0x813f,0x8110-0x8117,0x8138-0x813b,0x8000-0x801f mem 0xd8426000-0xd84267ff irq 21 at device 31.2 on pci0
+ahci0: AHCI v1.20 with 4 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+battery0: <ACPI Control Method Battery> on acpi0
+battery1: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_button0: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+Firmware Error (ACPI): AE_AML_PACKAGE_LIMIT, Index (0x000000005) is beyond end of object (length 0x2) (20201113/exoparg2-569)
+ACPI Error: Aborting method \134_TZ.GETP due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+ACPI Error: Aborting method \134_TZ.GFXZ._AC0 due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+Firmware Error (ACPI): AE_AML_PACKAGE_LIMIT, Index (0x000000006) is beyond end of object (length 0x2) (20201113/exoparg2-569)
+ACPI Error: Aborting method \134_TZ.GETP due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+ACPI Error: Aborting method \134_TZ.GFXZ._CRT due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+acpi_tz3: <Thermal Zone> on acpi0
+acpi_tz4: <Thermal Zone> on acpi0
+acpi_tz5: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+ppc1: <Parallel port> port 0x378-0x37f,0x778-0x77a irq 5 on acpi0
+ppc1: SMC-like chipset (ECP/EPP/PS2/NIBBLE) in COMPATIBLE mode
+ppc1: FIFO with 16/16/15 bytes threshold
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xcffff,0xd0000-0xd0fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <Analog Devices AD1984A HDA CODEC> at cad 0 on hdac0
+hdaa0: <Analog Devices AD1984A Audio Function Group> at nid 1 on hdacc0
+pcm0: <Analog Devices AD1984A (Analog 4ch/2.0)> at nid 18,22 and 28,21 on hdaa0
+pcm1: <Analog Devices AD1984A (Left Analog Mic)> at nid 20 on hdaa0
+hdacc1: <Lucent/Agere Systems (0x1040) HDA CODEC> at cad 1 on hdac0
+unknown: <Lucent/Agere Systems (0x1040) HDA CODEC Modem Function Group> at nid 1 on hdacc1 (no driver attached)
+ugen3.1: <Intel EHCI root HUB> at usbus3
+ugen2.1: <Intel UHCI root HUB> at usbus2
+uhub0 on usbus3
+uhub1 on usbus2
+uhub1: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+ugen1.1: <Intel UHCI root HUB> at usbus1
+ugen7.1: <Intel EHCI root HUB> at usbus7
+uhub2 on usbus1
+uhub2: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3 on usbus7
+uhub3: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus7
+ugen5.1: <Intel UHCI root HUB> at usbus5
+ugen6.1: <Intel UHCI root HUB> at usbus6
+uhub4 on usbus5
+ugen4.1: <Intel UHCI root HUB> at usbus4
+uhub4: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+uhub5 on usbus4
+uhub5: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+ugen0.1: <Intel UHCI root HUB> at usbus0
+uhub6 on usbus0
+uhub6: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+Trying to mount root from cd9660:/dev/iso9660/LIVE []...
+Root mount waiting for: CAM usbus0 usbus1 usbus2 usbus3 usbus4 usbus5 usbus6 usbus7 cbb0
+uhub7 on usbus6
+uhub7: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+Firmware Error (ACPI): AE_AML_PACKAGE_LIMIT, Index (0x000000001) is beyond end of object (length 0x1) (20201113/exoparg2-569)
+ACPI Error: Aborting method \134_TZ.PSWT due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+ACPI Error: Aborting method \134_TZ.GTTP due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+ACPI Error: Aborting method \134_TZ.GFXZ._TMP due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+Firmware Error (ACPI): AE_AML_PACKAGE_LIMIT, Index (0x000000001) is beyond end of object (length 0x1) (20201113/exoparg2-569)
+ACPI Error: Aborting method \134_TZ.PSWT due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+ACPI Error: Aborting method \134_TZ.GTTP due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+ACPI Error: Aborting method \134_TZ.DTSZ._TMP due to previous error (AE_AML_PACKAGE_LIMIT) (20201113/psparse-689)
+pccard0: <unknown card> (manufacturer=0x0000, product=0x0000, function_type=254) at function 0
+pccard0:    CIS info: RICOH, Bay8Controller
+uhub2: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+uhub4: 2 ports with 2 removable, self powered
+uhub5: 2 ports with 2 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub7: 2 ports with 2 removable, self powered
+Root mount waiting for: CAM usbus3 usbus7
+Root mount waiting for: CAM usbus3 usbus7
+ses0 at ahciem0 bus 0 scbus5 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus2 target 0 lun 0
+ada0: <ST9160411AS HP14> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 152627MB (312581808 512 byte sectors)
+ses0: pass0,ada0 in 'Slot 00', SATA Slot: scbus2 target 0
+ses0: pass1,cd0 in 'Slot 01', SATA Slot: scbus3 target 0
+uhub0: 6 ports with 6 removable, self powered
+uhub3: 6 ports with 6 removable, self powered
+ugen3.2: <HP un2400 Mobile Broadband Module HP un2400 Mobile Broadband Module> at usbus3
+cd0 at ahcich1 bus 0 scbus3 target 0 lun 0
+cd0: <HL-DT-ST DVDRAM GSA-T50L SC04> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+ugen7.2: <General UDisk> at usbus7
+umass0 on uhub3
+umass0: <General UDisk, class 0/0, rev 2.00/1.00, addr 2> on usbus7
+umass0:  SCSI over Bulk-Only; quirks = 0x4100
+umass0:6:0: Attached to scbus6
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <General UDisk 5.00> Removable Direct Access SCSI-2 device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 3841MB (7866368 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: ada0s1: FAT32 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0s1 is ntfs/Windows%207.
+GEOM_LABEL[1]: MSDOSFS: ada0s2: no FAT signature found.
+ugen0.2: <Broadcom Corp HP Integrated Module> at usbus0
+GEOM_LABEL[1]: MSDOSFS: ada0s3: no FAT signature found.
+GEOM_LABEL[1]: MSDOSFS: ada0s4: FAT12/16 volume not valid.
+GEOM_LABEL[1]: ISO9660 file system detected on da0.
+GEOM_LABEL[1]: Label for provider da0 is iso9660/LIVE.
+GEOM_LABEL[1]: MSDOSFS: da0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da0 is diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: ada0s4a: FAT12/16 volume not valid.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX FAT32 volume not valid.
+GEOM_LABEL[1]: Label Windows%207(ntfs/Windows%207) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label for provider da0p2 is msdosfs/EFISYS.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXX FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp1).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp1: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX).
+Root mount waiting for: usbus3
+ugen3.3: <vendor 0x04b4 product 0x6560> at usbus3
+uhub8 on uhub0
+uhub8: <vendor 0x04b4 product 0x6560, class 9/0, rev 2.00/0.0b, addr 3> on usbus3
+uhub8: MTT enabled
+ugen1.2: <vendor 0x08ff Fingerprint Sensor> at usbus1
+uhub8: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus3
+ugen3.4: <Chicony Electronics Co., Ltd. CKA7216> at usbus3
+Root mount waiting for: usbus3
+ugen3.5: <vendor 0x04b4 product 0x6560> at usbus3
+uhub9 on uhub0
+uhub9: <vendor 0x04b4 product 0x6560, class 9/0, rev 2.00/0.0b, addr 5> on usbus3
+uhub9: MTT enabled
+Root mount waiting for: usbus3
+uhub9: 4 ports with 4 removable, self powered
+mountroot: waiting for device /dev/iso9660/LIVE...
+GEOM_LABEL[1]: MSDOSFS: md0: no FAT signature found.
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: Label for provider md0.uzip is ufsid/XXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: MSDOSFS: md0.uzip: no FAT signature found.
+random: unblocking device.
+[drm] radeon kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+VT: Replacing driver "vbefb" with new "dummy".
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] initializing kernel modesetting (RV620 0x1002:0x95C4 0x103C:0x30DC 0x00).
+[drm ERROR :radeon_atombios_init] Unable to find PCI I/O BAR; using MMIO for ATOM IIO
+ATOM BIOS: HP
+drmn0: VRAM: 256M 0x0000000000000000 - 0x000000000FFFFFFF (256M used)
+drmn0: GTT: 512M 0x0000000010000000 - 0x000000002FFFFFFF
+Successfully added WC MTRR for [0xc0000000-0xcfffffff]: 0; 
+[drm] Detected VRAM RAM=256M, BAR=256M
+[drm] RAM width 64bits DDR
+[TTM] Zone  kernel: Available graphics memory: 2028130 KiB
+[TTM] Initializing pool allocator
+[drm] radeon: 256M of VRAM memory ready
+[drm] radeon: 512M of GTT memory ready.
+[drm] Loading RV620 Microcode
+drmn0: successfully loaded firmware image 'radeon/RV620_pfp.bin'
+drmn0: successfully loaded firmware image 'radeon/RV620_me.bin'
+drmn0: successfully loaded firmware image 'radeon/R600_rlc.bin'
+[drm] radeon: power management initialized
+drmn0: successfully loaded firmware image 'radeon/R600_uvd.bin'
+[drm] GART: num cpu pages 131072, num gpu pages 131072
+[drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+[drm] PCIE GART of 512M enabled (table at 0x0000000000142000).
+drmn0: WB enabled
+drmn0: fence driver on ring 0 use gpu addr 0x0000000010000c00 and cpu addr 0x0xfffff80005482c00
+drmn0: fence driver on ring 5 use gpu addr 0x00000000000521d0 and cpu addr 0x0xfffff800c00521d0
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+drmn0: radeon: MSI limited to 32-bit
+drmn0: radeon: using MSI.
+[drm] radeon: irq initialized.
+[drm] ring test on 0 succeeded in 1 usecs
+[drm] ring test on 5 succeeded in 1 usecs
+[drm] UVD initialized successfully.
+[drm] ib test on ring 0 succeeded in 0 usecs
+[drm] ib test on ring 5 succeeded
+[drm] Connector LVDS-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.LVDS-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector VGA-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.VGA-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DVI-D-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-D-1
+[drm]   - kern.vt.fb.default_mode
+[drm] radeon atom DIG backlight initialized
+[drm] Radeon Display Connectors
+[drm] Connector 0:
+[drm]   LVDS-1
+[drm]   Encoders:
+[drm]     LCD1: INTERNAL_KLDSCP_LVTMA
+[drm] Connector 1:
+[drm]   VGA-1
+[drm]   DDC: 0x7e40 0x7e40 0x7e44 0x7e44 0x7e48 0x7e48 0x7e4c 0x7e4c
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[drm] Connector 2:
+[drm]   DVI-D-1
+[drm]   HPD1
+[drm]   DDC: 0x7e60 0x7e60 0x7e64 0x7e64 0x7e68 0x7e68 0x7e6c 0x7e6c
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY
+[drm] fb mappable at 0xC0243000
+[drm] vram apper at 0xC0000000
+[drm] size 5324800
+[drm] fb depth is 24
+[drm]    pitch is 5888
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 14.0.
+VT: Replacing driver "dummy" with new "fb".
+start FB_INFO:
+type=11 height=900 width=1440 depth=32
+cmsize=16 size=5324800
+pbase=0xc0243000 vbase=0xfffff800c0243000
+name=drmn0 flags=0x0 stride=5888 bpp=32
+cmap[0]=bcbcbc cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=ffffff
+end FB_INFO
+drmn0: fb0: radeondrmfb frame buffer device
+[drm] Initialized radeon 2.50.0 20080528 for drmn0 on minor 0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_video0: <ACPI video extension> on vgapci0
+Cuse v0.1.36 @ /dev/cuse
+lo0: link state changed to UP
+ubt0 on uhub6
+ubt0: <Broadcom Corp HP Integrated Module, class 224/1, rev 2.00/1.00, addr 2> on usbus0
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label ntfs/Windows%207 removed.
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+wlan0: Ethernet address: ...
+wlan0: Ethernet address: ...
+iwn0: iwn_read_firmware: ucode rev=0x08530501
+iwn0: iwn_read_firmware: ucode rev=0x08530501
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+ichwd0: <Intel ICH9M-E watchdog timer> on isa0
+iwn0: scan timeout
+iwn0: iwn_read_firmware: ucode rev=0x08530501
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP

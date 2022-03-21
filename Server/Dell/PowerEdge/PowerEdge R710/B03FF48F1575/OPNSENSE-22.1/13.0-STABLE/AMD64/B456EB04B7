@@ -1,0 +1,569 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248053-232cb14f501 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 640x480
+CPU: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz (1596.07-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206c2  Family=0x6  Model=0x2c  Stepping=2
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x29ee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,POPCNT,AESNI>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 103079215104 (98304 MB)
+avail memory = 100302106624 (95655 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 16 CPUs
+FreeBSD/SMP: 2 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic1: MADT APIC ID 1 != hw id 0
+ioapic0 <Version 2.0> irqs 0-23
+ioapic1 <Version 2.0> irqs 32-55
+Launching APs: 1 3 2 15 5 6 13 8 14 11 12 9 7 4 10
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <DELL PE_SC3>
+acpi0: Power Button (fixed)
+apei0: <ACPI Platform Error Interface> on acpi0
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+bce0: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xce000000-0xcfffffff irq 36 at device 0.0 on pci1
+miibus0: <MII bus> on bce0
+brgphy0: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce0: Using defaults for TSO: 65518/35/2048
+bce0: Ethernet address: ...
+bce0: ASIC (0x57092003); 
+bce0: link state changed to DOWN
+Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce1: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xd0000000-0xd1ffffff irq 48 at device 0.1 on pci1
+miibus1: <MII bus> on bce1
+brgphy1: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce1: Using defaults for TSO: 65518/35/2048
+bce1: Ethernet address: ...
+bce1: ASIC (0x57092003); 
+bce1: link state changed to DOWN
+Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+pcib2: <ACPI PCI-PCI bridge> at device 3.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bce2: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xd2000000-0xd3ffffff irq 32 at device 0.0 on pci2
+miibus2: <MII bus> on bce2
+brgphy2: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus2
+brgphy2:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce2: Using defaults for TSO: 65518/35/2048
+bce2: Ethernet address: ...
+bce2: ASIC (0x57092003); 
+bce2: link state changed to DOWN
+Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce3: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xd4000000-0xd5ffffff irq 42 at device 0.1 on pci2
+miibus3: <MII bus> on bce3
+brgphy3: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus3
+brgphy3:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce3: Using defaults for TSO: 65518/35/2048
+bce3: Ethernet address: ...
+bce3: ASIC (0x57092003); 
+bce3: link state changed to DOWN
+Rev (C0); Bus (PCIe x4, 2.5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI|MFW); MFW (NCSI 2.0.13)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+pcib3: <ACPI PCI-PCI bridge> at device 4.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+mfi0: <Dell PERC H700 Integrated> port 0xfc00-0xfcff mem 0xdf1bc000-0xdf1bffff,0xdf1c0000-0xdf1fffff irq 33 at device 0.0 on pci3
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: FW MaxCmds = 1008, limiting to 128
+mfi0: 11772 (696613895s/0x0020/info) - Shutdown command received from host
+mfi0: 11773 (boot + 33s/0x0020/info) - Firmware initialization started (PCI ID 0079/1000/1f17/1028)
+mfi0: 11774 (boot + 33s/0x0020/info) - Firmware version 2.100.03-4651
+mfi0: 11775 (boot + 35s/0x0008/info) - Battery Present
+mfi0: 11776 (boot + 35s/0x0020/info) - Package version 12.10.7-0001
+mfi0: 11777 (boot + 35s/0x0020/info) - Board Revision A00
+mfi0: 11778 (boot + 71s/0x0002/info) - Unexpected sense: Encl PD 20 Path 5948f090e277a500, CDB: 1c 01 00 00 20 00, Sense: 6/29/00
+mfi0: 11779 (boot + 73s/0x0004/info) - Enclosure PD 20(c None/p0) communication restored
+mfi0: 11780 (boot + 73s/0x0002/info) - Inserted: Encl PD 20
+pcib4: <ACPI PCI-PCI bridge> at device 5.0 on pci0
+mfi0: 11781 (boot + 73s/0x0002/info) - Inserted: PD 20(c None/p0) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=5948f090e277pci4: <ACPI PCI bus>a500,0000000000000000
+mfi0: 11782 (boot + 73s/0x0002/info) - Inserted: PD 00(e0x20/s0)
+ on pcib4
+mfi0: 11783 (boot + 73s/0x0002/info) - Inserted: PD 00(e0x20/s0) Info: enclPd=20, scsiType=0, portMap=05, sasAddr=5000c50062a7d5c5,0000000000000000
+mfi0: 11784 (boot + 73s/0x0002/WARN) - PD 00(e0x20/s0) is not a certified drive
+mfi0: 11785 (boot + 73s/0x0002/info) - Inserted: PD 01(e0x20/s1)
+mfi0: 11786 (boot + 73s/0x0002/info) - Inserted: PD 01(e0x20/s1) Info: enclPd=20, scsiType=0, portMap=04, sasAddr=5000c50062896pcib5: <ACPI PCI-PCI bridge>885,0000000000000000
+mfi0: 11787 (boot + 73s/0x0002/WARN) - PD 01(e0x20/s1) is not a certified drive
+mfi0: 11788 (boot + 73s/0x0002/info) - Inserted: PD 02(e0x20/s2)
+ at device 6.0 on pci0
+mfi0: 11789 (boot + 73s/0x0002/info) - Inserted: PD 02(e0x20/s2) Info: enclPd=20, scsiType=0, portMap=03, sasAddr=5000c50058d4cpci5: <ACPI PCI bus>0c9,0000000000000000
+mfi0: 11790 (boot + 73s/0x0002/WARN) - PD 02(e0x20/s2) is not a certified drive
+mfi0: 11791 (boot + 73s/0x0002/info) - Inserted: PD 03(e0x20/s3)
+ on pcib5
+mfi0: 11792 (boot + 73s/0x0002/info) - Inserted: PD 03(e0x20/s3) Info: enclPd=20, scsiType=0, portMap=02, sasAddr=5000c50084165cc1,0000000000000000
+mfi0: 11793 (boot + 73s/0x0002/WARN) - PD 03(e0x20/s3) is not a certified drive
+mfi0: 11794 (boot + 73s/0x0002/info) - Inserted: PD 04(e0x20/s4)
+mfi0: 11795 (boot + 73s/0x0002/info) - Inserted: PD 04(e0x20/s4) Info: enclPd=20, scsiType=0, portMap=01, sasAddr=5000c500848b6ae1,0000000000000000
+mfi0: 11796 (boot + 73s/0x0002/WARN) - PD 04(e0x20/s4) is not a certified drive
+mfi0: 11797 (boot + 73s/0x0002/info) - Inserted: PD 05(e0x20/s5)
+pcib6: <PCI-PCI bridge> at device 0.0 on pci5
+mfi0: 11798 (boot + 73s/0x0002/info) - Inserted: PD 05(e0x20/s5) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000c50057fdfpci6: <PCI bus>429,0000000000000000
+mfi0: 11799 (boot + 73s/0x0002/WARN) - PD 05(e0x20/s5) is not a certified drive
+mfi0: 11800 (boot + 74s/0x0042/info) - Dedicated Hot Spare created on PD 04(e0x20/s4) (ded,rev,ea,ac=1)
+mfi0: 11801 (boot + 74s/0x0042/info) - Dedicated Hot Spare created on PD 05(e0x20/s5) (ded,rev,ea,ac=1)
+ on pcib6
+mfi0: 11802 (696614060s/0x0020/info) - Time established as 01/27/22 15:54:20; (75 seconds since power on)
+mfi0: 11803 (696614085s/0x0008/info) - Battery temperature is normal
+mfi0: 11804 (696614085s/0x0008/FATAL) - Battery has failed and cannot support data retention. Please replace the battery
+mfi0: 11805 (696614085s/0x0008/WARN) - BBU disabled; changing WB virtual disks to WT, Forced WB VDs are not affected
+mfi0: 11806 (696614085s/0x0001/info) - Policy change on VD 00/0 to [ID=00,dcp=0d,ccp=0c,ap=0,dc=0,dbgi=0,S=0|0] from [ID=00,dcp=0d,ccp=0d,ap=0,dc=0,dbgi=0,S=0|0]
+mfi0: 11807 (696614145s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 5000c50062a7d5c5, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 11808 (696614145s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 5000c50062896885, CDB: 12 01 dc 01 22 00, Sense: pcib7: <PCI-PCI bridge>5/24/00
+mfi0: 11809 (696614145s/0x0002/info) - Unexpected sense: PD 02(e0x20/s2) Path 5000c50058d4c0c9, CDB: 12 01 dc 01 22 00, Sense: 4/cf/00
+mfi0: 11810 (696614145s/0x0002/info) - Unexpected sense: PD 03(e0x20/s3) Path 5000c50084165cc1, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+ at device 2.0 on pci6
+pci7: <PCI bus>mfi0: 11811 (696614145s/0x0002/info) - Unexpected sense: PD 04(e0x20/s4) Path 5000c500848b6ae1, CDB: 12 01 dc 01 22 00, Sense: 4/cf/00
+mfi0: 11812 (696614145s/0x0002/info) - Unexpected sense: PD 05(e0x20/s5) Path 5000c50057fdf429, CDB: 12 01 dc 01 22 00, Sense:  on pcib7
+4/cf/00
+mfi0: 11813 (696614186s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 5000c50062a7d5c5, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 11814 (696614186s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 5000c50062896885, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 11815 (696614186s/0x0002/info) - Unexpected sense: PD 02(e0x20/s2) Path 5000c50058d4c0c9, CDB: 12 01 dc 01 22 00, Sense: 4/cf/00
+mfi0: 11816 (696614186s/0x0002/info) - Unexpected sense: PD 03(e0x20/s3) Path 5000c50084165cc1, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+bce4: <QLogic NetXtreme II BCM5709 1000Base-T (C0)>mfi0: 11817 (696614187s/0x0002/info) - Unexpected sense: PD 04(e0x20/s4) Path 5000c500848b6ae1, CDB: 12 01 dc 01 22 00, Sense: 4/cf/00
+mfi0: 11818 (696614187s/0x0002/info) - Unexpected sense: PD 05(e0x20/s5) Path 5000c50057fdf429, CDB: 12 01 dc 01 22 00, Sense: 4/cf/00
+mfi0: 11819 (696614196s/0x0002/info) - Unexpected sense: PD 00(e0x20/s0) Path 5000c50062a7d5c5, CDB: 12 01 dc 01 22 00, Sense:  mem 0xda000000-0xdbffffff5/24/00
+mfi0: 11820 (696614196s/0x0002/info) - Unexpected sense: PD 01(e0x20/s1) Path 5000c50062896885, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 11821 (696614196s/0x0002/info) - Unexpected sense: PD 02(e0x20/s2) Path 5000c50058d4c0c9, CDB: 12 01 dc 01 22 00, Sense:  irq 4/cf/00
+mfi0: 11822 (696614196s/0x0002/info) - Unexpected sense: PD 03(e0x20/s3) Path 5000c50084165cc1, CDB: 12 01 dc 01 22 00, Sense: 5/24/00
+mfi0: 11823 (696614196s/0x0002/info) - Unexpected sense: PD 04(e0x20/s4) Path 5000c500848b6ae1, CDB: 12 01 dc 01 22 00, Sense: 4/cf/00
+45 at device 0.0 on pci7
+mfi0: 11824 (696614196s/0x0002/info) - Unexpected sense: PD 05(e0x20/s5) Path 5000c50057fdf429, CDB: 12 01 dc 01 22 00, Sense: 4/cf/00
+miibus4: <MII bus> on bce4
+brgphy4: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus4
+brgphy4:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce4: Using defaults for TSO: 65518/35/2048
+bce4: Ethernet address: ...
+bce4: ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce5: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xdc000000-0xddffffff irq 47 at device 0.1 on pci7
+miibus5: <MII bus> on bce5
+brgphy5: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus5
+brgphy5:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce5: Using defaults for TSO: 65518/35/2048
+bce5: Ethernet address: ...
+bce5: ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+pcib8: <PCI-PCI bridge> at device 4.0 on pci6
+pci8: <PCI bus> on pcib8
+bce6: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xd6000000-0xd7ffffff irq 35 at device 0.0 on pci8
+miibus6: <MII bus> on bce6
+brgphy6: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus6
+brgphy6:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce6: Using defaults for TSO: 65518/35/2048
+bce6: Ethernet address: ...
+bce6: ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+bce7: <QLogic NetXtreme II BCM5709 1000Base-T (C0)> mem 0xd8000000-0xd9ffffff irq 46 at device 0.1 on pci8
+miibus7: <MII bus> on bce7
+brgphy7: <BCM5709 10/100/1000baseT PHY> PHY 1 on miibus7
+brgphy7:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bce7: Using defaults for TSO: 65518/35/2048
+bce7: Ethernet address: ...
+bce7: ASIC (0x57092003); Rev (C0); Bus (PCIe x4, 5Gbps); B/C (7.10.0); Bufs (RX:2;TX:2;PG:8); Flags (SPLT|MSI)
+Coal (RX:6,6,18,18; TX:20,20,80,80)
+pcib9: <ACPI PCI-PCI bridge> at device 7.0 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pci9: <network> at device 0.0 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 9.0 on pci0
+pci10: <ACPI PCI bus> on pcib10
+pci0: <base peripheral, interrupt controller> at device 20.0 (no driver attached)
+pci0: <base peripheral, interrupt controller> at device 20.1 (no driver attached)
+pci0: <base peripheral, interrupt controller> at device 20.2 (no driver attached)
+uhci0: <Intel 82801I (ICH9) USB controller> port 0xec40-0xec5f irq 17 at device 26.0 on pci0
+uhci0: LegSup = 0x2f00
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 82801I (ICH9) USB controller> port 0xec60-0xec7f irq 18 at device 26.1 on pci0
+uhci1: LegSup = 0x2f00
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 82801I (ICH9) USB 2.0 controller> mem 0xdf0fe000-0xdf0fe3ff irq 19 at device 26.7 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+usbus2: 480Mbps High Speed USB v2.0
+uhci2: <Intel 82801I (ICH9) USB controller> port 0xec80-0xec9f irq 21 at device 29.0 on pci0
+uhci2: LegSup = 0x2f00
+usbus3 on uhci2
+usbus3: 12Mbps Full Speed USB v1.0
+uhci3: <Intel 82801I (ICH9) USB controller> port 0xeca0-0xecbf irq 20 at device 29.1 on pci0
+uhci3: LegSup = 0x2f00
+usbus4 on uhci3
+usbus4: 12Mbps Full Speed USB v1.0
+ehci1: <Intel 82801I (ICH9) USB 2.0 controller> mem 0xdf0ff000-0xdf0ff3ff irq 21 at device 29.7 on pci0
+usbus5: EHCI version 1.0
+usbus5 on ehci1
+usbus5: 480Mbps High Speed USB v2.0
+pcib11: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci11: <ACPI PCI bus> on pcib11
+vgapci0: <VGA-compatible display> mem 0xcd800000-0xcdffffff,0xde7fc000-0xde7fffff,0xde800000-0xdeffffff irq 19 at device 3.0 on pci11
+vgapci0: Boot video device
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci0: <Intel ICH9 SATA300 controller> port 0xec10-0xec17,0xec08-0xec0b,0xec18-0xec1f,0xec0c-0xec0f,0xec20-0xec2f,0xec30-0xec3f irq 23 at device 31.2 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xc8fff,0xc9000-0xcbfff,0xcc000-0xd1fff,0xec000-0xeffff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est3 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est4 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est5 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est6 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est7 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est8 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est9 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est10 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est11 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est12 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est13 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est14 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est15 attach returned 6
+Timecounter "TSC" frequency 1596000933 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen0.1: <Intel UHCI root HUB> at usbus0
+ugen5.1: <Intel EHCI root HUB> at usbus5
+mfid0 on mfi0
+mfid0: 5721600MB (11717836800 sectors) RAID volume 'OPNsense' is optimal
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+ugen4.1: <Intel UHCI root HUB> at usbus4
+uhub0 on usbus4
+uhub0: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub1 on usbus5
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub2 on usbus0
+uhub2: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+ugen3.1: <Intel UHCI root HUB> at usbus3
+ugen1.1: <Intel UHCI root HUB> at usbus1
+uhub3 on usbus3
+uhub3: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub4 on usbus1
+uhub4: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+ugen2.1: <Intel EHCI root HUB> at usbus2
+uhub5 on usbus2
+uhub5: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub4: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub3: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+cd0 at ata2 bus 0 scbus0 target 0 lun 0
+cd0: <TEAC DVD-ROM DV-28SW R.2A> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub1: 4 ports with 4 removable, self powered
+uhub5: 4 ports with 4 removable, self powered
+ugen2.2: <vendor 0x0424 product 0x2514> at usbus2
+uhub6 on uhub5
+uhub6: <vendor 0x0424 product 0x2514, class 9/0, rev 2.00/0.00, addr 2> on usbus2
+uhub6: MTT enabled
+uhub6: 3 ports with 3 removable, self powered
+ugen3.2: <Avocent USB Composite Device-0> at usbus3
+ukbd0 on uhub3
+ukbd0: <Keyboard> on usbus3
+kbd2 at ukbd0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+ums0 on uhub3
+ums0: <Mouse> on usbus3
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+bce1: Gigabit link up!
+bce1: link state changed to UP
+bce1: Gigabit link up!
+bce1: Gigabit link up!
+bce0: Gigabit link up!
+bce0: link state changed to UP
+bce0: Gigabit link up!
+pflog0: permanently promiscuous mode enabled
+bce0: Gigabit link up!
+195.199790 [1139] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+195.199830 [1044] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+bce0: permanently promiscuous mode enabled
+195.199986 [1139] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+195.373213 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+196.413958 [1139] generic_netmap_attach     Emulated adapter for bce5 created (prev was NULL)
+196.413995 [1044] generic_netmap_dtor       Emulated netmap adapter for bce5 destroyed
+196.414040 [1139] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+196.414083 [1044] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+196.414163 [1139] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+bce5: permanently promiscuous mode enabled
+196.414203 [1044] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+196.414247 [1139] generic_netmap_attach     Emulated adapter for bce5 created (prev was NULL)
+196.414489 [ 320] generic_netmap_register   Emulated adapter for bce5 activated
+196.416095 [1139] generic_netmap_attach     Emulated adapter for bce7 created (prev was NULL)
+bce3: permanently promiscuous mode enabled
+196.416135 [1044] generic_netmap_dtor       Emulated netmap adapter for bce7 destroyed
+196.416190 [1139] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+196.416498 [ 320] generic_netmap_register   Emulated adapter for bce3 activated
+196.418126 [1139] generic_netmap_attach     Emulated adapter for bce6 created (prev was NULL)
+196.418164 [1044] generic_netmap_dtor       Emulated netmap adapter for bce6 destroyed
+bce6: permanently promiscuous mode enabled
+196.418355 [1139] generic_netmap_attach     Emulated adapter for bce6 created (prev was NULL)
+bce7: permanently promiscuous mode enabled
+196.418675 [ 320] generic_netmap_register   Emulated adapter for bce6 activated
+196.420292 [1139] generic_netmap_attach     Emulated adapter for bce7 created (prev was NULL)
+196.420605 [ 320] generic_netmap_register   Emulated adapter for bce7 activated
+bce2: permanently promiscuous mode enabled
+196.422323 [1139] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+196.422620 [ 320] generic_netmap_register   Emulated adapter for bce2 activated
+196.490950 [1139] generic_netmap_attach     Emulated adapter for bce4 created (prev was NULL)
+196.490985 [1044] generic_netmap_dtor       Emulated netmap adapter for bce4 destroyed
+bce4: permanently promiscuous mode enabled
+196.491119 [1139] generic_netmap_attach     Emulated adapter for bce4 created (prev was NULL)
+196.491387 [ 320] generic_netmap_register   Emulated adapter for bce4 activated
+455.271290 [1139] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+455.271329 [1044] generic_netmap_dtor       Emulated netmap adapter for bce1 destroyed
+bce1: permanently promiscuous mode enabled
+455.274598 [1139] generic_netmap_attach     Emulated adapter for bce1 created (prev was NULL)
+455.274744 [ 320] generic_netmap_register   Emulated adapter for bce1 activated
+819.750059 [ 295] generic_netmap_unregister Emulated adapter for bce4 deactivated
+819.750179 [1044] generic_netmap_dtor       Emulated netmap adapter for bce4 destroyed
+820.016017 [ 295] generic_netmap_unregister Emulated adapter for bce0 deactivated
+820.016151 [1044] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+820.189185 [ 295] generic_netmap_unregister Emulated adapter for bce3 deactivated
+820.189311 [1044] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+820.795191 [ 295] generic_netmap_unregister Emulated adapter for bce5 deactivated
+820.795318 [1044] generic_netmap_dtor       Emulated netmap adapter for bce5 destroyed
+820.795714 [ 295] generic_netmap_unregister Emulated adapter for bce2 deactivated
+820.795825 [1044] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+820.846991 [ 295] generic_netmap_unregister Emulated adapter for bce7 deactivated
+820.847161 [1044] generic_netmap_dtor       Emulated netmap adapter for bce7 destroyed
+820.847666 [ 295] generic_netmap_unregister Emulated adapter for bce6 deactivated
+820.847812 [1044] generic_netmap_dtor       Emulated netmap adapter for bce6 destroyed
+831.003478 [1139] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+831.003519 [1044] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+831.003662 [1139] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+831.003867 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+832.256169 [1139] generic_netmap_attach     Emulated adapter for bce6 created (prev was NULL)
+832.256221 [1044] generic_netmap_dtor       Emulated netmap adapter for bce6 destroyed
+832.256295 [1139] generic_netmap_attach     Emulated adapter for bce4 created (prev was NULL)
+832.256335 [1044] generic_netmap_dtor       Emulated netmap adapter for bce4 destroyed
+832.256418 [1139] generic_netmap_attach     Emulated adapter for bce7 created (prev was NULL)
+832.256457 [1044] generic_netmap_dtor       Emulated netmap adapter for bce7 destroyed
+832.256540 [1139] generic_netmap_attach     Emulated adapter for bce4 created (prev was NULL)
+832.256849 [ 320] generic_netmap_register   Emulated adapter for bce4 activated
+832.258436 [1139] generic_netmap_attach     Emulated adapter for bce6 created (prev was NULL)
+832.258720 [ 320] generic_netmap_register   Emulated adapter for bce6 activated
+832.260392 [1139] generic_netmap_attach     Emulated adapter for bce7 created (prev was NULL)
+832.260678 [ 320] generic_netmap_register   Emulated adapter for bce7 activated
+832.281392 [1139] generic_netmap_attach     Emulated adapter for bce5 created (prev was NULL)
+832.281436 [1044] generic_netmap_dtor       Emulated netmap adapter for bce5 destroyed
+832.281521 [1139] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+832.281561 [1044] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+832.281612 [1139] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+832.281652 [1044] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+832.281721 [1139] generic_netmap_attach     Emulated adapter for bce5 created (prev was NULL)
+832.282022 [ 320] generic_netmap_register   Emulated adapter for bce5 activated
+832.283659 [1139] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+832.283953 [ 320] generic_netmap_register   Emulated adapter for bce3 activated
+832.285570 [1139] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+832.285879 [ 320] generic_netmap_register   Emulated adapter for bce2 activated
+201.737656 [ 295] generic_netmap_unregister Emulated adapter for bce4 deactivated
+201.737837 [1044] generic_netmap_dtor       Emulated netmap adapter for bce4 destroyed
+201.775849 [ 295] generic_netmap_unregister Emulated adapter for bce5 deactivated
+201.775988 [1044] generic_netmap_dtor       Emulated netmap adapter for bce5 destroyed
+201.786933 [ 295] generic_netmap_unregister Emulated adapter for bce0 deactivated
+201.787066 [1044] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+201.845658 [ 295] generic_netmap_unregister Emulated adapter for bce2 deactivated
+201.845791 [1044] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+201.990830 [ 295] generic_netmap_unregister Emulated adapter for bce7 deactivated
+201.990968 [1044] generic_netmap_dtor       Emulated netmap adapter for bce7 destroyed
+202.330209 [ 295] generic_netmap_unregister Emulated adapter for bce6 deactivated
+202.330342 [1044] generic_netmap_dtor       Emulated netmap adapter for bce6 destroyed
+202.665045 [ 295] generic_netmap_unregister Emulated adapter for bce3 deactivated
+202.665177 [1044] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+236.973465 [1139] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+236.973503 [1044] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+236.973645 [1139] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+236.973850 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+238.175000 [1139] generic_netmap_attach     Emulated adapter for bce7 created (prev was NULL)
+238.175051 [1044] generic_netmap_dtor       Emulated netmap adapter for bce7 destroyed
+238.175175 [1139] generic_netmap_attach     Emulated adapter for bce6 created (prev was NULL)
+238.175213 [1044] generic_netmap_dtor       Emulated netmap adapter for bce6 destroyed
+238.175314 [1139] generic_netmap_attach     Emulated adapter for bce7 created (prev was NULL)
+238.175574 [ 320] generic_netmap_register   Emulated adapter for bce7 activated
+238.177218 [1139] generic_netmap_attach     Emulated adapter for bce6 created (prev was NULL)
+238.177468 [ 320] generic_netmap_register   Emulated adapter for bce6 activated
+238.215950 [1139] generic_netmap_attach     Emulated adapter for bce5 created (prev was NULL)
+238.222496 [1044] generic_netmap_dtor       Emulated netmap adapter for bce5 destroyed
+238.222535 [1139] generic_netmap_attach     Emulated adapter for bce4 created (prev was NULL)
+238.222572 [1044] generic_netmap_dtor       Emulated netmap adapter for bce4 destroyed
+238.222627 [1139] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+238.222667 [1044] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+238.222705 [1139] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+238.222743 [1044] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+238.222872 [1139] generic_netmap_attach     Emulated adapter for bce4 created (prev was NULL)
+238.223182 [ 320] generic_netmap_register   Emulated adapter for bce4 activated
+238.224775 [1139] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+238.225082 [ 320] generic_netmap_register   Emulated adapter for bce3 activated
+238.226713 [1139] generic_netmap_attach     Emulated adapter for bce5 created (prev was NULL)
+238.227041 [ 320] generic_netmap_register   Emulated adapter for bce5 activated
+238.228707 [1139] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+238.229005 [ 320] generic_netmap_register   Emulated adapter for bce2 activated
+106.750178 [ 295] generic_netmap_unregister Emulated adapter for bce2 deactivated
+106.750312 [1044] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+106.855558 [ 295] generic_netmap_unregister Emulated adapter for bce3 deactivated
+106.855693 [1044] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+107.083995 [ 295] generic_netmap_unregister Emulated adapter for bce0 deactivated
+107.084135 [1044] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+107.154343 [ 295] generic_netmap_unregister Emulated adapter for bce5 deactivated
+107.154516 [1044] generic_netmap_dtor       Emulated netmap adapter for bce5 destroyed
+107.181816 [ 295] generic_netmap_unregister Emulated adapter for bce4 deactivated
+107.181940 [1044] generic_netmap_dtor       Emulated netmap adapter for bce4 destroyed
+107.447570 [ 295] generic_netmap_unregister Emulated adapter for bce6 deactivated
+107.447758 [1044] generic_netmap_dtor       Emulated netmap adapter for bce6 destroyed
+107.496357 [ 295] generic_netmap_unregister Emulated adapter for bce7 deactivated
+107.496485 [1044] generic_netmap_dtor       Emulated netmap adapter for bce7 destroyed
+119.106263 [1139] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+119.106302 [1044] generic_netmap_dtor       Emulated netmap adapter for bce0 destroyed
+119.106460 [1139] generic_netmap_attach     Emulated adapter for bce0 created (prev was NULL)
+119.106666 [ 320] generic_netmap_register   Emulated adapter for bce0 activated
+120.266393 [1139] generic_netmap_attach     Emulated adapter for bce5 created (prev was NULL)
+120.266429 [1044] generic_netmap_dtor       Emulated netmap adapter for bce5 destroyed
+120.266483 [1139] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+120.266523 [1044] generic_netmap_dtor       Emulated netmap adapter for bce3 destroyed
+120.266564 [1139] generic_netmap_attach     Emulated adapter for bce5 created (prev was NULL)
+120.266768 [ 320] generic_netmap_register   Emulated adapter for bce5 activated
+120.268390 [1139] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+120.268429 [1044] generic_netmap_dtor       Emulated netmap adapter for bce2 destroyed
+120.268574 [1139] generic_netmap_attach     Emulated adapter for bce3 created (prev was NULL)
+120.268852 [ 320] generic_netmap_register   Emulated adapter for bce3 activated
+120.270455 [1139] generic_netmap_attach     Emulated adapter for bce2 created (prev was NULL)
+120.270760 [ 320] generic_netmap_register   Emulated adapter for bce2 activated
+120.288973 [1139] generic_netmap_attach     Emulated adapter for bce6 created (prev was NULL)
+120.289020 [1044] generic_netmap_dtor       Emulated netmap adapter for bce6 destroyed
+120.289100 [1139] generic_netmap_attach     Emulated adapter for bce4 created (prev was NULL)
+120.289141 [1044] generic_netmap_dtor       Emulated netmap adapter for bce4 destroyed
+120.289207 [1139] generic_netmap_attach     Emulated adapter for bce6 created (prev was NULL)
+120.289521 [ 320] generic_netmap_register   Emulated adapter for bce6 activated
+120.291136 [1139] generic_netmap_attach     Emulated adapter for bce7 created (prev was NULL)
+120.291174 [1044] generic_netmap_dtor       Emulated netmap adapter for bce7 destroyed
+120.291228 [1139] generic_netmap_attach     Emulated adapter for bce4 created (prev was NULL)
+120.291527 [ 320] generic_netmap_register   Emulated adapter for bce4 activated
+120.293236 [1139] generic_netmap_attach     Emulated adapter for bce7 created (prev was NULL)
+120.293527 [ 320] generic_netmap_register   Emulated adapter for bce7 activated
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est3 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est4 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est5 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est6 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est7 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est8 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est9 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est10 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est11 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est12 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est13 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est14 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr c
+device_attach: est15 attach returned 6

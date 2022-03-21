@@ -1,0 +1,196 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p21-HBSD #0  1c99b63a2ba(stable/21.7)-dirty: Wed Nov 10 11:17:14 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 800x600
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Atom(TM) CPU C3758 @ 2.20GHz (2200.07-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506f1  Family=0x6  Model=0x5f  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x4ff8ebbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,CX16,xTPR,PDCM,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2294e283<FSGSBASE,TSCADJ,SMEP,ERMS,NFPUSG,MPX,PQE,RDSEED,SMAP,CLFLUSHOPT,PROCTRACE,SHA>
+  Structured Extended Features3=0xac000400<MD_CLEAR,IBPB,STIBP,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x69<RDCL_NO,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16548200448 (15781 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  TIANO   >
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 8 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+Launching APs: 5 1 3 2 7 4 6
+Timecounter "TSC-low" frequency 1100035736 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812947f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000052 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SMCI--MB> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 6.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <processor> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> mem 0xdf740000-0xdf75ffff at device 9.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network, ethernet> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> mem 0xdf720000-0xdf73ffff at device 16.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+nvme0: <Generic NVMe Device> mem 0xdf500000-0xdf503fff at device 0.0 on pci3
+pcib4: <ACPI PCI-PCI bridge> mem 0xdf700000-0xdf71ffff at device 17.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> at device 0.0 on pci4
+pci5: <ACPI PCI bus> on pcib5
+vgapci0: <VGA-compatible display> port 0xd000-0xd07f mem 0xde000000-0xdeffffff,0xdf000000-0xdf01ffff at device 0.0 on pci5
+ahci0: <Intel Denverton AHCI SATA controller> port 0xe050-0xe057,0xe040-0xe043,0xe020-0xe03f mem 0xdf774000-0xdf775fff,0xdf779000-0xdf7790ff,0xdf778000-0xdf7787ff at device 20.0 on pci0
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier not supported
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahcich6: <AHCI channel> at channel 6 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+xhci0: <Intel Denverton USB 3.0 controller> mem 0xdf760000-0xdf76ffff at device 21.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib6: <ACPI PCI-PCI bridge> at device 22.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+ix0: <Intel(R) X553 (1GbE)> mem 0xdd800000-0xdd9fffff,0xdda04000-0xdda07fff at device 0.0 on pci6
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 8 RX queues 8 TX queues
+ix0: Using MSI-X interrupts with 9 vectors
+ix0: allocated for 8 queues
+ix0: allocated for 8 rx queues
+ix0: Ethernet address: ...
+ix0: netmap queues/slots: TX 8/2048, RX 8/2048
+ix1: <Intel(R) X553 (1GbE)> mem 0xdd600000-0xdd7fffff,0xdda00000-0xdda03fff at device 0.1 on pci6
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 8 RX queues 8 TX queues
+ix1: Using MSI-X interrupts with 9 vectors
+ix1: allocated for 8 queues
+ix1: allocated for 8 rx queues
+ix1: Ethernet address: ...
+ix1: netmap queues/slots: TX 8/2048, RX 8/2048
+pcib7: <ACPI PCI-PCI bridge> at device 23.0 on pci0
+pci7: <ACPI PCI bus> on pcib7
+ix2: <Intel(R) X553 (1GbE)> mem 0xdd200000-0xdd3fffff,0xdd404000-0xdd407fff at device 0.0 on pci7
+ix2: Using 2048 TX descriptors and 2048 RX descriptors
+ix2: Using 8 RX queues 8 TX queues
+ix2: Using MSI-X interrupts with 9 vectors
+ix2: allocated for 8 queues
+ix2: allocated for 8 rx queues
+ix2: Ethernet address: ...
+ix2: netmap queues/slots: TX 8/2048, RX 8/2048
+ix3: <Intel(R) X553 (1GbE)> mem 0xdd000000-0xdd1fffff,0xdd400000-0xdd403fff at device 0.1 on pci7
+ix3: Using 2048 TX descriptors and 2048 RX descriptors
+ix3: Using 8 RX queues 8 TX queues
+ix3: Using MSI-X interrupts with 9 vectors
+ix3: allocated for 8 queues
+ix3: allocated for 8 rx queues
+ix3: Ethernet address: ...
+ix3: netmap queues/slots: TX 8/2048, RX 8/2048
+pci0: <simple comms> at device 24.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+pci0: <serial bus> at device 31.5 (no driver attached)
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <KBG40ZNS128G NVMe KIOXIA 128GB> NVMe namespace
+nvd0: 122104MB (250069680 512 byte sectors)
+mlx4_core0: <mlx4_core> mem 0xdf200000-0xdf2fffff,0xdc800000-0xdcffffff at device 0.0 on pci2
+mlx4_core: Mellanox ConnectX core driver v3.5.1 (April 2019)
+mlx4_core: Initializing mlx4_core
+uhub0: 8 ports with 8 removable, self powered
+mlx4_core0: Unable to determine PCI device chain minimum BW
+mlx4_en mlx4_core0: Activating port:1
+mlxen0: Ethernet address: ...
+mlx4_en: mlx4_core0: Port 1: Using 8 TX rings
+mlxen0: link state changed to DOWN
+mlx4_en: mlx4_core0: Port 1: Using 8 RX rings
+mlx4_en: mlxen0: Using 8 TX rings
+mlx4_en: mlxen0: Using 8 RX rings
+mlx4_en: mlxen0: Initializing port
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0
+ugen0.2: <vendor 0x05e3 product 0x0610> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x05e3 product 0x0610, class 9/0, rev 2.00/32.98, addr 1> on usbus0
+uhub1: MTT enabled
+uhub1: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.3: <vendor 0x0557 product 0x7000> at usbus0
+uhub2 on uhub1
+uhub2: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+uhub2: 4 ports with 3 removable, self powered
+Root mount waiting for: usbus0
+ugen0.4: <vendor 0x0557 product 0x2419> at usbus0
+ukbd0 on uhub2
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+kbd1 at ukbd0
+ugen0.5: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub3 on uhub1
+uhub3: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 4> on usbus0
+uhub3: MTT enabled
+Root mount waiting for: usbus0
+uhub3: 4 ports with 4 removable, self powered
+ums0 on uhub2
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+mlxen0: link state changed to UP
+vlan0: changing name to 'mlxen0_vlan10'
+vlan1: changing name to 'mlxen0_vlan20'
+vlan2: changing name to 'mlxen0_vlan60'
+vlan3: changing name to 'mlxen0_vlan90'
+vlan4: changing name to 'mlxen0_vlan100'
+mlxen0: tso4 disabled due to -txcsum.
+mlxen0: tso6 disabled due to -txcsum6.
+ix0: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+wg0: link state changed to UP
+wg1: link state changed to UP
+WARNING: attempt to domain_add(netgraph) after domainfinalize()

@@ -1,0 +1,150 @@
+OpenBSD 7.0 (GENERIC.MP) #232: Thu Sep 30 14:25:29 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4240105472 (4043MB)
+avail mem = 4095569920 (3905MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.5 @ 0xdf010 (37 entries)
+bios0: vendor Phoenix Technologies Ltd. version "01LT.M012.20090921.JIP" date 09/21/2009
+bios0: SAMSUNG ELECTRONICS CO., LTD. R720
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP HPET MCFG APIC BOOT SLIC SSDT SSDT SSDT
+acpi0: wakeup devices P0P2(S4) P0P1(S3) HDEF(S3) RP01(S3) PXSX(S4) PSL1(S3) RP02(S3) PXSX(S4) RP03(S3) PXSX(S4) RP04(S3) PXSX(S4) PWRB(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU T6500 @ 2.10GHz, 2095.03 MHz, 06-17-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 2MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 7 var ranges, 88 fixed ranges
+cpu0: apic clock running at 199MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 Duo CPU T6500 @ 2.10GHz, 2094.74 MHz, 06-17-0a
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 2MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (P0P2)
+acpiprt2 at acpi0: bus 2 (RP01)
+acpiprt3 at acpi0: bus -1 (RP02)
+acpiprt4 at acpi0: bus 4 (RP03)
+acpiprt5 at acpi0: bus 6 (RP04)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0
+acpibat0 at acpi0: BAT1 type LION oem "SAMSUNG Electronics"
+acpicmos0 at acpi0
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: LID0
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: !C2(500@1 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: !C2(500@1 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: FN00, resource for FAN0
+acpipwrres1 at acpi0: FN01, resource for FAN1
+acpitz0 at acpi0: critical temperature is 89 degC
+acpitz1 at acpi0: critical temperature is 89 degC
+acpivideo0 at acpi0: ATIM
+acpivout0 at acpivideo0: LCD_
+acpivideo1 at acpi0: GFX0
+cpu0: Enhanced SpeedStep 2095 MHz: speeds: 2100, 1600, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel GM45 Host" rev 0x07
+ppb0 at pci0 dev 1 function 0 "Intel GM45 PCIE" rev 0x07: msi
+pci1 at ppb0 bus 1
+radeondrm0 at pci1 dev 0 function 0 "ATI Mobility Radeon HD 4650" rev 0x00
+drm0 at radeondrm0
+radeondrm0: msi
+azalia0 at pci1 dev 0 function 1 "ATI Radeon HD 4000 HD Audio" rev 0x00: msi
+azalia0: no supported codecs
+uhci0 at pci0 dev 26 function 0 "Intel 82801I USB" rev 0x03: apic 2 int 16
+uhci1 at pci0 dev 26 function 1 "Intel 82801I USB" rev 0x03: apic 2 int 21
+uhci2 at pci0 dev 26 function 2 "Intel 82801I USB" rev 0x03: apic 2 int 19
+ehci0 at pci0 dev 26 function 7 "Intel 82801I USB" rev 0x03: apic 2 int 19
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia1 at pci0 dev 27 function 0 "Intel 82801I HD Audio" rev 0x03: msi
+azalia1: codecs: Realtek ALC272
+audio0 at azalia1
+ppb1 at pci0 dev 28 function 0 "Intel 82801I PCIE" rev 0x03: msi
+pci2 at ppb1 bus 2
+ath0 at pci2 dev 0 function 0 "Atheros AR5424" rev 0x01: apic 2 int 16
+ath0: AR5424 14.2 phy 7.0 rf 10.2 eeprom 5.3, WOR5_ETSIC, address XXX
+ppb2 at pci0 dev 28 function 2 "Intel 82801I PCIE" rev 0x03: msi
+pci3 at ppb2 bus 4
+ppb3 at pci0 dev 28 function 3 "Intel 82801I PCIE" rev 0x03: msi
+pci4 at ppb3 bus 6
+mskc0 at pci4 dev 0 function 0 "Marvell Yukon 88E8057" rev 0x10, Yukon-2 Ultra 2 (0x0): msi
+msk0 at mskc0 port A: address XXX
+eephy0 at msk0 phy 0: 88E1149 Gigabit PHY, rev. 1
+uhci3 at pci0 dev 29 function 0 "Intel 82801I USB" rev 0x03: apic 2 int 23
+uhci4 at pci0 dev 29 function 1 "Intel 82801I USB" rev 0x03: apic 2 int 19
+uhci5 at pci0 dev 29 function 2 "Intel 82801I USB" rev 0x03: apic 2 int 18
+ehci1 at pci0 dev 29 function 7 "Intel 82801I USB" rev 0x03: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0x93
+pci5 at ppb4 bus 8
+pcib0 at pci0 dev 31 function 0 "Intel 82801IBM LPC" rev 0x03
+ahci0 at pci0 dev 31 function 2 "Intel 82801I AHCI" rev 0x03: msi, AHCI 1.2
+ahci0: port 0: 3.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, TOSHIBA MK2556GS, LH00> naa.5000039281d85a08
+sd0: 238475MB, 512 bytes/sector, 488397168 sectors
+ichiic0 at pci0 dev 31 function 3 "Intel 82801I SMBus" rev 0x03: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR2 SDRAM non-parity PC2-6400CL6 SO-DIMM
+spdmem1 at iic0 addr 0x52: 2GB DDR2 SDRAM non-parity PC2-6400CL6 SO-DIMM
+usb2 at uhci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb6 at uhci4: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb7 at uhci5: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.2, 0x1c0b1 0xa40000 0x0 0xd04731 0xa0000
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+dt: 445 probes
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "Chicony Electronics Co., Ltd. CNF8140" rev 2.00/15.81 addr 2
+video0 at uvideo0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (dd95aec5d43f622c.a) swap on sd0b dump on sd0b
+radeondrm0: RV730
+r600_cp: Failed to load firmware "radeon/RV730_pfp.bin"
+[drm] *ERROR* Failed to load firmware!
+drm:pid0:radeondrm_attachhook *ERROR* Fatal error during GPU init
+drm0 detached
+radeondrm0 detached
+vga1 at pci1 dev 0 function 0 "ATI Mobility Radeon HD 4650" rev 0x00
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+ugen0 at uhub1 port 1 "HTC One" rev 2.00/2.28 addr 2
+ugen0 detached
+urndis0 at uhub1 port 1 configuration 1 interface 0 "HTC One" rev 2.00/2.28 addr 2
+urndis0: using RNDIS, address XXX

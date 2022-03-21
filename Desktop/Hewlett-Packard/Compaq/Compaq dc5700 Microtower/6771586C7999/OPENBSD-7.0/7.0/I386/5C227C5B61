@@ -1,0 +1,323 @@
+FLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 265MHz
+cpu0: mwait min=64, max=64, C-substates=0.2, IBE
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 20, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf4000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG1)
+acpiprt2 at acpi0: bus 32 (PCX1)
+acpiprt3 at acpi0: bus 63 (PCX2)
+acpiprt4 at acpi0: bus 7 (HUB_)
+"PNP0A08" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0003" at acpi0 not configured
+acpibtn0 at acpi0: PBTN
+"PNP0C14" at acpi0 not configured
+acpicpu0 at acpi0: C1(@1 halt!), PSS
+bios0: ROM list: 0xc0000/0xb000! 0xcb000/0x1000 0xcc000/0x1c00 0xe7800/0x8800!
+cpu0: Enhanced SpeedStep 2129 MHz: speeds: 2133, 1596 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82Q965 Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel 82Q965 Video" rev 0x02
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0xe0000000, size 0x10000000
+inteldrm0: apic 1 int 16, I965G, gen 4
+uhci0 at pci0 dev 26 function 0 "Intel 82801H USB" rev 0x02: apic 1 int 20
+uhci1 at pci0 dev 26 function 1 "Intel 82801H USB" rev 0x02: apic 1 int 21
+ehci0 at pci0 dev 26 function 7 "Intel 82801H USB" rev 0x02: apic 1 int 22
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 82801H HD Audio" rev 0x02: msi
+azalia0: codecs: Realtek ALC260
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 82801H PCIE" rev 0x02
+pci1 at ppb0 bus 32
+ppb1 at pci0 dev 28 function 1 "Intel 82801H PCIE" rev 0x02: apic 1 int 21
+pci2 at ppb1 bus 63
+bge0 at pci2 dev 0 function 0 "Broadcom BCM5755" rev 0x02, BCM5755 A2 (0xa002): msi, address XXX
+brgphy0 at bge0 phy 1: BCM5755 10/100/1000baseT PHY, rev. 0
+uhci2 at pci0 dev 29 function 0 "Intel 82801H USB" rev 0x02: apic 1 int 20
+uhci3 at pci0 dev 29 function 1 "Intel 82801H USB" rev 0x02: apic 1 int 21
+ehci1 at pci0 dev 29 function 7 "Intel 82801H USB" rev 0x02: apic 1 int 20
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb2 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xf2
+pci3 at ppb2 bus 7
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801H LPC" rev 0x02: PM disabled
+pciide0 at pci0 dev 31 function 2 "Intel 82801H SATA" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using apic 1 int 18 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <ST3250318AS>
+wd0: 16-sector PIO, LBA48, 238475MB, 488397168 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 6
+pciide1 at pci0 dev 31 function 5 "Intel 82801H SATA" rev 0x02: DMA, channel 0 wired to native-PCI, channel 1 wired to native-PCI
+pciide1: using apic 1 int 18 for native-PCI interrupt
+usb2 at uhci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+dt: 445 probes
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+sd0 at scsibus2 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd0: 238472MB, 512 bytes/sector, 488391473 sectors
+root on sd0a (fb08b248f11f598a.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x1024, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec
+syncing disks...
+OpenBSD 7.0 (GENERIC) #208: Thu Sep 30 14:38:18 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 3480440832 (3319MB)
+avail mem = 3400654848 (3243MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 08/31/06, BIOS32 rev. 0 @ 0xea200, SMBIOS rev. 2.4 @ 0xeba60 (65 entries)
+bios0: vendor Hewlett-Packard version "786E2 v01.01" date 08/31/2006
+bios0: Hewlett-Packard HP Compaq dc5700 Microtower
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC ASF! MCFG TCPA SLIC
+acpi0: wakeup devices PCI0(S4) COM1(S4) PEG1(S4) IGBE(S4) PCX1(S4) PCX2(S4) HUB_(S4) USB1(S3) USB2(S3) USB3(S3) USB4(S3) USB5(S3) EUS1(S3) EUS2(S3) PBTN(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 CPU 6400 @ 2.13GHz ("GenuineIntel" 686-class) 2.13 GHz, 06-0f-06
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 266MHz
+cpu0: mwait min=64, max=64, C-substates=0.2, IBE
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 20, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf4000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG1)
+acpiprt2 at acpi0: bus 32 (PCX1)
+acpiprt3 at acpi0: bus 63 (PCX2)
+acpiprt4 at acpi0: bus 7 (HUB_)
+"PNP0A08" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0003" at acpi0 not configured
+acpibtn0 at acpi0: PBTN
+"PNP0C14" at acpi0 not configured
+acpicpu0 at acpi0: C1(@1 halt!), PSS
+bios0: ROM list: 0xc0000/0xb000! 0xcb000/0x1000 0xcc000/0x1c00 0xe7800/0x8800!
+cpu0: Enhanced SpeedStep 2129 MHz: speeds: 2133, 1596 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82Q965 Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel 82Q965 Video" rev 0x02
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0xe0000000, size 0x10000000
+inteldrm0: apic 1 int 16, I965G, gen 4
+uhci0 at pci0 dev 26 function 0 "Intel 82801H USB" rev 0x02: apic 1 int 20
+uhci1 at pci0 dev 26 function 1 "Intel 82801H USB" rev 0x02: apic 1 int 21
+ehci0 at pci0 dev 26 function 7 "Intel 82801H USB" rev 0x02: apic 1 int 22
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 82801H HD Audio" rev 0x02: msi
+azalia0: codecs: Realtek ALC260
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 82801H PCIE" rev 0x02
+pci1 at ppb0 bus 32
+ppb1 at pci0 dev 28 function 1 "Intel 82801H PCIE" rev 0x02: apic 1 int 21
+pci2 at ppb1 bus 63
+bge0 at pci2 dev 0 function 0 "Broadcom BCM5755" rev 0x02, BCM5755 A2 (0xa002): msi, address XXX
+brgphy0 at bge0 phy 1: BCM5755 10/100/1000baseT PHY, rev. 0
+uhci2 at pci0 dev 29 function 0 "Intel 82801H USB" rev 0x02: apic 1 int 20
+uhci3 at pci0 dev 29 function 1 "Intel 82801H USB" rev 0x02: apic 1 int 21
+ehci1 at pci0 dev 29 function 7 "Intel 82801H USB" rev 0x02: apic 1 int 20
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb2 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xf2
+pci3 at ppb2 bus 7
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801H LPC" rev 0x02: PM disabled
+pciide0 at pci0 dev 31 function 2 "Intel 82801H SATA" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using apic 1 int 18 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <ST3250318AS>
+wd0: 16-sector PIO, LBA48, 238475MB, 488397168 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 6
+pciide1 at pci0 dev 31 function 5 "Intel 82801H SATA" rev 0x02: DMA, channel 0 wired to native-PCI, channel 1 wired to native-PCI
+pciide1: using apic 1 int 18 for native-PCI interrupt
+usb2 at uhci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+dt: 445 probes
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+sd0 at scsibus2 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd0: 238472MB, 512 bytes/sector, 488391473 sectors
+root on sd0a (fb08b248f11f598a.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x1024, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0c: hard error reading fsbn 0 (st0 20<seek_cmplt> st1 0 st2 0 cyl 0 head 0 sec 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 1)
+fd0c: hard error reading fsbn 64 of 64-67 (st0 20<seek_cmplt> st1 1<no_am> st2 0 cyl 0 head 0 sec 0)
+fd0: timeout (st0 20<seek_cmplt> cyl 1)
+fd0: timeout (st0 20<seek_cmplt> cyl 1)
+fd0: timeout (st0 20<seek_cmplt> cyl 1)
+fd0: timeout (st0 20<seek_cmplt> cyl 1)
+fd0: timeout (st0 20<seek_cmplt> cyl 1)
+fd0: timeout (st0 20<seek_cmplt> cyl 28)
+fd0c: hard error reading fsbn 1024 of 203B-E9B6 (st0 20<seek_cmplt> st1 1c<data_overrun,sec_not_fnd> st2 0 cyl 0 head 0 sec 0)
+syncing disks...
+OpenBSD 7.0 (GENERIC) #208: Thu Sep 30 14:38:18 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 3480440832 (3319MB)
+avail mem = 3400646656 (3243MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 08/31/06, BIOS32 rev. 0 @ 0xea200, SMBIOS rev. 2.4 @ 0xeba60 (65 entries)
+bios0: vendor Hewlett-Packard version "786E2 v01.01" date 08/31/2006
+bios0: Hewlett-Packard HP Compaq dc5700 Microtower
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC ASF! MCFG TCPA SLIC
+acpi0: wakeup devices PCI0(S4) COM1(S4) PEG1(S4) IGBE(S4) PCX1(S4) PCX2(S4) HUB_(S4) USB1(S3) USB2(S3) USB3(S3) USB4(S3) USB5(S3) EUS1(S3) EUS2(S3) PBTN(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 CPU 6400 @ 2.13GHz ("GenuineIntel" 686-class) 2.13 GHz, 06-0f-06
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 265MHz
+cpu0: mwait min=64, max=64, C-substates=0.2, IBE
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 20, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf4000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG1)
+acpiprt2 at acpi0: bus 32 (PCX1)
+acpiprt3 at acpi0: bus 63 (PCX2)
+acpiprt4 at acpi0: bus 7 (HUB_)
+"PNP0A08" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0003" at acpi0 not configured
+acpibtn0 at acpi0: PBTN
+"PNP0C14" at acpi0 not configured
+acpicpu0 at acpi0: C1(@1 halt!), PSS
+bios0: ROM list: 0xc0000/0xb000! 0xcb000/0x1000 0xcc000/0x1c00 0xe7800/0x8800!
+cpu0: Enhanced SpeedStep 2129 MHz: speeds: 2133, 1596 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82Q965 Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel 82Q965 Video" rev 0x02
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0xe0000000, size 0x10000000
+inteldrm0: apic 1 int 16, I965G, gen 4
+uhci0 at pci0 dev 26 function 0 "Intel 82801H USB" rev 0x02: apic 1 int 20
+uhci1 at pci0 dev 26 function 1 "Intel 82801H USB" rev 0x02: apic 1 int 21
+ehci0 at pci0 dev 26 function 7 "Intel 82801H USB" rev 0x02: apic 1 int 22
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 82801H HD Audio" rev 0x02: msi
+azalia0: codecs: Realtek ALC260
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 82801H PCIE" rev 0x02
+pci1 at ppb0 bus 32
+ppb1 at pci0 dev 28 function 1 "Intel 82801H PCIE" rev 0x02: apic 1 int 21
+pci2 at ppb1 bus 63
+bge0 at pci2 dev 0 function 0 "Broadcom BCM5755" rev 0x02, BCM5755 A2 (0xa002): msi, address XXX
+brgphy0 at bge0 phy 1: BCM5755 10/100/1000baseT PHY, rev. 0
+uhci2 at pci0 dev 29 function 0 "Intel 82801H USB" rev 0x02: apic 1 int 20
+uhci3 at pci0 dev 29 function 1 "Intel 82801H USB" rev 0x02: apic 1 int 21
+ehci1 at pci0 dev 29 function 7 "Intel 82801H USB" rev 0x02: apic 1 int 20
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb2 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xf2
+pci3 at ppb2 bus 7
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801H LPC" rev 0x02: PM disabled
+pciide0 at pci0 dev 31 function 2 "Intel 82801H SATA" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using apic 1 int 18 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <ST3250318AS>
+wd0: 16-sector PIO, LBA48, 238475MB, 488397168 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 6
+pciide1 at pci0 dev 31 function 5 "Intel 82801H SATA" rev 0x02: DMA, channel 0 wired to native-PCI, channel 1 wired to native-PCI
+pciide1: using apic 1 int 18 for native-PCI interrupt
+usb2 at uhci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci2: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci3: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+dt: 445 probes
+vscsi0 at root
+scsibus1 at vscsi0: 256 targets
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+sd0 at scsibus2 targ 1 lun 0: <OPENBSD, SR CRYPTO, 006>
+sd0: 238472MB, 512 bytes/sector, 488391473 sectors
+root on sd0a (fb08b248f11f598a.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x1024, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

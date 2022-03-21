@@ -1,0 +1,552 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #1 n244809-dff3dead3734: Thu Jan 20 13:20:41 EST 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 1024x768
+CPU: AMD EPYC 7302 16-Core Processor                 (3000.07-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x830f10  Family=0x17  Model=0x31  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ef8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c91a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x400004<UMIP,RDPID>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x18cf757<CLZERO,IRPerf,XSaveErPtr,RDPRU,MCOMMIT,WBNOINVD,IBPB,IBRS,STIBP,PREFER_IBRS,PPIN,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 274877906944 (262144 MB)
+avail memory = 267566907392 (255171 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <SUPERM SMCI>
+FreeBSD/SMP: Multiprocessor System Detected: 64 CPUs
+FreeBSD/SMP: 2 package(s) x 8 cache groups x 2 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+ioapic2 <Version 2.1> irqs 56-87
+ioapic3 <Version 2.1> irqs 88-119
+ioapic4 <Version 2.1> irqs 120-151
+ioapic5 <Version 2.1> irqs 152-183
+ioapic6 <Version 2.1> irqs 184-215
+ioapic7 <Version 2.1> irqs 216-247
+ioapic8 <Version 2.1> irqs 248-279
+Launching APs: 12 3 14 1 10 2 8 7 4 24 26 22 17 30 28 19 20 60 62 48 51 36 38 55 52 40 45 46 43 58 56 35 33 25 29 23 18 31 27 13 15 21 16 5 63 53 61 49 44 50 59 54 11 6 42 39 57 47 37 41 32 34 9
+Timecounter "TSC-low" frequency 1500033375 Hz quality 1000
+KTLS: Initialized 64 threads
+random: entropy device external interface
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000108 [4354] netmap_init               netmap: loaded module
+[ath_hal] loaded
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <SUPERM SMCI>
+AMD-Vi: IVRS Info VAsize = 64 PAsize = 48 GVAsize = 2 flags:0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+amdsmn0: <AMD Family 17h System Management Network> numa-domain 0 on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> numa-domain 0 on hostb0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 3.1 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5020-0x503f mem 0xf8d20000-0xf8d3ffff,0xf8d44000-0xf8d47fff irq 54 at device 0.0 numa-domain 0 on pci1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 8 RX queues 8 TX queues
+igb0: Using MSI-X interrupts with 9 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 8/1024, RX 8/1024
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0x5000-0x501f mem 0xf8d00000-0xf8d1ffff,0xf8d40000-0xf8d43fff irq 55 at device 0.1 numa-domain 0 on pci1
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 8 RX queues 8 TX queues
+igb1: Using MSI-X interrupts with 9 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 8/1024, RX 8/1024
+pcib2: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pci2: <unknown> at device 0.0 (no driver attached)
+pci2: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 0 on pci0
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+pci3: <unknown> at device 0.0 (no driver attached)
+pci3: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib4: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+amdsmn1: <AMD Family 17h System Management Network> numa-domain 0 on hostb8
+amdtemp1: <AMD CPU On-Die Thermal Sensors> numa-domain 0 on hostb8
+pci4: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib5: <ACPI PCI-PCI bridge> at device 1.1 numa-domain 0 on pci4
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+pcib6: <PCI-PCI bridge> irq 56 at device 0.0 numa-domain 0 on pci5
+pci6: <PCI bus> numa-domain 0 on pcib6
+vgapci0: <VGA-compatible display> port 0x4000-0x407f mem 0xb0000000-0xb0ffffff,0xb1000000-0xb101ffff irq 56 at device 0.0 numa-domain 0 on pci6
+vgapci0: Boot video device
+pcib7: <ACPI PCI-PCI bridge> at device 1.3 numa-domain 0 on pci4
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+vgapci1: <VGA-compatible display> port 0x3000-0x30ff mem 0x2bf20000000-0x2bf2fffffff,0x2bf30000000-0x2bf301fffff,0xb1600000-0xb163ffff irq 64 at device 0.0 numa-domain 0 on pci7
+hdac0: <ATI (0xaae0) HDA Controller> mem 0xb1660000-0xb1663fff irq 65 at device 0.1 numa-domain 0 on pci7
+pcib8: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 0 on pci4
+pci8: <ACPI PCI bus> numa-domain 0 on pcib8
+pci8: <unknown> at device 0.0 (no driver attached)
+pci8: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib9: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 0 on pci4
+pci9: <ACPI PCI bus> numa-domain 0 on pcib9
+pci9: <unknown> at device 0.0 (no driver attached)
+pci9: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 8.2 numa-domain 0 on pci4
+pci10: <ACPI PCI bus> numa-domain 0 on pcib10
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xb1300000-0xb13007ff irq 73 at device 0.0 numa-domain 0 on pci10
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+pcib11: <ACPI PCI-PCI bridge> at device 8.3 numa-domain 0 on pci4
+pci11: <ACPI PCI bus> numa-domain 0 on pcib11
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xb1200000-0xb12007ff irq 77 at device 0.0 numa-domain 0 on pci11
+ahci1: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported with FBS
+ahcich1: <AHCI channel> at channel 0 on ahci1
+ahcich2: <AHCI channel> at channel 1 on ahci1
+ahcich3: <AHCI channel> at channel 2 on ahci1
+ahcich4: <AHCI channel> at channel 3 on ahci1
+ahcich5: <AHCI channel> at channel 4 on ahci1
+ahcich6: <AHCI channel> at channel 5 on ahci1
+ahcich7: <AHCI channel> at channel 6 on ahci1
+ahcich8: <AHCI channel> at channel 7 on ahci1
+ahciem0: <AHCI enclosure management bridge> on ahci1
+pcib12: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci12: <ACPI PCI bus> numa-domain 0 on pcib12
+amdsmn2: <AMD Family 17h System Management Network> numa-domain 0 on hostb16
+amdtemp2: <AMD CPU On-Die Thermal Sensors> numa-domain 0 on hostb16
+pci12: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib13: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 0 on pci12
+pci13: <ACPI PCI bus> numa-domain 0 on pcib13
+pci13: <unknown> at device 0.0 (no driver attached)
+pci13: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib14: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 0 on pci12
+pci14: <ACPI PCI bus> numa-domain 0 on pcib14
+pci14: <unknown> at device 0.0 (no driver attached)
+pci14: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xf8e00000-0xf8efffff irq 135 at device 0.3 numa-domain 0 on pci14
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 numa-domain 0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+isab0: <PCI-ISA bridge> at device 20.3 numa-domain 0 on pci12
+isa0: <ISA bus> numa-domain 0 on isab0
+pcib15: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci15: <ACPI PCI bus> numa-domain 0 on pcib15
+amdsmn3: <AMD Family 17h System Management Network> numa-domain 0 on hostb40
+amdtemp3: <AMD CPU On-Die Thermal Sensors> numa-domain 0 on hostb40
+pci15: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib16: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 0 on pci15
+pci16: <ACPI PCI bus> numa-domain 0 on pcib16
+pci16: <unknown> at device 0.0 (no driver attached)
+pci16: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib17: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 0 on pci15
+pci17: <ACPI PCI bus> numa-domain 0 on pcib17
+pci17: <unknown> at device 0.0 (no driver attached)
+pci17: <encrypt/decrypt> at device 0.1 (no driver attached)
+pci17: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xf5000000-0xf50fffff irq 103 at device 0.3 numa-domain 0 on pci17
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 numa-domain 0 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib18: <ACPI PCI-PCI bridge> at device 8.2 numa-domain 0 on pci15
+pci18: <ACPI PCI bus> numa-domain 0 on pcib18
+ahci2: <AMD KERNCZ AHCI SATA controller> mem 0xf5400000-0xf54007ff irq 105 at device 0.0 numa-domain 0 on pci18
+ahci2: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich9: <AHCI channel> at channel 0 on ahci2
+pcib19: <ACPI PCI-PCI bridge> at device 8.3 numa-domain 0 on pci15
+pci19: <ACPI PCI bus> numa-domain 0 on pcib19
+ahci3: <AMD KERNCZ AHCI SATA controller> mem 0xf5300000-0xf53007ff irq 109 at device 0.0 numa-domain 0 on pci19
+ahci3: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich10: <AHCI channel> at channel 0 on ahci3
+pcib20: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci20: <ACPI PCI bus> numa-domain 1 on pcib20
+amdsmn4: <AMD Family 17h System Management Network> numa-domain 1 on hostb48
+amdtemp4: <AMD CPU On-Die Thermal Sensors> numa-domain 1 on hostb48
+pci20: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib21: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 1 on pci20
+pci21: <ACPI PCI bus> numa-domain 1 on pcib21
+pci21: <unknown> at device 0.0 (no driver attached)
+pci21: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib22: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 1 on pci20
+pci22: <ACPI PCI bus> numa-domain 1 on pcib22
+pci22: <unknown> at device 0.0 (no driver attached)
+pci22: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib23: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci23: <ACPI PCI bus> numa-domain 1 on pcib23
+amdsmn5: <AMD Family 17h System Management Network> numa-domain 1 on hostb56
+amdtemp5: <AMD CPU On-Die Thermal Sensors> numa-domain 1 on hostb56
+pci23: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib24: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 1 on pci23
+pci24: <ACPI PCI bus> numa-domain 1 on pcib24
+pci24: <unknown> at device 0.0 (no driver attached)
+pci24: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib25: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 1 on pci23
+pci25: <ACPI PCI bus> numa-domain 1 on pcib25
+pci25: <unknown> at device 0.0 (no driver attached)
+pci25: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib26: <ACPI PCI-PCI bridge> at device 8.2 numa-domain 1 on pci23
+pci26: <ACPI PCI bus> numa-domain 1 on pcib26
+ahci4: <AMD KERNCZ AHCI SATA controller> mem 0xf2a00000-0xf2a007ff irq 201 at device 0.0 numa-domain 1 on pci26
+ahci4: AHCI v1.31 with 2 6Gbps ports, Port Multiplier supported with FBS
+ahcich11: <AHCI channel> at channel 0 on ahci4
+ahcich12: <AHCI channel> at channel 1 on ahci4
+ahciem1: <AHCI enclosure management bridge> on ahci4
+pcib27: <ACPI PCI-PCI bridge> at device 8.3 numa-domain 1 on pci23
+pci27: <ACPI PCI bus> numa-domain 1 on pcib27
+ahci5: <AMD KERNCZ AHCI SATA controller> mem 0xf2900000-0xf29007ff irq 205 at device 0.0 numa-domain 1 on pci27
+ahci5: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported with FBS
+ahcich13: <AHCI channel> at channel 0 on ahci5
+ahcich14: <AHCI channel> at channel 1 on ahci5
+ahcich15: <AHCI channel> at channel 2 on ahci5
+ahcich16: <AHCI channel> at channel 3 on ahci5
+ahcich17: <AHCI channel> at channel 4 on ahci5
+ahcich18: <AHCI channel> at channel 5 on ahci5
+ahcich19: <AHCI channel> at channel 6 on ahci5
+ahcich20: <AHCI channel> at channel 7 on ahci5
+ahciem2: <AHCI enclosure management bridge> on ahci5
+pcib28: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci28: <ACPI PCI bus> numa-domain 1 on pcib28
+amdsmn6: <AMD Family 17h System Management Network> numa-domain 1 on hostb64
+amdtemp6: <AMD CPU On-Die Thermal Sensors> numa-domain 1 on hostb64
+pci28: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib29: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 1 on pci28
+pci29: <ACPI PCI bus> numa-domain 1 on pcib29
+pci29: <unknown> at device 0.0 (no driver attached)
+pci29: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib30: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 1 on pci28
+pci30: <ACPI PCI bus> numa-domain 1 on pcib30
+pci30: <unknown> at device 0.0 (no driver attached)
+pci30: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xf0000000-0xf00fffff irq 263 at device 0.3 numa-domain 1 on pci30
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 numa-domain 1 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+pcib31: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci31: <ACPI PCI bus> numa-domain 1 on pcib31
+amdsmn7: <AMD Family 17h System Management Network> numa-domain 1 on hostb72
+amdtemp7: <AMD CPU On-Die Thermal Sensors> numa-domain 1 on hostb72
+pci31: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib32: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 1 on pci31
+pci32: <ACPI PCI bus> numa-domain 1 on pcib32
+pci32: <unknown> at device 0.0 (no driver attached)
+pci32: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib33: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 1 on pci31
+pci33: <ACPI PCI bus> numa-domain 1 on pcib33
+pci33: <unknown> at device 0.0 (no driver attached)
+pci33: <encrypt/decrypt> at device 0.1 (no driver attached)
+pci33: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci3: <XHCI (generic) USB 3.0 controller> mem 0xf2300000-0xf23fffff irq 231 at device 0.3 numa-domain 1 on pci33
+xhci3: 64 bytes context size, 64-bit DMA
+usbus3 numa-domain 1 on xhci3
+usbus3: 5.0Gbps Super Speed USB v3.0
+pcib34: <ACPI PCI-PCI bridge> at device 8.2 numa-domain 1 on pci31
+pci34: <ACPI PCI bus> numa-domain 1 on pcib34
+ahci6: <AMD KERNCZ AHCI SATA controller> mem 0xf2700000-0xf27007ff irq 233 at device 0.0 numa-domain 1 on pci34
+ahci6: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich21: <AHCI channel> at channel 0 on ahci6
+pcib35: <ACPI PCI-PCI bridge> at device 8.3 numa-domain 1 on pci31
+pci35: <ACPI PCI bus> numa-domain 1 on pcib35
+ahci7: <AMD KERNCZ AHCI SATA controller> mem 0xf2600000-0xf26007ff irq 237 at device 0.0 numa-domain 1 on pci35
+ahci7: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich22: <AHCI channel> at channel 0 on ahci7
+acpi_button0: <Power Button> on acpi0
+cpu0: <ACPI CPU> on acpi0
+apei0: <ACPI Platform Error Interface> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+ivhd0: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd0: Flag:b0<IotlbSup,Coherent>
+ivhd0: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd0: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd0: Extended features[62:32]:58f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd0: supported paging level:7, will use only: 4
+ivhd0: device range: 0x0 - 0x7ffe
+ivhd0: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+ivhd1: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd1: Flag:b0<IotlbSup,Coherent>
+ivhd1: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd1: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd1: Extended features[62:32]:58f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd1: supported paging level:7, will use only: 4
+ivhd1: device range: 0x0 - 0x7ffe
+ivhd1: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+ivhd2: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd2: Flag:b0<IotlbSup,Coherent>
+ivhd2: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd2: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd2: Extended features[62:32]:58f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd2: supported paging level:7, will use only: 4
+ivhd2: device range: 0x0 - 0x5ffe
+ivhd2: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+ivhd3: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd3: Flag:b0<IotlbSup,Coherent>
+ivhd3: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd3: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd3: Extended features[62:32]:58f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd3: supported paging level:7, will use only: 4
+ivhd3: device range: 0x0 - 0x5ffe
+ivhd3: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+ivhd4: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd4: Flag:b0<IotlbSup,Coherent>
+ivhd4: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd4: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd4: Extended features[62:32]:58f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd4: supported paging level:7, will use only: 4
+ivhd4: device range: 0x0 - 0x3ffe
+ivhd4: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+ivhd5: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd5: Flag:b0<IotlbSup,Coherent>
+ivhd5: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd5: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd5: Extended features[62:32]:58f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd5: supported paging level:7, will use only: 4
+ivhd5: device range: 0x0 - 0x3ffe
+ivhd5: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+ivhd6: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd6: Flag:b0<IotlbSup,Coherent>
+ivhd6: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd6: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd6: Extended features[62:32]:58f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd6: supported paging level:7, will use only: 4
+ivhd6: device range: 0x0 - 0xffff
+ivhd6: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+ivhd7: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd7: Flag:b0<IotlbSup,Coherent>
+ivhd7: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd7: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd7: Extended features[62:32]:58f77ef<USSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd7: supported paging level:7, will use only: 4
+ivhd7: device range: 0x0 - 0xffff
+ivhd7: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+ahciem0: Unsupported enclosure interface
+(aprobe0:ahciem0:0:0:0): SEP_ATTN IDENTIFY. ACB: 67 ec 02 00 00 40 00 00 00 00 80 00
+pcm3: <ATI R6xx (HDMI)>ahciem1: Unsupported enclosure interface
+(aprobe0:ahciem0:0:0:0): CAM status: CCB request was invalid
+(aprobe0:ahciem0:0:0:0): Error 22, Unretryable error
+(aprobe2:ahciem1:0:0:0): SEP_ATTN IDENTIFY. ACB: 67 ec 02 00 00 40 00 00 00 00 80 00
+(aprobe2:ahciem1:0:0:0): CAM status: CCB request was invalid
+(aprobe2:ahciem1:0:0:0): Error 22, Unretryable error
+ahciem2: Unsupported enclosure interface
+(aprobe4:ahciem2:0:0:0): SEP_ATTN IDENTIFY. ACB: 67 ec 02 00 00 40 00 00 00 00 80 00
+ at nid 9 on hdaa0
+(aprobe4:ahciem2:0:0:0): CAM status: CCB request was invalid
+(aprobe4:ahciem2:0:0:0): Error 22, Unretryable error
+pcm4: <ATI R6xx (HDMI)> at nid 11 on hdaa0
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: CAMugen3.1: <0x1022 XHCI root HUB> at usbus3
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+ada0 at ahcich11 bus 0 scbus12 target 0 lun 0
+ada0: <INTEL SSDSC2BB012T7 N2010112> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 1144641MB (2344225968 512 byte sectors)
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+ugen2.1: <0x1022 XHCI root HUB> at usbus2
+ usbus0 usbus1 usbus2 usbus3
+uhub0 numa-domain 1 on usbus3
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus3
+uhub1 numa-domain 1 on usbus2
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub2ada1 at ahcich12 bus 0 scbus13 target 0 lun 0
+ada1: <INTEL SSDSC2BB012T7 N2010112> ACS-3 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 1144641MB (2344225968 512 byte sectors)
+ numa-domain 0 on usbus0
+uhub2: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub3 numa-domain 0 on usbus1
+uhub3: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub1: 4 ports with 4 removable, self powered
+uhub0: 4 ports with 4 removable, self powered
+uhub2: 4 ports with 4 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+ugen1.2: <vendor 0x05e3 USB2.0 Hub> at usbus1
+uhub4 numa-domain 0 on uhub3
+uhub4: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 1> on usbus1
+uhub4: MTT enabled
+Root mount waiting for: usbus1
+uhub4: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1
+ugen1.3: <vendor 0x05e3 USB2.0 Hub> at usbus1
+uhub5 numa-domain 0 on uhub3
+uhub5: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 2> on usbus1
+uhub5: MTT enabled
+uhub5: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus1
+ugen1.4: <Kinesis Advantage2 Keyboard> at usbus1
+ukbd0 numa-domain 0 on uhub5
+ukbd0: <Kinesis Advantage2 Keyboard, class 0/0, rev 2.00/1.00, addr 3> on usbus1
+kbd2 at ukbd0
+Root mount waiting for: usbus1
+ugen1.5: <Logitech Gaming Mouse G600> at usbus1
+ukbd1 numa-domain 0 on uhub5
+ukbd1: <Logitech Gaming Mouse G600, class 0/0, rev 2.00/77.02, addr 4> on usbus1
+kbd3 at ukbd1
+ugen1.6: <vendor 0x0557 product 0x7000> at usbus1
+uhub6 numa-domain 0 on uhub5
+uhub6: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 5> on usbus1
+uhub6: 4 ports with 3 removable, self powered
+Root mount waiting for: usbus1
+ugen1.7: <vendor 0x0557 product 0x2419> at usbus1
+ukbd2 numa-domain 0 on uhub6
+ukbd2: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 6> on usbus1
+kbd4 at ukbd2
+Dual Console: Video Primary, Serial Secondary
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 numa-domain 0 on pci12
+smbus0: <System Management Bus> numa-domain 0 on intsmb0
+[drm] amdgpu kernel modesetting enabled.
+drmn1: <drmn> numa-domain 0 on vgapci1
+vgapci1: child drmn1 requested pci_enable_io
+vgapci1: child drmn1 requested pci_enable_io
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] initializing kernel modesetting (POLARIS12 0x1002:0x6995 0x1028:0x0B0C 0x00).
+[drm] register mmio base: 0xB1600000
+[drm] register mmio size: 262144
+[drm] add ip block number 0 <vi_common>
+[drm] add ip block number 1 <gmc_v8_0>
+[drm] add ip block number 2 <tonga_ih>
+[drm] add ip block number 3 <gfx_v8_0>
+[drm] add ip block number 4 <sdma_v3_0>
+[drm] add ip block number 5 <powerplay>
+[drm] add ip block number 6 <dm>
+[drm] add ip block number 7 <uvd_v6_0>
+[drm] add ip block number 8 <vce_v3_0>
+ATOM BIOS: 113-D0910802-101
+[drm] UVD is enabled in VM mode
+[drm] UVD ENC is enabled in VM mode
+[drm] VCE enabled in VM mode
+[drm] vm size is 1024 GB, 2 levels, block size is 10-bit, fragment size is 9-bit
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_mc.bin'
+drmn1: VRAM: 2048M 0x000000F400000000 - 0x000000F47FFFFFFF (2048M used)
+drmn1: GART: 256M 0x000000FF00000000 - 0x000000FF0FFFFFFF
+Successfully added WC MTRR for [0x2bf20000000-0x2bf2fffffff]: 0; 
+[drm] Detected VRAM RAM=2048M, BAR=256M
+[drm] RAM width 64bits GDDR5
+[TTM] Zone  kernel: Available graphics memory: 134124858 KiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 KiB
+[TTM] Initializing pool allocator
+[drm] amdgpu: 2048M of VRAM memory ready
+[drm] amdgpu: 3072M of GTT memory ready.
+[drm] GART: num cpu pages 65536, num gpu pages 65536
+[drm] PCIE GART of 256M enabled (table at 0x000000F400300000).
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_pfp_2.bin'
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_me_2.bin'
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_ce_2.bin'
+[drm] Chained IB support enabled!
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_rlc.bin'
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_mec_2.bin'
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_mec2_2.bin'
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_sdma.bin'
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_sdma1.bin'
+amdgpu: [powerplay] hwmgr_sw_init smu backed is polaris10_smu
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_uvd.bin'
+[drm] Found UVD firmware Version: 1.130 Family ID: 16
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_vce.bin'
+[drm] Found VCE firmware Version: 53.26 Binary ID: 3
+drmn1: successfully loaded firmware image 'amdgpu/polaris12_smc.bin'
+[drm] DM_PPLIB: values for Engine clock
+[drm] DM_PPLIB:	 214000
+[drm] DM_PPLIB:	 734000
+[drm] DM_PPLIB:	 921000
+[drm] DM_PPLIB:	 1018000
+[drm] DM_PPLIB:	 1098000
+[drm] DM_PPLIB:	 1147000
+[drm] DM_PPLIB:	 1183000
+[drm] DM_PPLIB:	 1219000
+[drm] DM_PPLIB: Validation clocks:
+[drm] DM_PPLIB:    engine_max_clock: 121900
+[drm] DM_PPLIB:    memory_max_clock: 150000
+[drm] DM_PPLIB:    level           : 8
+[drm] DM_PPLIB: values for Memory clock
+[drm] DM_PPLIB:	 300000
+[drm] DM_PPLIB:	 625000
+[drm] DM_PPLIB:	 1500000
+[drm] DM_PPLIB: Validation clocks:
+[drm] DM_PPLIB:    engine_max_clock: 121900
+[drm] DM_PPLIB:    memory_max_clock: 150000
+[drm] DM_PPLIB:    level           : 8
+[drm] Display Core initialized with v3.2.48!
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-3: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-3
+[drm]   - kern.vt.fb.default_mode
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] UVD and UVD ENC initialized successfully.
+[drm] VCE initialized successfully.
+[drm] fb mappable at 0x2BF20830000
+[drm] vram apper at 0x2BF20000000
+[drm] size 33177600
+[drm] fb depth is 24
+[drm]    pitch is 15360
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 14.0.
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=2160 width=3840 depth=32
+cmsize=16 size=33177600
+pbase=0x2bf20830000 vbase=0xfffffe03d0497000
+name=drmn1 flags=0x0 stride=15360 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn1: fb0: amdgpudrmfb frame buffer device
+[drm] Initialized amdgpu 3.35.0 20150101 for drmn1 on minor 0
+bridge0: Ethernet address: ...
+tap0: Ethernet address: ...
+lo0: link state changed to UP
+igb0: link state changed to UP
+igb0: link state changed to DOWN
+igb0: promiscuous mode enabled
+bridge0: link state changed to UP
+tap0: promiscuous mode enabled
+bridge0: link state changed to DOWN
+igb0: link state changed to UP
+bridge0: link state changed to UP
+uhid0 numa-domain 0 on uhub5
+uhid0: <Kinesis Advantage2 Keyboard, class 0/0, rev 2.00/1.00, addr 3> on usbus1
+ums0 numa-domain 0 on uhub5
+ums0: <Logitech Gaming Mouse G600, class 0/0, rev 2.00/77.02, addr 4> on usbus1
+ums0: 16 buttons and [XYZT] coordinates ID=0
+ums1 numa-domain 0 on uhub6
+ums1: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 6> on usbus1
+ums1: 3 buttons and [Z] coordinates ID=0
+wg0: link state changed to UP

@@ -1,0 +1,720 @@
+---<<BOOT>>---
+GDB: debug ports: uart
+GDB: current port: uart
+KDB: debugger backends: ddb gdb
+KDB: current backend: ddb
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #213 machines/orange-n251085-b8aaf72f7e64-dirty: Fri Nov 26 13:36:58 EET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX arm
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT: init without driver.
+Preloaded elf kernel "/boot/kernel/kernel" at 0xc1323000.
+Preloaded elf module "/boot/kernel/zfs.ko" at 0xc1323c3c.
+Preloaded elf module "/boot/kernel/umodem.ko" at 0xc13241a4.
+Preloaded elf module "/boot/kernel/ucom.ko" at 0xc1324710.
+Preloaded elf module "/boot/kernel/gpiokeys.ko" at 0xc1324c7c.
+Preloaded elf module "/boot/kernel/htu21.ko" at 0xc1325174.
+Preloaded elf module "/boot/kernel/max44009.ko" at 0xc1325640.
+Preloaded elf module "/boot/kernel/pcf8591.ko" at 0xc1325b10.
+Preloaded elf module "/boot/kernel/ow_temp.ko" at 0xc1325fdc.
+Preloaded elf module "/boot/kernel/ow.ko" at 0xc13264a8.
+Preloaded boot_entropy_cache "/boot/entropy" at 0xc13269c0.
+Preloaded hostuuid "/etc/hostid" at 0xc1326a14.
+Preloaded dtbo "/boot/dtb/overlays/sun8i-h3-r_pwm.dtbo" at 0xc1326a5c.
+Preloaded dtbo "/boot/dtb/overlays/sun8i-h3-i2c0.dtbo" at 0xc1326abc.
+Preloaded dtbo "/boot/dtb/overlays/sun8i-h3-i2c1.dtbo" at 0xc1326b1c.
+Preloaded dtbo "/boot/dtb/overlays/sun8i-h3-spi0.dtbo" at 0xc1326b7c.
+Preloaded dtbo "/boot/dtb/overlays/sun8i-h3-gpioiic.dtbo" at 0xc1326bdc.
+No PSCI/SMCCC call function found
+CPU: ARM Cortex-A7 r0p5 (ECO: 0x00000000)
+CPU Features: 
+  Multiprocessing, Thumb2, Security, Virtualization, Generic Timer, VMSAv7,
+  PXN, LPAE, Coherent Walk
+Optional instructions: 
+  SDIV/UDIV, UMULL, SMULL, SIMD(ext)
+LoUU:2 LoC:3 LoUIS:2 
+Cache level 1:
+ 32KB/64B 4-way data cache WB Read-Alloc Write-Alloc
+ 32KB/32B 2-way instruction cache Read-Alloc
+Cache level 2:
+ 512KB/64B 8-way unified cache WB Read-Alloc Write-Alloc
+real memory  = 1039646720 (991 MB)
+avail memory = 992051200 (946 MB)
+Physical memory chunk(s):
+  0x40000000 - 0x78f4ffff,   911 MB ( 233296 pages)
+  0x78f55000 - 0x78f55fff,     0 MB (      1 pages)
+  0x78f57000 - 0x78f58fff,     0 MB (      2 pages)
+  0x78f5d000 - 0x78f5efff,     0 MB (      2 pages)
+  0x78f64000 - 0x7df8afff,    80 MB (  20519 pages)
+Excluded memory regions:
+  0x73000000 - 0x74538fff,    21 MB (   5433 pages) NoAlloc 
+Static device mappings:
+  0x01c00000 - 0x01ffffff mapped at VA 0xffb00000
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+random: read 4096 bytes from preloaded cache
+random: unblocking device.
+VIMAGE (virtualized network stack) enabled
+hostuuid: using XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ULE: setup cpu 0
+ULE: setup cpu 1
+ULE: setup cpu 2
+ULE: setup cpu 3
+snd_unit_init() u=0x00ff8000 [512] d=0x00007c00 [32] c=0x000003ff [1024]
+feeder_register: snd_unit=-1 snd_maxautovchans=16 latency=2 feeder_rate_min=1 feeder_rate_max=2016000 feeder_rate_round=25
+random: entropy device external interface
+firmware: 'sdma-imx6q' version 0: 2196 bytes loaded at 0xc08efd38
+kbd0 at kbdmux0
+mem: <memory>
+null: <full device, null device, zero device>
+openfirm: <Open Firmware control device>
+crypto: <crypto core>
+ofwbus0: <Open Firmware Device Tree>
+ofw_clkbus0: <OFW clocks bus> on ofwbus0
+clk_fixed0: <Fixed clock> on ofw_clkbus0
+clk_fixed1: <Fixed clock> on ofw_clkbus0
+simplebus0: <Flattened device tree simple bus> on ofwbus0
+regfix0: <Fixed Regulator> on ofwbus0
+regfix1: <Fixed Regulator> on ofwbus0
+regfix2: <Fixed Regulator> on ofwbus0
+regfix3: <Fixed Regulator> on ofwbus0
+rtc0: <Allwinner RTC> mem 0x1f00000-0x1f003ff irq 44,45 on simplebus0
+rtc0: Using internal oscillator
+Clock: osc32k, parent: (NULL)(-1), freq: 32768
+Clock: iosc, parent: (NULL)(-1), freq: 16000000
+rtc0: registered as a time-of-day clock, resolution 1.000000s
+ccu_h3ng0: <Allwinner H3/H5 Clock Control Unit NG> mem 0x1c20000-0x1c203ff on simplebus0
+ccu_h3ng0: Setting pll_periph0 as parent for ahb1
+ccu_h3ng0: Setting pll_periph0 as parent for ahb2
+ccu_h3ng0: Setting pll_ddr as parent for dram
+Clock: pll_cpux, parent: osc24M(0), freq: 1008000000
+Clock: pll_audio, parent: osc24M(0), freq: 24571428
+Clock: pll_periph0, parent: osc24M(0), freq: 600000000
+Clock: pll_periph1, parent: osc24M(0), freq: 600000000
+Clock: pll_ddr, parent: osc24M(0), freq: 1248000000
+Clock: pll_video, parent: osc24M(0), freq: 294000000
+Clock: pll_ve, parent: osc24M(0), freq: 297000000
+Clock: pll_gpu, parent: osc24M(0), freq: 297000000
+Clock: pll_de, parent: osc24M(0), freq: 297000000
+Clock: apb2, parent: osc24M(1), freq: 24000000
+Clock: nand, parent: osc24M(0), freq: 12000000
+Clock: mmc0, parent: osc24M(0), freq: 24000000
+Clock: mmc1, parent: osc24M(0), freq: 400000
+Clock: mmc2, parent: pll_periph0(1), freq: 50000000
+Clock: ts, parent: osc24M(0), freq: 24000000
+Clock: ce, parent: osc24M(0), freq: 24000000
+Clock: spi0, parent: osc24M(0), freq: 24000000
+Clock: spi1, parent: osc24M(0), freq: 24000000
+Clock: spdif, parent: pll_audio(0), freq: 24571428
+Clock: dram, parent: pll_ddr(0), freq: 1248000000
+Clock: de, parent: pll_periph0-2x(0), freq: 1200000000
+Clock: tcon0, parent: pll_video(0), freq: 294000000
+Clock: tve, parent: pll_de(0), freq: 297000000
+Clock: deinterlace, parent: pll_periph0(0), freq: 600000000
+Clock: csi-sclk, parent: pll_periph0(0), freq: 600000000
+Clock: csi-mclk, parent: osc24M(0), freq: 24000000
+Clock: ve, parent: pll_ve(0), freq: 297000000
+Clock: hdmi, parent: pll_video(0), freq: 294000000
+Clock: mbus, parent: pll_periph0-2x(1), freq: 300000000
+Clock: gpu, parent: pll_gpu(0), freq: 297000000
+Clock: ahb1, parent: pll_periph0(3), freq: 600000000
+Clock: ahb2, parent: pll_periph0(1), freq: 300000000
+Clock: cpux, parent: pll_cpux(2), freq: 1008000000
+Clock: i2s0mux, parent: pll_audio-8x(0), freq: 196571424
+Clock: i2s1mux, parent: pll_audio-8x(0), freq: 196571424
+Clock: i2s2mux, parent: pll_audio-8x(0), freq: 196571424
+Clock: axi, parent: cpux(0), freq: 336000000
+Clock: apb1, parent: ahb1(0), freq: 300000000
+Clock: thsdiv, parent: osc24M(0), freq: 24000000
+Clock: pll_periph0-2x, parent: pll_periph0(0), freq: 1200000000
+Clock: pll_audio-2x, parent: pll_audio(0), freq: 49142856
+Clock: pll_audio-4x, parent: pll_audio(0), freq: 98285712
+Clock: pll_audio-8x, parent: pll_audio(0), freq: 196571424
+Clock: bus-ce, parent: ahb1(0), freq: 600000000
+Clock: bus-dma, parent: ahb1(0), freq: 600000000
+Clock: bus-mmc0, parent: ahb1(0), freq: 600000000
+Clock: bus-mmc1, parent: ahb1(0), freq: 600000000
+Clock: bus-mmc2, parent: ahb1(0), freq: 600000000
+Clock: bus-nand, parent: ahb1(0), freq: 600000000
+Clock: bus-dram, parent: ahb1(0), freq: 600000000
+Clock: bus-emac, parent: ahb2(0), freq: 300000000
+Clock: bus-ts, parent: ahb1(0), freq: 600000000
+Clock: bus-hstimer, parent: ahb1(0), freq: 600000000
+Clock: bus-spi0, parent: ahb1(0), freq: 600000000
+Clock: bus-spi1, parent: ahb1(0), freq: 600000000
+Clock: bus-otg, parent: ahb1(0), freq: 600000000
+Clock: bus-ehci0, parent: ahb1(0), freq: 600000000
+Clock: bus-ehci1, parent: ahb2(0), freq: 300000000
+Clock: bus-ehci2, parent: ahb2(0), freq: 300000000
+Clock: bus-ehci3, parent: ahb2(0), freq: 300000000
+Clock: bus-ohci0, parent: ahb1(0), freq: 600000000
+Clock: bus-ohci1, parent: ahb2(0), freq: 300000000
+Clock: bus-ohci2, parent: ahb2(0), freq: 300000000
+Clock: bus-ohci3, parent: ahb2(0), freq: 300000000
+Clock: bus-ve, parent: ahb1(0), freq: 600000000
+Clock: bus-tcon0, parent: ahb1(0), freq: 600000000
+Clock: bus-tcon1, parent: ahb1(0), freq: 600000000
+Clock: bus-deinterlace, parent: ahb1(0), freq: 600000000
+Clock: bus-csi, parent: ahb1(0), freq: 600000000
+Clock: bus-tve, parent: ahb1(0), freq: 600000000
+Clock: bus-hdmi, parent: ahb1(0), freq: 600000000
+Clock: bus-de, parent: ahb1(0), freq: 600000000
+Clock: bus-gpu, parent: ahb1(0), freq: 600000000
+Clock: bus-msgbox, parent: ahb1(0), freq: 600000000
+Clock: bus-spinlock, parent: ahb1(0), freq: 600000000
+Clock: bus-codec, parent: apb1(0), freq: 300000000
+Clock: bus-spdif, parent: apb1(0), freq: 300000000
+Clock: bus-pio, parent: apb1(0), freq: 300000000
+Clock: bus-ths, parent: apb1(0), freq: 300000000
+Clock: bus-i2s0, parent: apb1(0), freq: 300000000
+Clock: bus-i2s1, parent: apb1(0), freq: 300000000
+Clock: bus-i2s2, parent: apb1(0), freq: 300000000
+Clock: bus-i2c0, parent: apb2(0), freq: 24000000
+Clock: bus-i2c1, parent: apb2(0), freq: 24000000
+Clock: bus-i2c2, parent: apb2(0), freq: 24000000
+Clock: bus-uart0, parent: apb2(0), freq: 24000000
+Clock: bus-uart1, parent: apb2(0), freq: 24000000
+Clock: bus-uart2, parent: apb2(0), freq: 24000000
+Clock: bus-uart3, parent: apb2(0), freq: 24000000
+Clock: bus-scr, parent: apb2(0), freq: 24000000
+Clock: bus-ephy, parent: ahb1(0), freq: 600000000
+Clock: bus-dbg, parent: ahb1(0), freq: 600000000
+Clock: ths, parent: thsdiv(0), freq: 24000000
+Clock: i2s0, parent: i2s0mux(0), freq: 196571424
+Clock: i2s1, parent: i2s1mux(0), freq: 196571424
+Clock: i2s2, parent: i2s2mux(0), freq: 196571424
+Clock: usb-phy0, parent: osc24M(0), freq: 24000000
+Clock: usb-phy1, parent: osc24M(0), freq: 24000000
+Clock: usb-phy2, parent: osc24M(0), freq: 24000000
+Clock: usb-phy3, parent: osc24M(0), freq: 24000000
+Clock: usb-ohci0, parent: osc24M(0), freq: 24000000
+Clock: usb-ohci1, parent: osc24M(0), freq: 24000000
+Clock: usb-ohci2, parent: osc24M(0), freq: 24000000
+Clock: usb-ohci3, parent: osc24M(0), freq: 24000000
+Clock: dram-ve, parent: dram(0), freq: 1248000000
+Clock: dram-csi, parent: dram(0), freq: 1248000000
+Clock: dram-deinterlace, parent: dram(0), freq: 1248000000
+Clock: dram-ts, parent: dram(0), freq: 1248000000
+Clock: csi-misc, parent: osc24M(0), freq: 24000000
+Clock: ac-dig, parent: pll_audio(0), freq: 24571428
+Clock: avs, parent: osc24M(0), freq: 24000000
+Clock: hdmi-ddc, parent: osc24M(0), freq: 24000000
+ccu_sun8i_r0: <Allwinner SUN8I_R Clock Control Unit NG> mem 0x1f01400-0x1f014ff on simplebus0
+Clock: ar100, parent: osc24M(1), freq: 24000000
+Clock: apb0, parent: ahb0(0), freq: 24000000
+Clock: ahb0, parent: ar100(0), freq: 24000000
+Clock: ir, parent: osc32k(0), freq: 32768
+Clock: apb0-pio, parent: apb0(0), freq: 24000000
+Clock: apb0-ir, parent: apb0(0), freq: 24000000
+Clock: apb0-timer, parent: apb0(0), freq: 24000000
+Clock: apb0-rsb, parent: apb0(0), freq: 24000000
+Clock: apb0-uart, parent: apb0(0), freq: 24000000
+Clock: apb0-i2c, parent: apb0(0), freq: 24000000
+Clock: apb0-twd, parent: apb0(0), freq: 24000000
+ccu_de20: <Allwinner DE2 Clock Control Unit> mem 0x1000000-0x100ffff on simplebus0
+Clock: mixer0-div, parent: de(0), freq: 1200000000
+Clock: wb-div, parent: de(0), freq: 1200000000
+Clock: mixer0, parent: mixer0-div(0), freq: 1200000000
+Clock: wb, parent: wb-div(0), freq: 1200000000
+Clock: bus-mixer0, parent: bus-de(0), freq: 600000000
+Clock: bus-wb, parent: bus-de(0), freq: 600000000
+gic0: <ARM Generic Interrupt Controller> mem 0x1c81000-0x1c81fff,0x1c82000-0x1c83fff,0x1c84000-0x1c85fff,0x1c86000-0x1c87fff irq 41 on simplebus0
+gic0: pn 0x1, arch 0x2, rev 0x1, implementer 0x43b irqs 160
+gpio0: <Allwinner GPIO/Pinmux controller> mem 0x1c20800-0x1c20bff irq 22,23 on simplebus0
+gpiobus0: <OFW GPIO bus> on gpio0
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c0f000
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c10000
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c11000
+Processing 1 pin-config node(s) in pinctrl-0 for spi@1c68000
+Processing 1 pin-config node(s) in pinctrl-0 for serial@1c28000
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1c2ac00
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1c2b000
+Processing 1 pin-config node(s) in pinctrl-0 for ir@1f02000
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1f02400
+Processing 1 pin-config node(s) in pinctrl-0 for pwm@1f03800
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c0f000
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c10000
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c11000
+Processing 1 pin-config node(s) in pinctrl-0 for spi@1c68000
+Processing 1 pin-config node(s) in pinctrl-0 for serial@1c28000
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1c2ac00
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1c2b000
+Processing 1 pin-config node(s) in pinctrl-0 for ir@1f02000
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1f02400
+Processing 1 pin-config node(s) in pinctrl-0 for pwm@1f03800
+iichb0: <Allwinner Integrated I2C Bus Controller> mem 0x1c2ac00-0x1c2afff irq 38 on simplebus0
+iicbus0: <OFW I2C bus> on iichb0
+iichb1: <Allwinner Integrated I2C Bus Controller> mem 0x1c2b000-0x1c2b3ff irq 39 on simplebus0
+iicbus1: <OFW I2C bus> on iichb1
+iichb2: <Allwinner Integrated I2C Bus Controller> mem 0x1f02400-0x1f027ff irq 47 on simplebus0
+iicbus2: <OFW I2C bus> on iichb2
+sy8106a0: <Silergy SY8106A regulator> at addr 0xca on iicbus2
+gpio1: <Allwinner GPIO/Pinmux controller> mem 0x1f02c00-0x1f02fff irq 48 on simplebus0
+gpiobus1: <OFW GPIO bus> on gpio1
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c0f000
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c10000
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c11000
+Processing 1 pin-config node(s) in pinctrl-0 for spi@1c68000
+Processing 1 pin-config node(s) in pinctrl-0 for serial@1c28000
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1c2ac00
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1c2b000
+Processing 1 pin-config node(s) in pinctrl-0 for ir@1f02000
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1f02400
+Processing 1 pin-config node(s) in pinctrl-0 for pwm@1f03800
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c0f000
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c10000
+Processing 1 pin-config node(s) in pinctrl-0 for mmc@1c11000
+Processing 1 pin-config node(s) in pinctrl-0 for spi@1c68000
+Processing 1 pin-config node(s) in pinctrl-0 for serial@1c28000
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1c2ac00
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1c2b000
+Processing 1 pin-config node(s) in pinctrl-0 for ir@1f02000
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@1f02400
+Processing 1 pin-config node(s) in pinctrl-0 for pwm@1f03800
+generic_timer0: <ARMv7 Generic Timer> irq 4,5,6,7 on ofwbus0
+Timecounter "ARM MPCore Timecounter" frequency 24000000 Hz quality 1000
+Event timer "ARM MPCore Eventtimer" frequency 24000000 Hz quality 1000
+aw_syscon0: <Allwinner syscon> mem 0x1c00000-0x1c00fff on simplebus0
+aw_sid0: <Allwinner Secure ID Controller> mem 0x1c14000-0x1c143ff on simplebus0
+awusbphy0: <Allwinner USB PHY> mem 0x1c19400-0x1c1942b,0x1c1a800-0x1c1a803,0x1c1b800-0x1c1b803,0x1c1c800-0x1c1c803,0x1c1d800-0x1c1d803 on simplebus0
+ofwbus0: <onewire0> compat w1-gpio (no driver attached)
+ofwbus0: <gpioiic0> compat i2c-gpio (no driver attached)
+ofwbus0: <display-engine> compat allwinner,sun8i-h3-display-engine (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1100000-0x11fffff compat allwinner,sun8i-h3-de2-mixer-0 (no driver attached)
+a31dmac0: <Allwinner DMA controller> mem 0x1c02000-0x1c02fff irq 8 on simplebus0
+simplebus0: <XXX@XXX> mem 0x1c0c000-0x1c0cfff irq 9 compat allwinner,sun8i-h3-tcon-tv (no driver attached)
+aw_mmc0: <Allwinner Integrated MMC/SD controller> mem 0x1c0f000-0x1c0ffff irq 10 on simplebus0
+aw_mmc0: vmmc-supply regulator found
+aw_mmc0: Cannot configure GPIO_INTR_EDGE_BOTH for card detect
+aw_mmc0: Card presence detect on gpio0 pin 79, configured for polling.
+aw_mmc1: <Allwinner Integrated MMC/SD controller> mem 0x1c10000-0x1c10fff irq 11 on simplebus0
+aw_mmc1: vmmc-supply regulator found
+aw_mmc1: Non-removable media
+aw_mmc2: <Allwinner Integrated MMC/SD controller> mem 0x1c11000-0x1c11fff irq 12 on simplebus0
+aw_mmc2: vmmc-supply regulator found
+aw_mmc2: Non-removable media
+musbotg0: <Allwinner USB DRD> mem 0x1c19000-0x1c193ff irq 13 on simplebus0
+musbotg0: setting phy mode 3
+usbus0: Dynamic FIFO sizing detected, assuming 16Kbytes of FIFO RAM
+usbus0 on musbotg0
+musbotg0: usbpf: Attached
+ehci0: <Generic EHCI Controller> mem 0x1c1a000-0x1c1a0ff irq 14 on simplebus0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+ehci0: usbpf: Attached
+ohci0: <Generic OHCI Controller> mem 0x1c1a400-0x1c1a4ff irq 15 on simplebus0
+usbus2 on ohci0
+ohci0: usbpf: Attached
+ehci1: <Generic EHCI Controller> mem 0x1c1b000-0x1c1b0ff irq 16 on simplebus0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+ehci1: usbpf: Attached
+ohci1: <Generic OHCI Controller> mem 0x1c1b400-0x1c1b4ff irq 17 on simplebus0
+usbus4 on ohci1
+ohci1: usbpf: Attached
+ehci2: <Generic EHCI Controller> mem 0x1c1c000-0x1c1c0ff irq 18 on simplebus0
+usbus5: EHCI version 1.0
+usbus5 on ehci2
+ehci2: usbpf: Attached
+ohci2: <Generic OHCI Controller> mem 0x1c1c400-0x1c1c4ff irq 19 on simplebus0
+usbus6 on ohci2
+ohci2: usbpf: Attached
+ehci3: <Generic EHCI Controller> mem 0x1c1d000-0x1c1d0ff irq 20 on simplebus0
+usbus7: EHCI version 1.0
+usbus7 on ehci3
+ehci3: usbpf: Attached
+ohci3: <Generic OHCI Controller> mem 0x1c1d400-0x1c1d4ff irq 21 on simplebus0
+usbus8 on ohci3
+ohci3: usbpf: Attached
+gpioc0: <GPIO controller> on gpio0
+simplebus0: <XXX@XXX> mem 0x1c20c00-0x1c20c9f irq 24,25 compat allwinner,sun8i-a23-timer (no driver attached)
+awg0: <Allwinner Gigabit Ethernet> mem 0x1c30000-0x1c3ffff irq 26 on simplebus0
+simplebus0: no default resources for rid = 1, type = 3
+awg0: PHY type: mii, conf mode: reg
+awg0: EMAC clock: 0x00148000
+awg0: AHB frequency 300000000 Hz, MDC div: 0x3
+miibus0: <MII bus> on awg0
+ukphy0: <Generic IEEE 802.3u media interface> PHY 0 on miibus0
+ukphy0: OUI 0x0088a0, model 0x0000, rev. 0
+ukphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+ukphy1: <Generic IEEE 802.3u media interface> PHY 1 on miibus0
+ukphy1: OUI 0x0088a0, model 0x0000, rev. 0
+ukphy1:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+awg0: bpf attached
+awg0: Ethernet address: ...
+simplebus0: <XXX@XXX> mem 0x1c62000-0x1c62fff compat allwinner,sun8i-h3-mbus (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c68000-0x1c68fff irq 27 compat allwinner,sun8i-h3-spi (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c69000-0x1c69fff irq 28 disabled compat allwinner,sun8i-h3-spi (no driver attached)
+aw_wdog0: <Allwinner A31 Watchdog> mem 0x1c20ca0-0x1c20cbf irq 29 on simplebus0
+simplebus0: <XXX@XXX> mem 0x1c21000-0x1c213ff irq 30 disabled compat allwinner,sun8i-h3-spdif (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c21400-0x1c21407 disabled compat allwinner,sun8i-h3-pwm (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c22000-0x1c223ff irq 31 disabled compat allwinner,sun8i-h3-i2s (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c22400-0x1c227ff irq 32 disabled compat allwinner,sun8i-h3-i2s (no driver attached)
+pcm0: <Allwinner Audio Codec> mem 0x1c22c00-0x1c22fff irq 33 on simplebus0
+pcm0: Mixer "vol":
+pcm0: Mixer "pcm":
+pcm0: Mixer "line":
+pcm0: Mixer "mic":
+pcm0: Mixer "rec":
+pcm0: Mixer "line1":
+pcm0: Soft PCM mixer ENABLED
+uart0: <16750 or compatible> mem 0x1c28000-0x1c283ff irq 34 on simplebus0
+uart0: console (115384,n,8,1)
+uart0: fast interrupt
+uart0: PPS capture mode: DCD
+simplebus0: <XXX@XXX> mem 0x1c28400-0x1c287ff irq 35 disabled compat snps,dw-apb-uart (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c28800-0x1c28bff irq 36 disabled compat snps,dw-apb-uart (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c28c00-0x1c28fff irq 37 disabled compat snps,dw-apb-uart (no driver attached)
+htu210: <HTU21 temperature and humidity sensor> at addr 0x80 on iicbus0
+max440090: <MAX44009 light intensity sensor> at addr 0x94 on iicbus0
+pcf85910: <PCF8591 8-bit ADC / DAC> at addr 0x90 on iicbus0
+iic0: <I2C generic I/O> on iicbus0
+ds13070: <Maxim DS1307 RTC> at addr 0xd0 on iicbus1
+icee0: <I2C EEPROM> at addr 0xa0 on iicbus1
+icee0: size: 4096 bytes, addressing: 16-bits
+iic1: <I2C generic I/O> on iicbus1
+simplebus0: <XXX@XXX> mem 0x1c2b400-0x1c2b7ff irq 40 disabled compat allwinner,sun6i-a31-i2c (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1cb0000-0x1cb0fff irq 42 disabled compat allwinner,sun8i-h3-csi (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1ee0000-0x1eeffff irq 43 compat allwinner,sun8i-h3-dw-hdmi (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1ef0000-0x1efffff compat allwinner,sun8i-h3-hdmi-phy (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1f015c0-0x1f015c3 compat allwinner,sun8i-h3-codec-analog (no driver attached)
+aw_ir0: <Allwinner CIR controller> mem 0x1f02000-0x1f023ff irq 46 on simplebus0
+iic2: <I2C generic I/O> on iicbus2
+gpioc1: <GPIO controller> on gpio1
+simplebus0: <XXX@XXX> mem 0x1f03800-0x1f03807 compat allwinner,sun8i-h3-pwm (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1400000-0x141ffff irq 49 compat allwinner,sun8i-h3-deinterlace (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c0e000-0x1c0efff irq 50 compat allwinner,sun8i-h3-video-engine (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c15000-0x1c15fff irq 51 compat allwinner,sun8i-h3-crypto (no driver attached)
+simplebus0: <XXX@XXX> mem 0x1c40000-0x1c4ffff irq 52,53,54,55,56,57,58 compat allwinner,sun8i-h3-mali (no driver attached)
+aw_thermal0: <Allwinner Thermal Sensor Controller> mem 0x1c25000-0x1c253ff irq 59 on simplebus0
+aw_thermal0: cpu: alarm 90C hyst 15C shut 105C
+ofwbus0: <opp_table0> compat operating-points-v2 (no driver attached)
+cpulist0: <Open Firmware CPU Group> on ofwbus0
+cpu0: <Open Firmware CPU> on cpulist0
+cpu0: Nominal frequency 1008Mhz
+cpufreq_dt0: <Generic cpufreq driver> on cpu0
+cpufreq_dt0: 648.000 Mhz (1040000 uV)
+cpufreq_dt0: 816.000 Mhz (1100000 uV)
+cpufreq_dt0: 1008.000 Mhz (1200000 uV)
+cpu1: <Open Firmware CPU> on cpulist0
+cpu1: Nominal frequency 1008Mhz
+cpu2: <Open Firmware CPU> on cpulist0
+cpu2: Nominal frequency 1008Mhz
+cpu3: <Open Firmware CPU> on cpulist0
+cpu3: Nominal frequency 1008Mhz
+pmu0: <Performance Monitoring Unit> irq 0,1,2,3 on ofwbus0
+ofwbus0: <ahci-5v> disabled compat regulator-fixed (no driver attached)
+ofwbus0: <usb1-vbus> disabled compat regulator-fixed (no driver attached)
+ofwbus0: <usb2-vbus> disabled compat regulator-fixed (no driver attached)
+ofwbus0: <connector> compat hdmi-connector (no driver attached)
+ofwbus0: <leds> disabled compat gpio-leds (no driver attached)
+gpiokeys0: <GPIO keyboard> on ofwbus0
+kbd: new array size 4
+kbd1 at gpiokeys0
+kbd1: gpiokeys0, generic (0), config:0x0, flags:0x3d0000
+gpiokeys0: <sw4> failed to map linux,code value 0x100
+gpiokeys0: <sw4> code=ffffffff, autorepeat=0, repeat=34, repeat_delay=250
+crypto: assign cryptosoft0 driver id 0, flags 0x6000000
+procfs registered
+Timecounters tick every 1.000 msec
+ZFS NOTICE: KSTACK_PAGES is 2 which could result in stack overflow panic!
+Please consider adding 'options KSTACK_PAGES=4' to your kernel config
+usbus0: 480Mbps High Speed USB v2.0
+usbus1: 480Mbps High Speed USB v2.0
+usbus2: 12Mbps Full Speed USB v1.0
+usbus3: 480Mbps High Speed USB v2.0
+usbus4: 12Mbps Full Speed USB v1.0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+vlan: initialized, using hash tables with chaining
+lo0: bpf attached
+crypto: <crypto device>
+IPsec: Initialized Security Association Processing.
+tcp_init: net.inet.tcp.tcbhashsize auto tuned to 8192
+ugen1.1: <Generic EHCI root HUB> at usbus1
+uhub0 on usbus1
+uhub0: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ugen2.1: <Generic OHCI root HUB> at usbus2
+uhub1 on usbus2
+uhub1: <Generic OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen3.1: <Generic EHCI root HUB> at usbus3
+uhub2 on usbus3
+uhub2: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+ugen4.1: <Generic OHCI root HUB> at usbus4
+uhub3 on usbus4
+uhub3: <Generic OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+ugen0.1: <Mentor Graphics OTG Root HUB> at usbus0
+uhub4 on usbus0
+uhub4: <Mentor Graphics OTG Root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+usbus5: 480Mbps High Speed USB v2.0
+usbus6: 12Mbps Full Speed USB v1.0
+usbus7: 480Mbps High Speed USB v2.0
+usbus8: 12Mbps Full Speed USB v1.0
+ugen6.1: <Generic OHCI root HUB> at usbus6
+uhub5 on usbus6
+uhub5: <Generic OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+ugen7.1: <Generic EHCI root HUB> at usbus7
+uhub6 on usbus7
+uhub6: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus7
+ugen8.1: <Generic OHCI root HUB> at usbus8
+uhub7 on usbus8
+uhub7: <Generic OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus8
+ugen5.1: <Generic EHCI root HUB> at usbus5
+uhub8 on usbus5
+uhub8: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+aw_mmc2: Power mode => 0
+aw_mmc2: Powering down sd/mmc
+aw_mmc1: Power mode => 0
+aw_mmc1: Powering down sd/mmc
+uhub1: 1 port with 1 removable, self powered
+aw_mmc2: Clock => 0
+aw_mmc2: VDD => 21
+aw_mmc2: CS => 0
+aw_mmc2: Bus width => 0
+uhub3: 1 port with 1 removable, self powered
+aw_mmc2: Power mode => 1
+aw_mmc2: Bus mode => 1
+aw_mmc2: Powering up sd/mmc
+aw_mmc1: Clock => 0
+aw_mmc1: VDD => 21
+aw_mmc1: CS => 0
+aw_mmc1: Bus width => 0
+aw_mmc1: Power mode => 1
+aw_mmc1: Bus mode => 1
+aw_mmc1: Powering up sd/mmc
+aw_mmc2: Clock => 400000
+aw_mmc2: Power mode => 2
+aw_mmc2: Timing => 0
+aw_mmc1: Clock => 400000
+aw_mmc1: Power mode => 2
+aw_mmc1: Timing => 0
+uhub4: 1 port with 1 removable, self powered
+uhub5: 1 port with 1 removable, self powered
+uhub7: 1 port with 1 removable, self powered
+htu210: serial number: ...
+uhub0: 1 port with 1 removable, self powered
+uhub2: 1 port with 1 removable, self powered
+ds13070: registered as a time-of-day clock, resolution 1.000000s
+Release APs
+CPU(3) applied BP hardening: not necessary
+CPU(1) applied BP hardening: not necessary
+CPU(2) applied BP hardening: not necessary
+aw_mmc2: CS => 1
+WARNING: WITNESS option enabled, expect reduced performance.
+Trying to mount root from zfs:rpool/ROOT/2021-11-25 []...
+aw_mmc1: Bus mode => 2
+Root mount waiting for:pass0 at aw_mmc_sim1 bus 0 scbus1 target 0 lun 0
+ usbus5aw_mmc2: Bus mode => 2
+pass0:  usbus7Relative addr: 00000003
+
+Card features: <SDIO>
+Card IO OCR: 00fc0000
+Number of functions: 1
+pass1 at aw_mmc_sim2 bus 0 scbus2 target 0 lun 0
+pass1: Relative addr: 00000002
+Card features: <MMC Memory>
+Card memory OCR: 40ff8080
+sdiob0: <SDIO CAM-Newbus bridge> on aw_mmc1
+sdiob0 at aw_mmc_sim1 bus 0 scbus1 target 0 lun 0
+sdiob0: Relative addr: 00000003
+Card features: <SDIO>
+Card IO OCR: 00fc0000
+Number of functions: 1
+uhub6: 1 port with 1 removable, self powered
+(sdda0:aw_mmc_sim2:0:0:0): PRE_EOL_INFO = 0x01, DEVICE_LIFE_TIME_EST_TYP_A = 0x02, DEVICE_LIFE_TIME_EST_TYP_B = 0x02
+uhub8: 1 port with 1 removable, self powered
+aw_mmc2: Timing => 1
+Solaris: NOTICE: aw_mmc2: Clock => 52000000
+Cannot find the pool label for 'rpool'lock order reversal: (sleepable after non-sleepable)
+
+ 1st 0xd7325120 aw_mmc_sim (aw_mmc_sim, sleep mutex) @ /usr/devel/git/orange/sys/cam/cam_xpt.c:2766
+Mounting from zfs:rpool/ROOT/2021-11-25 failed with error 5; retrying for 3 more seconds
+ 2nd 0xc092cfd4 Clock topology lock (Clock topology lock, sx) @ /usr/devel/git/orange/sys/dev/extres/clk/clk.c:1245
+lock order aw_mmc_sim -> Clock topology lock attempted at:
+#0 0xc0342d44 at witness_checkorder+0xbc4
+#1 0xc02dbc34 at _sx_slock_int+0x8c
+#2 0xc00a18c0 at clk_disable+0x48
+#3 0xc05dd4e0 at aw_mmc_set_tran_settings+0x644
+#4 0xc0038f10 at mmc_cam_sim_default_action+0x15c
+#5 0xc00083c4 at xpt_action_default+0x3ac
+#6 0xc003b228 at sdda_start_init_task+0x1414
+#7 0xc0335b94 at taskqueue_run_locked+0xb8
+#8 0xc0336c2c at taskqueue_thread_loop+0x108
+#9 0xc028c8a4 at fork_exit+0xa0
+#10 0xc05a6088 at swi_exit+0
+aw_mmc2: Bus width => 3
+sdda0 at aw_mmc_sim2 bus 0 scbus2 target 0 lun 0
+GEOM: new disk sdda0
+sdda0: GEOM: new disk sdda0boot0
+Relative addr: 00000002
+GEOM: new disk sdda0boot1
+Card features: <MMC Memory High-Capacity>
+Card memory OCR: 40ff8080
+sdda0: Serial Number...
+sdda0: MMCHC 8GME4R 0.1 SN ... MFG 09/2001 by 21 0x0000
+Solaris: NOTICE: Cannot find the pool label for 'rpool'
+rtc0: providing initial system time
+2021-11-26 11:42:10.500000000
+start_init: trying /sbin/init
+aw_spi0: <Allwinner SPI> mem 0x1c68000-0x1c68fff irq 27 on simplebus0
+spibus0: <OFW SPI bus> on aw_spi0
+pwm0: <Allwinner PWM> mem 0x1f03800-0x1f03807 on simplebus0
+pwmbus0: <OFW PWM bus> on pwm0
+pwmc0: <PWM Control> channel 0 on pwmbus0
+owc0: <GPIO one-wire bus> on ofwbus0
+ow0: <1 Wire Bus> on owc0
+ow_temp0: <Advanced One Wire Temperature> romid XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX on ow0
+gpioiic0: <GPIO I2C> on ofwbus0
+gpioiic0: SCL pin: gpiobus0:7, SDA pin: gpiobus0:8
+iicbb0: <I2C bit-banging driver> on gpioiic0
+iicbus3: <OFW I2C bus> on iicbb0 master-only
+iic3: <I2C generic I/O> on iicbus3
+lo0: link state changed to UP
+awg0: link state changed to DOWN
+awg0: link state changed to UP
+spibus0: detached
+spibus0: <OFW SPI bus> on aw_spi0
+spigen0: <SPI Generic IO> at cs 0 mode 0 on spibus0
+iichb0: twsi_transfer: transmitting 1 messages
+iichb0: twsi_transfer: status=0xf8
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xc8, status = 0x8
+iichb0: twsi_intr: Send address 0x80
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xc8, status = 0x18
+iichb0: twsi_intr: Address ACK-ed (write)
+iichb0: twsi_intr: Sending byte 0 (of 1) = f5
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xc8, status = 0x28
+iichb0: twsi_intr: ACK received after transmitting data
+iichb0: twsi_intr: Done TX data
+iichb0: twsi_intr: All messages transmitted
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 0
+iichb0: twsi_transfer: pause finish
+iichb0: twsi_transfer: status=0xf8
+iichb0: twsi_transfer: status=0xf8
+iichb0: twsi_transfer: transmitting 1 messages
+iichb0: twsi_transfer: status=0xf8
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xc8, status = 0x8
+iichb0: twsi_intr: Send address 0x80
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xc8, status = 0x40
+iichb0: twsi_intr: Address ACK-ed (read)
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xcc, status = 0x50
+iichb0: twsi_intr: Received and ACK-ed data
+iichb0: twsi_intr: Received byte 0 (of 3) = 0x52
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xcc, status = 0x50
+iichb0: twsi_intr: Received and ACK-ed data
+iichb0: twsi_intr: Received byte 1 (of 3) = 0xde
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xc8, status = 0x58
+iichb0: twsi_intr: Received and NACK-ed data
+iichb0: twsi_intr: Received byte 2 (of 3) = 0x25
+iichb0: twsi_intr: Done RX data
+iichb0: twsi_intr: Send STOP
+iichb0: twsi_intr: All messages transmitted
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 0
+iichb0: twsi_transfer: pause finish
+iichb0: twsi_transfer: status=0xf8
+iichb0: twsi_transfer: status=0xf8
+iichb0: twsi_transfer: transmitting 4 messages
+iichb0: twsi_transfer: status=0xf8
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xc8, status = 0x8
+iichb0: twsi_intr: Send address 0x94
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xc8, status = 0x18
+iichb0: twsi_intr: Address ACK-ed (write)
+iichb0: twsi_intr: Sending byte 0 (of 1) = 3
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=0
+iichb0: twsi_intr: reg control = 0xc8, status = 0x28
+iichb0: twsi_intr: ACK received after transmitting data
+iichb0: twsi_intr: Done TX data
+iichb0: twsi_intr: NOSTOP flag
+iichb0: twsi_intr: Send (repeated) start
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=1
+iichb0: twsi_intr: reg control = 0xc8, status = 0x10
+iichb0: twsi_intr: Send address 0x94
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=1
+iichb0: twsi_intr: reg control = 0xc8, status = 0x40
+iichb0: twsi_intr: Address ACK-ed (read)
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=1
+iichb0: twsi_intr: reg control = 0xc8, status = 0x58
+iichb0: twsi_intr: Received and NACK-ed data
+iichb0: twsi_intr: Received byte 0 (of 1) = 0x29
+iichb0: twsi_intr: Done RX data
+iichb0: twsi_intr: Send (repeated) start
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=2
+iichb0: twsi_intr: reg control = 0xc8, status = 0x10
+iichb0: twsi_intr: Send address 0x94
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=2
+iichb0: twsi_intr: reg control = 0xc8, status = 0x18
+iichb0: twsi_intr: Address ACK-ed (write)
+iichb0: twsi_intr: Sending byte 0 (of 1) = 4
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=2
+iichb0: twsi_intr: reg control = 0xc8, status = 0x28
+iichb0: twsi_intr: ACK received after transmitting data
+iichb0: twsi_intr: Done TX data
+iichb0: twsi_intr: NOSTOP flag
+iichb0: twsi_intr: Send (repeated) start
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=3
+iichb0: twsi_intr: reg control = 0xc8, status = 0x10
+iichb0: twsi_intr: Send address 0x94
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=3
+iichb0: twsi_intr: reg control = 0xc8, status = 0x40
+iichb0: twsi_intr: Address ACK-ed (read)
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 1
+iichb0: twsi_intr: Got interrupt, current msg=3
+iichb0: twsi_intr: reg control = 0xc8, status = 0x58
+iichb0: twsi_intr: Received and NACK-ed data
+iichb0: twsi_intr: Received byte 0 (of 1) = 0xa
+iichb0: twsi_intr: Done RX data
+iichb0: twsi_intr: Send STOP
+iichb0: twsi_intr: All messages transmitted
+iichb0: twsi_intr: Refresh reg_control
+iichb0: twsi_intr: Done with interrupt, transfer = 0
+iichb0: twsi_transfer: pause finish
+iichb0: twsi_transfer: status=0xf8
+iichb0: twsi_transfer: status=0xf8
+ow0: Reset said no device on bus?.

@@ -1,0 +1,1730 @@
+---<<BOOT>>---
+APIC: Using the MADT enumerator.
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE-p7 #0: Mon Jan 31 18:24:03 UTC 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+PPIM 0: PA=0xa0000000, VA=0xffffffff82f10000, size=0x7e9000, mode=0x1
+pmap: large map 8 PML4 slots (4096 GB)
+VT(efifb): resolution 1920x1080
+Preloaded elf kernel "/boot/kernel/kernel" at 0xffffffff82d59000.
+Preloaded elf obj module "/boot/kernel/if_bridge.ko" at 0xffffffff82d62a48.
+Preloaded elf obj module "/boot/kernel/bridgestp.ko" at 0xffffffff82d63178.
+Preloaded hostuuid "/etc/hostid" at 0xffffffff82d63768.
+Preloaded elf obj module "/boot/kernel/cryptodev.ko" at 0xffffffff82d637b8.
+Preloaded elf obj module "/boot/kernel/vmm.ko" at 0xffffffff82d63f28.
+Preloaded elf obj module "/boot/kernel/nmdm.ko" at 0xffffffff82d64790.
+Preloaded boot_entropy_cache "/boot/entropy" at 0xffffffff82d64db8.
+Preloaded elf obj module "/boot/kernel/zfs.ko" at 0xffffffff82d64e10.
+Calibrating TSC clock ... TSC clock: 3096152930 Hz
+CPU: Intel(R) Xeon(R) CPU E3-1535M v6 @ 3.10GHz (3096.15-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906e9  Family=0x6  Model=0x9e  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: Basic Features=0xda0400<SMM,INS/OUTS,TRUE>
+        Pin-Based Controls=0x7f<ExtINT,NMI,VNMI,PreTmr>
+        Primary Processor Controls=0xfff9fffe<INTWIN,TSCOff,HLT,INVLPG,MWAIT,RDPMC,RDTSC,CR3-LD,CR3-ST,CR8-LD,CR8-ST,TPR,NMIWIN,MOV-DR,IO,IOmap,MTF,MSRmap,MONITOR,PAUSE>
+        Secondary Processor Controls=0x5ffcff<APIC,EPT,DT,RDTSCP,x2APIC,VPID,WBINVD,UG,PAUSE-loop,RDRAND,INVPCID,VMFUNC,VMCS,EPT#VE,XSAVES>
+        Exit Controls=0xda0400<PAT-LD,EFER-SV,PTMR-SV>
+        Entry Controls=0xda0400
+        EPT Features=0x6734141<XO,PW4,UC,WB,2M,1G,INVEPT,AD,single,all>
+        VPID Features=0xf01<INVVPID,individual,single,all,single-globals>
+  TSC: P-state invariant, performance statistics
+Data TLB: 2 MByte or 4 MByte pages, 4-way set associative, 32 entries and a separate array with 1 GByte pages, 4-way set associative, 4 entries
+Data TLB: 4 KB pages, 4-way set associative, 64 entries
+Instruction TLB: 2M/4M pages, fully associative, 8 entries
+Instruction TLB: 4KByte pages, 8-way set associative, 64 entries
+64-Byte prefetching
+Shared 2nd-Level TLB: 4 KByte /2 MByte pages, 6-way associative, 1536 entries. Also 1GBbyte pages, 4-way, 16 entries
+L2 cache: 256 kbytes, 8-way associative, 64 bytes/line
+real memory  = 51539607552 (49152 MB)
+Physical memory chunk(s):
+0x0000000000010000 - 0x0000000000057fff, 294912 bytes (72 pages)
+0x0000000000059000 - 0x000000000008afff, 204800 bytes (50 pages)
+0x0000000000100000 - 0x00000000001fffff, 1048576 bytes (256 pages)
+0x0000000002f00000 - 0x000000006884afff, 1704243200 bytes (416075 pages)
+0x000000006884d000 - 0x00000000694e5fff, 13209600 bytes (3225 pages)
+0x00000000694e7000 - 0x000000006e5dcfff, 84893696 bytes (20726 pages)
+0x000000006e5e3000 - 0x0000000077f08fff, 160587776 bytes (39206 pages)
+0x00000000795ff000 - 0x00000000795fffff, 4096 bytes (1 pages)
+0x0000000100002000 - 0x0000000c2cc17fff, 47995510784 bytes (11717654 pages)
+0x0000000c7e400000 - 0x0000000c7e568fff, 1478656 bytes (361 pages)
+avail memory = 49903783936 (47591 MB)
+intel stolen mem: base 0x7b800000 size 64 MB
+MADT: Found CPU APIC ID 0 ACPI ID 1: enabled
+SMP: Added CPU 0 (AP)
+MADT: Found CPU APIC ID 2 ACPI ID 2: enabled
+SMP: Added CPU 2 (AP)
+MADT: Found CPU APIC ID 4 ACPI ID 3: enabled
+SMP: Added CPU 4 (AP)
+MADT: Found CPU APIC ID 6 ACPI ID 4: enabled
+SMP: Added CPU 6 (AP)
+MADT: Found CPU APIC ID 1 ACPI ID 5: enabled
+SMP: Added CPU 1 (AP)
+MADT: Found CPU APIC ID 3 ACPI ID 6: enabled
+SMP: Added CPU 3 (AP)
+MADT: Found CPU APIC ID 5 ACPI ID 7: enabled
+SMP: Added CPU 5 (AP)
+MADT: Found CPU APIC ID 7 ACPI ID 8: enabled
+SMP: Added CPU 7 (AP)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <LENOVO TP-N1U  >
+Package ID shift: 4
+L3 cache ID shift: 4
+L2 cache ID shift: 1
+L1 cache ID shift: 1
+Core ID shift: 1
+INTR: Adding local APIC 2 as a target
+INTR: Adding local APIC 4 as a target
+INTR: Adding local APIC 6 as a target
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+Package HW ID = 0
+	Core HW ID = 0
+		CPU0 (BSP): APIC ID: 0
+		CPU1 (AP/HT): APIC ID: 1
+	Core HW ID = 1
+		CPU2 (AP): APIC ID: 2
+		CPU3 (AP/HT): APIC ID: 3
+	Core HW ID = 2
+		CPU4 (AP): APIC ID: 4
+		CPU5 (AP/HT): APIC ID: 5
+	Core HW ID = 3
+		CPU6 (AP): APIC ID: 6
+		CPU7 (AP/HT): APIC ID: 7
+APIC: CPU 0 has ACPI ID 1
+APIC: CPU 1 has ACPI ID 5
+APIC: CPU 2 has ACPI ID 2
+APIC: CPU 3 has ACPI ID 6
+APIC: CPU 4 has ACPI ID 3
+APIC: CPU 5 has ACPI ID 7
+APIC: CPU 6 has ACPI ID 4
+APIC: CPU 7 has ACPI ID 8
+x86bios:  IVT 0x000000-0x0004ff at 0xfffff80000000000
+x86bios: SSEG 0x059000-0x059fff at 0xfffffe0054525000
+x86bios: EBDA 0x09d000-0x09ffff at 0xfffff8000009d000
+x86bios:  ROM 0x0a0000-0x0fefff at 0xfffff800000a0000
+lapic0: CMCI unmasked
+Pentium Pro MTRR support enabled
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: read 4096 bytes from preloaded cache
+random: unblocking device.
+VIMAGE (virtualized network stack) enabled
+hostuuid: using XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ULE: setup cpu 0
+ULE: setup cpu 1
+ULE: setup cpu 2
+ULE: setup cpu 3
+ULE: setup cpu 4
+ULE: setup cpu 5
+ULE: setup cpu 6
+ULE: setup cpu 7
+ACPI: RSDP 0x00000000795FE014 000024 (v02 LENOVO)
+ACPI: XSDT 0x00000000795C1188 00010C (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: FACP 0x00000000795F1000 0000F4 (v05 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: DSDT 0x00000000795CD000 02036B (v02 LENOVO SKL      00000000 INTL 20160527)
+ACPI: FACS 0x000000007953D000 000040
+ACPI: SSDT 0x00000000795FC000 0003CC (v02 LENOVO Tpm2Tabl 00001000 INTL 20160527)
+ACPI: TPM2 0x00000000795FB000 000034 (v03 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: UEFI 0x0000000079553000 000042 (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: SSDT 0x00000000795F7000 003235 (v02 LENOVO SaSsdt   00003000 INTL 20160527)
+ACPI: SSDT 0x00000000795F4000 0029C8 (v02 LENOVO PegSsdt  00001000 INTL 20160527)
+ACPI: SSDT 0x00000000795F3000 0005B6 (v02 LENOVO PerfTune 00001000 INTL 20160527)
+ACPI: ECDT 0x00000000795F2000 000053 (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: HPET 0x00000000795F0000 000038 (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: APIC 0x00000000795EF000 0000BC (v03 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: MCFG 0x00000000795EE000 00003C (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: SSDT 0x00000000795CB000 001C82 (v02 LENOVO ProjSsdt 00000010 INTL 20160527)
+ACPI: BOOT 0x00000000795CA000 000028 (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: BATB 0x00000000795C9000 00004A (v02 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: SSDT 0x00000000795C8000 000EDE (v02 LENOVO CpuSsdt  00003000 INTL 20160527)
+ACPI: SSDT 0x00000000795C7000 00050D (v02 LENOVO CtdpB    00001000 INTL 20160527)
+ACPI: SSDT 0x00000000795C6000 000678 (v02 LENOVO UsbCTabl 00001000 INTL 20160527)
+ACPI: WSMT 0x00000000795C5000 000028 (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: SSDT 0x00000000795C4000 000141 (v02 LENOVO HdaDsp   00000000 INTL 20160527)
+ACPI: SSDT 0x00000000795C3000 000222 (v02 LENOVO TbtTypeC 00000000 INTL 20160527)
+ACPI: DBGP 0x00000000795C2000 000034 (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: DBG2 0x00000000795FD000 000054 (v00 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: POAT 0x00000000795C0000 000055 (v03 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: SSDT 0x00000000795BE000 0018AB (v01 LENOVO NvOptTbl 00001000 INTL 20160527)
+ACPI: SSDT 0x00000000795BD000 0000AE (v02 LENOVO SgPeg    00001000 INTL 20160527)
+ACPI: DMAR 0x00000000795BC000 0000CC (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: ASF! 0x00000000795BB000 0000A0 (v32 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: FPDT 0x00000000795BA000 000044 (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+ACPI: UEFI 0x000000007950A000 0000DA (v01 LENOVO TP-N1U   00001140 PTEC 00000002)
+MADT: Found IO APIC ID 2, Interrupt 0 at 0xfec00000
+ioapic0: ver 0x20 maxredir 0x77
+ioapic0: Routing external 8259A's -> intpin 0
+MADT: Interrupt override: source 0, irq 2
+ioapic0: Routing IRQ 0 -> intpin 2
+MADT: Interrupt override: source 9, irq 9
+ioapic0: intpin 9 trigger: level
+lapic0: Routing NMI -> LINT1
+lapic0: LINT1 trigger: edge
+lapic0: LINT1 polarity: high
+lapic2: Routing NMI -> LINT1
+lapic2: LINT1 trigger: edge
+lapic2: LINT1 polarity: high
+lapic4: Routing NMI -> LINT1
+lapic4: LINT1 trigger: edge
+lapic4: LINT1 polarity: high
+lapic6: Routing NMI -> LINT1
+lapic6: LINT1 trigger: edge
+lapic6: LINT1 polarity: high
+lapic1: Routing NMI -> LINT1
+lapic1: LINT1 trigger: edge
+lapic1: LINT1 polarity: high
+lapic3: Routing NMI -> LINT1
+lapic3: LINT1 trigger: edge
+lapic3: LINT1 polarity: high
+lapic5: Routing NMI -> LINT1
+lapic5: LINT1 trigger: edge
+lapic5: LINT1 polarity: high
+lapic7: Routing NMI -> LINT1
+lapic7: LINT1 trigger: edge
+lapic7: LINT1 polarity: high
+ioapic0 <Version 2.0> irqs 0-119
+lapic: Divisor 2, Frequency 12000594 Hz
+lapic: deadline tsc mode, Frequency 3096152930 Hz
+cpu0 BSP:
+     ID: 0x00000000   VER: 0x01060015 LDR: 0x00000001 DFR: 0x00000000 x2APIC: 1
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000011ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   cmci: 0x000000f2
+SMP: AP CPU #1 Launched!
+cpu1 AP:
+     ID: 0x00000001   VER: 0x01060015 LDR: 0x00000002 DFR: 0x00000000 x2APIC: 1
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000011ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   cmci: 0x000100f2
+lapic7: CMCI unmasked
+SMP: AP CPU #7 Launched!
+cpu7 AP:
+     ID: 0x00000007   VER: 0x01060015 LDR: 0x00000080 DFR: 0x00000000 x2APIC: 1
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000011ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   cmci: 0x000000f2
+SMP: AP CPU #6 Launched!
+cpu6 AP:
+     ID: 0x00000006   VER: 0x01060015 LDR: 0x00000040 DFR: 0x00000000 x2APIC: 1
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000011ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   cmci: 0x000100f2
+lapic2: CMCI unmasked
+SMP: AP CPU #2 Launched!
+cpu2 AP:
+     ID: 0x00000002   VER: 0x01060015 LDR: 0x00000004 DFR: 0x00000000 x2APIC: 1
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000011ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   cmci: 0x000000f2
+SMP: AP CPU #3 Launched!
+cpu3 AP:
+     ID: 0x00000003   VER: 0x01060015 LDR: 0x00000008 DFR: 0x00000000 x2APIC: 1
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000011ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   cmci: 0x000100f2
+lapic4: CMCI unmasked
+SMP: AP CPU #4 Launched!
+cpu4 AP:
+     ID: 0x00000004   VER: 0x01060015 LDR: 0x00000010 DFR: 0x00000000 x2APIC: 1
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000011ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   cmci: 0x000000f2
+SMP: AP CPU #5 Launched!
+cpu5 AP:
+     ID: 0x00000005   VER: 0x01060015 LDR: 0x00000020 DFR: 0x00000000 x2APIC: 1
+  lint0: 0x00010700 lint1: 0x00000400 TPR: 0x00000000 SVR: 0x000011ff
+  timer: 0x000100ef therm: 0x00010000 err: 0x000000f0 pmc: 0x00010400
+   cmci: 0x000100f2
+No TSX change made
+SMP: passed TSC synchronization test
+TSC timecounter discards lower 1 bit(s)
+Timecounter "TSC-low" frequency 1548076465 Hz quality 1000
+KTLS: Initialized 8 threads
+snd_unit_init() u=0x00ff8000 [512] d=0x00007c00 [32] c=0x000003ff [1024]
+feeder_register: snd_unit=-1 snd_maxautovchans=16 latency=2 feeder_rate_min=1 feeder_rate_max=2016000 feeder_rate_round=25
+random: entropy device external interface
+wlan: <802.11 Link Layer>
+crypto: <crypto core>
+tcp_log: tcp_log device
+io: <I/O>
+kbd: new array size 4
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+mem: <memory>
+000.000052 [4354] netmap_init               netmap: loaded module
+null: <full device, null device, zero device>
+[ath_hal] loaded
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+crypto: assign cryptosoft0 driver id 0, flags 0x6000000
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+crypto: assign aesni0 driver id 1, flags 0xe000000
+acpi0: <LENOVO TP-N1U>
+ACPI: 13 ACPI AML tables successfully acquired and loaded
+PCIe: Memory Mapped configuration base @ 0xf0000000
+ioapic0: routing intpin 9 (ISA IRQ 9) to lapic 0 vector 48
+acpi_ec0: <Embedded Controller: GPE 0x16, ECDT> port 0x62,0x66 on acpi0
+acpi0: Power Button (fixed)
+acpi0: wakeup code va 0xfffffe00547ff000 pa 0x8a000
+acpi0: reservation of fed18000, 1000 (3) failed
+acpi0: reservation of fed19000, 1000 (3) failed
+acpi0: reservation of fed20000, 20000 (3) failed
+acpi0: reservation of fed45000, 4b000 (3) failed
+acpi0: reservation of ff000000, 1000000 (3) failed
+acpi0: reservation of fee00000, 100000 (3) failed
+acpi0: reservation of 0, a0000 (3) failed
+acpi0: reservation of 100000, 7f700000 (3) failed
+cpu0: Processor \134_PR_.CPU0 (ACPI ID 1) -> APIC ID 0
+cpu0: <ACPI CPU> on acpi0
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF80003E66000 0003FF (v02 PmRef  Cpu0Cst  00003001 INTL 20160527)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF80003E63000 0006B4 (v02 PmRef  Cpu0Ist  00003000 INTL 20160527)
+cpu1: Processor \134_PR_.CPU1 (ACPI ID 2) -> APIC ID 2
+cpu1: <ACPI CPU> on acpi0
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF80003E3D800 00065C (v02 PmRef  ApIst    00003000 INTL 20160527)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFF80003206600 00018A (v02 PmRef  ApCst    00003000 INTL 20160527)
+cpu2: Processor \134_PR_.CPU2 (ACPI ID 3) -> APIC ID 4
+cpu2: <ACPI CPU> on acpi0
+cpu3: Processor \134_PR_.CPU3 (ACPI ID 4) -> APIC ID 6
+cpu3: <ACPI CPU> on acpi0
+cpu4: Processor \134_PR_.CPU4 (ACPI ID 5) -> APIC ID 1
+cpu4: <ACPI CPU> on acpi0
+cpu5: Processor \134_PR_.CPU5 (ACPI ID 6) -> APIC ID 3
+cpu5: <ACPI CPU> on acpi0
+cpu6: Processor \134_PR_.CPU6 (ACPI ID 7) -> APIC ID 5
+cpu6: <ACPI CPU> on acpi0
+cpu7: Processor \134_PR_.CPU7 (ACPI ID 8) -> APIC ID 7
+cpu7: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+hpet0: vendor 0x8086, rev 0x1, 24000000Hz 64bit, 8 timers, legacy route
+hpet0:  t0: irqs 0x00f00000 (0), MSI, 64bit, periodic
+hpet0:  t1: irqs 0x00f00000 (0), MSI
+hpet0:  t2: irqs 0x00f00800 (0), MSI
+hpet0:  t3: irqs 0x00f01000 (0), MSI
+hpet0:  t4: irqs 0x00000000 (0), MSI
+hpet0:  t5: irqs 0x00000000 (0), MSI
+hpet0:  t6: irqs 0x00000000 (0), MSI
+hpet0:  t7: irqs 0x00000000 (0), MSI
+Timecounter "HPET" frequency 24000000 Hz quality 950
+msi: routing MSI-X IRQ 120 to local APIC 2 vector 48
+msi: routing MSI-X IRQ 121 to local APIC 4 vector 48
+msi: routing MSI-X IRQ 122 to local APIC 6 vector 48
+msi: routing MSI-X IRQ 123 to local APIC 0 vector 49
+msi: routing MSI-X IRQ 124 to local APIC 2 vector 49
+msi: routing MSI-X IRQ 125 to local APIC 4 vector 49
+msi: routing MSI-X IRQ 126 to local APIC 6 vector 49
+msi: routing MSI-X IRQ 127 to local APIC 0 vector 50
+msi: Assigning MSI-X IRQ 120 to local APIC 0 vector 51
+msi: Assigning MSI-X IRQ 121 to local APIC 1 vector 48
+msi: Assigning MSI-X IRQ 122 to local APIC 2 vector 48
+msi: Assigning MSI-X IRQ 123 to local APIC 3 vector 48
+msi: Assigning MSI-X IRQ 124 to local APIC 4 vector 48
+msi: Assigning MSI-X IRQ 125 to local APIC 5 vector 48
+msi: Assigning MSI-X IRQ 127 to local APIC 7 vector 48
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+ioapic0: routing intpin 8 (ISA IRQ 8) to lapic 2 vector 49
+ioapic0: routing intpin 8 (ISA IRQ 8) to lapic 0 vector 49
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+ioapic0: routing intpin 2 (ISA IRQ 0) to lapic 4 vector 49
+Event timer "i8254" frequency 1193182 Hz quality 100
+ACPI timer: 1/1 1/1 1/1 1/1 1/1 1/1 1/1 1/1 1/1 1/1 -> 10
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pci_link0:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0   11   N     0  3 4 5 6 10 11 12 14 15
+  Validation          0   11   N     0  3 4 5 6 10 11 12 14 15
+  After Disable       0  255   N     0  3 4 5 6 10 11 12 14 15
+pci_link1:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0   10   N     0  3 4 5 6 10 11 12 14 15
+  Validation          0   10   N     0  3 4 5 6 10 11 12 14 15
+  After Disable       0  255   N     0  3 4 5 6 10 11 12 14 15
+pci_link2:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0   11   N     0  3 4 5 6 10 11 12 14 15
+  Validation          0   11   N     0  3 4 5 6 10 11 12 14 15
+  After Disable       0  255   N     0  3 4 5 6 10 11 12 14 15
+pci_link3:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0   11   N     0  3 4 5 6 10 11 12 14 15
+  Validation          0   11   N     0  3 4 5 6 10 11 12 14 15
+  After Disable       0  255   N     0  3 4 5 6 10 11 12 14 15
+pci_link4:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0   11   N     0  3 4 5 6 10 11 12 14 15
+  Validation          0   11   N     0  3 4 5 6 10 11 12 14 15
+  After Disable       0  255   N     0  3 4 5 6 10 11 12 14 15
+pci_link5:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0   11   N     0  3 4 5 6 10 11 12 14 15
+  Validation          0   11   N     0  3 4 5 6 10 11 12 14 15
+  After Disable       0  255   N     0  3 4 5 6 10 11 12 14 15
+pci_link6:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0   11   N     0  3 4 5 6 10 11 12 14 15
+  Validation          0   11   N     0  3 4 5 6 10 11 12 14 15
+  After Disable       0  255   N     0  3 4 5 6 10 11 12 14 15
+pci_link7:        Index  IRQ  Rtd  Ref  IRQs
+  Initial Probe       0   11   N     0  3 4 5 6 10 11 12 14 15
+  Validation          0   11   N     0  3 4 5 6 10 11 12 14 15
+  After Disable       0  255   N     0  3 4 5 6 10 11 12 14 15
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pcib0: decoding 5 range 0-0x7e
+pcib0: decoding 4 range 0-0xcf7
+pcib0: decoding 4 range 0xd00-0xffff
+pcib0: decoding 3 range 0xa0000-0xbffff
+pcib0: decoding 3 range 0x7f800000-0xefffffff
+pcib0: decoding 3 range 0x2000000000-0x2fffffffff
+pcib0: decoding 3 range 0xfd000000-0xfe7fffff
+pci0: <ACPI PCI bus> on pcib0
+pci0: domain=0, physical bus=0
+found->	vendor=0x8086, dev=0x5918, revid=0x05
+	domain=0, bus=0, slot=0, func=0
+	class=06-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0006, statreg=0x2090, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x8086, dev=0x1901, revid=0x05
+	domain=0, bus=0, slot=1, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0003, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+	secbus=1, subbus=1
+found->	vendor=0x8086, dev=0x591d, revid=0x04
+	domain=0, bus=0, slot=2, func=0
+	class=03-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=11
+	powerspec 2  supports D0 D3  current D0
+	MSI supports 1 message
+	map[10]: type Memory, range 64, base 0x2ff2000000, size 24, enabled
+pcib0: allocated type 3 (0x2ff2000000-0x2ff2ffffff) for rid 10 of pci0:0:2:0
+	map[18]: type Prefetchable Memory, range 64, base 0xa0000000, size 29, enabled
+pcib0: allocated type 3 (0xa0000000-0xbfffffff) for rid 18 of pci0:0:2:0
+	map[20]: type I/O Port, range 32, base 0xe000, size  6, enabled
+pcib0: allocated type 4 (0xe000-0xe03f) for rid 20 of pci0:0:2:0
+pcib0: matched entry for 0.2.INTA
+pcib0: slot 2 INTA hardwired to IRQ 16
+found->	vendor=0x8086, dev=0x1911, revid=0x00
+	domain=0, bus=0, slot=8, func=0
+	class=08-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 2  supports D0 D3  current D0
+	MSI supports 1 message
+	map[10]: type Memory, range 64, base 0x2ff3018000, size 12, memory disabled
+pcib0: allocated type 3 (0x2ff3018000-0x2ff3018fff) for rid 10 of pci0:0:8:0
+found->	vendor=0x8086, dev=0xa12f, revid=0x31
+	domain=0, bus=0, slot=20, func=0
+	class=0c-03-30, hdrtype=0x00, mfdev=1
+	cmdreg=0x0006, statreg=0x0290, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 2  supports D0 D3  current D0
+	MSI supports 8 messages, 64 bit
+	map[10]: type Memory, range 64, base 0xed920000, size 16, enabled
+pcib0: allocated type 3 (0xed920000-0xed92ffff) for rid 10 of pci0:0:20:0
+found->	vendor=0x8086, dev=0xa131, revid=0x31
+	domain=0, bus=0, slot=20, func=2
+	class=11-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=c, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+	map[10]: type Memory, range 64, base 0x2ff3017000, size 12, enabled
+pcib0: allocated type 3 (0x2ff3017000-0x2ff3017fff) for rid 10 of pci0:0:20:2
+pci0:0:21:0: Transition from D3 to D0
+found->	vendor=0x8086, dev=0xa160, revid=0x31
+	domain=0, bus=0, slot=21, func=0
+	class=11-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	map[10]: type Memory, range 64, base 0x2ff3016000, size 12, memory disabled
+pcib0: allocated type 3 (0x2ff3016000-0x2ff3016fff) for rid 10 of pci0:0:21:0
+found->	vendor=0x8086, dev=0xa13a, revid=0x31
+	domain=0, bus=0, slot=22, func=0
+	class=07-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[10]: type Memory, range 64, base 0x2ff3015000, size 12, memory disabled
+pcib0: allocated type 3 (0x2ff3015000-0x2ff3015fff) for rid 10 of pci0:0:22:0
+found->	vendor=0x8086, dev=0xa102, revid=0x31
+	domain=0, bus=0, slot=23, func=0
+	class=01-06-01, hdrtype=0x00, mfdev=0
+	cmdreg=0x0007, statreg=0x02b0, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+	map[10]: type Memory, range 32, base 0xed934000, size 13, enabled
+pcib0: allocated type 3 (0xed934000-0xed935fff) for rid 10 of pci0:0:23:0
+	map[14]: type Memory, range 32, base 0xed937000, size  8, enabled
+pcib0: allocated type 3 (0xed937000-0xed9370ff) for rid 14 of pci0:0:23:0
+	map[18]: type I/O Port, range 32, base 0xe080, size  3, enabled
+pcib0: allocated type 4 (0xe080-0xe087) for rid 18 of pci0:0:23:0
+	map[1c]: type I/O Port, range 32, base 0xe088, size  2, enabled
+pcib0: allocated type 4 (0xe088-0xe08b) for rid 1c of pci0:0:23:0
+	map[20]: type I/O Port, range 32, base 0xe060, size  5, enabled
+pcib0: allocated type 4 (0xe060-0xe07f) for rid 20 of pci0:0:23:0
+	map[24]: type Memory, range 32, base 0xed936000, size 11, enabled
+pcib0: allocated type 3 (0xed936000-0xed9367ff) for rid 24 of pci0:0:23:0
+found->	vendor=0x8086, dev=0xa167, revid=0xf1
+	domain=0, bus=0, slot=27, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+	secbus=2, subbus=2
+found->	vendor=0x8086, dev=0xa110, revid=0xf1
+	domain=0, bus=0, slot=28, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0003, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+	secbus=3, subbus=3
+found->	vendor=0x8086, dev=0xa112, revid=0xf1
+	domain=0, bus=0, slot=28, func=2
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0003, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=c, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+	secbus=4, subbus=4
+found->	vendor=0x8086, dev=0xa114, revid=0xf1
+	domain=0, bus=0, slot=28, func=4
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0003, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+	secbus=5, subbus=61
+found->	vendor=0x8086, dev=0xa118, revid=0xf1
+	domain=0, bus=0, slot=29, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0007, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+	secbus=62, subbus=62
+found->	vendor=0x8086, dev=0xa11c, revid=0xf1
+	domain=0, bus=0, slot=29, func=4
+	class=06-04-00, hdrtype=0x01, mfdev=1
+	cmdreg=0x0003, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+	secbus=63, subbus=63
+found->	vendor=0x8086, dev=0xa154, revid=0x31
+	domain=0, bus=0, slot=31, func=0
+	class=06-01-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0007, statreg=0x0200, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+found->	vendor=0x8086, dev=0xa121, revid=0x31
+	domain=0, bus=0, slot=31, func=2
+	class=05-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0000, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	map[10]: type Memory, range 32, base 0xed930000, size 14, memory disabled
+pcib0: allocated type 3 (0xed930000-0xed933fff) for rid 10 of pci0:0:31:2
+found->	vendor=0x8086, dev=0xa171, revid=0x31
+	domain=0, bus=0, slot=31, func=3
+	class=04-03-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0006, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[10]: type Memory, range 64, base 0x2ff3010000, size 14, enabled
+pcib0: allocated type 3 (0x2ff3010000-0x2ff3013fff) for rid 10 of pci0:0:31:3
+	map[20]: type Memory, range 64, base 0x2ff3000000, size 16, enabled
+pcib0: allocated type 3 (0x2ff3000000-0x2ff300ffff) for rid 20 of pci0:0:31:3
+found->	vendor=0x8086, dev=0xa123, revid=0x31
+	domain=0, bus=0, slot=31, func=4
+	class=0c-05-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0280, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	map[10]: type Memory, range 64, base 0x2ff3014000, size  8, memory disabled
+pcib0: allocated type 3 (0x2ff3014000-0x2ff30140ff) for rid 10 of pci0:0:31:4
+	map[20]: type I/O Port, range 32, base 0xefa0, size  5, port disabled
+pcib0: allocated type 4 (0xefa0-0xefbf) for rid 20 of pci0:0:31:4
+found->	vendor=0x8086, dev=0x15e3, revid=0x31
+	domain=0, bus=0, slot=31, func=6
+	class=02-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0006, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[10]: type Memory, range 32, base 0xed900000, size 17, enabled
+pcib0: allocated type 3 (0xed900000-0xed91ffff) for rid 10 of pci0:0:31:6
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pcib0: allocated type 4 (0xd000-0xdfff) for rid 1c of pcib1
+pcib0: allocated type 3 (0xeb000000-0xec0fffff) for rid 20 of pcib1
+pcib0: allocated type 3 (0xc0000000-0xd1ffffff) for rid 24 of pcib1
+pcib1:   domain            0
+pcib1:   secondary bus     1
+pcib1:   subordinate bus   1
+pcib1:   I/O decode        0xd000-0xdfff
+pcib1:   memory decode     0xeb000000-0xec0fffff
+pcib1:   prefetched decode 0xc0000000-0xd1ffffff
+pci1: <ACPI PCI bus> on pcib1
+pcib1: allocated bus range (1-1) for rid 0 of pci1
+pci1: domain=0, physical bus=1
+found->	vendor=0x10de, dev=0x1436, revid=0xa1
+	domain=0, bus=1, slot=0, func=0
+	class=03-02-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[10]: type Memory, range 32, base 0xeb000000, size 24, memory disabled
+pcib1: allocated memory range (0xeb000000-0xebffffff) for rid 10 of pci0:1:0:0
+	map[14]: type Prefetchable Memory, range 64, base 0xc0000000, size 28, enabled
+pcib1: allocated prefetch range (0xc0000000-0xcfffffff) for rid 14 of pci0:1:0:0
+	map[1c]: type Prefetchable Memory, range 64, base 0xd0000000, size 25, enabled
+pcib1: allocated prefetch range (0xd0000000-0xd1ffffff) for rid 1c of pci0:1:0:0
+	map[24]: type I/O Port, range 32, base 0xd000, size  7, port disabled
+pcib1: allocated I/O port range (0xd000-0xd07f) for rid 24 of pci0:1:0:0
+vgapci0: <VGA-compatible display> port 0xd000-0xd07f mem 0xeb000000-0xebffffff,0xc0000000-0xcfffffff,0xd0000000-0xd1ffffff at device 0.0 on pci1
+vgapci1: <VGA-compatible display> port 0xe000-0xe03f mem 0x2ff2000000-0x2ff2ffffff,0xa0000000-0xbfffffff irq 16 at device 2.0 on pci0
+vgapci1: Boot video device
+pci0: <base peripheral> at device 8.0 (no driver attached)
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xed920000-0xed92ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: attempting to allocate 1 MSI vectors (8 supported)
+msi: routing MSI IRQ 128 to local APIC 6 vector 48
+xhci0: using IRQ 128 for MSI
+xhci0: MSI enabled
+usbus0 on xhci0
+xhci0: usbpf: Attached
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <dasp> at device 20.2 (no driver attached)
+pci0: <dasp> at device 21.0 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xe080-0xe087,0xe088-0xe08b,0xe060-0xe07f mem 0xed934000-0xed935fff,0xed937000-0xed9370ff,0xed936000-0xed9367ff at device 23.0 on pci0
+ahci0: attempting to allocate 1 MSI vectors (1 supported)
+msi: routing MSI IRQ 129 to local APIC 0 vector 50
+ahci0: using IRQ 129 for MSI
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahci0: Caps: 64bit NCQ SNTF ALP AL CLO 6Gbps PMD SSC PSC 32cmd EM 2ports
+ahci0: Caps2: DESO SADM SDS APST
+ahcich0: not probed (disabled)
+ahcich1: not probed (disabled)
+ahcich2: not probed (disabled)
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich3: Caps:
+ahciem0: <AHCI enclosure management bridge> on ahci0
+ahciem0: Caps: ALHD XMT SMB LED
+pcib2: <ACPI PCI-PCI bridge> at device 27.0 on pci0
+pcib0: allocated type 3 (0xed800000-0xed8fffff) for rid 20 of pcib2
+pcib2:   domain            0
+pcib2:   secondary bus     2
+pcib2:   subordinate bus   2
+pcib2:   memory decode     0xed800000-0xed8fffff
+pci2: <ACPI PCI bus> on pcib2
+pcib2: allocated bus range (2-2) for rid 0 of pci2
+pci2: domain=0, physical bus=2
+found->	vendor=0x1e4b, dev=0x1202, revid=0x01
+	domain=0, bus=2, slot=0, func=0
+	class=01-08-02, hdrtype=0x00, mfdev=0
+	cmdreg=0x0006, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 32 messages, 64 bit, vector masks
+	MSI-X supports 20 messages in map 0x10
+	map[10]: type Memory, range 64, base 0xed800000, size 14, enabled
+pcib2: allocated memory range (0xed800000-0xed803fff) for rid 10 of pci0:2:0:0
+nvme0: <Generic NVMe Device> mem 0xed800000-0xed803fff at device 0.0 on pci2
+nvme0: attempting to allocate 5 MSI-X vectors (20 supported)
+msi: routing MSI-X IRQ 130 to local APIC 2 vector 49
+msi: routing MSI-X IRQ 131 to local APIC 4 vector 50
+msi: routing MSI-X IRQ 132 to local APIC 6 vector 50
+msi: routing MSI-X IRQ 133 to local APIC 0 vector 52
+msi: routing MSI-X IRQ 134 to local APIC 2 vector 50
+nvme0: using IRQs 130-134 for MSI-X
+nvme0: CapLo: 0xff0303ff: MQES 1023, CQR, AMS WRRwUPC, TO 255
+nvme0: CapHi: 0x00200030: DSTRD 0, NSSRS, CSS 1, MPSMIN 0, MPSMAX 2
+nvme0: Version: 0x00010400: 1.4
+pcib3: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pcib3: Unable to activate hot plug feature.
+pcib0: allocated type 4 (0xc000-0xcfff) for rid 1c of pcib3
+pcib0: allocated type 3 (0xece00000-0xed7fffff) for rid 20 of pcib3
+pcib0: allocated type 3 (0xec100000-0xecafffff) for rid 24 of pcib3
+pcib3:   domain            0
+pcib3:   secondary bus     3
+pcib3:   subordinate bus   3
+pcib3:   I/O decode        0xc000-0xcfff
+pcib3:   memory decode     0xece00000-0xed7fffff
+pcib3:   prefetched decode 0xec100000-0xecafffff
+pci3: <ACPI PCI bus> on pcib3
+pcib3: allocated bus range (3-3) for rid 0 of pci3
+pci3: domain=0, physical bus=3
+pcib4: <ACPI PCI-PCI bridge> at device 28.2 on pci0
+pcib0: allocated type 3 (0xecd00000-0xecdfffff) for rid 20 of pcib4
+pcib4:   domain            0
+pcib4:   secondary bus     4
+pcib4:   subordinate bus   4
+pcib4:   memory decode     0xecd00000-0xecdfffff
+pci4: <ACPI PCI bus> on pcib4
+pcib4: allocated bus range (4-4) for rid 0 of pci4
+pci4: domain=0, physical bus=4
+found->	vendor=0x8086, dev=0x24f3, revid=0x2a
+	domain=0, bus=4, slot=0, func=0
+	class=02-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[10]: type Memory, range 64, base 0xecd00000, size 13, memory disabled
+pcib4: allocated memory range (0xecd00000-0xecd01fff) for rid 10 of pci0:4:0:0
+pci4: <network> at device 0.0 (no driver attached)
+pcib5: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pcib5: Unable to activate hot plug feature.
+pcib0: allocated type 3 (0xd4000000-0xea0fffff) for rid 20 of pcib5
+pcib0: allocated type 3 (0x2fd0000000-0x2ff1ffffff) for rid 24 of pcib5
+pcib5:   domain            0
+pcib5:   secondary bus     5
+pcib5:   subordinate bus   61
+pcib5:   memory decode     0xd4000000-0xea0fffff
+pcib5:   prefetched decode 0x2fd0000000-0x2ff1ffffff
+pci5: <ACPI PCI bus> on pcib5
+pcib5: allocated bus range (5-5) for rid 0 of pci5
+pci5: domain=0, physical bus=5
+pcib6: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pcib0: allocated type 3 (0xecc00000-0xeccfffff) for rid 20 of pcib6
+pcib6:   domain            0
+pcib6:   secondary bus     62
+pcib6:   subordinate bus   62
+pcib6:   memory decode     0xecc00000-0xeccfffff
+pci6: <ACPI PCI bus> on pcib6
+pcib6: allocated bus range (62-62) for rid 0 of pci6
+pci6: domain=0, physical bus=62
+found->	vendor=0x144d, dev=0xa808, revid=0x00
+	domain=0, bus=62, slot=0, func=0
+	class=01-08-02, hdrtype=0x00, mfdev=0
+	cmdreg=0x0006, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+	MSI-X supports 33 messages in map 0x10
+	map[10]: type Memory, range 64, base 0xecc00000, size 14, enabled
+pcib6: allocated memory range (0xecc00000-0xecc03fff) for rid 10 of pci0:62:0:0
+nvme1: <Generic NVMe Device> mem 0xecc00000-0xecc03fff at device 0.0 on pci6
+nvme1: attempting to allocate 5 MSI-X vectors (33 supported)
+msi: routing MSI-X IRQ 135 to local APIC 4 vector 51
+msi: routing MSI-X IRQ 136 to local APIC 6 vector 51
+msi: routing MSI-X IRQ 137 to local APIC 0 vector 53
+msi: routing MSI-X IRQ 138 to local APIC 2 vector 51
+msi: routing MSI-X IRQ 139 to local APIC 4 vector 52
+nvme1: using IRQs 135-139 for MSI-X
+nvme1: CapLo: 0x3c033fff: MQES 16383, CQR, AMS WRRwUPC, TO 60
+nvme1: CapHi: 0x00000030: DSTRD 0, NSSRS, CSS 1, MPSMIN 0, MPSMAX 0
+nvme1: Version: 0x00010300: 1.3
+pcib7: <ACPI PCI-PCI bridge> at device 29.4 on pci0
+pcib0: allocated type 3 (0xecb00000-0xecbfffff) for rid 20 of pcib7
+pcib7:   domain            0
+pcib7:   secondary bus     63
+pcib7:   subordinate bus   63
+pcib7:   memory decode     0xecb00000-0xecbfffff
+pci7: <ACPI PCI bus> on pcib7
+pcib7: allocated bus range (63-63) for rid 0 of pci7
+pci7: domain=0, physical bus=63
+found->	vendor=0x10ec, dev=0x525a, revid=0x01
+	domain=0, bus=63, slot=0, func=0
+	class=ff-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 1 message, 64 bit
+	map[14]: type Memory, range 32, base 0xecb00000, size 12, memory disabled
+pcib7: allocated memory range (0xecb00000-0xecb00fff) for rid 14 of pci0:63:0:0
+rtsx0: <2.0c Realtek RTS525A PCI MMC/SD Card Reader> mem 0xecb00000-0xecb00fff at device 0.0 on pci7
+rtsx0: Attach - Vendor ID: 0x10ec - Device ID: 0x525a
+rtsx0: attempting to allocate 1 MSI vectors (1 supported)
+msi: routing MSI IRQ 140 to local APIC 6 vector 52
+rtsx0: using IRQ 140 for MSI
+rtsx0: rtsx_irq_res_id: 1, rtsx_res_id: 20
+rtsx0: pci_read_config() error - reg: 0xeeffffaa
+rtsx0: card_drive_sel = 0x41, sd30_drive_sel_3v3: 0x03, reverse_socket is false
+rtsx0: rtsx_init() rtsx_flags: 0x0002
+rtsx0: rtsx_bus_power_off()
+rtsx0: rtsx_set_sd_timing(0)
+rtsx0: rtsx_set_sd_clock(0)
+rtsx0: Card absent
+rtsx0: Device attached
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake HDA Controller> mem 0x2ff3010000-0x2ff3013fff,0x2ff3000000-0x2ff300ffff at device 31.3 on pci0
+hdac0: PCI card vendor: 0x17aa, device: 0x224d
+hdac0: HDA Driver Revision: 20120126_0002
+hdac0: Config options: on=0x00000000 off=0x00000000
+hdac0: attempting to allocate 1 MSI vectors (1 supported)
+msi: routing MSI IRQ 141 to local APIC 0 vector 54
+hdac0: using IRQ 141 for MSI
+hdac0: Caps: OSS 9, ISS 7, BSS 0, NSDO 1, 64bit, CORB 256, RIRB 256
+pci0: <serial bus, SMBus> at device 31.4 (no driver attached)
+em0: <Intel(R) PRO/1000 Network Connection> mem 0xed900000-0xed91ffff at device 31.6 on pci0
+em0: attach_pre capping queues at 1
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: msix_init qsets capped at 1
+em0: attempting to allocate 1 MSI vectors (1 supported)
+msi: routing MSI IRQ 142 to local APIC 2 vector 52
+em0: using IRQ 142 for MSI
+em0: Using an MSI interrupt
+em0: allocated for 1 tx_queues
+em0: allocated for 1 rx_queues
+msi: Assigning MSI IRQ 142 to local APIC 7 vector 49
+msi: Assigning MSI IRQ 142 to local APIC 6 vector 53
+em0: bpf attached
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+acpi_button0: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+atkbd: the current kbd controller command byte 0047
+atkbd: keyboard ID 0x54ab (2)
+kbdc: RESET_KBD return code:00fa
+kbdc: RESET_KBD status:00aa
+kbd0 at atkbd0
+kbd0: atkbd0, AT 101/102 (2), config:0x0, flags:0x1d0000
+ioapic0: routing intpin 1 (ISA IRQ 1) to lapic 4 vector 53
+atkbd0: [GIANT-LOCKED]
+psm0: unable to allocate IRQ
+psmcpnp0: <PS/2 mouse port> irq 12 on acpi0
+psm0: current command byte:0047
+kbdc: TEST_AUX_PORT status:0000
+kbdc: RESET_AUX return code:00fa
+kbdc: RESET_AUX status:00aa
+kbdc: RESET_AUX ID:0000
+kbdc: RESET_AUX return code:00fa
+kbdc: RESET_AUX status:00aa
+kbdc: RESET_AUX ID:0000
+psm: status 00 02 64
+psm: status 00 00 64
+psm: status 00 03 64
+psm: status 00 03 64
+psm: data 08 00 00
+psm: status 01 47 18
+psm: status 01 e2 b1
+psm: status f4 01 a3
+psm: status 2d 80 44
+psm: status 94 03 00
+psm: status 02 e8 00
+psm: status b1 96 94
+psm: status 27 69 22
+psm: status 31 4d 40
+psm: status 00 02 64
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+ioapic0: routing intpin 12 (ISA IRQ 12) to lapic 6 vector 54
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0-00, 4 buttons
+psm0: config:00004000, flags:00000008, packet size:6
+psm0: syncmask:c0, syncbits:00
+acpi_acad0: <AC Adapter> on acpi0
+AcpiOsExecute: task queue not started
+battery0: <ACPI Control Method Battery> on acpi0
+AcpiOsExecute: task queue not started
+ACPI: Enabled 5 GPEs in block 00 to 7F
+ahc_isa_identify 0: ioport 0xc00 alloc failed
+AcpiOsExecute: task queue not started
+ahc_isa_identify 1: ioport 0x1c00 alloc failed
+ahc_isa_identify 2: ioport 0x2c00 alloc failed
+ahc_isa_identify 3: ioport 0x3c00 alloc failed
+ahc_isa_identify 4: ioport 0x4c00 alloc failed
+ahc_isa_identify 5: ioport 0x5c00 alloc failed
+ahc_isa_identify 6: ioport 0x6c00 alloc failed
+ahc_isa_identify 7: ioport 0x7c00 alloc failed
+ahc_isa_identify 8: ioport 0x8c00 alloc failed
+ahc_isa_identify 9: ioport 0x9c00 alloc failed
+ahc_isa_identify 10: ioport 0xac00 alloc failed
+ahc_isa_identify 11: ioport 0xbc00 alloc failed
+ahc_isa_identify 12: ioport 0xcc00 alloc failed
+ahc_isa_identify 13: ioport 0xdc00 alloc failed
+ahc_isa_identify 14: ioport 0xec00 alloc failed
+pcib0: allocated type 3 (0xa0000-0xa07ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa0800-0xa0fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa1000-0xa17ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa1800-0xa1fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa2000-0xa27ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa2800-0xa2fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa3000-0xa37ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa3800-0xa3fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa4000-0xa47ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa4800-0xa4fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa5000-0xa57ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa5800-0xa5fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa6000-0xa67ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa6800-0xa6fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa7000-0xa77ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa7800-0xa7fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa8000-0xa87ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa8800-0xa8fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa9000-0xa97ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xa9800-0xa9fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xaa000-0xaa7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xaa800-0xaafff) for rid 0 of orm0
+pcib0: allocated type 3 (0xab000-0xab7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xab800-0xabfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xac000-0xac7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xac800-0xacfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xad000-0xad7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xad800-0xadfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xae000-0xae7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xae800-0xaefff) for rid 0 of orm0
+pcib0: allocated type 3 (0xaf000-0xaf7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xaf800-0xaffff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb0000-0xb07ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb0800-0xb0fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb1000-0xb17ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb1800-0xb1fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb2000-0xb27ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb2800-0xb2fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb3000-0xb37ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb3800-0xb3fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb4000-0xb47ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb4800-0xb4fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb5000-0xb57ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb5800-0xb5fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb6000-0xb67ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb6800-0xb6fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb7000-0xb77ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb7800-0xb7fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb8000-0xb87ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb8800-0xb8fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb9000-0xb97ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xb9800-0xb9fff) for rid 0 of orm0
+pcib0: allocated type 3 (0xba000-0xba7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xba800-0xbafff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbb000-0xbb7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbb800-0xbbfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbc000-0xbc7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbc800-0xbcfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbd000-0xbd7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbd800-0xbdfff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbe000-0xbe7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbe800-0xbefff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbf000-0xbf7ff) for rid 0 of orm0
+pcib0: allocated type 3 (0xbf800-0xbffff) for rid 0 of orm0
+isa_probe_children: disabling PnP devices
+atkbdc: atkbdc0 already exists; skipping it
+atrtc: atrtc0 already exists; skipping it
+attimer: attimer0 already exists; skipping it
+sc: sc0 already exists; skipping it
+isa_probe_children: probing non-PnP devices
+sc0 failed to probe on isa0
+vga0 failed to probe on isa0
+pcib0: allocated type 4 (0x3f0-0x3f5) for rid 0 of fdc0
+pcib0: allocated type 4 (0x3f7-0x3f7) for rid 1 of fdc0
+fdc0 failed to probe at port 0x3f0-0x3f5,0x3f7 irq 6 drq 2 on isa0
+ppc0: cannot reserve I/O port range
+ppc0 failed to probe at irq 7 on isa0
+pcib0: allocated type 4 (0x3f8-0x3f8) for rid 0 of uart0
+pcib0: allocated type 4 (0x3f8-0x3f8) for rid 0 of uart0
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+pcib0: allocated type 4 (0x3f8-0x3f8) for rid 0 of uart0
+ioapic0: routing intpin 4 (ISA IRQ 4) to lapic 0 vector 55
+uart0: fast interrupt
+uart0: PPS capture mode: DCD
+uart0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+pcib0: allocated type 4 (0x2f8-0x2f8) for rid 0 of uart1
+uart1 failed to probe at port 0x2f8 irq 3 on isa0
+isa_probe_children: probing PnP devices
+cpu0: hwpstate registered
+AcpiOsExecute: task queue not started
+cpu1: hwpstate registered
+AcpiOsExecute: task queue not started
+cpu2: hwpstate registered
+AcpiOsExecute: task queue not started
+cpu3: hwpstate registered
+AcpiOsExecute: task queue not started
+cpu4: hwpstate registered
+AcpiOsExecute: task queue not started
+cpu5: hwpstate registered
+AcpiOsExecute: task queue not started
+cpu6: hwpstate registered
+AcpiOsExecute: task queue not started
+cpu7: hwpstate registered
+AcpiOsExecute: task queue not started
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Device configuration finished.
+procfs registered
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+lo0: bpf attached
+vlan: initialized, using hash tables with chaining
+crypto: <crypto device>
+tcp_init: net.inet.tcp.tcbhashsize auto tuned to 524288
+IPsec: Initialized Security Association Processing.
+AcpiOsExecute: enqueue 11 pending tasks
+acpi_acad0: acline initialization start
+battery0: battery enitialization start
+ahcich3: AHCI reset...
+acpi_acad0: On Line
+ahcich3: SATA connect time=100us status=00000133
+ahcich3: AHCI reset: device found
+acpi_acad0: acline initialization done, tried 1 times
+battery0: rev = 0001
+battery0: units = 0
+battery0: dcap = 0
+battery0: lfcap = 0
+battery0: btech = 0
+battery0: dvol = 0
+battery0: wcap = 0
+battery0: lcap = 0
+battery0: cycles = 0
+battery0: accuracy = 0
+battery0: stmax = 0
+battery0: stmin = 0
+battery0: aimax = 0
+battery0: aimin = 0
+battery0: gra1 = 0
+battery0: gra2 = 0
+battery0: scap = 0
+battery0: battery initialization done, tried 1 times
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+ahcich3: AHCI reset: device ready after 100ms
+uhub0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+msi: Assigning MSI-X IRQ 131 to local APIC 1 vector 49
+msi: Assigning MSI-X IRQ 132 to local APIC 3 vector 49
+msi: Assigning MSI-X IRQ 133 to local APIC 5 vector 49
+msi: Assigning MSI-X IRQ 134 to local APIC 7 vector 49
+nvme0: Allocated 16MB host memory buffer
+nvd0: <HS-SSD-C2000ECO 1024G> NVMe namespace
+GEOM: new disk nvd0
+nvd0: 976762MB (2000409264 512 byte sectors)
+msi: Assigning MSI-X IRQ 136 to local APIC 0 vector 52
+msi: Assigning MSI-X IRQ 137 to local APIC 2 vector 50
+msi: Assigning MSI-X IRQ 138 to local APIC 4 vector 50
+msi: Assigning MSI-X IRQ 139 to local APIC 6 vector 50
+nvd1: <Samsung SSD 970 EVO Plus 1TB> NVMe namespace
+GEOM: new disk nvd1
+nvd1: 953869MB (1953525168 512 byte sectors)
+hdacc0: <Realtek ALC298 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC298 Audio Function Group> at nid 1 on hdacc0
+hdaa0: Subsystem ID: 0x17aa224d
+hdaa0: NumGPIO=8 NumGPO=0 NumGPI=0 GPIWake=0 GPIUnsol=1
+hdaa0:  GPIO0: disabled
+hdaa0:  GPIO1: disabled
+hdaa0:  GPIO2: disabled
+hdaa0:  GPIO3: disabled
+hdaa0:  GPIO4: disabled
+hdaa0:  GPIO5: disabled
+hdaa0:  GPIO6: disabled
+hdaa0:  GPIO7: disabled
+hdaa0: Original pins configuration:
+hdaa0: nid   0x    as seq device       conn  jack    loc        color   misc
+hdaa0: 18 90a60140 4  0  Mic           Fixed Digital Internal   Unknown 1
+hdaa0: 19 40000000 0  0  Line-out      None  Unknown 0x00       Unknown 0
+hdaa0: 20 90170110 1  0  Speaker       Fixed Analog  Internal   Unknown 1
+hdaa0: 23 411111f0 15 0  Speaker       None  1/8     Rear       Black   1
+hdaa0: 24 03a11030 3  0  Mic           Jack  1/8     Left       Black   0
+hdaa0: 25 411111f0 15 0  Speaker       None  1/8     Rear       Black   1
+hdaa0: 26 411111f0 15 0  Speaker       None  1/8     Rear       Black   1
+hdaa0: 29 40648605 0  5  Modem-line    None  RCA     0x00       Purple  6
+hdaa0: 30 411111f0 15 0  Speaker       None  1/8     Rear       Black   1
+hdaa0: 31 411111f0 15 0  Speaker       None  1/8     Rear       Black   1
+hdaa0: 33 03211020 2  0  Headphones    Jack  1/8     Left       Black   0
+hdaa0: Patching pin config nid=23 0x411111f0 -> 0x03a1103f
+hdaa0: Patching widget caps nid=29 0x00400400 -> 0x00700400
+hdaa0: Patching pin config nid=33 0x03211020 -> 0x2121101f
+hdaa0: Patched pins configuration:
+hdaa0: nid   0x    as seq device       conn  jack    loc        color   misc
+hdaa0: 18 90a60140 4  0  Mic           Fixed Digital Internal   Unknown 1
+hdaa0: 19 40000000 0  0  Line-out      None  Unknown 0x00       Unknown 0 DISA
+hdaa0: 20 90170110 1  0  Speaker       Fixed Analog  Internal   Unknown 1
+hdaa0: 23 03a1103f 3  15 Mic           Jack  1/8     Left       Black   0
+hdaa0: 24 03a11030 3  0  Mic           Jack  1/8     Left       Black   0
+hdaa0: 25 411111f0 15 0  Speaker       None  1/8     Rear       Black   1 DISA
+hdaa0: 26 411111f0 15 0  Speaker       None  1/8     Rear       Black   1 DISA
+hdaa0: 30 411111f0 15 0  Speaker       None  1/8     Rear       Black   1 DISA
+hdaa0: 31 411111f0 15 0  Speaker       None  1/8     Rear       Black   1 DISA
+hdaa0: 33 2121101f 1  15 Headphones    Jack  1/8     Ext-Rear   Black   0
+hdaa0: 3 associations found:
+hdaa0: Association 0 (1) out:
+hdaa0:  Pin nid=20 seq=0
+hdaa0:  Pin nid=33 seq=15
+hdaa0: Association 1 (3) in:
+hdaa0:  Pin nid=24 seq=0
+hdaa0:  Pin nid=23 seq=15
+hdaa0: Association 2 (4) in:
+hdaa0:  Pin nid=18 seq=0
+hdaa0: Tracing association 0 (1)
+hdaa0:  Pin 20 traced to DAC 2
+hdaa0:  Pin 33 traced to DAC 2 and hpredir 0
+hdaa0: Association 0 (1) trace succeeded
+hdaa0: Tracing association 1 (3)
+hdaa0:  Pin 24 traced to ADC 8
+hdaa0:  Unable to trace pin 23 to ADC 8, undo traces
+hdaa0:  Pin 24 traced to ADC 9
+hdaa0:  Unable to trace pin 23 to ADC 9, undo traces
+hdaa0:  Unable to trace pin 24 to ADC 10, undo traces
+hdaa0:  Unable to trace pin 24 to ADC 17, undo traces
+hdaa0: Association 1 (3) trace failed
+hdaa0: Tracing association 2 (4)
+hdaa0:  Unable to trace pin 18 to ADC 8, undo traces
+hdaa0:  Pin 18 traced to ADC 9
+hdaa0: Association 2 (4) trace succeeded
+hdaa0: Looking for additional DAC for association 0 (1)
+hdaa0: Looking for additional ADC for association 2 (4)
+hdaa0: Tracing input monitor
+hdaa0: Tracing other input monitors
+hdaa0:  Tracing nid 18 to out
+hdaa0: Tracing beeper
+hdaa0:  nid 29 traced to out
+hdaa0: Headphones redirection for association 0 nid=33 using unsolicited responses.
+hdaa0: Redirect output to: main
+hdaa0: FG config/quirks: forcestereo ivref50 ivref80 ivref100 ivref
+pcm0: <Realtek ALC298 (Analog 2.0+HP/2.0)> at nid 20,33 and 18 on hdaa0
+pcm0: Playback:
+pcm0:      Stream cap: 0x00000001 PCM
+pcm0:         PCM cap: 0x000e0060 16 20 24 bits, 44 48 KHz
+pcm0:             DAC: 2
+pcm0: 
+pcm0:     nid=20 [pin: Speaker (Fixed)]
+pcm0:       + <- nid=12 [audio mixer] [src: pcm, speaker]
+pcm0:              + <- nid=2 [audio output] [src: pcm]
+pcm0:              + <- nid=11 [audio mixer] [src: speaker]
+pcm0:                     + <- nid=29 [beep widget] [src: speaker]
+pcm0: 
+pcm0:     nid=33 [pin: Headphones (Black Jack)]
+pcm0:       + <- nid=12 [audio mixer] [src: pcm, speaker]
+pcm0:              + <- nid=2 [audio output] [src: pcm]
+pcm0:              + <- nid=11 [audio mixer] [src: speaker]
+pcm0:                     + <- nid=29 [beep widget] [src: speaker]
+pcm0: 
+pcm0: Record:
+pcm0:      Stream cap: 0x00000001 PCM
+pcm0:         PCM cap: 0x000e0060 16 20 24 bits, 44 48 KHz
+pcm0:             ADC: 9
+pcm0: 
+pcm0:     nid=9 [audio input]
+pcm0:       + <- nid=34 [audio selector] [src: speaker, monitor]
+pcm0:              + <- nid=29 [beep widget] [src: speaker]
+pcm0:              + <- nid=11 [audio mixer] [src: speaker]
+pcm0:                     + <- nid=29 [beep widget] [src: speaker]
+pcm0:              + <- nid=18 [pin: Mic (Fixed)] [src: monitor]
+pcm0: 
+pcm0: Master Volume (OSS: vol): -63/0dB
+pcm0:    +- ctl  1 (nid   2 out):    -63/0dB (128 steps)
+pcm0:    +- ctl  9 (nid  12 in   0): mute
+pcm0:    +- ctl 10 (nid  12 in   1): mute
+pcm0:    +- ctl 15 (nid  20 in ):    mute
+pcm0:    +- ctl 21 (nid  33 in ):    mute
+pcm0: 
+pcm0: PCM Volume (OSS: pcm): -63/0dB
+pcm0:    +- ctl  1 (nid   2 out):    -63/0dB (128 steps)
+pcm0:    +- ctl  9 (nid  12 in   0): mute
+pcm0: 
+pcm0: Microphone2 Volume (OSS: monitor): 0/30dB
+pcm0:    +- ctl  4 (nid   9 in   0): -33/30dB (128 steps) + mute
+pcm0:    +- ctl 13 (nid  18 out):    0/30dB (4 steps)
+pcm0: 
+pcm0: Speaker/Beep Volume (OSS: speaker): -33/12dB
+pcm0:    +- ctl  4 (nid   9 in   0): -33/30dB (128 steps) + mute
+pcm0:    +- ctl  8 (nid  11 in   3): -34/12dB (32 steps) + mute
+pcm0:    +- ctl 10 (nid  12 in   1): mute
+pcm0: 
+pcm0: Recording Level (OSS: rec): -33/30dB
+pcm0:    +- ctl  4 (nid   9 in   0): -33/30dB (128 steps) + mute
+pcm0:    +- ctl 13 (nid  18 out):    0/30dB (4 steps)
+pcm0: 
+pcm0: Input Monitoring Level (OSS: igain): 0/0dB
+pcm0:    +- ctl 10 (nid  12 in   1): mute
+pcm0: 
+pcm0: Mixer "vol":
+pcm0: Mixer "pcm":
+pcm0: Mixer "speaker":
+pcm0: Mixer "rec":
+pcm0: Mixer "igain":
+pcm0: Mixer "ogain":
+pcm0: Mixer "monitor":
+pcm0: Playback channel set is: Front Left, Front Right, 
+pcm0: Playback channel matrix is: 2.0 (unknown)
+pcm0: Automatically set rec source to: monitor
+pcm0: Recording channel set is: Front Left, Front Right, 
+pcm0: Recording channel matrix is: 2.0 (unknown)
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+hdaa1: Subsystem ID: 0x80860101
+hdaa1: NumGPIO=0 NumGPO=0 NumGPI=0 GPIWake=0 GPIUnsol=0
+hdaa1: Original pins configuration:
+hdaa1: nid   0x    as seq device       conn  jack    loc        color   misc
+hdaa1:  3 18560010 1  0  Digital-out   Jack  Digital 0x18       Unknown 0
+hdaa1: Patched pins configuration:
+hdaa1: nid   0x    as seq device       conn  jack    loc        color   misc
+hdaa1:  3 18560010 1  0  Digital-out   Jack  Digital 0x18       Unknown 0
+hdaa1: 1 associations found:
+hdaa1: Association 0 (1) out:
+hdaa1:  Pin nid=3 seq=0
+hdaa1: Tracing association 0 (1)
+hdaa1:  Pin 3 traced to DAC 2
+hdaa1: Association 0 (1) trace succeeded
+hdaa1: Looking for additional DAC for association 0 (1)
+hdaa1: Tracing input monitor
+hdaa1: Tracing other input monitors
+hdaa1: Tracing beeper
+hdaa1: FG config/quirks: forcestereo ivref50 ivref80 ivref100 ivref
+pcm1: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+pcm1: Playback:
+pcm1:      Stream cap: 0x00000005 AC3 PCM
+pcm1:         PCM cap: 0x001a07f0 16 24 32 bits, 32 44 48 88 96 176 192 KHz
+pcm1:             DAC: 2
+pcm1: 
+pcm1:     nid=3 [pin: Digital-out (Jack)]
+pcm1:       + <- nid=2 [audio output] [src: pcm]
+pcm1: 
+pcm1: Master Volume (OSS: vol): 0/0dB
+pcm1:    +- ctl  1 (nid   3 in ):    mute
+pcm1: 
+pcm1: PCM Volume (OSS: pcm): 0/0dB
+pcm1:    +- ctl  1 (nid   3 in ):    mute
+pcm1: 
+pcm1: Mixer "vol":
+pcm1: Mixer "pcm":
+pcm1: Soft PCM mixer ENABLED
+pcm1: Playback channel matrix is: unknown, assuming 7.1 (disconnected)
+pci0: driver added
+found->	vendor=0x8086, dev=0x1911, revid=0x00
+	domain=0, bus=0, slot=8, func=0
+	class=08-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 2  supports D0 D3  current D0
+	MSI supports 1 message
+pci0:0:8:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa131, revid=0x31
+	domain=0, bus=0, slot=20, func=2
+	class=11-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=c, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+pci0:0:20:2: reprobing on driver added
+found->	vendor=0x8086, dev=0xa160, revid=0x31
+	domain=0, bus=0, slot=21, func=0
+	class=11-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+pci0:0:21:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa13a, revid=0x31
+	domain=0, bus=0, slot=22, func=0
+	class=07-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pci0:0:22:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa121, revid=0x31
+	domain=0, bus=0, slot=31, func=2
+	class=05-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+pci0:0:31:2: reprobing on driver added
+found->	vendor=0x8086, dev=0xa123, revid=0x31
+	domain=0, bus=0, slot=31, func=4
+	class=0c-05-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0003, statreg=0x0280, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+pci0:0:31:4: reprobing on driver added
+pci1: driver added
+pci2: driver added
+pci3: driver added
+pci4: driver added
+found->	vendor=0x8086, dev=0x24f3, revid=0x2a
+	domain=0, bus=4, slot=0, func=0
+	class=02-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pci0:4:0:0: reprobing on driver added
+pci5: driver added
+pci6: driver added
+pci7: driver added
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 CAM
+GEOM: new disk ada0
+ada0 at ahcich3 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 870 EVO 1TB SVT01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+pass0 at ahcich3 bus 0 scbus0 target 0 lun 0
+pass0: <Samsung SSD 870 EVO 1TB SVT01B6Q> ACS-4 ATA SATA 3.x device
+pass0: Serial Number...
+pass0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+pass0: Command Queueing enabled
+pass1 at ahciem0 bus 0 scbus1 target 0 lun 0
+pass1: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0 at ahciem0 bus 0 scbus1 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ses0: ada0,pass0 in 'Slot 03', SATA Slot: scbus0 target 0
+Root mount waiting for: usbus0
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <8SSC20F27019L1GZ6720022 Integrated Camera> at usbus0
+Root mount waiting for: usbus0
+ugen0.3: <vendor 0x138a product 0x0097> at usbus0
+Root mount waiting for: usbus0
+ugen0.4: <vendor 0x8087 product 0x0a2b> at usbus0
+efirtc0: providing initial system time
+start_init: trying /sbin/init
+anon_inodefs registered
+drmn1: <drmn> on vgapci1
+vgapci1: child drmn1 requested pci_enable_io
+vgapci1: child drmn1 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+VT: Replacing driver "efifb" with new "dummy".
+Failed to add WC MTRR for [0xa0000000-0xbfffffff]: -22; performance may suffer
+[drm] Got stolen memory base 0x7b800000, size 0x4000000
+vgapci1: attempting to allocate 1 MSI vectors (1 supported)
+msi: routing MSI IRQ 143 to local APIC 2 vector 51
+vgapci1: using IRQ 143 for MSI
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+kbl_dmc_ver1_04.bin: could not load firmware image, error 2
+i915/kbl_dmc_ver1_04.bin: could not load firmware image, error 2
+i915_kbl_dmc_ver1_04.bin: could not load firmware image, error 2
+[drm] Connector eDP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.eDP-1
+[drm]   - kern.vt.fb.default_mode
+firmware: 'i915_kbl_dmc_ver1_04_bin' version 0: 8840 bytes loaded at 0xffffffff838e0000
+drmn1: successfully loaded firmware image 'i915/kbl_dmc_ver1_04.bin'
+[drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+drmn1: Failed to program MOCS registers; expect performance issues.
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] Initialized i915 1.6.0 20190822 for drmn1 on minor 0
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 14.0.
+VT: Replacing driver "dummy" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+cmsize=16 size=8294400
+pbase=0xa0000000 vbase=0xfffff800a0000000
+name=drmn1 flags=0x0 stride=7680 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn1: fb0: i915drmfb frame buffer device
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMI1.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WMI2.WQBB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134_SB.WMI3.WQBC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+pci0: driver added
+found->	vendor=0x8086, dev=0x1911, revid=0x00
+	domain=0, bus=0, slot=8, func=0
+	class=08-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 2  supports D0 D3  current D0
+	MSI supports 1 message
+pci0:0:8:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa131, revid=0x31
+	domain=0, bus=0, slot=20, func=2
+	class=11-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=c, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message
+pci0:0:20:2: reprobing on driver added
+pchtherm0: <Skylake PCH 100 Thermal Subsystem> mem 0x2ff3017000-0x2ff3017fff at device 20.2 on pci0
+pchtherm0: Catastrophic Power Down Locked Enable
+pchtherm0: SMBus report  Enable
+pchtherm0: SMI on alert Locked Enable
+pchtherm0: TSPM: 6<Lock,DTSS0EN>
+pchtherm0: MAX Thermal Sensor Shutdown Time 32s
+pchtherm0: Throttling 5<Lock,TTEN>
+pchtherm0: TL2 flag 2<Lock>
+found->	vendor=0x8086, dev=0xa160, revid=0x31
+	domain=0, bus=0, slot=21, func=0
+	class=11-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+pci0:0:21:0: reprobing on driver added
+ig4iic0: <Intel Sunrise Point-H I2C Controller-0> mem 0x2ff3016000-0x2ff3016fff at device 21.0 on pci0
+ig4iic0: Using MSI
+pcib0: matched entry for 0.21.INTA
+pcib0: slot 21 INTA hardwired to IRQ 16
+ig4iic0: Controller parameters:
+  Speed: Fast
+  Regs:  HCNT  :LCNT  :SDAHLD
+  Std:   0x0201:0x0257:0x001c
+  Fast:  0x0069:0x00bf:0x001c
+  FIFO:  RX:0x0001: TX:0x0001
+ioapic0: routing intpin 16 (PCI IRQ 16) to lapic 4 vector 52
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+found->	vendor=0x8086, dev=0xa13a, revid=0x31
+	domain=0, bus=0, slot=22, func=0
+	class=07-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pci0:0:22:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa121, revid=0x31
+	domain=0, bus=0, slot=31, func=2
+	class=05-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+pci0:0:31:2: reprobing on driver added
+found->	vendor=0x8086, dev=0xa123, revid=0x31
+	domain=0, bus=0, slot=31, func=4
+	class=0c-05-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0003, statreg=0x0280, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+pci0:0:31:4: reprobing on driver added
+ichsmb0: <Intel Sunrise Point-H SMBus controller> port 0xefa0-0xefbf mem 0x2ff3014000-0x2ff30140ff at device 31.4 on pci0
+pcib0: matched entry for 0.31.INTA
+pcib0: slot 31 INTA hardwired to IRQ 16
+smbus0: <System Management Bus> on ichsmb0
+pci1: driver added
+pci2: driver added
+pci3: driver added
+pci4: driver added
+found->	vendor=0x8086, dev=0x24f3, revid=0x2a
+	domain=0, bus=4, slot=0, func=0
+	class=02-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pci0:4:0:0: reprobing on driver added
+iwm0: <Intel(R) Dual Band Wireless AC 8260> mem 0xecd00000-0xecd01fff at device 0.0 on pci4
+iwm0: attempting to allocate 1 MSI vectors (1 supported)
+msi: routing MSI IRQ 144 to local APIC 6 vector 51
+iwm0: using IRQ 144 for MSI
+firmware: 'iwm8000Cfw' version 0: 2120860 bytes loaded at 0xffffffff83a02000
+iwm0: hw rev 0x200, fw ver 22.361476.0, address XXX
+iwm0: 11a rates: 6Mbps 9Mbps 12Mbps 18Mbps 24Mbps 36Mbps 48Mbps 54Mbps
+iwm0: 11b rates: 1Mbps 2Mbps 5.5Mbps 11Mbps
+iwm0: 11g rates: 1Mbps 2Mbps 5.5Mbps 11Mbps 6Mbps 9Mbps 12Mbps 18Mbps 24Mbps 36Mbps 48Mbps 54Mbps
+pci5: driver added
+pci6: driver added
+pci7: driver added
+pci0: driver added
+found->	vendor=0x8086, dev=0x1911, revid=0x00
+	domain=0, bus=0, slot=8, func=0
+	class=08-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 2  supports D0 D3  current D0
+	MSI supports 1 message
+pci0:0:8:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa13a, revid=0x31
+	domain=0, bus=0, slot=22, func=0
+	class=07-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pci0:0:22:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa121, revid=0x31
+	domain=0, bus=0, slot=31, func=2
+	class=05-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+pci0:0:31:2: reprobing on driver added
+pci1: driver added
+pci2: driver added
+pci3: driver added
+pci4: driver added
+pci5: driver added
+pci6: driver added
+pci7: driver added
+pci0: driver added
+found->	vendor=0x8086, dev=0x1911, revid=0x00
+	domain=0, bus=0, slot=8, func=0
+	class=08-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 2  supports D0 D3  current D0
+	MSI supports 1 message
+pci0:0:8:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa13a, revid=0x31
+	domain=0, bus=0, slot=22, func=0
+	class=07-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pci0:0:22:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa121, revid=0x31
+	domain=0, bus=0, slot=31, func=2
+	class=05-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+pci0:0:31:2: reprobing on driver added
+pci1: driver added
+pci2: driver added
+pci3: driver added
+pci4: driver added
+pci5: driver added
+pci6: driver added
+pci7: driver added
+pci0: driver added
+found->	vendor=0x8086, dev=0x1911, revid=0x00
+	domain=0, bus=0, slot=8, func=0
+	class=08-80-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 2  supports D0 D3  current D0
+	MSI supports 1 message
+pci0:0:8:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa13a, revid=0x31
+	domain=0, bus=0, slot=22, func=0
+	class=07-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 1 message, 64 bit
+pci0:0:22:0: reprobing on driver added
+found->	vendor=0x8086, dev=0xa121, revid=0x31
+	domain=0, bus=0, slot=31, func=2
+	class=05-80-00, hdrtype=0x00, mfdev=1
+	cmdreg=0x0002, statreg=0x0000, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+pci0:0:31:2: reprobing on driver added
+pci1: driver added
+pci2: driver added
+pci3: driver added
+pci4: driver added
+pci5: driver added
+pci6: driver added
+pci7: driver added
+wlan0: bpf attached
+wlan0: bpf attached
+wlan0: Ethernet address: ...
+bridge0: bpf attached
+bridge0: Ethernet address: ...
+tap0: bpf attached
+tap0: Ethernet address: ...
+bridge0: changing name to 'wlan0bridge'
+lo0: link state changed to UP
+wlan0: link state changed to UP
+wlan0: promiscuous mode enabled
+wlan0bridge: link state changed to UP
+tap0: promiscuous mode enabled
+ng_ubt: HCI command 0xfc05 timed out
+ubt0 on uhub0
+ubt0: <vendor 0x8087 product 0x0a2b, class 224/1, rev 2.00/0.01, addr 3> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+em0: Link is up 1000 Mbps Full Duplex
+em0: link state changed to UP
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+acpi_lid0: Lid closed
+acpi_lid0: Lid opened
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+tap0: promiscuous mode disabled
+battery0: rev = 0001
+battery0: units = 0
+battery0: dcap = 90000
+battery0: lfcap = 98000
+battery0: btech = 1
+battery0: dvol = 11250
+battery0: wcap = 4900
+battery0: lcap = 200
+battery0: cycles = 2
+battery0: accuracy = 95000
+battery0: stmax = 4294967295
+battery0: stmin = 4294967295
+battery0: aimax = 1000
+battery0: aimin = 500
+battery0: gra1 = 4294967295
+battery0: gra2 = 4294967295
+battery0: scap = 0
+battery0: rev = 0001
+battery0: units = 0
+battery0: dcap = 90000
+battery0: lfcap = 97660
+battery0: btech = 1
+battery0: dvol = 11250
+battery0: wcap = 4883
+battery0: lcap = 200
+battery0: cycles = 2
+battery0: accuracy = 95000
+battery0: stmax = 4294967295
+battery0: stmin = 4294967295
+battery0: aimax = 1000
+battery0: aimin = 500
+battery0: gra1 = 4294967295
+battery0: gra2 = 4294967295
+battery0: scap = 0
+[drm ERROR :intel_pipe_update_end] Atomic update failure on pipe A (start=442963 end=442964) time 0 us, min 1073, max 1079, scanline start 1067, end 1083
+em0: link state changed to DOWN
+system power profile changed to 'economy'
+acpi_acad0: Off Line
+system power profile changed to 'performance'
+acpi_acad0: On Line
+ugen0.5: <PixArt Tiger USB Optical Mouse> at usbus0
+ums0 on uhub0
+ums0: <PixArt Tiger USB Optical Mouse, class 0/0, rev 2.00/1.00, addr 4> on usbus0
+ums0: 3 buttons and [XYZ] coordinates ID=0
+lo0: link state changed to DOWN
+wlan0: bpf attached
+wlan0: bpf attached
+wlan0: Ethernet address: ...
+bridge0: bpf attached
+bridge0: Ethernet address: ...
+tap0: bpf attached
+tap0: Ethernet address: ...
+bridge0: changing name to 'wlan0bridge'
+lo0: link state changed to UP
+wlan0: link state changed to UP
+wlan0: promiscuous mode enabled
+wlan0bridge: link state changed to UP
+tap0: promiscuous mode enabled
+Limiting closed port RST response from 359 to 200 packets/sec
+acpi_lid0: Lid closed
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+acpi_lid0: Lid opened
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+hdaa0: Pin sense: nid=33 sense=0x80000000 (connected)
+pcm0: Redirect output to: headphones
+pcm0: Playback channel set is: Front Left, Front Right, 
+pcm0: Playback channel matrix is: 2.0 (connected)
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+acpi_lid0: Lid closed
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+acpi_lid0: Lid opened
+hdaa0: Pin sense: nid=33 sense=0x00000000 (disconnected)
+pcm0: Redirect output to: main
+pcm0: Playback channel set is: Front Left, Front Right, 
+pcm0: Playback channel matrix is: 2.0 (unknown)
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+acpi_lid0: Lid closed
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+acpi_lid0: Lid opened
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+pid 27016 (xfce4-color-setting), jid 0, uid 1001: exited on signal 10 (core dumped)
+acpi_lid0: Lid closed
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+acpi_lid0: Lid opened
+wlan0: link state changed to DOWN
+wlan0bridge: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0bridge: link state changed to UP
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+coretemp0: Setting TjMax=100
+coretemp1: <CPU On-Die Thermal Sensors> on cpu1
+coretemp1: Setting TjMax=100
+coretemp2: <CPU On-Die Thermal Sensors> on cpu2
+coretemp2: Setting TjMax=100
+coretemp3: <CPU On-Die Thermal Sensors> on cpu3
+coretemp3: Setting TjMax=100
+coretemp4: <CPU On-Die Thermal Sensors> on cpu4
+coretemp4: Setting TjMax=100
+coretemp5: <CPU On-Die Thermal Sensors> on cpu5
+coretemp5: Setting TjMax=100
+coretemp6: <CPU On-Die Thermal Sensors> on cpu6
+coretemp6: Setting TjMax=100
+coretemp7: <CPU On-Die Thermal Sensors> on cpu7
+coretemp7: Setting TjMax=100

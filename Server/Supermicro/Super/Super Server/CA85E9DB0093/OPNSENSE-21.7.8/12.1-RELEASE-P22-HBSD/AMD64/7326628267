@@ -1,0 +1,223 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p22-HBSD #0  6fd65fcb739(stable/21.7)-dirty: Wed Jan 26 20:48:21 CET 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: AMD EPYC 3101 4-Core Processor                  (2100.06-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x800f12  Family=0x17  Model=0x1  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33264156672 (31723 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: < >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 2 core(s)
+random: unblocking device.
+ioapic0: Changing APIC ID to 128
+ioapic1: Changing APIC ID to 129
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+Launching APs: 3 1 2
+Timecounter "TSC" frequency 2100060732 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812947f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000048 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SUPERM> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Event timer "HPET2" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xefa00000-0xefa03fff irq 24 at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.3 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 32 at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> port 0x6000-0x607f mem 0xee000000-0xeeffffff,0xef000000-0xef01ffff irq 32 at device 0.0 on pci3
+vgapci0: Boot video device
+pcib4: <ACPI PCI-PCI bridge> at device 1.5 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb0: <Intel(R) I350 (Copper)> port 0x5060-0x507f mem 0xef960000-0xef97ffff,0xef98c000-0xef98ffff irq 40 at device 0.0 on pci4
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) I350 (Copper)> port 0x5040-0x505f mem 0xef940000-0xef95ffff,0xef988000-0xef98bfff irq 41 at device 0.1 on pci4
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+igb2: <Intel(R) I350 (Copper)> port 0x5020-0x503f mem 0xef920000-0xef93ffff,0xef984000-0xef987fff irq 42 at device 0.2 on pci4
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+igb3: <Intel(R) I350 (Copper)> port 0x5000-0x501f mem 0xef900000-0xef91ffff,0xef980000-0xef983fff irq 43 at device 0.3 on pci4
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib5: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci5: <ACPI PCI bus> on pcib5
+pci5: <network, ethernet> at device 0.0 (no driver attached)
+pcib6: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci6: <ACPI PCI bus> on pcib6
+pci6: <unknown> at device 0.0 (no driver attached)
+pci6: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xef200000-0xef2fffff irq 37 at device 0.3 on pci6
+xhci0: 64 bytes context size, 64-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib7: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci7: <ACPI PCI bus> on pcib7
+pci7: <unknown> at device 0.0 (no driver attached)
+pci7: <encrypt/decrypt> at device 0.1 (no driver attached)
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xef60a000-0xef60afff irq 42 at device 0.2 on pci7
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahcich6: <AHCI channel> at channel 6 on ahci0
+ahcich7: <AHCI channel> at channel 7 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+hdac0: <AMD (0x1457) HDA Controller> mem 0xef600000-0xef607fff irq 43 at device 0.3 on pci7
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROM> at iomem 0xc0000-0xc7fff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+nvd0: <CT500P1SSD8> NVMe namespace
+nvd0: 476940MB (976773168 512 byte sectors)
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+mlx4_core0: <mlx4_core> mem 0xef800000-0xef8fffff,0x1ffff800000-0x1ffffffffff irq 54 at device 0.0 on pci5
+mlx4_core: Mellanox ConnectX core driver v3.5.1 (April 2019)
+mlx4_core: Initializing mlx4_core
+uhub0: 8 ports with 8 removable, self powered
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub1 on uhub0
+uhub1: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 1> on usbus0
+uhub1: MTT enabled
+mlx4_core0: Unable to determine PCI device chain minimum BW
+mlx4_en mlx4_core0: Activating port:1
+mlxen0: Ethernet address: ...
+mlx4_en: mlx4_core0: Port 1: Using 4 TX rings
+mlx4_en: mlx4_core0: Port 1: Using 4 RX rings
+mlxen0: link state changed to DOWN
+mlx4_en: mlxen0: Using 4 TX rings
+mlx4_en: mlxen0: Using 4 RX rings
+mlx4_en: mlxen0: Initializing port
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0
+uhub1: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.3: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 2> on usbus0
+uhub2: MTT enabled
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.4: <vendor 0x0557 product 0x7000> at usbus0
+uhub3 on uhub2
+uhub3: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 3> on usbus0
+uhub3: 4 ports with 3 removable, self powered
+Root mount waiting for: usbus0
+ugen0.5: <vendor 0x0557 product 0x2419> at usbus0
+ukbd0 on uhub3
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 4> on usbus0
+kbd2 at ukbd0
+Root mount waiting for: usbus0
+ugen0.6: <RadioShack Corp. USB Control Power Strip> at usbus0
+ugen0.7: <vendor 0x1a40 USB 2.0 Hub> at usbus0
+uhub4 on uhub0
+uhub4: <vendor 0x1a40 USB 2.0 Hub, class 9/0, rev 2.00/1.11, addr 6> on usbus0
+Root mount waiting for: usbus0
+uhub4: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.8: <vendor 0x1a40 USB 2.0 Hub> at usbus0
+uhub5 on uhub4
+uhub5: <vendor 0x1a40 USB 2.0 Hub, class 9/0, rev 2.00/1.11, addr 7> on usbus0
+uhub5: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.9: <SONiX USB Device> at usbus0
+ukbd1 on uhub4
+ukbd1: <SONiX USB Device, class 0/0, rev 2.00/0.01, addr 8> on usbus0
+kbd3 at ukbd1
+igb0: link state changed to UP
+igb1: link state changed to UP
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+ums0 on uhub3
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 4> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+uhid0 on uhub0
+uhid0: <RadioShack Corp. USB Control Power Strip, class 0/0, rev 1.10/1.00, addr 5> on usbus0
+ums1 on uhub4
+ums1: <SONiX USB Device, class 0/0, rev 2.00/0.01, addr 8> on usbus0
+ums1: 5 buttons and [XYZ] coordinates ID=1
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+amdsmn0: <AMD Family 17h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+vlan0: changing name to 'mlxen0_vlan30'
+vlan1: changing name to 'mlxen0_vlan40'
+igb0: link state changed to DOWN
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+igb0: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+igb1: link state changed to DOWN
+igb1: promiscuous mode enabled
+igb1: link state changed to UP
+igb1: link state changed to DOWN
+igb1: link state changed to UP

@@ -1,0 +1,140 @@
+OpenBSD 7.0 (GENERIC.MP) #210: Thu Sep 30 14:50:30 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC.MP
+real mem  = 2135113728 (2036MB)
+avail mem = 2079744000 (1983MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 03/06/09, SMBIOS rev. 2.6 @ 0xe91f0 (42 entries)
+bios0: vendor Intel Corp. version "JT94510H.86A.XXX.XXX.XXX.XXX" date 03/06/2009
+bios0: Intel Corporation D945GSEJT
+acpi0 at bios0: ACPI 4.0
+acpi0: sleep states S0 S1 S3 S4 S5
+acpi0: tables DSDT FACP APIC MCFG SSDT SSDT SSDT
+acpi0: wakeup devices P0P2(S4) PEGP(S4) USB0(S3) USB1(S3) USB2(S3) USB3(S3) EHCI(S3) MC97(S4) P0P1(S4) UAR1(S3) UAR2(S3) P0P4(S4) P0P5(S4) P0P6(S4) PWRB(S3)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Atom(TM) CPU N270 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-1c-02
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,SENSOR,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 132MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Atom(TM) CPU N270 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-1c-02
+cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,SENSOR,MELTDOWN
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P2)
+acpiprt2 at acpi0: bus 5 (P0P1)
+acpiprt3 at acpi0: bus 1 (P0P4)
+acpiprt4 at acpi0: bus 2 (P0P5)
+"PNP0A08" at acpi0 not configured
+acpicmos0 at acpi0
+acpibtn0 at acpi0: PWRB
+acpicpu0 at acpi0: !C3(100@100 mwait.3@0x30), !C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: !C3(100@100 mwait.3@0x30), !C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpivideo0 at acpi0: IGD_
+bios0: ROM list: 0xc0000/0xec00! 0xcf000/0x1000 0xd0000/0x1800
+cpu0: Enhanced SpeedStep 1596 MHz: speeds: 1600, 1333, 1067, 800 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82945GME Host" rev 0x03
+vga1 at pci0 dev 2 function 0 "Intel 82945GME Video" rev 0x03
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+"Intel 82945GM Video" rev 0x03 at pci0 dev 2 function 1 not configured
+azalia0 at pci0 dev 27 function 0 "Intel 82801GB HD Audio" rev 0x02: msi
+azalia0: codecs: Realtek ALC662
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 82801GB PCIE" rev 0x02
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x03: RTL8168D/8111D (0x2800), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 2
+ppb1 at pci0 dev 28 function 1 "Intel 82801GB PCIE" rev 0x02
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 2 "Intel 82801GB PCIE" rev 0x02
+pci3 at ppb2 bus 3
+ppb3 at pci0 dev 28 function 3 "Intel 82801GB PCIE" rev 0x02
+pci4 at ppb3 bus 4
+uhci0 at pci0 dev 29 function 0 "Intel 82801GB USB" rev 0x02: apic 2 int 23
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x02: apic 2 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x02: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801GB USB" rev 0x02: apic 2 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x02: apic 2 int 23
+ehci0: timed out waiting for BIOS
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xe2
+pci5 at ppb4 bus 5
+fxp0 at pci5 dev 0 function 0 "Intel 8255x" rev 0x0d, i82550: apic 2 int 20, address XXX
+inphy0 at fxp0 phy 1: i82555 10/100 PHY, rev. 4
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801GBM LPC" rev 0x02: PM disabled
+pciide0 at pci0 dev 31 function 1 "Intel 82801GB IDE" rev 0x02: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide0 channel 0 drive 0: <TRANSCEND>
+wd0: 1-sector PIO, LBA, 955MB, 1957536 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 2
+pciide0: channel 1 disabled (no drives)
+pciide1 at pci0 dev 31 function 2 "Intel 82801GBM SATA" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide1: using apic 2 int 19 for native-PCI interrupt
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x02: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR2 SDRAM non-parity PC2-6400CL6 SO-DIMM
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+wbsio0 at isa0 port 0x2e/2: W83627DHG-P rev 0x73
+lm1 at wbsio0 port 0xa00/8: W83627DHG
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+dt: 445 probes
+umass0 at uhub0 port 1 configuration 1 interface 0 "Seagate BUP Slim BL" rev 2.10/1.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <Seagate, BUP Slim BL, 0304>
+sd0: 953869MB, 512 bytes/sector, 1953525167 sectors
+uhub5 at uhub0 port 2 configuration 1 interface 0 "Terminus Technology USB 2.0 Hub" rev 2.00/1.11 addr 3
+uhidev0 at uhub5 port 4 configuration 1 interface 0 "HP HP Gaming Keyboard" rev 1.10/33.16 addr 4
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub5 port 4 configuration 1 interface 1 "HP HP Gaming Keyboard" rev 1.10/33.16 addr 4
+uhidev1: iclass 3/0
+uhid0 at uhidev1: input=64, output=64, feature=0
+uhidev2 at uhub5 port 4 configuration 1 interface 2 "HP HP Gaming Keyboard" rev 1.10/33.16 addr 4
+uhidev2: iclass 3/0, 6 report ids
+ums0 at uhidev2 reportid 1: 5 buttons, Z and W dir
+wsmouse0 at ums0 mux 0
+uhid1 at uhidev2 reportid 3: input=1, output=0, feature=0
+uhid2 at uhidev2 reportid 4: input=3, output=0, feature=0
+ukbd1 at uhidev2 reportid 5: no usable key codes array
+ucc0 at uhidev2 reportid 6: 2048 usages, 18 keys, array
+wskbd2 at ucc0 mux 1
+wskbd2: connecting to wsdisplay0
+uhidev3 at uhub5 port 4 configuration 1 interface 3 "HP HP Gaming Keyboard" rev 1.10/33.16 addr 4
+uhidev3: iclass 3/0
+uhid3 at uhidev3: input=64, output=64, feature=8
+athn0 at uhub0 port 7 configuration 1 interface 0 "ATHEROS USB2.0 WLAN" rev 2.00/1.08 addr 5
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (700f38e659174aec.a) swap on sd0b dump on sd0b
+athn0: AR9271 rev 1 (1T1R), ROM rev 13, address XXX

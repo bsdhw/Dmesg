@@ -1,0 +1,411 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE hyperv-n248055-e91d90c0ac0 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 800x600
+CPU: Intel(R) Xeon(R) CPU E5-2407 0 @ 2.20GHz (2200.04-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x206d7  Family=0x6  Model=0x2d  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x1fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33292746752 (31750 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 2 package(s) x 4 core(s)
+random: unblocking device.
+ioapic1: MADT APIC ID 1 != hw id 15
+ioapic2: MADT APIC ID 2 != hw id 15
+ioapic0 <Version 2.0> irqs 0-23
+ioapic1 <Version 2.0> irqs 32-55
+ioapic2 <Version 2.0> irqs 64-87
+Launching APs: 5 6 3 2 4 1 7
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd0 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <DELL PE_SC3>
+acpi0: Power Button (fixed)
+apei0: <ACPI Platform Error Interface> on acpi0
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 53 at device 1.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+mfi0: <Drake Skinny> port 0xfc00-0xfcff mem 0xd8ffc000-0xd8ffffff,0xd8f80000-0xd8fbffff irq 34 at device 0.0 numa-domain 0 on pci1
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: 2881 (697033456s/0x0020/info) - Shutdown command received from host
+mfi0: 2882 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0073/1000/1f51/1028)
+mfi0: 2883 (boot + 3s/0x0020/info) - Firmware version 2.120.14-2138
+mfi0: 2884 (boot + 5s/0x0020/info) - Package version 20.12.0-0004
+mfi0: 2885 (boot + 5s/0x0020/info) - Board Revision A01
+mfi0: 2886 (boot + 32s/0x0004/info) - Enclosure PD 20(c None/p1) communication restored
+mfi0: 2887 (boot + 32s/0x0002/info) - Inserted: Encl PD 20
+mfi0: 2888 (boot + 32s/0x0002/info) - Inserted: PD 20(c None/p1) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=5948f090eea76900,0000000000000000
+mfi0: 2889 (boot + 32s/0x0002/info) - Inserted: PD 00(e0xff/s0)
+mfi0: 2890 (boot + 32s/0x0002/info) - Inserted: PD 00(e0xff/s0) Info: enclPd=ffff, scsiType=0, portMap=00, sasAddr=4433221104000000,0000000000000000
+mfi0: 2891 (boot + 32s/0x0002/WARN) - PD 00(e0xff/s0) is not a certified drive
+mfi0: 2892 (boot + 32s/0x0020/WARN) - Previous configuration completely missing at boot
+pcib2: <ACPI PCI-PCI bridge>mfi0: 2893 (697033519s/0x0020/info) - Time established as 02/01/22 12:25:19; (54 seconds since power on)
+mfi0: 2894 (697033577s/0x0020/info) - Host driver is loaded and operational
+mfi0: 2895 (697033619s/0x0004/WARN) - Enclosure PD 20(c None/p1) sensor 0 bad
+mfi0: 2896 (boot + 3s/0x0020/info) - Firmware initialization started (PCI ID 0073/1000/1f51/1028)
+mfi0: 2897 (boot + 3s/0x0020/info) - Firmware version 2.120.14-2138
+mfi0: 2898 (boot + 5s/0x0020/info) - Package version 20.12.0-0004
+mfi0: 2899 (boot + 5s/0x0020/info) - Board Revision A01
+mfi0: 2900 (boot + 32s/0x0004/info) - Enclosure PD 20(c None/p1) communication restored
+mfi0: 2901 (boot + 32s/0x0002/info) - Inserted: Encl PD 20
+ irq 53 at device 3.0 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+ix0: <Intel(R) X540-AT2> mem 0xd5000000-0xd51fffff,0xd55f8000-0xd55fbfff irq 52 at device 0.0 numa-domain 0 on pci2
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: eTrack 0x80000389 PHY FW V272
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) X540-AT2> mem 0xd5200000-0xd53fffff,0xd55fc000-0xd55fffff irq 48 at device 0.1 numa-domain 0 on pci2
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: eTrack 0x80000389 PHY FW V272
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+pcib3: <PCI-PCI bridge> irq 16 at device 17.0 numa-domain 0 on pci0
+pci3: <PCI bus> numa-domain 0 on pcib3
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+ehci0: <Intel Patsburg USB 2.0 controller> mem 0xdc0fd000-0xdc0fd3ff irq 23 at device 26.0 numa-domain 0 on pci0
+usbus0: EHCI version 1.0
+usbus0 numa-domain 0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib4: <ACPI PCI-PCI bridge> at device 28.0 numa-domain 0 on pci0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 28.4 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+bge0: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xd56a0000-0xd56affff,0xd56b0000-0xd56bffff,0xd56c0000-0xd56cffff irq 16 at device 0.0 numa-domain 0 on pci5
+bge0: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge0: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus0: <MII bus> numa-domain 0 on bge0
+brgphy0: <BCM5720C 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+bge1: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xd56d0000-0xd56dffff,0xd56e0000-0xd56effff,0xd56f0000-0xd56fffff irq 17 at device 0.1 numa-domain 0 on pci5
+bge1: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge1: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus1: <MII bus> numa-domain 0 on bge1
+brgphy1: <BCM5720C 1000BASE-T media interface> PHY 2 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge1: Using defaults for TSO: 65518/35/2048
+bge1: Ethernet address: ...
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 28.7 numa-domain 0 on pci0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+pcib7: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci6
+pci7: <PCI bus> numa-domain 0 on pcib7
+pcib8: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci7
+pci8: <PCI bus> numa-domain 0 on pcib8
+pcib9: <PCI-PCI bridge> at device 0.0 numa-domain 0 on pci8
+pci9: <PCI bus> numa-domain 0 on pcib9
+vgapci0: <VGA-compatible display> mem 0xd4000000-0xd4ffffff,0xdb7fc000-0xdb7fffff,0xda800000-0xdaffffff irq 19 at device 0.0 numa-domain 0 on pci9
+vgapci0: Boot video device
+pcib10: <PCI-PCI bridge> at device 1.0 numa-domain 0 on pci7
+pci10: <PCI bus> numa-domain 0 on pcib10
+ehci1: <Intel Patsburg USB 2.0 controller> mem 0xdc0fe000-0xdc0fe3ff irq 22 at device 29.0 numa-domain 0 on pci0
+usbus1: EHCI version 1.0
+usbus1 numa-domain 0 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib11: <PCI-PCI bridge> at device 30.0 numa-domain 0 on pci0
+pci11: <PCI bus> numa-domain 0 on pcib11
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+ahci0: <Intel Patsburg AHCI SATA controller> port 0xece8-0xecef,0xecf8-0xecfb,0xecf0-0xecf7,0xecfc-0xecff,0xecc0-0xecdf mem 0xdc0ff000-0xdc0ff7ff irq 20 at device 31.2 numa-domain 0 on pci0
+ahci0: AHCI v1.30 with 6 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib12: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci12: <ACPI PCI bus> numa-domain 1 on pcib12
+pcib13: <ACPI PCI-PCI bridge> irq 85 at device 3.0 numa-domain 1 on pci12
+pci13: <ACPI PCI bus> numa-domain 1 on pcib13
+em0: <Intel(R) PRO/1000 PT 82571EB/82571GB (Copper)> port 0xdcc0-0xdcdf mem 0xd0f80000-0xd0f9ffff,0xd0fa0000-0xd0fbffff irq 80 at device 0.0 numa-domain 1 on pci13
+em0: EEPROM V5.11-2
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 PT 82571EB/82571GB (Copper)> port 0xdce0-0xdcff mem 0xd0fc0000-0xd0fdffff,0xd0fe0000-0xd0ffffff irq 84 at device 0.1 numa-domain 1 on pci13
+em1: EEPROM V5.11-2
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib14: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci14: <ACPI PCI bus> numa-domain 0 on pcib14
+pci14: <dasp, performance counters> at device 14.1 (no driver attached)
+pci14: <dasp, performance counters> at device 19.1 (no driver attached)
+pci14: <dasp, performance counters> at device 19.4 (no driver attached)
+pci14: <dasp, performance counters> at device 19.5 (no driver attached)
+pcib15: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci15: <ACPI PCI bus> numa-domain 1 on pcib15
+pci15: <dasp, performance counters> at device 14.1 (no driver attached)
+pci15: <dasp, performance counters> at device 19.1 (no driver attached)
+pci15: <dasp, performance counters> at device 19.4 (no driver attached)
+pci15: <dasp, performance counters> at device 19.5 (no driver attached)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xd6800-0xd77ff,0xd7800-0xd87ff,0xd8800-0xd97ff,0xd9800-0xda7ff,0xec000-0xeffff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est3 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est4 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est5 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1ee700001600
+device_attach: est6 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1ee700001600
+device_attach: est7 attach returned 6
+Timecounter "TSC-low" frequency 1100000691 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+mfisyspd0 numa-domain 0 on mfi0
+mfisyspd0: 122104MB (250069680 sectors) SYSPD volume (deviceid: 0)
+mfisyspd0:  SYSPD volume attached
+mfi0: 2902 (boot + 32s/0x0002/info) - Inserted: PD 20(c None/p1) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=5948f090eea76uhub0900,0000000000000000
+mfi0: 2903 (boot + 32s/0x0002/info) - Inserted: PD 00(e0xff/s0)
+ numa-domain 0 on usbus0
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+uhub1 numa-domain 0 on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+mfi0: 2904 (boot + 32s/0x0002/info) - Inserted: PD 00(e0xff/s0) Info: enclPd=ffff, scsiType=0, portMap=00, sasAddr=4433221104000000,0000000000000000
+mfi0: 2905 (boot + 32s/0x0002/WARN) - PD 00(e0xff/s0) is not a certified drive
+mfi0: 2906 (boot + 32s/0x0020/WARN) - Previous configuration completely missing at boot
+mfi0: 2907 (697099826s/0x0020/info) - Time established as 02/02/22  6:50:26; (55 seconds since power on)
+mfi0: 2908 (697099884s/0x0020/info) - Host driver is loaded and operational
+ses0 at ahciem0 bus 0 scbus5 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ses0: pass0,cd0 in 'Slot 04', SATA Slot: scbus4 target 0
+cd0 at ahcich4 bus 0 scbus4 target 0 lun 0
+cd0: <PLDS DVD-ROM DS-8D9SH JD51> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 usbus1
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus0 usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub2 numa-domain 0 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 numa-domain 0 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus0 usbus1
+uhub2: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+ugen0.3: <no manufacturer Gadget USB HUB> at usbus0
+uhub4 numa-domain 0 on uhub2
+uhub4: <no manufacturer Gadget USB HUB, class 9/0, rev 2.00/0.00, addr 3> on usbus0
+Root mount waiting for: usbus0
+uhub4: 6 ports with 6 removable, self powered
+ugen0.4: <Avocent Keyboard/Mouse Function> at usbus0
+ukbd0 numa-domain 0 on uhub4
+ukbd0: <Keyboard> on usbus0
+kbd1 at ukbd0
+mfi0: 2909 (697099925s/0x0004/WARN) - Enclosure PD 20(c None/p1) sensor 0 bad
+ioat0: <SNB IOAT Ch0> mem 0xdc0d8000-0xdc0dbfff irq 39 at device 4.0 numa-domain 0 on pci0
+ioat0: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat1: <SNB IOAT Ch1> mem 0xdc0dc000-0xdc0dffff irq 47 at device 4.1 numa-domain 0 on pci0
+ioat1: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat2: <SNB IOAT Ch2> mem 0xdc0e0000-0xdc0e3fff irq 39 at device 4.2 numa-domain 0 on pci0
+ioat2: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat3: <SNB IOAT Ch3> mem 0xdc0e4000-0xdc0e7fff irq 47 at device 4.3 numa-domain 0 on pci0
+ioat3: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat4: <SNB IOAT Ch4> mem 0xdc0e8000-0xdc0ebfff irq 39 at device 4.4 numa-domain 0 on pci0
+ioat4: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat5: <SNB IOAT Ch5> mem 0xdc0ec000-0xdc0effff irq 47 at device 4.5 numa-domain 0 on pci0
+ioat5: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat6: <SNB IOAT Ch6> mem 0xdc0f0000-0xdc0f3fff irq 39 at device 4.6 numa-domain 0 on pci0
+ioat6: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat7: <SNB IOAT Ch7> mem 0xdc0f4000-0xdc0f7fff irq 47 at device 4.7 numa-domain 0 on pci0
+ioat7: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat8: <SNB IOAT Ch0> mem 0xd10e0000-0xd10e3fff irq 71 at device 4.0 numa-domain 1 on pci12
+ioat8: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat9: <SNB IOAT Ch1> mem 0xd10e4000-0xd10e7fff irq 79 at device 4.1 numa-domain 1 on pci12
+ioat9: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat10: <SNB IOAT Ch2> mem 0xd10e8000-0xd10ebfff irq 71 at device 4.2 numa-domain 1 on pci12
+ioat10: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat11: <SNB IOAT Ch3> mem 0xd10ec000-0xd10effff irq 79 at device 4.3 numa-domain 1 on pci12
+ioat11: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat12: <SNB IOAT Ch4> mem 0xd10f0000-0xd10f3fff irq 71 at device 4.4 numa-domain 1 on pci12
+ioat12: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat13: <SNB IOAT Ch5> mem 0xd10f4000-0xd10f7fff irq 79 at device 4.5 numa-domain 1 on pci12
+ioat13: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat14: <SNB IOAT Ch6> mem 0xd10f8000-0xd10fbfff irq 71 at device 4.6 numa-domain 1 on pci12
+ioat14: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat15: <SNB IOAT Ch7> mem 0xd10fc000-0xd10fffff irq 79 at device 4.7 numa-domain 1 on pci12
+ioat15: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+ums0 numa-domain 0 on uhub4
+ums0: <Mouse> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+ums1 numa-domain 0 on uhub4
+ums1: <Mouse REL> on usbus0
+ums1: 3 buttons and [XYZ] coordinates ID=0
+lo0: link state changed to UP
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est3 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est4 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est5 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est6 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 19f000000c00
+device_attach: est7 attach returned 6
+debugnet_any_ifnet_update: Bad dn_init result from ix0 (ifp 0xfffff80003c17000), ignoring.
+ix0: link state changed to UP
+lagg0: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from ix1 (ifp 0xfffff80003c3f800), ignoring.
+ix1: link state changed to UP
+ix0: link state changed to DOWN
+ix1: link state changed to DOWN
+lagg0: link state changed to DOWN
+vlan0: changing name to 'lagg0_vlan1'
+vlan1: changing name to 'lagg0_vlan2'
+vlan2: changing name to 'lagg0_vlan3'
+vlan3: changing name to 'lagg0_vlan4'
+vlan4: changing name to 'lagg0_vlan5'
+vlan5: changing name to 'lagg0_vlan6'
+vlan6: changing name to 'lagg0_vlan7'
+tun1: changing name to 'ovpns1'
+ix0: link state changed to UP
+ix1: link state changed to UP
+lagg0: link state changed to UP
+lagg0_vlan1: link state changed to UP
+lagg0_vlan2: link state changed to UP
+lagg0_vlan3: link state changed to UP
+lagg0_vlan4: link state changed to UP
+lagg0_vlan5: link state changed to UP
+lagg0_vlan6: link state changed to UP
+lagg0_vlan7: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+ovpns1: link state changed to UP
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to accept, logging disabled
+load_dn_sched dn_sched FIFO loaded
+load_dn_sched dn_sched QFQ loaded
+load_dn_sched dn_sched RR loaded
+load_dn_sched dn_sched WF2Q+ loaded
+load_dn_sched dn_sched PRIO loaded
+load_dn_sched dn_sched FQ_CODEL loaded
+load_dn_sched dn_sched FQ_PIE loaded
+load_dn_aqm dn_aqm CODEL loaded
+load_dn_aqm dn_aqm PIE loaded
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+939.944298 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan6 created (prev was NULL)
+939.944334 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan6 destroyed
+lagg0_vlan6: permanently promiscuous mode enabled
+ix0: promiscuous mode enabled
+ix1: promiscuous mode enabled
+lagg0: promiscuous mode enabled
+939.948155 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan6 created (prev was NULL)
+940.109609 [ 320] generic_netmap_register   Emulated adapter for lagg0_vlan6 activated
+940.141579 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan7 created (prev was NULL)
+940.141599 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan7 destroyed
+lagg0_vlan7: permanently promiscuous mode enabled
+940.145903 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan7 created (prev was NULL)
+940.146109 [ 320] generic_netmap_register   Emulated adapter for lagg0_vlan7 activated
+344.899963 [ 295] generic_netmap_unregister Emulated adapter for lagg0_vlan7 deactivated
+344.900118 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan7 destroyed
+344.902125 [ 295] generic_netmap_unregister Emulated adapter for lagg0_vlan6 deactivated
+344.903168 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan6 destroyed
+479.317357 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan6 created (prev was NULL)
+479.317393 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan6 destroyed
+479.322898 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan6 created (prev was NULL)
+479.323070 [ 320] generic_netmap_register   Emulated adapter for lagg0_vlan6 activated
+479.349547 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan7 created (prev was NULL)
+479.349577 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan7 destroyed
+479.354007 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan7 created (prev was NULL)
+479.354221 [ 320] generic_netmap_register   Emulated adapter for lagg0_vlan7 activated
+945.010903 [ 295] generic_netmap_unregister Emulated adapter for lagg0_vlan7 deactivated
+945.011049 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan7 destroyed
+945.012524 [ 295] generic_netmap_unregister Emulated adapter for lagg0_vlan6 deactivated
+945.013252 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan6 destroyed
+571.692121 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan6 created (prev was NULL)
+571.692155 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan6 destroyed
+571.696616 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan6 created (prev was NULL)
+571.696771 [ 320] generic_netmap_register   Emulated adapter for lagg0_vlan6 activated
+571.722741 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan7 created (prev was NULL)
+571.722770 [1044] generic_netmap_dtor       Emulated netmap adapter for lagg0_vlan7 destroyed
+571.726909 [1139] generic_netmap_attach     Emulated adapter for lagg0_vlan7 created (prev was NULL)
+571.727068 [ 320] generic_netmap_register   Emulated adapter for lagg0_vlan7 activated

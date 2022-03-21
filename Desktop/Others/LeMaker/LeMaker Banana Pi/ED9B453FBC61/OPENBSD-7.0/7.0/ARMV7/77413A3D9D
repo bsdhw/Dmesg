@@ -1,0 +1,94 @@
+OpenBSD 7.0-current (GENERIC) #17: Thu Feb  3 12:14:01 MST 2022
+    XXX@XXX:/usr/src/sys/arch/armv7/compile/GENERIC
+real mem  = 954236928 (910MB)
+avail mem = 924913664 (882MB)
+random: good seed from bootblocks
+mainbus0 at root: LeMaker Banana Pi
+cpu0 at mainbus0 mpidr 0: ARM Cortex-A7 r0p4
+cpu0: 32KB 32b/line 2-way L1 VIPT I-cache, 32KB 64b/line 4-way L1 D-cache
+cpu0: 256KB 64b/line 8-way L2 cache
+cortex0 at mainbus0
+psci0 at mainbus0: PSCI 0.0
+sxiccmu0 at mainbus0
+agtimer0 at mainbus0: 24000 kHz
+simplebus0 at mainbus0: "soc"
+sxiccmu1 at simplebus0
+sxipio0 at simplebus0: 175 pins
+sxirtc0 at simplebus0
+sxisid0 at simplebus0
+ampintc0 at simplebus0 nirq 160, ncpu 2: "interrupt-controller"
+"system-control" at simplebus0 not configured
+"interrupt-controller" at simplebus0 not configured
+"dma-controller" at simplebus0 not configured
+"spi" at simplebus0 not configured
+"lcd-controller" at simplebus0 not configured
+"lcd-controller" at simplebus0 not configured
+"video-codec" at simplebus0 not configured
+sximmc0 at simplebus0
+sdmmc0 at sximmc0: 4-bit, sd high-speed, mmc high-speed, dma
+"usb" at simplebus0 not configured
+"phy" at simplebus0 not configured
+ehci0 at simplebus0
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Generic EHCI root hub" rev 2.00/1.00 addr 1
+ohci0 at simplebus0: version 1.0
+"crypto-engine" at simplebus0 not configured
+"hdmi" at simplebus0 not configured
+sxiahci0 at simplebus0: AHCI 1.1
+scsibus0 at sxiahci0: 32 targets
+ehci1 at simplebus0
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Generic EHCI root hub" rev 2.00/1.00 addr 1
+ohci1 at simplebus0: version 1.0
+"timer" at simplebus0 not configured
+sxidog0 at simplebus0
+"ir" at simplebus0 not configured
+"codec" at simplebus0 not configured
+sxits0 at simplebus0
+com0 at simplebus0: dw16550
+com0: console
+com1 at simplebus0: dw16550
+com2 at simplebus0: dw16550
+sxitwi0 at simplebus0
+iic0 at sxitwi0
+axppmic0 at iic0 addr 0x34: AXP209
+sxitwi1 at simplebus0
+iic1 at sxitwi1
+"gpu" at simplebus0 not configured
+dwge0 at simplebus0: rev 0x00, address XXX
+rgephy0 at dwge0 phy 1: RTL8169S/8110S/8211 PHY, rev. 5
+"hstimer" at simplebus0 not configured
+"display-frontend" at simplebus0 not configured
+"display-frontend" at simplebus0 not configured
+"display-backend" at simplebus0 not configured
+"display-backend" at simplebus0 not configured
+gpio0 at sxipio0: 32 pins
+gpio1 at sxipio0: 32 pins
+gpio2 at sxipio0: 32 pins
+gpio3 at sxipio0: 32 pins
+gpio4 at sxipio0: 32 pins
+gpio5 at sxipio0: 32 pins
+gpio6 at sxipio0: 32 pins
+gpio7 at sxipio0: 32 pins
+gpio8 at sxipio0: 32 pins
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Generic OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Generic OHCI root hub" rev 1.00/1.00 addr 1
+simplefb0 at mainbus0: 720x576, 32bpp
+wsdisplay0 at simplefb0 mux 1
+wsdisplay0: screen 0-5 added (std, vt100 emulation)
+scsibus1 at sdmmc0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <SD/MMC, SD32G, 0061> removable
+sd0: 29844MB, 512 bytes/sector, 61120512 sectors
+athn0 at uhub0 port 1 configuration 1 interface 0 "ATHEROS USB2.0 WLAN" rev 2.00/1.08 addr 2
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+bootfile: sd0a:/bsd
+boot device: sd0
+root on sd0a (28c50638bf14e81a.a) swap on sd0b dump on sd0b
+WARNING: bad clock chip time
+WARNING: CHECK AND RESET THE DATE!
+athn0: AR9271 rev 1 (1T1R), ROM rev 13, address XXX

@@ -1,0 +1,409 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p21-HBSD #0  1c99b63a2ba(stable/21.7)-dirty: Wed Nov 10 11:17:14 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Xeon(R) D-2123IT CPU @ 2.20GHz (2194.91-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x50654  Family=0x6  Model=0x55  Stepping=4
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffefbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0xd39ffffb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,RTM,PQM,NFPUSG,MPX,PQE,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,PROCTRACE,AVX512CD,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x8<PKU>
+  Structured Extended Features3=0x9c002400<MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 32968208384 (31440 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <SUPERM SMCI--MB>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23 on motherboard
+ioapic1 <Version 2.0> irqs 24-31 on motherboard
+ioapic2 <Version 2.0> irqs 32-39 on motherboard
+ioapic3 <Version 2.0> irqs 40-47 on motherboard
+ioapic4 <Version 2.0> irqs 48-55 on motherboard
+Launching APs: 1 7 4 2 5 6 3
+Timecounter "TSC-low" frequency 1097452769 Hz quality 1000
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812947f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000058 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SUPERM> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x71,0x74-0x77 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+hpet1: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+device_attach: hpet1 attach returned 12
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x508-0x50b on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pci0: <dasp, performance counters> at device 8.1 (no driver attached)
+pci0: <unknown> at device 17.0 (no driver attached)
+pci0: <unknown> at device 17.1 (no driver attached)
+ahci0: <Intel Lewisburg AHCI SATA controller> port 0x6030-0x6037,0x6020-0x6023,0x6000-0x601f mem 0xaa594000-0xaa595fff,0xaa596000-0xaa5960ff,0xaa500000-0xaa57ffff irq 16 at device 17.5 numa-domain 0 on pci0
+ahci0: AHCI v1.31 with 5 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+xhci0: <Intel Lewisburg USB 3.0 controller> mem 0xaa580000-0xaa58ffff irq 16 at device 20.0 numa-domain 0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus0 numa-domain 0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+pci0: <simple comms> at device 22.4 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 27.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+nvme0: <Generic NVMe Device> mem 0xaa400000-0xaa403fff irq 16 at device 0.0 numa-domain 0 on pci1
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.0 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 28.4 numa-domain 0 on pci0
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 16 at device 0.0 numa-domain 0 on pci3
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+vgapci0: <VGA-compatible display> port 0x5000-0x507f mem 0xa9000000-0xa9ffffff,0xaa000000-0xaa01ffff irq 16 at device 0.0 numa-domain 0 on pci4
+vgapci0: Boot video device
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 29.0 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 29.3 numa-domain 0 on pci0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+igb0: <Intel(R) I210 (Copper)> port 0x4000-0x401f mem 0xaa300000-0xaa37ffff,0xaa380000-0xaa383fff irq 19 at device 0.0 numa-domain 0 on pci6
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib7: <ACPI PCI-PCI bridge> irq 16 at device 29.4 numa-domain 0 on pci0
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+igb1: <Intel(R) I350 (Copper)> port 0x3060-0x307f mem 0xaa260000-0xaa27ffff,0xaa28c000-0xaa28ffff irq 16 at device 0.0 numa-domain 0 on pci7
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+igb2: <Intel(R) I350 (Copper)> port 0x3040-0x305f mem 0xaa240000-0xaa25ffff,0xaa288000-0xaa28bfff irq 17 at device 0.1 numa-domain 0 on pci7
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+igb3: <Intel(R) I350 (Copper)> port 0x3020-0x303f mem 0xaa220000-0xaa23ffff,0xaa284000-0xaa287fff irq 18 at device 0.2 numa-domain 0 on pci7
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+igb4: <Intel(R) I350 (Copper)> port 0x3000-0x301f mem 0xaa200000-0xaa21ffff,0xaa280000-0xaa283fff irq 19 at device 0.3 numa-domain 0 on pci7
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 4 RX queues 4 TX queues
+igb4: Using MSI-X interrupts with 5 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib8: <ACPI PCI-PCI bridge> irq 18 at device 29.6 numa-domain 0 on pci0
+pci8: <ACPI PCI bus> numa-domain 0 on pcib8
+igb5: <Intel(R) I350 (Copper)> port 0x2060-0x207f mem 0xaa160000-0xaa17ffff,0xaa18c000-0xaa18ffff irq 43 at device 0.0 numa-domain 0 on pci8
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 4 RX queues 4 TX queues
+igb5: Using MSI-X interrupts with 5 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 4/1024, RX 4/1024
+igb6: <Intel(R) I350 (Copper)> port 0x2040-0x205f mem 0xaa140000-0xaa15ffff,0xaa188000-0xaa18bfff irq 46 at device 0.1 numa-domain 0 on pci8
+igb6: Using 1024 TX descriptors and 1024 RX descriptors
+igb6: Using 4 RX queues 4 TX queues
+igb6: Using MSI-X interrupts with 5 vectors
+igb6: Ethernet address: ...
+igb6: netmap queues/slots: TX 4/1024, RX 4/1024
+igb7: <Intel(R) I350 (Copper)> port 0x2020-0x203f mem 0xaa120000-0xaa13ffff,0xaa184000-0xaa187fff irq 44 at device 0.2 numa-domain 0 on pci8
+igb7: Using 1024 TX descriptors and 1024 RX descriptors
+igb7: Using 4 RX queues 4 TX queues
+igb7: Using MSI-X interrupts with 5 vectors
+igb7: Ethernet address: ...
+igb7: netmap queues/slots: TX 4/1024, RX 4/1024
+igb8: <Intel(R) I350 (Copper)> port 0x2000-0x201f mem 0xaa100000-0xaa11ffff,0xaa180000-0xaa183fff irq 45 at device 0.3 numa-domain 0 on pci8
+igb8: Using 1024 TX descriptors and 1024 RX descriptors
+igb8: Using 4 RX queues 4 TX queues
+igb8: Using MSI-X interrupts with 5 vectors
+igb8: Ethernet address: ...
+igb8: netmap queues/slots: TX 4/1024, RX 4/1024
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+pci0: <serial bus> at device 31.5 (no driver attached)
+pcib9: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci9: <ACPI PCI bus> numa-domain 0 on pcib9
+pcib10: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci10: <ACPI PCI bus> numa-domain 0 on pcib10
+pcib11: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci11: <ACPI PCI bus> numa-domain 0 on pcib11
+pcib12: <ACPI PCI-PCI bridge> irq 55 at device 0.0 numa-domain 0 on pci11
+pci12: <ACPI PCI bus> numa-domain 0 on pcib12
+pcib13: <ACPI PCI-PCI bridge> mem 0xfbe00000-0xfbe1ffff irq 48 at device 0.0 numa-domain 0 on pci12
+pci13: <ACPI PCI bus> numa-domain 0 on pcib13
+pcib14: <ACPI PCI-PCI bridge> irq 40 at device 3.0 numa-domain 0 on pci13
+pci14: <ACPI PCI bus> numa-domain 0 on pcib14
+ixl0: <Intel(R) Ethernet Connection X722 for 10GBASE-T - 2.3.0-k> mem 0xfa000000-0xfaffffff,0xfb018000-0xfb01ffff irq 46 at device 0.0 numa-domain 0 on pci14
+ixl0: fw 3.10.52867 api 1.6 nvm 4.00 etid 8000150c oem 1.263.0
+ixl0: PF-ID[0]: VFs 32, MSI-X 129, VF MSI-X 5, QPs 384, MDIO shared
+ixl0: Using 1024 TX descriptors and 1024 RX descriptors
+ixl0: Using 4 RX queues 4 TX queues
+ixl0: Using MSI-X interrupts with 5 vectors
+ixl0: Ethernet address: ...
+ixl0: Allocating 4 queues for PF LAN VSI; 4 queues active
+ixl0: SR-IOV ready
+ixl0: netmap queues/slots: TX 4/1024, RX 4/1024
+ixl1: <Intel(R) Ethernet Connection X722 for 10GBASE-T - 2.3.0-k> mem 0xf9000000-0xf9ffffff,0xfb010000-0xfb017fff irq 46 at device 0.1 numa-domain 0 on pci14
+ixl1: fw 3.10.52867 api 1.6 nvm 4.00 etid 8000150c oem 1.263.0
+ixl1: PF-ID[1]: VFs 32, MSI-X 129, VF MSI-X 5, QPs 384, MDIO shared
+ixl1: Using 1024 TX descriptors and 1024 RX descriptors
+ixl1: Using 4 RX queues 4 TX queues
+ixl1: Using MSI-X interrupts with 5 vectors
+ixl1: Ethernet address: ...
+ixl1: Allocating 4 queues for PF LAN VSI; 4 queues active
+ixl1: SR-IOV ready
+ixl1: netmap queues/slots: TX 4/1024, RX 4/1024
+ixl2: <Intel(R) Ethernet Connection X722 for 10GbE SFP+ - 2.3.0-k> mem 0xf8000000-0xf8ffffff,0xfb008000-0xfb00ffff irq 46 at device 0.2 numa-domain 0 on pci14
+ixl2: fw 3.10.52867 api 1.6 nvm 4.00 etid 8000150c oem 1.263.0
+ixl2: PF-ID[2]: VFs 32, MSI-X 129, VF MSI-X 5, QPs 384, I2C
+ixl2: Using 1024 TX descriptors and 1024 RX descriptors
+ixl2: Using 4 RX queues 4 TX queues
+ixl2: Using MSI-X interrupts with 5 vectors
+ixl2: Ethernet address: ...
+ixl2: Allocating 4 queues for PF LAN VSI; 4 queues active
+ixl2: SR-IOV ready
+ixl2: netmap queues/slots: TX 4/1024, RX 4/1024
+ixl3: <Intel(R) Ethernet Connection X722 for 10GbE SFP+ - 2.3.0-k> mem 0xf7000000-0xf7ffffff,0xfb000000-0xfb007fff irq 46 at device 0.3 numa-domain 0 on pci14
+ixl3: fw 3.10.52867 api 1.6 nvm 4.00 etid 8000150c oem 1.263.0
+ixl3: PF-ID[3]: VFs 32, MSI-X 129, VF MSI-X 5, QPs 384, I2C
+ixl3: Using 1024 TX descriptors and 1024 RX descriptors
+ixl3: Using 4 RX queues 4 TX queues
+ixl3: Using MSI-X interrupts with 5 vectors
+ixl3: Ethernet address: ...
+ixl3: Allocating 4 queues for PF LAN VSI; 4 queues active
+ixl3: SR-IOV ready
+ixl3: netmap queues/slots: TX 4/1024, RX 4/1024
+pci11: <dasp, performance counters> at device 18.0 (no driver attached)
+pci11: <dasp, performance counters> at device 18.1 (no driver attached)
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xc8fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <Samsung SSD 980 PRO 250GB> NVMe namespace
+nvd0: 238475MB (488397168 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <vendor 0x0557 product 0x7000> at usbus0
+uhub1 numa-domain 0 on uhub0
+uhub1: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 1> on usbus0
+Root mount waiting for: usbus0
+uhub1: 4 ports with 3 removable, self powered
+ugen0.3: <vendor 0x0557 product 0x2419> at usbus0
+ukbd0 numa-domain 0 on uhub1
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+kbd2 at ukbd0
+Root mount waiting for: usbus0
+ugen0.4: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub2 numa-domain 0 on uhub0
+uhub2: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 3> on usbus0
+uhub2: MTT enabled
+Root mount waiting for: usbus0
+uhub2: 4 ports with 4 removable, self powered
+ugen0.5: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub3 numa-domain 0 on uhub2
+uhub3: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/32.98, addr 4> on usbus0
+uhub3: MTT enabled
+Root mount waiting for: usbus0
+uhub3: 4 ports with 4 removable, self powered
+igb0: link state changed to UP
+igb1: link state changed to UP
+igb2: link state changed to UP
+ioat0: <SKX IOAT> mem 0x383ffff1c000-0x383ffff1ffff irq 26 at device 4.0 numa-domain 0 on pci0
+ioat0: Capabilities: f0006f1<DMA_with_DIF,PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat1: <SKX IOAT> mem 0x383ffff18000-0x383ffff1bfff irq 27 at device 4.1 numa-domain 0 on pci0
+ioat1: Capabilities: f0006f1<DMA_with_DIF,PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat2: <SKX IOAT> mem 0x383ffff14000-0x383ffff17fff irq 26 at device 4.2 numa-domain 0 on pci0
+ioat2: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat3: <SKX IOAT> mem 0x383ffff10000-0x383ffff13fff irq 27 at device 4.3 numa-domain 0 on pci0
+ioat3: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat4: <SKX IOAT> mem 0x383ffff0c000-0x383ffff0ffff irq 26 at device 4.4 numa-domain 0 on pci0
+ioat4: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat5: <SKX IOAT> mem 0x383ffff08000-0x383ffff0bfff irq 27 at device 4.5 numa-domain 0 on pci0
+ioat5: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat6: <SKX IOAT> mem 0x383ffff04000-0x383ffff07fff irq 26 at device 4.6 numa-domain 0 on pci0
+ioat6: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ioat7: <SKX IOAT> mem 0x383ffff00000-0x383ffff03fff irq 27 at device 4.7 numa-domain 0 on pci0
+ioat7: Capabilities: f0004f1<DMA_with_DIF,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Page_Break>
+ums0 numa-domain 0 on uhub1
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS> on motherboard
+igb2: link state changed to DOWN
+igb1: link state changed to DOWN
+igb0: link state changed to DOWN
+pflog0: permanently promiscuous mode enabled
+igb0: link state changed to UP
+igb2: link state changed to UP
+igb1: link state changed to UP
+699.615264 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb1: permanently promiscuous mode enabled
+700.053955 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb1: link state changed to DOWN
+700.166240 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb2: permanently promiscuous mode enabled
+700.166471 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb2: link state changed to DOWN
+igb1: link state changed to UP
+igb2: link state changed to UP
+igb2: link state changed to DOWN
+igb1: link state changed to DOWN
+igb2: link state changed to UP
+igb1: link state changed to UP
+788.243441 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+788.243576 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb2: link state changed to DOWN
+788.354337 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+788.354472 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+igb2: link state changed to UP
+igb1: link state changed to DOWN
+igb2: link state changed to DOWN
+igb1: link state changed to UP
+igb2: link state changed to UP
+843.659700 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+843.659811 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb2: link state changed to DOWN
+843.770415 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+843.770518 [ 853] iflib_netmap_config       txr 4 rxr 4 txd 1024 rxd 1024 rbufsz 2048
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+igb2: link state changed to UP
+tun1: changing name to 'ovpns1'
+ovpns1: link state changed to UP
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+coretemp0: <CPU On-Die Thermal Sensors> numa-domain 0 on cpu0
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+tun2: changing name to 'ovpns2'
+ovpns2: link state changed to UP
+tun3: changing name to 'ovpns3'
+ovpns3: link state changed to UP
+ovpns2: switch failed: 3
+ovpns3: link state changed to DOWN
+ovpns2: deletion failed: 3
+ovpns2: link state changed to DOWN
+ovpns2: link state changed to UP
+ovpns2: link state changed to DOWN
+ovpns2: link state changed to UP
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+ovpns2: link state changed to DOWN
+ovpns2: link state changed to UP
+ovpns2: link state changed to DOWN
+ovpns2: link state changed to UP
+ovpns2: link state changed to DOWN
+tun2: changing name to 'ovpns2'
+ovpns2: link state changed to UP
+ovpns2: link state changed to DOWN
+ovpns2: link state changed to UP
+tun3: changing name to 'ovpns3'
+ovpns3: link state changed to UP
+tun4: changing name to 'ovpns4'
+ovpns4: link state changed to UP
+ovpns3: link state changed to DOWN
+ovpns3: link state changed to UP
+tun5: changing name to 'ovpns5'
+ovpns5: link state changed to UP
+tun6: changing name to 'ovpns6'
+ovpns6: link state changed to UP
+tun7: changing name to 'ovpns7'
+ovpns7: link state changed to UP
+tun8: changing name to 'ovpns8'
+ovpns8: link state changed to UP
+tun9: changing name to 'ovpns9'
+ovpns9: link state changed to UP
+tun10: changing name to 'ovpns10'
+ovpns10: link state changed to UP
+tun11: changing name to 'ovpns11'
+ovpns11: link state changed to UP
+tun12: changing name to 'ovpns12'
+ovpns12: link state changed to UP
+tun13: changing name to 'ovpns13'
+ovpns13: link state changed to UP
+tun14: changing name to 'ovpns14'
+ovpns14: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb1
+tun15: changing name to 'ovpns15'
+ovpns15: link state changed to UP
+tun16: changing name to 'ovpns16'
+ovpns16: link state changed to UP
+tun17: changing name to 'ovpns17'
+ovpns17: link state changed to UP
+ovpns15: link state changed to DOWN
+ovpns15: link state changed to UP
+ovpns15: link state changed to DOWN
+ovpns15: link state changed to UP
+tun18: changing name to 'ovpns18'
+ovpns18: link state changed to UP
+tun19: changing name to 'ovpns19'
+ovpns19: link state changed to UP
+tun20: changing name to 'ovpns20'
+ovpns20: link state changed to UP
+tun21: changing name to 'ovpns21'
+ovpns21: link state changed to UP
+tun22: changing name to 'ovpns22'
+ovpns22: link state changed to UP
+tun23: changing name to 'ovpns23'
+ovpns23: link state changed to UP
+tun24: changing name to 'ovpns24'
+ovpns24: link state changed to UP
+tun25: changing name to 'ovpns25'
+ovpns25: link state changed to UP
+tun26: changing name to 'ovpns26'
+ovpns26: link state changed to UP
+tun27: changing name to 'ovpns27'
+ovpns27: link state changed to UP
+tun28: changing name to 'ovpns28'
+ovpns28: link state changed to UP

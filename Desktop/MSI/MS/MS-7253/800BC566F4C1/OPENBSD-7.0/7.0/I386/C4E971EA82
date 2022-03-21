@@ -1,0 +1,139 @@
+OpenBSD 7.0 (GENERIC.MP) #5: Mon Jan 31 09:08:42 MST 2022
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC.MP
+real mem  = 2145861632 (2046MB)
+avail mem = 2090299392 (1993MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 06/27/07, BIOS32 rev. 0 @ 0xfa4f0, SMBIOS rev. 2.4 @ 0xf0000 (36 entries)
+bios0: vendor Phoenix Technologies, LTD version "V1.4" date 06/27/2007
+bios0: MICRO-STAR INTERNATIONAL CO., LTD MS-7253
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S4 S5
+acpi0: tables DSDT FACP HPET MCFG APIC
+acpi0: wakeup devices PCI0(S5) SATA(S1) USB1(S1) USB2(S1) USB3(S1) USB4(S1) EHCI(S1) AC97(S5) MC97(S5) LAN1(S5) PEXG(S5) PEX0(S5) PE5C(S5) PE6C(S5) AZAC(S5) P2PB(S5) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: AMD Athlon(tm) 64 X2 Dual Core Processor 4000+ ("AuthenticAMD" 686-class, 512KB L2 cache) 2.11 GHz, 0f-6b-01
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,CX16,NXE,MMXX,FFXSR,RDTSCP,LONG,3DNOW2,3DNOW,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,3DNOWP
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 199MHz
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: AMD Athlon(tm) 64 X2 Dual Core Processor 4000+ ("AuthenticAMD" 686-class, 512KB L2 cache) 2.10 GHz, 0f-6b-01
+cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,CX16,NXE,MMXX,FFXSR,RDTSCP,LONG,3DNOW2,3DNOW,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,3DNOWP
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 3, 24 pins, remapped
+ioapic1 at mainbus0: apid 3 pa 0xfecc0000, version 3, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (PEXG)
+acpiprt2 at acpi0: bus 3 (PEX0)
+acpiprt3 at acpi0: bus 4 (P2PB)
+acpiprt4 at acpi0: bus 128 (PCI1)
+acpibtn0 at acpi0: PWRB
+"PNP0A08" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0A08" at acpi0 not configured
+acpicpu0 at acpi0: C1(@1 halt!)
+acpicpu1 at acpi0: C1(@1 halt!)
+bios0: ROM list: 0xc0000/0xfa00 0xd0000/0x8000! 0xd8000/0x800
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "VIA K8M890 Host" rev 0x00
+viaagp0 at pchb0: v3
+agp0 at viaagp0: aperture at 0xd0000000, size 0x10000000
+pchb1 at pci0 dev 0 function 1 "VIA K8M890 Host" rev 0x00
+pchb2 at pci0 dev 0 function 2 "VIA K8M890 Host" rev 0x00
+pchb3 at pci0 dev 0 function 3 "VIA K8M890 Host" rev 0x00
+pchb4 at pci0 dev 0 function 4 "VIA K8M890 Host" rev 0x00
+"VIA K8M890 IOAPIC" rev 0x00 at pci0 dev 0 function 5 not configured
+pchb5 at pci0 dev 0 function 7 "VIA K8M890 Host" rev 0x00
+ppb0 at pci0 dev 1 function 0 "VIA K8HTB AGP" rev 0x00
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 2 function 0 "VIA K8T890" rev 0x00: apic 3 int 3
+pci2 at ppb1 bus 2
+radeondrm0 at pci2 dev 0 function 0 "ATI Radeon HD 3650" rev 0x00
+drm0 at radeondrm0
+radeondrm0: apic 3 int 0
+azalia0 at pci2 dev 0 function 1 "ATI Radeon HD 3600 HD Audio" rev 0x00: apic 3 int 1
+azalia0: no supported codecs
+ppb2 at pci0 dev 3 function 0 "VIA K8T890" rev 0x00: apic 3 int 7
+pci3 at ppb2 bus 3
+pciide0 at pci0 dev 15 function 0 "VIA VT8237A SATA" rev 0x80: DMA
+pciide0: using apic 2 int 21 for native-PCI interrupt
+pciide1 at pci0 dev 15 function 1 "VIA VT82C571 IDE" rev 0x07: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide1 channel 0 drive 0: <Maxtor 6Y080L0>
+wd0: 16-sector PIO, LBA, 78166MB, 160084415 sectors
+wd0(pciide1:0:0): using PIO mode 4, DMA mode 2
+wd1 at pciide1 channel 1 drive 1: <Maxtor 6Y160P0>
+wd1: 16-sector PIO, LBA48, 152587MB, 312500000 sectors
+wd1(pciide1:1:1): using PIO mode 4, DMA mode 2
+uhci0 at pci0 dev 16 function 0 "VIA VT83C572 USB" rev 0xa0: apic 2 int 20
+uhci1 at pci0 dev 16 function 1 "VIA VT83C572 USB" rev 0xa0: apic 2 int 22
+uhci2 at pci0 dev 16 function 2 "VIA VT83C572 USB" rev 0xa0: apic 2 int 21
+uhci3 at pci0 dev 16 function 3 "VIA VT83C572 USB" rev 0xa0: apic 2 int 23
+ehci0 at pci0 dev 16 function 4 "VIA VT6202 USB" rev 0x86: apic 2 int 21
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "VIA EHCI root hub" rev 2.00/1.00 addr 1
+viapm0 at pci0 dev 17 function 0 "VIA VT8237A ISA" rev 0x00: SMI
+iic0 at viapm0
+iic0: addr 0x2f 00=c2 01=0f 02=00 03=01 04=07 05=00 06=18 07=00 08=00 14=14 15=62 16=02 17=05 words 00=c2ff 01=0fff 02=00ff 03=01ff 04=07ff 05=00ff 06=18ff 07=00ff
+spdmem0 at iic0 addr 0x50: 1GB DDR2 SDRAM non-parity PC2-5300CL5
+spdmem1 at iic0 addr 0x51: 1GB DDR2 SDRAM non-parity PC2-5300CL5
+pchb6 at pci0 dev 17 function 7 "VIA VT8251 VLINK" rev 0x00
+vr0 at pci0 dev 18 function 0 "VIA RhineII-2" rev 0x7c: apic 2 int 23, address XXX
+rlphy0 at vr0 phy 1: RTL8201L 10/100 PHY, rev. 1
+pchb7 at pci0 dev 19 function 0 "VIA VT8237A" rev 0x00
+ppb3 at pci0 dev 19 function 1 "VIA VT8237A" rev 0x00
+pci4 at ppb3 bus 4
+xl0 at pci4 dev 5 function 0 "3Com 3c905C" rev 0x78: apic 2 int 18, address XXX
+exphy0 at xl0 phy 24: 3Com internal media interface
+pchb8 at pci0 dev 24 function 0 "AMD 0Fh HyperTransport" rev 0x00
+pchb9 at pci0 dev 24 function 1 "AMD 0Fh Address Map" rev 0x00
+pchb10 at pci0 dev 24 function 2 "AMD 0Fh DRAM Cfg" rev 0x00
+kate0 at pci0 dev 24 function 3 "AMD 0Fh Misc Cfg" rev 0x00: core rev BH-G1
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "VIA UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "VIA UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "VIA UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "VIA UHCI root hub" rev 1.00/1.00 addr 1
+pci5 at mainbus0 bus 128
+azalia1 at pci5 dev 1 function 0 "VIA HD Audio" rev 0x10: apic 2 int 17
+azalia1: codecs: Realtek ALC883
+audio0 at azalia1
+isa0 at mainbus0
+isadma0 at isa0
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+wbsio0 at isa0 port 0x2e/2: W83627EHF rev 0x68
+lm1 at wbsio0 port 0x290/8: W83627EHF
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+dt: 445 probes
+umass0 at uhub0 port 1 configuration 1 interface 0 "Generic Mass Storage" rev 2.00/1.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <Generic, Flash Disk, 8.07> removable
+sd0: 29800MB, 512 bytes/sector, 61030400 sectors
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (70dd5e2824311ed4.a) swap on wd0b dump on wd0b
+radeondrm0: RV635
+radeondrm0: 1280x1024, 32bpp
+wsdisplay0 at radeondrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

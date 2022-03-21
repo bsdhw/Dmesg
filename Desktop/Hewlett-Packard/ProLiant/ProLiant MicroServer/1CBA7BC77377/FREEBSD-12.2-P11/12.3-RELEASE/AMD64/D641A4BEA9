@@ -1,0 +1,662 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.3-RELEASE r371126 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(vga): resolution 640x480
+CPU: AMD Turion(tm) II Neo N40L Dual-Core Processor (1497.54-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x100f63  Family=0x10  Model=0x6  Stepping=3
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802009<SSE3,MON,CX16,POPCNT>
+  AMD Features=0xee500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM,3DNow!+,3DNow!>
+  AMD Features2=0x837ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,NodeId>
+  SVM: NP,NRIP,NAsids=64
+  TSC: P-state invariant
+real memory  = 8589934592 (8192 MB)
+avail memory = 8010407936 (7639 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <HP     ProLiant>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): 32/64X length mismatch in FADT/Gpe0Block: 64/32 (20200430/tbfadt-748)
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+Launching APs: 1
+Timecounter "TSC" frequency 1497537674 Hz quality 800
+random: entropy device external interface
+WARNING: Device "g_ctl" is Giant locked and may be deleted before FreeBSD 14.0.
+000.000017 [4344] netmap_init               netmap: loaded module
+WARNING: Device "pci" is Giant locked and may be deleted before FreeBSD 14.0.
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff811848f0, 0) error 19
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <HP ProLiant> on motherboard
+acpi0: Power Button (fixed)
+acpi0: _OSC failed: AE_BUFFER_OVERFLOW
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+apei0: <ACPI Platform Error Interface> on acpi0
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0xd000-0xd0ff mem 0xd0000000-0xdfffffff,0xfe7f0000-0xfe7fffff,0xfe600000-0xfe6fffff irq 18 at device 5.0 on pci1
+vgapci0: Boot video device
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 4.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+siis0: <SiI3132 SATA controller> port 0xe800-0xe87f mem 0xfe8ffc00-0xfe8ffc7f,0xfe8f8000-0xfe8fbfff irq 16 at device 0.0 on pci2
+siisch0: <SIIS channel> at channel 0 on siis0
+siisch1: <SIIS channel>(noperiph:siisch0:0:-1:ffffffff): rescan already queued
+ at channel 1 on siis0
+(noperiph:siisch1:0:-1:ffffffff): rescan already queued
+pcib3: <ACPI PCI-PCI bridge> irq 18 at device 6.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+bge0: <HP NC107i PCIe Gigabit Server Adapter, ASIC rev. 0x5784100> mem 0xfe9f0000-0xfe9fffff irq 18 at device 0.0 on pci3
+bge0: CHIP ID 0x05784100; ASIC REV 0x5784; CHIP REV 0x57841; PCI-E
+miibus0: <MII bus> on bge0
+brgphy0: <BCM5784 10/100/1000baseT PHY> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0xc000-0xc007,0xb000-0xb003,0xa000-0xa007,0x9000-0x9003,0x8000-0x800f mem 0xfe5ffc00-0xfe5fffff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.20 with 4 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe5fe000-0xfe5fefff irq 18 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfe5ff800-0xfe5ff8ff irq 17 at device 18.2 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe5fd000-0xfe5fdfff irq 18 at device 19.0 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfe5ff400-0xfe5ff4ff irq 17 at device 19.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+usbus3: 480Mbps High Speed USB v2.0
+atapci0: <ATI IXP700/800 UDMA133 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xff00-0xff0f at device 20.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+ata1: <ATA channel> at channel 1 on atapci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib4: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+ohci2: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xfe5fc000-0xfe5fcfff irq 18 at device 22.0 on pci0
+usbus4 on ohci2
+usbus4: 12Mbps Full Speed USB v1.0
+ehci2: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xfe5ff000-0xfe5ff0ff irq 17 at device 22.2 on pci0
+usbus5: EHCI version 1.0
+usbus5 on ehci2
+usbus5: 480Mbps High Speed USB v2.0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb4
+acpi_button0: <Power Button> on acpi0
+orm0: <ISA Option ROM> at iomem 0xd2000-0xd7fff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen1.1: <ATI EHCI root HUB> at usbus1
+ugen4.1: <ATI OHCI root HUB> at usbus4
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+ugen5.1: <ATI EHCI root HUB> at usbus5
+ugen2.1: <ATI OHCI root HUB> at usbus2
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub2: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+ugen0.1: <ATI OHCI root HUB> at usbus0
+ugen3.1: <ATI EHCI root HUB> at usbus3
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: CAM usbus0 usbus1 usbus2 usbus3 usbus4 usbus5
+bge0: link state changed to UP
+uhub1: 4 ports with 4 removable, self powered
+uhub3: 5 ports with 5 removable, self powered
+uhub4: 5 ports with 5 removable, self powered
+Root mount waiting for: CAM usbus1 usbus3 usbus5
+uhub2: 4 ports with 4 removable, self powered
+uhub0: 5 ports with 5 removable, self powered
+uhub5: 5 ports with 5 removable, self powered
+Root mount waiting for: CAM
+ugen0.2: <SIGMACHIP USB Keyboard> at usbus0
+ukbd0 on uhub4
+ukbd0: <SIGMACHIP USB Keyboard, class 0/0, rev 1.10/3.30, addr 2> on usbus0
+kbd2 at ukbd0
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+ada0 at siisch0 bus 0 scbus0 target 0 lun 0
+ada0: <WDC WD5000BPKT-00PK4T0 01.01A01> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+ada0: quirks=0x1<4K>
+ada1 at siisch1 bus 0 scbus1 target 0 lun 0
+ada1: <WDC WD5000BPKT-00PK4T0 01.01A01> ATA8-ACS SATA 2.x device
+ada1: Serial Number...
+ada1: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 476940MB (976773168 512 byte sectors)
+ada1: quirks=0x1<4K>
+ada2 at ahcich0 bus 0 scbus2 target 0 lun 0
+ada2: <WDC WD20EARX-00PASB0 51.0AB51> ATA8-ACS SATA 3.x device
+ada2: Serial Number...
+ada2: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 1907729MB (3907029168 512 byte sectors)
+ada2: quirks=0x1<4K>
+ada3 at ahcich1 bus 0 scbus3 target 0 lun 0
+ada3: <WDC WD20EZRX-00D8PB0 80.00A80> ACS-2 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 1907729MB (3907029168 512 byte sectors)
+ada3: quirks=0x1<4K>
+ada4 at ahcich2 bus 0 scbus4 target 0 lun 0
+ada4: <WDC WD20EARX-008FB0 51.0AB51> ATA8-ACS SATA 3.x device
+ada4: Serial Number...
+ada4: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada4: Command Queueing enabled
+ada4: 1907729MB (3907029168 512 byte sectors)
+ada4: quirks=0x1<4K>
+ada5 at ahcich3 bus 0 scbus5 target 0 lun 0
+ada5: <WDC WD20EZRX-00D8PB0 80.00A80> ACS-2 ATA SATA 3.x device
+ada5: Serial Number...
+ada5: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada5: Command Queueing enabled
+ada5: 1907729MB (3907029168 512 byte sectors)
+ada5: quirks=0x1<4K>
+GEOM_MIRROR: Component ada1p2 (device swap) broken, skipping.
+GEOM_MIRROR: Device mirror/swap launched (1/2).
+GEOM_MIRROR: Component gpt/swap1 (device swap) broken, skipping.
+GEOM_MIRROR: Cannot add disk gpt/swap1 to swap (error=22).
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+bge0: link state changed to DOWN
+bge0: link state changed to UP
+lo1: link state changed to UP
+uhid0 on uhub4
+uhid0: <SIGMACHIP USB Keyboard, class 0/0, rev 1.10/3.30, addr 2> on usbus0
+pflog0: promiscuous mode enabled
+Security policy loaded: MAC/ntpd (mac_ntpd)
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00040000 ss 70000000 rs 70000000 es 00000000 sts 801d0000 serr 00000000
+siisch1:  ... waiting for slots 30000000
+siisch1: Timeout on slot 28
+siisch1: siis_timeout is 00040000 ss 70000000 rs 70000000 es 00000000 sts 801d0000 serr 00000000
+siisch1:  ... waiting for slots 20000000
+siisch1: Timeout on slot 29
+siisch1: siis_timeout is 00040000 ss 70000000 rs 70000000 es 00000000 sts 801d0000 serr 00000000
+(ada1:siisch1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 10 90 88 40 40 16 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 3 more tries remain
+(ada1:siisch1:0:0:0): FLUSHCACHE48. ACB: ea 00 00 00 00 40 00 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 0 more tries remain
+(ada1:siisch1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 08 28 98 b0 40 00 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 3 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801f0000 serr 00000000
+(aprobe0:siisch1:0:0:0): ATA_IDENTIFY. ACB: ec 00 00 00 00 40 00 00 00 00 00 00
+(aprobe0:siisch1:0:0:0): CAM status: Command timeout
+(aprobe0:siisch1:0:0:0): Retrying command, 0 more tries remain
+Limiting closed port RST response from 474 to 200 packets/sec
+Limiting closed port RST response from 238 to 200 packets/sec
+Limiting closed port RST response from 1233 to 200 packets/sec
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (1 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (77 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (79 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (78 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (88 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (87 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (81 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (89 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (107 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (85 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (88 occurrences)
+sonewconn: pcb 0xfffff8004671a1e8: Listen queue overflow: 193 already in queue awaiting acceptance (104 occurrences)
+pid 2366 (rtorrent), jid 2, uid 816: exited on signal 3 (core dumped)
+Limiting closed port RST response from 236 to 200 packets/sec
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 71 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 71 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 3 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 71 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 71 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 2 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 71 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 71 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 1 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 71 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 71 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 0 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 71 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 71 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Error 5, Retries exhausted
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7d 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 08 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 3 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7d 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 08 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 2 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7d 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 08 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 1 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7d 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 08 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 0 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7d 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 08 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Error 5, Retries exhausted
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7e 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 3 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7e 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 2 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7e 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 1 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7e 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 0 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 7e 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 78 7e 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Error 5, Retries exhausted
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 8b 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 a8 8b 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 3 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 8b 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 a8 8b 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 2 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 8b 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 a8 8b 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 1 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 8b 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 a8 8b 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Retrying command, 0 more tries remain
+(ada3:ahcich1:0:0:0): READ_FPDMA_QUEUED. ACB: 60 00 70 8b 2c 40 01 00 00 01 00 00
+(ada3:ahcich1:0:0:0): CAM status: ATA Status Error
+(ada3:ahcich1:0:0:0): ATA status: 41 (DRDY ERR), error: 40 (UNC )
+(ada3:ahcich1:0:0:0): RES: 41 40 a8 8b 2c 40 01 00 00 00 00
+(ada3:ahcich1:0:0:0): Error 5, Retries exhausted
+Limiting closed port RST response from 492 to 200 packets/sec
+Limiting closed port RST response from 698 to 200 packets/sec
+Limiting closed port RST response from 800 to 200 packets/sec
+Limiting closed port RST response from 1225 to 200 packets/sec
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (81 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (113 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (66 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (104 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (119 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (116 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (12 occurrences)
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801e0000 serr 00000000
+(ada1:siisch1:0:0:0): FLUSHCACHE48. ACB: ea 00 00 00 00 40 00 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801e0000 serr 00000000
+(ada1:siisch1:0:0:0): FLUSHCACHE48. ACB: ea 00 00 00 00 40 00 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801f0000 serr 00000000
+(aprobe0:siisch1:0:0:0): ATA_IDENTIFY. ACB: ec 00 00 00 00 40 00 00 00 00 00 00
+(aprobe0:siisch1:0:0:0): CAM status: Command timeout
+(aprobe0:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801e0000 serr 00000000
+(ada1:siisch1:0:0:0): FLUSHCACHE48. ACB: ea 00 00 00 00 40 00 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801e0000 serr 00000000
+(ada1:siisch1:0:0:0): FLUSHCACHE48. ACB: ea 00 00 00 00 40 00 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801f0000 serr 00000000
+(aprobe0:siisch1:0:0:0): ATA_IDENTIFY. ACB: ec 00 00 00 00 40 00 00 00 00 00 00
+(aprobe0:siisch1:0:0:0): CAM status: Command timeout
+(aprobe0:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801e0000 serr 00000000
+(ada1:siisch1:0:0:0): FLUSHCACHE48. ACB: ea 00 00 00 00 40 00 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801f0000 serr 00000000
+(aprobe0:siisch1:0:0:0): ATA_IDENTIFY. ACB: ec 00 00 00 00 40 00 00 00 00 00 00
+(aprobe0:siisch1:0:0:0): CAM status: Command timeout
+(aprobe0:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 60000000 rs 60000000 es 00000000 sts 801e0000 serr 00000000
+siisch1:  ... waiting for slots 20000000
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801e0000 serr 00000000
+(ada1:siisch1:0:0:0): FLUSHCACHE48. ACB: ea 00 00 00 00 40 00 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801e0000 serr 00000000
+(ada1:siisch1:0:0:0): FLUSHCACHE48. ACB: ea 00 00 00 00 40 00 00 00 00 00 00
+(ada1:siisch1:0:0:0): CAM status: Command timeout
+(ada1:siisch1:0:0:0): Retrying command, 0 more tries remain
+siisch1: Timeout on slot 30
+siisch1: siis_timeout is 00000000 ss 40000000 rs 40000000 es 00000000 sts 801f0000 serr 00000000
+(aprobe0:siisch1:0:0:0): ATA_IDENTIFY. ACB: ec 00 00 00 00 40 00 00 00 00 00 00
+(aprobe0:siisch1:0:0:0): CAM status: Command timeout
+(aprobe0:siisch1:0:0:0): Retrying command, 0 more tries remain
+ada3 at ahcich1 bus 0 scbus3 target 0 lun 0
+ada3: <WDC WD20EZRX-00D8PB0 80.00A80> s/n ... detached
+(ada3:ahcich1:0:0:0): Periph destroyed
+ada2 at ahcich0 bus 0 scbus2 target 0 lun 0
+ada2: <WDC WD20EARX-00PASB0 51.0AB51> s/n ... detached
+(ada2:ahcich0:0:0:0): Periph destroyed
+ada2 at ahcich1 bus 0 scbus3 target 0 lun 0
+ada2: <WDC WD20EZAZ-00GGJB0 80.00A80> ACS-3 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 1907729MB (3907029168 512 byte sectors)
+ada3 at ahcich0 bus 0 scbus2 target 0 lun 0
+ada3: <WDC WD20EARX-00PASB0 51.0AB51> ATA8-ACS SATA 3.x device
+ada3: Serial Number...
+ada3: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 1907729MB (3907029168 512 byte sectors)
+ada3: quirks=0x1<4K>
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (38 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (106 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (102 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (89 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (99 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (106 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (129 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (118 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (121 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (114 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (124 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (128 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (121 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (117 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (126 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (118 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (143 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (115 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (113 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (131 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (117 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (124 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (131 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (126 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (124 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (118 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (142 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (115 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (113 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (133 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (127 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (134 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (124 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (129 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (125 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (111 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (141 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (127 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (116 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (128 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (123 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (118 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (118 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (119 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (121 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (117 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (138 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (121 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (118 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (126 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (116 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (119 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (115 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (117 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (115 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (123 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (122 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (121 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (124 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (124 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (123 occurrences)
+ada2 at ahcich1 bus 0 scbus3 target 0 lun 0
+ada2: <WDC WD20EZAZ-00GGJB0 80.00A80> s/n ... detached
+(ada2:ahcich1:0:0:0): Periph destroyed
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (128 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (128 occurrences)
+ada3 at ahcich0 bus 0 scbus2 target 0 lun 0
+ada3: <WDC WD20EARX-00PASB0 51.0AB51> s/n ... detached
+(ada3:ahcich0:0:0:0): Periph destroyed
+ada2 at ahcich0 bus 0 scbus2 target 0 lun 0
+ada2: <WDC WD20EARX-00PASB0 51.0AB51> ATA8-ACS SATA 3.x device
+ada2: Serial Number...
+ada2: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 1907729MB (3907029168 512 byte sectors)
+ada2: quirks=0x1<4K>
+ada3 at ahcich1 bus 0 scbus3 target 0 lun 0
+ada3: <WDC WD20EZRX-00D8PB0 80.00A80> ACS-2 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 1907729MB (3907029168 512 byte sectors)
+ada3: quirks=0x1<4K>
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (130 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (127 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (129 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (170 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (138 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (131 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (131 occurrences)
+ahcich1: Timeout on slot 9 port 0
+ahcich1: is 00000000 cs 00000200 ss 00000000 rs 00000200 tfd c0 serr 00000000 cmd 0000e917
+(ada3:ahcich1:0:0:0): FLUSHCACHE48. ACB: ea 00 00 00 00 40 00 00 00 00 00 00
+(ada3:ahcich1:0:0:0): CAM status: Command timeout
+(ada3:ahcich1:0:0:0): Retrying command, 0 more tries remain
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (31 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (116 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (90 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (124 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (124 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (9 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (138 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (97 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (112 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (112 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (132 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (132 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (132 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (123 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (129 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (148 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (140 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (164 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (137 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (140 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (135 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (155 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (161 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (147 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (164 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (161 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (160 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (153 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (156 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (141 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (163 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (137 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (158 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (140 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (77 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (108 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (117 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (119 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (127 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (113 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (118 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (129 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (131 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (134 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (119 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (149 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (155 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (176 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (164 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (172 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (158 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (152 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (161 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (167 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (175 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (174 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (181 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (184 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (175 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (197 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (171 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (204 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (184 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (193 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (189 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (196 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (193 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (182 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (164 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (155 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (146 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (146 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (151 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (136 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (123 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (127 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (130 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (127 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (127 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (117 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (128 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (114 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (111 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (120 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (119 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (121 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (116 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (34 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (120 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (123 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (104 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (95 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (105 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (113 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (109 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (87 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (94 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (95 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (114 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (118 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (123 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (117 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (128 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (133 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (139 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (137 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (126 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (148 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (144 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (147 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (2 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (110 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (32 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (90 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (97 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (112 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (119 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (108 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (99 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (112 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (101 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (94 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (105 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (94 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (100 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (99 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (95 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (100 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (98 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (111 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (62 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (93 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (94 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (105 occurrences)
+sonewconn: pcb 0xfffff8000d830d58: Listen queue overflow: 193 already in queue awaiting acceptance (106 occurrences)

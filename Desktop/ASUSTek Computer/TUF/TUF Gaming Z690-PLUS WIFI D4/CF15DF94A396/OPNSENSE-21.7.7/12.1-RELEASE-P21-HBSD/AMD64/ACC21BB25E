@@ -1,0 +1,269 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p21-HBSD #0  04bde01a034(stable/21.7)-dirty: Mon Dec 13 09:07:56 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(efifb): resolution 1024x768
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: 12th Gen Intel(R) Core(TM) i9-12900K (3187.46-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x90672  Family=0x6  Model=0x97  Stepping=2
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x239ca7eb<FSGSBASE,TSCADJ,BMI1,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,NFPUSG,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,PROCTRACE,SHA>
+  Structured Extended Features2=0x98c027ac<UMIP,PKU,WAITPKG,GFNI,RDPID,MOVDIRI,MOVDIRI64B>
+  Structured Extended Features3=0xfc1cc410<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,CORE_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xd6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 137434759168 (131068 MB)
+avail memory = 133577113600 (127389 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 24 CPUs
+FreeBSD/SMP: Non-uniform topology
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 4 18 17 19 23 20 3 11 21 13 7 9 15 16 22 10 2 5 8 12 14 6
+Timecounter "TSC-low" frequency 1593731165 Hz quality 1000
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812947f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000074 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 19200000 Hz quality 950
+Event timer "HPET" frequency 19200000 Hz quality 350
+Event timer "HPET1" frequency 19200000 Hz quality 340
+Event timer "HPET2" frequency 19200000 Hz quality 340
+Event timer "HPET3" frequency 19200000 Hz quality 340
+Event timer "HPET4" frequency 19200000 Hz quality 340
+Event timer "HPET5" frequency 19200000 Hz quality 340
+Event timer "HPET6" frequency 19200000 Hz quality 340
+Event timer "HPET7" frequency 19200000 Hz quality 340
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ix0: <Intel(R) X540-AT2> mem 0x6002400000-0x60025fffff,0x6002604000-0x6002607fff at device 0.0 on pci1
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 16 RX queues 16 TX queues
+ix0: Using MSI-X interrupts with 17 vectors
+ix0: allocated for 16 queues
+ix0: allocated for 16 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: netmap queues/slots: TX 16/2048, RX 16/2048
+ix1: <Intel(R) X540-AT2> mem 0x6002200000-0x60023fffff,0x6002600000-0x6002603fff at device 0.1 on pci1
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 16 RX queues 16 TX queues
+ix1: Using MSI-X interrupts with 17 vectors
+ix1: allocated for 16 queues
+ix1: allocated for 16 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: netmap queues/slots: TX 16/2048, RX 16/2048
+vgapci0: <VGA-compatible display> port 0x5000-0x503f mem 0x6006000000-0x6006ffffff,0x4000000000-0x400fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+pcib2: <ACPI PCI-PCI bridge> at device 6.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+nvme0: <Generic NVMe Device> mem 0x85b00000-0x85b03fff at device 0.0 on pci2
+pci0: <mass storage, RAID> at device 14.0 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x6007200000-0x600720ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <network> at device 20.3 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <serial bus> at device 21.2 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x5090-0x5097,0x5080-0x5083,0x5060-0x507f mem 0x85d00000-0x85d01fff,0x85d03000-0x85d030ff,0x85d02000-0x85d027ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier not supported
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahcich6: <AHCI channel> at channel 6 on ahci0
+ahcich7: <AHCI channel> at channel 7 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+pcib3: <ACPI PCI-PCI bridge> at device 26.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+nvme1: <Generic NVMe Device> mem 0x85a00000-0x85a03fff at device 0.0 on pci3
+pcib4: <ACPI PCI-PCI bridge> at device 27.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> at device 27.4 on pci0
+pci5: <ACPI PCI bus> on pcib5
+nvme2: <Generic NVMe Device> mem 0x85900000-0x85903fff at device 0.0 on pci5
+pcib6: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pcib6: [GIANT-LOCKED]
+pcib7: <ACPI PCI-PCI bridge> at device 28.2 on pci0
+pci6: <ACPI PCI bus> on pcib7
+pci6: <network, ethernet> at device 0.0 (no driver attached)
+pcib8: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci7: <ACPI PCI bus> on pcib8
+ixl0: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.3.0-k> mem 0x6001800000-0x6001ffffff,0x6002018000-0x600201ffff at device 0.0 on pci7
+ixl0: fw 6.1.49420 api 1.7 nvm 6.80 etid 80003ce6 oem 1.264.0
+ixl0: PF-ID[0]: VFs 32, MSI-X 129, VF MSI-X 5, QPs 384, I2C
+ixl0: Using 1024 TX descriptors and 1024 RX descriptors
+ixl0: Using 16 RX queues 16 TX queues
+ixl0: Using MSI-X interrupts with 17 vectors
+ixl0: Ethernet address: ...
+ixl0: Allocating 16 queues for PF LAN VSI; 16 queues active
+ixl0: PCI Express Bus: Speed 8.0GT/s Width x4
+ixl0: PCI-Express bandwidth available for this device may be insufficient for optimal performance.
+ixl0: Please move the device to a different PCI-e link with more lanes and/or higher transfer rate.
+ixl0: SR-IOV ready
+ixl0: netmap queues/slots: TX 16/1024, RX 16/1024
+ixl1: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.3.0-k> mem 0x6001000000-0x60017fffff,0x6002010000-0x6002017fff at device 0.1 on pci7
+ixl1: fw 6.1.49420 api 1.7 nvm 6.80 etid 80003ce6 oem 1.264.0
+ixl1: PF-ID[1]: VFs 32, MSI-X 129, VF MSI-X 5, QPs 384, I2C
+ixl1: Using 1024 TX descriptors and 1024 RX descriptors
+ixl1: Using 16 RX queues 16 TX queues
+ixl1: Using MSI-X interrupts with 17 vectors
+ixl1: Ethernet address: ...
+ixl1: Allocating 16 queues for PF LAN VSI; 16 queues active
+ixl1: PCI Express Bus: Speed 8.0GT/s Width x4
+ixl1: PCI-Express bandwidth available for this device may be insufficient for optimal performance.
+ixl1: Please move the device to a different PCI-e link with more lanes and/or higher transfer rate.
+ixl1: SR-IOV ready
+ixl1: netmap queues/slots: TX 16/1024, RX 16/1024
+ixl2: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.3.0-k> mem 0x6000800000-0x6000ffffff,0x6002008000-0x600200ffff at device 0.2 on pci7
+ixl2: fw 6.1.49420 api 1.7 nvm 6.80 etid 80003ce6 oem 1.264.0
+ixl2: PF-ID[2]: VFs 32, MSI-X 129, VF MSI-X 5, QPs 384, I2C
+ixl2: Using 1024 TX descriptors and 1024 RX descriptors
+ixl2: Using 16 RX queues 16 TX queues
+ixl2: Using MSI-X interrupts with 17 vectors
+ixl2: Ethernet address: ...
+ixl2: Allocating 16 queues for PF LAN VSI; 16 queues active
+ixl2: PCI Express Bus: Speed 8.0GT/s Width x4
+ixl2: PCI-Express bandwidth available for this device may be insufficient for optimal performance.
+ixl2: Please move the device to a different PCI-e link with more lanes and/or higher transfer rate.
+ixl2: SR-IOV ready
+ixl2: netmap queues/slots: TX 16/1024, RX 16/1024
+ixl3: <Intel(R) Ethernet Controller X710 for 10GbE SFP+ - 2.3.0-k> mem 0x6000000000-0x60007fffff,0x6002000000-0x6002007fff at device 0.3 on pci7
+ixl3: fw 6.1.49420 api 1.7 nvm 6.80 etid 80003ce6 oem 1.264.0
+ixl3: PF-ID[3]: VFs 32, MSI-X 129, VF MSI-X 5, QPs 384, I2C
+ixl3: Using 1024 TX descriptors and 1024 RX descriptors
+ixl3: Using 16 RX queues 16 TX queues
+ixl3: Using MSI-X interrupts with 17 vectors
+ixl3: Ethernet address: ...
+ixl3: Allocating 16 queues for PF LAN VSI; 16 queues active
+ixl3: PCI Express Bus: Speed 8.0GT/s Width x4
+ixl3: PCI-Express bandwidth available for this device may be insufficient for optimal performance.
+ixl3: Please move the device to a different PCI-e link with more lanes and/or higher transfer rate.
+ixl3: SR-IOV ready
+ixl3: netmap queues/slots: TX 16/1024, RX 16/1024
+pcib9: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pcib9: [GIANT-LOCKED]
+pcib10: <ACPI PCI-PCI bridge> at device 29.4 on pci0
+pci8: <ACPI PCI bus> on pcib10
+nvme3: <Generic NVMe Device> mem 0x85800000-0x85803fff at device 0.0 on pci8
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac0: <Intel (0x7ad0) HDA Controller> mem 0x6007218000-0x600721bfff,0x6007000000-0x60070fffff at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+cpu0: <ACPI CPU> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <Samsung SSD 980 PRO 500GB> NVMe namespace
+nvd0: 476940MB (976773168 512 byte sectors)
+ixl1: Link is up, 10 Gbps Full Duplex, Requested FEC: None, Negotiated FEC: None, Autoneg: False, Flow Control: None
+ixl1: link state changed to UP
+nvd1: <Samsung SSD 980 PRO 500GB> NVMe namespace
+nvd1: 476940MB (976773168 512 byte sectors)
+nvd2: <Samsung SSD 980 PRO 500GB> NVMe namespace
+nvd2: 476940MB (976773168 512 byte sectors)
+nvd3: <Samsung SSD 980 PRO 500GB> NVMe namespace
+nvd3: 476940MB (976773168 512 byte sectors)
+hdacc0: <Realtek (0x0897) HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek (0x0897) Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek (0x0897) (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa0
+pcm1: <Realtek (0x0897) (Front Analog)> at nid 27 and 25 on hdaa0
+pcm2: <Realtek (0x0897) (Rear Digital)> at nid 30 on hdaa0
+hdacc1: <Intel (0x2815) HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel (0x2815) Audio Function Group> at nid 1 on hdacc1
+pcm3: <Intel (0x2815) (HDMI/DP 8ch)> at nid 4 on hdaa1
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0
+uhub0: 25 ports with 25 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <AsusTek Computer Inc. AURA LED Controller> at usbus0
+Root mount waiting for: usbus0
+ugen0.3: <PixArt Dell MS116 USB Optical Mouse> at usbus0
+Root mount waiting for: usbus0
+ugen0.4: <ASUS TEK. ASM107x> at usbus0
+uhub1 on uhub0
+uhub1: <ASUS TEK. ASM107x, class 9/0, rev 2.10/0.01, addr 3> on usbus0
+uhub1: MTT enabled
+uhub1: 4 ports with 4 removable, self powered
+ugen0.5: <Dell Dell USB Keyboard> at usbus0
+ukbd0 on uhub1
+ukbd0: <EP1 Interrupt> on usbus0
+kbd1 at ukbd0
+Root mount waiting for: usbus0
+ugen0.6: <vendor 0x8087 product 0x0026> at usbus0
+Root mount waiting for: usbus0
+ugen0.7: <ASUS TEK. ASM107x> at usbus0
+uhub2 on uhub0
+uhub2: <ASUS TEK. ASM107x, class 9/0, rev 3.00/0.01, addr 6> on usbus0
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+uhid0 on uhub0
+uhid0: <AsusTek Computer Inc. AURA LED Controller, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+ums0 on uhub0
+ums0: <PixArt Dell MS116 USB Optical Mouse, class 0/0, rev 2.00/1.00, addr 2> on usbus0
+ums0: 3 buttons and [XYZ] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+pflog0: permanently promiscuous mode enabled
+689.605769 [ 853] iflib_netmap_config       txr 16 rxr 16 txd 1024 rxd 1024 rbufsz 2048
+ixl0: permanently promiscuous mode enabled
+689.642989 [ 853] iflib_netmap_config       txr 16 rxr 16 txd 1024 rxd 1024 rbufsz 2048
+690.316881 [ 853] iflib_netmap_config       txr 16 rxr 16 txd 1024 rxd 1024 rbufsz 2048
+ixl0: Link is up, 1 Gbps Full Duplex, Requested FEC: None, Negotiated FEC: None, Autoneg: True, Flow Control: None
+ixl0: link state changed to UP
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ixl1: promiscuous mode enabled
+lo0: promiscuous mode enabled
+enc0: promiscuous mode enabled
+pfsync0: promiscuous mode enabled
+ix0: promiscuous mode enabled
+ix1: promiscuous mode enabled
+ixl2: promiscuous mode enabled
+ixl3: promiscuous mode enabled

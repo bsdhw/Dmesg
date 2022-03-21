@@ -1,0 +1,376 @@
+---<<BOOT>>---
+Copyright (c) 029D-FFB2 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.2-RELEASE r366954 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(efifb): resolution 800x600
+CPU: AMD Ryzen 3 2200U with Radeon Vega Mobile Gfx   (2495.37-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x810f10  Family=0x17  Model=0x11  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 7957176320 (7588 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+arc4random: no preloaded entropy cache
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20200430/tbfadt-796)
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+Launching APs: 1 3 2
+Timecounter "TSC-low" frequency 1247685275 Hz quality 1000
+random: entropy device external interface
+md0: Preloaded image </data/XXXXXXXXXXXX 14385152 bytes at 0xffffffff82488790
+000.000051 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff81115e40, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+kbd0 at kbdmux0
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+Firmware Error (ACPI): Could not resolve symbol [\134_SB.PCI0.SBRG.EC0], AE_NOT_FOUND (20200430/dswload2-315)
+ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20200430/psobject-372)
+Firmware Error (ACPI): Could not resolve symbol [\134_SB.PCI0.GPP2.BCM5], AE_NOT_FOUND (20200430/dswload2-315)
+ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20200430/psobject-372)
+Firmware Error (ACPI): Could not resolve symbol [\134_SB.PCI0.SBRG.EC0], AE_NOT_FOUND (20200430/dswload2-315)
+ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20200430/psobject-372)
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Event timer "HPET2" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xfea00000-0xfea03fff irq 28 at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.3 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xf000-0xf0ff mem 0xfe900000-0xfe900fff,0xf0300000-0xf0303fff irq 32 at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: turning off MSI enable bit.
+re0: ASPM disabled
+re0: Chip rev. 0x4c000000
+re0: MAC rev. 0x00000000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib3: <ACPI PCI-PCI bridge> at device 1.4 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <network> at device 0.0 (no driver attached)
+pcib4: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci4: <ACPI PCI bus> on pcib4
+vgapci0: <VGA-compatible display> port 0xd000-0xd0ff mem 0xe0000000-0xefffffff,0xf0000000-0xf01fffff,0xfe600000-0xfe67ffff irq 52 at device 0.0 on pci4
+vgapci0: Boot video device
+hdac0: <ATI (0x15de) HDA Controller> mem 0xfe6c8000-0xfe6cbfff irq 53 at device 0.1 on pci4
+pci4: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfe400000-0xfe4fffff irq 55 at device 0.3 on pci4
+xhci0: 64 bytes context size, 64-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xfe300000-0xfe3fffff irq 52 at device 0.4 on pci4
+xhci1: 64 bytes context size, 64-bit DMA
+xhci1: Unable to map MSI-X table 
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pci4: <multimedia> at device 0.5 (no driver attached)
+hdac1: <AMD Raven HDA Controller> mem 0xfe6c0000-0xfe6c7fff irq 54 at device 0.6 on pci4
+pci4: <old, non-VGA display device> at device 0.7 (no driver attached)
+pcib5: <ACPI PCI-PCI bridge> at device 8.2 on pci0
+pci5: <ACPI PCI bus> on pcib5
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xfe700000-0xfe7007ff irq 54 at device 0.0 on pci5
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart2: <16x50 with 256 byte FIFO> iomem 0xfedc9000-0xfedc9fff,0xfedc7000-0xfedc7fff irq 3 on acpi0
+uart3: <16x50 with 256 byte FIFO> iomem 0xfedca000-0xfedcafff,0xfedc8000-0xfedc8fff irq 4 on acpi0
+uart4: <16x50 with 256 byte FIFO> iomem 0xfedce000-0xfedcefff,0xfedcc000-0xfedccfff irq 15 on acpi0
+uart5: <16x50 with 256 byte FIFO> iomem 0xfedcf000-0xfedcffff,0xfedcd000-0xfedcdfff irq 5 on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS WARNING: Recommended minimum kmem_size is 512MB; expect unstable behavior.
+             Consider tuning vm.kmem_size and vm.kmem_size_max
+             in /boot/loader.conf.
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+arc4random: no preloaded entropy cache
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvme0: Allocated 64MB host memory buffer
+nvd0: <ASint AS806 128GB> NVMe namespace
+nvd0: 122104MB (250069680 512 byte sectors)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+hdacc1: <Realtek ALC269 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC269 Audio Function Group> at nid 1 on hdacc1
+pcm4: <Realtek ALC269 (Front Analog)> at nid 21 and 24 on hdaa1
+Trying to mount root from ufs:/dev/md0 []...
+Root mount waiting for: usbus0 usbus1
+uhub0: 3 ports with 3 removable, self powered
+uhub1: 8 ports with 8 removable, self powered
+ugen1.2: <vendor 0x05e3 USB2.0 Hub> at usbus1
+uhub2 on uhub0
+uhub2: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/60.60, addr 1> on usbus1
+uhub2: MTT enabled
+Root mount waiting for: usbus0 usbus1
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0 usbus1
+ugen0.2: <vendor 0x13fe USB DISK 2.0> at usbus0
+umass0 on uhub1
+umass0: <vendor 0x13fe USB DISK 2.0, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x8100
+umass0:1:0: Attached to scbus1
+da0 at umass-sim0 bus 0 scbus1 target 0 lun 0
+da0: < USB DISK 2.0 PMAP> Removable Direct Access SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 7640MB (15646720 512 byte sectors)
+da0: quirks=0x3<NO_SYNC_CACHE,NO_6_BYTE>
+ugen1.3: <Realtek Bluetooth Radio> at usbus1
+ugen0.3: <vendor 0x0000 USB OPTICAL MOUSE> at usbus0
+Root mount waiting for: usbus0
+ugen0.4: <GASIA product 0x0022> at usbus0
+ukbd0 on uhub1
+ukbd0: <GASIA product 0x0022, class 0/0, rev 1.10/2.10, addr 3> on usbus0
+kbd1 at ukbd0
+Root mount waiting for: usbus0
+ugen0.5: <JMicron USB to ATA/ATAPI Bridge> at usbus0
+umass1 on uhub1
+umass1: <JMicron USB to ATA/ATAPI Bridge, class 0/0, rev 3.00/1.00, addr 4> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0x8100
+umass1:2:1: Attached to scbus2
+da1 at umass-sim1 bus 1 scbus2 target 0 lun 0
+da1: <JMicron Generic 8101> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 400.000MB/s transfers
+da1: 152627MB (312581808 512 byte sectors)
+da1: quirks=0x2<NO_6_BYTE>
+random: unblocking device.
+arc4random: no preloaded entropy cache
+arc4random: no preloaded entropy cache
+Trying to mount root from zfs:livecd []...
+Cuse v0.1.36 @ /dev/cuse
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+ig4iic0: <Designware I2C Controller> iomem 0xfedc4000-0xfedc4fff irq 14 on acpi0
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+ig4iic1: <Designware I2C Controller> iomem 0xfedc5000-0xfedc5fff irq 6 on acpi0
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+ig4iic2: <Designware I2C Controller> iomem 0xfedc2000-0xfedc2fff irq 10 on acpi0
+ig4iic2: controller error during attach-1
+device_attach: ig4iic2 attach returned 6
+ig4iic2: <Designware I2C Controller> iomem 0xfedc3000-0xfedc3fff irq 11 on acpi0
+ig4iic2: controller error during attach-1
+device_attach: ig4iic2 attach returned 6
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+ig4iic2: <Designware I2C Controller> iomem 0xfedc2000-0xfedc2fff irq 10 on acpi0
+ig4iic2: controller error during attach-1
+device_attach: ig4iic2 attach returned 6
+ig4iic2: <Designware I2C Controller> iomem 0xfedc3000-0xfedc3fff irq 11 on acpi0
+ig4iic2: controller error during attach-1
+device_attach: ig4iic2 attach returned 6
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+ubt0 on uhub0
+ubt0: <Bluetooth Radio> on usbus1
+ums0 on uhub1
+ums0: <vendor 0x0000 USB OPTICAL MOUSE, class 0/0, rev 1.10/1.00, addr 2> on usbus0
+ums0: 3 buttons and [XYZ] coordinates ID=1
+uhid0 on uhub1
+uhid0: <GASIA> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+amdsmn0: <AMD Family 17h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+[drm] amdgpu kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] initializing kernel modesetting (RAVEN 0x1002:0x15DD 0x1002:0x0123 0xC5).
+[drm] register mmio base: 0xFE600000
+[drm] register mmio size: 524288
+[drm] PCI I/O BAR is not found.
+amdgpu/raven_gpu_info.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_gpu_info.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_gpu_info_bin
+[drm] probing gen 2 caps for device 1022:15db = 700d03/e
+[drm] probing mlw for device 1002:15dd = 400d03
+[drm] VCN decode is enabled in VM mode
+[drm] VCN encode is enabled in VM mode
+[drm] BIOS signature incorrect 0 0
+ATOM BIOS: 113-RAVEN-107
+[drm] vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+drmn0: VRAM: 256M 0x000000F400000000 - 0x000000F40FFFFFFF (256M used)
+drmn0: GTT: 1024M 0x000000F500000000 - 0x000000F53FFFFFFF
+Successfully added WC MTRR for [0xe0000000-0xefffffff]: 0; 
+[drm] Detected VRAM RAM=256M, BAR=256M
+[drm] RAM width 128bits UNKNOWN
+[TTM] Zone  kernel: Available graphics memory: 4012330 kiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 kiB
+[TTM] Initializing pool allocator
+[drm] amdgpu: 256M of VRAM memory ready
+[drm] amdgpu: 3072M of GTT memory ready.
+i_size_write unimplemented
+[drm] GART: num cpu pages 262144, num gpu pages 262144
+[drm] PCIE GART of 1024M enabled (table at 0x000000F400800000).
+amdgpu/raven_asd.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_asd.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_asd_bin
+amdgpu/raven_pfp.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_pfp.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_pfp_bin
+amdgpu/raven_me.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_me.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_me_bin
+amdgpu/raven_ce.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_ce.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_ce_bin
+amdgpu/raven_rlc.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_rlc.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_rlc_bin
+amdgpu/raven_mec.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_mec.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_mec_bin
+amdgpu/raven_mec2.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_mec2.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_mec2_bin
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+amdgpu/raven_sdma.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_sdma.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_sdma_bin
+[drm] use_doorbell being set to: [true]
+i_size_write unimplemented
+amdgpu/raven_vcn.bin: could not load firmware image, error 2
+drmn0: fail (0) to get firmware image with name: amdgpu/raven_vcn.bin
+drmn0: successfully loaded firmware image with mapped name: amdgpu_raven_vcn_bin
+[drm] Found VCN firmware Version: 2.192 Family ID: 5
+i_size_write unimplemented
+i_size_write unimplemented
+i_size_write unimplemented
+[drm:construct] construct: Invalid Connector ObjectID from Adapter Service for connector index:2! type 0 expected 3
+[drm] Display Core initialized with v3.1.27!
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DP-2: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DP-2
+[drm]   - kern.vt.fb.default_mode
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+[drm] VCN decode and encode initialized successfully.
+[drm] fb mappable at 0xE1000000
+[drm] vram apper at 0xE0000000
+[drm] size 8294400
+[drm] fb depth is 24
+[drm]    pitch is 7680
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+cmsize=16 size=8294400
+pbase=0xe1000000 vbase=0xfffff800e1000000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: amdgpudrmfb frame buffer device
+i_size_write unimplemented
+drmn0: ring 0(gfx) uses VM inv eng 4 on hub 0
+drmn0: ring 1(comp_1.0.0) uses VM inv eng 5 on hub 0
+drmn0: ring 2(comp_1.1.0) uses VM inv eng 6 on hub 0
+drmn0: ring 3(comp_1.2.0) uses VM inv eng 7 on hub 0
+drmn0: ring 4(comp_1.3.0) uses VM inv eng 8 on hub 0
+drmn0: ring 5(comp_1.0.1) uses VM inv eng 9 on hub 0
+drmn0: ring 6(comp_1.1.1) uses VM inv eng 10 on hub 0
+drmn0: ring 7(comp_1.2.1) uses VM inv eng 11 on hub 0
+drmn0: ring 8(comp_1.3.1) uses VM inv eng 12 on hub 0
+drmn0: ring 9(kiq_2.1.0) uses VM inv eng 13 on hub 0
+drmn0: ring 10(sdma0) uses VM inv eng 4 on hub 1
+drmn0: ring 11(vcn_dec) uses VM inv eng 5 on hub 1
+drmn0: ring 12(vcn_enc0) uses VM inv eng 6 on hub 1
+drmn0: ring 13(vcn_enc1) uses VM inv eng 7 on hub 1
+[drm] Initialized amdgpu 3.23.0 20150101 for drmn0 on minor 0
+acpi_video0: <ACPI video extension> on vgapci0
+interface fusefs.1 already present in the KLD 'fuse.ko'!
+linker_load_file: /boot/kernel/fusefs.ko - unsupported file type
+pid 2432 (python3.8), jid 0, uid 1000: exited on signal 6
+ugen0.5: <JMicron USB to ATA/ATAPI Bridge> at usbus0 (disconnected)
+umass1: at uhub1, port 5, addr 4 (disconnected)
+da1 at umass-sim1 bus 1 scbus2 target 0 lun 0
+da1: <JMicron Generic 8101>  s/n ... detached
+(da1:umass-sim1:1:0:0): Periph destroyed
+umass1: detached
+ugen0.5: <Realtek 802.11n NIC> at usbus0
+rtwn0 on uhub1
+rtwn0: <Realtek 802.11n NIC, class 0/0, rev 2.00/0.00, addr 4> on usbus0
+rtwn0: MAC/BB RTL8188EU, RF 6052 1T1R
+wlan0: Ethernet address: ...
+wlan0: Ethernet address: ...
+wlan0: ieee80211_new_state_locked: pending INIT -> SCAN transition lost
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+wlan0: link state changed to DOWN
+wlan0: link state changed to UP
+pid 3480 (python3.8), jid 0, uid 1000: exited on signal 11
+amdgpu: [powerplay] pp_dpm_get_mclk_od was not implemented.
+amdgpu: [powerplay] pp_dpm_get_mclk_od was not implemented.
+amdgpu: [powerplay] pp_dpm_get_sclk_od was not implemented.
+amdgpu: [powerplay] pp_dpm_get_sclk_od was not implemented.
+amdgpu: [powerplay] pp_dpm_get_mclk_od was not implemented.
+amdgpu: [powerplay] pp_dpm_get_mclk_od was not implemented.
+amdgpu: [powerplay] pp_dpm_get_sclk_od was not implemented.
+amdgpu: [powerplay] pp_dpm_get_sclk_od was not implemented.

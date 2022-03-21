@@ -1,0 +1,263 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0 releng/13.0-n244733-ea31abc261f: Fri Apr  9 04:24:09 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(vga): resolution 640x480
+CPU: Intel(R) Xeon(R) Silver 4210R CPU @ 2.40GHz (2394.44-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x50657  Family=0x6  Model=0x55  Stepping=7
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffefbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0xd39ffffb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,RTM,PQM,NFPUSG,MPX,PQE,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,PROCTRACE,AVX512CD,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x808<PKU,AVX512VNNI>
+  Structured Extended Features3=0xbc000400<MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xab<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO,TSX_CTRL>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 32799424512 (31279 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 20 CPUs
+FreeBSD/SMP: 1 package(s) x 10 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+ioapic1 <Version 2.0> irqs 24-31
+ioapic2 <Version 2.0> irqs 32-39
+ioapic3 <Version 2.0> irqs 40-47
+ioapic4 <Version 2.0> irqs 48-55
+Launching APs: 1 12 17 5 3 9 16 10 11 19 14 2 7 13 15 18 8 6 4
+Timecounter "TSC-low" frequency 1197221673 Hz quality 1000
+KTLS: Initialized 20 threads
+random: entropy device external interface
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000071 [4354] netmap_init               netmap: loaded module
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+vtvga0: <VT VGA driver>
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <DELL PE_SC3>
+acpi0: Power Button (fixed)
+atrtc0: <AT realtime clock> port 0x70-0x71,0x74-0x77 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 350
+Event timer "HPET1" frequency 24000000 Hz quality 340
+Event timer "HPET2" frequency 24000000 Hz quality 340
+Event timer "HPET3" frequency 24000000 Hz quality 340
+Event timer "HPET4" frequency 24000000 Hz quality 340
+Event timer "HPET5" frequency 24000000 Hz quality 340
+Event timer "HPET6" frequency 24000000 Hz quality 340
+Event timer "HPET7" frequency 24000000 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x508-0x50b on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+apei0: <ACPI Platform Error Interface> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pci0: <dasp, performance counters> at device 8.1 (no driver attached)
+pci0: <unknown> at device 17.0 (no driver attached)
+ahci0: <Intel Lewisburg AHCI SATA controller> port 0x2068-0x206f,0x2074-0x2077,0x2040-0x205f mem 0x93016000-0x93017fff,0x9301f000-0x9301f0ff,0x92f80000-0x92ffffff irq 16 at device 17.5 numa-domain 0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+xhci0: <Intel Lewisburg USB 3.0 controller> mem 0x93000000-0x9300ffff irq 16 at device 20.0 numa-domain 0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+xhci_interrupt: host controller halted
+xhci_interrupt: host controller halted
+usbus0 numa-domain 0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+pci0: <simple comms> at device 22.4 (no driver attached)
+ahci1: <Intel Lewisburg AHCI SATA controller> port 0x2060-0x2067,0x2070-0x2073,0x2020-0x203f mem 0x93014000-0x93015fff,0x9301e000-0x9301e0ff,0x92f00000-0x92f7ffff irq 16 at device 23.0 numa-domain 0 on pci0
+ahci1: AHCI v1.31 with 8 6Gbps ports, Port Multiplier not supported
+ahcich6: <AHCI channel> at channel 0 on ahci1
+ahcich7: <AHCI channel> at channel 1 on ahci1
+ahcich8: <AHCI channel> at channel 2 on ahci1
+ahcich9: <AHCI channel> at channel 3 on ahci1
+ahcich10: <AHCI channel> at channel 4 on ahci1
+ahcich11: <AHCI channel> at channel 5 on ahci1
+ahcich12: <AHCI channel> at channel 6 on ahci1
+ahcich13: <AHCI channel> at channel 7 on ahci1
+ahciem1: <AHCI enclosure management bridge> on ahci1
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 numa-domain 0 on pci0
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.4 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 0.0 numa-domain 0 on pci1
+pci2: <ACPI PCI bus> numa-domain 0 on pcib3
+vgapci0: <VGA-compatible display> mem 0x91000000-0x91ffffff,0x92808000-0x9280bfff,0x92000000-0x927fffff irq 16 at device 0.0 numa-domain 0 on pci2
+vgapci0: Boot video device
+pcib4: <ACPI PCI-PCI bridge> irq 17 at device 28.5 numa-domain 0 on pci0
+pci3: <ACPI PCI bus> numa-domain 0 on pcib4
+bge0: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0x92e30000-0x92e3ffff,0x92e40000-0x92e4ffff,0x92e50000-0x92e5ffff irq 17 at device 0.0 numa-domain 0 on pci3
+bge0: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge0: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus0: <MII bus> numa-domain 0 on bge0
+brgphy0: <BCM5720C 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+bge1: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0x92e00000-0x92e0ffff,0x92e10000-0x92e1ffff,0x92e20000-0x92e2ffff irq 18 at device 0.1 numa-domain 0 on pci3
+bge1: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge1: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus1: <MII bus> numa-domain 0 on bge1
+brgphy1: <BCM5720C 1000BASE-T media interface> PHY 2 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge1: Using defaults for TSO: 65518/35/2048
+bge1: Ethernet address: ...
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+pci0: <serial bus> at device 31.5 (no driver attached)
+pcib5: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib5
+pcib6: <ACPI PCI-PCI bridge> irq 39 at device 2.0 numa-domain 0 on pci4
+pci5: <ACPI PCI bus> numa-domain 0 on pcib6
+AVAGO MegaRAID SAS FreeBSD mrsas driver version: XXX.XXX.XXX.XXX-fbsd
+mfi0: <Fury> port 0x4000-0x40ff mem 0xab100000-0xab10ffff,0xab000000-0xab0fffff irq 34 at device 0.0 numa-domain 0 on pci5
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: FW MaxCmds = 240, limiting to 128
+mfi0: MaxCmd = 240, Drv MaxCmd = 128, MaxSgl = 70, state = 0xb73c00f0
+mfi0: 446 (688668201s/0x0020/info) - Shutdown command received from host
+mfi0: 447 (boot + 6s/0x0020/info) - Firmware initialization started (PCI ID 005f/1000/1f44/1028)
+mfi0: 448 (boot + 6s/0x0020/info) - Firmware version 4.300.01-8369
+mfi0: 449 (boot + 8s/0x0020/info) - Package version XXX.XXX.XXX.XXX
+mfi0: 450 (boot + 8s/0x0020/info) - Board Revision A04
+mfi0: 451 (boot + 23s/0x0004/info) - Enclosure PD 20(c None/p1) communication restored
+mfi0: 452 (boot + 23s/0x0002/info) - Inserted: Encl PD 20
+mfi0: 453 (boot + 23s/0x0002/info) - Inserted: PD 20(c None/p1) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=53cea0f0ce8fda00,0000000000000000
+mfi0: 454 (boot + 23s/0x0002/info) - Inserted: PD 00(e0x20/s0)
+mfi0: 455 (boot + 23s/0x0002/info) - Inserted: PD 00(e0x20/s0) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000039b285277b6,0000000000000000
+mfi0: 456 (boot + 23s/0x0002/info) - Inserted: PD 01(e0x20/s1)
+mfi0: 457 (boot + 23s/0x0002/info) - Inserted: PD 01(e0x20/s1) Info: enclPd=20, scsiType=0, portMap=01, sasAddr=5000039b2852797a,0000000000000000
+mfi0: 458 (boot + 48s/0x0001/info) - Background Initialization resumed on VD 00/0
+mfi0: 459 (boot + 48s/0x0020/info) - Controller operating temperature within normal range, full operation restored
+mfi0: 460 (688668228s/0x0020/info) - Time established as 10/27/21 16:43:48; (49 seconds since power on)
+mfi0: 462 (688668292s/0x0020/info) - Host driver is loaded and operational
+pcib7: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib7
+pcib8: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci7: <ACPI PCI bus> numa-domain 0 on pcib8
+pcib9: <ACPI PCI-PCI bridge> irq 55 at device 0.0 numa-domain 0 on pci7
+pci8: <ACPI PCI bus> numa-domain 0 on pcib9
+pci8: <network, ethernet> at device 0.0 (no driver attached)
+pci8: <network, ethernet> at device 0.1 (no driver attached)
+pci7: <dasp, performance counters> at device 14.0 (no driver attached)
+pci7: <dasp, performance counters> at device 15.0 (no driver attached)
+pci7: <dasp, performance counters> at device 18.0 (no driver attached)
+pci7: <dasp, performance counters> at device 18.1 (no driver attached)
+pci7: <dasp, performance counters> at device 21.1 (no driver attached)
+pci7: <dasp, performance counters> at device 22.1 (no driver attached)
+pci7: <dasp, performance counters> at device 22.5 (no driver attached)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xed800-0xf17ff pnpid ORM0000 on isa0
+hwpstate_intel0: <Intel Speed Shift> numa-domain 0 on cpu0
+hwpstate_intel1: <Intel Speed Shift> numa-domain 0 on cpu1
+hwpstate_intel2: <Intel Speed Shift> numa-domain 0 on cpu2
+hwpstate_intel3: <Intel Speed Shift> numa-domain 0 on cpu3
+hwpstate_intel4: <Intel Speed Shift> numa-domain 0 on cpu4
+hwpstate_intel5: <Intel Speed Shift> numa-domain 0 on cpu5
+hwpstate_intel6: <Intel Speed Shift> numa-domain 0 on cpu6
+hwpstate_intel7: <Intel Speed Shift> numa-domain 0 on cpu7
+hwpstate_intel8: <Intel Speed Shift> numa-domain 0 on cpu8
+hwpstate_intel9: <Intel Speed Shift> numa-domain 0 on cpu9
+hwpstate_intel10: <Intel Speed Shift> numa-domain 0 on cpu10
+hwpstate_intel11: <Intel Speed Shift> numa-domain 0 on cpu11
+hwpstate_intel12: <Intel Speed Shift> numa-domain 0 on cpu12
+hwpstate_intel13: <Intel Speed Shift> numa-domain 0 on cpu13
+hwpstate_intel14: <Intel Speed Shift> numa-domain 0 on cpu14
+hwpstate_intel15: <Intel Speed Shift> numa-domain 0 on cpu15
+hwpstate_intel16: <Intel Speed Shift> numa-domain 0 on cpu16
+hwpstate_intel17: <Intel Speed Shift> numa-domain 0 on cpu17
+hwpstate_intel18: <Intel Speed Shift> numa-domain 0 on cpu18
+hwpstate_intel19: <Intel Speed Shift> numa-domain 0 on cpu19
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0 numa-domain 0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+mfid0 numa-domain 0 on mfi0
+mfid0: 571776MB (1170997248 sectors) RAID volume (no label) is optimal
+ses0 at ahciem0 bus 0 scbus6 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ses1 at ahciem1 bus 0 scbus15 target 0 lun 0
+ses1: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses1: SEMB SES Device
+Trying to mount root from zfs:zroot/ROOT/default []...
+uhub0: 26 ports with 26 removable, self powered
+GEOM_MIRROR: Device mirror/swap launched (1/1).
+GEOM_ELI: Device mfid0p3.eli created.
+GEOM_ELI: Encryption: AES-XTS 256
+GEOM_ELI:     Crypto: accelerated software
+ugen0.2: <vendor 0x413c Dell KB216 Wired Keyboard> at usbus0
+ukbd0 numa-domain 0 on uhub0
+ukbd0: <vendor 0x413c Dell KB216 Wired Keyboard, class 0/0, rev 2.00/33.09, addr 1> on usbus0
+kbd2 at ukbd0
+ugen0.3: <vendor 0x1604 product 0x10c0> at usbus0
+uhub1 numa-domain 0 on uhub0
+uhub1: <vendor 0x1604 product 0x10c0, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+Root mount waiting for: usbus0
+uhub1: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.4: <vendor 0x1604 product 0x10c0> at usbus0
+uhub2 numa-domain 0 on uhub1
+uhub2: <vendor 0x1604 product 0x10c0, class 9/0, rev 2.00/0.00, addr 3> on usbus0
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.5: <vendor 0x1604 product 0x10c0> at usbus0
+uhub3 numa-domain 0 on uhub1
+uhub3: <vendor 0x1604 product 0x10c0, class 9/0, rev 2.00/0.00, addr 4> on usbus0
+Root mount waiting for: usbus0
+Root mount waiting for: usbus0
+uhub3: 4 ports with 4 removable, self powered
+GEOM_ELI: Device mirror/swap.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: accelerated software
+ichsmb0: <Intel Lewisburg SMBus controller> port 0x2000-0x201f mem 0x93018000-0x930180ff irq 16 at device 31.4 numa-domain 0 on pci0
+smbus0: <System Management Bus> numa-domain 0 on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.AMW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+lo0: link state changed to UP
+bge0: link state changed to DOWN
+bge0: link state changed to UP
+uhid0 numa-domain 0 on uhub0
+uhid0: <vendor 0x413c Dell KB216 Wired Keyboard, class 0/0, rev 2.00/33.09, addr 1> on usbus0
+Security policy loaded: MAC/ntpd (mac_ntpd)
+ugen0.2: <vendor 0x413c Dell KB216 Wired Keyboard> at usbus0 (disconnected)
+ukbd0: at uhub0, port 10, addr 1 (disconnected)
+ukbd0: detached
+uhid0: at uhub0, port 10, addr 1 (disconnected)
+uhid0: detached
