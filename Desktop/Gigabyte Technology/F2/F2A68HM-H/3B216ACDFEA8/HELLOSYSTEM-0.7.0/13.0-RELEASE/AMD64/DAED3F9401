@@ -1,0 +1,332 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0 releng/13.0-n244733-ea31abc261f: Fri Apr  9 04:24:09 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 1024x768
+CPU: AMD A6-5400K APU with Radeon(tm) HD Graphics    (3593.54-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x610f01  Family=0x15  Model=0x10  Stepping=1
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x3e98320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1ebbfff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,XOP,SKINIT,WDT,LWP,FMA4,TCE,NodeId,TBM,Topology,PCXC,PNXC>
+  Structured Extended Features=0x8<BMI1>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=65536
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3243921408 (3093 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20201113/tbfadt-796)
+ioapic0 <Version 2.1> irqs 0-23
+Launching APs: 1
+Timecounter "TSC-low" frequency 1796769573 Hz quality 1000
+KTLS: Initialized 2 threads
+random: entropy device external interface
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000053 [4354] netmap_init               netmap: loaded module
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xc0000000-0xcfffffff,0xfeb00000-0xfeb3ffff irq 17 at device 1.0 on pci0
+vgapci0: Boot video device
+hdac0: <ATI (0x9902) HDA Controller> mem 0xfeb44000-0xfeb47fff irq 18 at device 1.1 on pci0
+hdac0: hdac_get_capabilities: Invalid corb size (0)
+device_attach: hdac0 attach returned 6
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 4.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xe000-0xe0ff mem 0xfea00000-0xfea00fff,0xd0000000-0xd0003fff irq 16 at device 0.0 on pci1
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x4c000000
+re0: MAC rev. 0x00000000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+xhci0: <AMD FCH USB 3.0 controller> mem 0xfeb48000-0xfeb49fff irq 18 at device 16.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AMD Hudson-2 AHCI SATA controller> port 0xf140-0xf147,0xf130-0xf133,0xf120-0xf127,0xf110-0xf113,0xf100-0xf10f mem 0xfeb4f000-0xfeb4f7ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.30 with 4 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ohci0: <AMD FCH USB Controller> mem 0xfeb4e000-0xfeb4efff irq 18 at device 18.0 on pci0
+usbus1 on ohci0
+usbus1: 12Mbps Full Speed USB v1.0
+ehci0: <AMD FCH USB 2.0 controller> mem 0xfeb4d000-0xfeb4d0ff irq 17 at device 18.2 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+usbus2: 480Mbps High Speed USB v2.0
+ohci1: <AMD FCH USB Controller> mem 0xfeb4c000-0xfeb4cfff irq 18 at device 19.0 on pci0
+usbus3 on ohci1
+usbus3: 12Mbps Full Speed USB v1.0
+ehci1: <AMD FCH USB 2.0 controller> mem 0xfeb4b000-0xfeb4b0ff irq 17 at device 19.2 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci1
+usbus4: 480Mbps High Speed USB v2.0
+hdac0: <AMD Hudson-2 HDA Controller> mem 0xfeb40000-0xfeb43fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib2: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+ohci2: <OHCI (generic) USB controller> mem 0xfeb4a000-0xfeb4afff irq 18 at device 20.5 on pci0
+usbus5 on ohci2
+usbus5: 12Mbps Full Speed USB v1.0
+acpi_button0: <Power Button> on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen2.1: <AMD EHCI root HUB> at usbus2
+uhub0 on usbus2
+uhub0: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub1 on usbus0
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+hdacc0: <Realtek ALC887 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC887 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC887 (Rear Analog)> at nid 20 and 24,26 on hdaa0
+pcm1: <Realtek ALC887 (Front Analog)> at nid 27 and 25 on hdaa0
+pcm2: <Realtek ALC887 (Onboard Digital)> at nid 17 on hdaa0
+hdac1: <ATI (0x9902) HDA Controller> mem 0xfeb44000-0xfeb47fff irq 18 at device 1.1 on pci0
+hdac1: hdac_get_capabilities: Invalid corb size (0)
+ugen4.1: <AMD EHCI root HUB> at usbus4
+ugen3.1: <AMD OHCI root HUB> at usbus3
+uhub2 on usbus4
+uhub3 on usbus3
+uhub3: <AMD OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub2: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+ugen5.1: <AMD OHCI root HUB> at usbus5
+ugen1.1: <AMD OHCI root HUB> at usbus1
+uhub4 on usbus5
+uhub4: <AMD OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+device_attach: hdac1 attach returned 6
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 CAM usbus1 usbus2 usbus3 usbus4 usbus5
+uhub5 on usbus1
+uhub5: <AMD OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <ST31000520AS CC32> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <ASUS DRW-24F1ST   c 1.00> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA6, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p1 is gpt/efiboot0.
+GEOM_LABEL[1]: Label for provider ada0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label for provider ada0p2 is gpt/gptboot0.
+GEOM_LABEL[1]: Label for provider ada0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0p3 is gpt/zfs0.
+GEOM_LABEL[1]: Label for provider ada0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p3: no FAT signature found.
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXX: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXX: FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXX: no FAT signature found.
+GEOM_LABEL[1]: Label zfs0(gpt/zfs0) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXX: no FAT signature found.
+uhub4: 2 ports with 2 removable, self powered
+uhub1: 4 ports with 4 removable, self powered
+uhub3: 5 ports with 5 removable, self powered
+uhub5: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus2 usbus4
+uhub0: 5 ports with 5 removable, self powered
+uhub2: 5 ports with 5 removable, self powered
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/zfs0 removed.
+ugen3.2: <Microsoft Microsoft 3-Button Mouse with IntelliEye(TM)> at usbus3
+ugen3.3: <Dell Dell USB Keyboard> at usbus3
+ukbd0 on uhub3
+ukbd0: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.01, addr 3> on usbus3
+kbd2 at ukbd0
+acpi_video0: <ACPI video extension> on vgapci0
+Firmware Error (ACPI): Could not resolve symbol [\134_SB.PCI0.VGA.LCD._BCM.AFN7], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Aborting method \134_SB.PCI0.VGA.LCD._BCM due to previous error (AE_NOT_FOUND) (20201113/psparse-689)
+can't evaluate \134_SB_.PCI0.VGA_.LCD_._BCM - AE_NOT_FOUND
+Cuse v0.1.36 @ /dev/cuse
+hdac1: <ATI (0x9902) HDA Controller> mem 0xfeb44000-0xfeb47fff irq 18 at device 1.1 on pci0
+hdac1: hdac_get_capabilities: Invalid corb size (0)
+device_attach: hdac1 attach returned 6
+hdac1: <ATI (0x9902) HDA Controller> mem 0xfeb44000-0xfeb47fff irq 18 at device 1.1 on pci0
+hdac1: hdac_get_capabilities: Invalid corb size (0)
+device_attach: hdac1 attach returned 6
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+ums0 on uhub3
+ums0: <Microsoft Microsoft 3-Button Mouse with IntelliEye(TM), class 0/0, rev 1.10/3.00, addr 2> on usbus3
+ums0: 3 buttons and [XYZ] coordinates ID=0
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/efiboot0 removed.
+GEOM_LABEL[1]: Label for provider ada0p1 is gpt/efiboot0.
+GEOM_LABEL[1]: Label for provider ada0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT12/16 volume has no name.
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb4
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/efiboot0 removed.
+[drm] radeon kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+VT: Replacing driver "efifb" with new "dummy".
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] initializing kernel modesetting (ARUBA 0x1002:0x9991 0x1458:0xD000 0x00).
+[drm ERROR :radeon_atombios_init] Unable to find PCI I/O BAR; using MMIO for ATOM IIO
+ATOM BIOS: 113
+drmn0: VRAM: 768M 0x0000000000000000 - 0x000000002FFFFFFF (768M used)
+drmn0: GTT: 1024M 0x0000000030000000 - 0x000000006FFFFFFF
+Successfully added WC MTRR for [0xc0000000-0xcfffffff]: 0; 
+[drm] Detected VRAM RAM=768M, BAR=256M
+[drm] RAM width 32bits DDR
+[TTM] Zone  kernel: Available graphics memory: 1657754 KiB
+[TTM] Initializing pool allocator
+[drm] radeon: 768M of VRAM memory ready
+[drm] radeon: 1024M of GTT memory ready.
+[drm] Loading ARUBA Microcode
+drmn0: successfully loaded firmware image 'radeon/ARUBA_pfp.bin'
+drmn0: successfully loaded firmware image 'radeon/ARUBA_me.bin'
+drmn0: successfully loaded firmware image 'radeon/ARUBA_rlc.bin'
+[drm] Internal thermal controller without fan control
+[drm] radeon: dpm initialized
+drmn0: successfully loaded firmware image 'radeon/TAHITI_uvd.bin'
+drmn0: successfully loaded firmware image 'radeon/TAHITI_vce.bin'
+[drm] Found VCE firmware/feedback version 50.0.1 / 17!
+[drm] GART: num cpu pages 262144, num gpu pages 262144
+[drm] PCIE GART of 1024M enabled (table at 0x00000000001D6000).
+drmn0: WB enabled
+drmn0: fence driver on ring 0 use gpu addr 0x0000000030000c00 and cpu addr 0x0xfffff80046396c00
+drmn0: fence driver on ring 5 use gpu addr 0x0000000000075a18 and cpu addr 0x0xfffff800c0075a18
+drmn0: fence driver on ring 6 use gpu addr 0x0000000030000c18 and cpu addr 0x0xfffff80046396c18
+drmn0: fence driver on ring 7 use gpu addr 0x0000000030000c1c and cpu addr 0x0xfffff80046396c1c
+drmn0: fence driver on ring 1 use gpu addr 0x0000000030000c04 and cpu addr 0x0xfffff80046396c04
+drmn0: fence driver on ring 2 use gpu addr 0x0000000030000c08 and cpu addr 0x0xfffff80046396c08
+drmn0: fence driver on ring 3 use gpu addr 0x0000000030000c0c and cpu addr 0x0xfffff80046396c0c
+drmn0: fence driver on ring 4 use gpu addr 0x0000000030000c10 and cpu addr 0x0xfffff80046396c10
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+drmn0: radeon: MSI limited to 32-bit
+drmn0: radeon: using MSI.
+[drm] radeon: irq initialized.
+[drm] ring test on 0 succeeded in 3 usecs
+[drm] ring test on 3 succeeded in 3 usecs
+[drm] ring test on 4 succeeded in 4 usecs
+[drm] ring test on 5 succeeded in 2 usecs
+[drm] UVD initialized successfully.
+[drm] ring test on 6 succeeded in 30 usecs
+[drm] ring test on 7 succeeded in 3 usecs
+[drm] VCE initialized successfully.
+[drm] ib test on ring 0 succeeded in 0 usecs
+[drm] ib test on ring 3 succeeded in 0 usecs
+[drm] ib test on ring 4 succeeded in 0 usecs
+[drm] ib test on ring 5 succeeded
+[drm] ib test on ring 6 succeeded
+[drm] ib test on ring 7 succeeded
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector VGA-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.VGA-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DVI-D-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-D-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Radeon Display Connectors
+[drm] Connector 0:
+[drm]   HDMI-A-1
+[drm]   HPD1
+[drm]   DDC: 0x6530 0x6530 0x6534 0x6534 0x6538 0x6538 0x653c 0x653c
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY2
+[drm] Connector 1:
+[drm]   VGA-1
+[drm]   HPD2
+[drm]   DDC: 0x6540 0x6540 0x6544 0x6544 0x6548 0x6548 0x654c 0x654c
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_UNIPHY2
+[drm]     CRT1: NUTMEG
+[drm] Connector 2:
+[drm]   DVI-D-1
+[drm]   HPD3
+[drm]   DDC: 0x6550 0x6550 0x6554 0x6554 0x6558 0x6558 0x655c 0x655c
+[drm]   Encoders:
+[drm]     DFP2: INTERNAL_UNIPHY
+[drm] fb mappable at 0xC03E9000
+[drm] vram apper at 0xC0000000
+[drm] size 3145728
+[drm] fb depth is 24
+[drm]    pitch is 4096
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 14.0.
+VT: Replacing driver "dummy" with new "fb".
+start FB_INFO:
+type=11 height=768 width=1024 depth=32
+cmsize=16 size=3145728
+pbase=0xc03e9000 vbase=0xfffff800c03e9000
+name=drmn0 flags=0x0 stride=4096 bpp=32
+cmap[0]=bcbcbc cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=ffffff
+end FB_INFO
+drmn0: fb0: radeondrmfb frame buffer device
+[drm] Initialized radeon 2.50.0 20080528 for drmn0 on minor 0
+pid 16491 (lxqt-globalkeysd), jid 0, uid 0: exited on signal 6
+pid 16497 (gmenudbusmenuproxy), jid 0, uid 0: exited on signal 6
+pid 16496 (launch), jid 0, uid 0: exited on signal 6
+pid 16493 (launch), jid 0, uid 0: exited on signal 6
+pid 16499 (launch), jid 0, uid 0: exited on signal 6
+pid 16498 (launch), jid 0, uid 0: exited on signal 6
+pid 68262 (python3.8), jid 0, uid 1002: exited on signal 6
+pid 68261 (Menu), jid 0, uid 1002: exited on signal 11

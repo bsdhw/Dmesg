@@ -1,0 +1,801 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE-p11 #0: Tue Apr  5 18:54:35 UTC 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(vga): resolution 640x480
+module_register: cannot register tmpfs from kernel; already loaded from tmpfs.ko
+Module tmpfs failed to register: 17
+CPU: AMD Ryzen 3 3300X 4-Core Processor              (3792.95-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x870f10  Family=0x17  Model=0x71  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c91a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x400004<UMIP,RDPID>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x108b657<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,STIBP,SSBD>
+  SVM: (disabled in BIOS) NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33277661184 (31736 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 1 3 2 6 7 5 4
+Timecounter "TSC-low" frequency 1896473524 Hz quality 1000
+KTLS: Initialized 8 threads
+random: entropy device external interface
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd1 at kbdmux0
+000.000059 [4347] netmap_init               netmap: loaded module
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+vtvga0: <VT VGA driver>
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x2> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+amdsmn0: <AMD Family 17h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 28 at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 2.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <PCI-PCI bridge> at device 2.0 on pci4
+pci5: <PCI bus> on pcib5
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xc020-0xc03f mem 0xf7020000-0xf703ffff,0xf6e00000-0xf6ffffff,0xf7044000-0xf7047fff at device 0.0 on pci5
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xc000-0xc01f mem 0xf7000000-0xf701ffff,0xf6c00000-0xf6dfffff,0xf7040000-0xf7043fff at device 0.1 on pci5
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib6: <PCI-PCI bridge> at device 4.0 on pci4
+pci6: <PCI bus> on pcib6
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb020-0xb03f mem 0xf6a20000-0xf6a3ffff,0xf6800000-0xf69fffff,0xf6a44000-0xf6a47fff irq 30 at device 0.0 on pci6
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb000-0xb01f mem 0xf6a00000-0xf6a1ffff,0xf6600000-0xf67fffff,0xf6a40000-0xf6a43fff at device 0.1 on pci6
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib7: <ACPI PCI-PCI bridge> at device 5.0 on pci2
+pci7: <ACPI PCI bus> on pcib7
+igb4: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xd000-0xd01f mem 0xf7600000-0xf761ffff,0xf7620000-0xf7623fff irq 29 at device 0.0 on pci7
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <ACPI PCI-PCI bridge> irq 28 at device 8.0 on pci2
+pci8: <ACPI PCI bus> on pcib8
+pci8: <unknown> at device 0.0 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xf7300000-0xf73fffff irq 28 at device 0.1 on pci8
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xf7200000-0xf72fffff irq 30 at device 0.3 on pci8
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib9: <PCI-PCI bridge> irq 29 at device 9.0 on pci2
+pci9: <PCI bus> on pcib9
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xf7500000-0xf75007ff irq 29 at device 0.0 on pci9
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+pcib10: <PCI-PCI bridge> irq 30 at device 10.0 on pci2
+pci10: <PCI bus> on pcib10
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xf7400000-0xf74007ff irq 30 at device 0.0 on pci10
+ahci1: AHCI v1.31 with 4 6Gbps ports, Port Multiplier supported with FBS
+ahcich4: <AHCI channel> at channel 0 on ahci1
+ahcich5: <AHCI channel> at channel 1 on ahci1
+ahcich8: <AHCI channel> at channel 4 on ahci1
+ahcich9: <AHCI channel> at channel 5 on ahci1
+pcib11: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci11: <ACPI PCI bus> on pcib11
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xe0000000-0xefffffff,0xf7e20000-0xf7e3ffff irq 54 at device 0.0 on pci11
+vgapci0: Boot video device
+hdac0: <ATI RV910 HDA Controller> mem 0xf7e40000-0xf7e43fff irq 55 at device 0.1 on pci11
+pcib12: <ACPI PCI-PCI bridge> at device 3.2 on pci0
+pci12: <ACPI PCI bus> on pcib12
+mps0: <Avago Technologies (LSI) SAS2008> port 0xe000-0xe0ff mem 0xf7dc0000-0xf7dc3fff,0xf7d80000-0xf7dbffff irq 50 at device 0.0 on pci12
+mps0: Firmware: XXX.XXX.XXX.XXX, Driver: XXX.XXX.XXX.XXX-fbsd
+mps0: IOCCapabilities: 185c<ScsiTaskFull,DiagTrace,SnapBuf,EEDP,TransRetry,IR>
+pcib13: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci13: <ACPI PCI bus> on pcib13
+pci13: <unknown> at device 0.0 (no driver attached)
+pcib14: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci14: <ACPI PCI bus> on pcib14
+pci14: <unknown> at device 0.0 (no driver attached)
+pci14: <encrypt/decrypt> at device 0.1 (no driver attached)
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xf7800000-0xf78fffff irq 39 at device 0.3 on pci14
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+hdac1: <AMD X570 HDA Controller> mem 0xf7a00000-0xf7a07fff irq 36 at device 0.4 on pci14
+pcib15: <ACPI PCI-PCI bridge> at device 8.2 on pci0
+pci15: <ACPI PCI bus> on pcib15
+ahci2: <AMD KERNCZ AHCI SATA controller> mem 0xf7c00000-0xf7c007ff irq 41 at device 0.0 on pci15
+ahci2: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich10: <AHCI channel> at channel 0 on ahci2
+pcib16: <ACPI PCI-PCI bridge> at device 8.3 on pci0
+pci16: <ACPI PCI bus> on pcib16
+ahci3: <AMD KERNCZ AHCI SATA controller> mem 0xf7b00000-0xf7b007ff irq 45 at device 0.0 on pci16
+ahci3: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich11: <AHCI channel> at channel 0 on ahci3
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xcffff,0xd6000-0xd6fff,0xd7000-0xd7fff,0xd8000-0xd8fff,0xd9000-0xd9fff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+module_register_init: MOD_LOAD (tmpfs, 0xffffffff80cd5970, 0xffffffff827d7b40) error 17
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+ugen2.1: <0x1022 XHCI root HUB> at usbus2
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+uhub0 on usbus0
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1 on usbus2
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub2 on usbus1
+uhub2: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+hdacc1: <Realtek ALC1220 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC1220 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC1220 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm2: <Realtek ALC1220 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm3: <Realtek ALC1220 (Rear Digital)> at nid 30 on hdaa1
+sysctl_unregister_oid: failed(22) to unregister sysctl(tmpfs)
+Trying to mount root from zfs:zroot/ROOT/13 []...
+Root mount waiting for: usbus0 usbus1 CAM usbus2
+uhub1: 8 ports with 8 removable, self powered
+uhub0: 10 ports with 10 removable, self powered
+uhub2: 10 ports with 10 removable, self powered
+ugen2.2: <CPS CP1500EPFCLCD> at usbus2
+Root mount waiting for: usbus1 CAM
+ugen1.2: <AsusTek Computer Inc. AURA LED Controller> at usbus1
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <INTEL SSDSC2BX400G4 G2010170> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 381554MB (781422768 512 byte sectors)
+ada0: quirks=0x1<4K>
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <INTEL SSDSC2BB240G7 N2010121> ACS-3 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 228936MB (468862128 512 byte sectors)
+ada2 at ahcich3 bus 0 scbus3 target 0 lun 0
+ada2: <WDC WD121KRYZ-01W0RB0 01.01H01> ACS-2 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 11444224MB (23437770752 512 byte sectors)
+da0 at mps0 bus 0 scbus8 target 2 lun 0
+da0: <ATA WDC WD30EFRX-68A 0A80> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: Command Queueing enabled
+da0: 2861588MB (5860533168 512 byte sectors)
+da0: quirks=0x8<4K>
+da2 at mps0 bus 0 scbus8 target 7 lun 0
+da2: <ATA WDC WD30EFRX-68E 0A82> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 600.000MB/s transfers
+da2: Command Queueing enabled
+da2: 2861588MB (5860533168 512 byte sectors)
+da2: quirks=0x8<4K>
+da1 at mps0 bus 0 scbus8 target 3 lun 0
+da1: <ATA WDC WD30EFRX-68A 0A80> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 600.000MB/s transfers
+da1: Command Queueing enabled
+da1: 2861588MB (5860533168 512 byte sectors)
+da1: quirks=0x8<4K>
+da4 at mps0 bus 0 scbus8 target 10 lun 0
+da4: <ATA ST3000NM0005-1V4 TN05> Fixed Direct Access SPC-4 SCSI device
+da4: Serial Number...
+da4: 600.000MB/s transfers
+da4: Command Queueing enabled
+da4: 2861588MB (5860533168 512 byte sectors)
+da3 at mps0 bus 0 scbus8 target 9 lun 0
+da3: <ATA ST3000NM0005-1V4 TN05> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 600.000MB/s transfers
+da3: Command Queueing enabled
+da3: 2861588MB (5860533168 512 byte sectors)
+da6 at mps0 bus 0 scbus8 target 12 lun 0
+da6: <ATA ST3000NM0005-1V4 TN05> Fixed Direct Access SPC-4 SCSI device
+da6: Serial Number...
+da6: 600.000MB/s transfers
+da6: Command Queueing enabled
+da6: 2861588MB (5860533168 512 byte sectors)
+da5 at mps0 bus 0 scbus8 target 11 lun 0
+da5: <ATA ST4000NM0035-1V4 TN05> Fixed Direct Access SPC-4 SCSI device
+da5: Serial Number...
+da5: 600.000MB/s transfers
+da5: Command Queueing enabled
+da5: 3815447MB (7814037168 512 byte sectors)
+da7 at mps0 bus 0 scbus8 target 13 lun 0
+da7: <ATA ST4000NM0035 SN07> Fixed Direct Access SPC-4 SCSI device
+da7: Serial Number...
+da7: 600.000MB/s transfers
+da7: Command Queueing enabled
+da7: 3815447MB (7814037168 512 byte sectors)
+GEOM_MIRROR: Device mirror/swap launched (2/2).
+GEOM_ELI: Device mirror/swap.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: accelerated software
+[drm] radeon kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] initializing kernel modesetting (CAICOS 0x1002:0x6771 0x174B:0xA01C 0x00).
+[drm ERROR :radeon_atombios_init] Unable to find PCI I/O BAR; using MMIO for ATOM IIO
+ATOM BIOS: R5
+drmn0: VRAM: 1024M 0x0000000000000000 - 0x000000003FFFFFFF (1024M used)
+drmn0: GTT: 1024M 0x0000000040000000 - 0x000000007FFFFFFF
+Successfully added WC MTRR for [0xe0000000-0xefffffff]: 0; 
+[drm] Detected VRAM RAM=1024M, BAR=256M
+[drm] RAM width 64bits DDR
+[TTM] Zone  kernel: Available graphics memory: 16711448 KiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 KiB
+[TTM] Initializing pool allocator
+[drm] radeon: 1024M of VRAM memory ready
+[drm] radeon: 1024M of GTT memory ready.
+[drm] Loading CAICOS Microcode
+drmn0: successfully loaded firmware image 'radeon/CAICOS_pfp.bin'
+drmn0: successfully loaded firmware image 'radeon/CAICOS_me.bin'
+drmn0: successfully loaded firmware image 'radeon/BTC_rlc.bin'
+drmn0: successfully loaded firmware image 'radeon/CAICOS_mc.bin'
+drmn0: successfully loaded firmware image 'radeon/CAICOS_smc.bin'
+[drm] Internal thermal controller without fan control
+[drm] radeon: dpm initialized
+drmn0: successfully loaded firmware image 'radeon/SUMO_uvd.bin'
+[drm] GART: num cpu pages 262144, num gpu pages 262144
+[drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+[drm] PCIE GART of 1024M enabled (table at 0x0000000000162000).
+drmn0: WB enabled
+drmn0: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff8004aca0c00
+drmn0: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff8004aca0c0c
+drmn0: fence driver on ring 5 use gpu addr 0x0000000000072118 and cpu addr 0x0xfffff800e0072118
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+drmn0: radeon: MSI limited to 32-bit
+drmn0: radeon: using MSI.
+[drm] radeon: irq initialized.
+[drm] ring test on 0 succeeded in 3 usecs
+[drm] ring test on 3 succeeded in 7 usecs
+[drm] ring test on 5 succeeded in 3 usecs
+[drm] UVD initialized successfully.
+[drm] ib test on ring 0 succeeded in 0 usecs
+[drm] ib test on ring 3 succeeded in 0 usecs
+[drm] ib test on ring 5 succeeded
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DVI-D-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-D-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector VGA-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.VGA-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Radeon Display Connectors
+[drm] Connector 0:
+[drm]   HDMI-A-1
+[drm]   HPD2
+[drm]   DDC: 0x6440 0x6440 0x6444 0x6444 0x6448 0x6448 0x644c 0x644c
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY1
+[drm] Connector 1:
+[drm]   DVI-D-1
+[drm]   HPD4
+[drm]   DDC: 0x6460 0x6460 0x6464 0x6464 0x6468 0x6468 0x646c 0x646c
+[drm]   Encoders:
+[drm]     DFP2: INTERNAL_UNIPHY
+[drm] Connector 2:
+[drm]   VGA-1
+[drm]   DDC: 0x6430 0x6430 0x6434 0x6434 0x6438 0x6438 0x643c 0x643c
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[drm] Cannot find any crtc or sizes
+[drm] Initialized radeon 2.50.0 20080528 for drmn0 on minor 0
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134AWW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134AMW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+lo0: link state changed to UP
+[drm] Cannot find any crtc or sizes
+igb3: link state changed to UP
+igb1: link state changed to UP
+uhid0 on uhub2
+uhid0: <AsusTek Computer Inc. AURA LED Controller, class 0/0, rev 2.00/1.00, addr 1> on usbus1
+igb4: link state changed to UP
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+igb1: link state changed to DOWN
+igb1: link state changed to UP
+ada2 at ahcich3 bus 0 scbus3 target 0 lun 0
+ada2: <WDC WD121KRYZ-01W0RB0 01.01H01> s/n ... detached
+(ada2:ahcich3:0:0:0): Periph destroyed
+ugen2.2: <CPS CP1500EPFCLCD> at usbus2 (disconnected)
+ugen2.2: <CPS CP1500EPFCLCD> at usbus2
+ugen2.2: <CPS CP1500EPFCLCD> at usbus2 (disconnected)
+ugen2.2: <CPS CP1500EPFCLCD> at usbus2
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+Uptime: 6d22h35m30s
+GEOM_ELI: Device mirror/swap.eli destroyed.
+GEOM_ELI: Detached mirror/swap.eli on last close.
+GEOM_MIRROR: Device swap: provider destroyed.
+GEOM_MIRROR: Device swap destroyed.
+uhub1: detached
+uhid0: detached
+uhub2: detached
+uhub0: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE releng/13.1-n250148-fc952ac2212 GENERIC amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+module_register: cannot register tmpfs from kernel; already loaded from tmpfs.ko
+Module tmpfs failed to register: 17
+CPU: AMD Ryzen 3 3300X 4-Core Processor              (3793.11-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x870f10  Family=0x17  Model=0x71  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c91a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x400004<UMIP,RDPID>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x108b657<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,STIBP,SSBD>
+  SVM: (disabled in BIOS) NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33275650048 (31734 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 1 2 3 7 4 6 5
+random: entropy device external interface
+kbd1 at kbdmux0
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xf05d0-0xf05ee
+smbios0: Version: 3.2, BCD Revision: 3.2
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x2> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+amdsmn0: <AMD Family 17h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 28 at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 2.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <PCI-PCI bridge> at device 2.0 on pci4
+pci5: <PCI bus> on pcib5
+igb0: <Intel(R) PRO/1000 VT 82575GB (Quad Copper)> port 0xc020-0xc03f mem 0xf7020000-0xf703ffff,0xf6e00000-0xf6ffffff,0xf7044000-0xf7047fff at device 0.0 on pci5
+igb0: EEPROM V1.77-0 eTrack 0x880c0000
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) PRO/1000 VT 82575GB (Quad Copper)> port 0xc000-0xc01f mem 0xf7000000-0xf701ffff,0xf6c00000-0xf6dfffff,0xf7040000-0xf7043fff at device 0.1 on pci5
+igb1: EEPROM V1.77-0 eTrack 0x880c0000
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib6: <PCI-PCI bridge> at device 4.0 on pci4
+pci6: <PCI bus> on pcib6
+igb2: <Intel(R) PRO/1000 VT 82575GB (Quad Copper)> port 0xb020-0xb03f mem 0xf6a20000-0xf6a3ffff,0xf6800000-0xf69fffff,0xf6a44000-0xf6a47fff irq 30 at device 0.0 on pci6
+igb2: EEPROM V1.77-0 eTrack 0x880e0000
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+igb3: <Intel(R) PRO/1000 VT 82575GB (Quad Copper)> port 0xb000-0xb01f mem 0xf6a00000-0xf6a1ffff,0xf6600000-0xf67fffff,0xf6a40000-0xf6a43fff at device 0.1 on pci6
+igb3: EEPROM V1.77-0 eTrack 0x880e0000
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib7: <ACPI PCI-PCI bridge> at device 5.0 on pci2
+pci7: <ACPI PCI bus> on pcib7
+igb4: <Intel(R) I211 (Copper)> port 0xd000-0xd01f mem 0xf7600000-0xf761ffff,0xf7620000-0xf7623fff irq 29 at device 0.0 on pci7
+igb4: NVM V0.6 imgtype1
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <ACPI PCI-PCI bridge> irq 28 at device 8.0 on pci2
+pci8: <ACPI PCI bus> on pcib8
+pci8: <unknown> at device 0.0 (no driver attached)
+xhci0: <AMD Matisse USB 3.0 controller> mem 0xf7300000-0xf73fffff irq 28 at device 0.1 on pci8
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+xhci1: <AMD Matisse USB 3.0 controller> mem 0xf7200000-0xf72fffff irq 30 at device 0.3 on pci8
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib9: <PCI-PCI bridge> irq 29 at device 9.0 on pci2
+pci9: <PCI bus> on pcib9
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xf7500000-0xf75007ff irq 29 at device 0.0 on pci9
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+pcib10: <PCI-PCI bridge> irq 30 at device 10.0 on pci2
+pci10: <PCI bus> on pcib10
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xf7400000-0xf74007ff irq 30 at device 0.0 on pci10
+ahci1: AHCI v1.31 with 4 6Gbps ports, Port Multiplier supported with FBS
+ahcich4: <AHCI channel> at channel 0 on ahci1
+ahcich5: <AHCI channel> at channel 1 on ahci1
+ahcich8: <AHCI channel> at channel 4 on ahci1
+ahcich9: <AHCI channel> at channel 5 on ahci1
+pcib11: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci11: <ACPI PCI bus> on pcib11
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xe0000000-0xefffffff,0xf7e20000-0xf7e3ffff irq 54 at device 0.0 on pci11
+vgapci0: Boot video device
+hdac0: <ATI RV910 HDA Controller> mem 0xf7e40000-0xf7e43fff irq 55 at device 0.1 on pci11
+pcib12: <ACPI PCI-PCI bridge> at device 3.2 on pci0
+pci12: <ACPI PCI bus> on pcib12
+mps0: <Avago Technologies (LSI) SAS2008> port 0xe000-0xe0ff mem 0xf7dc0000-0xf7dc3fff,0xf7d80000-0xf7dbffff irq 50 at device 0.0 on pci12
+mps0: Firmware: XXX.XXX.XXX.XXX, Driver: XXX.XXX.XXX.XXX-fbsd
+mps0: IOCCapabilities: 185c<ScsiTaskFull,DiagTrace,SnapBuf,EEDP,TransRetry,IR>
+pcib13: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci13: <ACPI PCI bus> on pcib13
+pci13: <unknown> at device 0.0 (no driver attached)
+pcib14: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci14: <ACPI PCI bus> on pcib14
+pci14: <unknown> at device 0.0 (no driver attached)
+pci14: <encrypt/decrypt> at device 0.1 (no driver attached)
+xhci2: <AMD Matisse USB 3.0 controller> mem 0xf7800000-0xf78fffff irq 39 at device 0.3 on pci14
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+hdac1: <AMD X570 HDA Controller> mem 0xf7a00000-0xf7a07fff irq 36 at device 0.4 on pci14
+pcib15: <ACPI PCI-PCI bridge> at device 8.2 on pci0
+pci15: <ACPI PCI bus> on pcib15
+ahci2: <AMD KERNCZ AHCI SATA controller> mem 0xf7c00000-0xf7c007ff irq 41 at device 0.0 on pci15
+ahci2: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich10: <AHCI channel> at channel 0 on ahci2
+pcib16: <ACPI PCI-PCI bridge> at device 8.3 on pci0
+pci16: <ACPI PCI bus> on pcib16
+ahci3: <AMD KERNCZ AHCI SATA controller> mem 0xf7b00000-0xf7b007ff irq 45 at device 0.0 on pci16
+ahci3: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich11: <AHCI channel> at channel 0 on ahci3
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xcffff,0xd6000-0xd6fff,0xd7000-0xd7fff,0xd8000-0xd8fff,0xd9000-0xd9fff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+module_register_init: MOD_LOAD (tmpfs, 0xffffffff80ce7f00, 0xffffffff82146b40) error 17
+Timecounter "TSC-low" frequency 1896437505 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+ugen2.1: <AMD XHCI root HUB> at usbus2
+ugen1.1: <AMD XHCI root HUB> at usbus1
+ugen0.1: <AMD XHCI root HUB> at usbus0
+uhub0 on usbus2
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub1 on usbus0
+uhub1: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2 on usbus1
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+hdacc1: <Realtek ALC1220 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC1220 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC1220 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm2: <Realtek ALC1220 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm3: <Realtek ALC1220 (Rear Digital)> at nid 30 on hdaa1
+sysctl_unregister_oid: failed(22) to unregister sysctl(tmpfs)
+Trying to mount root from zfs:zroot/ROOT/13 []...
+uhub0: 8 ports with 8 removable, self powered
+uhub1: 10 ports with 10 removable, self powered
+uhub2: 10 ports with 10 removable, self powered
+ugen2.2: <CPS CP1500EPFCLCD> at usbus2
+ugen1.2: <AsusTek Computer Inc. AURA LED Controller> at usbus1
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <INTEL SSDSC2BX400G4 G2010170> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 381554MB (781422768 512 byte sectors)
+ada0: quirks=0x1<4K>
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <INTEL SSDSC2BB240G7 N2010121> ACS-3 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 228936MB (468862128 512 byte sectors)
+da1 at mps0 bus 0 scbus8 target 3 lun 0
+da1: <ATA WDC WD30EFRX-68A 0A80> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 600.000MB/s transfers
+da1: Command Queueing enabled
+da1: 2861588MB (5860533168 512 byte sectors)
+da1: quirks=0x8<4K>
+da0 at mps0 bus 0 scbus8 target 2 lun 0
+da0: <ATA WDC WD30EFRX-68A 0A80> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: Command Queueing enabled
+da0: 2861588MB (5860533168 512 byte sectors)
+da0: quirks=0x8<4K>
+da2 at mps0 bus 0 scbus8 target 7 lun 0
+da2: <ATA WDC WD30EFRX-68E 0A82> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 600.000MB/s transfers
+da2: Command Queueing enabled
+da2: 2861588MB (5860533168 512 byte sectors)
+da2: quirks=0x8<4K>
+da3 at mps0 bus 0 scbus8 target 9 lun 0
+da3: <ATA ST3000NM0005-1V4 TN05> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 600.000MB/s transfers
+da3: Command Queueing enabled
+da3: 2861588MB (5860533168 512 byte sectors)
+da6 at mps0 bus 0 scbus8 target 12 lun 0
+da6: <ATA ST3000NM0005-1V4 TN05> Fixed Direct Access SPC-4 SCSI device
+da6: Serial Number...
+da6: 600.000MB/s transfers
+da6: Command Queueing enabled
+da6: 2861588MB (5860533168 512 byte sectors)
+da4 at mps0 bus 0 scbus8 target 10 lun 0
+da4: <ATA ST3000NM0005-1V4 TN05> Fixed Direct Access SPC-4 SCSI device
+da4: Serial Number...
+da4: 600.000MB/s transfers
+da4: Command Queueing enabled
+da4: 2861588MB (5860533168 512 byte sectors)
+da5 at mps0 bus 0 scbus8 target 11 lun 0
+da5: <ATA ST4000NM0035-1V4 TN05> Fixed Direct Access SPC-4 SCSI device
+da5: Serial Number...
+da5: 600.000MB/s transfers
+da5: Command Queueing enabled
+da5: 3815447MB (7814037168 512 byte sectors)
+da7 at mps0 bus 0 scbus8 target 13 lun 0
+da7: <ATA ST4000NM0035 SN07> Fixed Direct Access SPC-4 SCSI device
+da7: Serial Number...
+da7: 600.000MB/s transfers
+da7: Command Queueing enabled
+da7: 3815447MB (7814037168 512 byte sectors)
+GEOM_MIRROR: Device mirror/swap launched (2/2).
+GEOM_ELI: Device mirror/swap.eli created.
+GEOM_ELI: Encryption: AES-XTS 128
+GEOM_ELI:     Crypto: accelerated software
+[drm] radeon kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] initializing kernel modesetting (CAICOS 0x1002:0x6771 0x174B:0xA01C 0x00).
+[drm ERROR :radeon_atombios_init] Unable to find PCI I/O BAR; using MMIO for ATOM IIO
+ATOM BIOS: R5
+drmn0: VRAM: 1024M 0x0000000000000000 - 0x000000003FFFFFFF (1024M used)
+drmn0: GTT: 1024M 0x0000000040000000 - 0x000000007FFFFFFF
+Successfully added WC MTRR for [0xe0000000-0xefffffff]: 0; 
+[drm] Detected VRAM RAM=1024M, BAR=256M
+[drm] RAM width 64bits DDR
+[TTM] Zone  kernel: Available graphics memory: 16710556 KiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 KiB
+[TTM] Initializing pool allocator
+[drm] radeon: 1024M of VRAM memory ready
+[drm] radeon: 1024M of GTT memory ready.
+[drm] Loading CAICOS Microcode
+drmn0: successfully loaded firmware image 'radeon/CAICOS_pfp.bin'
+drmn0: successfully loaded firmware image 'radeon/CAICOS_me.bin'
+drmn0: successfully loaded firmware image 'radeon/BTC_rlc.bin'
+drmn0: successfully loaded firmware image 'radeon/CAICOS_mc.bin'
+drmn0: successfully loaded firmware image 'radeon/CAICOS_smc.bin'
+[drm] Internal thermal controller without fan control
+[drm] radeon: dpm initialized
+drmn0: successfully loaded firmware image 'radeon/SUMO_uvd.bin'
+[drm] GART: num cpu pages 262144, num gpu pages 262144
+[drm] enabling PCIE gen 2 link speeds, disable with radeon.pcie_gen2=0
+[drm] PCIE GART of 1024M enabled (table at 0x0000000000162000).
+drmn0: WB enabled
+drmn0: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xfffff80034fe5c00
+drmn0: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xfffff80034fe5c0c
+drmn0: fence driver on ring 5 use gpu addr 0x0000000000072118 and cpu addr 0x0xfffff800e0072118
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+drmn0: radeon: MSI limited to 32-bit
+drmn0: radeon: using MSI.
+[drm] radeon: irq initialized.
+[drm] ring test on 0 succeeded in 3 usecs
+[drm] ring test on 3 succeeded in 7 usecs
+[drm] ring test on 5 succeeded in 3 usecs
+[drm] UVD initialized successfully.
+[drm] ib test on ring 0 succeeded in 0 usecs
+[drm] ib test on ring 3 succeeded in 0 usecs
+[drm] ib test on ring 5 succeeded
+[drm] Connector HDMI-A-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.HDMI-A-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector DVI-D-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-D-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector VGA-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.VGA-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Radeon Display Connectors
+[drm] Connector 0:
+[drm]   HDMI-A-1
+[drm]   HPD2
+[drm]   DDC: 0x6440 0x6440 0x6444 0x6444 0x6448 0x6448 0x644c 0x644c
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY1
+[drm] Connector 1:
+[drm]   DVI-D-1
+[drm]   HPD4
+[drm]   DDC: 0x6460 0x6460 0x6464 0x6464 0x6468 0x6468 0x646c 0x646c
+[drm]   Encoders:
+[drm]     DFP2: INTERNAL_UNIPHY
+[drm] Connector 2:
+[drm]   VGA-1
+[drm]   DDC: 0x6430 0x6430 0x6434 0x6434 0x6438 0x6438 0x643c 0x643c
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[drm] Cannot find any crtc or sizes
+[drm] Initialized radeon 2.50.0 20080528 for drmn0 on minor 0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134AWW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134AMW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+[drm] Cannot find any crtc or sizes
+igb3: link state changed to UP
+igb1: link state changed to UP
+uhid0 on uhub2
+uhid0: <AsusTek Computer Inc. AURA LED Controller, class 0/0, rev 2.00/1.00, addr 1> on usbus1

@@ -1,0 +1,626 @@
+Copyright (c) 3711-71E9 The DragonFly Project.
+Copyright (c) 7252-14A5 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+DragonFly vXXX.XXX.XXX.XXX.g465b67-DEVELOPMENT #69: Mon Jul  4 00:42:29 PDT 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXX
+acpi_hpet: frequency 14318180
+Using cputimer HPET for TSC calibration
+Timer latency (in TSC ticks): 1233 min=1224 max=1260
+TSC invariant clock: 2099998040 Hz
+CPU: Intel(R) Xeon(R) CPU E5-2620 v4 @ 2.10GHz (2100.00-MHz K8-class CPU)
+  Origin = "GenuineIntel"  Id = 0x406f1  Stepping = 1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x77fefbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,AVX,F16C,RDRND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x21cbfbb<GSFSBASE,TSCADJ,BMI1,HLE,AVX2,SMEP,BMI2,ENHMOVSB,INVPCID,RTM,PQM,NFPUSG,PQE,RDSEED,ADX,SMAP,PROCTRACE>
+  Thermal and PM Features=0x77<SENSOR,TURBO,ARAT,PLN,ECMD,PTM>
+  MONITOR/MWAIT Features=0x3<CST,INTBRK>
+CPU Special Features Installed: SMAP SMEP
+real memory  = 137323507712 (130961 MB)
+Warning: nbuf capped at 418557 due to the reasonability limit
+Warning: nbufs capped at 383908 due to valloc considerations
+avail memory = 132903440384 (126746 MB)
+LAPIC: enter X2APIC mode
+madt_lapic_probe: lapic_count=32 x2apic_count=0
+ACPI CPUS = 32
+lapic: TSC Deadline Mode: frequency 2099998040 Hz
+CPU Topology: cores_per_chip: 8; threads_per_core: 2; chips_per_package: 2;
+MemAffinity 0000000000000000,2048MB Prox=0 CpuApicId 00 Socket 0
+MemAffinity 0000000100000000,63488MB Prox=0 CpuApicId 00 Socket 0
+MemAffinity 0000001080000000,65536MB Prox=1 CpuApicId 10 Socket 1
+vm_page: avg 30947 pages per queue, 1024 queues
+Initialize MI interrupts for 32 cpus
+TSC testing MP synchronization ...
+TSC testing MP: NOTE! CPU pwrsave will inflate latencies!
+TSC cpu-delta test complete, 2049nS to 29188nS SUCCESS
+TSC cpu-delta test complete, 1929nS to 21540nS SUCCESS
+TSC cpu-delta test complete, 1910nS to 19308nS SUCCESS
+TSC cpu-delta test complete, 1906nS to 4017nS SUCCESS
+TSC cpu concurrency test complete, worst=1060ns, avg=315ns SUCCESS
+TSC is MP synchronized
+TSC: cputimer freq 2099998040
+Spectre: support=( none ) req=ffff operating=( none )
+MDS: support=( none ) req=ffff operating=( none )
+machdep.meltdown_mitigation enabled to protect against (mostly Intel) meltdown bug
+system call performance will be impacted
+interrupt uses mplock: swi_taskq
+wdog: In-kernel automatic watchdog reset enabled
+md0: Malloc disk
+evdev device loaded.
+kbd1 at kbdmux0
+ACPI: RSDP 0x000000007984B000 000024 (v02 SUPERM)
+ACPI: XSDT 0x000000007984B0A8 0000CC (v01                 01072009 AMI  00010013)
+ACPI: FACP 0x000000007987BDB8 00010C (v05 SUPERM SMCI--MB 01072009 AMI  00010013)
+ACPI: DSDT 0x000000007984B208 030BB0 (v02 SUPERM SMCI--MB 01072009 INTL 20091013)
+ACPI: FACS 0x0000000079CD7F80 000040
+ACPI: APIC 0x000000007987BEC8 000224 (v03 SUPERM SMCI--MB 01072009 AMI  00010013)
+ACPI: FPDT 0x000000007987C0F0 000044 (v01 SUPERM SMCI--MB 01072009 AMI  00010013)
+ACPI: FIDT 0x000000007987C138 00009C (v01 SUPERM SMCI--MB 01072009 AMI  00010013)
+ACPI: SPMI 0x000000007987C1D8 000040 (v05 SUPERM SMCI--MB 00000000 AMI. 00000000)
+ACPI: MCFG 0x000000007987C218 00003C (v01 SUPERM SMCI--MB 01072009 MSFT 00000097)
+ACPI: UEFI 0x000000007987C258 000042 (v01 SUPERM SMCI--MB 01072009      00000000)
+ACPI: HPET 0x000000007987C2A0 000038 (v01 SUPERM SMCI--MB 00000001 INTL 20091013)
+ACPI: MSCT 0x000000007987C2D8 000090 (v01 SUPERM SMCI--MB 00000001 INTL 20091013)
+ACPI: SLIT 0x000000007987C368 000030 (v01 SUPERM SMCI--MB 00000001 INTL 20091013)
+ACPI: SRAT 0x000000007987C398 001158 (v03 SUPERM SMCI--MB 00000001 INTL 20091013)
+ACPI: WDDT 0x000000007987D4F0 000040 (v01 SUPERM SMCI--MB 00000000 INTL 20091013)
+ACPI: SSDT 0x000000007987D530 016FB3 (v02 SUPERM PmMgt    00000001 INTL 20120913)
+ACPI: SSDT 0x00000000798944E8 00264C (v02 SUPERM SpsNm    00000002 INTL 20120913)
+ACPI: SSDT 0x0000000079896B38 000064 (v02 SUPERM SpsNvs   00000002 INTL 20120913)
+ACPI: PRAD 0x0000000079896BA0 000102 (v02 SUPERM SMCI--MB 00000002 INTL 20120913)
+ACPI: DMAR 0x0000000079896CA8 000128 (v01 SUPERM SMCI--MB 00000001 INTL 20091013)
+ACPI: HEST 0x0000000079896DD0 00027C (v01 SUPERM SMCI--MB 00000001 INTL 00000001)
+ACPI: BERT 0x0000000079897050 000030 (v01 SUPERM SMCI--MB 00000001 INTL 00000001)
+ACPI: ERST 0x0000000079897080 000230 (v01 SUPERM SMCI--MB 00000001 INTL 00000001)
+ACPI: EINJ 0x00000000798972B0 000130 (v01 SUPERM SMCI--MB 00000001 INTL 00000001)
+sc0: <System console> on motherboard
+sc0: EFI_FB <16 virtual consoles, flags=0x500>
+cryptosoft0: <software crypto> on motherboard
+acpi0: <> on motherboard
+ACPI: 4 ACPI AML tables successfully acquired and loaded
+ACPI FADT: SCI testing interrupt mode ...
+ACPI FADT: SCI select level/high
+acpi0: Power Button (fixed)
+acpi_hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+acpi_timer0 on acpi0
+cpu0: <ACPI CPU> on acpi0
+cpu_cst0: <ACPI CPU C-State> on cpu0
+cpu_pst0: <ACPI CPU P-State> on cpu0
+clockmod0: <CPU clock modulation> on cpu0
+perfbias0: <CPU perf-energy bias> on cpu0
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+cpu1: <ACPI CPU> on acpi0
+cpu_cst1: <ACPI CPU C-State> on cpu1
+cpu_pst1: <ACPI CPU P-State> on cpu1
+cpu_pst1: Destroy domain1, force pkg domain0
+clockmod1: <CPU clock modulation> on cpu1
+perfbias1: <CPU perf-energy bias> on cpu1
+coretemp1: <CPU On-Die Thermal Sensors> on cpu1
+cpu2: <ACPI CPU> on acpi0
+cpu_cst2: <ACPI CPU C-State> on cpu2
+cpu_pst2: <ACPI CPU P-State> on cpu2
+cpu_pst2: Destroy domain2, force pkg domain0
+clockmod2: <CPU clock modulation> on cpu2
+perfbias2: <CPU perf-energy bias> on cpu2
+coretemp2: <CPU On-Die Thermal Sensors> on cpu2
+cpu3: <ACPI CPU> on acpi0
+cpu_cst3: <ACPI CPU C-State> on cpu3
+cpu_pst3: <ACPI CPU P-State> on cpu3
+cpu_pst3: Destroy domain3, force pkg domain0
+clockmod3: <CPU clock modulation> on cpu3
+perfbias3: <CPU perf-energy bias> on cpu3
+coretemp3: <CPU On-Die Thermal Sensors> on cpu3
+cpu4: <ACPI CPU> on acpi0
+cpu_cst4: <ACPI CPU C-State> on cpu4
+cpu_pst4: <ACPI CPU P-State> on cpu4
+cpu_pst4: Destroy domain4, force pkg domain0
+clockmod4: <CPU clock modulation> on cpu4
+perfbias4: <CPU perf-energy bias> on cpu4
+coretemp4: <CPU On-Die Thermal Sensors> on cpu4
+cpu5: <ACPI CPU> on acpi0
+cpu_cst5: <ACPI CPU C-State> on cpu5
+cpu_pst5: <ACPI CPU P-State> on cpu5
+cpu_pst5: Destroy domain5, force pkg domain0
+clockmod5: <CPU clock modulation> on cpu5
+perfbias5: <CPU perf-energy bias> on cpu5
+coretemp5: <CPU On-Die Thermal Sensors> on cpu5
+cpu6: <ACPI CPU> on acpi0
+cpu_cst6: <ACPI CPU C-State> on cpu6
+cpu_pst6: <ACPI CPU P-State> on cpu6
+cpu_pst6: Destroy domain6, force pkg domain0
+clockmod6: <CPU clock modulation> on cpu6
+perfbias6: <CPU perf-energy bias> on cpu6
+coretemp6: <CPU On-Die Thermal Sensors> on cpu6
+cpu7: <ACPI CPU> on acpi0
+cpu_cst7: <ACPI CPU C-State> on cpu7
+cpu_pst7: <ACPI CPU P-State> on cpu7
+cpu_pst7: Destroy domain7, force pkg domain0
+clockmod7: <CPU clock modulation> on cpu7
+perfbias7: <CPU perf-energy bias> on cpu7
+coretemp7: <CPU On-Die Thermal Sensors> on cpu7
+cpu8: acpi id mismatch, madt 16, processor object 1
+cpu8: <ACPI CPU> on acpi0
+cpu_cst8: <ACPI CPU C-State> on cpu8
+cpu_pst8: <ACPI CPU P-State> on cpu8
+clockmod8: <CPU clock modulation> on cpu8
+perfbias8: <CPU perf-energy bias> on cpu8
+coretemp8: <CPU On-Die Thermal Sensors> on cpu8
+cpu9: acpi id mismatch, madt 18, processor object 3
+cpu9: <ACPI CPU> on acpi0
+cpu_cst9: <ACPI CPU C-State> on cpu9
+cpu_pst9: <ACPI CPU P-State> on cpu9
+cpu_pst9: Destroy domain9, force pkg domain8
+clockmod9: <CPU clock modulation> on cpu9
+perfbias9: <CPU perf-energy bias> on cpu9
+coretemp9: <CPU On-Die Thermal Sensors> on cpu9
+cpu10: acpi id mismatch, madt 20, processor object 5
+cpu10: <ACPI CPU> on acpi0
+cpu_cst10: <ACPI CPU C-State> on cpu10
+cpu_pst10: <ACPI CPU P-State> on cpu10
+cpu_pst10: Destroy domain10, force pkg domain8
+clockmod10: <CPU clock modulation> on cpu10
+perfbias10: <CPU perf-energy bias> on cpu10
+coretemp10: <CPU On-Die Thermal Sensors> on cpu10
+cpu11: acpi id mismatch, madt 22, processor object 7
+cpu11: <ACPI CPU> on acpi0
+cpu_cst11: <ACPI CPU C-State> on cpu11
+cpu_pst11: <ACPI CPU P-State> on cpu11
+cpu_pst11: Destroy domain11, force pkg domain8
+clockmod11: <CPU clock modulation> on cpu11
+perfbias11: <CPU perf-energy bias> on cpu11
+coretemp11: <CPU On-Die Thermal Sensors> on cpu11
+cpu12: acpi id mismatch, madt 24, processor object 9
+cpu12: <ACPI CPU> on acpi0
+cpu_cst12: <ACPI CPU C-State> on cpu12
+cpu_pst12: <ACPI CPU P-State> on cpu12
+cpu_pst12: Destroy domain12, force pkg domain8
+clockmod12: <CPU clock modulation> on cpu12
+perfbias12: <CPU perf-energy bias> on cpu12
+coretemp12: <CPU On-Die Thermal Sensors> on cpu12
+cpu13: acpi id mismatch, madt 26, processor object 11
+cpu13: <ACPI CPU> on acpi0
+cpu_cst13: <ACPI CPU C-State> on cpu13
+cpu_pst13: <ACPI CPU P-State> on cpu13
+cpu_pst13: Destroy domain13, force pkg domain8
+clockmod13: <CPU clock modulation> on cpu13
+perfbias13: <CPU perf-energy bias> on cpu13
+coretemp13: <CPU On-Die Thermal Sensors> on cpu13
+cpu14: acpi id mismatch, madt 28, processor object 13
+cpu14: <ACPI CPU> on acpi0
+cpu_cst14: <ACPI CPU C-State> on cpu14
+cpu_pst14: <ACPI CPU P-State> on cpu14
+cpu_pst14: Destroy domain14, force pkg domain8
+clockmod14: <CPU clock modulation> on cpu14
+perfbias14: <CPU perf-energy bias> on cpu14
+coretemp14: <CPU On-Die Thermal Sensors> on cpu14
+cpu15: acpi id mismatch, madt 30, processor object 15
+cpu15: <ACPI CPU> on acpi0
+cpu_cst15: <ACPI CPU C-State> on cpu15
+cpu_pst15: <ACPI CPU P-State> on cpu15
+cpu_pst15: Destroy domain15, force pkg domain8
+clockmod15: <CPU clock modulation> on cpu15
+perfbias15: <CPU perf-energy bias> on cpu15
+coretemp15: <CPU On-Die Thermal Sensors> on cpu15
+cpu16: acpi id mismatch, madt 1, processor object 255
+cpu16: <ACPI CPU> on acpi0
+cpu_cst16: <ACPI CPU C-State> on cpu16
+cpu_pst16: <ACPI CPU P-State> on cpu16
+cpu_pst16: Destroy domain16, force pkg domain0
+clockmod16: <CPU clock modulation> on cpu16
+perfbias16: <CPU perf-energy bias> on cpu16
+coretemp16: <CPU On-Die Thermal Sensors> on cpu16
+cpu17: acpi id mismatch, madt 3, processor object 255
+cpu17: <ACPI CPU> on acpi0
+cpu_cst17: <ACPI CPU C-State> on cpu17
+cpu_pst17: <ACPI CPU P-State> on cpu17
+cpu_pst17: Destroy domain17, force pkg domain0
+clockmod17: <CPU clock modulation> on cpu17
+perfbias17: <CPU perf-energy bias> on cpu17
+coretemp17: <CPU On-Die Thermal Sensors> on cpu17
+cpu18: acpi id mismatch, madt 5, processor object 255
+cpu18: <ACPI CPU> on acpi0
+cpu_cst18: <ACPI CPU C-State> on cpu18
+cpu_pst18: <ACPI CPU P-State> on cpu18
+cpu_pst18: Destroy domain18, force pkg domain0
+clockmod18: <CPU clock modulation> on cpu18
+perfbias18: <CPU perf-energy bias> on cpu18
+coretemp18: <CPU On-Die Thermal Sensors> on cpu18
+cpu19: acpi id mismatch, madt 7, processor object 255
+cpu19: <ACPI CPU> on acpi0
+cpu_cst19: <ACPI CPU C-State> on cpu19
+cpu_pst19: <ACPI CPU P-State> on cpu19
+cpu_pst19: Destroy domain19, force pkg domain0
+clockmod19: <CPU clock modulation> on cpu19
+perfbias19: <CPU perf-energy bias> on cpu19
+coretemp19: <CPU On-Die Thermal Sensors> on cpu19
+cpu20: acpi id mismatch, madt 9, processor object 255
+cpu20: <ACPI CPU> on acpi0
+cpu_cst20: <ACPI CPU C-State> on cpu20
+cpu_pst20: <ACPI CPU P-State> on cpu20
+cpu_pst20: Destroy domain20, force pkg domain0
+clockmod20: <CPU clock modulation> on cpu20
+perfbias20: <CPU perf-energy bias> on cpu20
+coretemp20: <CPU On-Die Thermal Sensors> on cpu20
+cpu21: acpi id mismatch, madt 11, processor object 255
+cpu21: <ACPI CPU> on acpi0
+cpu_cst21: <ACPI CPU C-State> on cpu21
+cpu_pst21: <ACPI CPU P-State> on cpu21
+cpu_pst21: Destroy domain21, force pkg domain0
+clockmod21: <CPU clock modulation> on cpu21
+perfbias21: <CPU perf-energy bias> on cpu21
+coretemp21: <CPU On-Die Thermal Sensors> on cpu21
+cpu22: acpi id mismatch, madt 13, processor object 255
+cpu22: <ACPI CPU> on acpi0
+cpu_cst22: <ACPI CPU C-State> on cpu22
+cpu_pst22: <ACPI CPU P-State> on cpu22
+cpu_pst22: Destroy domain22, force pkg domain0
+clockmod22: <CPU clock modulation> on cpu22
+perfbias22: <CPU perf-energy bias> on cpu22
+coretemp22: <CPU On-Die Thermal Sensors> on cpu22
+cpu23: acpi id mismatch, madt 15, processor object 255
+cpu23: <ACPI CPU> on acpi0
+cpu_cst23: <ACPI CPU C-State> on cpu23
+cpu_pst23: <ACPI CPU P-State> on cpu23
+cpu_pst23: Destroy domain23, force pkg domain0
+clockmod23: <CPU clock modulation> on cpu23
+perfbias23: <CPU perf-energy bias> on cpu23
+coretemp23: <CPU On-Die Thermal Sensors> on cpu23
+cpu24: acpi id mismatch, madt 17, processor object 255
+cpu24: <ACPI CPU> on acpi0
+cpu_cst24: <ACPI CPU C-State> on cpu24
+cpu_pst24: <ACPI CPU P-State> on cpu24
+cpu_pst24: Destroy domain24, force pkg domain8
+clockmod24: <CPU clock modulation> on cpu24
+perfbias24: <CPU perf-energy bias> on cpu24
+coretemp24: <CPU On-Die Thermal Sensors> on cpu24
+cpu25: acpi id mismatch, madt 19, processor object 255
+cpu25: <ACPI CPU> on acpi0
+cpu_cst25: <ACPI CPU C-State> on cpu25
+cpu_pst25: <ACPI CPU P-State> on cpu25
+cpu_pst25: Destroy domain25, force pkg domain8
+clockmod25: <CPU clock modulation> on cpu25
+perfbias25: <CPU perf-energy bias> on cpu25
+coretemp25: <CPU On-Die Thermal Sensors> on cpu25
+cpu26: acpi id mismatch, madt 21, processor object 255
+cpu26: <ACPI CPU> on acpi0
+cpu_cst26: <ACPI CPU C-State> on cpu26
+cpu_pst26: <ACPI CPU P-State> on cpu26
+cpu_pst26: Destroy domain26, force pkg domain8
+clockmod26: <CPU clock modulation> on cpu26
+perfbias26: <CPU perf-energy bias> on cpu26
+coretemp26: <CPU On-Die Thermal Sensors> on cpu26
+cpu27: acpi id mismatch, madt 23, processor object 255
+cpu27: <ACPI CPU> on acpi0
+cpu_cst27: <ACPI CPU C-State> on cpu27
+cpu_pst27: <ACPI CPU P-State> on cpu27
+cpu_pst27: Destroy domain27, force pkg domain8
+clockmod27: <CPU clock modulation> on cpu27
+perfbias27: <CPU perf-energy bias> on cpu27
+coretemp27: <CPU On-Die Thermal Sensors> on cpu27
+cpu28: acpi id mismatch, madt 25, processor object 255
+cpu28: <ACPI CPU> on acpi0
+cpu_cst28: <ACPI CPU C-State> on cpu28
+cpu_pst28: <ACPI CPU P-State> on cpu28
+cpu_pst28: Destroy domain28, force pkg domain8
+clockmod28: <CPU clock modulation> on cpu28
+perfbias28: <CPU perf-energy bias> on cpu28
+coretemp28: <CPU On-Die Thermal Sensors> on cpu28
+cpu29: acpi id mismatch, madt 27, processor object 255
+cpu29: <ACPI CPU> on acpi0
+cpu_cst29: <ACPI CPU C-State> on cpu29
+cpu_pst29: <ACPI CPU P-State> on cpu29
+cpu_pst29: Destroy domain29, force pkg domain8
+clockmod29: <CPU clock modulation> on cpu29
+perfbias29: <CPU perf-energy bias> on cpu29
+coretemp29: <CPU On-Die Thermal Sensors> on cpu29
+cpu30: acpi id mismatch, madt 29, processor object 255
+cpu30: <ACPI CPU> on acpi0
+cpu_cst30: <ACPI CPU C-State> on cpu30
+cpu_pst30: <ACPI CPU P-State> on cpu30
+cpu_pst30: Destroy domain30, force pkg domain8
+clockmod30: <CPU clock modulation> on cpu30
+perfbias30: <CPU perf-energy bias> on cpu30
+coretemp30: <CPU On-Die Thermal Sensors> on cpu30
+cpu31: acpi id mismatch, madt 31, processor object 255
+cpu31: <ACPI CPU> on acpi0
+cpu_cst31: <ACPI CPU C-State> on cpu31
+cpu_pst31: <ACPI CPU P-State> on cpu31
+cpu_pst31: Destroy domain31, force pkg domain8
+clockmod31: <CPU clock modulation> on cpu31
+perfbias31: <CPU perf-energy bias> on cpu31
+coretemp31: <CPU On-Die Thermal Sensors> on cpu31
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> on acpi0
+pci255: <ACPI PCI bus> on pcib0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f80) at device 8.0
+pci255: <dasp> (vendor 0x8086, dev 0x6f32) at device 8.2
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f83) at device 8.3
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f90) at device 9.0
+pci255: <dasp> (vendor 0x8086, dev 0x6f33) at device 9.2
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f93) at device 9.3
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f81) at device 11.0
+pci255: <dasp> (vendor 0x8086, dev 0x6f36) at device 11.1
+pci255: <dasp> (vendor 0x8086, dev 0x6f37) at device 11.2
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f76) at device 11.3
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fe0) at device 12.0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fe1) at device 12.1
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fe2) at device 12.2
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fe3) at device 12.3
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fe4) at device 12.4
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fe5) at device 12.5
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fe6) at device 12.6
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fe7) at device 12.7
+pci255: <base peripheral> (vendor 0x8086, dev 0x6ff8) at device 15.0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6ff9) at device 15.1
+pci255: <base peripheral> (vendor 0x8086, dev 0x6ffc) at device 15.4
+pci255: <base peripheral> (vendor 0x8086, dev 0x6ffd) at device 15.5
+pci255: <base peripheral> (vendor 0x8086, dev 0x6ffe) at device 15.6
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f1d) at device 16.0
+pci255: <dasp> (vendor 0x8086, dev 0x6f34) at device 16.1
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f1e) at device 16.5
+pci255: <dasp> (vendor 0x8086, dev 0x6f7d) at device 16.6
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f1f) at device 16.7
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fa0) at device 18.0
+pci255: <dasp> (vendor 0x8086, dev 0x6f30) at device 18.1
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fa8) at device 19.0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f71) at device 19.1
+pci255: <base peripheral> (vendor 0x8086, dev 0x6faa) at device 19.2
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fab) at device 19.3
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fac) at device 19.4
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fad) at device 19.5
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fae) at device 19.6
+pci255: <base peripheral> (vendor 0x8086, dev 0x6faf) at device 19.7
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb0) at device 20.0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb1) at device 20.1
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb2) at device 20.2
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb3) at device 20.3
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fbc) at device 20.4
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fbd) at device 20.5
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fbe) at device 20.6
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fbf) at device 20.7
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb4) at device 21.0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb5) at device 21.1
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb6) at device 21.2
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb7) at device 21.3
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f68) at device 22.0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f6e) at device 22.6
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f6f) at device 22.7
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fd0) at device 23.0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb8) at device 23.4
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fb9) at device 23.5
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fba) at device 23.6
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fbb) at device 23.7
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f98) at device 30.0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f99) at device 30.1
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f9a) at device 30.2
+pci255: <base peripheral> (vendor 0x8086, dev 0x6fc0) at device 30.3
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f9c) at device 30.4
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f88) at device 31.0
+pci255: <base peripheral> (vendor 0x8086, dev 0x6f8a) at device 31.2
+pcib1: <ACPI Host-PCI bridge> on acpi0
+pci127: <ACPI PCI bus> on pcib1
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f80) at device 8.0
+pci127: <dasp> (vendor 0x8086, dev 0x6f32) at device 8.2
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f83) at device 8.3
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f90) at device 9.0
+pci127: <dasp> (vendor 0x8086, dev 0x6f33) at device 9.2
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f93) at device 9.3
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f81) at device 11.0
+pci127: <dasp> (vendor 0x8086, dev 0x6f36) at device 11.1
+pci127: <dasp> (vendor 0x8086, dev 0x6f37) at device 11.2
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f76) at device 11.3
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fe0) at device 12.0
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fe1) at device 12.1
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fe2) at device 12.2
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fe3) at device 12.3
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fe4) at device 12.4
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fe5) at device 12.5
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fe6) at device 12.6
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fe7) at device 12.7
+pci127: <base peripheral> (vendor 0x8086, dev 0x6ff8) at device 15.0
+pci127: <base peripheral> (vendor 0x8086, dev 0x6ff9) at device 15.1
+pci127: <base peripheral> (vendor 0x8086, dev 0x6ffc) at device 15.4
+pci127: <base peripheral> (vendor 0x8086, dev 0x6ffd) at device 15.5
+pci127: <base peripheral> (vendor 0x8086, dev 0x6ffe) at device 15.6
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f1d) at device 16.0
+pci127: <dasp> (vendor 0x8086, dev 0x6f34) at device 16.1
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f1e) at device 16.5
+pci127: <dasp> (vendor 0x8086, dev 0x6f7d) at device 16.6
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f1f) at device 16.7
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fa0) at device 18.0
+pci127: <dasp> (vendor 0x8086, dev 0x6f30) at device 18.1
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fa8) at device 19.0
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f71) at device 19.1
+pci127: <base peripheral> (vendor 0x8086, dev 0x6faa) at device 19.2
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fab) at device 19.3
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fac) at device 19.4
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fad) at device 19.5
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fae) at device 19.6
+pci127: <base peripheral> (vendor 0x8086, dev 0x6faf) at device 19.7
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb0) at device 20.0
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb1) at device 20.1
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb2) at device 20.2
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb3) at device 20.3
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fbc) at device 20.4
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fbd) at device 20.5
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fbe) at device 20.6
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fbf) at device 20.7
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb4) at device 21.0
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb5) at device 21.1
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb6) at device 21.2
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb7) at device 21.3
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f68) at device 22.0
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f6e) at device 22.6
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f6f) at device 22.7
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fd0) at device 23.0
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb8) at device 23.4
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fb9) at device 23.5
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fba) at device 23.6
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fbb) at device 23.7
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f98) at device 30.0
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f99) at device 30.1
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f9a) at device 30.2
+pci127: <base peripheral> (vendor 0x8086, dev 0x6fc0) at device 30.3
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f9c) at device 30.4
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f88) at device 31.0
+pci127: <base peripheral> (vendor 0x8086, dev 0x6f8a) at device 31.2
+pcib2: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> irq 26 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib3
+igb0: <Intel(R) PRO/1000 I210_COPPER> mem 0xc7600000-0xc7603fff,0xc7500000-0xc75fffff irq 26 at device 0.0 on pci1
+igb0: MAC address: XXX
+pcib4: <ACPI PCI-PCI bridge> irq 32 at device 2.0 on pci0
+pci2: <ACPI PCI bus> on pcib4
+igb1: <Intel(R) PRO/1000 I210_COPPER> mem 0xc7300000-0xc7303fff,0xc7200000-0xc72fffff irq 32 at device 0.0 on pci2
+igb1: MAC address: XXX
+pcib5: <ACPI PCI-PCI bridge> irq 40 at device 3.0 on pci0
+pci3: <ACPI PCI bus> on pcib5
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f20) at device 4.0 irq 31
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f21) at device 4.1 irq 39
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f22) at device 4.2 irq 31
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f23) at device 4.3 irq 39
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f24) at device 4.4 irq 31
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f25) at device 4.5 irq 39
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f26) at device 4.6 irq 31
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f27) at device 4.7 irq 39
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f28) at device 5.0
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f29) at device 5.1
+pci0: <base peripheral> (vendor 0x8086, dev 0x6f2a) at device 5.2
+pci0: <base peripheral, interrupt controller> (vendor 0x8086, dev 0x6f2c) at device 5.4
+pci0: <unknown> (vendor 0x8086, dev 0x8d7c) at device 17.0
+ahci0: <AHCI-PCI-SATA> port 0x7020-0x703f,0x70e0-0x70e3,0x70f0-0x70f7,0x7100-0x7103,0x7110-0x7117 mem 0xc7938000-0xc79387ff irq 16 at device 17.4 on pci0
+ahci0: AHCI 1.3 cap 0xc730ff43<S64A,NCQ,SALP,SAL,SCLO,PMD,SSC,PSC,EMS> cap2 0x4<APST>, 4 ports, 32 tags/port, gen 3 (6Gbps)
+ahci0.0: No device detected
+xhci0: <Intel Wellsburg USB 3.0 controller> mem 0xc7900000-0xc790ffff irq 19 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> (vendor 0x8086, dev 0x8d3a) at device 22.0 irq 16
+pci0: <simple comms> (vendor 0x8086, dev 0x8d3b) at device 22.1 irq 17
+ugen0.1: <0x8086> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci4: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 0.0 on pci4
+pci5: <ACPI PCI bus> on pcib7
+ugen1.1: <Intel> at usbus1
+vgapci0: <VGA-compatible display> port 0x6000-0x607f mem 0xc7000000-0xc701ffff,0xc6000000-0xc6ffffff irq 16 at device 0.0 on pci5
+vgapci0: Boot video device
+pcib8: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci6: <ACPI PCI bus> on pcib8
+igb2: <Intel(R) PRO/1000 I210_COPPER> port 0x5000-0x501f mem 0xc7880000-0xc7883fff,0xc7800000-0xc787ffff irq 18 at device 0.0 on pci6
+igb2: MAC address: XXX
+pcib9: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci7: <ACPI PCI bus> on pcib9
+igb3: <Intel(R) PRO/1000 I210_COPPER> port 0x4000-0x401f mem 0xc7780000-0xc7783fff,0xc7700000-0xc777ffff irq 19 at device 0.0 on pci7
+igb3: MAC address: XXX
+ehci1: <Intel Wellsburg USB 2.0 controller> mem 0xc7933000-0xc79333ff irq 18 at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci1: <AHCI-PCI-SATA> port 0x7000-0x701f,0x7040-0x7043,0x7050-0x7057,0x7060-0x7063,0x7070-0x7077 mem 0xc7932000-0xc79327ff irq 16 at device 31.2 on pci0
+ahci1: AHCI 1.3 cap 0xc730ff45<S64A,NCQ,SALP,SAL,SCLO,PMD,SSC,PSC,EMS> cap2 0x4<APST>, 6 ports, 32 tags/port, gen 3 (6Gbps)
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 21 ports with 21 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+ugen1.2: <vendor 0x8087> at usbus1
+uhub3: <vendor 0x8087 product 0x800a, class 9/0, rev 2.00/0.05, addr 2> on usbus1
+ugen2.2: <vendor 0x8087> at usbus2
+uhub4: <vendor 0x8087 product 0x8002, class 9/0, rev 2.00/0.05, addr 2> on usbus2
+uhub3: 6 ports with 6 removable, self powered
+uhub4: 8 ports with 8 removable, self powered
+ugen2.3: <vendor 0x0557> at usbus2
+uhub5: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 3> on usbus2
+uhub5: 4 ports with 3 removable, self powered
+ugen2.4: <vendor 0x0557> at usbus2
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 4> on usbus2
+kbd2 at ukbd0
+ahci1.0: Found SSD "CT500MX500SSD1 M3CR023" serial=...
+ahci1.0: tags=32/32 satacap=850e satacap2=0086 satafea=014c NCQ=YES capacity=476940.02MB
+ahci1.0: f85=7069 f86=b409 f87=4163 WC=enabled RA=enabled SEC=frozen
+ahci1.1: Found SSD "CT1000MX500SSD1 M3CR023" serial=...
+ahci1.1: tags=32/32 satacap=850e satacap2=0086 satafea=014c NCQ=YES capacity=953869.71MB
+ahci1.1: f85=7069 f86=b409 f87=4163 WC=enabled RA=enabled SEC=frozen
+ahci1.2: Found SSD "Samsung SSD 860 EVO 2TB RVT03B6Q" serial=...
+ahci1.2: tags=32/32 satacap=850e satacap2=00c6 satafea=016c NCQ=YES capacity=1907729.08MB
+ahci1.2: f85=7469 f86=bc01 f87=4163 WC=enabled RA=enabled SEC=frozen
+ahci1.3: No device detected
+pci0: <serial bus, SMBus> (vendor 0x8086, dev 0x8d22) at device 31.3 irq 18
+pcib10: <ACPI Host-PCI bridge> on acpi0
+pci128: <ACPI PCI bus> on pcib10
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f20) at device 4.0 irq 55
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f21) at device 4.1 irq 63
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f22) at device 4.2 irq 55
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f23) at device 4.3 irq 63
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f24) at device 4.4 irq 55
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f25) at device 4.5 irq 63
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f26) at device 4.6 irq 55
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f27) at device 4.7 irq 63
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f28) at device 5.0
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f29) at device 5.1
+pci128: <base peripheral> (vendor 0x8086, dev 0x6f2a) at device 5.2
+pci128: <base peripheral, interrupt controller> (vendor 0x8086, dev 0x6f2c) at device 5.4
+sio0: <16550A-compatible COM port> port 0x3f8-0x3ff irq 4 on acpi0
+sio0: type 16550A
+sio1: <16550A-compatible COM port> port 0x2f8-0x2ff irq 3 on acpi0
+sio1: type 16550A, console
+ACPI: Enabled 2 GPEs in block 00 to 3F
+aesni0: <AES-CBC,AES-XTS> on motherboard
+padlock0: No ACE support.
+rdrand0: <RdRand RNG> on motherboard
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8000-0xc8fff on isa0
+hpt27xx: no controller detected.
+CAM: Configuring 10 busses
+CAM: finished configuring all busses
+da0 at ahci1 bus 0 target 0 lun 0
+da0: <SATA CT500MX500SSD1 M3CR> Fixed Direct Access SCSI-4 device 
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: 476940MB (976773168 512 byte sectors: 255H 63S/T 60801C)
+da0: supports TRIM
+da1 at ahci1 bus 1 target 0 lun 0
+da1: <SATA CT1000MX500SSD1 M3CR> Fixed Direct Access SCSI-4 device 
+da1: Serial Number...
+da1: 600.000MB/s transfers
+da1: 953869MB (1953525168 512 byte sectors: 255H 63S/T 121601C)
+da1: supports TRIM
+da2 at ahci1 bus 2 target 0 lun 0
+da2: <SATA Samsung SSD 860 RVT0> Fixed Direct Access SCSI-4 device 
+da2: Serial Number...
+da2: 600.000MB/s transfers
+da2: 1907729MB (3907029168 512 byte sectors: 255H 63S/T 243201C)
+da2: supports TRIM
+Mounting root from hammer2:serno/XXXXXXXXXXXXXXXX
+hammer2_mount: root devstr="serno/XXXXXXXXXXXXXXXX"
+hammer2_mount: dev="serno/XXXXXXXXXXXXXXXX" label="ROOT" rdonly=1
+hammer2_ondisk: "/dev/serno/XXXXXXXXXXXXXXXX" zone=3 id=0 offset=0x0000000000000000 size=0x0000006420800000
+hammer2_mount: hmp=0xfffff8084e400000 pmp=0xfffff8084705e600
+DMA space used: 14308k, remaining available: 131072k
+Mounting devfs
+hammer2_mount: "serno/XXXXXXXXXXXXXXXX": no recovery needed
+hammer2: enable read/write
+reconnect to cluster: nc=1 focus=0
+not a local device mount
+hammer2_mount: devstr="/dev/serno/XXXXXXXXXXXXXXXXXXXXX"
+hammer2_mount: dev="/dev/serno/XXXXXXXXXXXXXXXX" label="DATA" rdonly=0
+hammer2_ondisk: "/dev/serno/XXXXXXXXXXXXXXXX" zone=1 id=0 offset=0x0000000000000000 size=0x000000d0d0800000
+hammer2_mount: "/dev/serno/XXXXXXXXXXXXXXXX": no recovery needed
+hammer2_mount: hmp=0xfffff8192c020000 pmp=0xfffff8192c698e00
+hammer2_mount: devstr="/dev/serno/XXXXXXXXXXXXXXXXXXXXXXXX"
+hammer2_mount: dev="/dev/serno/XXXXXXXXXXXXXXXXXXX" label="DATA" rdonly=0
+hammer2_ondisk: "/dev/serno/XXXXXXXXXXXXXXXXXXX" zone=2 id=0 offset=0x0000000000000000 size=0x000001c170800000
+hammer2_mount: "/dev/serno/XXXXXXXXXXXXXXXXXXX": no recovery needed
+hammer2_mount: hmp=0xfffff8192d974000 pmp=0xfffff8192c69d000
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 4> on usbus2
+ums0: 3 buttons and [Z] coordinates ID=0
+swap low/high-water marks set to 671086/1006629
+swap low/high-water marks set to 1342172/2013258
+swap low/high-water marks set to 2013258/3019887

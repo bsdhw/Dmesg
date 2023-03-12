@@ -1,0 +1,1019 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p5 stable/22.7-n250270-9d1c26e8548 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 1024x768
+CPU: 11th Gen Intel(R) Core(TM) i5-11600K @ 3.90GHz (3912.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0xa0671  Family=0x6  Model=0xa7  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0xf2bf67eb<FSGSBASE,TSCADJ,BMI1,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PROCTRACE,AVX512CD,SHA,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x405f4e<AVX512VBMI,UMIP,PKU,AVX512VBMI2,GFNI,VAES,VPCLMULQDQ,AVX512VNNI,AVX512BITALG,AVX512VPOPCNTDQ,RDPID>
+  Structured Extended Features3=0xbc000410<FSRM,MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16345784320 (15588 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 6 CPUs
+FreeBSD/SMP: 1 package(s) x 6 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 3 2 4 5
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x95c60000-0x95c6001e
+smbios0: Version: 3.3, BCD Revision: 3.3
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+Firmware Error (ACPI): Could not resolve symbol [\134TBTS], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Skipping While/If block (20201113/psloop-569)
+Firmware Error (ACPI): Could not resolve symbol [\134TBTS], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Skipping While/If block (20201113/psloop-569)
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x16> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <network, ethernet> at device 0.0 (no driver attached)
+pci1: <network, ethernet> at device 0.1 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> at device 2.0 on pci3
+pci4: <PCI bus> on pcib4
+em0: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x4020-0x403f mem 0xa3e20000-0xa3e3ffff,0xa3d80000-0xa3dfffff at device 0.0 on pci4
+em0: EEPROM V5.12-2
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x4000-0x401f mem 0xa3e00000-0xa3e1ffff,0xa3d00000-0xa3d7ffff at device 0.1 on pci4
+em1: EEPROM V5.12-2
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib5: <PCI-PCI bridge> at device 4.0 on pci3
+pci5: <PCI bus> on pcib5
+em2: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x3020-0x303f mem 0xa3c20000-0xa3c3ffff,0xa3b80000-0xa3bfffff at device 0.0 on pci5
+em2: EEPROM V5.12-2
+em2: Using 1024 TX descriptors and 1024 RX descriptors
+em2: Using an MSI interrupt
+em2: Ethernet address: ...
+em2: netmap queues/slots: TX 1/1024, RX 1/1024
+em3: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x3000-0x301f mem 0xa3c00000-0xa3c1ffff,0xa3b00000-0xa3b7ffff at device 0.1 on pci5
+em3: EEPROM V5.12-2
+em3: Using 1024 TX descriptors and 1024 RX descriptors
+em3: Using an MSI interrupt
+em3: Ethernet address: ...
+em3: netmap queues/slots: TX 1/1024, RX 1/1024
+vgapci0: <VGA-compatible display> port 0x8000-0x803f mem 0x6000000000-0x6000ffffff,0x4000000000-0x400fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Tiger Lake-H USB 3.2 controller> mem 0x6001000000-0x600100ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x8090-0x8097,0x8080-0x8083,0x8060-0x807f mem 0xa4000000-0xa4001fff,0xa4003000-0xa40030ff,0xa4002000-0xa40027ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib6: <ACPI PCI-PCI bridge> at device 27.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 27.3 on pci0
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci8: <ACPI PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pci9: <network, ethernet> at device 0.0 (no driver attached)
+pci9: <network, ethernet> at device 0.1 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: console (115200,n,8,1)
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+Timecounter "TSC-low" frequency 1956007491 Hz quality 1000
+Timecounters tick every 1.000 msec
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus6 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 850 EVO 120GB EMT02B6Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ses0: pass0,ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+Root mount waiting for: usbus0
+uhub0: 25 ports with 25 removable, self powered
+ugen0.2: <AsusTek Computer Inc. AURA LED Controller> at usbus0
+ugen0.3: <ASUS TEK. ASM107x> at usbus0
+uhub1 on uhub0
+uhub1: <ASUS TEK. ASM107x, class 9/0, rev 2.10/0.01, addr 2> on usbus0
+Root mount waiting for:uhub1: MTT enabled
+ usbus0
+uhub1: 4 ports with 4 removable, self powered
+ugen0.4: <Corsair Corsair K95 RGB Gaming Keyboard> at usbus0
+ukbd0 on uhub1
+ukbd0: <Corsair Corsair K95 RGB Gaming Keyboard, class 0/0, rev 2.00/2.05, addr 3> on usbus0
+kbd1 at ukbd0
+Root mount waiting for: usbus0
+ugen0.5: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/60.60, addr 4> on usbus0
+uhub2: MTT enabled
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+ugen0.6: <ASUS TEK. ASM107x> at usbus0
+uhub3 on uhub0
+uhub3: <ASUS TEK. ASM107x, class 9/0, rev 3.00/0.01, addr 5> on usbus0
+Root mount waiting for: usbus0
+uhub3: 4 ports with 4 removable, self powered
+em0: link state changed to UP
+em1: link state changed to UP
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134AWW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134ATW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134ABAW.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134RMTW.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134_SB.WFDE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi5: <ACPI-WMI mapping> on acpi0
+acpi_wmi5: Embedded MOF found
+ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi6: <ACPI-WMI mapping> on acpi0
+acpi_wmi6: Embedded MOF found
+ACPI: \134_SB.ATKD.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+ig4iic0: <Intel Tiger Lake-H I2C Controller-1> at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+ig4iic1: <Intel Tiger Lake-H I2C Controller-2> at device 21.1 on pci0
+ig4iic1: Using MSI
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+ichsmb0: <Intel Tiger Lake SMBus controller> port 0xefa0-0xefbf mem 0x6001014000-0x60010140ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+uhid0 on uhub0
+uhid0: <AsusTek Computer Inc. AURA LED Controller, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+lo0: link state changed to UP
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+em0: link state changed to DOWN
+em1: link state changed to DOWN
+pflog0: permanently promiscuous mode enabled
+tun1: changing name to 'ovpns1'
+em0: link state changed to UP
+em0: link state changed to DOWN
+em1: link state changed to UP
+em0: link state changed to UP
+ovpns1: link state changed to UP
+em0: link state changed to DOWN
+em1: link state changed to DOWN
+em0: link state changed to UP
+em1: link state changed to UP
+uhub_reattach_port: port 22 U1 timeout failed, error=USB_ERR_IOERROR
+uhub_reattach_port: port 22 U2 timeout failed, error=USB_ERR_IOERROR
+usb_msc_auto_quirk: UQ_MSC_NO_GETMAXLUN set for USB mass storage device Samsung PSSD T7 Touch (0x04e8:0x4001)
+ugen0.7: <Samsung PSSD T7 Touch> at usbus0
+umass0 on uhub0
+umass0: <Samsung PSSD T7 Touch, class 0/0, rev 3.20/1.00, addr 6> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x0100
+umass0:7:0: Attached to scbus7
+da0 at umass-sim0 bus 0 scbus7 target 0 lun 0
+da0: <Samsung PSSD T7 Touch 0> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 476940MB (976773168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+ovpns1: link state changed to DOWN
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248059-267a40127d5 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 1024x768
+CPU: 11th Gen Intel(R) Core(TM) i5-11600K @ 3.90GHz (3912.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0xa0671  Family=0x6  Model=0xa7  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0xf2bf67eb<FSGSBASE,TSCADJ,BMI1,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PROCTRACE,AVX512CD,SHA,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x405f4e<AVX512VBMI,UMIP,PKU,AVX512VBMI2,GFNI,VAES,VPCLMULQDQ,AVX512VNNI,AVX512BITALG,AVX512VPOPCNTDQ,RDPID>
+  Structured Extended Features3=0xbc000410<FSRM,MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16343711744 (15586 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 6 CPUs
+FreeBSD/SMP: 1 package(s) x 6 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 2 1 3 4 5
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+Firmware Error (ACPI): Could not resolve symbol [\134TBTS], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Skipping While/If block (20201113/psloop-569)
+Firmware Error (ACPI): Could not resolve symbol [\134TBTS], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Skipping While/If block (20201113/psloop-569)
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x16> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <network, ethernet> at device 0.0 (no driver attached)
+pci1: <network, ethernet> at device 0.1 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> at device 2.0 on pci3
+pci4: <PCI bus> on pcib4
+em0: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x4020-0x403f mem 0xa3e20000-0xa3e3ffff,0xa3d80000-0xa3dfffff at device 0.0 on pci4
+em0: EEPROM V5.12-2
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x4000-0x401f mem 0xa3e00000-0xa3e1ffff,0xa3d00000-0xa3d7ffff at device 0.1 on pci4
+em1: EEPROM V5.12-2
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib5: <PCI-PCI bridge> at device 4.0 on pci3
+pci5: <PCI bus> on pcib5
+em2: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x3020-0x303f mem 0xa3c20000-0xa3c3ffff,0xa3b80000-0xa3bfffff at device 0.0 on pci5
+em2: EEPROM V5.12-2
+em2: Using 1024 TX descriptors and 1024 RX descriptors
+em2: Using an MSI interrupt
+em2: Ethernet address: ...
+em2: netmap queues/slots: TX 1/1024, RX 1/1024
+em3: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x3000-0x301f mem 0xa3c00000-0xa3c1ffff,0xa3b00000-0xa3b7ffff at device 0.1 on pci5
+em3: EEPROM V5.12-2
+em3: Using 1024 TX descriptors and 1024 RX descriptors
+em3: Using an MSI interrupt
+em3: Ethernet address: ...
+em3: netmap queues/slots: TX 1/1024, RX 1/1024
+vgapci0: <VGA-compatible display> port 0x8000-0x803f mem 0x6000000000-0x6000ffffff,0x4000000000-0x400fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Tiger Lake-H USB 3.2 controller> mem 0x6001000000-0x600100ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x8090-0x8097,0x8080-0x8083,0x8060-0x807f mem 0xa4000000-0xa4001fff,0xa4003000-0xa40030ff,0xa4002000-0xa40027ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib6: <ACPI PCI-PCI bridge> at device 27.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 27.3 on pci0
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci8: <ACPI PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pci9: <network, ethernet> at device 0.0 (no driver attached)
+pci9: <network, ethernet> at device 0.1 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: console (115200,n,8,1)
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+Timecounter "TSC-low" frequency 1955999333 Hz quality 1000
+Timecounters tick every 1.000 msec
+Trying to mount root from cd9660:/dev/iso9660/OPNSENSE_INSTALL [ro]...
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+Root mount waiting for: usbus0 CAM
+uhub0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+Root mount waiting for: usbus0 CAM
+uhub0: 25 ports with 25 removable, self powered
+ugen0.2: <AsusTek Computer Inc. AURA LED Controller> at usbus0
+Root mount waiting for: usbus0 CAM
+ugen0.3: <ASUS TEK. ASM107x> at usbus0
+uhub1 on uhub0
+uhub1: <ASUS TEK. ASM107x, class 9/0, rev 2.10/0.01, addr 2> on usbus0
+uhub1: MTT enabled
+uhub1: 4 ports with 4 removable, self powered
+ugen0.4: <Corsair Corsair K95 RGB Gaming Keyboard> at usbus0
+ukbd0 on uhub1
+ukbd0: <Corsair Corsair K95 RGB Gaming Keyboard, class 0/0, rev 2.00/2.05, addr 3> on usbus0
+kbd1 at ukbd0
+Root mount waiting for: usbus0 CAM
+ugen0.5: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/60.60, addr 4> on usbus0
+uhub2: MTT enabled
+Root mount waiting for: usbus0 CAM
+uhub2: 4 ports with 4 removable, self powered
+uhub_reattach_port: port 22 U1 timeout failed, error=USB_ERR_IOERROR
+uhub_reattach_port: port 22 U2 timeout failed, error=USB_ERR_IOERROR
+Root mount waiting for: usbus0 CAM
+ugen0.6: <Samsung PSSD T7 Touch> at usbus0
+umass0 on uhub0
+umass0: <Samsung PSSD T7 Touch, class 0/0, rev 3.20/1.00, addr 5> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x0100
+umass0:7:0: Attached to scbus7
+Root mount waiting for: usbus0 CAM
+ugen0.7: <ASUS TEK. ASM107x> at usbus0
+uhub3 on uhub0
+uhub3: <ASUS TEK. ASM107x, class 9/0, rev 3.00/0.01, addr 6> on usbus0
+uhub3: 4 ports with 4 removable, self powered
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+ses0 at ahciem0 bus 0 scbus6 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 850 EVO 120GB EMT02B6Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ses0: pass0,ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+da0 at umass-sim0 bus 0 scbus7 target 0 lun 0
+da0: <Samsung PSSD T7 Touch 0> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 476940MB (976773168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+mountroot: waiting for device /dev/iso9660/OPNSENSE_INSTALL...
+em0: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from em0 (ifp 0xfffff80001f64000), ignoring.
+em1: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from em1 (ifp 0xfffff8000200b800), ignoring.
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134AWW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134ATW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134ABAW.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134RMTW.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134_SB.WFDE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi5: <ACPI-WMI mapping> on acpi0
+acpi_wmi5: Embedded MOF found
+ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi6: <ACPI-WMI mapping> on acpi0
+acpi_wmi6: Embedded MOF found
+ACPI: \134_SB.ATKD.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+ig4iic0: <Intel Tiger Lake-H I2C Controller-1> at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+ig4iic1: <Intel Tiger Lake-H I2C Controller-2> at device 21.1 on pci0
+ig4iic1: Using MSI
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+ichsmb0: <Intel Tiger Lake SMBus controller> port 0xefa0-0xefbf mem 0x6001014000-0x60010140ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+uhid0 on uhub0
+uhid0: <AsusTek Computer Inc. AURA LED Controller, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+em0: link state changed to DOWN
+em1: link state changed to DOWN
+em0: link state changed to UP
+em1: link state changed to UP
+lo0: link state changed to UP
+em0: link state changed to DOWN
+em1: link state changed to DOWN
+em0: link state changed to UP
+em1: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+All buffers synced.
+Uptime: 5m28s
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248059-267a40127d5 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 1024x768
+CPU: 11th Gen Intel(R) Core(TM) i5-11600K @ 3.90GHz (3912.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0xa0671  Family=0x6  Model=0xa7  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0xf2bf67eb<FSGSBASE,TSCADJ,BMI1,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PROCTRACE,AVX512CD,SHA,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x405f4e<AVX512VBMI,UMIP,PKU,AVX512VBMI2,GFNI,VAES,VPCLMULQDQ,AVX512VNNI,AVX512BITALG,AVX512VPOPCNTDQ,RDPID>
+  Structured Extended Features3=0xbc000410<FSRM,MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16339505152 (15582 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 6 CPUs
+FreeBSD/SMP: 1 package(s) x 6 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 2 3 4 5 1
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd0 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+Firmware Error (ACPI): Could not resolve symbol [\134TBTS], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Skipping While/If block (20201113/psloop-569)
+Firmware Error (ACPI): Could not resolve symbol [\134TBTS], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Skipping While/If block (20201113/psloop-569)
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x16> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <network, ethernet> at device 0.0 (no driver attached)
+pci1: <network, ethernet> at device 0.1 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> at device 2.0 on pci3
+pci4: <PCI bus> on pcib4
+em0: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x4020-0x403f mem 0xa3e20000-0xa3e3ffff,0xa3d80000-0xa3dfffff at device 0.0 on pci4
+em0: EEPROM V5.12-2
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x4000-0x401f mem 0xa3e00000-0xa3e1ffff,0xa3d00000-0xa3d7ffff at device 0.1 on pci4
+em1: EEPROM V5.12-2
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib5: <PCI-PCI bridge> at device 4.0 on pci3
+pci5: <PCI bus> on pcib5
+em2: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x3020-0x303f mem 0xa3c20000-0xa3c3ffff,0xa3b80000-0xa3bfffff at device 0.0 on pci5
+em2: EEPROM V5.12-2
+em2: Using 1024 TX descriptors and 1024 RX descriptors
+em2: Using an MSI interrupt
+em2: Ethernet address: ...
+em2: netmap queues/slots: TX 1/1024, RX 1/1024
+em3: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x3000-0x301f mem 0xa3c00000-0xa3c1ffff,0xa3b00000-0xa3b7ffff at device 0.1 on pci5
+em3: EEPROM V5.12-2
+em3: Using 1024 TX descriptors and 1024 RX descriptors
+em3: Using an MSI interrupt
+em3: Ethernet address: ...
+em3: netmap queues/slots: TX 1/1024, RX 1/1024
+vgapci0: <VGA-compatible display> port 0x8000-0x803f mem 0x6000000000-0x6000ffffff,0x4000000000-0x400fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Tiger Lake-H USB 3.2 controller> mem 0x6001000000-0x600100ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x8090-0x8097,0x8080-0x8083,0x8060-0x807f mem 0xa4000000-0xa4001fff,0xa4003000-0xa40030ff,0xa4002000-0xa40027ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib6: <ACPI PCI-PCI bridge> at device 27.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 27.3 on pci0
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci8: <ACPI PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pci9: <network, ethernet> at device 0.0 (no driver attached)
+pci9: <network, ethernet> at device 0.1 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: console (115200,n,8,1)
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+Timecounter "TSC-low" frequency 1956000593 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 CAM
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus6 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 850 EVO 120GB EMT02B6Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ses0: ada0,pass0 in 'Slot 00', SATA Slot: scbus0 target 0
+Root mount waiting for: usbus0
+uhub0: 25 ports with 25 removable, self powered
+ugen0.2: <AsusTek Computer Inc. AURA LED Controller> at usbus0
+ugen0.3: <ASUS TEK. ASM107x> at usbus0
+uhub1 on uhub0
+uhub1: <ASUS TEK. ASM107x, class 9/0, rev 2.10/0.01, addr 2> on usbus0
+uhub1: MTT enabled
+Root mount waiting for: usbus0
+uhub1: 4 ports with 4 removable, self powered
+ugen0.4: <Corsair Corsair K95 RGB Gaming Keyboard> at usbus0
+ukbd0 on uhub1
+ukbd0: <Corsair Corsair K95 RGB Gaming Keyboard, class 0/0, rev 2.00/2.05, addr 3> on usbus0
+kbd1 at ukbd0
+Root mount waiting for: usbus0
+ugen0.5: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/60.60, addr 4> on usbus0
+uhub2: MTT enabled
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+uhub_reattach_port: port 22 U1 timeout failed, error=USB_ERR_IOERROR
+uhub_reattach_port: port 22 U2 timeout failed, error=USB_ERR_IOERROR
+Root mount waiting for: usbus0
+ugen0.6: <Samsung PSSD T7 Touch> at usbus0
+umass0 on uhub0
+umass0: <Samsung PSSD T7 Touch, class 0/0, rev 3.20/1.00, addr 5> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x0100
+umass0:7:0: Attached to scbus7
+da0 at umass-sim0 bus 0 scbus7 target 0 lun 0
+da0: <Samsung PSSD T7 Touch 0> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 476940MB (976773168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+ugen0.7: <ASUS TEK. ASM107x> at usbus0
+uhub3 on uhub0
+uhub3: <ASUS TEK. ASM107x, class 9/0, rev 3.00/0.01, addr 6> on usbus0
+Root mount waiting for: usbus0
+uhub3: 4 ports with 4 removable, self powered
+em0: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from em0 (ifp 0xfffff80001f62000), ignoring.
+em1: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from em1 (ifp 0xfffff80002008800), ignoring.
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134AWW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134ATW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134ABAW.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134RMTW.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134_SB.WFDE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi5: <ACPI-WMI mapping> on acpi0
+acpi_wmi5: Embedded MOF found
+ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi6: <ACPI-WMI mapping> on acpi0
+acpi_wmi6: Embedded MOF found
+ACPI: \134_SB.ATKD.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+ig4iic0: <Intel Tiger Lake-H I2C Controller-1> at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+ig4iic1: <Intel Tiger Lake-H I2C Controller-2> at device 21.1 on pci0
+ig4iic1: Using MSI
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+ichsmb0: <Intel Tiger Lake SMBus controller> port 0xefa0-0xefbf mem 0x6001014000-0x60010140ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+uhid0 on uhub0
+uhid0: <AsusTek Computer Inc. AURA LED Controller, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+lo0: link state changed to UP
+em0: link state changed to DOWN
+em1: link state changed to DOWN
+em0: link state changed to UP
+em1: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em0: link state changed to UP
+em0: link state changed to DOWN
+em3: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from em3 (ifp 0xfffff80002154800), ignoring.
+em0: link state changed to UP
+em1: link state changed to DOWN
+em2: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from em2 (ifp 0xfffff800020b1800), ignoring.
+em1: link state changed to UP
+em0: link state changed to DOWN
+em1: link state changed to DOWN
+em0: link state changed to UP
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+em1: link state changed to DOWN
+em1: link state changed to UP
+cannot forward src fe80:XXXX::XXX:XXX:XXX:XXX, dst XXX:XXX:XXX:XXX::XXX, nxt 58, rcvif em0, outif em1
+cannot forward src fe80:XXXX::XXX:XXX:XXX:XXX, dst XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX, nxt 58, rcvif em0, outif em1
+cannot forward src fe80:XXXX::XXX:XXX:XXX:XXX, dst XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX, nxt 58, rcvif em0, outif em1
+cannot forward src fe80:XXXX::XXX:XXX:XXX:XXX, dst XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX, nxt 58, rcvif em0, outif em1
+cannot forward src fe80:XXXX::XXX:XXX:XXX:XXX, dst XXX:XXX:XXX:XXX::XXX, nxt 58, rcvif em0, outif em1
+cannot forward src fe80:XXXX::XXX:XXX:XXX:XXX, dst XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX, nxt 58, rcvif em0, outif em1
+cannot forward src fe80:XXXX::XXX:XXX:XXX:XXX, dst XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX, nxt 58, rcvif em0, outif em1
+pid 21736 (sh), jid 0, uid 0: exited on signal 10 (core dumped)
+pid 21862 (sh), jid 0, uid 0: exited on signal 10 (core dumped)
+pid 23570 (gzip), jid 0, uid 0: exited on signal 10 (core dumped)
+pid 23734 (sh), jid 0, uid 0: exited on signal 10 (core dumped)
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... 
+cannot forward src fe80:XXXX::XXX:XXX:XXX:XXX, dst XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX, nxt 58, rcvif em0, outif em1
+done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+All buffers synced.
+Uptime: 58m44s
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248088-47fa565344c SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 1024x768
+CPU: 11th Gen Intel(R) Core(TM) i5-11600K @ 3.90GHz (3912.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0xa0671  Family=0x6  Model=0xa7  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0xf2bf67eb<FSGSBASE,TSCADJ,BMI1,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,PROCTRACE,AVX512CD,SHA,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x405f4e<AVX512VBMI,UMIP,PKU,AVX512VBMI2,GFNI,VAES,VPCLMULQDQ,AVX512VNNI,AVX512BITALG,AVX512VPOPCNTDQ,RDPID>
+  Structured Extended Features3=0xbc000410<FSRM,MD_CLEAR,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16339509248 (15582 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 6 CPUs
+FreeBSD/SMP: 1 package(s) x 6 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 5 2 3 4
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd0 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+Firmware Error (ACPI): Could not resolve symbol [\134TBTS], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Skipping While/If block (20201113/psloop-569)
+Firmware Error (ACPI): Could not resolve symbol [\134TBTS], AE_NOT_FOUND (20201113/psargs-503)
+ACPI Error: Skipping While/If block (20201113/psloop-569)
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x16> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <network, ethernet> at device 0.0 (no driver attached)
+pci1: <network, ethernet> at device 0.1 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> at device 2.0 on pci3
+pci4: <PCI bus> on pcib4
+em0: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x4020-0x403f mem 0xa3e20000-0xa3e3ffff,0xa3d80000-0xa3dfffff at device 0.0 on pci4
+em0: EEPROM V5.12-2
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+em1: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x4000-0x401f mem 0xa3e00000-0xa3e1ffff,0xa3d00000-0xa3d7ffff at device 0.1 on pci4
+em1: EEPROM V5.12-2
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using an MSI interrupt
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 1/1024, RX 1/1024
+pcib5: <PCI-PCI bridge> at device 4.0 on pci3
+pci5: <PCI bus> on pcib5
+em2: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x3020-0x303f mem 0xa3c20000-0xa3c3ffff,0xa3b80000-0xa3bfffff at device 0.0 on pci5
+em2: EEPROM V5.12-2
+em2: Using 1024 TX descriptors and 1024 RX descriptors
+em2: Using an MSI interrupt
+em2: Ethernet address: ...
+em2: netmap queues/slots: TX 1/1024, RX 1/1024
+em3: <Intel(R) PRO/1000 PT 82571EB/82571GB (Quad Copper)> port 0x3000-0x301f mem 0xa3c00000-0xa3c1ffff,0xa3b00000-0xa3b7ffff at device 0.1 on pci5
+em3: EEPROM V5.12-2
+em3: Using 1024 TX descriptors and 1024 RX descriptors
+em3: Using an MSI interrupt
+em3: Ethernet address: ...
+em3: netmap queues/slots: TX 1/1024, RX 1/1024
+vgapci0: <VGA-compatible display> port 0x8000-0x803f mem 0x6000000000-0x6000ffffff,0x4000000000-0x400fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Tiger Lake-H USB 3.2 controller> mem 0x6001000000-0x600100ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <AHCI SATA controller> port 0x8090-0x8097,0x8080-0x8083,0x8060-0x807f mem 0xa4000000-0xa4001fff,0xa4003000-0xa40030ff,0xa4002000-0xa40027ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib6: <ACPI PCI-PCI bridge> at device 27.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 27.3 on pci0
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci8: <ACPI PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pci9: <network, ethernet> at device 0.0 (no driver attached)
+pci9: <network, ethernet> at device 0.1 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: console (115200,n,8,1)
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+Timecounter "TSC-low" frequency 1956000412 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus0 CAM
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0: (none) in 'Slot 00', SATA Slot: scbus0 target 0
+ses0 at ahciem0 bus 0 scbus6 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 850 EVO 120GB EMT02B6Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+Root mount waiting for: usbus0
+uhub0: 25 ports with 25 removable, self powered
+ugen0.2: <AsusTek Computer Inc. AURA LED Controller> at usbus0
+Root mount waiting for: usbus0
+ugen0.3: <ASUS TEK. ASM107x> at usbus0
+uhub1 on uhub0
+uhub1: <ASUS TEK. ASM107x, class 9/0, rev 2.10/0.01, addr 2> on usbus0
+uhub1: MTT enabled
+uhub1: 4 ports with 4 removable, self powered
+ugen0.4: <Corsair Corsair K95 RGB Gaming Keyboard> at usbus0
+ukbd0 on uhub1
+ukbd0: <Corsair Corsair K95 RGB Gaming Keyboard, class 0/0, rev 2.00/2.05, addr 3> on usbus0
+kbd1 at ukbd0
+Root mount waiting for: usbus0
+ugen0.5: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub2 on uhub0
+uhub2: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/60.60, addr 4> on usbus0
+uhub2: MTT enabled
+uhub2: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+uhub_reattach_port: port 22 U1 timeout failed, error=USB_ERR_IOERROR
+uhub_reattach_port: port 22 U2 timeout failed, error=USB_ERR_IOERROR
+Root mount waiting for: usbus0
+ugen0.6: <Samsung PSSD T7 Touch> at usbus0
+umass0 on uhub0
+umass0: <Samsung PSSD T7 Touch, class 0/0, rev 3.20/1.00, addr 5> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x0100
+umass0:7:0: Attached to scbus7
+da0 at umass-sim0 bus 0 scbus7 target 0 lun 0
+da0: <Samsung PSSD T7 Touch 0> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 476940MB (976773168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+ugen0.7: <ASUS TEK. ASM107x> at usbus0
+uhub3 on uhub0
+uhub3: <ASUS TEK. ASM107x, class 9/0, rev 3.00/0.01, addr 6> on usbus0
+Root mount waiting for: usbus0
+uhub3: 4 ports with 4 removable, self powered

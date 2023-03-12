@@ -1,0 +1,383 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p3 GENERIC amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 800x600
+CPU: Intel(R) Xeon(R) CPU E5-2697 v2 @ 2.70GHz (2700.07-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306e4  Family=0x6  Model=0x3e  Stepping=4
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbee3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,DCA,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  Structured Extended Features3=0x9c000400<MD_CLEAR,IBPB,STIBP,L1DFL,SSBD>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 68719476736 (65536 MB)
+avail memory = 66776002560 (63682 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 48 CPUs
+FreeBSD/SMP: 2 package(s) x 12 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+ioapic1 <Version 2.0> irqs 24-47
+ioapic2 <Version 2.0> irqs 48-71
+Launching APs: 44 32 42 11 9 8 6 20 28 40 43 12 29 4 2 39 46 24 38 16 17 41 47 34 3 18 10 33 45 23 36 7 25 31 35 15 22 14 5 30 37 19 21 26 13 1 27
+Cuse v0.1.36 @ /dev/cuse
+random: entropy device external interface
+kbd0 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0xf04d0-0xf04ee
+smbios0: Version: 2.7, BCD Revision: 2.7
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> numa-domain 0 on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Event timer "HPET4" frequency 14318180 Hz quality 340
+Event timer "HPET5" frequency 14318180 Hz quality 340
+Event timer "HPET6" frequency 14318180 Hz quality 340
+Event timer "HPET7" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 26 at device 1.0 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 26 at device 1.1 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+igb0: <Intel(R) I350 (Copper)> port 0x8020-0x803f mem 0xdfe20000-0xdfe3ffff,0xdfe44000-0xdfe47fff irq 27 at device 0.0 numa-domain 0 on pci2
+igb0: EEPROM V1.61-0 eTrack 0x8000090e
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 8 RX queues 8 TX queues
+igb0: Using MSI-X interrupts with 9 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 8/1024, RX 8/1024
+igb1: <Intel(R) I350 (Copper)> port 0x8000-0x801f mem 0xdfe00000-0xdfe1ffff,0xdfe40000-0xdfe43fff irq 30 at device 0.1 numa-domain 0 on pci2
+igb1: EEPROM V1.61-0 eTrack 0x8000090e
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 8 RX queues 8 TX queues
+igb1: Using MSI-X interrupts with 9 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 8/1024, RX 8/1024
+pcib3: <ACPI PCI-PCI bridge> irq 32 at device 2.0 numa-domain 0 on pci0
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+pci3: <network> at device 0.0 (no driver attached)
+pcib4: <ACPI PCI-PCI bridge> irq 41 at device 3.0 numa-domain 0 on pci0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+xhci0: <ASMedia ASM1042A USB 3.0 controller> mem 0xdfc00000-0xdfc07fff irq 40 at device 0.0 numa-domain 0 on pci4
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 numa-domain 0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib5: <ACPI PCI-PCI bridge> irq 16 at device 17.0 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+isci0: <Intel(R) C600 Series Chipset SAS Controller (SATA mode)> port 0x7000-0x70ff mem 0x380fffc7c000-0x380fffc7ffff,0x380fff800000-0x380fffbfffff irq 16 at device 0.0 numa-domain 0 on pci5
+pci0: <simple comms> at device 22.0 (no driver attached)
+pci0: <simple comms> at device 22.1 (no driver attached)
+ehci0: <Intel Patsburg USB 2.0 controller> mem 0xdff02000-0xdff023ff irq 16 at device 26.0 numa-domain 0 on pci0
+usbus1: EHCI version 1.0
+usbus1 numa-domain 0 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ehci1: <Intel Patsburg USB 2.0 controller> mem 0xdff01000-0xdff013ff irq 23 at device 29.0 numa-domain 0 on pci0
+usbus2: EHCI version 1.0
+usbus2 numa-domain 0 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+pcib6: <ACPI PCI-PCI bridge> at device 30.0 numa-domain 0 on pci0
+pci6: <ACPI PCI bus> numa-domain 0 on pcib6
+isab0: <PCI-ISA bridge> at device 31.0 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+ahci0: <Intel Patsburg AHCI SATA controller> port 0x9070-0x9077,0x9060-0x9063,0x9050-0x9057,0x9040-0x9043,0x9020-0x903f mem 0xdff00000-0xdff007ff irq 19 at device 31.2 numa-domain 0 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib7: <ACPI Host-PCI bridge> numa-domain 0 on acpi0
+pci7: <ACPI PCI bus> numa-domain 0 on pcib7
+pci7: <dasp, performance counters> at device 14.1 (no driver attached)
+pci7: <dasp, performance counters> at device 19.1 (no driver attached)
+pci7: <dasp, performance counters> at device 19.5 (no driver attached)
+pci7: <dasp, performance counters> at device 28.1 (no driver attached)
+pcib8: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci8: <ACPI PCI bus> numa-domain 1 on pcib8
+pcib9: <ACPI PCI-PCI bridge> at device 0.0 numa-domain 1 on pci8
+pci9: <ACPI PCI bus> numa-domain 1 on pcib9
+pcib10: <ACPI PCI-PCI bridge> irq 51 at device 1.0 numa-domain 1 on pci8
+pci10: <ACPI PCI bus> numa-domain 1 on pcib10
+pcib11: <ACPI PCI-PCI bridge> irq 57 at device 2.0 numa-domain 1 on pci8
+pci11: <ACPI PCI bus> numa-domain 1 on pcib11
+nvme0: <Generic NVMe Device> mem 0xfbe00000-0xfbe03fff irq 56 at device 0.0 numa-domain 1 on pci11
+pcib12: <ACPI PCI-PCI bridge> irq 65 at device 3.0 numa-domain 1 on pci8
+pci12: <ACPI PCI bus> numa-domain 1 on pcib12
+pcib13: <PCI-PCI bridge> mem 0xfbd00000-0xfbd03fff irq 64 at device 0.0 numa-domain 1 on pci12
+pci13: <PCI bus> numa-domain 1 on pcib13
+pcib14: <PCI-PCI bridge> irq 64 at device 0.0 numa-domain 1 on pci13
+pci14: <PCI bus> numa-domain 1 on pcib14
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0x381fe0000000-0x381fefffffff,0x381ff0000000-0x381ff01fffff,0xfbc00000-0xfbc7ffff irq 64 at device 0.0 numa-domain 1 on pci14
+hdac0: <ATI (0xaaf8) HDA Controller> mem 0xfbca0000-0xfbca3fff irq 68 at device 0.1 numa-domain 1 on pci14
+pcib15: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci15: <ACPI PCI bus> numa-domain 1 on pcib15
+pci15: <dasp, performance counters> at device 14.1 (no driver attached)
+pci15: <dasp, performance counters> at device 19.1 (no driver attached)
+pci15: <dasp, performance counters> at device 19.5 (no driver attached)
+pci15: <dasp, performance counters> at device 28.1 (no driver attached)
+acpi_button0: <Power Button> on acpi0
+apei0: <ACPI Platform Error Interface> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+coretemp0: <CPU On-Die Thermal Sensors> numa-domain 0 on cpu0
+est0: <Enhanced SpeedStep Frequency Control> numa-domain 0 on cpu0
+Timecounter "TSC-low" frequency 1349999717 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen0.1: <(0x1b21) XHCI root HUB> at usbus0
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen2.1: <Intel EHCI root HUB> at usbus2
+uhub0 numa-domain 0 on usbus0
+uhub0: <(0x1b21) XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1 numa-domain 0 on usbus2
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub2 numa-domain 0 on usbus1
+uhub2: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+nvme0: Allocated 64MB host memory buffer
+nvd0: <Samsung SSD 980 1TB> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+pcm4: <ATI R6xx (HDMI)> at nid 11 on hdaa0
+pcm5: <ATI R6xx (HDMI)> at nid 13 on hdaa0
+ses0 at ahciem0 bus 0 scbus7 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+Trying to mount root from zfs:zroot/ROOT/default []...
+uhub0: 4 ports with 4 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+ugen0.2: <ASUSTeK Xonar SoundCard> at usbus0
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub3 numa-domain 0 on uhub2
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen2.2: <vendor 0x8087 product 0x0024> at usbus2
+uhub4 numa-domain 0 on uhub1
+uhub4: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus2
+Root mount waiting for: usbus1 usbus2
+uhub3: 6 ports with 6 removable, self powered
+uhub4: 8 ports with 8 removable, self powered
+ugen1.3: <vendor 0x8087 product 0x0a2b> at usbus1
+Root mount waiting for: usbus1 usbus2
+ugen2.3: <Chicony HP Elite USB Keyboard> at usbus2
+ukbd0 numa-domain 0 on uhub4
+ukbd0: <Chicony HP Elite USB Keyboard, class 0/0, rev 1.10/1.21, addr 3> on usbus2
+kbd1 at ukbd0
+ugen1.4: <Logitech USB Receiver> at usbus1
+ukbd1 numa-domain 0 on uhub3
+ukbd1: <Logitech USB Receiver, class 0/0, rev 2.00/24.11, addr 4> on usbus1
+kbd2 at ukbd1
+ugen1.5: <Winbond Electronics Corp Hermon USB hidmouse Device> at usbus1
+ukbd2 numa-domain 0 on uhub3
+ukbd2: <Winbond Electronics Corp Hermon USB hidmouse Device, class 0/0, rev 1.10/0.01, addr 5> on usbus1
+kbd3 at ukbd2
+Dual Console: Video Primary, Serial Secondary
+[drm] amdgpu kernel modesetting enabled.
+drmn0: <drmn> numa-domain 1 on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] initializing kernel modesetting (VEGA10 0x1002:0x687F 0x1002:0x6B76 0xC1).
+drmn0: Trusted Memory Zone (TMZ) feature not supported
+[drm] register mmio base: 0xFBC00000
+[drm] register mmio size: 524288
+[drm] add ip block number 0 <soc15_common>
+[drm] add ip block number 1 <gmc_v9_0>
+[drm] add ip block number 2 <vega10_ih>
+[drm] add ip block number 3 <psp>
+[drm] add ip block number 4 <gfx_v9_0>
+[drm] add ip block number 5 <sdma_v4_0>
+[drm] add ip block number 6 <powerplay>
+[drm] add ip block number 7 <dm>
+[drm] add ip block number 8 <uvd_v7_0>
+[drm] add ip block number 9 <vce_v4_0>
+drmn0: successfully loaded firmware image 'amdgpu/vega10_gpu_info.bin'
+drmn0: Fetched VBIOS from VFCT
+amdgpu: ATOM BIOS: 113-D0500100-102
+drmn0: successfully loaded firmware image 'amdgpu/vega10_sdma.bin'
+drmn0: successfully loaded firmware image 'amdgpu/vega10_sdma1.bin'
+[drm] UVD(0) is enabled in VM mode
+[drm] UVD(0) ENC is enabled in VM mode
+[drm] VCE enabled in VM mode
+drmn0: HBM ECC is not presented.
+drmn0: SRAM ECC is not presented.
+[drm] vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+drmn0: VRAM: 8176M 0x000000F400000000 - 0x000000F5FEFFFFFF (8176M used)
+drmn0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+drmn0: AGP: 267419648M 0x000000F800000000 - 0x0000FFFFFFFFFFFF
+[drm] Detected VRAM RAM=8176M, BAR=256M
+[drm] RAM width 2048bits HBM
+[TTM] Zone  kernel: Available graphics memory: 33519046 KiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 KiB
+[TTM] Initializing pool allocator
+[drm] amdgpu: 8176M of VRAM memory ready
+[drm] amdgpu: 8176M of GTT memory ready.
+[drm] GART: num cpu pages 131072, num gpu pages 131072
+[drm] PCIE GART of 512M enabled (table at 0x000000F400900000).
+drmn0: successfully loaded firmware image 'amdgpu/vega10_sos.bin'
+drmn0: successfully loaded firmware image 'amdgpu/vega10_asd.bin'
+drmn0: successfully loaded firmware image 'amdgpu/vega10_pfp.bin'
+drmn0: successfully loaded firmware image 'amdgpu/vega10_me.bin'
+drmn0: successfully loaded firmware image 'amdgpu/vega10_ce.bin'
+drmn0: successfully loaded firmware image 'amdgpu/vega10_rlc.bin'
+drmn0: successfully loaded firmware image 'amdgpu/vega10_mec.bin'
+drmn0: successfully loaded firmware image 'amdgpu/vega10_mec2.bin'
+amdgpu: hwmgr_sw_init smu backed is vega10_smu
+drmn0: successfully loaded firmware image 'amdgpu/vega10_acg_smc.bin'
+drmn0: successfully loaded firmware image 'amdgpu/vega10_uvd.bin'
+[drm] Found UVD firmware Version: 66.43 Family ID: 17
+[drm] PSP loading UVD firmware
+drmn0: successfully loaded firmware image 'amdgpu/vega10_vce.bin'
+[drm] Found VCE firmware Version: 57.6 Binary ID: 4
+[drm] PSP loading VCE firmware
+[drm] reserve 0x400000 from 0xf5fec00000 for PSP TMR
+[drm] kiq ring mec 2 pipe 1 q 0
+[drm] Display Core initialized with v3.2.104!
+[drm] UVD and UVD ENC initialized successfully.
+[drm] VCE initialized successfully.
+drmn0: SE 4, SH per SE 1, CU per SH 16, active_cu_number 56
+[drm] fb mappable at 0x381FE0CEE000
+[drm] vram apper at 0x381FE0000000
+[drm] size 8294400
+[drm] fb depth is 24
+[drm]    pitch is 7680
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+pbase=0x381fe0cee000 vbase=0xfffffe01c53c1000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+end FB_INFO
+drmn0: ring gfx uses VM inv eng 0 on hub 0
+drmn0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+drmn0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+drmn0: ring comp_1.2.0 uses VM inv eng 5 on hub 0
+drmn0: ring comp_1.3.0 uses VM inv eng 6 on hub 0
+drmn0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+drmn0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+drmn0: ring comp_1.2.1 uses VM inv eng 9 on hub 0
+drmn0: ring comp_1.3.1 uses VM inv eng 10 on hub 0
+drmn0: ring kiq_2.1.0 uses VM inv eng 11 on hub 0
+drmn0: ring sdma0 uses VM inv eng 0 on hub 1
+drmn0: ring page0 uses VM inv eng 1 on hub 1
+drmn0: ring sdma1 uses VM inv eng 4 on hub 1
+drmn0: ring page1 uses VM inv eng 5 on hub 1
+drmn0: ring uvd_0 uses VM inv eng 6 on hub 1
+drmn0: ring uvd_enc_0.0 uses VM inv eng 7 on hub 1
+drmn0: ring uvd_enc_0.1 uses VM inv eng 8 on hub 1
+drmn0: ring vce0 uses VM inv eng 9 on hub 1
+drmn0: ring vce1 uses VM inv eng 10 on hub 1
+drmn0: ring vce2 uses VM inv eng 11 on hub 1
+vgapci0: child drmn0 requested pci_get_powerstate
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] Initialized amdgpu 3.40.0 20150101 for drmn0 on minor 0
+Intel(R) Wireless WiFi based driver for FreeBSD
+ioat0: <IVB IOAT Ch0> mem 0x380ffff1c000-0x380ffff1ffff irq 31 at device 4.0 numa-domain 0 on pci0
+ioat0: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat1: <IVB IOAT Ch1> mem 0x380ffff18000-0x380ffff1bfff irq 39 at device 4.1 numa-domain 0 on pci0
+ioat1: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat2: <IVB IOAT Ch2> mem 0x380ffff14000-0x380ffff17fff irq 31 at device 4.2 numa-domain 0 on pci0
+ioat2: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat3: <IVB IOAT Ch3> mem 0x380ffff10000-0x380ffff13fff irq 39 at device 4.3 numa-domain 0 on pci0
+ioat3: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat4: <IVB IOAT Ch4> mem 0x380ffff0c000-0x380ffff0ffff irq 31 at device 4.4 numa-domain 0 on pci0
+ioat4: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat5: <IVB IOAT Ch5> mem 0x380ffff08000-0x380ffff0bfff irq 39 at device 4.5 numa-domain 0 on pci0
+ioat5: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat6: <IVB IOAT Ch6> mem 0x380ffff04000-0x380ffff07fff irq 31 at device 4.6 numa-domain 0 on pci0
+ioat6: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat7: <IVB IOAT Ch7> mem 0x380ffff00000-0x380ffff03fff irq 39 at device 4.7 numa-domain 0 on pci0
+ioat7: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ichsmb0: <Intel Patsburg SMBus controller> port 0x9000-0x901f mem 0x380ffff21000-0x380ffff210ff irq 18 at device 31.3 numa-domain 0 on pci0
+smbus0: <System Management Bus> numa-domain 0 on ichsmb0
+iwm0: <Intel(R) Dual Band Wireless AC 8260> mem 0xdfd00000-0xdfd01fff irq 32 at device 0.0 numa-domain 0 on pci3
+iwm0: hw rev 0x200, fw ver 22.361476.0, address XXX
+ioat8: <IVB IOAT Ch0> mem 0x381ffff1c000-0x381ffff1ffff irq 55 at device 4.0 numa-domain 1 on pci8
+ioat8: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat9: <IVB IOAT Ch1> mem 0x381ffff18000-0x381ffff1bfff irq 63 at device 4.1 numa-domain 1 on pci8
+ioat9: Capabilities: 2f7<PQ,Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat10: <IVB IOAT Ch2> mem 0x381ffff14000-0x381ffff17fff irq 55 at device 4.2 numa-domain 1 on pci8
+ioat10: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat11: <IVB IOAT Ch3> mem 0x381ffff10000-0x381ffff13fff irq 63 at device 4.3 numa-domain 1 on pci8
+ioat11: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat12: <IVB IOAT Ch4> mem 0x381ffff0c000-0x381ffff0ffff irq 55 at device 4.4 numa-domain 1 on pci8
+ioat12: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat13: <IVB IOAT Ch5> mem 0x381ffff08000-0x381ffff0bfff irq 63 at device 4.5 numa-domain 1 on pci8
+ioat13: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat14: <IVB IOAT Ch6> mem 0x381ffff04000-0x381ffff07fff irq 55 at device 4.6 numa-domain 1 on pci8
+ioat14: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+ioat15: <IVB IOAT Ch7> mem 0x381ffff00000-0x381ffff03fff irq 63 at device 4.7 numa-domain 1 on pci8
+ioat15: Capabilities: f7<Extended_APIC_ID,Block_Fill,Move_CRC,DCA,Marker_Skipping,CRC,Page_Break>
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+lo0: link state changed to UP
+igb1: link state changed to UP
+uaudio0 numa-domain 0 on uhub0
+uaudio0: <ASUSTeK Xonar SoundCard, class 239/2, rev 2.00/1.06, addr 1> on usbus0
+uhid1 numa-domain 0 on uhub3
+uhid1: <Logitech USB Receiver, class 0/0, rev 2.00/24.11, addr 4> on usbus1
+uhid0 numa-domain 0 on uhub4
+uhid0: <Chicony HP Elite USB Keyboard, class 0/0, rev 1.10/1.21, addr 3> on usbus2
+uaudio0: Play[0]: 192000 Hz, 6 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 96000 Hz, 6 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 48000 Hz, 6 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 44100 Hz, 6 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 192000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 96000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 192000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 96000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[1]: 192000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[1]: 96000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[1]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[1]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm6: <USB audio> numa-domain 0 on uaudio0
+pcm7: <USB audio> numa-domain 0 on uaudio0
+uaudio0: No HID volume keys found.
+uhid2 numa-domain 0 on uhub0
+uhid2: <ASUSTeK Xonar SoundCard, class 239/2, rev 2.00/1.06, addr 1> on usbus0
+ums0 numa-domain 0 on uhub3
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/24.11, addr 4> on usbus1
+ums0: 16 buttons and [XYZT] coordinates ID=2
+ums1 numa-domain 0 on uhub3
+ums1: <Winbond Electronics Corp Hermon USB hidmouse Device, class 0/0, rev 1.10/0.01, addr 5> on usbus1
+ums1: 3 buttons and [Z] coordinates ID=0

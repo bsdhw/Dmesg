@@ -1,0 +1,2412 @@
+ uhidev0 reportid 34: input=0, output=0, feature=1
+uhid24 at uhidev0 reportid 35: input=0, output=0, feature=2
+uhid25 at uhidev0 reportid 36: input=0, output=0, feature=2
+uhid26 at uhidev0 reportid 37: input=0, output=0, feature=2
+uhid27 at uhidev0 reportid 38: input=0, output=0, feature=2
+uhid28 at uhidev0 reportid 39: input=0, output=0, feature=1
+uhid29 at uhidev0 reportid 40: input=0, output=0, feature=4
+uhid30 at uhidev0 reportid 48: input=0, output=0, feature=2
+uhid31 at uhidev0 reportid 49: input=0, output=0, feature=2
+uhid32 at uhidev0 reportid 50: input=0, output=0, feature=2
+uhid33 at uhidev0 reportid 51: input=0, output=0, feature=2
+uhid34 at uhidev0 reportid 52: input=0, output=0, feature=1
+uhid35 at uhidev0 reportid 53: input=0, output=0, feature=1
+uhid36 at uhidev0 reportid 54: input=0, output=0, feature=1
+uhid37 at uhidev0 reportid 64: input=0, output=0, feature=1
+uhid38 at uhidev0 reportid 65: input=0, output=0, feature=2
+uhid39 at uhidev0 reportid 80: input=0, output=0, feature=1
+uhid40 at uhidev0 reportid 81: input=0, output=0, feature=1
+uhid41 at uhidev0 reportid 96: input=0, output=0, feature=2
+uhid42 at uhidev0 reportid 97: input=0, output=0, feature=1
+uhid43 at uhidev0 reportid 98: input=0, output=0, feature=4
+uhid44 at uhidev0 reportid 120: input=0, output=0, feature=1
+uhid45 at uhidev0 reportid 121: input=0, output=0, feature=1
+uhid46 at uhidev0 reportid 122: input=0, output=0, feature=4
+uhid47 at uhidev0 reportid 123: input=0, output=0, feature=2
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd4 at scsibus3 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+sd5 at scsibus5 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on sd3a (475031de7f85c2d7.a) swap on sd3b dump on sd3b
+syncing disks... done
+rebooting...
+OpenBSD 6.9 (GENERIC.MP) #4: Tue Aug 10 08:12:23 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8502562816 (8108MB)
+avail mem = 8229494784 (7848MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2994.22 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"INT33A1" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+"MSFT0101" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpipwrres20 at acpi0: WRST
+acpipwrres21 at acpi0: WRST
+acpipwrres22 at acpi0: WRST
+acpipwrres23 at acpi0: FN00, resource for FAN0
+acpipwrres24 at acpi0: FN01, resource for FAN1
+acpipwrres25 at acpi0: FN02, resource for FAN2
+acpipwrres26 at acpi0: FN03, resource for FAN3
+acpipwrres27 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpitz1 at acpi0: critical temperature is 119 degC
+acpivideo0 at acpi0: GFX0
+ipmi at mainbus0 not configured
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2994 MHz: speeds: 3001, 3000, 2800, 2700, 2500, 2400, 2200, 2100, 1900, 1700, 1600, 1400, 1300, 1100, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x31
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus1 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus1 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+pcib0 at pci0 dev 31 function 0 "Intel C232 LPC" rev 0x31
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x31: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x1a: stts2004
+spdmem0 at iic0 addr 0x50: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+spdmem1 at iic0 addr 0x52: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT6791D rev 0x03
+lm1 at wbsio0 port 0x290/8: NCT6791D
+vmm0 at mainbus0: VMX/EPT
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+upd0 at uhidev0
+uhid0 at uhidev0 reportid 1: input=0, output=0, feature=1
+uhid1 at uhidev0 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev0 reportid 3: input=0, output=0, feature=1
+uhid3 at uhidev0 reportid 4: input=0, output=0, feature=1
+uhid4 at uhidev0 reportid 5: input=0, output=0, feature=1
+uhid5 at uhidev0 reportid 6: input=1, output=0, feature=1
+uhid6 at uhidev0 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev0 reportid 8: input=0, output=0, feature=2
+uhid8 at uhidev0 reportid 9: input=0, output=0, feature=2
+uhid9 at uhidev0 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev0 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev0 reportid 12: input=3, output=0, feature=3
+uhid12 at uhidev0 reportid 13: input=0, output=0, feature=1
+uhid13 at uhidev0 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev0 reportid 15: input=0, output=0, feature=1
+uhid15 at uhidev0 reportid 16: input=0, output=0, feature=1
+uhid16 at uhidev0 reportid 17: input=0, output=0, feature=1
+uhid17 at uhidev0 reportid 18: input=0, output=0, feature=1
+uhid18 at uhidev0 reportid 22: input=4, output=0, feature=4
+uhid19 at uhidev0 reportid 23: input=0, output=0, feature=2
+uhid20 at uhidev0 reportid 24: input=0, output=0, feature=1
+uhid21 at uhidev0 reportid 28: input=0, output=0, feature=3
+uhid22 at uhidev0 reportid 32: input=0, output=0, feature=2
+uhid23 at uhidev0 reportid 34: input=0, output=0, feature=1
+uhid24 at uhidev0 reportid 35: input=0, output=0, feature=2
+uhid25 at uhidev0 reportid 36: input=0, output=0, feature=2
+uhid26 at uhidev0 reportid 37: input=0, output=0, feature=2
+uhid27 at uhidev0 reportid 38: input=0, output=0, feature=2
+uhid28 at uhidev0 reportid 39: input=0, output=0, feature=1
+uhid29 at uhidev0 reportid 40: input=0, output=0, feature=4
+uhid30 at uhidev0 reportid 48: input=0, output=0, feature=2
+uhid31 at uhidev0 reportid 49: input=0, output=0, feature=2
+uhid32 at uhidev0 reportid 50: input=0, output=0, feature=2
+uhid33 at uhidev0 reportid 51: input=0, output=0, feature=2
+uhid34 at uhidev0 reportid 52: input=0, output=0, feature=1
+uhid35 at uhidev0 reportid 53: input=0, output=0, feature=1
+uhid36 at uhidev0 reportid 54: input=0, output=0, feature=1
+uhid37 at uhidev0 reportid 64: input=0, output=0, feature=1
+uhid38 at uhidev0 reportid 65: input=0, output=0, feature=2
+uhid39 at uhidev0 reportid 80: input=0, output=0, feature=1
+uhid40 at uhidev0 reportid 81: input=0, output=0, feature=1
+uhid41 at uhidev0 reportid 96: input=0, output=0, feature=2
+uhid42 at uhidev0 reportid 97: input=0, output=0, feature=1
+uhid43 at uhidev0 reportid 98: input=0, output=0, feature=4
+uhid44 at uhidev0 reportid 120: input=0, output=0, feature=1
+uhid45 at uhidev0 reportid 121: input=0, output=0, feature=1
+uhid46 at uhidev0 reportid 122: input=0, output=0, feature=4
+uhid47 at uhidev0 reportid 123: input=0, output=0, feature=2
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd4 at scsibus3 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+sd5 at scsibus5 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on sd3a (475031de7f85c2d7.a) swap on sd3b dump on sd3b
+syncing disks... done
+rebooting...
+OpenBSD 7.0 (RAMDISK_CD) #219: Thu Sep 30 14:32:42 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8502562816 (8108MB)
+avail mem = 8240857088 (7859MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using VERW MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 100 Series Thermal" rev 0x31 at pci0 dev 20 function 2 not configured
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus0 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus0 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd3 at scsibus1 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+"Intel C232 LPC" rev 0x31 at pci0 dev 31 function 0 not configured
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+"Intel 100 Series SMBus" rev 0x31 at pci0 dev 31 function 4 not configured
+isa0 at mainbus0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+uhid at uhidev0 reportid 1 not configured
+uhid at uhidev0 reportid 2 not configured
+uhid at uhidev0 reportid 3 not configured
+uhid at uhidev0 reportid 4 not configured
+uhid at uhidev0 reportid 5 not configured
+uhid at uhidev0 reportid 6 not configured
+uhid at uhidev0 reportid 7 not configured
+uhid at uhidev0 reportid 8 not configured
+uhid at uhidev0 reportid 9 not configured
+uhid at uhidev0 reportid 10 not configured
+uhid at uhidev0 reportid 11 not configured
+uhid at uhidev0 reportid 12 not configured
+uhid at uhidev0 reportid 13 not configured
+uhid at uhidev0 reportid 14 not configured
+uhid at uhidev0 reportid 15 not configured
+uhid at uhidev0 reportid 16 not configured
+uhid at uhidev0 reportid 17 not configured
+uhid at uhidev0 reportid 18 not configured
+uhid at uhidev0 reportid 22 not configured
+uhid at uhidev0 reportid 23 not configured
+uhid at uhidev0 reportid 24 not configured
+uhid at uhidev0 reportid 28 not configured
+uhid at uhidev0 reportid 32 not configured
+uhid at uhidev0 reportid 34 not configured
+uhid at uhidev0 reportid 35 not configured
+uhid at uhidev0 reportid 36 not configured
+uhid at uhidev0 reportid 37 not configured
+uhid at uhidev0 reportid 38 not configured
+uhid at uhidev0 reportid 39 not configured
+uhid at uhidev0 reportid 40 not configured
+uhid at uhidev0 reportid 48 not configured
+uhid at uhidev0 reportid 49 not configured
+uhid at uhidev0 reportid 50 not configured
+uhid at uhidev0 reportid 51 not configured
+uhid at uhidev0 reportid 52 not configured
+uhid at uhidev0 reportid 53 not configured
+uhid at uhidev0 reportid 54 not configured
+uhid at uhidev0 reportid 64 not configured
+uhid at uhidev0 reportid 65 not configured
+uhid at uhidev0 reportid 80 not configured
+uhid at uhidev0 reportid 81 not configured
+uhid at uhidev0 reportid 96 not configured
+uhid at uhidev0 reportid 97 not configured
+uhid at uhidev0 reportid 98 not configured
+uhid at uhidev0 reportid 120 not configured
+uhid at uhidev0 reportid 121 not configured
+uhid at uhidev0 reportid 122 not configured
+uhid at uhidev0 reportid 123 not configured
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd4 at scsibus2 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd5 at scsibus3 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 7.0 (GENERIC.MP) #232: Thu Sep 30 14:25:29 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8502562816 (8108MB)
+avail mem = 8228851712 (7847MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"INT33A1" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+tpm0 at acpi0 TPM_ addr 0xfed40000/0x5000, device 0x001a15d1 rev 0x10
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpipwrres20 at acpi0: WRST
+acpipwrres21 at acpi0: WRST
+acpipwrres22 at acpi0: WRST
+acpipwrres23 at acpi0: FN00, resource for FAN0
+acpipwrres24 at acpi0: FN01, resource for FAN1
+acpipwrres25 at acpi0: FN02, resource for FAN2
+acpipwrres26 at acpi0: FN03, resource for FAN3
+acpipwrres27 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpitz1 at acpi0: critical temperature is 119 degC
+acpivideo0 at acpi0: GFX0
+ipmi at mainbus0 not configured
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2993 MHz: speeds: 3001, 3000, 2800, 2700, 2500, 2400, 2200, 2100, 1900, 1700, 1600, 1400, 1300, 1100, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x31
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus1 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus1 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+pcib0 at pci0 dev 31 function 0 "Intel C232 LPC" rev 0x31
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x31: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x1a: stts2004
+spdmem0 at iic0 addr 0x50: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+spdmem1 at iic0 addr 0x52: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT6791D rev 0x03
+lm1 at wbsio0 port 0x290/8: NCT6791D
+vmm0 at mainbus0: VMX/EPT
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+dt: 445 probes
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+upd0 at uhidev0
+uhid0 at uhidev0 reportid 1: input=0, output=0, feature=1
+uhid1 at uhidev0 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev0 reportid 3: input=0, output=0, feature=1
+uhid3 at uhidev0 reportid 4: input=0, output=0, feature=1
+uhid4 at uhidev0 reportid 5: input=0, output=0, feature=1
+uhid5 at uhidev0 reportid 6: input=1, output=0, feature=1
+uhid6 at uhidev0 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev0 reportid 8: input=0, output=0, feature=2
+uhid8 at uhidev0 reportid 9: input=0, output=0, feature=2
+uhid9 at uhidev0 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev0 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev0 reportid 12: input=3, output=0, feature=3
+uhid12 at uhidev0 reportid 13: input=0, output=0, feature=1
+uhid13 at uhidev0 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev0 reportid 15: input=0, output=0, feature=1
+uhid15 at uhidev0 reportid 16: input=0, output=0, feature=1
+uhid16 at uhidev0 reportid 17: input=0, output=0, feature=1
+uhid17 at uhidev0 reportid 18: input=0, output=0, feature=1
+uhid18 at uhidev0 reportid 23: input=0, output=0, feature=2
+uhid19 at uhidev0 reportid 24: input=0, output=0, feature=1
+uhid20 at uhidev0 reportid 28: input=0, output=0, feature=3
+uhid21 at uhidev0 reportid 32: input=0, output=0, feature=2
+uhid22 at uhidev0 reportid 34: input=0, output=0, feature=1
+uhid23 at uhidev0 reportid 35: input=0, output=0, feature=2
+uhid24 at uhidev0 reportid 36: input=0, output=0, feature=2
+uhid25 at uhidev0 reportid 37: input=0, output=0, feature=2
+uhid26 at uhidev0 reportid 38: input=0, output=0, feature=2
+uhid27 at uhidev0 reportid 39: input=0, output=0, feature=1
+uhid28 at uhidev0 reportid 40: input=0, output=0, feature=4
+uhid29 at uhidev0 reportid 48: input=0, output=0, feature=2
+uhid30 at uhidev0 reportid 49: input=0, output=0, feature=2
+uhid31 at uhidev0 reportid 50: input=0, output=0, feature=2
+uhid32 at uhidev0 reportid 51: input=0, output=0, feature=2
+uhid33 at uhidev0 reportid 52: input=0, output=0, feature=1
+uhid34 at uhidev0 reportid 53: input=0, output=0, feature=1
+uhid35 at uhidev0 reportid 54: input=0, output=0, feature=1
+uhid36 at uhidev0 reportid 64: input=0, output=0, feature=1
+uhid37 at uhidev0 reportid 65: input=0, output=0, feature=2
+uhid38 at uhidev0 reportid 80: input=0, output=0, feature=1
+uhid39 at uhidev0 reportid 81: input=0, output=0, feature=1
+uhid40 at uhidev0 reportid 96: input=0, output=0, feature=2
+uhid41 at uhidev0 reportid 97: input=0, output=0, feature=1
+uhid42 at uhidev0 reportid 98: input=0, output=0, feature=4
+uhid43 at uhidev0 reportid 120: input=0, output=0, feature=1
+uhid44 at uhidev0 reportid 121: input=0, output=0, feature=1
+uhid45 at uhidev0 reportid 122: input=0, output=0, feature=4
+uhid46 at uhidev0 reportid 123: input=0, output=0, feature=2
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd4 at scsibus3 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+sd5 at scsibus5 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on sd3a (475031de7f85c2d7.a) swap on sd3b dump on sd3b
+syncing disks... done
+rebooting...
+OpenBSD 7.0 (GENERIC.MP) #232: Thu Sep 30 14:25:29 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8502562816 (8108MB)
+avail mem = 8228831232 (7847MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"INT33A1" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+tpm0 at acpi0 TPM_ addr 0xfed40000/0x5000, device 0x001a15d1 rev 0x10
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpipwrres20 at acpi0: WRST
+acpipwrres21 at acpi0: WRST
+acpipwrres22 at acpi0: WRST
+acpipwrres23 at acpi0: FN00, resource for FAN0
+acpipwrres24 at acpi0: FN01, resource for FAN1
+acpipwrres25 at acpi0: FN02, resource for FAN2
+acpipwrres26 at acpi0: FN03, resource for FAN3
+acpipwrres27 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpitz1 at acpi0: critical temperature is 119 degC
+acpivideo0 at acpi0: GFX0
+ipmi at mainbus0 not configured
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2993 MHz: speeds: 3001, 3000, 2800, 2700, 2500, 2400, 2200, 2100, 1900, 1700, 1600, 1400, 1300, 1100, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x31
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus1 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus1 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+pcib0 at pci0 dev 31 function 0 "Intel C232 LPC" rev 0x31
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x31: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x1a: stts2004
+spdmem0 at iic0 addr 0x50: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+spdmem1 at iic0 addr 0x52: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT6791D rev 0x03
+lm1 at wbsio0 port 0x290/8: NCT6791D
+vmm0 at mainbus0: VMX/EPT
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+dt: 445 probes
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+upd0 at uhidev0
+uhid0 at uhidev0 reportid 1: input=0, output=0, feature=1
+uhid1 at uhidev0 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev0 reportid 3: input=0, output=0, feature=1
+uhid3 at uhidev0 reportid 4: input=0, output=0, feature=1
+uhid4 at uhidev0 reportid 5: input=0, output=0, feature=1
+uhid5 at uhidev0 reportid 6: input=1, output=0, feature=1
+uhid6 at uhidev0 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev0 reportid 8: input=0, output=0, feature=2
+uhid8 at uhidev0 reportid 9: input=0, output=0, feature=2
+uhid9 at uhidev0 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev0 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev0 reportid 12: input=3, output=0, feature=3
+uhid12 at uhidev0 reportid 13: input=0, output=0, feature=1
+uhid13 at uhidev0 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev0 reportid 15: input=0, output=0, feature=1
+uhid15 at uhidev0 reportid 16: input=0, output=0, feature=1
+uhid16 at uhidev0 reportid 17: input=0, output=0, feature=1
+uhid17 at uhidev0 reportid 18: input=0, output=0, feature=1
+uhid18 at uhidev0 reportid 23: input=0, output=0, feature=2
+uhid19 at uhidev0 reportid 24: input=0, output=0, feature=1
+uhid20 at uhidev0 reportid 28: input=0, output=0, feature=3
+uhid21 at uhidev0 reportid 32: input=0, output=0, feature=2
+uhid22 at uhidev0 reportid 34: input=0, output=0, feature=1
+uhid23 at uhidev0 reportid 35: input=0, output=0, feature=2
+uhid24 at uhidev0 reportid 36: input=0, output=0, feature=2
+uhid25 at uhidev0 reportid 37: input=0, output=0, feature=2
+uhid26 at uhidev0 reportid 38: input=0, output=0, feature=2
+uhid27 at uhidev0 reportid 39: input=0, output=0, feature=1
+uhid28 at uhidev0 reportid 40: input=0, output=0, feature=4
+uhid29 at uhidev0 reportid 48: input=0, output=0, feature=2
+uhid30 at uhidev0 reportid 49: input=0, output=0, feature=2
+uhid31 at uhidev0 reportid 50: input=0, output=0, feature=2
+uhid32 at uhidev0 reportid 51: input=0, output=0, feature=2
+uhid33 at uhidev0 reportid 52: input=0, output=0, feature=1
+uhid34 at uhidev0 reportid 53: input=0, output=0, feature=1
+uhid35 at uhidev0 reportid 54: input=0, output=0, feature=1
+uhid36 at uhidev0 reportid 64: input=0, output=0, feature=1
+uhid37 at uhidev0 reportid 65: input=0, output=0, feature=2
+uhid38 at uhidev0 reportid 80: input=0, output=0, feature=1
+uhid39 at uhidev0 reportid 81: input=0, output=0, feature=1
+uhid40 at uhidev0 reportid 96: input=0, output=0, feature=2
+uhid41 at uhidev0 reportid 97: input=0, output=0, feature=1
+uhid42 at uhidev0 reportid 98: input=0, output=0, feature=4
+uhid43 at uhidev0 reportid 120: input=0, output=0, feature=1
+uhid44 at uhidev0 reportid 121: input=0, output=0, feature=1
+uhid45 at uhidev0 reportid 122: input=0, output=0, feature=4
+uhid46 at uhidev0 reportid 123: input=0, output=0, feature=2
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd4 at scsibus3 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+sd5 at scsibus5 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on sd3a (475031de7f85c2d7.a) swap on sd3b dump on sd3b
+syncing disks... done
+rebooting...
+OpenBSD 7.0 (GENERIC.MP) #2: Wed Nov 24 00:54:11 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8502562816 (8108MB)
+avail mem = 8228843520 (7847MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"INT33A1" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+tpm0 at acpi0 TPM_ addr 0xfed40000/0x5000, device 0x001a15d1 rev 0x10
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpipwrres20 at acpi0: WRST
+acpipwrres21 at acpi0: WRST
+acpipwrres22 at acpi0: WRST
+acpipwrres23 at acpi0: FN00, resource for FAN0
+acpipwrres24 at acpi0: FN01, resource for FAN1
+acpipwrres25 at acpi0: FN02, resource for FAN2
+acpipwrres26 at acpi0: FN03, resource for FAN3
+acpipwrres27 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpitz1 at acpi0: critical temperature is 119 degC
+acpivideo0 at acpi0: GFX0
+ipmi at mainbus0 not configured
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2993 MHz: speeds: 3001, 3000, 2800, 2700, 2500, 2400, 2200, 2100, 1900, 1700, 1600, 1400, 1300, 1100, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x31
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus1 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus1 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+pcib0 at pci0 dev 31 function 0 "Intel C232 LPC" rev 0x31
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x31: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x1a: stts2004
+spdmem0 at iic0 addr 0x50: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+spdmem1 at iic0 addr 0x52: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT6791D rev 0x03
+lm1 at wbsio0 port 0x290/8: NCT6791D
+vmm0 at mainbus0: VMX/EPT
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+dt: 445 probes
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+upd0 at uhidev0
+uhid0 at uhidev0 reportid 1: input=0, output=0, feature=1
+uhid1 at uhidev0 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev0 reportid 3: input=0, output=0, feature=1
+uhid3 at uhidev0 reportid 4: input=0, output=0, feature=1
+uhid4 at uhidev0 reportid 5: input=0, output=0, feature=1
+uhid5 at uhidev0 reportid 6: input=1, output=0, feature=1
+uhid6 at uhidev0 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev0 reportid 8: input=0, output=0, feature=2
+uhid8 at uhidev0 reportid 9: input=0, output=0, feature=2
+uhid9 at uhidev0 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev0 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev0 reportid 12: input=3, output=0, feature=3
+uhid12 at uhidev0 reportid 13: input=0, output=0, feature=1
+uhid13 at uhidev0 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev0 reportid 15: input=0, output=0, feature=1
+uhid15 at uhidev0 reportid 16: input=0, output=0, feature=1
+uhid16 at uhidev0 reportid 17: input=0, output=0, feature=1
+uhid17 at uhidev0 reportid 18: input=0, output=0, feature=1
+uhid18 at uhidev0 reportid 23: input=0, output=0, feature=2
+uhid19 at uhidev0 reportid 24: input=0, output=0, feature=1
+uhid20 at uhidev0 reportid 28: input=0, output=0, feature=3
+uhid21 at uhidev0 reportid 32: input=0, output=0, feature=2
+uhid22 at uhidev0 reportid 34: input=0, output=0, feature=1
+uhid23 at uhidev0 reportid 35: input=0, output=0, feature=2
+uhid24 at uhidev0 reportid 36: input=0, output=0, feature=2
+uhid25 at uhidev0 reportid 37: input=0, output=0, feature=2
+uhid26 at uhidev0 reportid 38: input=0, output=0, feature=2
+uhid27 at uhidev0 reportid 39: input=0, output=0, feature=1
+uhid28 at uhidev0 reportid 40: input=0, output=0, feature=4
+uhid29 at uhidev0 reportid 48: input=0, output=0, feature=2
+uhid30 at uhidev0 reportid 49: input=0, output=0, feature=2
+uhid31 at uhidev0 reportid 50: input=0, output=0, feature=2
+uhid32 at uhidev0 reportid 51: input=0, output=0, feature=2
+uhid33 at uhidev0 reportid 52: input=0, output=0, feature=1
+uhid34 at uhidev0 reportid 53: input=0, output=0, feature=1
+uhid35 at uhidev0 reportid 54: input=0, output=0, feature=1
+uhid36 at uhidev0 reportid 64: input=0, output=0, feature=1
+uhid37 at uhidev0 reportid 65: input=0, output=0, feature=2
+uhid38 at uhidev0 reportid 80: input=0, output=0, feature=1
+uhid39 at uhidev0 reportid 81: input=0, output=0, feature=1
+uhid40 at uhidev0 reportid 96: input=0, output=0, feature=2
+uhid41 at uhidev0 reportid 97: input=0, output=0, feature=1
+uhid42 at uhidev0 reportid 98: input=0, output=0, feature=4
+uhid43 at uhidev0 reportid 120: input=0, output=0, feature=1
+uhid44 at uhidev0 reportid 121: input=0, output=0, feature=1
+uhid45 at uhidev0 reportid 122: input=0, output=0, feature=4
+uhid46 at uhidev0 reportid 123: input=0, output=0, feature=2
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd4 at scsibus3 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+sd5 at scsibus5 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on sd3a (475031de7f85c2d7.a) swap on sd3b dump on sd3b
+syncing disks... done
+rebooting...
+OpenBSD 7.0 (GENERIC.MP) #3: Wed Dec 15 13:14:26 MST 2021
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8502562816 (8108MB)
+avail mem = 8228847616 (7847MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"INT33A1" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+tpm0 at acpi0 TPM_ addr 0xfed40000/0x5000, device 0x001a15d1 rev 0x10
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpipwrres20 at acpi0: WRST
+acpipwrres21 at acpi0: WRST
+acpipwrres22 at acpi0: WRST
+acpipwrres23 at acpi0: FN00, resource for FAN0
+acpipwrres24 at acpi0: FN01, resource for FAN1
+acpipwrres25 at acpi0: FN02, resource for FAN2
+acpipwrres26 at acpi0: FN03, resource for FAN3
+acpipwrres27 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpitz1 at acpi0: critical temperature is 119 degC
+acpivideo0 at acpi0: GFX0
+ipmi at mainbus0 not configured
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2993 MHz: speeds: 3001, 3000, 2800, 2700, 2500, 2400, 2200, 2100, 1900, 1700, 1600, 1400, 1300, 1100, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x31
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus1 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus1 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+pcib0 at pci0 dev 31 function 0 "Intel C232 LPC" rev 0x31
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x31: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x1a: stts2004
+spdmem0 at iic0 addr 0x50: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+spdmem1 at iic0 addr 0x52: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT6791D rev 0x03
+lm1 at wbsio0 port 0x290/8: NCT6791D
+vmm0 at mainbus0: VMX/EPT
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+dt: 445 probes
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+upd0 at uhidev0
+uhid0 at uhidev0 reportid 1: input=0, output=0, feature=1
+uhid1 at uhidev0 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev0 reportid 3: input=0, output=0, feature=1
+uhid3 at uhidev0 reportid 4: input=0, output=0, feature=1
+uhid4 at uhidev0 reportid 5: input=0, output=0, feature=1
+uhid5 at uhidev0 reportid 6: input=1, output=0, feature=1
+uhid6 at uhidev0 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev0 reportid 8: input=0, output=0, feature=2
+uhid8 at uhidev0 reportid 9: input=0, output=0, feature=2
+uhid9 at uhidev0 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev0 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev0 reportid 12: input=3, output=0, feature=3
+uhid12 at uhidev0 reportid 13: input=0, output=0, feature=1
+uhid13 at uhidev0 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev0 reportid 15: input=0, output=0, feature=1
+uhid15 at uhidev0 reportid 16: input=0, output=0, feature=1
+uhid16 at uhidev0 reportid 17: input=0, output=0, feature=1
+uhid17 at uhidev0 reportid 18: input=0, output=0, feature=1
+uhid18 at uhidev0 reportid 23: input=0, output=0, feature=2
+uhid19 at uhidev0 reportid 24: input=0, output=0, feature=1
+uhid20 at uhidev0 reportid 28: input=0, output=0, feature=3
+uhid21 at uhidev0 reportid 32: input=0, output=0, feature=2
+uhid22 at uhidev0 reportid 34: input=0, output=0, feature=1
+uhid23 at uhidev0 reportid 35: input=0, output=0, feature=2
+uhid24 at uhidev0 reportid 36: input=0, output=0, feature=2
+uhid25 at uhidev0 reportid 37: input=0, output=0, feature=2
+uhid26 at uhidev0 reportid 38: input=0, output=0, feature=2
+uhid27 at uhidev0 reportid 39: input=0, output=0, feature=1
+uhid28 at uhidev0 reportid 40: input=0, output=0, feature=4
+uhid29 at uhidev0 reportid 48: input=0, output=0, feature=2
+uhid30 at uhidev0 reportid 49: input=0, output=0, feature=2
+uhid31 at uhidev0 reportid 50: input=0, output=0, feature=2
+uhid32 at uhidev0 reportid 51: input=0, output=0, feature=2
+uhid33 at uhidev0 reportid 52: input=0, output=0, feature=1
+uhid34 at uhidev0 reportid 53: input=0, output=0, feature=1
+uhid35 at uhidev0 reportid 54: input=0, output=0, feature=1
+uhid36 at uhidev0 reportid 64: input=0, output=0, feature=1
+uhid37 at uhidev0 reportid 65: input=0, output=0, feature=2
+uhid38 at uhidev0 reportid 80: input=0, output=0, feature=1
+uhid39 at uhidev0 reportid 81: input=0, output=0, feature=1
+uhid40 at uhidev0 reportid 96: input=0, output=0, feature=2
+uhid41 at uhidev0 reportid 97: input=0, output=0, feature=1
+uhid42 at uhidev0 reportid 98: input=0, output=0, feature=4
+uhid43 at uhidev0 reportid 120: input=0, output=0, feature=1
+uhid44 at uhidev0 reportid 121: input=0, output=0, feature=1
+uhid45 at uhidev0 reportid 122: input=0, output=0, feature=4
+uhid46 at uhidev0 reportid 123: input=0, output=0, feature=2
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd4 at scsibus3 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+sd5 at scsibus5 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on sd3a (475031de7f85c2d7.a) swap on sd3b dump on sd3b
+arp info overwritten for XXX.XXX.XXX.XXX by XXX on em1
+syncing disks... done
+rebooting...
+OpenBSD 7.0 (GENERIC.MP) #5: Mon Jan 31 09:09:02 MST 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8502562816 (8108MB)
+avail mem = 8228839424 (7847MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"INT33A1" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+tpm0 at acpi0 TPM_ addr 0xfed40000/0x5000, device 0x001a15d1 rev 0x10
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpipwrres20 at acpi0: WRST
+acpipwrres21 at acpi0: WRST
+acpipwrres22 at acpi0: WRST
+acpipwrres23 at acpi0: FN00, resource for FAN0
+acpipwrres24 at acpi0: FN01, resource for FAN1
+acpipwrres25 at acpi0: FN02, resource for FAN2
+acpipwrres26 at acpi0: FN03, resource for FAN3
+acpipwrres27 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpitz1 at acpi0: critical temperature is 119 degC
+acpivideo0 at acpi0: GFX0
+ipmi at mainbus0 not configured
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2993 MHz: speeds: 3001, 3000, 2800, 2700, 2500, 2400, 2200, 2100, 1900, 1700, 1600, 1400, 1300, 1100, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x31
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus1 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus1 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+pcib0 at pci0 dev 31 function 0 "Intel C232 LPC" rev 0x31
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x31: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x1a: stts2004
+spdmem0 at iic0 addr 0x50: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+spdmem1 at iic0 addr 0x52: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT6791D rev 0x03
+lm1 at wbsio0 port 0x290/8: NCT6791D
+vmm0 at mainbus0: VMX/EPT
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+dt: 445 probes
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+upd0 at uhidev0
+uhid0 at uhidev0 reportid 1: input=0, output=0, feature=1
+uhid1 at uhidev0 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev0 reportid 3: input=0, output=0, feature=1
+uhid3 at uhidev0 reportid 4: input=0, output=0, feature=1
+uhid4 at uhidev0 reportid 5: input=0, output=0, feature=1
+uhid5 at uhidev0 reportid 6: input=1, output=0, feature=1
+uhid6 at uhidev0 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev0 reportid 8: input=0, output=0, feature=2
+uhid8 at uhidev0 reportid 9: input=0, output=0, feature=2
+uhid9 at uhidev0 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev0 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev0 reportid 12: input=3, output=0, feature=3
+uhid12 at uhidev0 reportid 13: input=0, output=0, feature=1
+uhid13 at uhidev0 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev0 reportid 15: input=0, output=0, feature=1
+uhid15 at uhidev0 reportid 16: input=0, output=0, feature=1
+uhid16 at uhidev0 reportid 17: input=0, output=0, feature=1
+uhid17 at uhidev0 reportid 18: input=0, output=0, feature=1
+uhid18 at uhidev0 reportid 23: input=0, output=0, feature=2
+uhid19 at uhidev0 reportid 24: input=0, output=0, feature=1
+uhid20 at uhidev0 reportid 28: input=0, output=0, feature=3
+uhid21 at uhidev0 reportid 32: input=0, output=0, feature=2
+uhid22 at uhidev0 reportid 34: input=0, output=0, feature=1
+uhid23 at uhidev0 reportid 35: input=0, output=0, feature=2
+uhid24 at uhidev0 reportid 36: input=0, output=0, feature=2
+uhid25 at uhidev0 reportid 37: input=0, output=0, feature=2
+uhid26 at uhidev0 reportid 38: input=0, output=0, feature=2
+uhid27 at uhidev0 reportid 39: input=0, output=0, feature=1
+uhid28 at uhidev0 reportid 40: input=0, output=0, feature=4
+uhid29 at uhidev0 reportid 48: input=0, output=0, feature=2
+uhid30 at uhidev0 reportid 49: input=0, output=0, feature=2
+uhid31 at uhidev0 reportid 50: input=0, output=0, feature=2
+uhid32 at uhidev0 reportid 51: input=0, output=0, feature=2
+uhid33 at uhidev0 reportid 52: input=0, output=0, feature=1
+uhid34 at uhidev0 reportid 53: input=0, output=0, feature=1
+uhid35 at uhidev0 reportid 54: input=0, output=0, feature=1
+uhid36 at uhidev0 reportid 64: input=0, output=0, feature=1
+uhid37 at uhidev0 reportid 65: input=0, output=0, feature=2
+uhid38 at uhidev0 reportid 80: input=0, output=0, feature=1
+uhid39 at uhidev0 reportid 81: input=0, output=0, feature=1
+uhid40 at uhidev0 reportid 96: input=0, output=0, feature=2
+uhid41 at uhidev0 reportid 97: input=0, output=0, feature=1
+uhid42 at uhidev0 reportid 98: input=0, output=0, feature=4
+uhid43 at uhidev0 reportid 120: input=0, output=0, feature=1
+uhid44 at uhidev0 reportid 121: input=0, output=0, feature=1
+uhid45 at uhidev0 reportid 122: input=0, output=0, feature=4
+uhid46 at uhidev0 reportid 123: input=0, output=0, feature=2
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd4 at scsibus3 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+sd5 at scsibus5 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on sd3a (475031de7f85c2d7.a) swap on sd3b dump on sd3b
+syncing disks... done
+rebooting...
+OpenBSD 7.1 (RAMDISK_CD) #440: Mon Apr 11 18:09:13 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8502562816 (8108MB)
+avail mem = 8240857088 (7859MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+com1 at acpi0 UAR2 addr 0x2f8/0x8 irq 3: ns16550a, 16 byte fifo
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"MSFT0101" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using VERW MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 100 Series Thermal" rev 0x31 at pci0 dev 20 function 2 not configured
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus0 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus0 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd3 at scsibus1 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+"Intel C232 LPC" rev 0x31 at pci0 dev 31 function 0 not configured
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+"Intel 100 Series SMBus" rev 0x31 at pci0 dev 31 function 4 not configured
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+uhid at uhidev0 reportid 1 not configured
+uhid at uhidev0 reportid 2 not configured
+uhid at uhidev0 reportid 3 not configured
+uhid at uhidev0 reportid 4 not configured
+uhid at uhidev0 reportid 5 not configured
+uhid at uhidev0 reportid 6 not configured
+uhid at uhidev0 reportid 7 not configured
+uhid at uhidev0 reportid 8 not configured
+uhid at uhidev0 reportid 9 not configured
+uhid at uhidev0 reportid 10 not configured
+uhid at uhidev0 reportid 11 not configured
+uhid at uhidev0 reportid 12 not configured
+uhid at uhidev0 reportid 13 not configured
+uhid at uhidev0 reportid 14 not configured
+uhid at uhidev0 reportid 15 not configured
+uhid at uhidev0 reportid 16 not configured
+uhid at uhidev0 reportid 17 not configured
+uhid at uhidev0 reportid 18 not configured
+uhid at uhidev0 reportid 22 not configured
+uhid at uhidev0 reportid 23 not configured
+uhid at uhidev0 reportid 24 not configured
+uhid at uhidev0 reportid 28 not configured
+uhid at uhidev0 reportid 32 not configured
+uhid at uhidev0 reportid 34 not configured
+uhid at uhidev0 reportid 35 not configured
+uhid at uhidev0 reportid 36 not configured
+uhid at uhidev0 reportid 37 not configured
+uhid at uhidev0 reportid 38 not configured
+uhid at uhidev0 reportid 39 not configured
+uhid at uhidev0 reportid 40 not configured
+uhid at uhidev0 reportid 48 not configured
+uhid at uhidev0 reportid 49 not configured
+uhid at uhidev0 reportid 50 not configured
+uhid at uhidev0 reportid 51 not configured
+uhid at uhidev0 reportid 52 not configured
+uhid at uhidev0 reportid 53 not configured
+uhid at uhidev0 reportid 54 not configured
+uhid at uhidev0 reportid 64 not configured
+uhid at uhidev0 reportid 65 not configured
+uhid at uhidev0 reportid 80 not configured
+uhid at uhidev0 reportid 81 not configured
+uhid at uhidev0 reportid 96 not configured
+uhid at uhidev0 reportid 97 not configured
+uhid at uhidev0 reportid 98 not configured
+uhid at uhidev0 reportid 120 not configured
+uhid at uhidev0 reportid 121 not configured
+uhid at uhidev0 reportid 122 not configured
+uhid at uhidev0 reportid 123 not configured
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd4 at scsibus2 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+sd5 at scsibus3 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 7.1 (GENERIC.MP) #465: Mon Apr 11 18:03:57 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8502562816 (8108MB)
+avail mem = 8227586048 (7846MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+com1 at acpi0 UAR2 addr 0x2f8/0x8 irq 3: ns16550a, 16 byte fifo
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"INT33A1" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+tpm0 at acpi0 TPM_ 2.0 (TIS) addr 0xfed40000/0x5000, device 0x001a15d1 rev 0x10
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpipwrres20 at acpi0: WRST
+acpipwrres21 at acpi0: WRST
+acpipwrres22 at acpi0: WRST
+acpipwrres23 at acpi0: FN00, resource for FAN0
+acpipwrres24 at acpi0: FN01, resource for FAN1
+acpipwrres25 at acpi0: FN02, resource for FAN2
+acpipwrres26 at acpi0: FN03, resource for FAN3
+acpipwrres27 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpitz1 at acpi0: critical temperature is 119 degC
+acpivideo0 at acpi0: GFX0
+ipmi at mainbus0 not configured
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2993 MHz: speeds: 3001, 3000, 2800, 2700, 2500, 2400, 2200, 2100, 1900, 1700, 1600, 1400, 1300, 1100, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x31
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus1 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus1 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+pcib0 at pci0 dev 31 function 0 "Intel C232 LPC" rev 0x31
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x31: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x1a: stts2004
+spdmem0 at iic0 addr 0x50: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+spdmem1 at iic0 addr 0x52: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT6791D rev 0x03
+lm1 at wbsio0 port 0x290/8: NCT6791D
+vmm0 at mainbus0: VMX/EPT
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+upd0 at uhidev0
+uhid0 at uhidev0 reportid 1: input=0, output=0, feature=1
+uhid1 at uhidev0 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev0 reportid 3: input=0, output=0, feature=1
+uhid3 at uhidev0 reportid 4: input=0, output=0, feature=1
+uhid4 at uhidev0 reportid 5: input=0, output=0, feature=1
+uhid5 at uhidev0 reportid 6: input=1, output=0, feature=1
+uhid6 at uhidev0 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev0 reportid 8: input=0, output=0, feature=2
+uhid8 at uhidev0 reportid 9: input=0, output=0, feature=2
+uhid9 at uhidev0 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev0 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev0 reportid 12: input=3, output=0, feature=3
+uhid12 at uhidev0 reportid 13: input=0, output=0, feature=1
+uhid13 at uhidev0 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev0 reportid 15: input=0, output=0, feature=1
+uhid15 at uhidev0 reportid 16: input=0, output=0, feature=1
+uhid16 at uhidev0 reportid 17: input=0, output=0, feature=1
+uhid17 at uhidev0 reportid 18: input=0, output=0, feature=1
+uhid18 at uhidev0 reportid 23: input=0, output=0, feature=2
+uhid19 at uhidev0 reportid 24: input=0, output=0, feature=1
+uhid20 at uhidev0 reportid 28: input=0, output=0, feature=3
+uhid21 at uhidev0 reportid 32: input=0, output=0, feature=2
+uhid22 at uhidev0 reportid 34: input=0, output=0, feature=1
+uhid23 at uhidev0 reportid 35: input=0, output=0, feature=2
+uhid24 at uhidev0 reportid 36: input=0, output=0, feature=2
+uhid25 at uhidev0 reportid 37: input=0, output=0, feature=2
+uhid26 at uhidev0 reportid 38: input=0, output=0, feature=2
+uhid27 at uhidev0 reportid 39: input=0, output=0, feature=1
+uhid28 at uhidev0 reportid 40: input=0, output=0, feature=4
+uhid29 at uhidev0 reportid 48: input=0, output=0, feature=2
+uhid30 at uhidev0 reportid 49: input=0, output=0, feature=2
+uhid31 at uhidev0 reportid 50: input=0, output=0, feature=2
+uhid32 at uhidev0 reportid 51: input=0, output=0, feature=2
+uhid33 at uhidev0 reportid 52: input=0, output=0, feature=1
+uhid34 at uhidev0 reportid 53: input=0, output=0, feature=1
+uhid35 at uhidev0 reportid 54: input=0, output=0, feature=1
+uhid36 at uhidev0 reportid 64: input=0, output=0, feature=1
+uhid37 at uhidev0 reportid 65: input=0, output=0, feature=2
+uhid38 at uhidev0 reportid 80: input=0, output=0, feature=1
+uhid39 at uhidev0 reportid 81: input=0, output=0, feature=1
+uhid40 at uhidev0 reportid 96: input=0, output=0, feature=2
+uhid41 at uhidev0 reportid 97: input=0, output=0, feature=1
+uhid42 at uhidev0 reportid 98: input=0, output=0, feature=4
+uhid43 at uhidev0 reportid 120: input=0, output=0, feature=1
+uhid44 at uhidev0 reportid 121: input=0, output=0, feature=1
+uhid45 at uhidev0 reportid 122: input=0, output=0, feature=4
+uhid46 at uhidev0 reportid 123: input=0, output=0, feature=2
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd4 at scsibus3 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+sd5 at scsibus5 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on sd3a (475031de7f85c2d7.a) swap on sd3b dump on sd3b
+syncing disks... done
+rebooting...
+OpenBSD 7.1 (GENERIC.MP) #465: Mon Apr 11 18:03:57 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8502562816 (8108MB)
+avail mem = 8227573760 (7846MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x8da5e000 (65 entries)
+bios0: vendor American Megatrends Inc. version "4602" date 09/11/2020
+bios0: ASUSTeK COMPUTER INC. P10S-I Series
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HPET LPIT SSDT SSDT SSDT DBGP DBG2 SSDT HEST SSDT UEFI SSDT DMAR SPMI TPM2 EINJ ERST BERT
+acpi0: wakeup devices PEG0(S4) PEGP(S4) PEG1(S4) PEGP(S4) PEG2(S4) PEGP(S4) RP09(S4) PXSX(S4) RP10(S4) PXSX(S4) RP11(S4) PXSX(S4) RP12(S4) PXSX(S4) RP13(S4) PXSX(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.4.1, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 256KB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 256KB 64b/line 8-way L2 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) CPU E3-1220 v5 @ 3.00GHz, 2993.03 MHz, 06-5e-03
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 256KB 64b/line 8-way L2 cache
+cpu3: smt 0, core 3, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 5 (RP09)
+acpiprt5 at acpi0: bus -1 (RP10)
+acpiprt6 at acpi0: bus -1 (RP11)
+acpiprt7 at acpi0: bus -1 (RP12)
+acpiprt8 at acpi0: bus -1 (RP13)
+acpiprt9 at acpi0: bus -1 (RP01)
+acpiprt10 at acpi0: bus -1 (RP02)
+acpiprt11 at acpi0: bus -1 (RP03)
+acpiprt12 at acpi0: bus -1 (RP04)
+acpiprt13 at acpi0: bus 1 (RP05)
+acpiprt14 at acpi0: bus 2 (BR52)
+acpiprt15 at acpi0: bus 3 (RP06)
+acpiprt16 at acpi0: bus 4 (RP07)
+acpiprt17 at acpi0: bus -1 (RP08)
+acpiprt18 at acpi0: bus -1 (RP17)
+acpiprt19 at acpi0: bus -1 (RP18)
+acpiprt20 at acpi0: bus -1 (RP19)
+acpiprt21 at acpi0: bus -1 (RP20)
+acpiprt22 at acpi0: bus -1 (RP14)
+acpiprt23 at acpi0: bus -1 (RP15)
+acpiprt24 at acpi0: bus -1 (RP16)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+com1 at acpi0 UAR2 addr 0x2f8/0x8 irq 3: ns16550a, 16 byte fifo
+acpicmos0 at acpi0
+"IPI0001" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"INT33A1" at acpi0 not configured
+acpibtn1 at acpi0: PWRB
+tpm0 at acpi0 TPM_ 2.0 (TIS) addr 0xfed40000/0x5000, device 0x001a15d1 rev 0x10
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+acpicpu0 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@256 mwait.1@0x40), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres0 at acpi0: PG00, resource for PEG0
+acpipwrres1 at acpi0: PG01, resource for PEG1
+acpipwrres2 at acpi0: PG02, resource for PEG2
+acpipwrres3 at acpi0: WRST
+acpipwrres4 at acpi0: WRST
+acpipwrres5 at acpi0: WRST
+acpipwrres6 at acpi0: WRST
+acpipwrres7 at acpi0: WRST
+acpipwrres8 at acpi0: WRST
+acpipwrres9 at acpi0: WRST
+acpipwrres10 at acpi0: WRST
+acpipwrres11 at acpi0: WRST
+acpipwrres12 at acpi0: WRST
+acpipwrres13 at acpi0: WRST
+acpipwrres14 at acpi0: WRST
+acpipwrres15 at acpi0: WRST
+acpipwrres16 at acpi0: WRST
+acpipwrres17 at acpi0: WRST
+acpipwrres18 at acpi0: WRST
+acpipwrres19 at acpi0: WRST
+acpipwrres20 at acpi0: WRST
+acpipwrres21 at acpi0: WRST
+acpipwrres22 at acpi0: WRST
+acpipwrres23 at acpi0: FN00, resource for FAN0
+acpipwrres24 at acpi0: FN01, resource for FAN1
+acpipwrres25 at acpi0: FN02, resource for FAN2
+acpipwrres26 at acpi0: FN03, resource for FAN3
+acpipwrres27 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpitz1 at acpi0: critical temperature is 119 degC
+acpivideo0 at acpi0: GFX0
+ipmi at mainbus0 not configured
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2993 MHz: speeds: 3001, 3000, 2800, 2700, 2500, 2400, 2200, 2100, 1900, 1700, 1600, 1400, 1300, 1100, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Xeon E3-1200 v5 Host" rev 0x07
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x31: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+pchtemp0 at pci0 dev 20 function 2 "Intel 100 Series Thermal" rev 0x31
+"Intel 100 Series MEI" rev 0x31 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x31: msi, AHCI 1.3.1
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+ahci0: port 3: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 1 lun 0: <ATA, HGST HUS724020AL, MF6O> naa.5000cca22dcf9d5c
+sd0: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd1 at scsibus1 targ 2 lun 0: <ATA, Hitachi HUA72302, MK7O> naa.5000cca224dfeb58
+sd1: 1907729MB, 512 bytes/sector, 3907029168 sectors
+sd2 at scsibus1 targ 3 lun 0: <ATA, WDC WD20PURX-64P, 80.0> naa.50014ee2b8723818
+sd2: 1907729MB, 512 bytes/sector, 3907029168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x03
+pci2 at ppb1 bus 2
+"ASPEED Technology AST2000" rev 0x30 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 5 "Intel 100 Series PCIE" rev 0xf1: msi
+pci3 at ppb2 bus 3
+em0 at pci3 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+em0: PHY reset is blocked due to SOL/IDER session.
+ppb3 at pci0 dev 28 function 6 "Intel 100 Series PCIE" rev 0xf1: msi
+pci4 at ppb3 bus 4
+em1 at pci4 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+ppb4 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci5 at ppb4 bus 5
+nvme0 at pci5 dev 0 function 0 "Toshiba NVMe" rev 0x01: msix, NVMe 1.2
+nvme0: TOSHIBA-RC100, firmware ADRA0103, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd3 at scsibus2 targ 1 lun 0: <NVMe, TOSHIBA-RC100, ADRA>
+sd3: 228936MB, 512 bytes/sector, 468862128 sectors
+pcib0 at pci0 dev 31 function 0 "Intel C232 LPC" rev 0x31
+"Intel 100 Series PMC" rev 0x31 at pci0 dev 31 function 2 not configured
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x31: apic 2 int 16
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x18: stts2004
+sdtemp1 at iic0 addr 0x1a: stts2004
+spdmem0 at iic0 addr 0x50: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+spdmem1 at iic0 addr 0x52: 4GB DDR4 SDRAM ECC PC4-17000 with thermal sensor
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x2e/2: NCT6791D rev 0x03
+lm1 at wbsio0 port 0x290/8: NCT6791D
+vmm0 at mainbus0: VMX/EPT
+efifb0 at mainbus0: 1024x768, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+uhidev0 at uhub0 port 4 configuration 1 interface 0 "APC Back-UPS ES 550 FW:828.D2 .I USB FW:D2" rev 1.10/1.06 addr 2
+uhidev0: iclass 3/0, 123 report ids
+upd0 at uhidev0
+uhid0 at uhidev0 reportid 1: input=0, output=0, feature=1
+uhid1 at uhidev0 reportid 2: input=0, output=0, feature=1
+uhid2 at uhidev0 reportid 3: input=0, output=0, feature=1
+uhid3 at uhidev0 reportid 4: input=0, output=0, feature=1
+uhid4 at uhidev0 reportid 5: input=0, output=0, feature=1
+uhid5 at uhidev0 reportid 6: input=1, output=0, feature=1
+uhid6 at uhidev0 reportid 7: input=0, output=0, feature=2
+uhid7 at uhidev0 reportid 8: input=0, output=0, feature=2
+uhid8 at uhidev0 reportid 9: input=0, output=0, feature=2
+uhid9 at uhidev0 reportid 10: input=0, output=0, feature=1
+uhid10 at uhidev0 reportid 11: input=0, output=0, feature=1
+uhid11 at uhidev0 reportid 12: input=3, output=0, feature=3
+uhid12 at uhidev0 reportid 13: input=0, output=0, feature=1
+uhid13 at uhidev0 reportid 14: input=0, output=0, feature=1
+uhid14 at uhidev0 reportid 15: input=0, output=0, feature=1
+uhid15 at uhidev0 reportid 16: input=0, output=0, feature=1
+uhid16 at uhidev0 reportid 17: input=0, output=0, feature=1
+uhid17 at uhidev0 reportid 18: input=0, output=0, feature=1
+uhid18 at uhidev0 reportid 23: input=0, output=0, feature=2
+uhid19 at uhidev0 reportid 24: input=0, output=0, feature=1
+uhid20 at uhidev0 reportid 28: input=0, output=0, feature=3
+uhid21 at uhidev0 reportid 32: input=0, output=0, feature=2
+uhid22 at uhidev0 reportid 34: input=0, output=0, feature=1
+uhid23 at uhidev0 reportid 35: input=0, output=0, feature=2
+uhid24 at uhidev0 reportid 36: input=0, output=0, feature=2
+uhid25 at uhidev0 reportid 37: input=0, output=0, feature=2
+uhid26 at uhidev0 reportid 38: input=0, output=0, feature=2
+uhid27 at uhidev0 reportid 39: input=0, output=0, feature=1
+uhid28 at uhidev0 reportid 40: input=0, output=0, feature=4
+uhid29 at uhidev0 reportid 48: input=0, output=0, feature=2
+uhid30 at uhidev0 reportid 49: input=0, output=0, feature=2
+uhid31 at uhidev0 reportid 50: input=0, output=0, feature=2
+uhid32 at uhidev0 reportid 51: input=0, output=0, feature=2
+uhid33 at uhidev0 reportid 52: input=0, output=0, feature=1
+uhid34 at uhidev0 reportid 53: input=0, output=0, feature=1
+uhid35 at uhidev0 reportid 54: input=0, output=0, feature=1
+uhid36 at uhidev0 reportid 64: input=0, output=0, feature=1
+uhid37 at uhidev0 reportid 65: input=0, output=0, feature=2
+uhid38 at uhidev0 reportid 80: input=0, output=0, feature=1
+uhid39 at uhidev0 reportid 81: input=0, output=0, feature=1
+uhid40 at uhidev0 reportid 96: input=0, output=0, feature=2
+uhid41 at uhidev0 reportid 97: input=0, output=0, feature=1
+uhid42 at uhidev0 reportid 98: input=0, output=0, feature=4
+uhid43 at uhidev0 reportid 120: input=0, output=0, feature=1
+uhid44 at uhidev0 reportid 121: input=0, output=0, feature=1
+uhid45 at uhidev0 reportid 122: input=0, output=0, feature=4
+uhid46 at uhidev0 reportid 123: input=0, output=0, feature=2
+umass0 at uhub0 port 5 configuration 1 interface 0 "Samsung Flash Drive FIT" rev 2.10/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd4 at scsibus3 targ 1 lun 0: <Samsung, Flash Drive FIT, 1100> removable serial....
+sd4: 30594MB, 512 bytes/sector, 62656641 sectors
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+sd5 at scsibus5 targ 1 lun 0: <OPENBSD, SR RAID 1, 006>
+sd5: 1907726MB, 512 bytes/sector, 3907023473 sectors
+root on sd3a (475031de7f85c2d7.a) swap on sd3b dump on sd3b

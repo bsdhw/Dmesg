@@ -1,0 +1,310 @@
+---<<BOOT>>---
+Copyright (c) B817-9222 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 main-c52c98e69a: Fri Jan 20 20:24:34 EST 2023
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+VT(efifb): resolution 1024x768
+CPU: AMD Ryzen 9 5950X 16-Core Processor             (4500.16-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0xa20f10  Family=0x19  Model=0x21  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ef8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c97a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x40069c<UMIP,PKU,OSPKE,VAES,VPCLMULQDQ,RDPID>
+  Structured Extended Features3=0x10<FSRM>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x111ef657<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,IBRS,STIBP,STIBP_ALWAYSON,PREFER_IBRS,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 68717379584 (65534 MB)
+avail memory = 66741800960 (63649 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 32 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 8 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 29 28 31 17 22 26 1 18 21 25 13 4 11 6 9 3 15 19 27 20 30 16 24 23 7 10 8 12 5 2 14
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0xcb7e9000-0xcb7e901e
+smbios0: Version: 3.3, BCD Revision: 3.3
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+AMD-Vi: IVRS Info VAsize = 64 PAsize = 48 GVAsize = 2 flags:0
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x2> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+amdsmn0: <AMD Family 19h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+amdiommu0 at device 0.2 on pci0
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xfcf00000-0xfcf03fff at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 1.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+nvme1: <Generic NVMe Device> mem 0xfcb00000-0xfcb03fff at device 0.0 on pci4
+pcib5: <ACPI PCI-PCI bridge> at device 2.0 on pci3
+pci5: <ACPI PCI bus> on pcib5
+pci5: <network, ethernet> at device 0.0 (no driver attached)
+pcib6: <ACPI PCI-PCI bridge> at device 3.0 on pci3
+pci6: <ACPI PCI bus> on pcib6
+pci6: <network> at device 0.0 (no driver attached)
+pcib7: <ACPI PCI-PCI bridge> at device 4.0 on pci3
+pci7: <ACPI PCI bus> on pcib7
+re0: <Realtek PCIe 2.5GbE Family Controller> port 0xe000-0xe0ff mem 0xfc980000-0xfc98ffff,0xfc9ac000-0xfc9affff at device 0.0 on pci7
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.98.00
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib8: <ACPI PCI-PCI bridge> at device 5.0 on pci3
+pci8: <ACPI PCI bus> on pcib8
+igb0: <Intel(R) I211 (Copper)> port 0xd000-0xd01f mem 0xfc800000-0xfc81ffff,0xfc820000-0xfc823fff at device 0.0 on pci8
+igb0: NVM V0.6 imgtype1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib9: <ACPI PCI-PCI bridge> at device 8.0 on pci3
+pci9: <ACPI PCI bus> on pcib9
+xhci0: <AMD Matisse USB 3.0 controller> mem 0xfc300000-0xfc3fffff at device 0.1 on pci9
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+xhci1: <AMD Matisse USB 3.0 controller> mem 0xfc200000-0xfc2fffff at device 0.3 on pci9
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib10: <PCI-PCI bridge> at device 9.0 on pci3
+pci10: <PCI bus> on pcib10
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xfc700000-0xfc7007ff at device 0.0 on pci10
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+pcib11: <PCI-PCI bridge> at device 10.0 on pci3
+pci11: <PCI bus> on pcib11
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xfc600000-0xfc6007ff at device 0.0 on pci11
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich1: <AHCI channel> at channel 0 on ahci1
+pcib12: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci12: <ACPI PCI bus> on pcib12
+vgapci0: <VGA-compatible display> port 0xf000-0xf07f mem 0xfb000000-0xfbffffff,0x7800000000-0x7bffffffff,0x7c00000000-0x7c01ffffff at device 0.0 on pci12
+hdac0: <NVIDIA (0x1aef) HDA Controller> mem 0xfc080000-0xfc083fff at device 0.1 on pci12
+pcib13: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci13: <ACPI PCI bus> on pcib13
+pcib14: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci14: <ACPI PCI bus> on pcib14
+pci14: <encrypt/decrypt> at device 0.1 (no driver attached)
+xhci2: <AMD Matisse USB 3.0 controller> mem 0xfcc00000-0xfccfffff at device 0.3 on pci14
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+ivhd0: <AMD-Vi/IOMMU ivhd with EFR> on acpi0
+ivhd0: Flag:b0<IotlbSup,Coherent>
+ivhd0: Features(type:0x11) MsiNumPPR = 0 PNBanks= 2 PNCounters= 0
+ivhd0: Extended features[31:0]:22294ade<PPRSup,<b2>,NXSup,GTSup,IASup,GASup,PCSup> HATS = 0x2 GATS = 0x0 GLXSup = 0x1 SmiFSup = 0x1 SmiFRC = 0x2 GAMSup = 0x1 DualPortLogSup = 0x2 DualEventLogSup = 0x2
+ivhd0: Extended features[62:32]:58f77ef<USSup,PprOvrflwEarlySup,PPRAutoRspSup,BlKStopMrkSup,PerfOptSup,MsiCapMmioSup,GIOSup,HASup,EPHSup,AttrFWSup> Max PASID: 0x2f DevTblSegSup = 0x3 MarcSup = 0x1
+ivhd0: supported paging level:7, will use only: 4
+ivhd0: device [0x8 - 0xfffe] config:0
+ivhd0: device [0xff00 - 0xffff] config:0
+ivhd0: PCI cap 0x190b640f@0x40 feature:19<IOTLB,EFR,CapExt>
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+ns8250: UART FCR is broken
+ns8250: UART FCR is broken
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1124990763 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+[nl_mod] netlink_modevent: Loading
+[nl_mod] netlink_modevent: netlink support is in BETA stage
+[nl_mod] netlink_register_proto: Registered netlink NETLINK_GENERIC(16) handler
+[nl_generic] genl_register_family: Registered family nlctrl id 16
+[nl_generic] genl_register_cmds: Adding cmd GETFAMILY(3) to family nlctrl
+[nl_route_core] rtnl_load: rtnl loading
+[nl_mod] netlink_register_proto: Registered netlink NETLINK_ROUTE(0) handler
+ugen2.1: <AMD XHCI root HUB> at usbus2
+ugen0.1: <AMD XHCI root HUB> at usbus0
+ugen1.1: <AMD XHCI root HUB> at usbus1
+uhub0 on usbus2
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub1 on usbus0
+uhub1: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvme0: Allocated 64MB host memory buffer
+uhub2 on usbus1
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <Samsung SSD 980 1TB> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+nvd1: <Samsung SSD 970 EVO Plus 1TB> NVMe namespace
+nvd1: 953869MB (1953525168 512 byte sectors)
+hdacc0: <NVIDIA (0x009a) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x009a) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x009a) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x009a) (HDMI/DP 8ch)> at nid 5 on hdaa0
+pcm2: <NVIDIA (0x009a) (HDMI/DP 8ch)> at nid 6 on hdaa0
+pcm3: <NVIDIA (0x009a) (HDMI/DP 8ch)> at nid 7 on hdaa0
+Trying to mount root from zfs:zroot/ROOT/default []...
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <ST8000VN0022-2EL112 SC61> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 7630885MB (15628053168 512 byte sectors)
+uhub0: 8 ports with 8 removable, self powered
+uhub1: 10 ports with 10 removable, self powered
+uhub2: 10 ports with 10 removable, self powered
+ugen2.2: <Razer Razer HyperPolling Wireless Dongle> at usbus2
+ukbd0 on uhub0
+ukbd0: <Razer HyperPolling Wireless Dongle> on usbus2
+kbd2 at ukbd0
+ugen0.2: <Razer DSV2 Pro> at usbus0
+ukbd1 on uhub1
+ukbd1: <Razer DSV2 Pro, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+kbd3 at ukbd1
+ukbd2 on uhub1
+ukbd2: <Razer DSV2 Pro, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+kbd4 at ukbd2
+ugen1.2: <Yubico YubiKey OTP+FIDO+CCID> at usbus1
+ukbd3 on uhub2
+ukbd3: <Yubico YubiKey OTP+FIDO+CCID, class 0/0, rev 2.00/5.43, addr 1> on usbus1
+kbd5 at ukbd3
+ugen2.3: <vendor 0x046d Logitech BRIO> at usbus2
+Root mount waiting for: usbus0 usbus1
+ugen0.3: <Razer Razer Tartarus V2> at usbus0
+ukbd4 on uhub1
+ukbd4: <Razer Razer Tartarus V2, class 0/0, rev 2.00/2.00, addr 2> on usbus0
+kbd6 at ukbd4
+ukbd5 on uhub1
+ukbd5: <Razer Razer Tartarus V2, class 0/0, rev 2.00/2.00, addr 2> on usbus0
+kbd7 at ukbd5
+ugen1.3: <AsusTek Computer Inc. AURA LED Controller> at usbus1
+ugen0.4: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub3 on uhub1
+uhub3: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/60.52, addr 3> on usbus0
+uhub3: MTT enabled
+Root mount waiting for: usbus0
+uhub3: 4 ports with 4 removable, self powered
+ugen0.5: <vendor 0x8087 product 0x0029> at usbus0
+nvidia0: <NVIDIA GeForce RTX 3080 Ti> on vgapci0
+vgapci0: child nvidia0 requested pci_enable_io
+vgapci0: child nvidia0 requested pci_enable_io
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  525.85.05  Sat Jan 14 00:30:55 UTC 2023
+usbhid0 on uhub0
+usbhid0: <Razer HyperPolling Wireless Dongle> on usbus2
+usbhid1 on uhub1
+usbhid1: <Razer DSV2 Pro, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+hidbus0: <HID bus> on usbhid0
+usbhid2 on uhub2
+usbhid2: <Yubico YubiKey OTP+FIDO+CCID, class 0/0, rev 2.00/5.43, addr 1> on usbus1
+usbhid3 on uhub0
+usbhid3: <Razer HyperPolling Wireless Dongle> on usbus2
+hidbus1: <HID bus> on usbhid3
+hidbus2: <HID bus> on usbhid1
+hidbus3: <HID bus> on usbhid2
+usbhid4 on uhub0
+usbhid4: <vendor 0x046d Logitech BRIO, class 239/2, rev 3.10/3.17, addr 2> on usbus2
+hidbus4: <HID bus> on usbhid4
+usbhid5 on uhub1
+usbhid5: <Razer Razer Tartarus V2, class 0/0, rev 2.00/2.00, addr 2> on usbus0
+usbhid6 on uhub2
+usbhid6: <AsusTek Computer Inc. AURA LED Controller, class 0/0, rev 2.00/1.00, addr 2> on usbus1
+hidbus5: <HID bus> on usbhid5
+hidbus6: <HID bus> on usbhid6
+Intel(R) Wireless WiFi based driver for FreeBSD
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+mlx4_core0: <mlx4_core> mem 0xfc500000-0xfc5fffff,0x7c02800000-0x7c02ffffff at device 0.0 on pci5
+mlx4_core: Mellanox ConnectX core driver v3.7.1 (November 2021)
+mlx4_core: Initializing mlx4_core
+mlx4_core0: Unable to determine PCI device chain minimum BW
+iwlwifi0: <iwlwifi> mem 0xfca00000-0xfca03fff at device 0.0 on pci6
+iwlwifi0: successfully loaded firmware image 'iwlwifi-cc-a0-73.ucode'
+iwlwifi0: api flags index 2 larger than supported by driver
+iwlwifi0: TLV_FW_FSEQ_VERSION: FSEQ Version: XXX.XXX.XXX.XXX
+iwlwifi0: loaded firmware version 73.35c0a2c6.0 cc-a0-73.ucode op_mode iwlmvm
+iwlwifi0: Detected Intel(R) Wi-Fi 6 AX200 160MHz, REV=0x340
+iwlwifi0: Detected RF HR B3, rfid=0x10a100
+iwlwifi0: base HW address: XXX
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134AWW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134AMW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134ABAW.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134ACCE.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+acpi_wmi5: <ACPI-WMI mapping> on acpi0
+hms0: <Razer Razer HyperPolling Wireless Dongle Mouse> on hidbus0
+hms0: 5 buttons and [XYWH] coordinates ID=0
+hkbd0: <Razer Razer HyperPolling Wireless Dongle Keyboard> on hidbus1
+kbd8 at hkbd0
+hms1: <Razer Razer HyperPolling Wireless Dongle Mouse> on hidbus1
+hms1: 6 buttons and [XYW] coordinates ID=10
+hcons0: <Razer Razer HyperPolling Wireless Dongle Consumer Control> on hidbus1
+hsctrl0: <Razer Razer HyperPolling Wireless Dongle System Control> on hidbus1
+hms2: <Razer DSV2 Pro Mouse> on hidbus2
+hms2: 5 buttons and [XYWH] coordinates ID=0
+hms3: <Razer Razer Tartarus V2 Mouse> on hidbus5
+hms3: 5 buttons and [XYW] coordinates ID=0
+wlan0: Ethernet address: ...
+lo0: link state changed to UP
+re0: link state changed to UP
+uaudio0 on uhub0
+uaudio0: <vendor 0x046d Logitech BRIO, class 239/2, rev 3.10/3.17, addr 2> on usbus2
+uaudio0: No playback.
+uaudio0: Record[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 24000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: No MIDI sequencer.
+pcm4: <USB audio> on uaudio0
+uaudio0: No HID volume keys found.
+ubt0 on uhub1
+ubt0: <vendor 0x8087 product 0x0029, class 224/1, rev 2.01/0.01, addr 4> on usbus0

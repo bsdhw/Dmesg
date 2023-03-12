@@ -1,0 +1,1177 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p3 stable/22.7-n250262-83840459d88 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz (3200.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506e3  Family=0x6  Model=0x5e  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16462983168 (15700 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   CBX3   >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 2 3
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xf05e0-0xf05fe
+smbios0: Version: 2.8, BCD Revision: 2.8
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <DELL CBX3   >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ix0: <Intel(R) X540-AT2> mem 0xd0200000-0xd03fffff,0xd0404000-0xd0407fff irq 17 at device 0.0 on pci1
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: Option ROM V17-b5-p10 eTrack 0x8000059e PHY FW V286
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) X540-AT2> mem 0xd0000000-0xd01fffff,0xd0400000-0xd0403fff irq 16 at device 0.1 on pci1
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: Option ROM V17-b5-p10 eTrack 0x8000059e PHY FW V286
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xde000000-0xdeffffff,0xc0000000-0xcfffffff irq 17 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xdf210000-0xdf21ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xdf228000-0xdf229fff,0xdf22c000-0xdf22c0ff,0xdf22b000-0xdf22b7ff irq 18 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xe000-0xe0ff mem 0xdf004000-0xdf004fff,0xdf000000-0xdf003fff irq 16 at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: turning off MSI enable bit.
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Sunrise Point HDA Controller> mem 0xdf220000-0xdf223fff,0xdf200000-0xdf20ffff irq 16 at device 31.3 on pci0
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+driver bug: Unable to set devclass (class: atkbdc devname: (unknown))
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+Timecounter "TSC-low" frequency 1595996785 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Realtek ALC255 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC255 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC255 (Rear Analog Line-out)> at nid 27 on hdaa0
+hdacc1: <Intel Skylake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Skylake Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel Skylake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus4 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 840 Series DXT08B0Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ses0: ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+ses0: (none) in 'Slot 01', SATA Slot: scbus1 target 0
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <PLDS DVD+-RW DU-8A5LH DD11> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA6, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub0: 20 ports with 20 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <Dell Dell USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.01, addr 1> on usbus0
+kbd2 at ukbd0
+WARNING: /mnt was not properly dismounted
+WARNING: /mnt: mount pending error: blocks 27256 files 52
+re0: link state changed to DOWN
+pchtherm0: <Skylake PCH 100 Thermal Subsystem> mem 0xdf22e000-0xdf22efff irq 18 at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-H SMBus controller> port 0xf040-0xf05f mem 0xdf22a000-0xdf22a0ff irq 16 at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.AMW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+lo0: link state changed to UP
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+pflog0: permanently promiscuous mode enabled
+ix1: link state changed to UP
+vlan0: changing name to 'vlan01'
+vlan1: changing name to 'vlan02'
+vlan2: changing name to 'vlan03'
+vlan3: changing name to 'vlan04'
+ix1: link state changed to DOWN
+vlan02: link state changed to DOWN
+vlan04: link state changed to DOWN
+vlan01: link state changed to DOWN
+vlan03: link state changed to DOWN
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+ix1: link state changed to UP
+vlan02: link state changed to UP
+vlan04: link state changed to UP
+vlan01: link state changed to UP
+vlan03: link state changed to UP
+ix0: link state changed to UP
+484.368870 [1139] generic_netmap_attach     Emulated adapter for vlan02 created (prev was NULL)
+484.368885 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan02 destroyed
+484.368917 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+484.368944 [1139] generic_netmap_attach     Emulated adapter for vlan02 created (prev was NULL)
+484.642065 [ 320] generic_netmap_register   Emulated adapter for vlan02 activated
+484.642133 [1139] generic_netmap_attach     Emulated adapter for vlan04 created (prev was NULL)
+484.642145 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan04 destroyed
+484.642220 [1139] generic_netmap_attach     Emulated adapter for vlan04 created (prev was NULL)
+484.642283 [ 320] generic_netmap_register   Emulated adapter for vlan04 activated
+484.645094 [1139] generic_netmap_attach     Emulated adapter for vlan01 created (prev was NULL)
+484.645106 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan01 destroyed
+484.645168 [1139] generic_netmap_attach     Emulated adapter for vlan01 created (prev was NULL)
+484.645241 [ 320] generic_netmap_register   Emulated adapter for vlan01 activated
+ix1: link state changed to DOWN
+vlan02: link state changed to DOWN
+vlan04: link state changed to DOWN
+vlan01: link state changed to DOWN
+vlan03: link state changed to DOWN
+ix1: link state changed to UP
+vlan02: link state changed to UP
+vlan04: link state changed to UP
+vlan01: link state changed to UP
+vlan03: link state changed to UP
+484.935733 [1139] generic_netmap_attach     Emulated adapter for vlan03 created (prev was NULL)
+484.935745 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan03 destroyed
+484.935818 [1139] generic_netmap_attach     Emulated adapter for vlan03 created (prev was NULL)
+484.935880 [ 320] generic_netmap_register   Emulated adapter for vlan03 activated
+484.939052 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+ix1: link state changed to DOWN
+vlan02: link state changed to DOWN
+vlan04: link state changed to DOWN
+vlan01: link state changed to DOWN
+vlan03: link state changed to DOWN
+ix1: link state changed to UP
+vlan02: link state changed to UP
+vlan04: link state changed to UP
+vlan01: link state changed to UP
+vlan03: link state changed to UP
+524.542876 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+525.000510 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+526.000510 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+527.000511 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+528.000512 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+529.000510 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+530.000511 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+531.000511 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+532.000510 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+533.000510 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+534.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+535.000512 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+536.000511 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+537.000515 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+538.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+539.000517 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+540.000511 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+541.000511 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+542.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+543.000511 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+544.036814 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+545.000510 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+546.000511 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+547.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+548.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+549.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+550.000511 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+551.000517 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+552.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+553.000518 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+554.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+555.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+556.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+557.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+558.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+559.000510 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+560.000510 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+561.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+562.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+563.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+564.000515 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+565.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+566.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+567.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+568.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+569.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+570.000605 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+571.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+572.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+573.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+574.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+575.000509 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+576.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+577.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+578.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+579.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+580.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+581.000510 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+582.000506 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+583.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+583.351440 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+ix0: permanently promiscuous mode enabled
+583.645445 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+ix0: link state changed to DOWN
+584.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+584.252106 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+585.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+ix0: permanently promiscuous mode disabled
+586.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+587.000508 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+588.000506 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+589.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+590.000506 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+591.000507 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+592.000506 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+ix0: link state changed to UP
+593.000506 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+594.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+595.000506 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+596.000506 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+597.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+598.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+599.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+600.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+601.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+602.000506 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+603.000514 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+604.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+605.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+606.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+607.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+608.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+609.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+610.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+611.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+612.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+613.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+614.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+615.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+616.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+617.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+618.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+619.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+620.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+621.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+622.000505 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+623.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+624.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+625.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+626.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+627.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+628.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+629.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+630.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+631.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+632.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+633.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+634.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+635.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+636.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+637.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+638.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+639.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+640.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+641.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+642.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+643.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+644.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+645.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+646.000504 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+647.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+648.000503 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+649.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+650.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+651.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+652.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+653.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+654.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+655.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+656.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+657.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+658.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+659.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+660.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+661.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+662.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+663.000502 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+664.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+665.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+666.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+667.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+668.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+668.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+669.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+670.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+671.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+672.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+673.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+674.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+675.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+676.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+677.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+678.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+679.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+680.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+681.000501 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+682.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+683.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+684.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+685.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+686.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+687.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+688.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+689.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+690.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+691.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+692.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+693.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+694.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+695.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+696.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+697.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+698.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+699.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+700.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+701.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+702.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+703.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+704.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+705.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+706.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+707.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+708.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+709.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+710.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+711.000499 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+712.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+713.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+714.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+715.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+716.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+717.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+718.000500 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+719.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+720.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+721.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+722.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+723.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+724.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+725.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+726.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+727.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+728.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+729.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+730.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+731.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+732.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+733.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+734.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+735.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+736.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+737.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+738.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+739.000497 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+740.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+741.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+742.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+743.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+744.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+745.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+746.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+747.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+748.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+749.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+750.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+751.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+752.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+753.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+754.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+755.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+756.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+757.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+758.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+759.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+760.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+761.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+762.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+763.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+764.000495 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+765.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+766.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+767.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+768.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+769.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+770.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+771.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+772.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+773.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+774.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+775.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+776.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+777.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+778.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+779.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+780.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+781.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+782.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+783.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+784.000494 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+785.000498 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+786.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+787.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+788.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+789.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+790.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+791.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+792.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+793.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+794.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+795.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+796.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+797.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+798.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+799.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+800.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+801.000493 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+802.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+803.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+804.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+805.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+806.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+807.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+808.000496 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+809.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+810.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+811.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+812.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+813.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+814.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+815.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+816.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+817.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+818.000491 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+819.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+820.000492 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+821.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+822.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+823.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+824.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+825.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+826.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+827.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+828.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+829.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+830.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+831.003190 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+832.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+833.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+834.000490 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+835.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+836.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+837.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+838.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+839.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+840.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+841.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+842.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+843.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+844.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+845.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+846.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+847.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+848.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+849.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+850.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+851.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+852.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+853.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+854.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+855.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+856.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+857.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+858.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+859.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+860.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+861.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+862.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+863.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+864.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+865.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+866.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+867.000489 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+868.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+869.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+870.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+871.000488 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+872.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+873.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+874.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+875.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+876.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+877.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+878.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+879.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+880.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+881.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+882.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+883.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+884.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+885.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+886.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+887.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+888.000487 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+889.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+890.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+891.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+892.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+893.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+894.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+895.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+896.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+897.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+898.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+899.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+900.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+901.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+902.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+903.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+904.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+905.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+906.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+907.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+908.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+909.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+910.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+911.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+912.000486 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+913.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+914.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+915.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+916.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+917.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+918.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+919.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+920.000485 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+921.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+922.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+923.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+924.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+925.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+926.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+927.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+928.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+929.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+930.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+931.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+932.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+933.000484 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+934.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+935.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+936.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+937.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+938.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+939.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+940.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+941.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+942.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+943.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+944.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+945.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+946.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+947.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+948.000483 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+949.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+950.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+951.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+952.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+953.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+954.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+955.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+956.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+957.000480 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+958.000481 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+959.000480 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+960.000482 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+ix1: link state changed to DOWN
+vlan02: link state changed to DOWN
+vlan04: link state changed to DOWN
+vlan01: link state changed to DOWN
+vlan03: link state changed to DOWN
+961.000486 [4022] netmap_transmit           ix0 drop mbuf that needs checksum offload
+962.000482 [4022] netmap_transmit           ix0 drop mbuf that needs checksum offload
+963.000483 [4022] netmap_transmit           ix0 drop mbuf that needs checksum offload
+964.000483 [4022] netmap_transmit           ix0 drop mbuf that needs checksum offload
+965.000480 [4022] netmap_transmit           ix0 drop mbuf that needs checksum offload
+966.000481 [4022] netmap_transmit           ix0 drop mbuf that needs checksum offload
+967.000481 [4022] netmap_transmit           ix0 drop mbuf that needs checksum offload
+968.000479 [4022] netmap_transmit           ix0 drop mbuf that needs checksum offload
+969.000482 [4022] netmap_transmit           ix0 drop mbuf that needs checksum offload
+ix0: link state changed to DOWN
+arprequest_internal: cannot find matching address
+ix1: link state changed to UP
+vlan02: link state changed to UP
+vlan04: link state changed to UP
+vlan01: link state changed to UP
+vlan03: link state changed to UP
+ix1: link state changed to DOWN
+vlan02: link state changed to DOWN
+vlan04: link state changed to DOWN
+vlan01: link state changed to DOWN
+vlan03: link state changed to DOWN
+ix0: link state changed to UP
+ix1: link state changed to UP
+vlan02: link state changed to UP
+vlan04: link state changed to UP
+vlan01: link state changed to UP
+vlan03: link state changed to UP
+114.277736 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+115.000471 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+116.000470 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+117.000471 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+118.000470 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+119.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+120.000470 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+121.000470 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+122.000470 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+123.000470 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+124.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+125.000470 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+126.000470 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+127.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+128.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+129.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+130.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+131.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+132.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+133.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+134.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+135.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+136.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+137.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+138.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+139.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+ix1: link state changed to DOWN
+vlan02: link state changed to DOWN
+vlan04: link state changed to DOWN
+vlan01: link state changed to DOWN
+vlan03: link state changed to DOWN
+140.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+ix0: link state changed to DOWN
+141.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+142.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+143.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+144.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+145.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+146.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+147.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+148.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+149.000469 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+150.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+151.000468 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+152.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+153.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+154.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+155.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+156.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+157.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+158.000467 [4022] netmap_transmit           ix1 drop mbuf that needs checksum offload
+158.528735 [ 295] generic_netmap_unregister Emulated adapter for vlan03 deactivated
+158.528785 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan03 destroyed
+159.917934 [ 295] generic_netmap_unregister Emulated adapter for vlan02 deactivated
+159.917984 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan02 destroyed
+159.918292 [ 295] generic_netmap_unregister Emulated adapter for vlan01 deactivated
+159.918350 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan01 destroyed
+159.922648 [ 295] generic_netmap_unregister Emulated adapter for vlan04 deactivated
+159.922689 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan04 destroyed
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 11 11 1 0 0 0 done
+All buffers synced.
+Uptime: 14m12s
+ukbd0: detached
+uhub0: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p3 stable/22.7-n250262-83840459d88 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz (3200.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506e3  Family=0x6  Model=0x5e  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16462983168 (15700 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   CBX3   >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 2 3
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xf05e0-0xf05fe
+smbios0: Version: 2.8, BCD Revision: 2.8
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <DELL CBX3   >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ix0: <Intel(R) X540-AT2> mem 0xd0200000-0xd03fffff,0xd0404000-0xd0407fff irq 17 at device 0.0 on pci1
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: Option ROM V17-b5-p10 eTrack 0x8000059e PHY FW V286
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) X540-AT2> mem 0xd0000000-0xd01fffff,0xd0400000-0xd0403fff irq 16 at device 0.1 on pci1
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: Option ROM V17-b5-p10 eTrack 0x8000059e PHY FW V286
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xde000000-0xdeffffff,0xc0000000-0xcfffffff irq 17 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xdf210000-0xdf21ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xdf228000-0xdf229fff,0xdf22c000-0xdf22c0ff,0xdf22b000-0xdf22b7ff irq 18 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xe000-0xe0ff mem 0xdf004000-0xdf004fff,0xdf000000-0xdf003fff irq 16 at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Sunrise Point HDA Controller> mem 0xdf220000-0xdf223fff,0xdf200000-0xdf20ffff irq 16 at device 31.3 on pci0
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+driver bug: Unable to set devclass (class: atkbdc devname: (unknown))
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+Timecounter "TSC-low" frequency 1595996833 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Realtek ALC255 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC255 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC255 (Rear Analog Line-out)> at nid 27 on hdaa0
+hdacc1: <Intel Skylake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Skylake Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel Skylake (HDMI/DP 8ch)> at nid 3 on hdaa1
+ses0 at ahciem0 bus 0 scbus4 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 840 Series DXT08B0Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ses0: ada0,pass0 in 'Slot 00', SATA Slot: scbus0 target 0
+ses0: pass1,cd0 in 'Slot 01', SATA Slot: scbus1 target 0
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <PLDS DVD+-RW DU-8A5LH DD11> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA6, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub0: 20 ports with 20 removable, self powered
+ugen0.2: <Dell Dell USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.01, addr 1> on usbus0
+kbd2 at ukbd0
+re0: link state changed to DOWN
+pchtherm0: <Skylake PCH 100 Thermal Subsystem> mem 0xdf22e000-0xdf22efff irq 18 at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-H SMBus controller> port 0xf040-0xf05f mem 0xdf22a000-0xdf22a0ff irq 16 at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.AMW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+lo0: link state changed to UP
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+pflog0: permanently promiscuous mode enabled
+vlan0: changing name to 'vlan01'
+vlan1: changing name to 'vlan02'
+vlan2: changing name to 'vlan03'
+vlan3: changing name to 'vlan04'
+273.595111 [1139] generic_netmap_attach     Emulated adapter for vlan01 created (prev was NULL)
+273.595126 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan01 destroyed
+273.595179 [1139] generic_netmap_attach     Emulated adapter for vlan01 created (prev was NULL)
+273.883422 [ 320] generic_netmap_register   Emulated adapter for vlan01 activated
+273.883593 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+273.883887 [1139] generic_netmap_attach     Emulated adapter for vlan02 created (prev was NULL)
+273.883898 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan02 destroyed
+273.884018 [1139] generic_netmap_attach     Emulated adapter for vlan02 created (prev was NULL)
+273.884086 [ 320] generic_netmap_register   Emulated adapter for vlan02 activated
+273.896967 [1139] generic_netmap_attach     Emulated adapter for vlan04 created (prev was NULL)
+273.896982 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan04 destroyed
+273.897034 [1139] generic_netmap_attach     Emulated adapter for vlan04 created (prev was NULL)
+273.900229 [ 320] generic_netmap_register   Emulated adapter for vlan04 activated
+274.173811 [1139] generic_netmap_attach     Emulated adapter for vlan03 created (prev was NULL)
+274.173826 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan03 destroyed
+274.173876 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+274.492059 [1139] generic_netmap_attach     Emulated adapter for vlan03 created (prev was NULL)
+274.492146 [ 320] generic_netmap_register   Emulated adapter for vlan03 activated
+328.715201 [ 295] generic_netmap_unregister Emulated adapter for vlan03 deactivated
+328.715248 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan03 destroyed
+330.178141 [ 295] generic_netmap_unregister Emulated adapter for vlan02 deactivated
+330.178184 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan02 destroyed
+330.179605 [ 295] generic_netmap_unregister Emulated adapter for vlan01 deactivated
+330.179648 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan01 destroyed
+330.182379 [ 295] generic_netmap_unregister Emulated adapter for vlan04 deactivated
+330.184013 [1044] generic_netmap_dtor       Emulated netmap adapter for vlan04 destroyed
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+ix1: link state changed to UP
+vlan02: link state changed to UP
+vlan04: link state changed to UP
+vlan01: link state changed to UP
+vlan03: link state changed to UP
+358.763180 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+ix0: permanently promiscuous mode enabled
+358.764609 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+359.351665 [ 850] iflib_netmap_config       txr 4 rxr 4 txd 2048 rxd 2048 rbufsz 2048
+362.249544 [1071] netmap_obj_free           ouch, double free on buffer 4097
+362.249572 [1071] netmap_obj_free           ouch, double free on buffer 8193
+ix0: link state changed to UP
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 5 5 5 0 0 0 0 done
+All buffers synced.
+Uptime: 2m55s
+ukbd0: detached
+uhub0: detached
+ix1: link state changed to DOWN
+vlan02: link state changed to DOWN
+vlan04: link state changed to DOWN
+vlan01: link state changed to DOWN
+vlan03: link state changed to DOWN
+ix0: link state changed to DOWN
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p3 stable/22.7-n250262-83840459d88 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz (3200.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506e3  Family=0x6  Model=0x5e  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbb<FSGSBASE,TSCADJ,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16462979072 (15700 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   CBX3   >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 3 2
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xf05e0-0xf05fe
+smbios0: Version: 2.8, BCD Revision: 2.8
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <DELL CBX3   >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+ix0: <Intel(R) X540-AT2> mem 0xd0200000-0xd03fffff,0xd0404000-0xd0407fff irq 17 at device 0.0 on pci1
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: Option ROM V17-b5-p10 eTrack 0x8000059e PHY FW V286
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) X540-AT2> mem 0xd0000000-0xd01fffff,0xd0400000-0xd0403fff irq 16 at device 0.1 on pci1
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: Option ROM V17-b5-p10 eTrack 0x8000059e PHY FW V286
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xde000000-0xdeffffff,0xc0000000-0xcfffffff irq 17 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xdf210000-0xdf21ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xdf228000-0xdf229fff,0xdf22c000-0xdf22c0ff,0xdf22b000-0xdf22b7ff irq 18 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xe000-0xe0ff mem 0xdf004000-0xdf004fff,0xdf000000-0xdf003fff irq 16 at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Sunrise Point HDA Controller> mem 0xdf220000-0xdf223fff,0xdf200000-0xdf20ffff irq 16 at device 31.3 on pci0
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+driver bug: Unable to set devclass (class: atkbdc devname: (unknown))
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+Timecounter "TSC-low" frequency 1595996639 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Realtek ALC255 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC255 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC255 (Rear Analog Line-out)> at nid 27 on hdaa0
+hdacc1: <Intel Skylake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Skylake Audio Function Group> at nid 1 on hdacc1
+pcm1: <Intel Skylake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus4 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 840 Series DXT08B0Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ses0: ada0,pass0 in 'Slot 00', SATA Slot: scbus0 target 0
+ses0: pass1,cd0 in 'Slot 01', SATA Slot: scbus1 target 0
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <PLDS DVD+-RW DU-8A5LH DD11> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA6, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub0: 20 ports with 20 removable, self powered
+Root mount waiting for: usbus0
+ugen0.2: <Dell Dell USB Keyboard> at usbus0
+ukbd0 on uhub0
+ukbd0: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.01, addr 1> on usbus0
+kbd2 at ukbd0

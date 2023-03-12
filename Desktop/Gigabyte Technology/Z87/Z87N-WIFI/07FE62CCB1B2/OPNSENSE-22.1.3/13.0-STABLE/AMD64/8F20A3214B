@@ -1,0 +1,583 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248059-267a40127d5 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i5-4430 CPU @ 3.00GHz (2993.20-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306c3  Family=0x6  Model=0x3c  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x21<LAHF,ABM>
+  Structured Extended Features=0x27ab<FSGSBASE,TSCADJ,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 7958986752 (7590 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+Launching APs: 2 3 1
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xf0000000-0xf03fffff,0xe0000000-0xefffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+hdac0: <Intel Haswell HDA Controller> mem 0xf0634000-0xf0637fff irq 16 at device 3.0 on pci0
+xhci0: <Intel Lynx Point USB 3.0 controller> mem 0xf0620000-0xf062ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+em0: <Intel(R) I217-V LPT> port 0xf080-0xf09f mem 0xf0600000-0xf061ffff,0xf063d000-0xf063dfff irq 20 at device 25.0 on pci0
+em0: EEPROM V0.13-4
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+ehci0: <Intel Lynx Point USB 2.0 controller USB-B> mem 0xf063c000-0xf063c3ff irq 16 at device 26.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+hdac1: <Intel Lynx Point HDA Controller> mem 0xf0630000-0xf0633fff irq 22 at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci2: <ACPI PCI bus> on pcib2
+alc0: <Atheros AR8161 PCIe Gigabit Ethernet> port 0xe000-0xe07f mem 0xf0500000-0xf053ffff irq 19 at device 0.0 on pci2
+alc0: 11776 Tx FIFO, 12032 Rx FIFO
+alc0: Using 1 MSIX message(s).
+miibus0: <MII bus> on alc0
+atphy0: <Atheros F1 10/100/1000 PHY> PHY 0 on miibus0
+atphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+alc0: Using defaults for TSO: 65518/35/2048
+alc0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci3: <ACPI PCI bus> on pcib3
+iwn0: <Intel Centrino Wireless-N 2230> mem 0xf0400000-0xf0401fff irq 16 at device 0.0 on pci3
+ehci1: <Intel Lynx Point USB 2.0 controller USB-A> mem 0xf063b000-0xf063b3ff irq 23 at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Lynx Point AHCI SATA controller> port 0xf0d0-0xf0d7,0xf0c0-0xf0c3,0xf0b0-0xf0b7,0xf0a0-0xf0a3,0xf060-0xf07f mem 0xf063a000-0xf063a7ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounter "TSC-low" frequency 1496535310 Hz quality 1000
+Timecounters tick every 1.000 msec
+hdacc0: <Intel Haswell HDA CODEC> at cad 0 on hdac0
+hdaa0: <Intel Haswell Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Haswell (HDMI/DP 8ch)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC892 HDA CODEC> at cad 2 on hdac1
+hdaa1: <Realtek ALC892 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC892 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm2: <Realtek ALC892 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm3: <Realtek ALC892 (Onboard Digital)> at nid 17 on hdaa1
+pcm4: <Realtek ALC892 (Rear Digital)> at nid 30 on hdaa1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+Root mount waiting for: usbus0 usbus1 usbus2 CAM
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen2.1: <Intel EHCI root HUB> at usbus2
+uhub0 on usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1 on usbus2
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub2 on usbus0
+uhub2: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus2 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 840 EVO 120GB EXT0BB6Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ses0: pass0,ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+ada1 at ahcich3 bus 0 scbus1 target 0 lun 0
+ada1: <SanDisk SDSSDX120GG25 R211> ATA8-ACS SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 114473MB (234441648 512 byte sectors)
+ses0: pass1,ada1 in 'Slot 03', SATA Slot: scbus1 target 0
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+Root mount waiting for:uhub2: 21 ports with 21 removable, self powered
+ usbus0 usbus1 usbus2
+ugen0.2: <Logitech USB Receiver> at usbus0
+ukbd0 on uhub2
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 1> on usbus0
+kbd2 at ukbd0
+ugen1.2: <vendor 0x8087 product 0x8008> at usbus1
+uhub3 on uhub0
+uhub3: <vendor 0x8087 product 0x8008, class 9/0, rev 2.00/0.04, addr 2> on usbus1
+ugen2.2: <vendor 0x8087 product 0x8000> at usbus2
+uhub4 on uhub1
+uhub4: <vendor 0x8087 product 0x8000, class 9/0, rev 2.00/0.04, addr 2> on usbus2
+uhub3: 6 ports with 6 removable, self powered
+ugen0.3: <vendor 0x8087 product 0x07da> at usbus0
+uhub4: 8 ports with 8 removable, self powered
+ugen0.4: <Realtek USB 10/100/1000 LAN> at usbus0
+mountroot: waiting for device /dev/gpt/rootfs...
+ichsmb0: <Intel Lynx Point SMBus controller> port 0xf040-0xf05f mem 0xf0639000-0xf06390ff irq 18 at device 31.3 on pci0
+smbus0: <System Management Bus> on ichsmb0
+ums0 on uhub2
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 1> on usbus0
+ums0: 16 buttons and [XYZT] coordinates ID=2
+uhid0 on uhub2
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 1> on usbus0
+ubt0 on uhub2
+ubt0: <vendor 0x8087 product 0x07da, class 224/1, rev 2.00/78.69, addr 2> on usbus0
+ure0 on uhub2
+ure0: <Realtek USB 10/100/1000 LAN, class 0/0, rev 3.00/30.00, addr 3> on usbus0
+miibus1: <MII bus> on ure0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 0 on miibus1
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+ue0: <USB Ethernet> on ure0
+ue0: Ethernet address: ...
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+lo0: link state changed to UP
+ue0: link state changed to DOWN
+alc0: link state changed to DOWN
+alc0: link state changed to UP
+ue0: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+ue0: link state changed to DOWN
+ue0: link state changed to UP
+032.153756 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+032.153772 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+032.155149 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+032.205759 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+040.342517 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+043.060379 [ 295] generic_netmap_unregister Emulated adapter for ue0 deactivated
+043.060818 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+043.118909 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+043.118925 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+043.120287 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+043.120336 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+046.352943 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+050.382567 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+053.401071 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+058.353388 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+068.392644 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+073.744784 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+094.304105 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+095.058129 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+097.339088 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+098.097050 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+099.307237 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+100.060992 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+105.830984 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+107.744907 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+109.745015 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+115.832160 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+120.833079 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+122.572197 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+130.834127 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+135.841980 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+145.843053 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+150.844161 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+160.845139 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+162.356132 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+165.377979 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+166.132150 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+170.660184 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+172.926021 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+173.686968 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+175.192996 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+178.224776 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+180.194091 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+181.257179 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+183.206133 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+188.207268 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+193.968261 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+198.208163 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+203.209365 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+210.330268 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+211.083968 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+213.210050 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+215.095680 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+218.218131 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+228.219527 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+233.219943 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+238.744862 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+239.744862 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+243.230133 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+248.238060 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+251.339137 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+255.409808 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+258.238981 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+260.407219 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+261.287781 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+262.042172 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+263.246008 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+265.060143 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+268.939190 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+273.246961 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+278.253138 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+284.713036 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+285.467054 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+288.254131 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+293.254948 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+295.659957 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+298.680018 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+300.186080 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+303.227058 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+308.263014 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+311.363957 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+314.354173 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+317.302897 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+322.304095 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+324.477173 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+328.282106 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+329.497299 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+332.305209 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+336.745245 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+337.306018 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+339.496094 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+342.315155 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+344.496025 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+346.369258 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+351.475080 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+352.322132 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+357.322940 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+358.564485 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+362.513041 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+367.323939 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+370.745016 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+372.347985 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+373.745490 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+376.184582 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+377.693115 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+382.352750 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+384.514514 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+385.450876 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+387.353571 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+388.941011 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+390.435851 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+391.952318 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+397.353997 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+398.016045 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+399.513014 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+401.024133 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+402.373731 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+404.035174 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+407.110159 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+408.555111 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+409.292075 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+410.067782 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+411.021035 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+412.373983 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+413.287066 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+416.218375 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+417.375023 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+418.496085 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+424.528713 [ 295] generic_netmap_unregister Emulated adapter for ue0 deactivated
+424.529148 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+424.587446 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+424.587463 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+424.588808 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+424.588861 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+427.377105 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+432.378126 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+437.386982 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+439.062179 [ 295] generic_netmap_unregister Emulated adapter for ue0 deactivated
+439.062627 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+474.281328 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+474.281346 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+474.282720 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+474.282773 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+476.595857 [ 295] generic_netmap_unregister Emulated adapter for ue0 deactivated
+476.596287 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+476.654853 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+476.654870 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+476.656230 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+476.656281 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+483.611067 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+484.364923 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+485.888669 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+486.641990 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+487.404519 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+490.416119 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+491.930503 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+493.973674 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+495.695252 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+496.459590 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+497.223455 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+498.539354 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+500.058291 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+501.003110 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+502.509470 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+503.076950 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+504.027476 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+505.170543 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+506.095936 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+507.432523 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+508.203705 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+515.931497 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+516.931421 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+519.131438 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+523.331464 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+528.650499 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+531.531520 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+547.379157 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+550.804058 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+551.354986 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+552.219610 [ 295] generic_netmap_unregister Emulated adapter for ue0 deactivated
+552.220045 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+567.781276 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+567.781293 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+567.782655 [1139] generic_netmap_attach     Emulated adapter for ue0 created (prev was NULL)
+567.782704 [ 320] generic_netmap_register   Emulated adapter for ue0 activated
+569.197624 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+579.930858 [4029] netmap_transmit           ue0 drop mbuf that needs checksum offload
+588.442354 [ 295] generic_netmap_unregister Emulated adapter for ue0 deactivated
+588.442785 [1044] generic_netmap_dtor       Emulated netmap adapter for ue0 destroyed
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 5 5 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248059-267a40127d5 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i5-4430 CPU @ 3.00GHz (2993.20-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306c3  Family=0x6  Model=0x3c  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x21<LAHF,ABM>
+  Structured Extended Features=0x27ab<FSGSBASE,TSCADJ,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 7958986752 (7590 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+Launching APs: 3 2 1
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xf0000000-0xf03fffff,0xe0000000-0xefffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+hdac0: <Intel Haswell HDA Controller> mem 0xf0634000-0xf0637fff irq 16 at device 3.0 on pci0
+xhci0: <Intel Lynx Point USB 3.0 controller> mem 0xf0620000-0xf062ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+em0: <Intel(R) I217-V LPT> port 0xf080-0xf09f mem 0xf0600000-0xf061ffff,0xf063d000-0xf063dfff irq 20 at device 25.0 on pci0
+em0: EEPROM V0.13-4
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+ehci0: <Intel Lynx Point USB 2.0 controller USB-B> mem 0xf063c000-0xf063c3ff irq 16 at device 26.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+hdac1: <Intel Lynx Point HDA Controller> mem 0xf0630000-0xf0633fff irq 22 at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci2: <ACPI PCI bus> on pcib2
+alc0: <Atheros AR8161 PCIe Gigabit Ethernet> port 0xe000-0xe07f mem 0xf0500000-0xf053ffff irq 19 at device 0.0 on pci2
+alc0: 11776 Tx FIFO, 12032 Rx FIFO
+alc0: Using 1 MSIX message(s).
+miibus0: <MII bus> on alc0
+atphy0: <Atheros F1 10/100/1000 PHY> PHY 0 on miibus0
+atphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+alc0: Using defaults for TSO: 65518/35/2048
+alc0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci3: <ACPI PCI bus> on pcib3
+iwn0: <Intel Centrino Wireless-N 2230> mem 0xf0400000-0xf0401fff irq 16 at device 0.0 on pci3
+ehci1: <Intel Lynx Point USB 2.0 controller USB-A> mem 0xf063b000-0xf063b3ff irq 23 at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Lynx Point AHCI SATA controller> port 0xf0d0-0xf0d7,0xf0c0-0xf0c3,0xf0b0-0xf0b7,0xf0a0-0xf0a3,0xf060-0xf07f mem 0xf063a000-0xf063a7ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounter "TSC-low" frequency 1496535453 Hz quality 1000
+Timecounters tick every 1.000 msec
+hdacc0: <Intel Haswell HDA CODEC> at cad 0 on hdac0
+hdaa0: <Intel Haswell Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Haswell (HDMI/DP 8ch)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC892 HDA CODEC> at cad 2 on hdac1
+hdaa1: <Realtek ALC892 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC892 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm2: <Realtek ALC892 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm3: <Realtek ALC892 (Onboard Digital)> at nid 17 on hdaa1
+pcm4: <Realtek ALC892 (Rear Digital)> at nid 30 on hdaa1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+Root mount waiting for: usbus0 usbus1 usbus2 CAM
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub1 on usbus2
+uhub2 on usbus1
+uhub2: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ses0 at ahciem0 bus 0 scbus2 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 840 EVO 120GB EXT0BB6Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+ses0: pass0,ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+ada1 at ahcich3 bus 0 scbus1 target 0 lun 0
+ada1: <SanDisk SDSSDX120GG25 R211> ATA8-ACS SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 114473MB (234441648 512 byte sectors)
+ses0: pass1,ada1 in 'Slot 03', SATA Slot: scbus1 target 0
+uhub1: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus0 usbus1 usbus2
+uhub0: 21 ports with 21 removable, self powered
+ugen0.2: <Logitech USB Receiver> at usbus0
+ukbd0 on uhub0
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/24.10, addr 1> on usbus0
+kbd2 at ukbd0
+ugen2.2: <vendor 0x8087 product 0x8000> at usbus2
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x8000, class 9/0, rev 2.00/0.04, addr 2> on usbus2
+ugen1.2: <vendor 0x8087 product 0x8008> at usbus1
+uhub4 on uhub2
+uhub4: <vendor 0x8087 product 0x8008, class 9/0, rev 2.00/0.04, addr 2> on usbus1
+uhub4: 6 ports with 6 removable, self powered
+ugen0.3: <vendor 0x8087 product 0x07da> at usbus0
+uhub3: 8 ports with 8 removable, self powered
+ugen0.4: <Realtek USB 10/100/1000 LAN> at usbus0
+mountroot: waiting for device /dev/gpt/rootfs...

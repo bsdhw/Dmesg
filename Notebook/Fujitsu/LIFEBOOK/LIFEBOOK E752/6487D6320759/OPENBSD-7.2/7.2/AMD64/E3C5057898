@@ -1,0 +1,642 @@
+OpenBSD 7.2 (GENERIC) #728: Tue Sep 27 11:49:18 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+real mem = 4115578880 (3924MB)
+avail mem = 3973566464 (3789MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xe0c90 (45 entries)
+bios0: vendor FUJITSU // Phoenix Technologies Ltd. version "Version 1.13" date 08/21/2012
+bios0: FUJITSU LIFEBOOK E752
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SLIC SSDT SSDT SSDT HPET APIC MCFG TCPA ASF! SSDT SSDT UEFI UEFI DMAR POAT UEFI
+acpi0: wakeup devices UAR1(S3) HDEF(S4) PCE0(S4) GLAN(S4) LID_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz, 2893.48 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P2)
+acpiprt2 at acpi0: bus 1 (PCE0)
+acpiprt3 at acpi0: bus 10 (PCE2)
+acpiprt4 at acpi0: bus 11 (PCE7)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+"FUJ02B1" at acpi0 not configured
+acpicmos0 at acpi0
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+tpm0 at acpi0 TPM_ 1.2 (TIS) addr 0xfed40000/0x5000, Infineon SLB9635 1.2 rev 0x10
+"FUJ02E3" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: CMB1 model "CP556150-03" serial ... type LION oem "Fujitsu"
+acpibat1 at acpi0: CMB2 not present
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PWRB
+acpicpu0 at acpi0: C2(500@59 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 2893 MHz: speeds: 2901, 2900, 2800, 2700, 2500, 2400, 2300, 2200, 2000, 1900, 1800, 1700, 1600, 1400, 1300, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, IVYBRIDGE, gen 7
+xhci0 at pci0 dev 20 function 0 "Intel 7 Series xHCI" rev 0x04: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+puc0 at pci0 dev 22 function 3 "Intel 7 Series KT" rev 0x04: ports: 16 com
+com4 at puc0 port 0 apic 2 int 19: ns16550a, 16 byte fifo
+com4: probed fifo depth: 0 bytes
+em0 at pci0 dev 25 function 0 "Intel 82579LM" rev 0x04: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 23
+usb1 at ehci0: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 7 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2806, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 10
+iwn0 at pci2 dev 0 function 0 "Intel Centrino Advanced-N 6205" rev 0x34: msi, MIMO 2T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 7 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 11
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS5229 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 22
+usb2 at ehci1: USB revision 2.0
+uhub2 at usb2 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel QM77 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD7500BPKT-7, 01.0> naa.50014ee656d1fbd4
+sd0: 715404MB, 512 bytes/sector, 1465149168 sectors
+cd0 at scsibus1 targ 2 lun 0: <HL-DT-ST, DVDRAM GT50N, FJ07> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 7 Series SMBus" rev 0x04: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x52: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.2, 0x1c0b1 0xb42000 0x0 0xd047b1 0xa0000
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+vmm0 at mainbus0: VMX/EPT (using slow L1TF mitigation)
+efifb at mainbus0 not configured
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhub4 at uhub3 port 1 configuration 1 interface 0 "O2 Micro OZ776 Hub" rev 1.10/1.10 addr 3
+ugen0 at uhub4 port 2 "O2 O2Micro CCID SC Reader" rev 1.10/1.10 addr 4
+ugen1 at uhub3 port 3 "Broadcom Corp BCM20702A0" rev 2.00/1.12 addr 5
+uvideo0 at uhub3 port 6 configuration 1 interface 0 "Sunplus IT Co FJ Camera" rev 2.00/97.77 addr 6
+video0 at uvideo0
+uhub5 at uhub2 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+ugen2 at uhub5 port 6 "AuthenTec Fingerprint Sensor" rev 2.00/21.00 addr 3
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (cfdca7841a48391c.a) swap on sd0b dump on sd0b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+syncing disks...
+OpenBSD 7.2 (GENERIC) #728: Tue Sep 27 11:49:18 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+real mem = 4115578880 (3924MB)
+avail mem = 3973566464 (3789MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xe0c90 (45 entries)
+bios0: vendor FUJITSU // Phoenix Technologies Ltd. version "Version 1.13" date 08/21/2012
+bios0: FUJITSU LIFEBOOK E752
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SLIC SSDT SSDT SSDT HPET APIC MCFG TCPA ASF! SSDT SSDT UEFI UEFI DMAR POAT UEFI
+acpi0: wakeup devices UAR1(S3) HDEF(S4) PCE0(S4) GLAN(S4) LID_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz, 2893.47 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P2)
+acpiprt2 at acpi0: bus 1 (PCE0)
+acpiprt3 at acpi0: bus 10 (PCE2)
+acpiprt4 at acpi0: bus 11 (PCE7)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+"FUJ02B1" at acpi0 not configured
+acpicmos0 at acpi0
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+tpm0 at acpi0 TPM_ 1.2 (TIS) addr 0xfed40000/0x5000, Infineon SLB9635 1.2 rev 0x10
+"FUJ02E3" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: CMB1 model "CP556150-03" serial ... type LION oem "Fujitsu"
+acpibat1 at acpi0: CMB2 not present
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PWRB
+acpicpu0 at acpi0: C2(500@59 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 2893 MHz: speeds: 2901, 2900, 2800, 2700, 2500, 2400, 2300, 2200, 2000, 1900, 1800, 1700, 1600, 1400, 1300, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, IVYBRIDGE, gen 7
+xhci0 at pci0 dev 20 function 0 "Intel 7 Series xHCI" rev 0x04: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+puc0 at pci0 dev 22 function 3 "Intel 7 Series KT" rev 0x04: ports: 16 com
+com4 at puc0 port 0 apic 2 int 19: ns16550a, 16 byte fifo
+com4: probed fifo depth: 0 bytes
+em0 at pci0 dev 25 function 0 "Intel 82579LM" rev 0x04: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 23
+usb1 at ehci0: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 7 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2806, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 10
+iwn0 at pci2 dev 0 function 0 "Intel Centrino Advanced-N 6205" rev 0x34: msi, MIMO 2T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 7 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 11
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS5229 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 22
+usb2 at ehci1: USB revision 2.0
+uhub2 at usb2 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel QM77 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD7500BPKT-7, 01.0> naa.50014ee656d1fbd4
+sd0: 715404MB, 512 bytes/sector, 1465149168 sectors
+cd0 at scsibus1 targ 2 lun 0: <HL-DT-ST, DVDRAM GT50N, FJ07> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 7 Series SMBus" rev 0x04: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x52: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.2, 0x1c0b1 0xb42000 0x0 0xd047b1 0xa0000
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+vmm0 at mainbus0: VMX/EPT (using slow L1TF mitigation)
+efifb at mainbus0 not configured
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhub4 at uhub3 port 1 configuration 1 interface 0 "O2 Micro OZ776 Hub" rev 1.10/1.10 addr 3
+ugen0 at uhub4 port 2 "O2 O2Micro CCID SC Reader" rev 1.10/1.10 addr 4
+ugen1 at uhub3 port 3 "Broadcom Corp BCM20702A0" rev 2.00/1.12 addr 5
+uvideo0 at uhub3 port 6 configuration 1 interface 0 "Sunplus IT Co FJ Camera" rev 2.00/97.77 addr 6
+video0 at uvideo0
+uhub5 at uhub2 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+ugen2 at uhub5 port 6 "AuthenTec Fingerprint Sensor" rev 2.00/21.00 addr 3
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (cfdca7841a48391c.a) swap on sd0b dump on sd0b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+syncing disks...
+OpenBSD 7.2 (GENERIC) #728: Tue Sep 27 11:49:18 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+real mem = 4115578880 (3924MB)
+avail mem = 3973566464 (3789MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xe0c90 (45 entries)
+bios0: vendor FUJITSU // Phoenix Technologies Ltd. version "Version 1.13" date 08/21/2012
+bios0: FUJITSU LIFEBOOK E752
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SLIC SSDT SSDT SSDT HPET APIC MCFG TCPA ASF! SSDT SSDT UEFI UEFI DMAR POAT UEFI
+acpi0: wakeup devices UAR1(S3) HDEF(S4) PCE0(S4) GLAN(S4) LID_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz, 2893.46 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P2)
+acpiprt2 at acpi0: bus 1 (PCE0)
+acpiprt3 at acpi0: bus 10 (PCE2)
+acpiprt4 at acpi0: bus 11 (PCE7)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+"FUJ02B1" at acpi0 not configured
+acpicmos0 at acpi0
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+tpm0 at acpi0 TPM_ 1.2 (TIS) addr 0xfed40000/0x5000, Infineon SLB9635 1.2 rev 0x10
+"FUJ02E3" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: CMB1 model "CP556150-03" serial ... type LION oem "Fujitsu"
+acpibat1 at acpi0: CMB2 not present
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PWRB
+acpicpu0 at acpi0: C2(500@59 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 2893 MHz: speeds: 2901, 2900, 2800, 2700, 2500, 2400, 2300, 2200, 2000, 1900, 1800, 1700, 1600, 1400, 1300, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, IVYBRIDGE, gen 7
+xhci0 at pci0 dev 20 function 0 "Intel 7 Series xHCI" rev 0x04: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+puc0 at pci0 dev 22 function 3 "Intel 7 Series KT" rev 0x04: ports: 16 com
+com4 at puc0 port 0 apic 2 int 19: ns16550a, 16 byte fifo
+com4: probed fifo depth: 0 bytes
+em0 at pci0 dev 25 function 0 "Intel 82579LM" rev 0x04: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 23
+usb1 at ehci0: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 7 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2806, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 10
+iwn0 at pci2 dev 0 function 0 "Intel Centrino Advanced-N 6205" rev 0x34: msi, MIMO 2T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 7 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 11
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS5229 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 22
+usb2 at ehci1: USB revision 2.0
+uhub2 at usb2 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel QM77 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD7500BPKT-7, 01.0> naa.50014ee656d1fbd4
+sd0: 715404MB, 512 bytes/sector, 1465149168 sectors
+cd0 at scsibus1 targ 2 lun 0: <HL-DT-ST, DVDRAM GT50N, FJ07> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 7 Series SMBus" rev 0x04: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x52: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.2, 0x1c0b1 0xb42000 0x0 0xd047b1 0xa0000
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+vmm0 at mainbus0: VMX/EPT (using slow L1TF mitigation)
+efifb at mainbus0 not configured
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhub4 at uhub3 port 1 configuration 1 interface 0 "O2 Micro OZ776 Hub" rev 1.10/1.10 addr 3
+ugen0 at uhub4 port 2 "O2 O2Micro CCID SC Reader" rev 1.10/1.10 addr 4
+ugen1 at uhub3 port 3 "Broadcom Corp BCM20702A0" rev 2.00/1.12 addr 5
+uvideo0 at uhub3 port 6 configuration 1 interface 0 "Sunplus IT Co FJ Camera" rev 2.00/97.77 addr 6
+video0 at uvideo0
+uhub5 at uhub2 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+ugen2 at uhub5 port 6 "AuthenTec Fingerprint Sensor" rev 2.00/21.00 addr 3
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (cfdca7841a48391c.a) swap on sd0b dump on sd0b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+iwn0: could not read firmware iwn-6005 (error 2)
+iwn0: could not read firmware
+syncing disks...
+OpenBSD 7.2 (GENERIC) #728: Tue Sep 27 11:49:18 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+real mem = 4115578880 (3924MB)
+avail mem = 3973566464 (3789MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xe0c90 (45 entries)
+bios0: vendor FUJITSU // Phoenix Technologies Ltd. version "Version 1.13" date 08/21/2012
+bios0: FUJITSU LIFEBOOK E752
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SLIC SSDT SSDT SSDT HPET APIC MCFG TCPA ASF! SSDT SSDT UEFI UEFI DMAR POAT UEFI
+acpi0: wakeup devices UAR1(S3) HDEF(S4) PCE0(S4) GLAN(S4) LID_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz, 2893.47 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P2)
+acpiprt2 at acpi0: bus 1 (PCE0)
+acpiprt3 at acpi0: bus 10 (PCE2)
+acpiprt4 at acpi0: bus 11 (PCE7)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+"FUJ02B1" at acpi0 not configured
+acpicmos0 at acpi0
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+tpm0 at acpi0 TPM_ 1.2 (TIS) addr 0xfed40000/0x5000, Infineon SLB9635 1.2 rev 0x10
+"FUJ02E3" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: CMB1 model "CP556150-03" serial ... type LION oem "Fujitsu"
+acpibat1 at acpi0: CMB2 not present
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PWRB
+acpicpu0 at acpi0: C2(500@59 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2893 MHz: speeds: 2901, 2900, 2800, 2700, 2500, 2400, 2300, 2200, 2000, 1900, 1800, 1700, 1600, 1400, 1300, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, IVYBRIDGE, gen 7
+xhci0 at pci0 dev 20 function 0 "Intel 7 Series xHCI" rev 0x04: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+puc0 at pci0 dev 22 function 3 "Intel 7 Series KT" rev 0x04: ports: 16 com
+com4 at puc0 port 0 apic 2 int 19: ns16550a, 16 byte fifo
+com4: probed fifo depth: 0 bytes
+em0 at pci0 dev 25 function 0 "Intel 82579LM" rev 0x04: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 23
+usb1 at ehci0: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 7 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2806, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 10
+iwn0 at pci2 dev 0 function 0 "Intel Centrino Advanced-N 6205" rev 0x34: msi, MIMO 2T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 7 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 11
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS5229 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 22
+usb2 at ehci1: USB revision 2.0
+uhub2 at usb2 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel QM77 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD7500BPKT-7, 01.0> naa.50014ee656d1fbd4
+sd0: 715404MB, 512 bytes/sector, 1465149168 sectors
+cd0 at scsibus1 targ 2 lun 0: <HL-DT-ST, DVDRAM GT50N, FJ07> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 7 Series SMBus" rev 0x04: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x52: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.2, 0x1c0b1 0xb42000 0x0 0xd047b1 0xa0000
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhub4 at uhub3 port 1 configuration 1 interface 0 "O2 Micro OZ776 Hub" rev 1.10/1.10 addr 3
+ugen0 at uhub4 port 2 "O2 O2Micro CCID SC Reader" rev 1.10/1.10 addr 4
+ugen1 at uhub3 port 3 "Broadcom Corp BCM20702A0" rev 2.00/1.12 addr 5
+uvideo0 at uhub3 port 6 configuration 1 interface 0 "Sunplus IT Co FJ Camera" rev 2.00/97.77 addr 6
+video0 at uvideo0
+uhub5 at uhub2 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+ugen2 at uhub5 port 6 "AuthenTec Fingerprint Sensor" rev 2.00/21.00 addr 3
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (cfdca7841a48391c.a) swap on sd0b dump on sd0b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+arp: attempt to add entry for XXX.XXX.XXX.XXX on em0 by XXX on iwn0
+syncing disks...
+OpenBSD 7.2 (GENERIC) #728: Tue Sep 27 11:49:18 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+real mem = 4115578880 (3924MB)
+avail mem = 3973566464 (3789MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xe0c90 (45 entries)
+bios0: vendor FUJITSU // Phoenix Technologies Ltd. version "Version 1.13" date 08/21/2012
+bios0: FUJITSU LIFEBOOK E752
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SLIC SSDT SSDT SSDT HPET APIC MCFG TCPA ASF! SSDT SSDT UEFI UEFI DMAR POAT UEFI
+acpi0: wakeup devices UAR1(S3) HDEF(S4) PCE0(S4) GLAN(S4) LID_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz, 2893.48 MHz, 06-3a-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,FSGSBASE,SMEP,ERMS,MD_CLEAR,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 8-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P2)
+acpiprt2 at acpi0: bus 1 (PCE0)
+acpiprt3 at acpi0: bus 10 (PCE2)
+acpiprt4 at acpi0: bus 11 (PCE7)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+"FUJ02B1" at acpi0 not configured
+acpicmos0 at acpi0
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+tpm0 at acpi0 TPM_ 1.2 (TIS) addr 0xfed40000/0x5000, Infineon SLB9635 1.2 rev 0x10
+"FUJ02E3" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: CMB1 model "CP556150-03" serial ... type LION oem "Fujitsu"
+acpibat1 at acpi0: CMB2 not present
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PWRB
+acpicpu0 at acpi0: C2(500@59 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: LCD_
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 2893 MHz: speeds: 2901, 2900, 2800, 2700, 2500, 2400, 2300, 2200, 2000, 1900, 1800, 1700, 1600, 1400, 1300, 1200 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 3G Host" rev 0x09
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics 4000" rev 0x09
+drm0 at inteldrm0
+inteldrm0: msi, IVYBRIDGE, gen 7
+xhci0 at pci0 dev 20 function 0 "Intel 7 Series xHCI" rev 0x04: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 7 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+puc0 at pci0 dev 22 function 3 "Intel 7 Series KT" rev 0x04: ports: 16 com
+com4 at puc0 port 0 apic 2 int 19: ns16550a, 16 byte fifo
+com4: probed fifo depth: 0 bytes
+em0 at pci0 dev 25 function 0 "Intel 82579LM" rev 0x04: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 23
+usb1 at ehci0: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 7 Series HD Audio" rev 0x04: msi
+azalia0: codecs: Realtek ALC269, Intel/0x2806, using Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 7 Series PCIE" rev 0xc4: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 2 "Intel 7 Series PCIE" rev 0xc4: msi
+pci2 at ppb1 bus 10
+iwn0 at pci2 dev 0 function 0 "Intel Centrino Advanced-N 6205" rev 0x34: msi, MIMO 2T2R, MoW, address XXX
+ppb2 at pci0 dev 28 function 7 "Intel 7 Series PCIE" rev 0xc4: msi
+pci3 at ppb2 bus 11
+rtsx0 at pci3 dev 0 function 0 "Realtek RTS5229 Card Reader" rev 0x01: msi
+sdmmc0 at rtsx0: 4-bit, dma
+ehci1 at pci0 dev 29 function 0 "Intel 7 Series USB" rev 0x04: apic 2 int 22
+usb2 at ehci1: USB revision 2.0
+uhub2 at usb2 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel QM77 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 7 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 2: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD7500BPKT-7, 01.0> naa.50014ee656d1fbd4
+sd0: 715404MB, 512 bytes/sector, 1465149168 sectors
+cd0 at scsibus1 targ 2 lun 0: <HL-DT-ST, DVDRAM GT50N, FJ07> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 7 Series SMBus" rev 0x04: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x52: 2GB DDR3 SDRAM PC3-10600 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 7.2, 0x1c0b1 0xb42000 0x0 0xd047b1 0xa0000
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhub4 at uhub3 port 1 configuration 1 interface 0 "O2 Micro OZ776 Hub" rev 1.10/1.10 addr 3
+ugen0 at uhub4 port 2 "O2 O2Micro CCID SC Reader" rev 1.10/1.10 addr 4
+ugen1 at uhub3 port 3 "Broadcom Corp BCM20702A0" rev 2.00/1.12 addr 5
+uvideo0 at uhub3 port 6 configuration 1 interface 0 "Sunplus IT Co FJ Camera" rev 2.00/97.77 addr 6
+video0 at uvideo0
+uhub5 at uhub2 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+ugen2 at uhub5 port 6 "AuthenTec Fingerprint Sensor" rev 2.00/21.00 addr 3
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (cfdca7841a48391c.a) swap on sd0b dump on sd0b
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

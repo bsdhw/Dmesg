@@ -1,0 +1,102 @@
+OpenBSD 7.2 (GENERIC) #0: Wed Oct 26 11:17:48 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 803684352 (766MB)
+avail mem = 772149248 (736MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 12/12/02, BIOS32 rev. 0 @ 0xfd870, SMBIOS rev. 2.3 @ 0xe7750 (44 entries)
+bios0: vendor Phoenix Technologies K.K. version "V4.00L13" date 12/12/2002
+bios0: Matsushita Electric Industrial Co.,Ltd. CF-48V4KNDQM
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP BOOT
+acpi0: wakeup devices MPCA(S3) CDB0(S3) CDB1(S3) LAN_(S4) USB1(S3) PWRB(S5) LID_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (AGP_)
+acpiprt2 at acpi0: bus 2 (PCIB)
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0A05" at acpi0 not configured
+"PNP0501" at acpi0 not configured
+acpibtn0 at acpi0: PWRB
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BATA model "CF-VZSU18" serial ... type LION oem "Panasonic"
+"MAT0012" at acpi0 not configured
+acpibtn1 at acpi0: LID_
+acpicpu0 at acpi0: C1 (unknown FFH class 0): !C3(250@85 io@0x1015), !C2(500@1 io@0x1014), C1(@1 halt!), FVS, 1600, 1200 MHz
+acpitz0 at acpi0: critical temperature is 96 degC
+bios0: ROM list: 0xc0000/0xe000 0xce000/0x1000 0xe0000/0x10000!
+cpu0 at mainbus0: (uniprocessor)
+cpu0: Intel(R) Pentium(R) 4 Mobile CPU 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 0f-02-04
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82845 Host" rev 0x04
+intelagp0 at pchb0
+agp0 at intelagp0: aperture at 0xec000000, size 0x4000000
+ppb0 at pci0 dev 1 function 0 "Intel 82845 AGP" rev 0x04
+pci1 at ppb0 bus 1
+radeondrm0 at pci1 dev 0 function 0 "ATI Radeon Mobility M7" rev 0x00
+drm0 at radeondrm0
+radeondrm0: irq 9
+uhci0 at pci0 dev 29 function 0 "Intel 82801CA/CAM USB" rev 0x02: irq 9
+ppb1 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0x42
+pci2 at ppb1 bus 2
+cbb0 at pci2 dev 0 function 0 "Ricoh 5C476 CardBus" rev 0x80: irq 9
+cbb1 at pci2 dev 0 function 1 "Ricoh 5C476 CardBus" rev 0x80: irq 9
+"AT&T/Lucent LTMODEM" rev 0x01 at pci2 dev 1 function 0 not configured
+rl0 at pci2 dev 2 function 0 "Realtek 8139" rev 0x10: irq 9, address XXX
+rlphy0 at rl0 phy 0: RTL internal PHY
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 3 device 0 cacheline 0x0, lattimer 0x40
+pcmcia0 at cardslot0
+cardslot1 at cbb1 slot 1 flags 0
+cardbus1 at cardslot1: bus 4 device 0 cacheline 0x0, lattimer 0x40
+pcmcia1 at cardslot1
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801CAM LPC" rev 0x02
+pciide0 at pci0 dev 31 function 1 "Intel 82801CAM IDE" rev 0x02: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide0 channel 0 drive 0: <ST9160821A>
+wd0: 16-sector PIO, LBA48, 152627MB, 312581808 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <MATSHITA, UJDA720 DVD/CDRW, 1.00> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 2
+ichiic0 at pci0 dev 31 function 3 "Intel 82801CA/CAM SMBus" rev 0x02: irq 9
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 512MB DDR SDRAM non-parity PC2100CL2.5
+auich0 at pci0 dev 31 function 5 "Intel 82801CA/CAM AC97" rev 0x02: irq 9, ICH3
+ac97: codec id 0x83847656 (SigmaTel STAC9756/57)
+ac97: codec features 18 bit DAC, 18 bit ADC, SigmaTel 3D
+audio0 at auich0
+usb0 at uhci0: USB revision 1.0
+uhub0 at usb0 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 5.0, 0x8f40b1 0x0 0x0 0x804713 0x0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (bf09d04bd4f2fd45.a) swap on wd0b dump on wd0b
+radeondrm0: RV200
+radeondrm0: 1024x768, 16bpp
+wsdisplay0 at radeondrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+Bogus possible_clones: [ENCODER:45:DAC-45] possible_clones=0x4 (full encoder mask=0x7)
+Bogus possible_clones: [ENCODER:49:TV-49] possible_clones=0x1 (full encoder mask=0x7)
+fd0 at fdc0 drive 0: 1.44MB 80 cyl, 2 head, 18 sec

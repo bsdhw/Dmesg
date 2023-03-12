@@ -1,0 +1,139 @@
+KDB: debugger backends: ddb
+KDB: current backend: ddb
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE #0: Sun Jul 31 16:49:08 MSK 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX arm64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT: init without driver.
+real memory  = 3996250112 (3811 MB)
+avail memory = 3869847552 (3690 MB)
+Starting CPU 1 (100)
+Starting CPU 2 (200)
+Starting CPU 3 (300)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+random: unblocking device.
+wlan: mac acl policy registered
+random: entropy device external interface
+MAP eca10000 mode 2 pages 16
+MAP eca20000 mode 2 pages 192
+MAP ecaf0000 mode 2 pages 80
+MAP efe20000 mode 2 pages 144
+MAP efec0000 mode 2 pages 288
+kbd0 at kbdmux0
+acpi0: <RKCP RK356X>
+acpi0: Power Button (fixed)
+acpi0: Sleep Button (fixed)
+acpi0: Could not update all GPEs: AE_NOT_CONFIGURED
+psci0: <ARM Power State Co-ordination Interface Driver> on acpi0
+gic0: <ARM Generic Interrupt Controller v3.0> iomem 0xfd400000-0xfd41ffff,0xfd460000-0xfd51ffff on acpi0
+generic_timer0: <ARM Generic Timer> irq 12,13,14 on acpi0
+Timecounter "ARM MPCore Timecounter" frequency 24000000 Hz quality 1000
+Event timer "ARM MPCore Eventtimer" frequency 24000000 Hz quality 1000
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cpu0: <ACPI CPU> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <Non-standard ns8250 class UART with FIFOs> iomem 0xfe660000-0xfe660fff irq 1 on acpi0
+uart0: console (961538,n,8,1)
+ehci0: <Generic EHCI Controller> iomem 0xfd800000-0xfd83ffff irq 3 on acpi0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+ehci1: <Generic EHCI Controller> iomem 0xfd880000-0xfd8bffff irq 5 on acpi0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+xhci0: <Generic USB 3.0 controller> iomem 0xfcc00000-0xfcffffff irq 6 on acpi0
+xhci0: 64 bytes context size, 32-bit DMA
+usbus2 on xhci0
+xhci1: <Generic USB 3.0 controller> iomem 0xfd000000-0xfd3fffff irq 7 on acpi0
+xhci1: 64 bytes context size, 32-bit DMA
+usbus3 on xhci1
+eqos0: <RK356x EQOS Gigabit ethernet> iomem 0xfe2a0000-0xfe2affff irq 8,9 on acpi0
+miibus0: <MII bus> on eqos0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 0 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+rgephy1: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 1 on miibus0
+rgephy1:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+eqos0: Ethernet address: ...
+acpi_dwmmc0: <Synopsys DesignWare Mobile Storage Host Controller> iomem 0xfe2b0000-0xfe2b3fff irq 10 on acpi0
+acpi_dwmmc0: Hardware version ID is 270a
+mmc0: <MMC/SD bus> on acpi_dwmmc0
+sdhci_acpi0: <Rockchip eMMC Controller> iomem 0xfe310000-0xfe31ffff irq 11 on acpi0
+Firmware Warning (ACPI): Possibly buggy BIOS with ACPI_TYPE_INTEGER for function enumeration
+ (20201113/ACPI-2675)
+sdhci_acpi0: RK356x vendor_clock enabled
+mmc1: <MMC/SD bus> on sdhci_acpi0
+pcib0: <Generic PCI host controller> on acpi0
+pci0: <PCI bus> on pcib0
+re0: <Realtek PCIe 2.5GbE Family Controller> at device 0.0 on pci0
+pcib0: Failed to translate resource 0-ffffffffffffffff type 3 for re0
+re0: 0x10000 bytes of rid 0x18 res 3 failed (0, 0xffffffffffffffff).
+re0: Using I/O Ports
+re0: unknown device
+device_attach: re0 attach returned 6
+pci0: <old, non-VGA display device> at device 31.0 (no driver attached)
+Timecounters tick every 1.000 msec
+usbus0: 480Mbps High Speed USB v2.0
+usbus1: 480Mbps High Speed USB v2.0
+usbus2: 5.0Gbps Super Speed USB v3.0
+usbus3: 5.0Gbps Super Speed USB v3.0
+ugen1.1: <Generic EHCI root HUB> at usbus1
+uhub0 on usbus1
+uhub0: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ugen0.1: <Generic EHCI root HUB> at usbus0
+uhub1 on usbus0
+uhub1: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+ugen2.1: <Generic XHCI root HUB> at usbus2
+uhub2 on usbus2
+uhub2: <Generic XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+ugen3.1: <Generic XHCI root HUB> at usbus3
+uhub3 on usbus3
+uhub3: <Generic XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus3
+mmcsd0: 32GB <SDHC SD32G 8.5 SN ... MFG 11/2021 by 3 SD> at mmc0 50.0MHz/4bit/1016-block
+mmc1: No compatible cards found on bus
+CPU  0: ARM Cortex-A55 r2p0 affinity:  0  0
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,VIPT ICache,64 byte ERG,64 byte CWG>
+ Instruction Set Attributes 0 = <DP,RDM,Atomic,CRC32,SHA2,SHA1,AES+PMULL>
+ Instruction Set Attributes 1 = <RCPC-8.3,DCPoP>
+         Processor Features 0 = <RAS,GIC,AdvSIMD+HP,FP+HP,EL3 32,EL2 32,EL1 32,EL0 32>
+         Processor Features 1 = <PSTATE.SSBS>
+      Memory Model Features 0 = <TGran4,TGran64,TGran16,SNSMem,BigEnd,16bit ASID,1TB PA>
+      Memory Model Features 1 = <XNX,PAN+ATS1E1,LO,HPD+TTPBHA,VH,16bit VMID,HAF+DS>
+      Memory Model Features 2 = <32bit CCIDX,48bit VA,IESB,UAO,CnP>
+             Debug Features 0 = <DoubleLock,2 CTX BKPTs,4 Watchpoints,6 Breakpoints,PMUv3 v8.1,Debugv8.2>
+Trying to mount root from ufs:/dev/gpt/OPNsense [rw]...
+             Debug Features 1 = <>
+         Auxiliary Features 0 = <>
+         Auxiliary Features 1 = <>
+CPU  1: ARM Cortex-A55 r2p0 affinity:  1  0
+CPU  2: ARM Cortex-A55 r2p0 affinity:  2  0
+CPU  3: ARM Cortex-A55 r2p0 affinity:  3  0
+Release APs...done
+GEOM: mmcsd0: the secondary GPT header is not in the last LBA.
+GEOM: diskid/XXXXXXXXXXXXXX the secondary GPT header is not in the last LBA.
+uhub2: 2 ports with 2 removable, self powered
+uhub3: 2 ports with 2 removable, self powered
+uhub0: 1 port with 1 removable, self powered
+uhub1: 1 port with 1 removable, self powered
+Root mount waiting for: usbus2 usbus3
+ugen2.2: <SanDisk Cruzer Fit> at usbus2
+umass0 on uhub2
+umass0: <SanDisk Cruzer Fit, class 0/0, rev 2.10/1.00, addr 1> on usbus2
+ugen3.2: <USB SanDisk 3.2Gen1> at usbus3
+umass1 on uhub3
+umass1: <USB SanDisk 3.2Gen1, class 0/0, rev 3.00/1.00, addr 1> on usbus3
+da0 at umass-sim0 bus 0 scbus0 target 0 lun 0
+da0: <SanDisk Cruzer Fit 1.00> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 59976MB (122830848 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+da1 at umass-sim1 bus 1 scbus1 target 0 lun 0
+da1: <USB SanDisk 3.2Gen1 1.00> Removable Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 400.000MB/s transfers
+da1: 14664MB (30031872 512 byte sectors)
+da1: quirks=0x2<NO_6_BYTE>

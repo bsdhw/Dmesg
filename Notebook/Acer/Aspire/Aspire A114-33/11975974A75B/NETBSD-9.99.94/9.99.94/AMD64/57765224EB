@@ -1,0 +1,968 @@
+s
+wsmouse1 at ums0 mux 0
+uhid0 at uhidev1 reportid 3: input=4, output=0, feature=0
+uhid1 at uhidev1 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 16: input=6, output=6, feature=0
+uhid3 at uhidev1 reportid 17: input=19, output=19, feature=0
+umass0 at uhub0 port 1 configuration 1 interface 0
+umass0: SanDisk (0x0781) Extreme SSD (0x558c), rev 3.10/10.12, addr 2
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, 2 luns per target
+sd0 at scsibus0 target 0 lun 0: <SanDisk, Extreme SSD, 1012> disk fixed
+sd0: fabricating a geometry
+sd0: 232 GB, 238475 cyl, 64 head, 32 sec, 512 bytes/sect x 488396800 sectors
+sd0: fabricating a geometry
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262144 blocks at 2048, type: msdos
+dk1 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 419430400 blocks at 264192, type: ffs
+dk2 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 67108864 blocks at 419694592, type: swap
+ses0 at scsibus0 target 0 lun 1: <SanDisk, SES Device, 1012> enclosure services fixed
+ses0: SCSI-3 SES Device
+uvideo0 at uhub1 port 4 configuration 1 interface 0: Quanta (0x0408) VGA WebCam (0xa031), rev 2.00/0.07, addr 3
+video0 at uvideo0: Quanta (0x0408) VGA WebCam (0xa031), rev 2.00/0.07, addr 3
+ahcisata0 port 1: PHY offline
+ahcisata0 port 0: PHY offline
+ubt0 at uhub1 port 8
+ubt0: vendor 8087 (0x8087) product 0aaa (0x0aaa), rev 2.00/0.02, addr 4
+sdmmc0: autoconfiguration error: couldn't enable card: 60
+WARNING: 3 errors while detecting hardware; check system log.
+boot device: sd0
+root on dk1 dumps on dk2
+root file system type: ffs
+kern.module.path=/stand/amd64/9.99.94/modules
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)
+syncing disks... done
+unmounted tmpfs on /var/shm type tmpfs
+unmounted procfs on /proc type procfs
+unmounted ptyfs on /dev/pts type ptyfs
+unmounted kernfs on /kern type kernfs
+unmounted tmpfs on /tmp type tmpfs
+sysbeep0: detached
+midi0: detached
+iic0: detached
+atabus1: detached
+atabus0: detached
+ichsmb0: detached
+ahcisata0: detached
+pchb0: detached
+attimer1: detached
+dk0 at sd0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk0: detached
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020, 2021, 2022
+    The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.99.94 (GENERIC) #0: Wed Mar 16 10:08:02 UTC 2022
+	XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+total memory = 7997 MB
+avail memory = 7718 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+RTC BIOS diagnostic error 0xff<clock_battery,ROM_cksum,config_unit,memory_size,fixed_disk,invalid_time>
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+efi: systbl at pa 74d5e018
+mainbus0 (root)
+ACPI: RSDP 0x0000000075BFE014 000024 (v02 ACRSYS)
+ACPI: XSDT 0x0000000075BD9188 0000F4 (v01 ACRSYS ACRPRDCT 00000002      01000013)
+ACPI: FACP 0x0000000075BDC000 00010C (v06 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: DSDT 0x0000000075BB2000 0254E0 (v02 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: FACS 0x0000000075B15000 000040
+ACPI: UEFI 0x0000000075B7E000 000236 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+ACPI: SSDT 0x0000000075BFA000 002AC3 (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: SSDT 0x0000000075BF8000 001CA4 (v02 ACRSYS ACRPRDCT 00003000 1025 00040000)
+ACPI: SSDT 0x0000000075BF4000 0032C8 (v02 ACRSYS ACRPRDCT 00003000 1025 00040000)
+ACPI: SSDT 0x0000000075BF1000 0025ED (v02 ACRSYS ACRPRDCT 00003000 1025 00040000)
+ACPI: SSDT 0x0000000075BF0000 00077B (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: TPM2 0x0000000075BEF000 00004C (v04 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BEC000 001355 (v02 ACRSYS ACRPRDCT 00000000 1025 00040000)
+ACPI: NHLT 0x0000000075BEB000 00002D (v00 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BEA000 0007DA (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: LPIT 0x0000000075BE9000 000094 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: WSMT 0x0000000075BE8000 000028 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BE7000 000B70 (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: SSDT 0x0000000075BE6000 000122 (v02 ACRSYS ACRPRDCT 00000000 1025 00040000)
+ACPI: DBGP 0x0000000075BE5000 000034 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: DBG2 0x0000000075BE4000 000054 (v00 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BDD000 00699D (v01 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: HPET 0x0000000075BDB000 000038 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: APIC 0x0000000075BDA000 00012C (v03 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: MCFG 0x0000000075BFD000 00003C (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: PRAM 0x0000000075BD8000 000030 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: DMAR 0x0000000075BB1000 000088 (v02 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BB0000 0000F8 (v01 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: FPDT 0x0000000075BAF000 000044 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: BGRT 0x0000000075BAE000 000038 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+ACPI: 12 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 2: pa 0xfec00000, version 0x20, 120 pins
+cpu0 at mainbus0 apid 0
+cpu0: Use lfence to serialize rdtsc
+cpu0: CPU base freq 1100000000 Hz
+cpu0: CPU max freq 3300000000 Hz
+cpu0: TSC freq CPUID 1113600000 Hz
+cpu0: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu0: node 0, package 0, core 0, smt 0
+cpu1 at mainbus0 apid 2
+cpu1: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu1: node 0, package 0, core 1, smt 0
+cpu2 at mainbus0 apid 4
+cpu2: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu2: node 0, package 0, core 2, smt 0
+cpu3 at mainbus0 apid 6
+cpu3: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu3: node 0, package 0, core 3, smt 0
+acpi0 at mainbus0: Intel ACPICA 20211217
+acpi0: X/RSDT: OemId <ACRSYS,ACRPRDCT,00000002>, AslId <    ,01000013>
+acpi0: MCFG: segment 0, bus 0-255, address 0x00000000c0000000
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDDDAF4427348 000386 (v02 PmRef  Cpu0Cst  00003001 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDDD983DF5448 000227 (v02 PmRef  Cpu0Ist  00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDDDAF32534C8 0001B3 (v02 PmRef  Cpu0Psd  00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDDD983F22008 0008E7 (v02 PmRef  ApIst    00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDDD983F03008 0004D4 (v02 PmRef  ApPsd    00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFDDD983F39008 00048A (v02 PmRef  ApCst    00003000 INTL 20160422)
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 19200000 Hz quality 2000
+acpiec0 at acpi0 (EC0, PNP0C09): io 0x62,0x66
+acpivga0 at acpi0 (GFX0): ACPI Display Adapter
+acpiout0 at acpivga0 (DD01, 0x0001): ACPI Display Output Device
+acpiout1 at acpivga0 (DD02, 0x0002): ACPI Display Output Device
+acpiout2 at acpivga0 (DD03, 0x0003): ACPI Display Output Device
+acpiout3 at acpivga0 (DD04, 0x0004): ACPI Display Output Device
+acpiout4 at acpivga0 (DD05, 0x0005): ACPI Display Output Device
+acpiout5 at acpivga0 (DD06, 0x0006): ACPI Display Output Device
+acpiout6 at acpivga0 (DD07, 0x0007): ACPI Display Output Device
+acpiout7 at acpivga0 (DD08, 0x0008): ACPI Display Output Device
+acpiout8 at acpivga0 (DD09, 0x0009): ACPI Display Output Device
+acpiout9 at acpivga0 (DD0A, 0x000a): ACPI Display Output Device
+acpiout10 at acpivga0 (DD0B, 0x000b): ACPI Display Output Device
+acpiout11 at acpivga0 (DD0C, 0x000c): ACPI Display Output Device
+acpiout12 at acpivga0 (DD0D, 0x000d): ACPI Display Output Device
+acpiout13 at acpivga0 (DD0E, 0x000e): ACPI Display Output Device
+acpiout14 at acpivga0 (DD0F, 0x000f): ACPI Display Output Device
+acpiout15 at acpivga0 (DD1F, 0x001f): ACPI Display Output Device
+acpiout15: brightness levels: [0-100]
+acpiout16 at acpivga0 (DD2F, 0x001f): ACPI Display Output Device
+acpiout16: brightness levels: [0-100]
+acpivga0: connected output devices:
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+attimer1 at acpi0 (TIMR, PNP0100): io 0x40-0x43,0x50-0x53 irq 0
+pckbc1 at acpi0 (PS2K, 10251429) (kbd port): io 0x60,0x64 irq 1
+pckbc2 at acpi0 (PS2M, ETD0519) (aux port): irq 12
+SMKB (10251229) at acpi0 not configured
+acpiwmi0 at acpi0 (WMID, PNP0C14-APGe): ACPI WMI Interface
+acpiwmibus at acpiwmi0 not configured
+GPI0 (INT34C8) at acpi0 not configured
+PEPD (INT33A1) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C): ACPI Power Button
+acpibut1 at acpi0 (SLPB, PNP0C0E): ACPI Sleep Button
+acpiacad0 at acpi0 (ACAD, ACPI0003): ACPI AC Adapter
+acpibat0 at acpi0 (BAT1, PNP0C0A-1): ACPI Battery
+acpibat0: ACPI 4.0 functionality present
+acpilid0 at acpi0 (LID0, PNP0C0D): ACPI Lid Switch
+IETM (INTC1040) at acpi0 not configured
+SEN2 (INTC1043) at acpi0 not configured
+TPM (INTC5001) at acpi0 not configured
+acpitz0 at acpi0 (TZ01): cpu0
+acpitz0: levels: passive cooling
+ACPI: Enabled 4 GPEs in block 00 to 7F
+pckbd0 at pckbc1 (kbd slot)
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc1 (aux slot)
+pckbc1: using irq 12 for aux slot
+wsmouse0 at pms0 mux 0
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: Intel Jasper Lake Processor Transaction Router (SKU 4) (rev. 0x00)
+i915drmkms: preliminary hardware support disabled
+genfb0 at pci0 dev 2 function 0: Intel Jasper Lake GPU 32 EU (rev. 0x01)
+genfb0: framebuffer at 0x4000000000, size 1366x768, depth 32, stride 5504
+genfb0: shadow framebuffer enabled, size 4128 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+Intel Jasper Lake DPTF (miscellaneous DASP) at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0: Intel Jasper Lake USB Host (xHCI) (rev. 0x01)
+xhci0: 64-bit DMA
+xhci0: interrupting at msi0 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+Intel Jasper Lake Shared SRAM (RAM memory, revision 0x01) at pci0 dev 20 function 2 not configured
+Intel Jasper Lake CNVi WiFi (SKU 0) (miscellaneous network, revision 0x01) at pci0 dev 20 function 3 not configured
+dwiic0 at pci0 dev 21 function 0autoconfiguration error: : can't map register space
+dwiic1 at pci0 dev 21 function 2autoconfiguration error: : can't map register space
+Intel Jasper Lake HECI 1 (miscellaneous communications, revision 0x01) at pci0 dev 22 function 0 not configured
+ahcisata0 at pci0 dev 23 function 0: Intel Jasper Lake SATA (AHCI) (rev. 0x01)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 2 ports, 32 slots, CAP 0xe524ff01<PSC,SSC,PMD,SAM,ISS=0x2=Gen2,SCLO,SALP,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi1 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+sdhc0 at pci0 dev 26 function 0: Intel Jasper Lake eMMC (rev. 0x01)
+sdhc0: interrupting at ioapic0 pin 16
+sdhc0: SDHC 3.0, rev 16, caps <546ec881/80000807>, 32-bit ADMA2, 200000 kHz, embedded slot, HS SDR50 DDR50 SDR104 HS200 1.8V, re-tuning mode 1 (128s timer), 2048 byte blocks
+sdmmc0 at sdhc0 slot 0
+ppb0 at pci0 dev 28 function 0: Intel Jasper Lake PCIe Root Port 1 (rev. 0x01)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 8.0GT/s
+ppb0: link is x1 @ 2.5GT/s
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci1 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x15)
+re0: interrupting at msix2 vec 0
+re0: RTL8168H/8111H (0x5400)
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8251 1000BASE-T media interface, rev. 0
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+pcib0 at pci0 dev 31 function 0: Intel Jasper Lake eSPI (rev. 0x01)
+hdaudio0 at pci0 dev 31 function 3: HD Audio Controller
+hdaudio0: interrupting at msi3 vec 0
+hdaudio0: HDA ver. 1.0, OSS 6, ISS 7, BSS 0, SDO 1, 64-bit
+hdafg0 at hdaudio0: vendor 10ec product 0255
+hdafg0: DAC00 2ch: Speaker [Built-In]
+hdafg0: DAC01 2ch: HP Out [Jack]
+hdafg0: ADC02 2ch: Mic In [Built-In]
+hdafg0: 2ch/2ch 44100Hz 48000Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg0: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr0 at audio0: PC Speaker (synthesized)
+wsbell at spkr0 not configured
+hdafg1 at hdaudio0: vendor 8086 product 281a
+hdafg1: DP00 8ch: Digital Out [Jack]
+hdafg1: 8ch/0ch 48000Hz PCM16*
+ichsmb0 at pci0 dev 31 function 4: Intel Jasper Lake SMBus (rev. 0x01)
+ichsmb0: interrupting at ioapic0 pin 16
+iic0 at ichsmb0: I2C bus
+Intel Jasper Lake SPI (FLASH) (miscellaneous serial ... revision 0x01) at pci0 dev 31 function 5 not configured
+isa0 at pcib0
+pcppi0 at isa0 port 0x61
+spkr1 at pcppi0: PC Speaker
+wsbell at spkr1 not configured
+midi0 at pcppi0: PC speaker
+sysbeep0 at pcppi0
+attimer1: attached to pcppi0
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow  1000 mW
+acpicpu0: C2: FFH, lat 253 us, pow   200 mW
+acpicpu0: C3: FFH, lat 1048 us, pow   200 mW
+acpicpu0: P0: FFH, lat  10 us, pow  6000 mW, 1101 MHz, turbo boost
+acpicpu0: P1: FFH, lat  10 us, pow  6000 mW, 1100 MHz
+acpicpu0: P2: FFH, lat  10 us, pow  5338 mW, 1000 MHz
+acpicpu0: P3: FFH, lat  10 us, pow  4749 mW,  900 MHz
+acpicpu0: P4: FFH, lat  10 us, pow  4173 mW,  800 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+coretemp0 at cpu0: thermal sensor, 1 C resolution, Tjmax=105
+acpicpu1 at cpu1: ACPI CPU
+coretemp1 at cpu1: thermal sensor, 1 C resolution, Tjmax=105
+acpicpu2 at cpu2: ACPI CPU
+coretemp2 at cpu2: thermal sensor, 1 C resolution, Tjmax=105
+acpicpu3 at cpu3: ACPI CPU
+coretemp3 at cpu3: thermal sensor, 1 C resolution, Tjmax=105
+cpu0: CPU base freq 1100000000 Hz
+cpu0: CPU max freq 3300000000 Hz
+cpu0: TSC freq CPUID 1113600000 Hz
+cpu0: TSC freq calibrated 1113602000 Hz
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 1113602000 Hz quality 3000
+acpibat0: LGC LION rechargeable battery
+acpibat0: granularity: low->warn 0.032 Ah, warn->full 0.032 Ah
+uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 6 ports with 6 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 8 ports with 8 removable, self powered
+acpiacad0: AC adapter online.
+IPsec: Initialized Security Association Processing.
+aes: Intel AES-NI
+chacha: x86 SSE2 ChaCha
+uhidev0 at uhub1 port 3 configuration 1 interface 0
+uhidev0: Logitech (0x046d) USB Receiver (0xc534), rev 2.00/29.01, addr 1, iclass 3/1
+ukbd0 at uhidev0
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub1 port 3 configuration 1 interface 1
+uhidev1: Logitech (0x046d) USB Receiver (0xc534), rev 2.00/29.01, addr 1, iclass 3/1
+uhidev1: 17 report ids
+ums0 at uhidev1 reportid 2: 16 buttons, W and Z dirs
+wsmouse1 at ums0 mux 0
+uhid0 at uhidev1 reportid 3: input=4, output=0, feature=0
+uhid1 at uhidev1 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 16: input=6, output=6, feature=0
+uhid3 at uhidev1 reportid 17: input=19, output=19, feature=0
+umass0 at uhub0 port 1 configuration 1 interface 0
+umass0: SanDisk (0x0781) Extreme SSD (0x558c), rev 3.10/10.12, addr 2
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, 2 luns per target
+sd0 at scsibus0 target 0 lun 0: <SanDisk, Extreme SSD, 1012> disk fixed
+sd0: fabricating a geometry
+sd0: 232 GB, 238475 cyl, 64 head, 32 sec, 512 bytes/sect x 488396800 sectors
+sd0: fabricating a geometry
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262144 blocks at 2048, type: msdos
+dk1 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 419430400 blocks at 264192, type: ffs
+dk2 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 67108864 blocks at 419694592, type: swap
+ses0 at scsibus0 target 0 lun 1: <SanDisk, SES Device, 1012> enclosure services fixed
+ses0: SCSI-3 SES Device
+uvideo0 at uhub1 port 4 configuration 1 interface 0: Quanta (0x0408) VGA WebCam (0xa031), rev 2.00/0.07, addr 3
+video0 at uvideo0: Quanta (0x0408) VGA WebCam (0xa031), rev 2.00/0.07, addr 3
+ahcisata0 port 0: PHY offline
+ahcisata0 port 1: PHY offline
+ubt0 at uhub1 port 8
+ubt0: vendor 8087 (0x8087) product 0aaa (0x0aaa), rev 2.00/0.02, addr 4
+sdmmc0: autoconfiguration error: couldn't enable card: 60
+WARNING: 3 errors while detecting hardware; check system log.
+boot device: sd0
+root on dk1 dumps on dk2
+root file system type: ffs
+kern.module.path=/stand/amd64/9.99.94/modules
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)
+syncing disks... done
+unmounted tmpfs on /var/shm type tmpfs
+unmounted procfs on /proc type procfs
+unmounted ptyfs on /dev/pts type ptyfs
+unmounted kernfs on /kern type kernfs
+unmounted tmpfs on /tmp type tmpfs
+sysbeep0: detached
+midi0: detached
+iic0: detached
+atabus1: detached
+atabus0: detached
+ichsmb0: detached
+ahcisata0: detached
+pchb0: detached
+attimer1: detached
+dk0 at sd0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk0: detached
+forcefully unmounted /dev/dk1 on / type ffs
+turning off swap... done
+dk2 at sd0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk1 at sd0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+sd0: detached
+Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020, 2021, 2022
+    The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.99.94 (GENERIC) #0: Wed Mar 16 10:08:02 UTC 2022
+	XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+total memory = 7997 MB
+avail memory = 7718 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+RTC BIOS diagnostic error 0xff<clock_battery,ROM_cksum,config_unit,memory_size,fixed_disk,invalid_time>
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+efi: systbl at pa 74d5e018
+mainbus0 (root)
+ACPI: RSDP 0x0000000075BFE014 000024 (v02 ACRSYS)
+ACPI: XSDT 0x0000000075BD9188 0000F4 (v01 ACRSYS ACRPRDCT 00000002      01000013)
+ACPI: FACP 0x0000000075BDC000 00010C (v06 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: DSDT 0x0000000075BB2000 0254E0 (v02 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: FACS 0x0000000075B15000 000040
+ACPI: UEFI 0x0000000075B7E000 000236 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+ACPI: SSDT 0x0000000075BFA000 002AC3 (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: SSDT 0x0000000075BF8000 001CA4 (v02 ACRSYS ACRPRDCT 00003000 1025 00040000)
+ACPI: SSDT 0x0000000075BF4000 0032C8 (v02 ACRSYS ACRPRDCT 00003000 1025 00040000)
+ACPI: SSDT 0x0000000075BF1000 0025ED (v02 ACRSYS ACRPRDCT 00003000 1025 00040000)
+ACPI: SSDT 0x0000000075BF0000 00077B (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: TPM2 0x0000000075BEF000 00004C (v04 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BEC000 001355 (v02 ACRSYS ACRPRDCT 00000000 1025 00040000)
+ACPI: NHLT 0x0000000075BEB000 00002D (v00 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BEA000 0007DA (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: LPIT 0x0000000075BE9000 000094 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: WSMT 0x0000000075BE8000 000028 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BE7000 000B70 (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: SSDT 0x0000000075BE6000 000122 (v02 ACRSYS ACRPRDCT 00000000 1025 00040000)
+ACPI: DBGP 0x0000000075BE5000 000034 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: DBG2 0x0000000075BE4000 000054 (v00 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BDD000 00699D (v01 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: HPET 0x0000000075BDB000 000038 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: APIC 0x0000000075BDA000 00012C (v03 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: MCFG 0x0000000075BFD000 00003C (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: PRAM 0x0000000075BD8000 000030 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: DMAR 0x0000000075BB1000 000088 (v02 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BB0000 0000F8 (v01 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: FPDT 0x0000000075BAF000 000044 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: BGRT 0x0000000075BAE000 000038 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+ACPI: 12 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 2: pa 0xfec00000, version 0x20, 120 pins
+cpu0 at mainbus0 apid 0
+cpu0: Use lfence to serialize rdtsc
+cpu0: CPU base freq 1100000000 Hz
+cpu0: CPU max freq 3300000000 Hz
+cpu0: TSC freq CPUID 1113600000 Hz
+cpu0: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu0: node 0, package 0, core 0, smt 0
+cpu1 at mainbus0 apid 2
+cpu1: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu1: node 0, package 0, core 1, smt 0
+cpu2 at mainbus0 apid 4
+cpu2: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu2: node 0, package 0, core 2, smt 0
+cpu3 at mainbus0 apid 6
+cpu3: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu3: node 0, package 0, core 3, smt 0
+acpi0 at mainbus0: Intel ACPICA 20211217
+acpi0: X/RSDT: OemId <ACRSYS,ACRPRDCT,00000002>, AslId <    ,01000013>
+acpi0: MCFG: segment 0, bus 0-255, address 0x00000000c0000000
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFC6B6CC827348 000386 (v02 PmRef  Cpu0Cst  00003001 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFC6B55C1F5448 000227 (v02 PmRef  Cpu0Ist  00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFC6B6CB6534C8 0001B3 (v02 PmRef  Cpu0Psd  00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFC6B55C322008 0008E7 (v02 PmRef  ApIst    00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFC6B55C303008 0004D4 (v02 PmRef  ApPsd    00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFFC6B55C339008 00048A (v02 PmRef  ApCst    00003000 INTL 20160422)
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 19200000 Hz quality 2000
+acpiec0 at acpi0 (EC0, PNP0C09): io 0x62,0x66
+acpivga0 at acpi0 (GFX0): ACPI Display Adapter
+acpiout0 at acpivga0 (DD01, 0x0001): ACPI Display Output Device
+acpiout1 at acpivga0 (DD02, 0x0002): ACPI Display Output Device
+acpiout2 at acpivga0 (DD03, 0x0003): ACPI Display Output Device
+acpiout3 at acpivga0 (DD04, 0x0004): ACPI Display Output Device
+acpiout4 at acpivga0 (DD05, 0x0005): ACPI Display Output Device
+acpiout5 at acpivga0 (DD06, 0x0006): ACPI Display Output Device
+acpiout6 at acpivga0 (DD07, 0x0007): ACPI Display Output Device
+acpiout7 at acpivga0 (DD08, 0x0008): ACPI Display Output Device
+acpiout8 at acpivga0 (DD09, 0x0009): ACPI Display Output Device
+acpiout9 at acpivga0 (DD0A, 0x000a): ACPI Display Output Device
+acpiout10 at acpivga0 (DD0B, 0x000b): ACPI Display Output Device
+acpiout11 at acpivga0 (DD0C, 0x000c): ACPI Display Output Device
+acpiout12 at acpivga0 (DD0D, 0x000d): ACPI Display Output Device
+acpiout13 at acpivga0 (DD0E, 0x000e): ACPI Display Output Device
+acpiout14 at acpivga0 (DD0F, 0x000f): ACPI Display Output Device
+acpiout15 at acpivga0 (DD1F, 0x001f): ACPI Display Output Device
+acpiout15: brightness levels: [0-100]
+acpiout16 at acpivga0 (DD2F, 0x001f): ACPI Display Output Device
+acpiout16: brightness levels: [0-100]
+acpivga0: connected output devices:
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+attimer1 at acpi0 (TIMR, PNP0100): io 0x40-0x43,0x50-0x53 irq 0
+pckbc1 at acpi0 (PS2K, 10251429) (kbd port): io 0x60,0x64 irq 1
+pckbc2 at acpi0 (PS2M, ETD0519) (aux port): irq 12
+SMKB (10251229) at acpi0 not configured
+acpiwmi0 at acpi0 (WMID, PNP0C14-APGe): ACPI WMI Interface
+acpiwmibus at acpiwmi0 not configured
+GPI0 (INT34C8) at acpi0 not configured
+PEPD (INT33A1) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C): ACPI Power Button
+acpibut1 at acpi0 (SLPB, PNP0C0E): ACPI Sleep Button
+acpiacad0 at acpi0 (ACAD, ACPI0003): ACPI AC Adapter
+acpibat0 at acpi0 (BAT1, PNP0C0A-1): ACPI Battery
+acpibat0: ACPI 4.0 functionality present
+acpilid0 at acpi0 (LID0, PNP0C0D): ACPI Lid Switch
+IETM (INTC1040) at acpi0 not configured
+SEN2 (INTC1043) at acpi0 not configured
+TPM (INTC5001) at acpi0 not configured
+acpitz0 at acpi0 (TZ01): cpu0
+acpitz0: levels: passive cooling
+ACPI: Enabled 4 GPEs in block 00 to 7F
+pckbd0 at pckbc1 (kbd slot)
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc1 (aux slot)
+pckbc1: using irq 12 for aux slot
+wsmouse0 at pms0 mux 0
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: Intel Jasper Lake Processor Transaction Router (SKU 4) (rev. 0x00)
+i915drmkms: preliminary hardware support disabled
+genfb0 at pci0 dev 2 function 0: Intel Jasper Lake GPU 32 EU (rev. 0x01)
+genfb0: framebuffer at 0x4000000000, size 1366x768, depth 32, stride 5504
+genfb0: shadow framebuffer enabled, size 4128 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+Intel Jasper Lake DPTF (miscellaneous DASP) at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0: Intel Jasper Lake USB Host (xHCI) (rev. 0x01)
+xhci0: 64-bit DMA
+xhci0: interrupting at msi0 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+Intel Jasper Lake Shared SRAM (RAM memory, revision 0x01) at pci0 dev 20 function 2 not configured
+Intel Jasper Lake CNVi WiFi (SKU 0) (miscellaneous network, revision 0x01) at pci0 dev 20 function 3 not configured
+dwiic0 at pci0 dev 21 function 0autoconfiguration error: : can't map register space
+dwiic1 at pci0 dev 21 function 2autoconfiguration error: : can't map register space
+Intel Jasper Lake HECI 1 (miscellaneous communications, revision 0x01) at pci0 dev 22 function 0 not configured
+ahcisata0 at pci0 dev 23 function 0: Intel Jasper Lake SATA (AHCI) (rev. 0x01)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 2 ports, 32 slots, CAP 0xe524ff01<PSC,SSC,PMD,SAM,ISS=0x2=Gen2,SCLO,SALP,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi1 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+sdhc0 at pci0 dev 26 function 0: Intel Jasper Lake eMMC (rev. 0x01)
+sdhc0: interrupting at ioapic0 pin 16
+sdhc0: SDHC 3.0, rev 16, caps <546ec881/80000807>, 32-bit ADMA2, 200000 kHz, embedded slot, HS SDR50 DDR50 SDR104 HS200 1.8V, re-tuning mode 1 (128s timer), 2048 byte blocks
+sdmmc0 at sdhc0 slot 0
+ppb0 at pci0 dev 28 function 0: Intel Jasper Lake PCIe Root Port 1 (rev. 0x01)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 8.0GT/s
+ppb0: link is x1 @ 2.5GT/s
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci1 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x15)
+re0: interrupting at msix2 vec 0
+re0: RTL8168H/8111H (0x5400)
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8251 1000BASE-T media interface, rev. 0
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+pcib0 at pci0 dev 31 function 0: Intel Jasper Lake eSPI (rev. 0x01)
+hdaudio0 at pci0 dev 31 function 3: HD Audio Controller
+hdaudio0: interrupting at msi3 vec 0
+hdaudio0: HDA ver. 1.0, OSS 6, ISS 7, BSS 0, SDO 1, 64-bit
+hdafg0 at hdaudio0: vendor 10ec product 0255
+hdafg0: DAC00 2ch: Speaker [Built-In]
+hdafg0: DAC01 2ch: HP Out [Jack]
+hdafg0: ADC02 2ch: Mic In [Built-In]
+hdafg0: 2ch/2ch 44100Hz 48000Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg0: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr0 at audio0: PC Speaker (synthesized)
+wsbell at spkr0 not configured
+hdafg1 at hdaudio0: vendor 8086 product 281a
+hdafg1: DP00 8ch: Digital Out [Jack]
+hdafg1: 8ch/0ch 48000Hz PCM16*
+ichsmb0 at pci0 dev 31 function 4: Intel Jasper Lake SMBus (rev. 0x01)
+ichsmb0: interrupting at ioapic0 pin 16
+iic0 at ichsmb0: I2C bus
+Intel Jasper Lake SPI (FLASH) (miscellaneous serial ... revision 0x01) at pci0 dev 31 function 5 not configured
+isa0 at pcib0
+pcppi0 at isa0 port 0x61
+spkr1 at pcppi0: PC Speaker
+wsbell at spkr1 not configured
+midi0 at pcppi0: PC speaker
+sysbeep0 at pcppi0
+attimer1: attached to pcppi0
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow  1000 mW
+acpicpu0: C2: FFH, lat 253 us, pow   200 mW
+acpicpu0: C3: FFH, lat 1048 us, pow   200 mW
+acpicpu0: P0: FFH, lat  10 us, pow  6000 mW, 1101 MHz, turbo boost
+acpicpu0: P1: FFH, lat  10 us, pow  6000 mW, 1100 MHz
+acpicpu0: P2: FFH, lat  10 us, pow  5338 mW, 1000 MHz
+acpicpu0: P3: FFH, lat  10 us, pow  4749 mW,  900 MHz
+acpicpu0: P4: FFH, lat  10 us, pow  4173 mW,  800 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+coretemp0 at cpu0: thermal sensor, 1 C resolution, Tjmax=105
+acpicpu1 at cpu1: ACPI CPU
+coretemp1 at cpu1: thermal sensor, 1 C resolution, Tjmax=105
+acpicpu2 at cpu2: ACPI CPU
+coretemp2 at cpu2: thermal sensor, 1 C resolution, Tjmax=105
+acpicpu3 at cpu3: ACPI CPU
+coretemp3 at cpu3: thermal sensor, 1 C resolution, Tjmax=105
+cpu0: CPU base freq 1100000000 Hz
+cpu0: CPU max freq 3300000000 Hz
+cpu0: TSC freq CPUID 1113600000 Hz
+cpu0: TSC freq calibrated 1113602000 Hz
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 1113602000 Hz quality 3000
+acpibat0: LGC LION rechargeable battery
+acpibat0: granularity: low->warn 0.032 Ah, warn->full 0.032 Ah
+uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 6 ports with 6 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 8 ports with 8 removable, self powered
+acpiacad0: AC adapter online.
+IPsec: Initialized Security Association Processing.
+aes: Intel AES-NI
+chacha: x86 SSE2 ChaCha
+uhidev0 at uhub1 port 3 configuration 1 interface 0
+uhidev0: Logitech (0x046d) USB Receiver (0xc534), rev 2.00/29.01, addr 1, iclass 3/1
+ukbd0 at uhidev0
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub1 port 3 configuration 1 interface 1
+uhidev1: Logitech (0x046d) USB Receiver (0xc534), rev 2.00/29.01, addr 1, iclass 3/1
+uhidev1: 17 report ids
+ums0 at uhidev1 reportid 2: 16 buttons, W and Z dirs
+wsmouse1 at ums0 mux 0
+uhid0 at uhidev1 reportid 3: input=4, output=0, feature=0
+uhid1 at uhidev1 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 16: input=6, output=6, feature=0
+uhid3 at uhidev1 reportid 17: input=19, output=19, feature=0
+umass0 at uhub0 port 1 configuration 1 interface 0
+umass0: SanDisk (0x0781) Extreme SSD (0x558c), rev 3.10/10.12, addr 2
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, 2 luns per target
+sd0 at scsibus0 target 0 lun 0: <SanDisk, Extreme SSD, 1012> disk fixed
+sd0: fabricating a geometry
+sd0: 232 GB, 238475 cyl, 64 head, 32 sec, 512 bytes/sect x 488396800 sectors
+sd0: fabricating a geometry
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262144 blocks at 2048, type: msdos
+dk1 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 419430400 blocks at 264192, type: ffs
+dk2 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 67108864 blocks at 419694592, type: swap
+ses0 at scsibus0 target 0 lun 1: <SanDisk, SES Device, 1012> enclosure services fixed
+ses0: SCSI-3 SES Device
+uvideo0 at uhub1 port 4 configuration 1 interface 0: Quanta (0x0408) VGA WebCam (0xa031), rev 2.00/0.07, addr 3
+video0 at uvideo0: Quanta (0x0408) VGA WebCam (0xa031), rev 2.00/0.07, addr 3
+ahcisata0 port 1: PHY offline
+ahcisata0 port 0: PHY offline
+ubt0 at uhub1 port 8
+ubt0: vendor 8087 (0x8087) product 0aaa (0x0aaa), rev 2.00/0.02, addr 4
+sdmmc0: autoconfiguration error: couldn't enable card: 60
+WARNING: 3 errors while detecting hardware; check system log.
+boot device: sd0
+root on dk1 dumps on dk2
+root file system type: ffs
+kern.module.path=/stand/amd64/9.99.94/modules
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)
+syncing disks... done
+unmounted tmpfs on /var/shm type tmpfs
+unmounted procfs on /proc type procfs
+unmounted ptyfs on /dev/pts type ptyfs
+unmounted kernfs on /kern type kernfs
+unmounted tmpfs on /tmp type tmpfs
+sysbeep0: detached
+midi0: detached
+iic0: detached
+atabus1: detached
+atabus0: detached
+ichsmb0: detached
+ahcisata0: detached
+pchb0: detached
+attimer1: detached
+dk0 at sd0 (XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) deleted
+dk0: detached
+forcefully unmounted /dev/dk1 on / type ffs
+turning off swap... done
+dk2 at sd0 (ebcd7a1f-2f53-4148-a37b-bee2ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262144 blocks at[   1.0000000] Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+    2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020, 2021, 2022
+    The NetBSD Foundation, Inc.  All rights reserved.
+Copyright (c) 1982, 1986, 1989, 1991, 1993
+    The Regents of the University of California.  All rights reserved.
+
+NetBSD 9.99.94 (GENERIC) #0: Wed Mar 16 10:08:02 UTC 2022
+	XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+total memory = 7997 MB
+avail memory = 7718 MB
+timecounter: Timecounters tick every 10.000 msec
+Kernelized RAIDframe activated
+RTC BIOS diagnostic error 0xff<clock_battery,ROM_cksum,config_unit,memory_size,fixed_disk,invalid_time>
+timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+efi: systbl at pa 74d5e018
+mainbus0 (root)
+ACPI: RSDP 0x0000000075BFE014 000024 (v02 ACRSYS)
+ACPI: XSDT 0x0000000075BD9188 0000F4 (v01 ACRSYS ACRPRDCT 00000002      01000013)
+ACPI: FACP 0x0000000075BDC000 00010C (v06 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: DSDT 0x0000000075BB2000 0254E0 (v02 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: FACS 0x0000000075B15000 000040
+ACPI: UEFI 0x0000000075B7E000 000236 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+ACPI: SSDT 0x0000000075BFA000 002AC3 (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: SSDT 0x0000000075BF8000 001CA4 (v02 ACRSYS ACRPRDCT 00003000 1025 00040000)
+ACPI: SSDT 0x0000000075BF4000 0032C8 (v02 ACRSYS ACRPRDCT 00003000 1025 00040000)
+ACPI: SSDT 0x0000000075BF1000 0025ED (v02 ACRSYS ACRPRDCT 00003000 1025 00040000)
+ACPI: SSDT 0x0000000075BF0000 00077B (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: TPM2 0x0000000075BEF000 00004C (v04 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BEC000 001355 (v02 ACRSYS ACRPRDCT 00000000 1025 00040000)
+ACPI: NHLT 0x0000000075BEB000 00002D (v00 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BEA000 0007DA (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: LPIT 0x0000000075BE9000 000094 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: WSMT 0x0000000075BE8000 000028 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BE7000 000B70 (v02 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: SSDT 0x0000000075BE6000 000122 (v02 ACRSYS ACRPRDCT 00000000 1025 00040000)
+ACPI: DBGP 0x0000000075BE5000 000034 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: DBG2 0x0000000075BE4000 000054 (v00 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BDD000 00699D (v01 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: HPET 0x0000000075BDB000 000038 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: APIC 0x0000000075BDA000 00012C (v03 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: MCFG 0x0000000075BFD000 00003C (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: PRAM 0x0000000075BD8000 000030 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: DMAR 0x0000000075BB1000 000088 (v02 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: SSDT 0x0000000075BB0000 0000F8 (v01 ACRSYS ACRPRDCT 00001000 1025 00040000)
+ACPI: FPDT 0x0000000075BAF000 000044 (v01 ACRSYS ACRPRDCT 00000002 1025 00040000)
+ACPI: BGRT 0x0000000075BAE000 000038 (v01 ACRSYS ACRPRDCT 00000001 1025 00040000)
+ACPI: 12 ACPI AML tables successfully acquired and loaded
+ioapic0 at mainbus0 apid 2: pa 0xfec00000, version 0x20, 120 pins
+cpu0 at mainbus0 apid 0
+cpu0: Use lfence to serialize rdtsc
+cpu0: CPU base freq 1100000000 Hz
+cpu0: CPU max freq 3300000000 Hz
+cpu0: TSC freq CPUID 1113600000 Hz
+cpu0: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu0: node 0, package 0, core 0, smt 0
+cpu1 at mainbus0 apid 2
+cpu1: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu1: node 0, package 0, core 1, smt 0
+cpu2 at mainbus0 apid 4
+cpu2: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu2: node 0, package 0, core 2, smt 0
+cpu3 at mainbus0 apid 6
+cpu3: Intel(R) Pentium(R) Silver N6000 @ 1.10GHz, id 0x906c0
+cpu3: node 0, package 0, core 3, smt 0
+acpi0 at mainbus0: Intel ACPICA 20211217
+acpi0: X/RSDT: OemId <ACRSYS,ACRPRDCT,00000002>, AslId <    ,01000013>
+acpi0: MCFG: segment 0, bus 0-255, address 0x00000000c0000000
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFF845CE3427348 000386 (v02 PmRef  Cpu0Cst  00003001 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFF845B72DF5448 000227 (v02 PmRef  Cpu0Ist  00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFF845CE22534C8 0001B3 (v02 PmRef  Cpu0Psd  00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFF845B72F22008 0008E7 (v02 PmRef  ApIst    00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFF845B72F03008 0004D4 (v02 PmRef  ApPsd    00003000 INTL 20160422)
+ACPI: Dynamic OEM Table Load:
+ACPI: SSDT 0xFFFF845B72F39008 00048A (v02 PmRef  ApCst    00003000 INTL 20160422)
+acpi0: SCI interrupting at int 9
+acpi0: fixed power button present
+timecounter: Timecounter "ACPI-Fast" frequency 3579545 Hz quality 1000
+hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+timecounter: Timecounter "hpet0" frequency 19200000 Hz quality 2000
+acpiec0 at acpi0 (EC0, PNP0C09): io 0x62,0x66
+acpivga0 at acpi0 (GFX0): ACPI Display Adapter
+acpiout0 at acpivga0 (DD01, 0x0001): ACPI Display Output Device
+acpiout1 at acpivga0 (DD02, 0x0002): ACPI Display Output Device
+acpiout2 at acpivga0 (DD03, 0x0003): ACPI Display Output Device
+acpiout3 at acpivga0 (DD04, 0x0004): ACPI Display Output Device
+acpiout4 at acpivga0 (DD05, 0x0005): ACPI Display Output Device
+acpiout5 at acpivga0 (DD06, 0x0006): ACPI Display Output Device
+acpiout6 at acpivga0 (DD07, 0x0007): ACPI Display Output Device
+acpiout7 at acpivga0 (DD08, 0x0008): ACPI Display Output Device
+acpiout8 at acpivga0 (DD09, 0x0009): ACPI Display Output Device
+acpiout9 at acpivga0 (DD0A, 0x000a): ACPI Display Output Device
+acpiout10 at acpivga0 (DD0B, 0x000b): ACPI Display Output Device
+acpiout11 at acpivga0 (DD0C, 0x000c): ACPI Display Output Device
+acpiout12 at acpivga0 (DD0D, 0x000d): ACPI Display Output Device
+acpiout13 at acpivga0 (DD0E, 0x000e): ACPI Display Output Device
+acpiout14 at acpivga0 (DD0F, 0x000f): ACPI Display Output Device
+acpiout15 at acpivga0 (DD1F, 0x001f): ACPI Display Output Device
+acpiout15: brightness levels: [0-100]
+acpiout16 at acpivga0 (DD2F, 0x001f): ACPI Display Output Device
+acpiout16: brightness levels: [0-100]
+acpivga0: connected output devices:
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+acpivga0:   0x0000: Unknown Output Device, head 0, bios detect
+attimer1 at acpi0 (TIMR, PNP0100): io 0x40-0x43,0x50-0x53 irq 0
+pckbc1 at acpi0 (PS2K, 10251429) (kbd port): io 0x60,0x64 irq 1
+pckbc2 at acpi0 (PS2M, ETD0519) (aux port): irq 12
+SMKB (10251229) at acpi0 not configured
+acpiwmi0 at acpi0 (WMID, PNP0C14-APGe): ACPI WMI Interface
+acpiwmibus at acpiwmi0 not configured
+GPI0 (INT34C8) at acpi0 not configured
+PEPD (INT33A1) at acpi0 not configured
+acpibut0 at acpi0 (PWRB, PNP0C0C): ACPI Power Button
+acpibut1 at acpi0 (SLPB, PNP0C0E): ACPI Sleep Button
+acpiacad0 at acpi0 (ACAD, ACPI0003): ACPI AC Adapter
+acpibat0 at acpi0 (BAT1, PNP0C0A-1): ACPI Battery
+acpibat0: ACPI 4.0 functionality present
+acpilid0 at acpi0 (LID0, PNP0C0D): ACPI Lid Switch
+IETM (INTC1040) at acpi0 not configured
+SEN2 (INTC1043) at acpi0 not configured
+TPM (INTC5001) at acpi0 not configured
+acpitz0 at acpi0 (TZ01): cpu0
+acpitz0: levels: passive cooling
+ACPI: Enabled 4 GPEs in block 00 to 7F
+pckbd0 at pckbc1 (kbd slot)
+pckbc1: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc1 (aux slot)
+pckbc1: using irq 12 for aux slot
+wsmouse0 at pms0 mux 0
+pci0 at mainbus0 bus 0: configuration mode 1
+pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+pchb0 at pci0 dev 0 function 0: Intel Jasper Lake Processor Transaction Router (SKU 4) (rev. 0x00)
+i915drmkms: preliminary hardware support disabled
+genfb0 at pci0 dev 2 function 0: Intel Jasper Lake GPU 32 EU (rev. 0x01)
+genfb0: framebuffer at 0x4000000000, size 1366x768, depth 32, stride 5504
+genfb0: shadow framebuffer enabled, size 4128 KB
+wsdisplay0 at genfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+wsmux1: connecting to wsdisplay0
+drm at genfb0 not configured
+Intel Jasper Lake DPTF (miscellaneous DASP) at pci0 dev 4 function 0 not configured
+xhci0 at pci0 dev 20 function 0: Intel Jasper Lake USB Host (xHCI) (rev. 0x01)
+xhci0: 64-bit DMA
+xhci0: interrupting at msi0 vec 0
+xhci0: xHCI version 1.10
+usb0 at xhci0: USB revision 3.1
+usb1 at xhci0: USB revision 2.0
+Intel Jasper Lake Shared SRAM (RAM memory, revision 0x01) at pci0 dev 20 function 2 not configured
+Intel Jasper Lake CNVi WiFi (SKU 0) (miscellaneous network, revision 0x01) at pci0 dev 20 function 3 not configured
+dwiic0 at pci0 dev 21 function 0autoconfiguration error: : can't map register space
+dwiic1 at pci0 dev 21 function 2autoconfiguration error: : can't map register space
+Intel Jasper Lake HECI 1 (miscellaneous communications, revision 0x01) at pci0 dev 22 function 0 not configured
+ahcisata0 at pci0 dev 23 function 0: Intel Jasper Lake SATA (AHCI) (rev. 0x01)
+ahcisata0: 64-bit DMA
+ahcisata0: AHCI revision 1.31, 2 ports, 32 slots, CAP 0xe524ff01<PSC,SSC,PMD,SAM,ISS=0x2=Gen2,SCLO,SALP,SSNTF,SNCQ,S64A>
+ahcisata0: interrupting at msi1 vec 0
+atabus0 at ahcisata0 channel 0
+atabus1 at ahcisata0 channel 1
+sdhc0 at pci0 dev 26 function 0: Intel Jasper Lake eMMC (rev. 0x01)
+sdhc0: interrupting at ioapic0 pin 16
+sdhc0: SDHC 3.0, rev 16, caps <546ec881/80000807>, 32-bit ADMA2, 200000 kHz, embedded slot, HS SDR50 DDR50 SDR104 HS200 1.8V, re-tuning mode 1 (128s timer), 2048 byte blocks
+sdmmc0 at sdhc0 slot 0
+ppb0 at pci0 dev 28 function 0: Intel Jasper Lake PCIe Root Port 1 (rev. 0x01)
+ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 8.0GT/s
+ppb0: link is x1 @ 2.5GT/s
+pci1 at ppb0 bus 1
+pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+re0 at pci1 dev 0 function 0: RealTek 8168/8111 PCIe Gigabit Ethernet (rev. 0x15)
+re0: interrupting at msix2 vec 0
+re0: RTL8168H/8111H (0x5400)
+re0: Ethernet address XXX
+re0: using 256 tx descriptors
+rgephy0 at re0 phy 7: RTL8251 1000BASE-T media interface, rev. 0
+rgephy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, auto
+pcib0 at pci0 dev 31 function 0: Intel Jasper Lake eSPI (rev. 0x01)
+hdaudio0 at pci0 dev 31 function 3: HD Audio Controller
+hdaudio0: interrupting at msi3 vec 0
+hdaudio0: HDA ver. 1.0, OSS 6, ISS 7, BSS 0, SDO 1, 64-bit
+hdafg0 at hdaudio0: vendor 10ec product 0255
+hdafg0: DAC00 2ch: Speaker [Built-In]
+hdafg0: DAC01 2ch: HP Out [Jack]
+hdafg0: ADC02 2ch: Mic In [Built-In]
+hdafg0: 2ch/2ch 44100Hz 48000Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+audio0 at hdafg0: playback, capture, full duplex, independent
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+spkr0 at audio0: PC Speaker (synthesized)
+wsbell at spkr0 not configured
+hdafg1 at hdaudio0: vendor 8086 product 281a
+hdafg1: DP00 8ch: Digital Out [Jack]
+hdafg1: 8ch/0ch 48000Hz PCM16*
+ichsmb0 at pci0 dev 31 function 4: Intel Jasper Lake SMBus (rev. 0x01)
+ichsmb0: interrupting at ioapic0 pin 16
+iic0 at ichsmb0: I2C bus
+Intel Jasper Lake SPI (FLASH) (miscellaneous serial ... revision 0x01) at pci0 dev 31 function 5 not configured
+isa0 at pcib0
+pcppi0 at isa0 port 0x61
+spkr1 at pcppi0: PC Speaker
+wsbell at spkr1 not configured
+midi0 at pcppi0: PC speaker
+sysbeep0 at pcppi0
+attimer1: attached to pcppi0
+acpicpu0 at cpu0: ACPI CPU
+acpicpu0: C1: FFH, lat   1 us, pow  1000 mW
+acpicpu0: C2: FFH, lat 253 us, pow   200 mW
+acpicpu0: C3: FFH, lat 1048 us, pow   200 mW
+acpicpu0: P0: FFH, lat  10 us, pow  6000 mW, 1101 MHz, turbo boost
+acpicpu0: P1: FFH, lat  10 us, pow  6000 mW, 1100 MHz
+acpicpu0: P2: FFH, lat  10 us, pow  5338 mW, 1000 MHz
+acpicpu0: P3: FFH, lat  10 us, pow  4749 mW,  900 MHz
+acpicpu0: P4: FFH, lat  10 us, pow  4173 mW,  800 MHz
+acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+coretemp0 at cpu0: thermal sensor, 1 C resolution, Tjmax=105
+acpicpu1 at cpu1: ACPI CPU
+coretemp1 at cpu1: thermal sensor, 1 C resolution, Tjmax=105
+acpicpu2 at cpu2: ACPI CPU
+coretemp2 at cpu2: thermal sensor, 1 C resolution, Tjmax=105
+acpicpu3 at cpu3: ACPI CPU
+coretemp3 at cpu3: thermal sensor, 1 C resolution, Tjmax=105
+cpu0: CPU base freq 1100000000 Hz
+cpu0: CPU max freq 3300000000 Hz
+cpu0: TSC freq CPUID 1113600000 Hz
+cpu0: TSC freq calibrated 1113602000 Hz
+timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+timecounter: Timecounter "TSC" frequency 1113602000 Hz quality 3000
+acpibat0: LGC LION rechargeable battery
+acpibat0: granularity: low->warn 0.032 Ah, warn->full 0.032 Ah
+uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+uhub0: 6 ports with 6 removable, self powered
+uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+uhub1: 8 ports with 8 removable, self powered
+acpiacad0: AC adapter online.
+IPsec: Initialized Security Association Processing.
+aes: Intel AES-NI
+chacha: x86 SSE2 ChaCha
+uhidev0 at uhub1 port 3 configuration 1 interface 0
+uhidev0: Logitech (0x046d) USB Receiver (0xc534), rev 2.00/29.01, addr 1, iclass 3/1
+ukbd0 at uhidev0
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub1 port 3 configuration 1 interface 1
+uhidev1: Logitech (0x046d) USB Receiver (0xc534), rev 2.00/29.01, addr 1, iclass 3/1
+uhidev1: 17 report ids
+ums0 at uhidev1 reportid 2: 16 buttons, W and Z dirs
+wsmouse1 at ums0 mux 0
+uhid0 at uhidev1 reportid 3: input=4, output=0, feature=0
+uhid1 at uhidev1 reportid 4: input=1, output=0, feature=0
+uhid2 at uhidev1 reportid 16: input=6, output=6, feature=0
+uhid3 at uhidev1 reportid 17: input=19, output=19, feature=0
+umass0 at uhub0 port 1 configuration 1 interface 0
+umass0: SanDisk (0x0781) Extreme SSD (0x558c), rev 3.10/10.12, addr 2
+umass0: using SCSI over Bulk-Only
+scsibus0 at umass0: 2 targets, 2 luns per target
+sd0 at scsibus0 target 0 lun 0: <SanDisk, Extreme SSD, 1012> disk fixed
+sd0: fabricating a geometry
+sd0: 232 GB, 238475 cyl, 64 head, 32 sec, 512 bytes/sect x 488396800 sectors
+sd0: fabricating a geometry
+sd0: GPT GUID: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+dk0 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 262144 blocks at 2048, type: msdos
+dk1 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 419430400 blocks at 264192, type: ffs
+dk2 at sd0: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", 67108864 blocks at 419694592, type: swap
+ses0 at scsibus0 target 0 lun 1: <SanDisk, SES Device, 1012> enclosure services fixed
+ses0: SCSI-3 SES Device
+uvideo0 at uhub1 port 4 configuration 1 interface 0: Quanta (0x0408) VGA WebCam (0xa031), rev 2.00/0.07, addr 3
+video0 at uvideo0: Quanta (0x0408) VGA WebCam (0xa031), rev 2.00/0.07, addr 3
+ahcisata0 port 1: PHY offline
+ahcisata0 port 0: PHY offline
+ubt0 at uhub1 port 8
+ubt0: vendor 8087 (0x8087) product 0aaa (0x0aaa), rev 2.00/0.02, addr 4
+sdmmc0: autoconfiguration error: couldn't enable card: 60
+WARNING: 3 errors while detecting hardware; check system log.
+boot device: sd0
+root on dk1 dumps on dk2
+root file system type: ffs
+kern.module.path=/stand/amd64/9.99.94/modules
+wsdisplay0: screen 1 added (default, vt100 emulation)
+wsdisplay0: screen 2 added (default, vt100 emulation)
+wsdisplay0: screen 3 added (default, vt100 emulation)
+wsdisplay0: screen 4 added (default, vt100 emulation)

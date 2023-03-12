@@ -1,0 +1,502 @@
+OpenBSD 7.1 (RAMDISK_CD) #149: Mon Apr 11 19:21:29 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/i386/compile/RAMDISK_CD
+real mem  = 2146955264 (2047MB)
+avail mem = 2097643520 (2000MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: date 01/05/05, BIOS32 rev. 0 @ 0xfdb60, SMBIOS rev. 2.3 @ 0xf0630 (18 entries)
+bios0: MICRO-STAR INC. MS-6788
+acpi0 at bios0: ACPI 1.0
+acpi0: tables DSDT FACP APIC
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Pentium(R) 4 CPU 2.40GHz ("GenuineIntel" 686-class) 2.43 GHz, 0f-02-07
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,CNXT-ID,xTPR,PERF,MELTDOWN
+cpu0: apic clock running at 134MHz
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (ICHB)
+"PNP0C0C" at acpi0 not configured
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0501" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+bios0: ROM list: 0xc0000/0xe400 0xcec00/0x2800 0xe0000/0x1000
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82865G Host" rev 0x02
+ppb0 at pci0 dev 1 function 0 "Intel 82865G AGP" rev 0x02
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 "NVIDIA GeForce4 Ti 4200" rev 0xa1
+vga1: aperture needed
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+uhci0 at pci0 dev 29 function 0 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 16
+uhci1 at pci0 dev 29 function 1 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801EB/ER USB2" rev 0x02: apic 2 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb1 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xc2
+pci2 at ppb1 bus 2
+ohci0 at pci2 dev 2 function 0 "NEC USB" rev 0x43: apic 2 int 18, version 1.0
+ohci1 at pci2 dev 2 function 1 "NEC USB" rev 0x43: apic 2 int 19, version 1.0
+ehci1 at pci2 dev 2 function 2 "NEC USB" rev 0x04: apic 2 int 16
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "NEC EHCI root hub" rev 2.00/1.00 addr 1
+"AVM Fritz ISDN" rev 0x02 at pci2 dev 3 function 0 not configured
+"Creative Labs SoundBlaster Live" rev 0x07 at pci2 dev 5 function 0 not configured
+"Creative Labs PCI Gameport Joystick" rev 0x07 at pci2 dev 5 function 1 not configured
+rl0 at pci2 dev 11 function 0 "Realtek 8139" rev 0x10: apic 2 int 23, address XXX
+rlphy0 at rl0 phy 0: RTL internal PHY
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "NEC OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "NEC OHCI root hub" rev 1.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel 82801EB/ER LPC" rev 0x02
+pciide0 at pci0 dev 31 function 2 "Intel 82801EB SATA" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using apic 2 int 18 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <WDC WD800JD-60LSA5>
+wd0: 16-sector PIO, LBA48, 76319MB, 156301488 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus0 at atapiscsi0: 2 targets
+cd0 at scsibus0 targ 0 lun 0: <HL-DT-ST, DVDRAM GH22NS50, TN03> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 5
+"Intel 82801EB/ER SMBus" rev 0x02 at pci0 dev 31 function 3 not configured
+usb4 at uhci0: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci1: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb6 at uhci2: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb7 at uhci3: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+uhub8 at uhub0 port 1 configuration 1 interface 0 "vendor 0x05e3 USB2.0 Hub" rev 2.00/7.02 addr 2
+uhub9 at uhub8 port 2 configuration 1 interface 0 "Lite-On Technology USB 1.1 2port downstream low power hub" rev 1.10/1.00 addr 3
+uhidev0 at uhub9 port 1 configuration 1 interface 0 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev0: iclass 3/1
+ukbd0 at uhidev0
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub9 port 1 configuration 1 interface 1 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev1: iclass 3/0, 3 report ids
+uhid at uhidev1 reportid 3 not configured
+uhidev2 at uhub9 port 2 configuration 1 interface 0 "Microsoft Microsoft Basic Optical Mouse" rev 1.10/3.90 addr 5
+uhidev2: iclass 3/1
+uhid at uhidev2 not configured
+softraid0 at root
+scsibus1 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks... done
+rebooting...
+OpenBSD 7.1 (GENERIC) #151: Mon Apr 11 18:57:52 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 2146910208 (2047MB)
+avail mem = 2091028480 (1994MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 01/05/05, BIOS32 rev. 0 @ 0xfdb60, SMBIOS rev. 2.3 @ 0xf0630 (18 entries)
+bios0: MICRO-STAR INC. MS-6788
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S4 S5
+acpi0: tables DSDT FACP APIC
+acpi0: wakeup devices USB1(S3) USB2(S3) USB3(S3) USB4(S3) EHCI(S3) ICHB(S4) PS2K(S4) MC9_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Pentium(R) 4 CPU 2.40GHz ("GenuineIntel" 686-class) 2.43 GHz, 0f-02-07
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,CNXT-ID,xTPR,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 134MHz
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (ICHB)
+acpibtn0 at acpi0: PWRB
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0501" at acpi0 not configured
+acpicpu0 at acpi0: C1(@1 halt!)
+acpipwrres0 at acpi0: URP1
+acpipwrres1 at acpi0: URP2
+acpipwrres2 at acpi0: FDDP
+acpipwrres3 at acpi0: LPTP
+bios0: ROM list: 0xc0000/0xe400 0xcec00/0x2800 0xe0000/0x1000
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82865G Host" rev 0x02
+intelagp0 at pchb0
+agp0 at intelagp0: aperture at 0xf8000000, size 0x4000000
+ppb0 at pci0 dev 1 function 0 "Intel 82865G AGP" rev 0x02
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 "NVIDIA GeForce4 Ti 4200" rev 0xa1
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+uhci0 at pci0 dev 29 function 0 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 16
+uhci1 at pci0 dev 29 function 1 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801EB/ER USB2" rev 0x02: apic 2 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb1 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xc2
+pci2 at ppb1 bus 2
+ohci0 at pci2 dev 2 function 0 "NEC USB" rev 0x43: apic 2 int 18, version 1.0
+ohci1 at pci2 dev 2 function 1 "NEC USB" rev 0x43: apic 2 int 19, version 1.0
+ehci1 at pci2 dev 2 function 2 "NEC USB" rev 0x04: apic 2 int 16
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "NEC EHCI root hub" rev 2.00/1.00 addr 1
+"AVM Fritz ISDN" rev 0x02 at pci2 dev 3 function 0 not configured
+emu0 at pci2 dev 5 function 0 "Creative Labs SoundBlaster Live" rev 0x07: apic 2 int 17
+ac97: codec id 0x83847608 (SigmaTel STAC9708/11)
+ac97: codec features 18 bit DAC, 18 bit ADC, SigmaTel 3D
+audio0 at emu0
+"Creative Labs PCI Gameport Joystick" rev 0x07 at pci2 dev 5 function 1 not configured
+rl0 at pci2 dev 11 function 0 "Realtek 8139" rev 0x10: apic 2 int 23, address XXX
+rlphy0 at rl0 phy 0: RTL internal PHY
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "NEC OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "NEC OHCI root hub" rev 1.00/1.00 addr 1
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801EB/ER LPC" rev 0x02
+pciide0 at pci0 dev 31 function 2 "Intel 82801EB SATA" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using apic 2 int 18 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <WDC WD800JD-60LSA5>
+wd0: 16-sector PIO, LBA48, 76319MB, 156301488 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HL-DT-ST, DVDRAM GH22NS50, TN03> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 5
+ichiic0 at pci0 dev 31 function 3 "Intel 82801EB/ER SMBus" rev 0x02: apic 2 int 17
+iic0 at ichiic0
+iic0: addr 0x2f 00=00 01=07 02=00 03=00 04=07 05=00 06=00 07=00 14=14 15=62 16=03 17=02 words 00=00ff 01=07ff 02=00ff 03=00ff 04=07ff 05=00ff 06=00ff 07=00ff
+spdmem0 at iic0 addr 0x50: 512MB DDR SDRAM non-parity PC3200CL3.0
+spdmem1 at iic0 addr 0x51: 512MB DDR SDRAM non-parity PC3200CL2.5
+spdmem2 at iic0 addr 0x52: 1GB DDR SDRAM non-parity PC2700CL2.5
+usb4 at uhci0: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci1: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb6 at uhci2: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb7 at uhci3: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x4e/2: W83627THF rev 0x83
+lm1 at wbsio0 port 0x290/8: W83627THF
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+uhub8 at uhub0 port 1 configuration 1 interface 0 "Genesys Logic USB2.0 Hub" rev 2.00/7.02 addr 2
+uhub9 at uhub8 port 2 configuration 1 interface 0 "Lite-On Technology USB 1.1 2port downstream low power hub" rev 1.10/1.00 addr 3
+uhidev0 at uhub9 port 1 configuration 1 interface 0 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub9 port 1 configuration 1 interface 1 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev1: iclass 3/0, 3 report ids
+ucc0 at uhidev1 reportid 3: 16 usages, 12 keys, enum
+wskbd2 at ucc0 mux 1
+wskbd2: connecting to wsdisplay0
+uhub9: port 2, set config 0 at addr 5 failed
+uhub9: device problem, disabling port 2
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (98a6c33129d901cf.a) swap on wd0b dump on wd0b
+uhub9: device problem, disabling port 2
+uhub9: device problem, disabling port 2
+uhub8: device problem, disabling port 1
+uhub8: device problem, disabling port 1
+wskbd1: disconnecting from wsdisplay0
+wskbd1 detached
+ukbd0 detached
+uhidev0 detached
+wskbd2: disconnecting from wsdisplay0
+wskbd2 detached
+ucc0 detached
+uhidev1 detached
+uhub9 detached
+uhub8 detached
+uhub8 at uhub0 port 1 configuration 1 interface 0 "Genesys Logic USB2.0 Hub" rev 2.00/7.02 addr 2
+uhub9 at uhub8 port 2 configuration 1 interface 0 "Lite-On Technology USB 1.1 2port downstream low power hub" rev 1.10/1.00 addr 3
+uhidev0 at uhub9 port 1 configuration 1 interface 0 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub9 port 1 configuration 1 interface 1 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev1: iclass 3/0, 3 report ids
+ucc0 at uhidev1 reportid 3: 16 usages, 12 keys, enum
+wskbd2 at ucc0 mux 1
+wskbd2: connecting to wsdisplay0
+syncing disks... done
+rebooting...
+OpenBSD 7.1 (GENERIC) #151: Mon Apr 11 18:57:52 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 2146910208 (2047MB)
+avail mem = 2091032576 (1994MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 01/05/05, BIOS32 rev. 0 @ 0xfdb60, SMBIOS rev. 2.3 @ 0xf0630 (18 entries)
+bios0: MICRO-STAR INC. MS-6788
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S4 S5
+acpi0: tables DSDT FACP APIC
+acpi0: wakeup devices USB1(S3) USB2(S3) USB3(S3) USB4(S3) EHCI(S3) ICHB(S4) PS2M(S4) MC9_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Pentium(R) 4 CPU 2.40GHz ("GenuineIntel" 686-class) 2.43 GHz, 0f-02-07
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,CNXT-ID,xTPR,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 134MHz
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (ICHB)
+acpibtn0 at acpi0: PWRB
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0501" at acpi0 not configured
+acpicpu0 at acpi0: C1(@1 halt!)
+acpipwrres0 at acpi0: URP1
+acpipwrres1 at acpi0: URP2
+acpipwrres2 at acpi0: FDDP
+acpipwrres3 at acpi0: LPTP
+bios0: ROM list: 0xc0000/0xe400 0xcec00/0x2800 0xe0000/0x1000
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82865G Host" rev 0x02
+intelagp0 at pchb0
+agp0 at intelagp0: aperture at 0xf8000000, size 0x4000000
+ppb0 at pci0 dev 1 function 0 "Intel 82865G AGP" rev 0x02
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 "NVIDIA GeForce4 Ti 4200" rev 0xa1
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+uhci0 at pci0 dev 29 function 0 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 16
+uhci1 at pci0 dev 29 function 1 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801EB/ER USB2" rev 0x02: apic 2 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb1 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xc2
+pci2 at ppb1 bus 2
+ohci0 at pci2 dev 2 function 0 "NEC USB" rev 0x43: apic 2 int 18, version 1.0
+ohci1 at pci2 dev 2 function 1 "NEC USB" rev 0x43: apic 2 int 19, version 1.0
+ehci1 at pci2 dev 2 function 2 "NEC USB" rev 0x04: apic 2 int 16
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "NEC EHCI root hub" rev 2.00/1.00 addr 1
+"AVM Fritz ISDN" rev 0x02 at pci2 dev 3 function 0 not configured
+emu0 at pci2 dev 5 function 0 "Creative Labs SoundBlaster Live" rev 0x07: apic 2 int 17
+ac97: codec id 0x83847608 (SigmaTel STAC9708/11)
+ac97: codec features 18 bit DAC, 18 bit ADC, SigmaTel 3D
+audio0 at emu0
+"Creative Labs PCI Gameport Joystick" rev 0x07 at pci2 dev 5 function 1 not configured
+rl0 at pci2 dev 11 function 0 "Realtek 8139" rev 0x10: apic 2 int 23, address XXX
+rlphy0 at rl0 phy 0: RTL internal PHY
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "NEC OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "NEC OHCI root hub" rev 1.00/1.00 addr 1
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801EB/ER LPC" rev 0x02
+pciide0 at pci0 dev 31 function 2 "Intel 82801EB SATA" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using apic 2 int 18 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <WDC WD800JD-60LSA5>
+wd0: 16-sector PIO, LBA48, 76319MB, 156301488 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HL-DT-ST, DVDRAM GH22NS50, TN03> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 5
+ichiic0 at pci0 dev 31 function 3 "Intel 82801EB/ER SMBus" rev 0x02: apic 2 int 17
+iic0 at ichiic0
+iic0: addr 0x2f 00=00 01=07 02=00 03=00 04=07 05=00 06=00 07=00 14=14 15=62 16=03 17=02 words 00=00ff 01=07ff 02=00ff 03=00ff 04=07ff 05=00ff 06=00ff 07=00ff
+spdmem0 at iic0 addr 0x50: 512MB DDR SDRAM non-parity PC3200CL3.0
+spdmem1 at iic0 addr 0x51: 512MB DDR SDRAM non-parity PC3200CL2.5
+spdmem2 at iic0 addr 0x52: 1GB DDR SDRAM non-parity PC2700CL2.5
+usb4 at uhci0: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci1: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb6 at uhci2: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb7 at uhci3: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x4e/2: W83627THF rev 0x83
+lm1 at wbsio0 port 0x290/8: W83627THF
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+uhub8 at uhub0 port 1 configuration 1 interface 0 "Genesys Logic USB2.0 Hub" rev 2.00/7.02 addr 2
+uhub9 at uhub8 port 2 configuration 1 interface 0 "Lite-On Technology USB 1.1 2port downstream low power hub" rev 1.10/1.00 addr 3
+uhidev0 at uhub9 port 1 configuration 1 interface 0 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub9 port 1 configuration 1 interface 1 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev1: iclass 3/0, 3 report ids
+ucc0 at uhidev1 reportid 3: 16 usages, 12 keys, enum
+wskbd2 at ucc0 mux 1
+wskbd2: connecting to wsdisplay0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (98a6c33129d901cf.a) swap on wd0b dump on wd0b
+syncing disks... done
+rebooting...
+OpenBSD 7.1 (GENERIC) #3: Sun May 15 10:25:05 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 2146910208 (2047MB)
+avail mem = 2091028480 (1994MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 01/05/05, BIOS32 rev. 0 @ 0xfdb60, SMBIOS rev. 2.3 @ 0xf0630 (18 entries)
+bios0: MICRO-STAR INC. MS-6788
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S1 S4 S5
+acpi0: tables DSDT FACP APIC
+acpi0: wakeup devices USB1(S3) USB2(S3) USB3(S3) USB4(S3) EHCI(S3) ICHB(S4) PS2M(S4) MC9_(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Pentium(R) 4 CPU 2.40GHz ("GenuineIntel" 686-class) 2.43 GHz, 0f-02-07
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,CNXT-ID,xTPR,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 134MHz
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (ICHB)
+acpibtn0 at acpi0: PWRB
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"PNP0501" at acpi0 not configured
+acpicpu0 at acpi0: C1(@1 halt!)
+acpipwrres0 at acpi0: URP1
+acpipwrres1 at acpi0: URP2
+acpipwrres2 at acpi0: FDDP
+acpipwrres3 at acpi0: LPTP
+bios0: ROM list: 0xc0000/0xe400 0xcec00/0x2800 0xe0000/0x1000
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82865G Host" rev 0x02
+intelagp0 at pchb0
+agp0 at intelagp0: aperture at 0xf8000000, size 0x4000000
+ppb0 at pci0 dev 1 function 0 "Intel 82865G AGP" rev 0x02
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 "NVIDIA GeForce4 Ti 4200" rev 0xa1
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+uhci0 at pci0 dev 29 function 0 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 16
+uhci1 at pci0 dev 29 function 1 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801EB/ER USB" rev 0x02: apic 2 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801EB/ER USB2" rev 0x02: apic 2 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb1 at pci0 dev 30 function 0 "Intel 82801BA Hub-to-PCI" rev 0xc2
+pci2 at ppb1 bus 2
+ohci0 at pci2 dev 2 function 0 "NEC USB" rev 0x43: apic 2 int 18, version 1.0
+ohci1 at pci2 dev 2 function 1 "NEC USB" rev 0x43: apic 2 int 19, version 1.0
+ehci1 at pci2 dev 2 function 2 "NEC USB" rev 0x04: apic 2 int 16
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "NEC EHCI root hub" rev 2.00/1.00 addr 1
+"AVM Fritz ISDN" rev 0x02 at pci2 dev 3 function 0 not configured
+emu0 at pci2 dev 5 function 0 "Creative Labs SoundBlaster Live" rev 0x07: apic 2 int 17
+ac97: codec id 0x83847608 (SigmaTel STAC9708/11)
+ac97: codec features 18 bit DAC, 18 bit ADC, SigmaTel 3D
+audio0 at emu0
+"Creative Labs PCI Gameport Joystick" rev 0x07 at pci2 dev 5 function 1 not configured
+rl0 at pci2 dev 11 function 0 "Realtek 8139" rev 0x10: apic 2 int 23, address XXX
+rlphy0 at rl0 phy 0: RTL internal PHY
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "NEC OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "NEC OHCI root hub" rev 1.00/1.00 addr 1
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801EB/ER LPC" rev 0x02
+pciide0 at pci0 dev 31 function 2 "Intel 82801EB SATA" rev 0x02: DMA, channel 0 configured to native-PCI, channel 1 configured to native-PCI
+pciide0: using apic 2 int 18 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <WDC WD800JD-60LSA5>
+wd0: 16-sector PIO, LBA48, 76319MB, 156301488 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 5
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HL-DT-ST, DVDRAM GH22NS50, TN03> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 5
+ichiic0 at pci0 dev 31 function 3 "Intel 82801EB/ER SMBus" rev 0x02: apic 2 int 17
+iic0 at ichiic0
+iic0: addr 0x2f 00=00 01=07 02=00 03=00 04=07 05=00 06=00 07=00 14=14 15=62 16=03 17=02 words 00=00ff 01=07ff 02=00ff 03=00ff 04=07ff 05=00ff 06=00ff 07=00ff
+spdmem0 at iic0 addr 0x50: 512MB DDR SDRAM non-parity PC3200CL3.0
+spdmem1 at iic0 addr 0x51: 512MB DDR SDRAM non-parity PC3200CL2.5
+spdmem2 at iic0 addr 0x52: 1GB DDR SDRAM non-parity PC2700CL2.5
+usb4 at uhci0: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb5 at uhci1: USB revision 1.0
+uhub5 at usb5 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb6 at uhci2: USB revision 1.0
+uhub6 at usb6 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb7 at uhci3: USB revision 1.0
+uhub7 at usb7 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x4e/2: W83627THF rev 0x83
+lm1 at wbsio0 port 0x290/8: W83627THF
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+uhub8 at uhub0 port 1 configuration 1 interface 0 "Genesys Logic USB2.0 Hub" rev 2.00/7.02 addr 2
+uhub9 at uhub8 port 2 configuration 1 interface 0 "Lite-On Technology USB 1.1 2port downstream low power hub" rev 1.10/1.00 addr 3
+uhidev0 at uhub9 port 1 configuration 1 interface 0 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub9 port 1 configuration 1 interface 1 "Lite-On Technology USB Productivity Option Keyboard( has the hub in # 1 )" rev 1.10/1.00 addr 4
+uhidev1: iclass 3/0, 3 report ids
+ucc0 at uhidev1 reportid 3: 16 usages, 12 keys, enum
+wskbd2 at ucc0 mux 1
+wskbd2: connecting to wsdisplay0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (98a6c33129d901cf.a) swap on wd0b dump on wd0b

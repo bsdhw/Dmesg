@@ -1,0 +1,510 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0: Tue May  4 21:43:29 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 1920x1200
+CPU: AMD A8-6410 APU with AMD Radeon R5 Graphics     (1996.29-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x730f01  Family=0x16  Model=0x30  Stepping=1
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8220b<SSE3,PCLMULQDQ,MON,SSSE3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1d4037ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,Topology,PNXC,DBE,PTSC,PL2I>
+  Structured Extended Features=0x8<BMI1>
+  XSAVE Features=0x1<XSAVEOPT>
+  SVM: NP,NRIP,AFlush,DAssist,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16281759744 (15527 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <HPQOEM SLIC-CPC>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20201113/tbfadt-796)
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 2 1 3
+Timecounter "TSC" frequency 1996291004 Hz quality 1000
+KTLS: Initialized 4 threads
+random: entropy device external interface
+000.000019 [4354] netmap_init               netmap: loaded module
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd0 at kbdmux0
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-CPC>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xc0000000-0xcfffffff,0xd0000000-0xd07fffff,0xfea00000-0xfea3ffff irq 44 at device 1.0 on pci0
+vgapci0: Boot video device
+hdac0: <ATI (0x9840) HDA Controller> mem 0xfea64000-0xfea67fff irq 45 at device 1.1 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 50 at device 2.3 on pci0
+pci1: <ACPI PCI bus> on pcib1
+re0: <RealTek 810xE PCIe 10/100baseTX> port 0xe000-0xe0ff mem 0xfe900000-0xfe900fff,0xd0800000-0xd0803fff irq 32 at device 0.0 on pci1
+re0: Using 1 MSI-X message
+re0: Chip rev. 0x44800000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rlphy0: <RTL8201E 10/100 media interface> PHY 1 on miibus0
+rlphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib2: <ACPI PCI-PCI bridge> irq 51 at device 2.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pci0: <encrypt/decrypt> at device 8.0 (no driver attached)
+xhci0: <AMD FCH USB 3.0 controller> mem 0xfea68000-0xfea69fff irq 18 at device 16.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AMD Hudson-2 AHCI SATA controller> port 0xf140-0xf147,0xf130-0xf133,0xf120-0xf127,0xf110-0xf113,0xf100-0xf10f mem 0xfea6e000-0xfea6e3ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.30 with 2 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ehci0: <AMD FCH USB 2.0 controller> mem 0xfea6d000-0xfea6d0ff irq 18 at device 18.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ehci1: <AMD FCH USB 2.0 controller> mem 0xfea6c000-0xfea6c0ff irq 18 at device 19.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+hdac1: <AMD Hudson-2 HDA Controller> mem 0xfea60000-0xfea63fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+orm0: <ISA Option ROM> at iomem 0xcf000-0xcffff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC662 rev3 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC662 rev3 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC662 rev3 (Rear Analog)> at nid 20 and 24,26 on hdaa1
+pcm2: <Realtek ALC662 rev3 (Front Analog Headphones)> at nid 27 on hdaa1
+Trying to mount root from ufs:/dev/label/nomadroot [rw,noatime]...
+Root mount waiting for: usbus0 CAM usbus1 usbus2
+ugen1.1: <AMD EHCI root HUB> at usbus1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub0 on usbus1
+uhub0: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ugen2.1: <AMD EHCI root HUB> at usbus2
+uhub1 on usbus0
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2 on usbus2
+uhub2: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <CT1000MX500SSD1 M3CR033> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+cd0 at ahcich0 bus 0 scbus0 target 0 lun 0
+cd0: <hp DVDRW  DU8A6SH DHS3> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA6, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub1: 4 ports with 4 removable, self powered
+ugen0.2: <ASIX Elec. Corp. AX88179> at usbus0
+Root mount waiting for: usbus1 usbus2
+uhub2: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+ugen1.2: <vendor 0x0438 product 0x7900> at usbus1
+uhub3 on uhub0
+uhub3: <vendor 0x0438 product 0x7900, class 9/0, rev 2.00/0.18, addr 2> on usbus1
+ugen2.2: <vendor 0x0438 product 0x7900> at usbus2
+uhub4 on uhub2
+uhub4: <vendor 0x0438 product 0x7900, class 9/0, rev 2.00/0.18, addr 2> on usbus2
+Root mount waiting for: usbus1 usbus2
+uhub3: 4 ports with 4 removable, self powered
+uhub4: 4 ports with 4 removable, self powered
+ugen2.3: <Logitech USB Receiver> at usbus2
+ugen1.3: <Dell Dell USB Keyboard> at usbus1
+ukbd0 on uhub4
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/24.07, addr 3> on usbus2
+ukbd1 on uhub3
+ukbd1: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.01, addr 3> on usbus1
+kbd1 at ukbd0
+kbd2 at ukbd1
+ums0 on uhub4
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/24.07, addr 3> on usbus2
+ums0: 16 buttons and [XYZT] coordinates ID=2
+Root mount waiting for: usbus1 usbus2
+ugen1.4: <Generic USB2.0-CRW> at usbus1
+umass0 on uhub3
+umass0: <Bulk-In, Bulk-Out, Interface> on usbus1
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:2:0: Attached to scbus2
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <Generic- SD/MMC/MS PRO 1.00> Removable Direct Access SPC-2 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ugen2.4: <SanDisk Cruzer Blade> at usbus2
+umass1 on uhub4
+umass1: <SanDisk Cruzer Blade, class 0/0, rev 2.00/1.26, addr 4> on usbus2
+umass1:  SCSI over Bulk-Only; quirks = 0x8100
+umass1:3:1: Attached to scbus3
+da1 at umass-sim1 bus 1 scbus3 target 0 lun 0
+da1: <SanDisk Cruzer Blade 1.26> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 40.000MB/s transfers
+da1: 7633MB (15633408 512 byte sectors)
+da1: quirks=0x2<NO_6_BYTE>
+Root mount waiting for: usbus2
+ugen2.5: <Broadcom Corp BCM43142A0> at usbus2
+WARNING: /: TRIM flag on fs but disk does not support TRIM
+random: unblocking device.
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+axge0 on uhub1
+axge0: <NetworkInterface> on usbus0
+uhid0 on uhub4
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/24.07, addr 3> on usbus2
+ubt0 on uhub4
+ubt0: <Broadcom Corp BCM43142A0, rev 2.00/1.12, addr 5> on usbus2
+miibus1: <MII bus> on axge0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 3 on miibus1
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+ue0: <USB Ethernet> on axge0
+ue0: Ethernet address: ...
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ue0: link state changed to DOWN
+[drm] amdgpu kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] initializing kernel modesetting (MULLINS 0x1002:0x9851 0x103C:0x2B29 0x05).
+[drm] register mmio base: 0xFEA00000
+[drm] register mmio size: 262144
+[drm] add ip block number 0 <cik_common>
+[drm] add ip block number 1 <gmc_v7_0>
+[drm] add ip block number 2 <cik_ih>
+[drm] add ip block number 3 <gfx_v7_0>
+[drm] add ip block number 4 <cik_sdma>
+[drm] add ip block number 5 <kv_dpm>
+[drm] add ip block number 6 <dce_v8_0>
+[drm] add ip block number 7 <uvd_v4_2>
+[drm] add ip block number 8 <vce_v2_0>
+drmn0: kfd not supported on this ASIC
+[drm] BIOS signature incorrect 14 14
+ATOM BIOS: 113-C69300-100
+[drm] vm size is 64 GB, 2 levels, block size is 10-bit, fragment size is 9-bit
+drmn0: VRAM: 256M 0x000000F400000000 - 0x000000F40FFFFFFF (256M used)
+drmn0: GART: 1024M 0x000000FF00000000 - 0x000000FF3FFFFFFF
+Successfully added WC MTRR for [0xc0000000-0xcfffffff]: 0; 
+[drm] Detected VRAM RAM=256M, BAR=256M
+[drm] RAM width 64bits UNKNOWN
+[TTM] Zone  kernel: Available graphics memory: 8203686 KiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 KiB
+[TTM] Initializing pool allocator
+[drm] amdgpu: 256M of VRAM memory ready
+[drm] amdgpu: 3072M of GTT memory ready.
+[drm] GART: num cpu pages 262144, num gpu pages 262144
+[drm] PCIE GART of 1024M enabled (table at 0x000000F4008CA000).
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+drmn0: successfully loaded firmware image 'amdgpu/mullins_pfp.bin'
+drmn0: successfully loaded firmware image 'amdgpu/mullins_me.bin'
+drmn0: successfully loaded firmware image 'amdgpu/mullins_ce.bin'
+drmn0: successfully loaded firmware image 'amdgpu/mullins_mec.bin'
+drmn0: successfully loaded firmware image 'amdgpu/mullins_rlc.bin'
+drmn0: successfully loaded firmware image 'amdgpu/mullins_sdma.bin'
+drmn0: successfully loaded firmware image 'amdgpu/mullins_sdma1.bin'
+[drm] Internal thermal controller without fan control
+[drm] amdgpu: dpm initialized
+[drm] Connector DVI-D-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-D-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector VGA-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.VGA-1
+[drm]   - kern.vt.fb.default_mode
+[drm] AMDGPU Display Connectors
+[drm] Connector 0:
+[drm]   DVI-D-1
+[drm]   HPD2
+[drm]   DDC: 0x1950 0x1950 0x1951 0x1951 0x1952 0x1952 0x1953 0x1953
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY
+[drm] Connector 1:
+[drm]   VGA-1
+[drm]   DDC: 0x1970 0x1970 0x1971 0x1971 0x1972 0x1972 0x1973 0x1973
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_KLDSCP_DAC1
+drmn0: successfully loaded firmware image 'amdgpu/mullins_uvd.bin'
+[drm] Found UVD firmware Version: 1.64 Family ID: 9
+drmn0: successfully loaded firmware image 'amdgpu/mullins_vce.bin'
+[drm] Found VCE firmware Version: 50.10 Binary ID: 2
+[drm] UVD initialized successfully.
+[drm] VCE initialized successfully.
+[drm] fb mappable at 0xC0CB6000
+[drm] vram apper at 0xC0000000
+[drm] size 9216000
+[drm] fb depth is 24
+[drm]    pitch is 7680
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 14.0.
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+cmsize=16 size=9216000
+pbase=0xc0cb6000 vbase=0xfffff800c0cb6000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+cmap[0]=141414 cmap[1]=ba5451 cmap[2]=8e9b60 cmap[3]=eabf77
+end FB_INFO
+drmn0: fb0: amdgpudrmfb frame buffer device
+[drm] Initialized amdgpu 3.35.0 20150101 for drmn0 on minor 0
+WARNING: /data: TRIM flag on fs but disk does not support TRIM
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 2 1 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-6' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-5' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-4' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE #0: Tue May  4 21:43:29 UTC 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(efifb): resolution 1920x1200
+CPU: AMD A8-6410 APU with AMD Radeon R5 Graphics     (1996.29-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x730f01  Family=0x16  Model=0x30  Stepping=1
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8220b<SSE3,PCLMULQDQ,MON,SSSE3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1d4037ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,Topology,PNXC,DBE,PTSC,PL2I>
+  Structured Extended Features=0x8<BMI1>
+  XSAVE Features=0x1<XSAVEOPT>
+  SVM: NP,NRIP,AFlush,DAssist,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16281759744 (15527 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <HPQOEM SLIC-CPC>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+Firmware Warning (ACPI): Optional FADT field Pm2ControlBlock has valid Length but zero Address: 0x0000000000000000/0x1 (20201113/tbfadt-796)
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 3 1 2
+Timecounter "TSC" frequency 1996294340 Hz quality 1000
+KTLS: Initialized 4 threads
+random: entropy device external interface
+000.000019 [4354] netmap_init               netmap: loaded module
+[ath_hal] loaded
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd0 at kbdmux0
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-CPC>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Timecounter "ACPI-safe" frequency 3579545 Hz quality 850
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xc0000000-0xcfffffff,0xd0000000-0xd07fffff,0xfea00000-0xfea3ffff irq 44 at device 1.0 on pci0
+vgapci0: Boot video device
+hdac0: <ATI (0x9840) HDA Controller> mem 0xfea64000-0xfea67fff irq 45 at device 1.1 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 50 at device 2.3 on pci0
+pci1: <ACPI PCI bus> on pcib1
+re0: <RealTek 810xE PCIe 10/100baseTX> port 0xe000-0xe0ff mem 0xfe900000-0xfe900fff,0xd0800000-0xd0803fff irq 32 at device 0.0 on pci1
+re0: Using 1 MSI-X message
+re0: Chip rev. 0x44800000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rlphy0: <RTL8201E 10/100 media interface> PHY 1 on miibus0
+rlphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib2: <ACPI PCI-PCI bridge> irq 51 at device 2.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pci0: <encrypt/decrypt> at device 8.0 (no driver attached)
+xhci0: <AMD FCH USB 3.0 controller> mem 0xfea68000-0xfea69fff irq 18 at device 16.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AMD Hudson-2 AHCI SATA controller> port 0xf140-0xf147,0xf130-0xf133,0xf120-0xf127,0xf110-0xf113,0xf100-0xf10f mem 0xfea6e000-0xfea6e3ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.30 with 2 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ehci0: <AMD FCH USB 2.0 controller> mem 0xfea6d000-0xfea6d0ff irq 18 at device 18.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ehci1: <AMD FCH USB 2.0 controller> mem 0xfea6c000-0xfea6c0ff irq 18 at device 19.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+hdac1: <AMD Hudson-2 HDA Controller> mem 0xfea60000-0xfea63fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+orm0: <ISA Option ROM> at iomem 0xcf000-0xcffff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounters tick every 1.000 msec
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC662 rev3 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC662 rev3 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC662 rev3 (Rear Analog)> at nid 20 and 24,26 on hdaa1
+pcm2: <Realtek ALC662 rev3 (Front Analog Headphones)> at nid 27 on hdaa1
+Trying to mount root from ufs:/dev/label/nomadroot [rw,noatime]...
+Root mount waiting for: usbus0 CAM usbus1 usbus2
+ugen2.1: <AMD EHCI root HUB> at usbus2
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub0 on usbus2
+uhub0: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ugen1.1: <AMD EHCI root HUB> at usbus1
+uhub1 on usbus0
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2 on usbus1
+uhub2: <AMD EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ada0 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada0: <CT1000MX500SSD1 M3CR033> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+cd0 at ahcich0 bus 0 scbus0 target 0 lun 0
+cd0: <hp DVDRW  DU8A6SH DHS3> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA6, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub1: 4 ports with 4 removable, self powered
+ugen0.2: <ASIX Elec. Corp. AX88179> at usbus0
+Root mount waiting for: usbus1 usbus2
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+ugen1.2: <vendor 0x0438 product 0x7900> at usbus1
+uhub3 on uhub2
+uhub3: <vendor 0x0438 product 0x7900, class 9/0, rev 2.00/0.18, addr 2> on usbus1
+ugen2.2: <vendor 0x0438 product 0x7900> at usbus2
+uhub4 on uhub0
+uhub4: <vendor 0x0438 product 0x7900, class 9/0, rev 2.00/0.18, addr 2> on usbus2
+Root mount waiting for: usbus1 usbus2
+ugen0.2: <ASIX Elec. Corp. AX88179> at usbus0 (disconnected)
+uhub3: 4 ports with 4 removable, self powered
+uhub4: 4 ports with 4 removable, self powered
+ugen2.3: <Logitech USB Receiver> at usbus2
+ugen1.3: <Dell Dell USB Keyboard> at usbus1
+ukbd0 on uhub4
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/24.07, addr 3> on usbus2
+ukbd1 on uhub3
+ukbd1: <Dell Dell USB Keyboard, class 0/0, rev 1.10/3.01, addr 3> on usbus1
+kbd1 at ukbd0
+ums0 on uhub4
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/24.07, addr 3> on usbus2
+kbd2 at ukbd1
+ums0: 16 buttons and [XYZT] coordinates ID=2
+Root mount waiting for: usbus1 usbus2
+ugen0.2: <ASIX Elec. Corp. AX88179> at usbus0
+ugen1.4: <Generic USB2.0-CRW> at usbus1
+umass0 on uhub3
+umass0: <Bulk-In, Bulk-Out, Interface> on usbus1
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:2:0: Attached to scbus2
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <Generic- SD/MMC/MS PRO 1.00> Removable Direct Access SPC-2 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ugen2.4: <SanDisk Cruzer Blade> at usbus2
+umass1 on uhub4
+umass1: <SanDisk Cruzer Blade, class 0/0, rev 2.00/1.26, addr 4> on usbus2
+umass1:  SCSI over Bulk-Only; quirks = 0x8100
+umass1:3:1: Attached to scbus3
+Root mount waiting for: usbus2 CAM
+da1 at umass-sim1 bus 1 scbus3 target 0 lun 0
+da1: <SanDisk Cruzer Blade 1.26> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 40.000MB/s transfers
+da1: 7633MB (15633408 512 byte sectors)
+da1: quirks=0x2<NO_6_BYTE>
+ugen2.5: <Broadcom Corp BCM43142A0> at usbus2
+WARNING: /: TRIM flag on fs but disk does not support TRIM
+WARNING: /data: TRIM flag on fs but disk does not support TRIM
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+Cuse v0.1.36 @ /dev/cuse
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+axge0 on uhub1
+axge0: <NetworkInterface> on usbus0
+uhid0 on uhub4
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/24.07, addr 3> on usbus2
+miibus1: <MII bus> on axge0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 3 on miibus1
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+ue0: <USB Ethernet> on axge0
+ue0: Ethernet address: ...
+ubt0 on uhub4
+ubt0: <Broadcom Corp BCM43142A0, rev 2.00/1.12, addr 5> on usbus2
+ue0: link state changed to DOWN
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()

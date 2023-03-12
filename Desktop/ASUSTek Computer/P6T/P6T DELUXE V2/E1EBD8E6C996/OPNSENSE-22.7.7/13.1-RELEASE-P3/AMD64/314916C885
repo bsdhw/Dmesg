@@ -1,0 +1,305 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p3 stable/22.7-n250262-83840459d88 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i7 CPU         960  @ 3.20GHz (3207.40-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x106a5  Family=0x6  Model=0x1a  Stepping=5
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x98e3bd<SSE3,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,SSE4.2,POPCNT>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 51539607552 (49152 MB)
+avail memory = 50085830656 (47765 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <122210 APIC1747>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+ioapic1 <Version 2.0> irqs 24-47
+Launching APs: 1 6 4 3 2 7 5
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xfbd10-0xfbd2e
+smbios0: Version: 2.5, BCD Revision: 2.5
+aesni0: No AES or SHA support.
+acpi0: <122210 XSDT1747>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 340
+Event timer "HPET2" frequency 14318180 Hz quality 340
+Event timer "HPET3" frequency 14318180 Hz quality 340
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+xhci0: <Fresco Logic FL1100 USB 3.0 controller> mem 0xf9ff0000-0xf9ffffff,0xf9fef000-0xf9feffff,0xf9fee000-0xf9feefff irq 28 at device 0.0 on pci1
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib2: <ACPI PCI-PCI bridge> at device 3.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+vgapci0: <VGA-compatible display> port 0xac00-0xac7f mem 0xfa000000-0xfaffffff,0xd0000000-0xdfffffff,0xce000000-0xcfffffff irq 24 at device 0.0 on pci2
+vgapci0: Boot video device
+hdac0: <NVIDIA (0x10f1) HDA Controller> mem 0xfb8fc000-0xfb8fffff irq 34 at device 0.1 on pci2
+pcib3: <ACPI PCI-PCI bridge> at device 7.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+ix0: <Intel(R) X540-AT2> mem 0xf8400000-0xf85fffff,0xf87f8000-0xf87fbfff irq 30 at device 0.0 on pci3
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: eTrack 0x80000528 PHY FW V286
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) X540-AT2> mem 0xf8800000-0xf89fffff,0xf87fc000-0xf87fffff irq 37 at device 0.1 on pci3
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: eTrack 0x80000528 PHY FW V286
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+pcib4: <ACPI PCI-PCI bridge> at device 9.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+ix2: <Intel(R) X540-AT2> mem 0xf8a00000-0xf8bfffff,0xf8ef8000-0xf8efbfff irq 32 at device 0.0 on pci4
+ix2: Using 2048 TX descriptors and 2048 RX descriptors
+ix2: Using 4 RX queues 4 TX queues
+ix2: Using MSI-X interrupts with 5 vectors
+ix2: allocated for 4 queues
+ix2: allocated for 4 rx queues
+ix2: Ethernet address: ...
+ix2: PCI Express Bus: Speed 5.0GT/s Width x8
+ix2: eTrack 0x80000528 PHY FW V286
+ix2: netmap queues/slots: TX 4/2048, RX 4/2048
+ix3: <Intel(R) X540-AT2> mem 0xf8c00000-0xf8dfffff,0xf8efc000-0xf8efffff irq 42 at device 0.1 on pci4
+ix3: Using 2048 TX descriptors and 2048 RX descriptors
+ix3: Using 4 RX queues 4 TX queues
+ix3: Using MSI-X interrupts with 5 vectors
+ix3: allocated for 4 queues
+ix3: allocated for 4 rx queues
+ix3: Ethernet address: ...
+ix3: PCI Express Bus: Speed 5.0GT/s Width x8
+ix3: eTrack 0x80000528 PHY FW V286
+ix3: netmap queues/slots: TX 4/2048, RX 4/2048
+pci0: <base peripheral, interrupt controller> at device 20.0 (no driver attached)
+pci0: <base peripheral, interrupt controller> at device 20.1 (no driver attached)
+pci0: <base peripheral, interrupt controller> at device 20.2 (no driver attached)
+pci0: <base peripheral, interrupt controller> at device 20.3 (no driver attached)
+uhci0: <Intel 82801JI (ICH10) USB controller USB-D> port 0x9800-0x981f irq 16 at device 26.0 on pci0
+uhci0: LegSup = 0x2f00
+usbus1 on uhci0
+usbus1: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 82801JI (ICH10) USB controller USB-E> port 0x9880-0x989f irq 21 at device 26.1 on pci0
+uhci1: LegSup = 0x2f00
+usbus2 on uhci1
+usbus2: 12Mbps Full Speed USB v1.0
+uhci2: <Intel 82801JI (ICH10) USB controller USB-F> port 0x9c00-0x9c1f irq 19 at device 26.2 on pci0
+uhci2: LegSup = 0x2f00
+usbus3 on uhci2
+usbus3: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 82801JI (ICH10) USB 2.0 controller USB-B> mem 0xf9eff000-0xf9eff3ff irq 18 at device 26.7 on pci0
+usbus4: EHCI version 1.0
+usbus4 on ehci0
+usbus4: 480Mbps High Speed USB v2.0
+hdac1: <Intel 82801JI HDA Controller> mem 0xf9ef8000-0xf9efbfff irq 22 at device 27.0 on pci0
+pcib5: <ACPI PCI-PCI bridge> irq 17 at device 28.0 on pci0
+pcib6: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci5: <ACPI PCI bus> on pcib6
+mskc0: <Marvell Yukon 88E8056 Gigabit Ethernet> port 0xd800-0xd8ff mem 0xfbdfc000-0xfbdfffff irq 18 at device 0.0 on pci5
+msk0: <Marvell Technology Group Ltd. Yukon EC Ultra Id 0xb4 Rev 0x03> on mskc0
+msk0: Using defaults for TSO: 65518/35/2048
+msk0: Ethernet address: ...
+miibus0: <MII bus> on msk0
+e1000phy0: <Marvell 88E1149 Gigabit PHY> PHY 0 on miibus0
+e1000phy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+pcib7: <ACPI PCI-PCI bridge> irq 17 at device 28.4 on pci0
+pci6: <ACPI PCI bus> on pcib7
+atapci0: <Marvell 88SE6121 UDMA133 controller> port 0xcc00-0xcc07,0xc880-0xc883,0xc800-0xc807,0xc480-0xc483,0xc400-0xc40f mem 0xfbcffc00-0xfbcfffff irq 16 at device 0.0 on pci6
+ahci0: <Marvell 88SE6121 AHCI SATA controller> at channel -1 on atapci0
+ahci0: AHCI v1.00 with 2 3Gbps ports, Port Multiplier not supported
+ahci0: quirks=0x457<NOFORCE,NOPMP,NONCQ,2CH,EDGEIS,NOCOUNT>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ata2: <ATA channel> at channel 0 on atapci0
+pcib8: <ACPI PCI-PCI bridge> irq 16 at device 28.5 on pci0
+pci7: <ACPI PCI bus> on pcib8
+mskc1: <Marvell Yukon 88E8056 Gigabit Ethernet> port 0xb800-0xb8ff mem 0xfbbfc000-0xfbbfffff irq 17 at device 0.0 on pci7
+msk1: <Marvell Technology Group Ltd. Yukon EC Ultra Id 0xb4 Rev 0x03> on mskc1
+msk1: Using defaults for TSO: 65518/35/2048
+msk1: Ethernet address: ...
+miibus1: <MII bus> on msk1
+e1000phy1: <Marvell 88E1149 Gigabit PHY> PHY 0 on miibus1
+e1000phy1:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+uhci3: <Intel 82801JI (ICH10) USB controller USB-A> port 0x9080-0x909f irq 23 at device 29.0 on pci0
+uhci3: LegSup = 0x2f00
+usbus5 on uhci3
+usbus5: 12Mbps Full Speed USB v1.0
+uhci4: <Intel 82801JI (ICH10) USB controller USB-B> port 0x9400-0x941f irq 19 at device 29.1 on pci0
+uhci4: LegSup = 0x2f00
+usbus6 on uhci4
+usbus6: 12Mbps Full Speed USB v1.0
+uhci5: <Intel 82801JI (ICH10) USB controller USB-C> port 0x9480-0x949f irq 18 at device 29.2 on pci0
+uhci5: LegSup = 0x2f00
+usbus7 on uhci5
+usbus7: 12Mbps Full Speed USB v1.0
+ehci1: <Intel 82801JI (ICH10) USB 2.0 controller USB-A> mem 0xf9efe000-0xf9efe3ff irq 23 at device 29.7 on pci0
+usbus8: EHCI version 1.0
+usbus8 on ehci1
+usbus8: 480Mbps High Speed USB v2.0
+pcib9: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci8: <ACPI PCI bus> on pcib9
+pci8: <serial bus, FireWire> at device 2.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci1: <Intel ICH10 SATA300 controller> port 0x8000-0x8007,0x7c00-0x7c03,0x7880-0x7887,0x7800-0x7803,0x7480-0x748f,0x7400-0x740f irq 20 at device 31.2 on pci0
+ata3: <ATA channel> at channel 0 on atapci1
+ata4: <ATA channel> at channel 1 on atapci1
+atapci2: <Intel ICH10 SATA300 controller> port 0x9000-0x9007,0x8c00-0x8c03,0x8880-0x8887,0x8800-0x8803,0x8480-0x848f,0x8400-0x840f irq 20 at device 31.5 on pci0
+ata5: <ATA channel> at channel 0 on atapci2
+ata6: <ATA channel> at channel 1 on atapci2
+acpi_button0: <Power Button> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+orm0: <ISA Option ROMs> at iomem 0xcf000-0xcffff,0xd0000-0xd0fff,0xd1000-0xd1fff,0xd2000-0xd2fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounter "TSC-low" frequency 1603636171 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen0.1: <(0x1b73) XHCI root HUB> at usbus0
+ugen3.1: <Intel UHCI root HUB> at usbus3
+ugen7.1: <Intel UHCI root HUB> at usbus7
+ugen8.1: <Intel EHCI root HUB> at usbus8
+ugen5.1: <Intel UHCI root HUB> at usbus5
+ugen1.1: <Intel UHCI root HUB> at usbus1
+ugen4.1: <Intel EHCI root HUB> at usbus4
+ugen6.1: <Intel UHCI root HUB> at usbus6
+uhub0 on usbus0
+uhub1 on usbus1
+uhub1: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub0: <(0x1b73) XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+hdacc0: <NVIDIA (0x0084) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0084) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 5 on hdaa0
+pcm2: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 6 on hdaa0
+pcm3: <NVIDIA (0x0084) (HDMI/DP 8ch)> at nid 7 on hdaa0
+hdacc1: <Analog Devices AD1989B HDA CODEC> at cad 0 on hdac1
+hdaa1: <Analog Devices AD1989B Audio Function Group> at nid 1 on hdacc1
+pcm4: <Analog Devices AD1989B (Analog 7.1/2.0)> at nid 18,36,22,37 and 23,21,24,20 on hdaa1
+pcm5: <Analog Devices AD1989B (Front Analog Headphones)> at nid 17 on hdaa1
+pcm6: <Analog Devices AD1989B (Rear Digital)> at nid 27 on hdaa1
+pcm7: <Analog Devices AD1989B (Digital)> at nid 29 on hdaa1
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub2 on usbus7
+uhub2: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus7
+uhub3 on usbus5
+uhub3: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+ugen2.1: <Intel UHCI root HUB> at usbus2
+uhub4 on usbus6
+uhub4: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+uhub5 on usbus4
+uhub5: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus4
+uhub6 on usbus2
+uhub6: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+uhub7 on usbus3
+uhub7: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub8 on usbus8
+uhub8: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus8
+Root mount waiting for: usbus0 usbus1 usbus2 usbus3 usbus4 CAM usbus5 usbus6 usbus7 usbus8
+uhub3: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus0 usbus1uhub1: 2 ports with 2 removable, self powered
+uhub2: 2 ports with 2 removable, self powered
+ usbus2 usbus3 usbus4 CAM usbus5 usbus6 usbus7 usbus8
+uhub6: 2 ports with 2 removable, self powered
+uhub7: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus0uhub4: 2 ports with 2 removable, self powered
+ usbus2 usbus3 usbus4 CAM usbus6 usbus8
+ada0 at ata3 bus 0 scbus3 target 0 lun 0
+ada0: <Samsung SSD 860 EVO 500GB RVT01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 512bytes)
+ada0: 476940MB (976773168 512 byte sectors)
+cd0 at ata3 bus 0 scbus3 target 1 lun 0
+cd0: <TSSTcorp CDDVDW SH-S223Q SB00> Removable CD-ROM SCSI device
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present
+uhub0: 8 ports with 8 removable, self powered
+ugen0.2: <VIA Labs, Inc. USB2.0 Hub> at usbus0
+uhub9 on uhub0
+uhub9: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/90.90, addr 1> on usbus0
+Root mount waiting for: usbus0 usbus4 usbus8
+uhub9: 4 ports with 4 removable, self powered
+uhub5: 6 ports with 6 removable, self powered
+uhub8: 6 ports with 6 removable, self powered
+ugen0.3: <VIA Labs, Inc. USB3.0 Hub> at usbus0
+uhub10 on uhub0
+uhub10: <VIA Labs, Inc. USB3.0 Hub, class 9/0, rev 3.00/90.91, addr 2> on usbus0
+Root mount waiting for: usbus0 usbus4 usbus8
+ugen4.2: <vendor 0x0409 product 0x005a> at usbus4
+uhub11 on uhub5
+uhub11: <vendor 0x0409 product 0x005a, class 9/0, rev 2.00/1.00, addr 2> on usbus4
+uhub11: 4 ports with 4 removable, self powered
+ugen4.3: <vendor 0x1a40 USB 2.0 Hub MTT> at usbus4
+uhub12 on uhub11
+uhub12: <vendor 0x1a40 USB 2.0 Hub MTT, class 9/0, rev 2.00/1.00, addr 3> on usbus4
+uhub12: MTT enabled
+uhub10: 4 ports with 4 removable, self powered
+ugen7.2: <SEM USB Keyboard> at usbus7
+ukbd0 on uhub2
+ukbd0: <SEM USB Keyboard, class 0/0, rev 1.10/1.10, addr 2> on usbus7
+kbd2 at ukbd0
+ugen5.2: <Telink Wireless Receiver> at usbus5
+ukbd1 on uhub3
+ukbd1: <Telink Wireless Receiver, class 0/0, rev 1.10/1.00, addr 2> on usbus5
+kbd3 at ukbd1
+uhub12: 7 ports with 7 removable, self powered
+Root mount waiting for: usbus4
+ugen7.3: <KYE SYSTEMS CORP. Wired Mouse> at usbus7
+Root mount waiting for: usbus4
+usb_msc_auto_quirk: UQ_MSC_NO_GETMAXLUN set for USB mass storage device vendor 0x05e3 USB Storage (0x05e3:0x0745)
+usb_msc_auto_quirk: UQ_MSC_NO_TEST_UNIT_READY set for USB mass storage device vendor 0x05e3 USB Storage (0x05e3:0x0745)
+usb_msc_auto_quirk: UQ_MSC_NO_PREVENT_ALLOW set for USB mass storage device vendor 0x05e3 USB Storage (0x05e3:0x0745)
+usb_msc_auto_quirk: UQ_MSC_NO_SYNC_CACHE set for USB mass storage device vendor 0x05e3 USB Storage (0x05e3:0x0745)
+ugen4.4: <vendor 0x05e3 USB Storage> at usbus4
+umass0 on uhub12
+umass0: <vendor 0x05e3 USB Storage, class 0/0, rev 2.00/9.04, addr 4> on usbus4
+umass0:  SCSI over Bulk-Only; quirks = 0xc101
+umass0:7:0: Attached to scbus7
+(probe0:umass-sim0:0:0:0): REPORT LUNS. CDB: a0 00 00 00 00 00 00 00 00 10 00 00 
+(probe0:umass-sim0:0:0:0): CAM status: SCSI Status Error
+(probe0:umass-sim0:0:0:0): SCSI status: Check Condition
+(probe0:umass-sim0:0:0:0): SCSI sense: NOT READY asc:3a,0 (Medium not present)
+(probe0:umass-sim0:0:0:0): Error 6, Unretryable error
+da0 at umass-sim0 bus 0 scbus7 target 0 lun 0
+da0: <Generic MassStorageClass 0904> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>

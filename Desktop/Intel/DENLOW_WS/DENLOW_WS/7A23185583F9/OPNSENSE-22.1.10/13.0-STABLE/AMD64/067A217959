@@ -1,0 +1,881 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248059-267a40127d5 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i3-4130T CPU @ 2.90GHz (2900.08-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306c3  Family=0x6  Model=0x3c  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fdafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x21<LAHF,ABM>
+  Structured Extended Features=0x27ab<FSGSBASE,TSCADJ,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8208273408 (7828 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+Launching APs: 1 3 2
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+apei0: <ACPI Platform Error Interface> on acpi0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <processor> at device 0.0 (no driver attached)
+pci1: <network, ethernet> at device 0.1 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xf6000000-0xf63fffff,0xe0000000-0xefffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Lynx Point USB 3.0 controller> mem 0xf7d00000-0xf7d0ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ehci0: <Intel Lynx Point USB 2.0 controller USB-B> mem 0xf7d14000-0xf7d143ff irq 16 at device 26.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb0: <Intel(R) I210 (Copper)> port 0xd000-0xd01f mem 0xf7a00000-0xf7afffff,0xf7b00000-0xf7b03fff irq 16 at device 0.0 on pci3
+igb0: EEPROM V3.11-0 eTrack 0x80000469
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib4: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb1: <Intel(R) I210 (Copper)> port 0xc000-0xc01f mem 0xf7700000-0xf77fffff,0xf7800000-0xf7803fff irq 17 at device 0.0 on pci4
+igb1: EEPROM V3.11-0 eTrack 0x80000469
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib5: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb2: <Intel(R) I210 (Copper)> port 0xb000-0xb01f mem 0xf7400000-0xf74fffff,0xf7500000-0xf7503fff irq 18 at device 0.0 on pci5
+igb2: EEPROM V3.11-0 eTrack 0x80000469
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb3: <Intel(R) I210 (Copper)> port 0xa000-0xa01f mem 0xf7100000-0xf71fffff,0xf7200000-0xf7203fff irq 19 at device 0.0 on pci6
+igb3: EEPROM V3.11-0 eTrack 0x80000469
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib7: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci7: <ACPI PCI bus> on pcib7
+igb4: <Intel(R) I210 (Copper)> port 0x9000-0x901f mem 0xf6e00000-0xf6efffff,0xf6f00000-0xf6f03fff irq 16 at device 0.0 on pci7
+igb4: EEPROM V3.11-0 eTrack 0x80000469
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <ACPI PCI-PCI bridge> irq 17 at device 28.5 on pci0
+pci8: <ACPI PCI bus> on pcib8
+igb5: <Intel(R) I210 (Copper)> port 0x8000-0x801f mem 0xf6b00000-0xf6bfffff,0xf6c00000-0xf6c03fff irq 17 at device 0.0 on pci8
+igb5: EEPROM V3.11-0 eTrack 0x80000469
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib9: <ACPI PCI-PCI bridge> irq 18 at device 28.6 on pci0
+pci9: <ACPI PCI bus> on pcib9
+igb6: <Intel(R) I210 (Fiber)> port 0x7000-0x701f mem 0xf6800000-0xf68fffff,0xf6900000-0xf6903fff irq 18 at device 0.0 on pci9
+igb6: EEPROM V3.25-0 eTrack 0x800005d2
+igb6: Using 1024 TX descriptors and 1024 RX descriptors
+igb6: Using 2 RX queues 2 TX queues
+igb6: Using MSI-X interrupts with 3 vectors
+igb6: Ethernet address: ...
+igb6: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib10: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pci10: <ACPI PCI bus> on pcib10
+igb7: <Intel(R) I210 (Fiber)> port 0x6000-0x601f mem 0xf6500000-0xf65fffff,0xf6600000-0xf6603fff irq 19 at device 0.0 on pci10
+igb7: EEPROM V3.25-0 eTrack 0x800005d2
+igb7: Using 1024 TX descriptors and 1024 RX descriptors
+igb7: Using 2 RX queues 2 TX queues
+igb7: Using MSI-X interrupts with 3 vectors
+igb7: Ethernet address: ...
+igb7: netmap queues/slots: TX 2/1024, RX 2/1024
+ehci1: <Intel Lynx Point USB 2.0 controller USB-A> mem 0xf7d13000-0xf7d133ff irq 23 at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Lynx Point AHCI SATA controller> port 0xf0b0-0xf0b7,0xf0a0-0xf0a3,0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xf7d12000-0xf7d127ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+ppc1: <Parallel port> port 0x378-0x37f irq 5 on acpi0
+ppc1: Generic chipset (NIBBLE-only) in COMPATIBLE mode
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1cc200001d00
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1cc200001d00
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est3 attach returned 6
+Timecounter "TSC-low" frequency 1449999584 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+Trying to mount root from ufs:/dev/ufs/OPNsense_Nano [rw,noatime]...
+uhub0Root mount waiting for: on usbus2
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub1 usbus0 usbus1 usbus2 CAM
+ on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub2 on usbus0
+uhub2: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus1 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <SDCFHS-016G HDX16.01> CFA SATA 1.x device
+ada0: Serial Number...
+ada0: 150.000MB/s transfers (SATA 1.x, UDMA6, PIO 512bytes)
+ada0: 15279MB (31293360 512 byte sectors)
+ses0: pass0,ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+uhub2: 21 ports with 21 removable, self powered
+Root mount waiting for: usbus0 usbus1 usbus2
+ugen2.2: <vendor 0x8087 product 0x8000> at usbus2
+uhub3 on uhub0
+uhub3: <vendor 0x8087 product 0x8000, class 9/0, rev 2.00/0.05, addr 2> on usbus2
+ugen1.2: <vendor 0x8087 product 0x8008> at usbus1
+uhub4 on uhub1
+uhub4: <vendor 0x8087 product 0x8008, class 9/0, rev 2.00/0.05, addr 2> on usbus1
+uhub4: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+mountroot: waiting for device /dev/ufs/OPNsense_Nano...
+WARNING:  was not properly dismounted
+Dual Console: Serial Primary, Video Secondary
+igb1: link state changed to UP
+debugnet_any_ifnet_update: Bad dn_init result from igb1 (ifp 0xfffff80003ab8800), ignoring.
+ichsmb0: <Intel Lynx Point SMBus controller> port 0xf040-0xf05f mem 0xf7d11000-0xf7d110ff irq 18 at device 31.3 on pci0
+smbus0: <System Management Bus> on ichsmb0
+lo0: link state changed to UP
+padlock0: No ACE support.
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1cc800001d00
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1cc800001d00
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1cc800001d00
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1cc800001d00
+device_attach: est3 attach returned 6
+vlan0: changing name to 'igb0_vlan10'
+igb1: link state changed to DOWN
+vlan1: changing name to 'igb1_vlan7'
+vlan2: changing name to 'igb0_vlan90'
+tun1: changing name to 'ovpns1'
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ng0: changing name to 'pppoe0'
+igb1: link state changed to UP
+igb1_vlan7: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+ovpns1: link state changed to UP
+igb0: promiscuous mode enabled
+pppoe0: promiscuous mode enabled
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+368.325081 [1139] generic_netmap_attach     Emulated adapter for pppoe0 created (prev was NULL)
+368.333923 [1044] generic_netmap_dtor       Emulated netmap adapter for pppoe0 destroyed
+368.343624 [1139] generic_netmap_attach     Emulated adapter for pppoe0 created (prev was NULL)
+368.412190 [ 320] generic_netmap_register   Emulated adapter for pppoe0 activated
+igb0: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+pid 58918 (java), jid 0, uid 965, was killed: out of swap space
+pid 47440 (python3.8), jid 0, uid 0, was killed: out of swap space
+765.219562 [ 295] generic_netmap_unregister Emulated adapter for pppoe0 deactivated
+765.227715 [1044] generic_netmap_dtor       Emulated netmap adapter for pppoe0 destroyed
+ovpns1: link state changed to DOWN
+igb0: promiscuous mode disabled
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 32 32 1 1 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248075-469123a60d1 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i3-4130T CPU @ 2.90GHz (2900.08-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306c3  Family=0x6  Model=0x3c  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fdafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x21<LAHF,ABM>
+  Structured Extended Features=0x27ab<FSGSBASE,TSCADJ,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8208273408 (7828 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+Launching APs: 1 3 2
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+apei0: <ACPI Platform Error Interface> on acpi0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <processor> at device 0.0 (no driver attached)
+pci1: <network, ethernet> at device 0.1 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xf6000000-0xf63fffff,0xe0000000-0xefffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Lynx Point USB 3.0 controller> mem 0xf7d00000-0xf7d0ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ehci0: <Intel Lynx Point USB 2.0 controller USB-B> mem 0xf7d14000-0xf7d143ff irq 16 at device 26.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb0: <Intel(R) I210 (Copper)> port 0xd000-0xd01f mem 0xf7a00000-0xf7afffff,0xf7b00000-0xf7b03fff irq 16 at device 0.0 on pci3
+igb0: EEPROM V3.11-0 eTrack 0x80000469
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib4: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb1: <Intel(R) I210 (Copper)> port 0xc000-0xc01f mem 0xf7700000-0xf77fffff,0xf7800000-0xf7803fff irq 17 at device 0.0 on pci4
+igb1: EEPROM V3.11-0 eTrack 0x80000469
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib5: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb2: <Intel(R) I210 (Copper)> port 0xb000-0xb01f mem 0xf7400000-0xf74fffff,0xf7500000-0xf7503fff irq 18 at device 0.0 on pci5
+igb2: EEPROM V3.11-0 eTrack 0x80000469
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb3: <Intel(R) I210 (Copper)> port 0xa000-0xa01f mem 0xf7100000-0xf71fffff,0xf7200000-0xf7203fff irq 19 at device 0.0 on pci6
+igb3: EEPROM V3.11-0 eTrack 0x80000469
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib7: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci7: <ACPI PCI bus> on pcib7
+igb4: <Intel(R) I210 (Copper)> port 0x9000-0x901f mem 0xf6e00000-0xf6efffff,0xf6f00000-0xf6f03fff irq 16 at device 0.0 on pci7
+igb4: EEPROM V3.11-0 eTrack 0x80000469
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <ACPI PCI-PCI bridge> irq 17 at device 28.5 on pci0
+pci8: <ACPI PCI bus> on pcib8
+igb5: <Intel(R) I210 (Copper)> port 0x8000-0x801f mem 0xf6b00000-0xf6bfffff,0xf6c00000-0xf6c03fff irq 17 at device 0.0 on pci8
+igb5: EEPROM V3.11-0 eTrack 0x80000469
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib9: <ACPI PCI-PCI bridge> irq 18 at device 28.6 on pci0
+pci9: <ACPI PCI bus> on pcib9
+igb6: <Intel(R) I210 (Fiber)> port 0x7000-0x701f mem 0xf6800000-0xf68fffff,0xf6900000-0xf6903fff irq 18 at device 0.0 on pci9
+igb6: EEPROM V3.25-0 eTrack 0x800005d2
+igb6: Using 1024 TX descriptors and 1024 RX descriptors
+igb6: Using 2 RX queues 2 TX queues
+igb6: Using MSI-X interrupts with 3 vectors
+igb6: Ethernet address: ...
+igb6: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib10: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pci10: <ACPI PCI bus> on pcib10
+igb7: <Intel(R) I210 (Fiber)> port 0x6000-0x601f mem 0xf6500000-0xf65fffff,0xf6600000-0xf6603fff irq 19 at device 0.0 on pci10
+igb7: EEPROM V3.25-0 eTrack 0x800005d2
+igb7: Using 1024 TX descriptors and 1024 RX descriptors
+igb7: Using 2 RX queues 2 TX queues
+igb7: Using MSI-X interrupts with 3 vectors
+igb7: Ethernet address: ...
+igb7: netmap queues/slots: TX 2/1024, RX 2/1024
+ehci1: <Intel Lynx Point USB 2.0 controller USB-A> mem 0xf7d13000-0xf7d133ff irq 23 at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Lynx Point AHCI SATA controller> port 0xf0b0-0xf0b7,0xf0a0-0xf0a3,0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xf7d12000-0xf7d127ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+ppc1: <Parallel port> port 0x378-0x37f irq 5 on acpi0
+ppc1: Generic chipset (NIBBLE-only) in COMPATIBLE mode
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est3 attach returned 6
+Timecounter "TSC-low" frequency 1449999740 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+ugen2.1: <Intel EHCI root HUB> at usbus2
+Trying to mount root from ufs:/dev/ufs/OPNsense_Nano [rw,noatime]...
+uhub0 on usbus1
+uhub1 on usbus2
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+Root mount waiting for:uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ usbus0 usbus1 usbus2 CAM
+uhub2 on usbus0
+uhub2: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus1 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <SDCFHS-016G HDX16.01> CFA SATA 1.x device
+ada0: Serial Number...
+ada0: 150.000MB/s transfers (SATA 1.x, UDMA6, PIO 512bytes)
+ada0: 15279MB (31293360 512 byte sectors)
+ses0: pass0,ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 21 ports with 21 removable, self powered
+Root mount waiting for: usbus1 usbus2
+ugen2.2: <vendor 0x8087 product 0x8000> at usbus2
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x8000, class 9/0, rev 2.00/0.05, addr 2> on usbus2
+ugen1.2: <vendor 0x8087 product 0x8008> at usbus1
+uhub4 on uhub0
+uhub4: <vendor 0x8087 product 0x8008, class 9/0, rev 2.00/0.05, addr 2> on usbus1
+uhub4: 6 ports with 6 removable, self powered
+uhub3: 8 ports with 8 removable, self powered
+mountroot: waiting for device /dev/ufs/OPNsense_Nano...
+Dual Console: Serial Primary, Video Secondary
+igb0: link state changed to UP
+igb1: link state changed to UP
+ichsmb0: <Intel Lynx Point SMBus controller> port 0xf040-0xf05f mem 0xf7d11000-0xf7d110ff irq 18 at device 31.3 on pci0
+smbus0: <System Management Bus> on ichsmb0
+lo0: link state changed to UP
+padlock0: No ACE support.
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1ca000001d00
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1ca000001d00
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1ca000001d00
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1ca000001d00
+device_attach: est3 attach returned 6
+igb0: link state changed to DOWN
+vlan0: changing name to 'igb0_vlan10'
+vlan1: changing name to 'igb0_vlan90'
+igb1: link state changed to DOWN
+vlan2: changing name to 'igb1_vlan7'
+tun1: changing name to 'ovpns1'
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ng0: changing name to 'pppoe0'
+igb1: link state changed to UP
+igb1_vlan7: link state changed to UP
+igb0: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+ovpns1: link state changed to UP
+ovpns1: link state changed to DOWN
+ovpns1: link state changed to UP
+914.175811 [1139] generic_netmap_attach     Emulated adapter for pppoe0 created (prev was NULL)
+914.184642 [1044] generic_netmap_dtor       Emulated netmap adapter for pppoe0 destroyed
+pppoe0: permanently promiscuous mode enabled
+914.198667 [1139] generic_netmap_attach     Emulated adapter for pppoe0 created (prev was NULL)
+914.272621 [ 320] generic_netmap_register   Emulated adapter for pppoe0 activated
+igb0: promiscuous mode enabled
+436.230418 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+436.238363 [1139] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+436.247264 [1044] generic_netmap_dtor       Emulated netmap adapter for ovpns1 destroyed
+igb0: permanently promiscuous mode enabled
+436.255617 [1139] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+436.268591 [ 320] generic_netmap_register   Emulated adapter for ovpns1 activated
+436.281722 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+igb0: link state changed to DOWN
+igb0_vlan10: link state changed to DOWN
+igb0_vlan90: link state changed to DOWN
+igb0: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+igb0: permanently promiscuous mode disabled
+pid 87704 (suricata), jid 0, uid 0, was killed: out of swap space
+505.291907 [ 295] generic_netmap_unregister Emulated adapter for pppoe0 deactivated
+505.299644 [1044] generic_netmap_dtor       Emulated netmap adapter for pppoe0 destroyed
+pid 96940 (python3.8), jid 0, uid 0, was killed: out of swap space
+pid 60234 (java), jid 0, uid 965, was killed: out of swap space
+987.533659 [ 295] generic_netmap_unregister Emulated adapter for ovpns1 deactivated
+987.541416 [1044] generic_netmap_dtor       Emulated netmap adapter for ovpns1 destroyed
+igb0: link state changed to DOWN
+igb0_vlan10: link state changed to DOWN
+igb0_vlan90: link state changed to DOWN
+igb0: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+016.301715 [1139] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+016.310555 [1044] generic_netmap_dtor       Emulated netmap adapter for ovpns1 destroyed
+016.318852 [1139] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+016.327750 [ 320] generic_netmap_register   Emulated adapter for ovpns1 activated
+016.366225 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+igb0: permanently promiscuous mode enabled
+016.378109 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+igb0: link state changed to DOWN
+igb0_vlan10: link state changed to DOWN
+igb0_vlan90: link state changed to DOWN
+igb0: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+igb0: permanently promiscuous mode disabled
+igb0: link state changed to DOWN
+igb0_vlan10: link state changed to DOWN
+igb0_vlan90: link state changed to DOWN
+069.513610 [ 295] generic_netmap_unregister Emulated adapter for ovpns1 deactivated
+069.521763 [1044] generic_netmap_dtor       Emulated netmap adapter for ovpns1 destroyed
+igb0: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+312.092891 [1139] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+312.101723 [1044] generic_netmap_dtor       Emulated netmap adapter for ovpns1 destroyed
+312.110050 [1139] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+312.118949 [ 320] generic_netmap_register   Emulated adapter for ovpns1 activated
+312.126527 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+igb0: permanently promiscuous mode enabled
+312.144517 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+igb0: link state changed to DOWN
+igb0_vlan10: link state changed to DOWN
+igb0_vlan90: link state changed to DOWN
+igb0: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+igb0: permanently promiscuous mode disabled
+229.971487 [ 295] generic_netmap_unregister Emulated adapter for ovpns1 deactivated
+229.978968 [1044] generic_netmap_dtor       Emulated netmap adapter for ovpns1 destroyed
+igb0: link state changed to DOWN
+igb0_vlan10: link state changed to DOWN
+igb0_vlan90: link state changed to DOWN
+igb0: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+237.220914 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+igb0: permanently promiscuous mode enabled
+237.232820 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+igb0: link state changed to DOWN
+igb0_vlan10: link state changed to DOWN
+igb0_vlan90: link state changed to DOWN
+237.411777 [1139] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+237.420420 [1044] generic_netmap_dtor       Emulated netmap adapter for ovpns1 destroyed
+237.428546 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+237.436327 [1139] generic_netmap_attach     Emulated adapter for ovpns1 created (prev was NULL)
+237.451214 [ 320] generic_netmap_register   Emulated adapter for ovpns1 activated
+igb1: link state changed to DOWN
+igb1_vlan7: link state changed to DOWN
+igb1: permanently promiscuous mode enabled
+237.769263 [ 849] iflib_netmap_config       txr 2 rxr 2 txd 1024 rxd 1024 rbufsz 2048
+igb0: link state changed to UP
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+igb1: link state changed to UP
+igb1_vlan7: link state changed to UP
+igb0: permanently promiscuous mode disabled
+ovpns1: link state changed to DOWN
+593.473523 [ 295] generic_netmap_unregister Emulated adapter for ovpns1 deactivated
+593.481128 [1044] generic_netmap_dtor       Emulated netmap adapter for ovpns1 destroyed
+igb0: link state changed to DOWN
+igb0_vlan10: link state changed to DOWN
+igb0_vlan90: link state changed to DOWN
+igb1: link state changed to DOWN
+igb1_vlan7: link state changed to DOWN
+igb0: link state changed to UP
+igb0: promiscuous mode disabled
+igb0_vlan10: link state changed to UP
+igb0_vlan90: link state changed to UP
+igb1: link state changed to UP
+igb1_vlan7: link state changed to UP
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 45 3 1 0 0 done
+Waiting (max 60 seconds) for system thread `bufdaemon' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-0' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-2' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-1' to stop... done
+Waiting (max 60 seconds) for system thread `bufspacedaemon-3' to stop... done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-STABLE stable/22.1-n248088-47fa565344c SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: Intel(R) Core(TM) i3-4130T CPU @ 2.90GHz (2900.14-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306c3  Family=0x6  Model=0x3c  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fdafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x21<LAHF,ABM>
+  Structured Extended Features=0x27ab<FSGSBASE,TSCADJ,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8208273408 (7828 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+Launching APs: 1 3 2
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+apei0: <ACPI Platform Error Interface> on acpi0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <processor> at device 0.0 (no driver attached)
+pci1: <network, ethernet> at device 0.1 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xf6000000-0xf63fffff,0xe0000000-0xefffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Lynx Point USB 3.0 controller> mem 0xf7d00000-0xf7d0ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Port routing mask set to 0xffffffff
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ehci0: <Intel Lynx Point USB 2.0 controller USB-B> mem 0xf7d14000-0xf7d143ff irq 16 at device 26.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb0: <Intel(R) I210 (Copper)> port 0xd000-0xd01f mem 0xf7a00000-0xf7afffff,0xf7b00000-0xf7b03fff irq 16 at device 0.0 on pci3
+igb0: EEPROM V3.11-0 eTrack 0x80000469
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib4: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb1: <Intel(R) I210 (Copper)> port 0xc000-0xc01f mem 0xf7700000-0xf77fffff,0xf7800000-0xf7803fff irq 17 at device 0.0 on pci4
+igb1: EEPROM V3.11-0 eTrack 0x80000469
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib5: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb2: <Intel(R) I210 (Copper)> port 0xb000-0xb01f mem 0xf7400000-0xf74fffff,0xf7500000-0xf7503fff irq 18 at device 0.0 on pci5
+igb2: EEPROM V3.11-0 eTrack 0x80000469
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib6: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb3: <Intel(R) I210 (Copper)> port 0xa000-0xa01f mem 0xf7100000-0xf71fffff,0xf7200000-0xf7203fff irq 19 at device 0.0 on pci6
+igb3: EEPROM V3.11-0 eTrack 0x80000469
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib7: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci7: <ACPI PCI bus> on pcib7
+igb4: <Intel(R) I210 (Copper)> port 0x9000-0x901f mem 0xf6e00000-0xf6efffff,0xf6f00000-0xf6f03fff irq 16 at device 0.0 on pci7
+igb4: EEPROM V3.11-0 eTrack 0x80000469
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <ACPI PCI-PCI bridge> irq 17 at device 28.5 on pci0
+pci8: <ACPI PCI bus> on pcib8
+igb5: <Intel(R) I210 (Copper)> port 0x8000-0x801f mem 0xf6b00000-0xf6bfffff,0xf6c00000-0xf6c03fff irq 17 at device 0.0 on pci8
+igb5: EEPROM V3.11-0 eTrack 0x80000469
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib9: <ACPI PCI-PCI bridge> irq 18 at device 28.6 on pci0
+pci9: <ACPI PCI bus> on pcib9
+igb6: <Intel(R) I210 (Fiber)> port 0x7000-0x701f mem 0xf6800000-0xf68fffff,0xf6900000-0xf6903fff irq 18 at device 0.0 on pci9
+igb6: EEPROM V3.25-0 eTrack 0x800005d2
+igb6: Using 1024 TX descriptors and 1024 RX descriptors
+igb6: Using 2 RX queues 2 TX queues
+igb6: Using MSI-X interrupts with 3 vectors
+igb6: Ethernet address: ...
+igb6: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib10: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pci10: <ACPI PCI bus> on pcib10
+igb7: <Intel(R) I210 (Fiber)> port 0x6000-0x601f mem 0xf6500000-0xf65fffff,0xf6600000-0xf6603fff irq 19 at device 0.0 on pci10
+igb7: EEPROM V3.25-0 eTrack 0x800005d2
+igb7: Using 1024 TX descriptors and 1024 RX descriptors
+igb7: Using 2 RX queues 2 TX queues
+igb7: Using MSI-X interrupts with 3 vectors
+igb7: Ethernet address: ...
+igb7: netmap queues/slots: TX 2/1024, RX 2/1024
+ehci1: <Intel Lynx Point USB 2.0 controller USB-A> mem 0xf7d13000-0xf7d133ff irq 23 at device 29.0 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci1
+usbus2: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel Lynx Point AHCI SATA controller> port 0xf0b0-0xf0b7,0xf0a0-0xf0a3,0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xf7d12000-0xf7d127ff irq 19 at device 31.2 on pci0
+ahci0: AHCI v1.30 with 6 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+acpi_button0: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+ppc1: <Parallel port> port 0x378-0x37f irq 5 on acpi0
+ppc1: Generic chipset (NIBBLE-only) in COMPATIBLE mode
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 1c9a00001d00
+device_attach: est3 attach returned 6
+Timecounter "TSC-low" frequency 1449999722 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen2.1: <Intel EHCI root HUB> at usbus2
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+Trying to mount root from ufs:/dev/ufs/OPNsense_Nano [rw,noatime]...
+uhub0 on usbus2
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+Root mount waiting for:uhub1 usbus0 usbus1 on usbus1
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub2 usbus2 CAM
+ on usbus0
+uhub2: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus1 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <SDCFHS-016G HDX16.01> CFA SATA 1.x device
+ada0: Serial Number...
+ada0: 150.000MB/s transfers (SATA 1.x, UDMA6, PIO 512bytes)
+ada0: 15279MB (31293360 512 byte sectors)
+ses0: pass0,ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 21 ports with 21 removable, self powered
+Root mount waiting for: usbus1 usbus2
+ugen1.2: <vendor 0x8087 product 0x8008> at usbus1
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x8008, class 9/0, rev 2.00/0.05, addr 2> on usbus1
+ugen2.2: <vendor 0x8087 product 0x8000> at usbus2
+uhub4 on uhub0
+uhub4: <vendor 0x8087 product 0x8000, class 9/0, rev 2.00/0.05, addr 2> on usbus2
+uhub3: 6 ports with 6 removable, self powered
+uhub4: 8 ports with 8 removable, self powered
+mountroot: waiting for device /dev/ufs/OPNsense_Nano...
+Dual Console: Serial Primary, Video Secondary

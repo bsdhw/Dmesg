@@ -1,0 +1,124 @@
+OpenBSD 7.0 (GENERIC) #208: Thu Sep 30 14:38:18 MDT 2021
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC
+real mem  = 1072644096 (1022MB)
+avail mem = 1036713984 (988MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 07/14/03, BIOS32 rev. 0 @ 0xfd800, SMBIOS rev. 2.31 @ 0xe0010 (44 entries)
+bios0: vendor IBM version "1MET93WW (2.12 )" date 07/14/2003
+bios0: IBM 2658MNG
+acpi0 at bios0: ACPI 1.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SSDT ECDT TCPA BOOT
+acpi0: wakeup devices LID_(S3) SLPB(S3) PCI0(S4) UART(S3) OBLN(S5) USB0(S3) USB1(S3) USB2(S3) AC97(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpiec0 at acpi0
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (AGP_)
+acpiprt2 at acpi0: bus 2 (PCI1)
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: SLPB
+"PNP0A03" at acpi0 not configured
+acpicmos0 at acpi0
+"IBM0071" at acpi0 not configured
+acpibat0 at acpi0: BAT0 not present
+acpibat1 at acpi0: BAT1 not present
+acpiac0 at acpi0: AC unit online
+acpithinkpad0 at acpi0: version 1.0
+acpipwrres0 at acpi0: PUBS, resource for USB0, USB1
+acpitz0 at acpi0: critical temperature is 72 degC
+acpitz1 at acpi0: critical temperature is 50 degC
+acpivideo0 at acpi0: VID_
+bios0: ROM list: 0xc0000/0xf000 0xd0000/0x1800 0xdc000/0x4000! 0xe0000/0x10000
+cpu0 at mainbus0: (uniprocessor)
+cpu0: Mobile Intel(R) Pentium(R) 4 - M CPU 1.70GHz ("GenuineIntel" 686-class) 1.70 GHz, 0f-02-07
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,CNXT-ID,PERF,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+memory map conflict 0xe0000/0x4000
+pci0 at mainbus0 bus 0: configuration mode 1 (bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82845 Host" rev 0x04
+intelagp0 at pchb0
+agp0 at intelagp0: aperture at 0xe0000000, size 0x4000000
+ppb0 at pci0 dev 1 function 0 "Intel 82845 AGP" rev 0x04
+pci1 at ppb0 bus 1
+radeondrm0 at pci1 dev 0 function 0 "ATI Radeon Mobility M6" rev 0x00
+drm0 at radeondrm0
+radeondrm0: irq 11
+uhci0 at pci0 dev 29 function 0 "Intel 82801CA/CAM USB" rev 0x02: irq 11
+uhci1 at pci0 dev 29 function 1 "Intel 82801CA/CAM USB" rev 0x02: irq 11
+uhci2 at pci0 dev 29 function 2 "Intel 82801CA/CAM USB" rev 0x02: irq 11
+ppb1 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0x42
+pci2 at ppb1 bus 2
+fxp0 at pci2 dev 8 function 0 "Intel PRO/100 VE" rev 0x42, i82562: irq 11, address XXX
+inphy0 at fxp0 phy 1: i82562ET 10/100 PHY, rev. 0
+cbb0 at pci2 dev 9 function 0 "TI PCI1410 CardBus" rev 0x02: irq 11
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 3 device 0 cacheline 0x8, lattimer 0x40
+pcmcia0 at cardslot0
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801CAM LPC" rev 0x02
+pciide0 at pci0 dev 31 function 1 "Intel 82801CAM IDE" rev 0x02: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+wd0 at pciide0 channel 0 drive 0: <FC-1307 SD to CF Adapter V1.4>
+wd0: 1-sector PIO, LBA, 15193MB, 31116288 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 2
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <TEAC, DW-28E, 2.1A> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 2
+ichiic0 at pci0 dev 31 function 3 "Intel 82801CA/CAM SMBus" rev 0x02: irq 11
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 512MB DDR SDRAM non-parity PC2700CL2.5
+spdmem1 at iic0 addr 0x51: 512MB DDR SDRAM non-parity PC2700CL2.5
+auich0 at pci0 dev 31 function 5 "Intel 82801CA/CAM AC97" rev 0x02: irq 11, ICH3
+ac97: codec id 0x41445348 (Analog Devices AD1881A)
+ac97: codec features headphone, Analog Devices Phat Stereo
+audio0 at auich0
+"Intel 82801CA/CAM Modem" rev 0x02 at pci0 dev 31 function 6 not configured
+usb0 at uhci0: USB revision 1.0
+uhub0 at usb0 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb1 at uhci1: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci2: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt2 at isa0 port 0x3bc/4: polled
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+dt: 445 probes
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+bwi0 at cardbus0 dev 0 function 0 "Broadcom BCM4318" rev 0x02: irq 11, address XXX
+root on wd0a (7601bcca0bc32b83.a) swap on wd0b dump on wd0b
+WARNING: / was not properly unmounted
+radeondrm0: RV100
+radeondrm0: 1024x768, 16bpp
+wsdisplay0 at radeondrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+Bogus possible_clones: [ENCODER:45:DAC-45] possible_clones=0xa (full encoder mask=0xf)
+Bogus possible_clones: [ENCODER:47:TMDS-47] possible_clones=0x9 (full encoder mask=0xf)
+Bogus possible_clones: [ENCODER:51:TV-51] possible_clones=0x3 (full encoder mask=0xf)
+bwi0: base tssi measure failed
+bwi0 detached
+bwi0 at cardbus0 dev 0 function 0 "Broadcom BCM4318" rev 0x02: irq 11, address XXX
+bwi0 detached
+bwi0 at cardbus0 dev 0 function 0 "Broadcom BCM4318" rev 0x02: irq 11, address XXX
+bwi0: base tssi measure failed
+arp info overwritten for XXX.XXX.XXX.XXX by XXX on fxp0
+arp info overwritten for XXX.XXX.XXX.XXX by XXX on fxp0
+arp info overwritten for XXX.XXX.XXX.XXX by XXX on fxp0
+arp info overwritten for XXX.XXX.XXX.XXX by XXX on fxp0
+arp info overwritten for XXX.XXX.XXX.XXX by XXX on fxp0
+arp info overwritten for XXX.XXX.XXX.XXX by XXX on fxp0
+arp info overwritten for XXX.XXX.XXX.XXX by XXX on fxp0
+arp info overwritten for XXX.XXX.XXX.XXX by XXX on fxp0

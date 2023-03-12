@@ -1,0 +1,939 @@
+---<<BOOT>>---
+Copyright (c) B817-9222 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 main-n259967-11b5b9e8a520: Sat Jan  7 16:39:30 UTC 2023
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz (2900.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906e9  Family=0x6  Model=0x9e  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc002e00<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xc04<RSBA>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 68719476736 (65536 MB)
+avail memory = 66479239168 (63399 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM 8275    >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 3 2
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x6f765000-0x6f76501e
+smbios0: Version: 3.0, BCD Revision: 3.0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-BPC>
+acpi0: Power Button (fixed)
+Firmware Error (ACPI): AE_AML_BUFFER_LIMIT, Field [CAP1] at bit offset/length 64/32 exceeds size of target Buffer (64 bits) (20221020/dsopcode-356)
+ACPI Error: Aborting method \134_SB._OSC due to previous error (AE_AML_BUFFER_LIMIT) (20221020/psparse-689)
+acpi0: _OSC failed: AE_AML_BUFFER_LIMIT
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc1: <AT realtime clock> on acpi0
+atrtc1: Warning: Couldn't map I/O.
+atrtc1: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x6e> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0x5000-0x507f mem 0xc3000000-0xc3ffffff,0x80000000-0x8fffffff,0x90000000-0x91ffffff at device 0.0 on pci1
+vgapci1: <VGA-compatible display> port 0x6000-0x603f mem 0x1ffa000000-0x1ffaffffff,0x1fa0000000-0x1fafffffff at device 2.0 on pci0
+vgapci1: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xc4320000-0xc432ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <Intel ICH8+ (RAID) AHCI SATA controller> port 0x6080-0x6087,0x6088-0x608b,0x6060-0x607f mem 0xc4334000-0xc4335fff,0xc4337000-0xc43370ff,0xc4336000-0xc43367ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 3 6Gbps ports, Port Multiplier not supported
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+rtsx0: <2.1g Realtek RTS525A PCIe SD Card Reader> mem 0xc4100000-0xc4100fff at device 0.0 on pci3
+rtsx0: No card is detected
+pcib4: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake HDA Controller> mem 0x1ffb010000-0x1ffb013fff,0x1ffb000000-0x1ffb00ffff at device 31.3 on pci0
+em0: <Intel(R) I219-LM SPT-H(2)> mem 0xc4300000-0xc431ffff at device 31.6 on pci0
+em0: EEPROM V0.8-4
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_button0: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+acpi_tz3: <Thermal Zone> on acpi0
+acpi_tz4: <Thermal Zone> on acpi0
+acpi_tz5: <Thermal Zone> on acpi0
+Firmware Error (ACPI): AE_AML_PACKAGE_LIMIT, Index (0x000000005) is beyond end of object (length 0x5) (20221020/exoparg2-569)
+ACPI Error: Aborting method \134_TZ.GETP due to previous error (AE_AML_PACKAGE_LIMIT) (20221020/psparse-689)
+ACPI Error: Aborting method \134_TZ.CHGZ._CRT due to previous error (AE_AML_PACKAGE_LIMIT) (20221020/psparse-689)
+acpi_tz6: <Thermal Zone> on acpi0
+acpi_tz7: <Thermal Zone> on acpi0
+acpi_tz8: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+atrtc0: Can't map interrupt.
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+Timecounter "TSC-low" frequency 1451997152 Hz quality 1000
+Timecounters tick every 1.000 msec
+hdacc0: <Conexant (0x2008) HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant (0x2008) Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant (0x2008) (Analog)> at nid 23 and 26 on hdaa0
+pcm1: <Conexant (0x2008) (Right Analog Headphones)> at nid 22 on hdaa0
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus3 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich4 bus 0 scbus2 target 0 lun 0
+ada0: <SK hynix SC311 SATA 256GB 70002P10> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 244198MB (500118192 512 byte sectors)
+ses0: ada0 in 'Slot 04', SATA Slot: scbus2 target 0
+random: unblocking device.
+Trying to mount root from cd9660:/dev/iso9660/LIVE []...
+WARNING: WITNESS option enabled, expect reduced performance.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p1 is gpt/EFI%20System%20Partition.
+GEOM_LABEL[1]: Label for provider ada0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT32 volume detected.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT32 volume has no name.
+GEOM_LABEL[1]: Label for provider ada0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p3: no FAT signature found.
+GEOM_LABEL[1]: Label EFI%20System%20Partition(gpt/EFI%20System%20Partition) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT32 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT32 volume has no name.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+Root mount waiting for: usbus0
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <Intenso Intenso Rainbow Line> at usbus0
+umass0 on uhub0
+umass0: <Intenso Intenso Rainbow Line, class 0/0, rev 2.00/1.00, addr 1> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0x4101
+umass0:4:0: Attached to scbus4
+da0 at umass-sim0 bus 0 scbus4 target 0 lun 0
+da0: <Intenso Rainbow Line 8.07> Removable Direct Access SPC-2 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 15000MB (30720000 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM: da0: the secondary GPT header is not in the last LBA.
+GEOM_LABEL[1]: ISO9660 file system detected on da0.
+GEOM_LABEL[1]: Label for provider da0 is iso9660/LIVE.
+GEOM_LABEL[1]: MSDOSFS: da0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da0 is diskid/XXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider da0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label for provider da0p2 is msdosfs/EFISYS.
+GEOM: iso9660/LIVE: the secondary GPT header is not in the last LBA.
+GEOM: diskid/XXXXXXXXXXXXXX the secondary GPT header is not in the last LBA.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp1).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp1: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (diskid/XXXXXXXXXXXXXXX).
+ugen0.3: <Generic HP HD Camera> at usbus0
+ugen0.4: <vendor 0x138a product 0x003f> at usbus0
+GEOM_LABEL[1]: MSDOSFS: md0: no FAT signature found.
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: Label for provider md0.uzip is ufsid/XXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: MSDOSFS: md0.uzip: no FAT signature found.
+lock order reversal:
+ 1st 0xfffff80003e80cb0 ufs (ufs, lockmgr) @ /usr/src/sys/fs/nullfs/null_vnops.c:780
+ 2nd 0xfffff80003c10070 tmpfs (tmpfs, lockmgr) @ /usr/src/sys/fs/unionfs/union_vnops.c:2032
+ 3rd 0xfffff80003dbc3f0 ufs (ufs, lockmgr) @ /usr/src/sys/fs/nullfs/null_vnops.c:780
+lock order ufs -> tmpfs established at:
+#0 0xffffffff80c6058d at witness_checkorder+0x32d
+#1 0xffffffff80bbbe22 at lockmgr_lock_flags+0x182
+#2 0xffffffff83104a6a at unionfs_lock+0x37a
+#3 0xffffffff80cfaad4 at _vn_lock+0x54
+#4 0xffffffff831013d3 at unionfs_root+0x43
+#5 0xffffffff80cdae62 at vfs_domount_first+0x2c2
+#6 0xffffffff80cd7351 at vfs_domount+0x2f1
+#7 0xffffffff80cd5d05 at vfs_donmount+0x895
+#8 0xffffffff80cd5439 at sys_nmount+0x69
+#9 0xffffffff810d363e at amd64_syscall+0x12e
+#10 0xffffffff810a659b at fast_syscall_common+0xf8
+lock order tmpfs -> ufs attempted at:
+#0 0xffffffff80c60e5d at witness_checkorder+0xbfd
+#1 0xffffffff80bbbe22 at lockmgr_lock_flags+0x182
+#2 0xffffffff80f433fc at ffs_lock+0x6c
+#3 0xffffffff830fad08 at null_lock+0xb8
+#4 0xffffffff80cfaad4 at _vn_lock+0x54
+#5 0xffffffff80cff464 at vn_lock_pair+0x1e4
+#6 0xffffffff830fe46b at unionfs_nodeget+0x2fb
+#7 0xffffffff83101e3a at unionfs_lookup+0x72a
+#8 0xffffffff80cc2656 at vfs_cache_lookup+0xa6
+#9 0xffffffff80cd3439 at vfs_lookup+0x489
+#10 0xffffffff80cd271d at namei+0x33d
+#11 0xffffffff80cfa1e6 at vn_open_cred+0x516
+#12 0xffffffff80cf05dc at kern_openat+0x29c
+#13 0xffffffff810d363e at amd64_syscall+0x12e
+#14 0xffffffff810a659b at fast_syscall_common+0xf8
+Cuse v0.1.37 @ /dev/cuse
+Intel(R) Wireless WiFi based driver for FreeBSD
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.WMIB.WQZZ: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMIV.WQZZ: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134_SB.PCI0.WMI1.WQXM: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+pchtherm0: <Skylake PCH 100 Thermal Subsystem> mem 0x1ffb016000-0x1ffb016fff at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-H SMBus controller> port 0xefa0-0xefbf mem 0x1ffb014000-0x1ffb0140ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+iwm0: <Intel(R) Dual Band Wireless AC 8265> mem 0xc4200000-0xc4201fff at device 0.0 on pci2
+iwm0: hw rev 0x230, fw ver 22.361476.0, address XXX
+[nl_mod] netlink_modevent: Loading
+[nl_mod] netlink_modevent: netlink support is in BETA stage
+[nl_mod] netlink_register_proto: Registered netlink NETLINK_GENERIC(16) handler
+[nl_generic] genl_register_family: Registered family nlctrl id 16
+[nl_generic] genl_register_cmds: Adding cmd GETFAMILY(3) to family nlctrl
+[nl_route_core] rtnl_load: rtnl loading
+[nl_mod] netlink_register_proto: Registered netlink NETLINK_ROUTE(0) handler
+drmn1: <drmn> on vgapci1
+vgapci1: child drmn1 requested pci_enable_io
+vgapci1: child drmn1 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Got stolen memory base 0x7a800000, size 0x4000000
+lkpi_iic0: <LinuxKPI I2C> on drmn1
+iicbus0: <Philips I2C bus> on lkpi_iic0
+iic0: <I2C generic I/O> on iicbus0
+lkpi_iic1: <LinuxKPI I2C> on drmn1
+iicbus1: <Philips I2C bus> on lkpi_iic1
+iic1: <I2C generic I/O> on iicbus1
+lkpi_iic2: <LinuxKPI I2C> on drmn1
+iicbus2: <Philips I2C bus> on lkpi_iic2
+iic2: <I2C generic I/O> on iicbus2
+drmn1: successfully loaded firmware image 'i915/kbl_dmc_ver1_04.bin'
+drmn1: [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+drmn1: [drm] Panel advertises DPCD backlight support, but VBT disagrees. If your backlight controls don't work try booting with i915.enable_dpcd_backlight=1. If your machine needs this, please file a _new_ bug report on drm/i915, see https://gitlab.freedesktop.org/drm/intel/-/wikis/How-to-file-i915-bugs for details.
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+lkpi_iic3: <LinuxKPI I2C> on drm2
+iicbus3: <Philips I2C bus> on lkpi_iic3
+iic3: <I2C generic I/O> on iicbus3
+lkpi_iic4: <LinuxKPI I2C> on drm3
+iicbus4: <Philips I2C bus> on lkpi_iic4
+iic4: <I2C generic I/O> on iicbus4
+lkpi_iic5: <LinuxKPI I2C> on drm5
+iicbus5: <Philips I2C bus> on lkpi_iic5
+iic5: <I2C generic I/O> on iicbus5
+lkpi_iic6: <LinuxKPI I2C> on drm7
+iicbus6: <Philips I2C bus> on lkpi_iic6
+iic6: <I2C generic I/O> on iicbus6
+[drm] Initialized i915 1.6.0 20200917 for drmn1 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+taskqueue_drain with the following non-sleepable locks held:
+exclusive sleep mutex vtdev (vtdev) r = 0 (0xffffffff81aec3b8) locked @ /usr/src/sys/dev/vt/vt_core.c:3053
+stack backtrace:
+#0 0xffffffff80c61295 at witness_debugger+0x65
+#1 0xffffffff80c623fa at witness_warn+0x3fa
+#2 0xffffffff80c53b93 at taskqueue_drain+0x33
+#3 0xffffffff8360a883 at vt_kms_postswitch+0x73
+#4 0xffffffff80a3430d at vt_fb_init+0xfd
+#5 0xffffffff80a399f8 at vt_replace_backend+0x118
+#6 0xffffffff80a34413 at vt_fb_attach+0x13
+#7 0xffffffff8361c06b at linux_register_framebuffer+0xeb
+#8 0xffffffff8361d512 at __drm_fb_helper_initial_config_and_unlock+0x492
+#9 0xffffffff835800f0 at intel_fbdev_initial_config_async+0x20
+#10 0xffffffff8345009b at i915_driver_register+0x6b
+#11 0xffffffff8344ff5e at i915_driver_probe+0xeee
+#12 0xffffffff83462300 at i915_pci_probe+0x40
+#13 0xffffffff80e6b901 at linux_pci_attach_device+0x431
+#14 0xffffffff80c2c230 at device_attach+0x3c0
+#15 0xffffffff80c2bde0 at device_probe_and_attach+0x70
+#16 0xffffffff80c2ddf7 at bus_generic_driver_added+0x67
+#17 0xffffffff80c29849 at devclass_driver_added+0x39
+Sleeping on "tq_drain" with the following non-sleepable locks held:
+exclusive sleep mutex vtdev (vtdev) r = 0 (0xffffffff81aec3b8) locked @ /usr/src/sys/dev/vt/vt_core.c:3053
+stack backtrace:
+#0 0xffffffff80c61295 at witness_debugger+0x65
+#1 0xffffffff80c623fa at witness_warn+0x3fa
+#2 0xffffffff80bfb3f5 at _sleep+0x55
+#3 0xffffffff80c53c5b at taskqueue_drain+0xfb
+#4 0xffffffff8360a883 at vt_kms_postswitch+0x73
+#5 0xffffffff80a3430d at vt_fb_init+0xfd
+#6 0xffffffff80a399f8 at vt_replace_backend+0x118
+#7 0xffffffff80a34413 at vt_fb_attach+0x13
+#8 0xffffffff8361c06b at linux_register_framebuffer+0xeb
+#9 0xffffffff8361d512 at __drm_fb_helper_initial_config_and_unlock+0x492
+#10 0xffffffff835800f0 at intel_fbdev_initial_config_async+0x20
+#11 0xffffffff8345009b at i915_driver_register+0x6b
+#12 0xffffffff8344ff5e at i915_driver_probe+0xeee
+#13 0xffffffff83462300 at i915_pci_probe+0x40
+#14 0xffffffff80e6b901 at linux_pci_attach_device+0x431
+#15 0xffffffff80c2c230 at device_attach+0x3c0
+#16 0xffffffff80c2bde0 at device_probe_and_attach+0x70
+#17 0xffffffff80c2ddf7 at bus_generic_driver_added+0x67
+lock order reversal: (Giant after non-sleepable)
+ 1st 0xffffffff81aec3b8 vtdev (vtdev, sleep mutex) @ /usr/src/sys/dev/vt/vt_core.c:3053
+ 2nd 0xffffffff81a02b40 Giant (Giant, sleep mutex) @ /usr/src/sys/kern/kern_synch.c:232
+lock order Giant -> vtdev established at:
+#0 0xffffffff80c6058d at witness_checkorder+0x32d
+#1 0xffffffff80bc8f04 at __mtx_lock_flags+0x94
+#2 0xffffffff80a38f79 at vt_upgrade+0x379
+#3 0xffffffff80b745c8 at mi_startup+0x1e8
+#4 0xffffffff8038c023 at btext+0x23
+lock order vtdev -> Giant attempted at:
+#0 0xffffffff80c60e5d at witness_checkorder+0xbfd
+#1 0xffffffff80bc8f04 at __mtx_lock_flags+0x94
+#2 0xffffffff80bfb71f at _sleep+0x37f
+#3 0xffffffff80c53c5b at taskqueue_drain+0xfb
+#4 0xffffffff8360a883 at vt_kms_postswitch+0x73
+#5 0xffffffff80a3430d at vt_fb_init+0xfd
+#6 0xffffffff80a399f8 at vt_replace_backend+0x118
+#7 0xffffffff80a34413 at vt_fb_attach+0x13
+#8 0xffffffff8361c06b at linux_register_framebuffer+0xeb
+#9 0xffffffff8361d512 at __drm_fb_helper_initial_config_and_unlock+0x492
+#10 0xffffffff835800f0 at intel_fbdev_initial_config_async+0x20
+#11 0xffffffff8345009b at i915_driver_register+0x6b
+#12 0xffffffff8344ff5e at i915_driver_probe+0xeee
+#13 0xffffffff83462300 at i915_pci_probe+0x40
+#14 0xffffffff80e6b901 at linux_pci_attach_device+0x431
+#15 0xffffffff80c2c230 at device_attach+0x3c0
+#16 0xffffffff80c2bde0 at device_probe_and_attach+0x70
+#17 0xffffffff80c2ddf7 at bus_generic_driver_added+0x67
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+pbase=0x1fa0000000 vbase=0xfffffe019be00000
+name=drmn1 flags=0x0 stride=7680 bpp=32
+end FB_INFO
+pid 1006 (Menu), jid 0, uid 1000: exited on signal 10
+pid 1004 (launch), jid 0, uid 1000: exited on signal 11
+lo0: link state changed to UP
+pid 1386 (Menu), jid 0, uid 1000: exited on signal 10
+pid 1380 (launch), jid 0, uid 1000: exited on signal 11
+wlan0: Ethernet address: ...
+wlan0: Ethernet address: ...
+pid 2405 (Menu), jid 0, uid 1000: exited on signal 10
+pid 2403 (launch), jid 0, uid 1000: exited on signal 11
+pid 2433 (Menu), jid 0, uid 1000: exited on signal 10
+pid 2742 (Menu), jid 0, uid 1000: exited on signal 10
+acpi_video0: <ACPI video extension> on vgapci0
+acpi_video1: <ACPI video extension> on vgapci1
+pid 2931 (Menu), jid 0, uid 1000: exited on signal 10
+pid 3551 (android-file-transf), jid 0, uid 0: exited on signal 10
+pid 3548 (sudo), jid 0, uid 0: exited on signal 10
+pid 3546 (launch), jid 0, uid 1000: exited on signal 11
+pid 4032 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4047 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4045 (launch), jid 0, uid 1000: exited on signal 11
+pid 4060 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4058 (launch), jid 0, uid 1000: exited on signal 11
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+pid 4081 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4079 (launch), jid 0, uid 1000: exited on signal 11
+pid 4087 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4085 (launch), jid 0, uid 1000: exited on signal 11
+pid 4102 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4100 (launch), jid 0, uid 1000: exited on signal 11
+pid 4105 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4103 (launch), jid 0, uid 1000: exited on signal 11
+pid 4108 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4106 (launch), jid 0, uid 1000: exited on signal 11
+pid 4111 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4109 (launch), jid 0, uid 1000: exited on signal 11
+pid 4114 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4112 (launch), jid 0, uid 1000: exited on signal 11
+pid 4117 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4115 (launch), jid 0, uid 1000: exited on signal 11
+pid 4120 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4118 (launch), jid 0, uid 1000: exited on signal 11
+pid 4123 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4121 (launch), jid 0, uid 1000: exited on signal 11
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/EFI%20System%20Partition removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label for provider ada0p1 is gpt/efiboot0.
+GEOM_LABEL[1]: Label for provider ada0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: no FAT signature found.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label for provider diskid/XXXXXXXXXXXXXXXXXXXXXXXX is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label for provider ada0p2 is gpt/gptboot0.
+GEOM_LABEL[1]: Label for provider ada0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p2: no FAT signature found.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label for provider diskid/XXXXXXXXXXXXXXXXXXXXXXXX is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/gptboot0 removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p2 is gpt/gptboot0.
+GEOM_LABEL[1]: Label for provider ada0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p2: no FAT signature found.
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label for provider diskid/XXXXXXXXXXXXXXXXXXXXXXXX is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label for provider diskid/XXXXXXXXXXXXXXXXXXXXXXXX is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label for provider ada0p3 is gpt/zfs0.
+GEOM_LABEL[1]: Label for provider ada0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p3: no FAT signature found.
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label for provider diskid/XXXXXXXXXXXXXXXXXXXXXXXX is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs0(gpt/zfs0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/zfs0 removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p3 is gpt/zfs0.
+GEOM_LABEL[1]: Label for provider ada0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p3: no FAT signature found.
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label for provider diskid/XXXXXXXXXXXXXXXXXXXXXXXX is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs0(gpt/zfs0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/zfs0 removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p3 is gpt/zfs0.
+GEOM_LABEL[1]: Label for provider ada0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p3: no FAT signature found.
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label for provider diskid/XXXXXXXXXXXXXXXXXXXXXXXX is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs0(gpt/zfs0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/zfs0 removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p3 is gpt/zfs0.
+GEOM_LABEL[1]: Label for provider ada0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p3: no FAT signature found.
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label for provider diskid/XXXXXXXXXXXXXXXXXXXXXXXX is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs0(gpt/zfs0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/zfs0 removed.
+pid 4297 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4260 (launch), jid 0, uid 1000: exited on signal 11
+pid 4391 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4389 (launch), jid 0, uid 1000: exited on signal 11
+pid 4394 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4392 (launch), jid 0, uid 1000: exited on signal 11
+pid 4397 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4395 (launch), jid 0, uid 1000: exited on signal 11
+pid 4400 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4398 (launch), jid 0, uid 1000: exited on signal 11
+pid 4403 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4401 (launch), jid 0, uid 1000: exited on signal 11
+pid 4406 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4404 (launch), jid 0, uid 1000: exited on signal 11
+pid 4409 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4407 (launch), jid 0, uid 1000: exited on signal 11
+pid 4412 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4410 (launch), jid 0, uid 1000: exited on signal 11
+pid 4415 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4413 (launch), jid 0, uid 1000: exited on signal 11
+pid 4418 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4416 (launch), jid 0, uid 1000: exited on signal 11
+pid 4421 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4419 (launch), jid 0, uid 1000: exited on signal 11
+pid 4424 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4422 (launch), jid 0, uid 1000: exited on signal 11
+pid 4427 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4425 (launch), jid 0, uid 1000: exited on signal 11
+pid 4430 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4428 (launch), jid 0, uid 1000: exited on signal 11
+pid 4433 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4431 (launch), jid 0, uid 1000: exited on signal 11
+pid 4436 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4434 (launch), jid 0, uid 1000: exited on signal 11
+pid 4439 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4437 (launch), jid 0, uid 1000: exited on signal 11
+pid 4442 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4440 (launch), jid 0, uid 1000: exited on signal 11
+pid 4445 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4443 (launch), jid 0, uid 1000: exited on signal 11
+pid 4448 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4446 (launch), jid 0, uid 1000: exited on signal 11
+pid 4451 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4449 (launch), jid 0, uid 1000: exited on signal 11
+pid 4454 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4452 (launch), jid 0, uid 1000: exited on signal 11
+pid 4457 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4455 (launch), jid 0, uid 1000: exited on signal 11
+pid 4460 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4458 (launch), jid 0, uid 1000: exited on signal 11
+pid 4463 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4461 (launch), jid 0, uid 1000: exited on signal 11
+pid 4470 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4468 (launch), jid 0, uid 1000: exited on signal 11
+pid 4480 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4478 (launch), jid 0, uid 1000: exited on signal 11
+pid 4488 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4486 (launch), jid 0, uid 1000: exited on signal 11
+pid 4491 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4489 (launch), jid 0, uid 1000: exited on signal 11
+pid 4494 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4492 (launch), jid 0, uid 1000: exited on signal 11
+pid 4497 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4495 (launch), jid 0, uid 1000: exited on signal 11
+pid 4500 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4498 (launch), jid 0, uid 1000: exited on signal 11
+pid 4503 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4501 (launch), jid 0, uid 1000: exited on signal 11
+pid 4506 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4504 (launch), jid 0, uid 1000: exited on signal 11
+pid 4509 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4507 (launch), jid 0, uid 1000: exited on signal 11
+pid 4514 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4512 (launch), jid 0, uid 1000: exited on signal 11
+pid 4517 (Menu), jid 0, uid 1000: exited on signal 10
+pid 4515 (launch), jid 0, uid 1000: exited on signal 11
+GEOM_LABEL[1]: Label gpt/efiboot0 removed.
+GEOM_LABEL[1]: Label for provider ada0p1 is gpt/efiboot0.
+GEOM_LABEL[1]: Label for provider ada0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT12/16 volume has no name.
+pid 5513 (Menu), jid 0, uid 1000: exited on signal 10
+pid 5473 (launch), jid 0, uid 1000: exited on signal 11
+pid 5625 (Menu), jid 0, uid 1000: exited on signal 10
+pid 5623 (launch), jid 0, uid 1000: exited on signal 11
+pid 5628 (Menu), jid 0, uid 1000: exited on signal 10
+pid 5626 (launch), jid 0, uid 1000: exited on signal 11
+pid 5631 (Menu), jid 0, uid 1000: exited on signal 10
+pid 5629 (launch), jid 0, uid 1000: exited on signal 11
+pid 5634 (Menu), jid 0, uid 1000: exited on signal 10
+pid 5632 (launch), jid 0, uid 1000: exited on signal 11
+pid 5637 (Menu), jid 0, uid 1000: exited on signal 10
+pid 5635 (launch), jid 0, uid 1000: exited on signal 11
+pid 5640 (Menu), jid 0, uid 1000: exited on signal 10
+pid 5638 (launch), jid 0, uid 1000: exited on signal 11
+pid 5926 (launch), jid 0, uid 1000: exited on signal 6
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 0 GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label iso9660/LIVE removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label msdosfs/EFISYS removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+umass0: detached
+0 done
+All buffers synced.
+lock order reversal:
+ 1st 0xfffff80155a99230 tmpfs (tmpfs, lockmgr) @ /usr/src/sys/kern/vfs_mount.c:2154
+ 2nd 0xfffff80155659af0 isofs (isofs, lockmgr) @ /usr/src/sys/kern/vfs_subr.c:3825
+lock order tmpfs -> isofs attempted at:
+#0 0xffffffff80c60e5d at witness_checkorder+0xbfd
+#1 0xffffffff80bbbe22 at lockmgr_lock_flags+0x182
+#2 0xffffffff80cfaad4 at _vn_lock+0x54
+#3 0xffffffff80ce35b1 at vflush+0x111
+#4 0xffffffff80b67b05 at cd9660_unmount+0x25
+#5 0xffffffff80cd8333 at dounmount+0x7c3
+#6 0xffffffff80ce4cda at vfs_unmountall+0x6a
+#7 0xffffffff80cb589e at bufshutdown+0x34e
+#8 0xffffffff80bee644 at kern_reboot+0x734
+#9 0xffffffff80bedeb8 at sys_reboot+0x3a8
+#10 0xffffffff810d363e at amd64_syscall+0x12e
+#11 0xffffffff810a659b at fast_syscall_common+0xf8
+lock order reversal:
+ 1st 0xfffff800174033f0 devfs (devfs, lockmgr) @ /usr/src/sys/kern/vfs_mount.c:2154
+ 2nd 0xfffff800172f5770 tmpfs (tmpfs, lockmgr) @ /usr/src/sys/kern/vfs_subr.c:3825
+lock order tmpfs -> devfs established at:
+#0 0xffffffff80c6058d at witness_checkorder+0x32d
+#1 0xffffffff80bbbe22 at lockmgr_lock_flags+0x182
+#2 0xffffffff80cfaad4 at _vn_lock+0x54
+#3 0xffffffff80ce2aca at vput_final+0x16a
+#4 0xffffffff80b67b91 at cd9660_unmount+0xb1
+#5 0xffffffff80cd8333 at dounmount+0x7c3
+#6 0xffffffff80ce4cda at vfs_unmountall+0x6a
+#7 0xffffffff80cb589e at bufshutdown+0x34e
+#8 0xffffffff80bee644 at kern_reboot+0x734
+#9 0xffffffff80bedeb8 at sys_reboot+0x3a8
+#10 0xffffffff810d363e at amd64_syscall+0x12e
+#11 0xffffffff810a659b at fast_syscall_common+0xf8
+lock order devfs -> tmpfs attempted at:
+#0 0xffffffff80c60e5d at witness_checkorder+0xbfd
+#1 0xffffffff80bbbe22 at lockmgr_lock_flags+0x182
+#2 0xffffffff80cfaad4 at _vn_lock+0x54
+#3 0xffffffff80ce35b1 at vflush+0x111
+#4 0xffffffff80b154d4 at tmpfs_unmount+0x94
+#5 0xffffffff80cd8333 at dounmount+0x7c3
+#6 0xffffffff80ce4cda at vfs_unmountall+0x6a
+#7 0xffffffff80cb589e at bufshutdown+0x34e
+#8 0xffffffff80bee644 at kern_reboot+0x734
+#9 0xffffffff80bedeb8 at sys_reboot+0x3a8
+#10 0xffffffff810d363e at amd64_syscall+0x12e
+#11 0xffffffff810a659b at fast_syscall_common+0xf8
+Uptime: 8m30s
+---<<BOOT>>---
+Copyright (c) B817-9222 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 main-n259967-11b5b9e8a520: Sat Jan  7 16:39:30 UTC 2023
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz (2900.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x906e9  Family=0x6  Model=0x9e  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc002e00<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xc04<RSBA>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 68719476736 (65536 MB)
+avail memory = 66472914944 (63393 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM 8275    >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 2 3 1
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x6f765000-0x6f76501e
+smbios0: Version: 3.0, BCD Revision: 3.0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-BPC>
+acpi0: Power Button (fixed)
+Firmware Error (ACPI): AE_AML_BUFFER_LIMIT, Field [CAP1] at bit offset/length 64/32 exceeds size of target Buffer (64 bits) (20221020/dsopcode-356)
+ACPI Error: Aborting method \134_SB._OSC due to previous error (AE_AML_BUFFER_LIMIT) (20221020/psparse-689)
+acpi0: _OSC failed: AE_AML_BUFFER_LIMIT
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc1: <AT realtime clock> on acpi0
+atrtc1: Warning: Couldn't map I/O.
+atrtc1: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x6e> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0x5000-0x507f mem 0xc3000000-0xc3ffffff,0x80000000-0x8fffffff,0x90000000-0x91ffffff at device 0.0 on pci1
+vgapci1: <VGA-compatible display> port 0x6000-0x603f mem 0x1ffa000000-0x1ffaffffff,0x1fa0000000-0x1fafffffff at device 2.0 on pci0
+vgapci1: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xc4320000-0xc432ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <Intel ICH8+ (RAID) AHCI SATA controller> port 0x6080-0x6087,0x6088-0x608b,0x6060-0x607f mem 0xc4334000-0xc4335fff,0xc4337000-0xc43370ff,0xc4336000-0xc43367ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 3 6Gbps ports, Port Multiplier not supported
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib2: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pci2: <network> at device 0.0 (no driver attached)
+pcib3: <ACPI PCI-PCI bridge> at device 28.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+rtsx0: <2.1g Realtek RTS525A PCIe SD Card Reader> mem 0xc4100000-0xc4100fff at device 0.0 on pci3
+rtsx0: No card is detected
+pcib4: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake HDA Controller> mem 0x1ffb010000-0x1ffb013fff,0x1ffb000000-0x1ffb00ffff at device 31.3 on pci0
+em0: <Intel(R) I219-LM SPT-H(2)> mem 0xc4300000-0xc431ffff at device 31.6 on pci0
+em0: EEPROM V0.8-4
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_button0: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+acpi_tz3: <Thermal Zone> on acpi0
+acpi_tz4: <Thermal Zone> on acpi0
+acpi_tz5: <Thermal Zone> on acpi0
+Firmware Error (ACPI): AE_AML_PACKAGE_LIMIT, Index (0x000000005) is beyond end of object (length 0x5) (20221020/exoparg2-569)
+ACPI Error: Aborting method \134_TZ.GETP due to previous error (AE_AML_PACKAGE_LIMIT) (20221020/psparse-689)
+ACPI Error: Aborting method \134_TZ.CHGZ._CRT due to previous error (AE_AML_PACKAGE_LIMIT) (20221020/psparse-689)
+acpi_tz6: <Thermal Zone> on acpi0
+acpi_tz7: <Thermal Zone> on acpi0
+acpi_tz8: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+atrtc0: Can't map interrupt.
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+Timecounter "TSC-low" frequency 1451997176 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Conexant (0x2008) HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant (0x2008) Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant (0x2008) (Analog)> at nid 23 and 26 on hdaa0
+pcm1: <Conexant (0x2008) (Right Analog Headphones)> at nid 22 on hdaa0
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+Trying to mount root from zfs:zroot/ROOT/default []...
+WARNING: WITNESS option enabled, expect reduced performance.
+ses0 at ahciem0 bus 0 scbus3 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ses0: ada0 in 'Slot 04', SATA Slot: scbus2 target 0
+ada0 at ahcich4 bus 0 scbus2 target 0 lun 0
+ada0: <SK hynix SC311 SATA 256GB 70002P10> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 244198MB (500118192 512 byte sectors)
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p1 is gpt/efiboot0.
+GEOM_LABEL[1]: Label for provider ada0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label for provider ada0p2 is gpt/gptboot0.
+GEOM_LABEL[1]: Label for provider ada0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0p3 is gpt/zfs0.
+GEOM_LABEL[1]: Label for provider ada0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p3: no FAT signature found.
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs0(gpt/zfs0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+Root mount waiting for: usbus0
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <Generic HP HD Camera> at usbus0
+Root mount waiting for: usbus0
+ugen0.3: <vendor 0x138a product 0x003f> at usbus0
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/zfs0 removed.
+Cuse v0.1.37 @ /dev/cuse
+Intel(R) Wireless WiFi based driver for FreeBSD
+pchtherm0: <Skylake PCH 100 Thermal Subsystem> mem 0x1ffb016000-0x1ffb016fff at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-H SMBus controller> port 0xefa0-0xefbf mem 0x1ffb014000-0x1ffb0140ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+iwm0: <Intel(R) Dual Band Wireless AC 8265> mem 0xc4200000-0xc4201fff at device 0.0 on pci2
+iwm0: hw rev 0x230, fw ver 22.361476.0, address XXX
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.WMIB.WQZZ: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMIV.WQZZ: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134_SB.PCI0.WMI1.WQXM: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_video0: <ACPI video extension> on vgapci0
+acpi_video1: <ACPI video extension> on vgapci1
+lo0: link state changed to UP

@@ -1,0 +1,148 @@
+OpenBSD 7.1 (GENERIC.MP) #3: Sun May 15 10:27:01 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 3467931648 (3307MB)
+avail mem = 3345596416 (3190MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0xcfb49040 (13 entries)
+bios0: vendor coreboot version "CBET4000 4.17-1135-gbbe0a99d66" date 08/22/2022
+bios0: LENOVO 2613CTO
+acpi0 at bios0: ACPI 6.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SSDT MCFG APIC HPET VFCT
+acpi0: wakeup devices HDEF(S4) USB1(S4) USB2(S4) USB3(S4) USB4(S4) EHC1(S4) SLT1(S4) SLT2(S4) SLT3(S4) SLT6(S4) LANC(S3) LANR(S3) MODM(S4) SLPB(S3) LID_(S3)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-63
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 CPU T5600 @ 1.83GHz, 1828.42 MHz, 06-0f-06
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 2MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 166MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 CPU T5600 @ 1.83GHz, 1828.14 MHz, 06-0f-06
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 2MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 1 (PEGP)
+acpiprt2 at acpi0: bus 2 (RP01)
+acpiprt3 at acpi0: bus 3 (RP02)
+acpiprt4 at acpi0: bus 4 (RP03)
+acpiprt5 at acpi0: bus 5 (RP04)
+acpiprt6 at acpi0: bus -1 (RP05)
+acpiprt7 at acpi0: bus -1 (RP06)
+acpiprt8 at acpi0: bus -1 (RP07)
+acpiprt9 at acpi0: bus -1 (RP08)
+acpiprt10 at acpi0: bus 6 (PCIB)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT0 not present
+acpibat1 at acpi0: BAT1 not present
+acpibtn0 at acpi0: SLPB
+acpibtn1 at acpi0: LID_
+acpithinkpad0 at acpi0: version 1.0
+acpicmos0 at acpi0
+"PNP0C0B" at acpi0 not configured
+"BOOT0000" at acpi0 not configured
+acpicpu0 at acpi0: !C3(250@17 io@0x515), !C2(500@1 io@0x514), C1(1000@1 mwait@0x1), PSS
+acpicpu1 at acpi0: !C3(250@17 io@0x515), !C2(500@1 io@0x514), C1(1000@1 mwait@0x1), PSS
+acpitz0 at acpi0: critical temperature is 100 degC
+acpipwrres0 at acpi0: FPWR, resource for FAN_
+acpitz1 at acpi0: critical temperature is 99 degC
+acpidock0 at acpi0: DOCK not docked (0)
+acpivideo0 at acpi0: GFX0
+cpu0: Enhanced SpeedStep 1828 MHz: speeds: 1833, 1333, 1000 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel 82945GM Host" rev 0x03
+ppb0 at pci0 dev 1 function 0 "Intel 82945GM PCIE" rev 0x03: msi
+pci1 at ppb0 bus 1
+radeondrm0 at pci1 dev 0 function 0 "ATI Radeon Mobility X1400" rev 0x00
+drm0 at radeondrm0
+radeondrm0: apic 2 int 16
+azalia0 at pci0 dev 27 function 0 "Intel 82801GB HD Audio" rev 0x02: msi
+azalia0: codecs: Analog Devices AD1981HD, Conexant/0x2bfa, using Analog Devices AD1981HD
+audio0 at azalia0
+ppb1 at pci0 dev 28 function 0 "Intel 82801GB PCIE" rev 0x02: msi
+pci2 at ppb1 bus 2
+em0 at pci2 dev 0 function 0 "Intel 82573L" rev 0x00: msi, address XXX
+ppb2 at pci0 dev 28 function 1 "Intel 82801GB PCIE" rev 0x02
+pci3 at ppb2 bus 3
+wpi0 at pci3 dev 0 function 0 "Intel PRO/Wireless 3945ABG" rev 0x02: msi, MoW1, address XXX
+ppb3 at pci0 dev 28 function 2 "Intel 82801GB PCIE" rev 0x02
+pci4 at ppb3 bus 4
+ppb4 at pci0 dev 28 function 3 "Intel 82801GB PCIE" rev 0x02
+pci5 at ppb4 bus 5
+uhci0 at pci0 dev 29 function 0 "Intel 82801GB USB" rev 0x02: apic 2 int 16
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x02: apic 2 int 17
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x02: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801GB USB" rev 0x02: apic 2 int 19
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x02: apic 2 int 19
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb5 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xe2
+pci6 at ppb5 bus 6
+cbb0 at pci6 dev 0 function 0 "TI PCI1510 CardBus" rev 0x00: apic 2 int 16, CardBus support disabled
+cardslot0 at cbb0 slot 0 flags 0
+pcmcia0 at cardslot0
+pcib0 at pci0 dev 31 function 0 "Intel 82801GBM LPC" rev 0x02
+pciide0 at pci0 dev 31 function 1 "Intel 82801GB IDE" rev 0x02: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+atapiscsi0 at pciide0 channel 0 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HL-DT-ST, DVDRAM GSA-4083N, 1.08> removable
+cd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 2
+pciide0: channel 1 ignored (disabled)
+ahci0 at pci0 dev 31 function 2 "Intel 82801GBM AHCI" rev 0x02: msi, AHCI 1.1
+ahci0: port 0: 1.5Gb/s
+scsibus2 at ahci0: 32 targets
+sd0 at scsibus2 targ 0 lun 0: <ATA, Corsair Force LS, S8FM> t10.ATA_Corsair_Force_LS_SSD_1419816100000103001d
+sd0: 114473MB, 512 bytes/sector, 234441648 sectors, thin
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x02: apic 2 int 23
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 2GB DDR2 SDRAM non-parity PC2-5300CL6 SO-DIMM
+spdmem1 at iic0 addr 0x51: 2GB DDR2 SDRAM non-parity PC2-5300CL6 SO-DIMM
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+wsmouse1 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 6.2, 0x81a0b1 0x300000 0x0 0xa04793 0x0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+aps0 at isa0 port 0x1600/31
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+ugen0 at uhub4 port 1 "Broadcom Corp BCM2045B" rev 2.00/1.00 addr 2
+ugen1 at uhub4 port 2 "STMicroelectronics Biometric Coprocessor" rev 1.00/0.01 addr 3
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+root on sd0a (8e8603db69b5e140.a) swap on sd0b dump on sd0b
+WARNING: / was not properly unmounted
+radeondrm0: RV515
+radeondrm0: 1400x1050, 32bpp
+wsdisplay0 at radeondrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+Bogus possible_clones: [ENCODER:45:TV-45] possible_clones=0x4 (full encoder mask=0x7)
+Bogus possible_clones: [ENCODER:47:TMDS-47] possible_clones=0x1 (full encoder mask=0x7)

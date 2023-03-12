@@ -1,0 +1,742 @@
+OpenBSD 7.2 (RAMDISK_CD) #725: Tue Sep 27 12:02:48 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 34254045184 (32667MB)
+avail mem = 33211895808 (31673MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x8ebf3000 (92 entries)
+bios0: vendor American Megatrends Inc. version "4503" date 05/18/2022
+bios0: ASUSTeK COMPUTER INC. P11C-X Series
+acpi0 at bios0: ACPI 6.1
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HEST SSDT SSDT HPET SSDT SSDT UEFI LPIT WSMT SSDT SSDT DBGP DBG2 SSDT DMAR SSDT EINJ ERST BERT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 1 (RP01)
+acpiprt5 at acpi0: bus 2 (BR4A)
+acpiprt6 at acpi0: bus 3 (RP02)
+acpiprt7 at acpi0: bus 5 (RP09)
+acpiprt8 at acpi0: bus -1 (RP10)
+acpiprt9 at acpi0: bus 6 (RP12)
+acpiprt10 at acpi0: bus -1 (RP21)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+"INT3450" at acpi0 not configured
+"ACPI000E" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"PNP0C33" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+acpipwrres at acpi0 not configured
+cpu0: using VERW MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 8G Host" rev 0x07
+"Intel Core GMM" rev 0x00 at pci0 dev 8 function 0 not configured
+"Intel 300 Series Thermal" rev 0x10 at pci0 dev 18 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 300 Series xHCI" rev 0x10: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 300 Series Shared SRAM" rev 0x10 at pci0 dev 20 function 2 not configured
+dwiic0 at pci0 dev 21 function 0 "Intel 300 Series I2C" rev 0x10: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 300 Series I2C" rev 0x10: apic 2 int 17
+iic1 at dwiic1
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 0 not configured
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 4 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 300 Series AHCI" rev 0x10: msi, AHCI 1.3.1
+ahci0: port 0: 6.0Gb/s
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, KINGSTON SEDC500, SCEK> naa.50026b7282c18018
+sd0: 457862MB, 512 bytes/sector, 937703088 sectors, thin
+sd1 at scsibus0 targ 1 lun 0: <ATA, KINGSTON SEDC500, SCEK> naa.50026b7282c8b200
+sd1: 1831420MB, 512 bytes/sector, 3750748848 sectors, thin
+sd2 at scsibus0 targ 2 lun 0: <ATA, WDC WD4003FFBX-6, 83.0> naa.5000cca095cffab1
+sd2: 3815447MB, 512 bytes/sector, 7814037168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 300 Series PCIE" rev 0xf0: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x04
+pci2 at ppb1 bus 2
+vga1 at pci2 dev 0 function 0 "ASPEED Technology AST2000" rev 0x41
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+ppb2 at pci0 dev 28 function 1 "Intel 300 Series PCIE" rev 0xf0: msi
+pci3 at ppb2 bus 3
+ppb3 at pci3 dev 0 function 0 "ASMedia ASM1083/1085 PCIE-PCI" rev 0x04
+pci4 at ppb3 bus 4
+ppb4 at pci0 dev 29 function 0 "Intel 300 Series PCIE" rev 0xf0: msi
+pci5 at ppb4 bus 5
+ppb5 at pci0 dev 29 function 3 "Intel 300 Series PCIE" rev 0xf0: msi
+pci6 at ppb5 bus 6
+em0 at pci6 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+"Intel 300 Series UART" rev 0x10 at pci0 dev 30 function 0 not configured
+"Intel C242 LPC" rev 0x10 at pci0 dev 31 function 0 not configured
+"Intel 300 Series cAVS" rev 0x10 at pci0 dev 31 function 3 not configured
+"Intel 300 Series SMBus" rev 0x10 at pci0 dev 31 function 4 not configured
+"Intel 300 Series SPI" rev 0x10 at pci0 dev 31 function 5 not configured
+em1 at pci0 dev 31 function 6 "Intel I219-LM" rev 0x10: msi, address XXX
+isa0 at mainbus0
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+uhidev0 at uhub0 port 6 configuration 1 interface 0 "vendor 0x0d3d KVM102UW" rev 1.10/0.01 addr 2
+uhidev0: iclass 3/1
+ukbd0 at uhidev0
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay1
+uhidev1 at uhub0 port 6 configuration 1 interface 1 "vendor 0x0d3d KVM102UW" rev 1.10/0.01 addr 2
+uhidev1: iclass 3/1, 3 report ids
+uhid at uhidev1 reportid 1 not configured
+uhid at uhidev1 reportid 2 not configured
+uhid at uhidev1 reportid 3 not configured
+umass0 at uhub0 port 19 configuration 1 interface 0 "Kingston DataTraveler 3.0" rev 3.10/0.01 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd3 at scsibus1 targ 1 lun 0: <Kingston, DataTraveler 3.0, > removable serial....
+sd3: 7377MB, 512 bytes/sector, 15109516 sectors
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 7.2 (RAMDISK_CD) #725: Tue Sep 27 12:02:48 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 34254041088 (32667MB)
+avail mem = 33211891712 (31673MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x8ebf3000 (92 entries)
+bios0: vendor American Megatrends Inc. version "4503" date 05/18/2022
+bios0: ASUSTeK COMPUTER INC. P11C-X Series
+acpi0 at bios0: ACPI 6.1
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HEST SSDT SSDT HPET SSDT SSDT UEFI LPIT WSMT SSDT SSDT DBGP DBG2 SSDT DMAR SSDT EINJ ERST BERT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 1 (RP01)
+acpiprt5 at acpi0: bus 2 (BR4A)
+acpiprt6 at acpi0: bus 3 (RP02)
+acpiprt7 at acpi0: bus 5 (RP09)
+acpiprt8 at acpi0: bus -1 (RP10)
+acpiprt9 at acpi0: bus 6 (RP12)
+acpiprt10 at acpi0: bus -1 (RP21)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+"INT3450" at acpi0 not configured
+"ACPI000E" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"PNP0C33" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpicpu at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpitz at acpi0 not configured
+acpipwrres at acpi0 not configured
+cpu0: using VERW MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 8G Host" rev 0x07
+"Intel Core GMM" rev 0x00 at pci0 dev 8 function 0 not configured
+"Intel 300 Series Thermal" rev 0x10 at pci0 dev 18 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 300 Series xHCI" rev 0x10: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 300 Series Shared SRAM" rev 0x10 at pci0 dev 20 function 2 not configured
+dwiic0 at pci0 dev 21 function 0 "Intel 300 Series I2C" rev 0x10: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 300 Series I2C" rev 0x10: apic 2 int 17
+iic1 at dwiic1
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 0 not configured
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 4 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 300 Series AHCI" rev 0x10: msi, AHCI 1.3.1
+ahci0: port 0: 6.0Gb/s
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, KINGSTON SEDC500, SCEK> naa.50026b7282c18018
+sd0: 457862MB, 512 bytes/sector, 937703088 sectors, thin
+sd1 at scsibus0 targ 1 lun 0: <ATA, KINGSTON SEDC500, SCEK> naa.50026b7282c8b200
+sd1: 1831420MB, 512 bytes/sector, 3750748848 sectors, thin
+sd2 at scsibus0 targ 2 lun 0: <ATA, WDC WD4003FFBX-6, 83.0> naa.5000cca095cffab1
+sd2: 3815447MB, 512 bytes/sector, 7814037168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 300 Series PCIE" rev 0xf0: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x04
+pci2 at ppb1 bus 2
+vga1 at pci2 dev 0 function 0 "ASPEED Technology AST2000" rev 0x41
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+ppb2 at pci0 dev 28 function 1 "Intel 300 Series PCIE" rev 0xf0: msi
+pci3 at ppb2 bus 3
+ppb3 at pci3 dev 0 function 0 "ASMedia ASM1083/1085 PCIE-PCI" rev 0x04
+pci4 at ppb3 bus 4
+ppb4 at pci0 dev 29 function 0 "Intel 300 Series PCIE" rev 0xf0: msi
+pci5 at ppb4 bus 5
+ppb5 at pci0 dev 29 function 3 "Intel 300 Series PCIE" rev 0xf0: msi
+pci6 at ppb5 bus 6
+em0 at pci6 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+"Intel 300 Series UART" rev 0x10 at pci0 dev 30 function 0 not configured
+"Intel C242 LPC" rev 0x10 at pci0 dev 31 function 0 not configured
+"Intel 300 Series cAVS" rev 0x10 at pci0 dev 31 function 3 not configured
+"Intel 300 Series SMBus" rev 0x10 at pci0 dev 31 function 4 not configured
+"Intel 300 Series SPI" rev 0x10 at pci0 dev 31 function 5 not configured
+em1 at pci0 dev 31 function 6 "Intel I219-LM" rev 0x10: msi, address XXX
+isa0 at mainbus0
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+uhidev0 at uhub0 port 6 configuration 1 interface 0 "vendor 0x0d3d KVM102UW" rev 1.10/0.01 addr 2
+uhidev0: iclass 3/1
+ukbd0 at uhidev0
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay1
+uhidev1 at uhub0 port 6 configuration 1 interface 1 "vendor 0x0d3d KVM102UW" rev 1.10/0.01 addr 2
+uhidev1: iclass 3/1, 3 report ids
+uhid at uhidev1 reportid 1 not configured
+uhid at uhidev1 reportid 2 not configured
+uhid at uhidev1 reportid 3 not configured
+umass0 at uhub0 port 19 configuration 1 interface 0 "Kingston DataTraveler 3.0" rev 3.10/0.01 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd3 at scsibus1 targ 1 lun 0: <Kingston, DataTraveler 3.0, > removable serial....
+sd3: 7377MB, 512 bytes/sector, 15109516 sectors
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 7.2 (GENERIC.MP) #758: Tue Sep 27 11:57:54 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 34254041088 (32667MB)
+avail mem = 33198501888 (31660MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x8ebf3000 (92 entries)
+bios0: vendor American Megatrends Inc. version "4503" date 05/18/2022
+bios0: ASUSTeK COMPUTER INC. P11C-X Series
+acpi0 at bios0: ACPI 6.1
+acpi0: sleep states S0 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HEST SSDT SSDT HPET SSDT SSDT UEFI LPIT WSMT SSDT SSDT DBGP DBG2 SSDT DMAR SSDT EINJ ERST BERT
+acpi0: wakeup devices SIO1(S0) RP01(S0) PXSX(S0) RP02(S0) PXSX(S0) RP03(S0) PXSX(S0) RP04(S0) PXSX(S0) RP05(S0) PXSX(S0) RP06(S0) PXSX(S0) RP07(S0) PXSX(S0) RP08(S0) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu3: smt 0, core 3, package 0
+cpu4 at mainbus0: apid 8 (application processor)
+cpu4: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu4: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu4: smt 0, core 4, package 0
+cpu5 at mainbus0: apid 10 (application processor)
+cpu5: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu5: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu5: smt 0, core 5, package 0
+cpu6 at mainbus0: apid 1 (application processor)
+cpu6: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu6: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu6: smt 1, core 0, package 0
+cpu7 at mainbus0: apid 3 (application processor)
+cpu7: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu7: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu7: smt 1, core 1, package 0
+cpu8 at mainbus0: apid 5 (application processor)
+cpu8: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu8: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu8: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu8: smt 1, core 2, package 0
+cpu9 at mainbus0: apid 7 (application processor)
+cpu9: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu9: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu9: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu9: smt 1, core 3, package 0
+cpu10 at mainbus0: apid 9 (application processor)
+cpu10: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu10: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu10: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu10: smt 1, core 4, package 0
+cpu11 at mainbus0: apid 11 (application processor)
+cpu11: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu11: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu11: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu11: smt 1, core 5, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 1 (RP01)
+acpiprt5 at acpi0: bus 2 (BR4A)
+acpiprt6 at acpi0: bus 3 (RP02)
+acpiprt7 at acpi0: bus 5 (RP09)
+acpiprt8 at acpi0: bus -1 (RP10)
+acpiprt9 at acpi0: bus 6 (RP12)
+acpiprt10 at acpi0: bus -1 (RP21)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+pchgpio0 at acpi0 GPI0 addr 0xfd6e0000/0x10000 0xfd6d0000/0x10000 0xfd6b0000/0x10000 0xfd6a0000/0x10000 irq 14, 384 pins
+"ACPI000E" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"PNP0C33" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpipwrres0 at acpi0: USBC, resource for XDCI
+acpipwrres1 at acpi0: V0PR
+acpipwrres2 at acpi0: V1PR
+acpipwrres3 at acpi0: V2PR
+acpipwrres4 at acpi0: WRST
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu4 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu5 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu6 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu7 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu8 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu9 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu10 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu11 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres5 at acpi0: FN00, resource for FAN0
+acpipwrres6 at acpi0: FN01, resource for FAN1
+acpipwrres7 at acpi0: FN02, resource for FAN2
+acpipwrres8 at acpi0: FN03, resource for FAN3
+acpipwrres9 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpipwrres10 at acpi0: PIN_
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3392 MHz: speeds: 3401, 3400, 3200, 3000, 2800, 2700, 2500, 2300, 2100, 1900, 1700, 1500, 1400, 1200, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 8G Host" rev 0x07
+"Intel Core GMM" rev 0x00 at pci0 dev 8 function 0 not configured
+pchtemp0 at pci0 dev 18 function 0 "Intel 300 Series Thermal" rev 0x10
+xhci0 at pci0 dev 20 function 0 "Intel 300 Series xHCI" rev 0x10: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 300 Series Shared SRAM" rev 0x10 at pci0 dev 20 function 2 not configured
+dwiic0 at pci0 dev 21 function 0 "Intel 300 Series I2C" rev 0x10: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 300 Series I2C" rev 0x10: apic 2 int 17
+iic1 at dwiic1
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 0 not configured
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 4 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 300 Series AHCI" rev 0x10: msi, AHCI 1.3.1
+ahci0: port 0: 6.0Gb/s
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, KINGSTON SEDC500, SCEK> naa.50026b7282c18018
+sd0: 457862MB, 512 bytes/sector, 937703088 sectors, thin
+sd1 at scsibus1 targ 1 lun 0: <ATA, KINGSTON SEDC500, SCEK> naa.50026b7282c8b200
+sd1: 1831420MB, 512 bytes/sector, 3750748848 sectors, thin
+sd2 at scsibus1 targ 2 lun 0: <ATA, WDC WD4003FFBX-6, 83.0> naa.5000cca095cffab1
+sd2: 3815447MB, 512 bytes/sector, 7814037168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 300 Series PCIE" rev 0xf0: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x04
+pci2 at ppb1 bus 2
+vga1 at pci2 dev 0 function 0 "ASPEED Technology AST2000" rev 0x41
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+ppb2 at pci0 dev 28 function 1 "Intel 300 Series PCIE" rev 0xf0: msi
+pci3 at ppb2 bus 3
+ppb3 at pci3 dev 0 function 0 "ASMedia ASM1083/1085 PCIE-PCI" rev 0x04
+pci4 at ppb3 bus 4
+ppb4 at pci0 dev 29 function 0 "Intel 300 Series PCIE" rev 0xf0: msi
+pci5 at ppb4 bus 5
+ppb5 at pci0 dev 29 function 3 "Intel 300 Series PCIE" rev 0xf0: msi
+pci6 at ppb5 bus 6
+em0 at pci6 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+"Intel 300 Series UART" rev 0x10 at pci0 dev 30 function 0 not configured
+pcib0 at pci0 dev 31 function 0 "Intel C242 LPC" rev 0x10
+azalia0 at pci0 dev 31 function 3 "Intel 300 Series cAVS" rev 0x10: msi
+azalia0: no HD-Audio codecs
+ichiic0 at pci0 dev 31 function 4 "Intel 300 Series SMBus" rev 0x10: apic 2 int 16
+iic2 at ichiic0
+sdtemp0 at iic2 addr 0x19: stts2004
+sdtemp1 at iic2 addr 0x1b: stts2004
+iic2: addr 0x1d 80=00 words 00=ffff 01=ffff 02=ffff 03=ffff 04=ffff 05=ffff 06=ffff 07=ffff
+iic2: addr 0x20 07=01 0b=77 0c=77 0d=ee 0e=ee 0f=44 10=44 13=73 15=ab 16=1e 17=9d 19=8a 1a=41 1b=68 1c=33 1d=0f 1e=2c 20=70 21=70 22=45 23=44 2a=2a 2e=88 2f=44 31=73 33=ab 37=8a 38=50 39=0f 3a=0c 3b=05 3c=44 43=27 48=07 92=0b b2=29 words 00=00ff 01=00ff 02=00ff 03=00ff 04=00ff 05=00ff 06=00ff 07=01ff
+lm1 at iic2 addr 0x2d: W83627DHG
+"Intel 300 Series SPI" rev 0x10 at pci0 dev 31 function 5 not configured
+em1 at pci0 dev 31 function 6 "Intel I219-LM" rev 0x10: msi, address XXX
+isa0 at pcib0
+isadma0 at isa0
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+lm0 at isa0 port 0x290/8: W83627DHG
+lm1: disabling sensors due to alias with lm0
+vmm0 at mainbus0: VMX/EPT
+uhidev0 at uhub0 port 6 configuration 1 interface 0 "Tangtop KVM102UW" rev 1.10/0.01 addr 2
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub0 port 6 configuration 1 interface 1 "Tangtop KVM102UW" rev 1.10/0.01 addr 2
+uhidev1: iclass 3/1, 3 report ids
+ums0 at uhidev1 reportid 1: 5 buttons, Z dir
+wsmouse0 at ums0 mux 0
+ucc0 at uhidev1 reportid 2: 573 usages, 18 keys, array
+wskbd2 at ucc0 mux 1
+wskbd2: connecting to wsdisplay0
+uhid0 at uhidev1 reportid 3: input=1, output=0, feature=0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (0f330bc0e0186db6.a) swap on sd0b dump on sd0b
+umass0 at uhub0 port 7 configuration 1 interface 0 "Kingston DataTraveler 3.0" rev 2.10/1.10 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus4 at umass0: 2 targets, initiator 0
+sd3 at scsibus4 targ 1 lun 0: <Kingston, DataTraveler 3.0, PMAP> removable serial....
+sd3: 29592MB, 512 bytes/sector, 60604416 sectors
+sd3 detached
+scsibus4 detached
+umass0 detached
+syncing disks... done
+rebooting...
+OpenBSD 7.2 (GENERIC.MP) #2: Thu Nov 24 23:54:39 MST 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 34254041088 (32667MB)
+avail mem = 33198510080 (31660MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.2 @ 0x8ebf3000 (92 entries)
+bios0: vendor American Megatrends Inc. version "4503" date 05/18/2022
+bios0: ASUSTeK COMPUTER INC. P11C-X Series
+acpi0 at bios0: ACPI 6.1
+acpi0: sleep states S0 S5
+acpi0: tables DSDT FACP APIC FPDT FIDT MCFG HEST SSDT SSDT HPET SSDT SSDT UEFI LPIT WSMT SSDT SSDT DBGP DBG2 SSDT DMAR SSDT EINJ ERST BERT
+acpi0: wakeup devices SIO1(S0) RP01(S0) PXSX(S0) RP02(S0) PXSX(S0) RP03(S0) PXSX(S0) RP04(S0) PXSX(S0) RP05(S0) PXSX(S0) RP06(S0) PXSX(S0) RP07(S0) PXSX(S0) RP08(S0) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.11 MHz, 06-9e-0a
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 4 (application processor)
+cpu2: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu2: smt 0, core 2, package 0
+cpu3 at mainbus0: apid 6 (application processor)
+cpu3: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.11 MHz, 06-9e-0a
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu3: smt 0, core 3, package 0
+cpu4 at mainbus0: apid 8 (application processor)
+cpu4: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu4: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu4: smt 0, core 4, package 0
+cpu5 at mainbus0: apid 10 (application processor)
+cpu5: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu5: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu5: smt 0, core 5, package 0
+cpu6 at mainbus0: apid 1 (application processor)
+cpu6: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu6: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu6: smt 1, core 0, package 0
+cpu7 at mainbus0: apid 3 (application processor)
+cpu7: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu7: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu7: smt 1, core 1, package 0
+cpu8 at mainbus0: apid 5 (application processor)
+cpu8: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu8: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu8: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu8: smt 1, core 2, package 0
+cpu9 at mainbus0: apid 7 (application processor)
+cpu9: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu9: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu9: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu9: smt 1, core 3, package 0
+cpu10 at mainbus0: apid 9 (application processor)
+cpu10: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu10: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu10: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu10: smt 1, core 4, package 0
+cpu11 at mainbus0: apid 11 (application processor)
+cpu11: Intel(R) Xeon(R) E-2236 CPU @ 3.40GHz, 3392.10 MHz, 06-9e-0a
+cpu11: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu11: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 12MB 64b/line 16-way L3 cache
+cpu11: smt 1, core 5, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 120 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpihpet0 at acpi0: 23999999 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus -1 (PEG1)
+acpiprt3 at acpi0: bus -1 (PEG2)
+acpiprt4 at acpi0: bus 1 (RP01)
+acpiprt5 at acpi0: bus 2 (BR4A)
+acpiprt6 at acpi0: bus 3 (RP02)
+acpiprt7 at acpi0: bus 5 (RP09)
+acpiprt8 at acpi0: bus -1 (RP10)
+acpiprt9 at acpi0: bus 6 (RP12)
+acpiprt10 at acpi0: bus -1 (RP21)
+acpiec0 at acpi0: not present
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+pchgpio0 at acpi0 GPI0 addr 0xfd6e0000/0x10000 0xfd6d0000/0x10000 0xfd6b0000/0x10000 0xfd6a0000/0x10000 irq 14, 384 pins
+"ACPI000E" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"INT33A1" at acpi0 not configured
+"PNP0C33" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0C0B" at acpi0 not configured
+"PNP0A05" at acpi0 not configured
+acpipwrres0 at acpi0: USBC, resource for XDCI
+acpipwrres1 at acpi0: V0PR
+acpipwrres2 at acpi0: V1PR
+acpipwrres3 at acpi0: V2PR
+acpipwrres4 at acpi0: WRST
+acpicpu0 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu4 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu5 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu6 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu7 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu8 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu9 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu10 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpicpu11 at acpi0: C3(200@1034 mwait.1@0x60), C2(200@151 mwait.1@0x33), C1(1000@1 mwait.1), PSS
+acpipwrres5 at acpi0: FN00, resource for FAN0
+acpipwrres6 at acpi0: FN01, resource for FAN1
+acpipwrres7 at acpi0: FN02, resource for FAN2
+acpipwrres8 at acpi0: FN03, resource for FAN3
+acpipwrres9 at acpi0: FN04, resource for FAN4
+acpitz0 at acpi0: critical temperature is 119 degC
+acpipwrres10 at acpi0: PIN_
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD1F
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3392 MHz: speeds: 3401, 3400, 3200, 3000, 2800, 2700, 2500, 2300, 2100, 1900, 1700, 1500, 1400, 1200, 1000, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 8G Host" rev 0x07
+"Intel Core GMM" rev 0x00 at pci0 dev 8 function 0 not configured
+pchtemp0 at pci0 dev 18 function 0 "Intel 300 Series Thermal" rev 0x10
+xhci0 at pci0 dev 20 function 0 "Intel 300 Series xHCI" rev 0x10: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 300 Series Shared SRAM" rev 0x10 at pci0 dev 20 function 2 not configured
+dwiic0 at pci0 dev 21 function 0 "Intel 300 Series I2C" rev 0x10: apic 2 int 16
+iic0 at dwiic0
+dwiic1 at pci0 dev 21 function 1 "Intel 300 Series I2C" rev 0x10: apic 2 int 17
+iic1 at dwiic1
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 0 not configured
+"Intel 300 Series HECI" rev 0x10 at pci0 dev 22 function 4 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 300 Series AHCI" rev 0x10: msi, AHCI 1.3.1
+ahci0: port 0: 6.0Gb/s
+ahci0: port 1: 6.0Gb/s
+ahci0: port 2: 6.0Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, KINGSTON SEDC500, SCEK> naa.50026b7282c18018
+sd0: 457862MB, 512 bytes/sector, 937703088 sectors, thin
+sd1 at scsibus1 targ 1 lun 0: <ATA, KINGSTON SEDC500, SCEK> naa.50026b7282c8b200
+sd1: 1831420MB, 512 bytes/sector, 3750748848 sectors, thin
+sd2 at scsibus1 targ 2 lun 0: <ATA, WDC WD4003FFBX-6, 83.0> naa.5000cca095cffab1
+sd2: 3815447MB, 512 bytes/sector, 7814037168 sectors
+ppb0 at pci0 dev 28 function 0 "Intel 300 Series PCIE" rev 0xf0: msi
+pci1 at ppb0 bus 1
+ppb1 at pci1 dev 0 function 0 "ASPEED Technology AST1150 PCI" rev 0x04
+pci2 at ppb1 bus 2
+vga1 at pci2 dev 0 function 0 "ASPEED Technology AST2000" rev 0x41
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+ppb2 at pci0 dev 28 function 1 "Intel 300 Series PCIE" rev 0xf0: msi
+pci3 at ppb2 bus 3
+ppb3 at pci3 dev 0 function 0 "ASMedia ASM1083/1085 PCIE-PCI" rev 0x04
+pci4 at ppb3 bus 4
+ppb4 at pci0 dev 29 function 0 "Intel 300 Series PCIE" rev 0xf0: msi
+pci5 at ppb4 bus 5
+ppb5 at pci0 dev 29 function 3 "Intel 300 Series PCIE" rev 0xf0: msi
+pci6 at ppb5 bus 6
+em0 at pci6 dev 0 function 0 "Intel I210" rev 0x03: msi, address XXX
+"Intel 300 Series UART" rev 0x10 at pci0 dev 30 function 0 not configured
+pcib0 at pci0 dev 31 function 0 "Intel C242 LPC" rev 0x10
+azalia0 at pci0 dev 31 function 3 "Intel 300 Series cAVS" rev 0x10: msi
+azalia0: no HD-Audio codecs
+ichiic0 at pci0 dev 31 function 4 "Intel 300 Series SMBus" rev 0x10: apic 2 int 16
+iic2 at ichiic0
+sdtemp0 at iic2 addr 0x19: stts2004
+sdtemp1 at iic2 addr 0x1b: stts2004
+iic2: addr 0x1d 80=00 words 00=ffff 01=ffff 02=ffff 03=ffff 04=ffff 05=ffff 06=ffff 07=ffff
+iic2: addr 0x20 07=01 0b=77 0c=77 0d=ee 0e=ee 0f=44 10=44 13=73 15=ab 16=1e 17=9d 19=8a 1a=41 1b=68 1c=33 1d=0f 1e=2c 20=70 21=70 22=45 23=44 2a=2a 2e=88 2f=44 31=73 33=ab 37=8a 38=50 39=0f 3a=0c 3b=05 3c=44 43=28 48=07 92=0b b2=29 words 00=00ff 01=00ff 02=00ff 03=00ff 04=00ff 05=00ff 06=00ff 07=01ff
+lm1 at iic2 addr 0x2d: W83627DHG
+"Intel 300 Series SPI" rev 0x10 at pci0 dev 31 function 5 not configured
+em1 at pci0 dev 31 function 6 "Intel I219-LM" rev 0x10: msi, address XXX
+isa0 at pcib0
+isadma0 at isa0
+com1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+lpt0 at isa0 port 0x378/4 irq 7
+lm0 at isa0 port 0x290/8: W83627DHG
+lm1: disabling sensors due to alias with lm0
+vmm0 at mainbus0: VMX/EPT
+uhidev0 at uhub0 port 6 configuration 1 interface 0 "Tangtop KVM102UW" rev 1.10/0.01 addr 2
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev1 at uhub0 port 6 configuration 1 interface 1 "Tangtop KVM102UW" rev 1.10/0.01 addr 2
+uhidev1: iclass 3/1, 3 report ids
+ums0 at uhidev1 reportid 1: 5 buttons, Z dir
+wsmouse0 at ums0 mux 0
+ucc0 at uhidev1 reportid 2: 573 usages, 18 keys, array
+wskbd2 at ucc0 mux 1
+wskbd2: connecting to wsdisplay0
+uhid0 at uhidev1 reportid 3: input=1, output=0, feature=0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (0f330bc0e0186db6.a) swap on sd0b dump on sd0b

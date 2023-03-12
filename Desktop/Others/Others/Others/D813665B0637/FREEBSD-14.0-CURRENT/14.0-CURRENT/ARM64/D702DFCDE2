@@ -1,0 +1,338 @@
+---<<BOOT>>---
+GDB: debug ports: uart
+GDB: current port: uart
+KDB: debugger backends: ddb gdb
+KDB: current backend: ddb
+                   Type     Physical      Virtual   #Pages Attr
+               Reserved 000000000000 000000000000 00000af0 WC WT WB 
+     ConventionalMemory 000000af0000 000000000000 00007910 WC WT WB 
+               Reserved 000008400000 000000000000 00001000 WC WT WB 
+     ConventionalMemory 000009400000 000000000000 000362b9 WC WT WB 
+       BootServicesCode 00003f6b9000 000000000000 00000038 WC WT WB 
+       BootServicesData 00003f6f1000 000000000000 0000090f WC WT WB 
+     ConventionalMemory 000040000000 000000000000 000a4900 WC WT WB 
+             LoaderData 0000e4900000 000000000000 00008000 WC WT WB 
+             LoaderCode 0000ec900000 000000000000 000000cf WC WT WB 
+               Reserved 0000ec9cf000 000000000000 00000041 WC WT WB 
+    RuntimeServicesData 0000eca10000 0000eca10000 00000010 WC WT WB RUNTIME
+    RuntimeServicesCode 0000eca20000 0000eca20000 000000c0 WC WT WB RUNTIME
+      ACPIReclaimMemory 0000ecae0000 000000000000 00000010 WC WT WB 
+    RuntimeServicesCode 0000ecaf0000 0000ecaf0000 00000050 WC WT WB RUNTIME
+     ConventionalMemory 0000ecb40000 000000000000 00000003 WC WT WB 
+             LoaderData 0000ecb43000 000000000000 00000001 WC WT WB 
+     ConventionalMemory 0000ecb44000 000000000000 00001fa6 WC WT WB 
+       BootServicesData 0000eeaea000 000000000000 000004aa WC WT WB 
+     ConventionalMemory 0000eef94000 000000000000 00000001 WC WT WB 
+       BootServicesData 0000eef95000 000000000000 00000aa3 WC WT WB 
+     ConventionalMemory 0000efa38000 000000000000 000001f9 WC WT WB 
+       BootServicesCode 0000efc31000 000000000000 000001ef WC WT WB 
+    RuntimeServicesCode 0000efe20000 0000efe20000 00000090 WC WT WB RUNTIME
+     ConventionalMemory 0000efeb0000 000000000000 00000010 WC WT WB 
+    RuntimeServicesData 0000efec0000 0000efec0000 00000120 WC WT WB RUNTIME
+     ConventionalMemory 0000effe0000 000000000000 0000001f WC WT WB 
+       BootServicesData 0000effff000 000000000000 00000001 WC WT WB 
+Physical memory chunk(s):
+  0x00af0000 - 0x083fffff,   121 MB (  30992 pages)
+  0x09400000 - 0xec9cefff,  3637 MB ( 931279 pages)
+  0xeca10000 - 0xefffffff,    53 MB (  13808 pages)
+Excluded memory regions:
+  0x00000000 - 0x00aeffff,    10 MB (   2800 pages) NoAlloc 
+  0x08400000 - 0x093fffff,    16 MB (   4096 pages) NoAlloc 
+  0xe4a00000 - 0xe63d2fff,    25 MB (   6611 pages) NoAlloc 
+  0xec9cf000 - 0xecb3ffff,     1 MB (    369 pages) NoAlloc 
+  0xefe20000 - 0xefeaffff,     0 MB (    144 pages) NoAlloc 
+  0xefec0000 - 0xeffdffff,     1 MB (    288 pages) NoAlloc 
+Found 4 CPUs in the ACPI tables
+Copyright (c) F7F7-B2ED The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0: Wed Dec 14 23:43:15 MSK 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX arm64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT: init without driver.
+Preloaded elf kernel "/boot/kernel/kernel" at 0xffff0000017a1000.
+Preloaded hostuuid "/etc/hostid" at 0xffff0000017aa3f0.
+Preloaded boot_entropy_cache "/boot/entropy" at 0xffff0000017aa440.
+Preloaded elf module "/boot/kernel/zfs.ko" at 0xffff0000017aa498.
+Preloaded boot_entropy_platform "efi_rng_seed" at 0xffff0000017aacf0.
+Preloaded TSLOG data "TSLOG" at 0xffff0000017aad48.
+module firmware already present!
+real memory  = 3998019584 (3812 MB)
+Physical memory chunk(s):
+0x00000000af0000 - 0x000000083fffff, 126943232 bytes (30992 pages)
+0x00000009400000 - 0x000000de97efff, 3579310080 bytes (873855 pages)
+0x000000e63d3000 - 0x000000ec9cefff, 106938368 bytes (26108 pages)
+0x000000ecb40000 - 0x000000efe1ffff, 53346304 bytes (13024 pages)
+0x000000efeb0000 - 0x000000efebffff, 65536 bytes (16 pages)
+0x000000effe0000 - 0x000000efffffff, 131072 bytes (32 pages)
+avail memory = 3865157632 (3686 MB)
+Starting CPU 1 (100)
+Starting CPU 2 (200)
+Starting CPU 3 (300)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+Enabling LSE atomics in the kernel
+random: read 4096 bytes from preloaded cache
+random: read 2048 bytes from platform bootloader
+random: unblocking device.
+VIMAGE (virtualized network stack) enabled
+hostuuid: using XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ULE: setup cpu 0
+ULE: setup cpu 1
+ULE: setup cpu 2
+ULE: setup cpu 3
+random: entropy device external interface
+snd_unit_init() u=0x00ff8000 [512] d=0x00007c00 [32] c=0x000003ff [1024]
+feeder_register: snd_unit=-1 snd_maxautovchans=16 latency=2 feeder_rate_min=1 feeder_rate_max=2016000 feeder_rate_round=25
+firmware: 'tegra210_xusb_fw' version 0: 132608 bytes loaded at 0xffff0000009fe1e0
+MAP eca10000 mode 2 pages 16
+MAP eca20000 mode 2 pages 192
+MAP ecaf0000 mode 2 pages 80
+MAP efe20000 mode 2 pages 144
+MAP efec0000 mode 2 pages 288
+mem: <memory>
+null: <full device, null device, zero device>
+openfirm: <Open Firmware control device>
+tcp_log: tcp_log device
+crypto: <crypto core>
+kbd0 at kbdmux0
+ACPI: RSDP 0x00000000ECAE0018 000024 (v02 RKCP  )
+ACPI: XSDT 0x00000000ECAEFE98 000054 (v01 RKCP   RK356X   00000001      01000013)
+ACPI: FACP 0x00000000ECAEFB98 000114 (v06 RKCP   RK356X   00000001 EDK2 00000001)
+ACPI: DSDT 0x00000000ECAE7518 001147 (v02 RKCP   RK356X   00000002 INTL 20200925)
+ACPI: DBG2 0x00000000ECAEFA98 00005C (v00 RKCP   RK356X   00000001 EDK2 00000001)
+ACPI: GTDT 0x00000000ECAEFD18 000068 (v03 RKCP   RK356X   00000001 EDK2 00000001)
+ACPI: APIC 0x00000000ECAEE998 0001AC (v04 RKCP   RK356X   00000001 EDK2 00000001)
+ACPI: MCFG 0x00000000ECAEFE18 00003C (v01 RKCP   RK356X   00000001 EDK2 00000001)
+ACPI: SPCR 0x00000000ECAEFF98 000050 (v02 RKCP   RK356X   00000001 EDK2 00000001)
+acpi0: <RKCP RK356X>
+ACPI: 1 ACPI AML tables successfully acquired and loaded
+acpi0: Power Button (fixed)
+acpi0: Sleep Button (fixed)
+acpi0: Could not update all GPEs: AE_NOT_CONFIGURED
+psci0: <ARM Power State Co-ordination Interface Driver> on acpi0
+psci0: PSCI version 0.2 compatible
+gic0: <ARM Generic Interrupt Controller v3.0> iomem 0xfd400000-0xfd41ffff,0xfd460000-0xfd51ffff on acpi0
+gic0: SPIs: 352, IDs: 65535
+gic0: Start searching for Re-Distributor
+gic0: CPU0 Re-Distributor has been found
+gic0: CPU0 Re-Distributor woke up
+gic0: CPU0 enabled CPU interface via system registers
+generic_timer0: <ARM Generic Timer> irq 12,13,14 on acpi0
+Timecounter "ARM MPCore Timecounter" frequency 24000000 Hz quality 1000
+Event timer "ARM MPCore Eventtimer" frequency 24000000 Hz quality 1000
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+pmu0: <Performance Monitoring Unit> on acpi0
+pmu0: MADT: cpu 0 (mpidr 0) irq 260 level-triggered
+pmu0: MADT: cpu 1 (mpidr 256) irq 261 level-triggered
+pmu0: MADT: cpu 2 (mpidr 512) irq 262 level-triggered
+pmu0: MADT: cpu 3 (mpidr 768) irq 263 level-triggered
+cpu0: <ACPI CPU> on acpi0
+cpu0: switching to generic Cx mode
+cpu1: <ACPI CPU> on acpi0
+cpu2: <ACPI CPU> on acpi0
+cpu3: <ACPI CPU> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16750 or compatible> iomem 0xfe660000-0xfe660fff irq 1 on acpi0
+ns8250: UART FCR is broken
+uart0: console (115384,n,8,1)
+uart0: fast interrupt
+uart0: PPS capture mode: DCD
+ehci0: <Generic EHCI Controller> iomem 0xfd800000-0xfd83ffff irq 3 on acpi0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+ehci0: usbpf: Attached
+ehci1: <Generic EHCI Controller> iomem 0xfd880000-0xfd8bffff irq 5 on acpi0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+ehci1: usbpf: Attached
+xhci0: <Generic USB 3.0 controller> iomem 0xfcc00000-0xfcffffff irq 6 on acpi0
+xhci0: 64 bytes context size, 32-bit DMA
+usbus2 on xhci0
+xhci0: usbpf: Attached
+xhci1: <Generic USB 3.0 controller> iomem 0xfd000000-0xfd3fffff irq 7 on acpi0
+xhci1: 64 bytes context size, 32-bit DMA
+usbus3 on xhci1
+xhci1: usbpf: Attached
+eqos0: <RK356x EQOS Gigabit ethernet> iomem 0xfe2a0000-0xfe2affff irq 8,9 on acpi0
+eqos0: DesignWare EQOS ver 0x51 (0x30)
+eqos0: hw features 160171e7 010c01c8 10000000 00000000
+eqos0: Ethernet address XXX
+eqos0: TX ring @ 0x3189000, RX ring @ 0x3c9d000
+miibus0: <MII bus> on eqos0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 0 on miibus0
+rgephy0: OUI 0x00e04c, model 0x0011, rev. 6
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+rgephy1: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 1 on miibus0
+rgephy1: OUI 0x00e04c, model 0x0011, rev. 6
+rgephy1:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+eqos0: bpf attached
+eqos0: Ethernet address: ...
+dwmmc_acpi0: <Synopsys DesignWare Mobile Storage Host Controller> iomem 0xfe2b0000-0xfe2b3fff irq 10 on acpi0
+dwmmc_acpi0: Hardware version ID is 270a
+dwmmc_acpi0: Card inserted
+mmc0: <MMC/SD bus> on dwmmc_acpi0
+sdhci_acpi0: <Rockchip eMMC Controller> iomem 0xfe310000-0xfe31ffff irq 11 on acpi0
+Firmware Warning (ACPI): Possibly buggy BIOS with ACPI_TYPE_INTEGER for function enumeration
+ (20221020/ACPI-2984)
+sdhci_acpi0: RK356x vendor_clock enabled
+sdhci_acpi0-slot0: 200MHz 8bits VDD: VCCQ: 3.3V 1.8V DRV: B DMA removable
+sdhci_acpi0-slot0: eMMC: DDR52 HS200
+sdhci_acpi0-slot0: UHS-I: SDR12 SDR25 SDR50 SDR104 DDR50
+sdhci_acpi0-slot0: Re-tuning count 0 secs, mode 1
+sdhci_acpi0-slot0: ============== REGISTER DUMP ==============
+sdhci_acpi0-slot0: Sys addr: 0x00000000 | Version:  0x00000005
+sdhci_acpi0-slot0: Blk size: 0x00000200 | Blk cnt:  0x00000000
+sdhci_acpi0-slot0: Argument: 0x000001ff | Trn mode: 0x00000000
+sdhci_acpi0-slot0: Present:  0x03f700f0 | Host ctl: 0x00000030
+sdhci_acpi0-slot0: Power:    0x0000000d | Blk gap:  0x00000000
+sdhci_acpi0-slot0: Wake-up:  0x00000000 | Clock:    0x00000007
+sdhci_acpi0-slot0: Timeout:  0x0000000e | Int stat: 0x00018100
+sdhci_acpi0-slot0: Int enab: 0xffff7fff | Sig enab: 0x00000000
+sdhci_acpi0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00001403
+sdhci_acpi0-slot0: Caps:     0x226dc881 | Caps2:    0x08000007
+sdhci_acpi0-slot0: Max curr: 0x00000000 | ADMA err: 0x00000000
+sdhci_acpi0-slot0: ADMA addr:0xef043008 | Slot int: 0x00000000
+sdhci_acpi0-slot0: ===========================================
+sdhci_acpi0-slot0: Card inserted
+mmc1: <MMC/SD bus> on sdhci_acpi0
+pcib0: <Generic PCI host controller> on acpi0
+pcib0: Bus is not cache-coherent
+pcib0: ECAM for bus 1-1 at mem 300108000-300207fff
+pci0: <PCI bus> on pcib0
+pci0: domain=0, physical bus=1
+found->	vendor=0x10ec, dev=0x8125, revid=0x05
+	domain=0, bus=1, slot=0, func=0
+	class=02-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 1 message, 64 bit, vector masks
+	MSI-X supports 32 messages in map 0x20
+	map[10]: type I/O Port, range 32, base 0, size  8, port disabled
+	map[18]: type Memory, range 64, base 0, size 16, memory disabled
+	map[20]: type Memory, range 64, base 0, size 14, memory disabled
+found->	vendor=0x6cba, dev=0x0ada, revid=0x00
+	domain=0, bus=1, slot=31, func=0
+	class=00-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0xe6cf, statreg=0x0000, cachelnsz=128 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	map[10]: type Memory, range 32, base 0, size  6, enabled
+pci0: <network, ethernet> at device 0.0 (no driver attached)
+pci0: <old, non-VGA display device> at device 31.0 (no driver attached)
+armv8crypto0: <AES-CBC,AES-XTS,AES-GCM>
+crypto: assign armv8crypto0 driver id 0, flags 0xe000000
+crypto: assign cryptosoft0 driver id 1, flags 0x6000000
+AcpiOsExecute: task queue not started
+Device configuration finished.
+Found SMCCC version 1.2
+procfs registered
+Timecounters tick every 1.000 msec
+usbus0: 480Mbps High Speed USB v2.0
+usbus1: 480Mbps High Speed USB v2.0
+usbus2: 5.0Gbps Super Speed USB v3.0
+usbus3: 5.0Gbps Super Speed USB v3.0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+vlan: initialized, using hash tables with chaining
+lo0: bpf attached
+IPsec: Initialized Security Association Processing.
+tcp_init: net.inet.tcp.tcbhashsize auto tuned to 32768
+ugen1.1: <Generic EHCI root HUB> at usbus1
+uhub0 on usbus1
+uhub0: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ugen2.1: <Generic XHCI root HUB> at usbus2
+uhub1 on usbus2
+uhub1: <Generic XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+ugen3.1: <Generic XHCI root HUB> at usbus3
+uhub2 on usbus3
+uhub2: <Generic XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus3
+ugen0.1: <Generic EHCI root HUB> at usbus0
+uhub3 on usbus0
+uhub3: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+AcpiOsExecute: enqueue 1 pending tasks
+mmc0: Probing bus
+mmc0: SD 2.0 interface conditions: OK
+mmc0: SD probe: OK (OCR: 0x40ff8000)
+mmc0: Current OCR: 0x00ff8000
+mmc0: Probing cards
+mmc0: New card detected (CID XXX)
+mmc0: New card detected (CSD XXX)
+mmc0: Card at relative address 0xe624 added:
+mmc0:  card: SDHC SA08G 8.0 SN ... MFG 08/2018 by 3 SD
+mmc0:  quirks: 0
+mmc0:  bus: 4bit, 50MHz (high speed timing)
+mmc0:  memory: 15523840 blocks, erase sector 8192 blocks
+mmc0: setting transfer rate to 50.000MHz (high speed timing)
+mmcsd0: 8GB <SDHC SA08G 8.0 SN ... MFG 08/2018 by 3 SD> at mmc0 50.0MHz/4bit/1016-block
+sdhci_acpi0-slot0: Divider 250 for freq 400000 (base 200000000)
+sdhci_acpi0-slot0: Divider 250 for freq 400000 (base 200000000)
+mmc1: Probing bus
+sdhci_acpi0-slot0: Divider 250 for freq 400000 (base 200000000)
+sdhci_acpi0-slot0: Divider 250 for freq 400000 (base 200000000)
+mmc1: SD probe: failed
+mmc1: MMC probe: failed
+mmc1: Current OCR: 0x00000000
+mmc1: No compatible cards found on bus
+CPU  0: ARM Cortex-A55 r2p0 affinity:  0  0
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,VIPT ICache,64 byte ERG,64 byte CWG>
+ Instruction Set Attributes 0 = <DP,RDM,Atomic,CRC32,SHA2,SHA1,AES+PMULL>
+ Instruction Set Attributes 1 = <RCPC-8.3,DCPoP>
+ Instruction Set Attributes 2 = <>
+         Processor Features 0 = <RAS,GIC,AdvSIMD+HP,FP+HP,EL3 32,EL2 32,EL1 32,EL0 32>
+         Processor Features 1 = <PSTATE.SSBS>
+      Memory Model Features 0 = <TGran4,TGran64,TGran16,SNSMem,BigEnd,16bit ASID,1TB PA>
+      Memory Model Features 1 = <XNX,PAN+ATS1E1,LO,HPD+TTPBHA,VH,16bit VMID,HAF+DS>
+      Memory Model Features 2 = <32bit CCIDX,48bit VA,IESB,UAO,CnP>
+             Debug Features 0 = <DoubleLock,2 CTX BKPTs,4 Watchpoints,6 Breakpoints,PMUv3 v8.1,Debugv8.2>
+             Debug Features 1 = <>
+         Auxiliary Features 0 = <>
+         Auxiliary Features 1 = <>
+AArch32 Instruction Set Attributes 5 = <RDM,CRC32,SHA2,SHA1,AES+VMULL,SEVL>
+AArch32 Media and VFP Features 0 = <FPRound,FPSqrt,FPDivide,DP VFPv3+v4,SP VFPv3+v4,AdvSIMD>
+AArch32 Media and VFP Features 1 = <SIMDFMAC,FPHP Arith,SIMDHP Arith,SIMDSP,SIMDInt,SIMDLS,FPDNaN,FPFtZ>
+ L1 cache: 32KB (instruction), 32KB (data)
+ L2 cache: 512KB (unified)
+CPU  1: ARM Cortex-A55 r2p0 affinity:  1  0
+ L1 cache: 32KB (instruction), 32KB (data)
+ L2 cache: 512KB (unified)
+CPU  2: ARM Cortex-A55 r2p0 affinity:  2  0
+ L1 cache: 32KB (instruction), 32KB (data)
+ L2 cache: 512KB (unified)
+CPU  3: ARM Cortex-A55 r2p0 affinity:  3  0
+ L1 cache: 32KB (instruction), 32KB (data)
+ L2 cache: 512KB (unified)
+Release APs...gic0: Start searching for Re-Distributor
+gic0: Start searching for Re-Distributor
+gic0: Start searching for Re-Distributor
+gic0: CPU2 Re-Distributor has been found
+gic0: CPU1 Re-Distributor has been found
+gic0: CPU3 Re-Distributor has been found
+gic0: CPU1 Re-Distributor woke up
+gic0: CPU3 Re-Distributor woke up
+gic0: CPU2 Re-Distributor woke up
+gic0: CPU1 enabled CPU interface via system registers
+gic0: CPU2 enabled CPU interface via system registers
+gic0: CPU3 enabled CPU interface via system registers
+done
+Enabling CnP
+Trying to mount root from ufs:/dev/gpt/install [rw,noatime]...
+WARNING: WITNESS option enabled, expect reduced performance.
+GEOM: new disk mmcsd0
+mmc0: setting bus width to 4 bits high speed timing
+GEOM_PART: partition 2 on (mmcsd0, GPT) is not aligned on 4194304 bytes
+GEOM_PART: partition 3 on (mmcsd0, GPT) is not aligned on 4194304 bytes
+uhub2: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+efirtc0: providing initial system time
+Dual Console: Serial Primary, Video Secondary
+start_init: trying /sbin/init
+uhub0: 1 port with 1 removable, self powered
+uhub3: 1 port with 1 removable, self powered
+lo0: link state changed to UP
+eqos0: link state changed to DOWN
+eqos0: link state changed to UP

@@ -1,0 +1,550 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p3 stable/22.7-n250262-83840459d88 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: AMD Athlon 240GE with Radeon Vega Graphics      (3500.16-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x810f10  Family=0x17  Model=0x11  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr,IBPB>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8082518016 (7708 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 1 3 2
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0xd4b0b000-0xd4b0b01e
+smbios0: Version: 3.2, BCD Revision: 2.8
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Event timer "HPET2" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci1: <ACPI PCI bus> on pcib1
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfcda0000-0xfcda7fff at device 0.0 on pci1
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AHCI SATA controller> mem 0xfcd80000-0xfcd9ffff at device 0.1 on pci1
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+pcib2: <ACPI PCI-PCI bridge> at device 0.2 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 4.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 6.0 on pci2
+pci4: <ACPI PCI bus> on pcib4
+re0: <Realtek PCIe GbE Family Controller> port 0xe000-0xe0ff mem 0xf0304000-0xf0304fff,0xf0300000-0xf0303fff at device 0.0 on pci4
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib5: <ACPI PCI-PCI bridge> at device 7.0 on pci2
+pci5: <ACPI PCI bus> on pcib5
+re1: <Realtek PCIe GbE Family Controller> port 0xd000-0xd0ff mem 0xfcb04000-0xfcb04fff,0xfcb00000-0xfcb03fff at device 0.0 on pci5
+re1: Using Memory Mapping!
+re1: Using 1 MSI-X message
+re1: version:1.96.04
+re1: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re1: Ethernet address: ...
+pcib6: <ACPI PCI-PCI bridge> at device 1.6 on pci0
+pci6: <ACPI PCI bus> on pcib6
+nvme0: <Generic NVMe Device> mem 0xfcf00000-0xfcf03fff at device 0.0 on pci6
+pcib7: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci7: <ACPI PCI bus> on pcib7
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xe0000000-0xefffffff,0xf0000000-0xf01fffff,0xfca00000-0xfca7ffff at device 0.0 on pci7
+pci7: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xfc800000-0xfc8fffff at device 0.3 on pci7
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xfc700000-0xfc7fffff at device 0.4 on pci7
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+pcib8: <ACPI PCI-PCI bridge> at device 8.2 on pci0
+pci8: <ACPI PCI bus> on pcib8
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xfce00000-0xfce007ff at device 0.0 on pci8
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich8: <AHCI channel> at channel 0 on ahci1
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1750000318 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen1.1: <AMD XHCI root HUB> at usbus1
+ugen2.1: <AMD XHCI root HUB> at usbus2
+ugen0.1: <AMD XHCI root HUB> at usbus0
+uhub0 on usbus1
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub1 on usbus0
+uhub2 on usbus2
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub1: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <Samsung SSD 970 EVO 250GB> NVMe namespace
+nvd0: 238475MB (488397168 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+WARNING: /mnt was not properly dismounted
+WARNING: /mnt: mount pending error: blocks 24 files 1
+uhub2: 2 ports with 2 removable, self powered
+uhub0: 8 ports with 8 removable, self powered
+uhub1: 22 ports with 22 removable, self powered
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+amdsmn0: <AMD Family 17h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+pflog0: permanently promiscuous mode enabled
+re1: link state changed to UP
+vlan0: changing name to 'vlan01'
+re0: link state changed to UP
+tap9993: Ethernet address: ...
+tap9993: changing name to 'zt80lm2s8e3d5d4'
+zt80lm2s8e3d5d4: link state changed to UP
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to accept, logging disabled
+load_dn_sched dn_sched FIFO loaded
+load_dn_sched dn_sched QFQ loaded
+load_dn_sched dn_sched RR loaded
+load_dn_sched dn_sched WF2Q+ loaded
+load_dn_sched dn_sched PRIO loaded
+load_dn_sched dn_sched FQ_CODEL loaded
+load_dn_sched dn_sched FQ_PIE loaded
+load_dn_aqm dn_aqm CODEL loaded
+load_dn_aqm dn_aqm PIE loaded
+re0: promiscuous mode enabled
+re1: promiscuous mode enabled
+vlan01: promiscuous mode enabled
+zt80lm2s8e3d5d4: promiscuous mode enabled
+lo0: promiscuous mode enabled
+re0: promiscuous mode disabled
+re1: promiscuous mode disabled
+vlan01: promiscuous mode disabled
+zt80lm2s8e3d5d4: promiscuous mode disabled
+lo0: promiscuous mode disabled
+re0: promiscuous mode enabled
+re1: promiscuous mode enabled
+vlan01: promiscuous mode enabled
+zt80lm2s8e3d5d4: promiscuous mode enabled
+lo0: promiscuous mode enabled
+re0: promiscuous mode disabled
+re1: promiscuous mode disabled
+vlan01: promiscuous mode disabled
+zt80lm2s8e3d5d4: promiscuous mode disabled
+lo0: promiscuous mode disabled
+re0: promiscuous mode enabled
+re1: promiscuous mode enabled
+vlan01: promiscuous mode enabled
+zt80lm2s8e3d5d4: promiscuous mode enabled
+lo0: promiscuous mode enabled
+re0: promiscuous mode disabled
+re1: promiscuous mode disabled
+vlan01: promiscuous mode disabled
+zt80lm2s8e3d5d4: promiscuous mode disabled
+lo0: promiscuous mode disabled
+re0: promiscuous mode enabled
+re1: promiscuous mode enabled
+vlan01: promiscuous mode enabled
+zt80lm2s8e3d5d4: promiscuous mode enabled
+lo0: promiscuous mode enabled
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p3 stable/22.7-n250262-83840459d88 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: AMD Athlon 240GE with Radeon Vega Graphics      (3500.21-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x810f10  Family=0x17  Model=0x11  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr,IBPB>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8082518016 (7708 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 1 3 2
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0xd4b0b000-0xd4b0b01e
+smbios0: Version: 3.2, BCD Revision: 2.8
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Event timer "HPET2" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci1: <ACPI PCI bus> on pcib1
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfcda0000-0xfcda7fff at device 0.0 on pci1
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AHCI SATA controller> mem 0xfcd80000-0xfcd9ffff at device 0.1 on pci1
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+pcib2: <ACPI PCI-PCI bridge> at device 0.2 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 4.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 6.0 on pci2
+pci4: <ACPI PCI bus> on pcib4
+re0: <Realtek PCIe GbE Family Controller> port 0xe000-0xe0ff mem 0xf0304000-0xf0304fff,0xf0300000-0xf0303fff at device 0.0 on pci4
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib5: <ACPI PCI-PCI bridge> at device 7.0 on pci2
+pci5: <ACPI PCI bus> on pcib5
+re1: <Realtek PCIe GbE Family Controller> port 0xd000-0xd0ff mem 0xfcb04000-0xfcb04fff,0xfcb00000-0xfcb03fff at device 0.0 on pci5
+re1: Using Memory Mapping!
+re1: Using 1 MSI-X message
+re1: version:1.96.04
+re1: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re1: Ethernet address: ...
+pcib6: <ACPI PCI-PCI bridge> at device 1.6 on pci0
+pci6: <ACPI PCI bus> on pcib6
+nvme0: <Generic NVMe Device> mem 0xfcf00000-0xfcf03fff at device 0.0 on pci6
+pcib7: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci7: <ACPI PCI bus> on pcib7
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xe0000000-0xefffffff,0xf0000000-0xf01fffff,0xfca00000-0xfca7ffff at device 0.0 on pci7
+pci7: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xfc800000-0xfc8fffff at device 0.3 on pci7
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xfc700000-0xfc7fffff at device 0.4 on pci7
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+pcib8: <ACPI PCI-PCI bridge> at device 8.2 on pci0
+pci8: <ACPI PCI bus> on pcib8
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xfce00000-0xfce007ff at device 0.0 on pci8
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich8: <AHCI channel> at channel 0 on ahci1
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1749999991 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen0.1: <AMD XHCI root HUB> at usbus0
+ugen1.1: <AMD XHCI root HUB> at usbus1
+ugen2.1: <AMD XHCI root HUB> at usbus2
+uhub0 on usbus0
+uhub1 on usbus2
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2 on usbus1
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub1: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+nvd0: <Samsung SSD 970 EVO 250GB> NVMe namespace
+nvd0: 238475MB (488397168 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+WARNING: /mnt was not properly dismounted
+WARNING: /mnt: mount pending error: blocks 448 files 4
+uhub1: 2 ports with 2 removable, self powered
+uhub2: 8 ports with 8 removable, self powered
+uhub0: 22 ports with 22 removable, self powered
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+amdsmn0: <AMD Family 17h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+pflog0: permanently promiscuous mode enabled
+re1: link state changed to UP
+vlan0: changing name to 'vlan01'
+re0: link state changed to UP
+re0: promiscuous mode enabled
+tap9993: Ethernet address: ...
+tap9993: changing name to 'zt80lm2s8e3d5d4'
+re1: promiscuous mode enabled
+zt80lm2s8e3d5d4: link state changed to UP
+vlan01: promiscuous mode enabled
+lo0: promiscuous mode enabled
+ipfw2 (+ipv6) initialized, divert loadable, nat loadable, default to accept, logging disabled
+load_dn_sched dn_sched FIFO loaded
+load_dn_sched dn_sched QFQ loaded
+load_dn_sched dn_sched RR loaded
+load_dn_sched dn_sched WF2Q+ loaded
+load_dn_sched dn_sched PRIO loaded
+load_dn_sched dn_sched FQ_CODEL loaded
+load_dn_sched dn_sched FQ_PIE loaded
+load_dn_aqm dn_aqm CODEL loaded
+load_dn_aqm dn_aqm PIE loaded
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+re0: link state changed to DOWN
+re1: link state changed to DOWN
+vlan01: link state changed to DOWN
+re0: link state changed to UP
+re1: link state changed to UP
+vlan01: link state changed to UP
+zt80lm2s8e3d5d4: link state changed to DOWN
+re0: promiscuous mode disabled
+re1: promiscuous mode disabled
+vlan01: promiscuous mode disabled
+lo0: promiscuous mode disabled
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 4 3 0 0 done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p5 stable/22.7-n250270-9d1c26e8548 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: AMD Athlon 240GE with Radeon Vega Graphics      (3500.28-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x810f10  Family=0x17  Model=0x11  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr,IBPB>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8082571264 (7708 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 1 3 2
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0xd4b0b000-0xd4b0b01e
+smbios0: Version: 3.2, BCD Revision: 2.8
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Event timer "HPET2" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci1: <ACPI PCI bus> on pcib1
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfcda0000-0xfcda7fff at device 0.0 on pci1
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+ahci0: <AHCI SATA controller> mem 0xfcd80000-0xfcd9ffff at device 0.1 on pci1
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+pcib2: <ACPI PCI-PCI bridge> at device 0.2 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 4.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 6.0 on pci2
+pci4: <ACPI PCI bus> on pcib4
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xe000-0xe0ff mem 0xf0304000-0xf0304fff,0xf0300000-0xf0303fff at device 0.0 on pci4
+re0: Using 1 MSI-X message
+re0: Chip rev. 0x2c000000
+re0: MAC rev. 0x00200000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib5: <ACPI PCI-PCI bridge> at device 7.0 on pci2
+pci5: <ACPI PCI bus> on pcib5
+re1: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xd000-0xd0ff mem 0xfcb04000-0xfcb04fff,0xfcb00000-0xfcb03fff at device 0.0 on pci5
+re1: Using 1 MSI-X message
+re1: turning off MSI enable bit.
+re1: Chip rev. 0x54000000
+re1: MAC rev. 0x00100000
+miibus1: <MII bus> on re1
+rgephy1: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus1
+rgephy1:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re1: Using defaults for TSO: 65518/35/2048
+re1: Ethernet address: ...
+re1: netmap queues/slots: TX 1/256, RX 1/256
+pcib6: <ACPI PCI-PCI bridge> at device 1.6 on pci0
+pci6: <ACPI PCI bus> on pcib6
+nvme0: <Generic NVMe Device> mem 0xfcf00000-0xfcf03fff at device 0.0 on pci6
+pcib7: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci7: <ACPI PCI bus> on pcib7
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xe0000000-0xefffffff,0xf0000000-0xf01fffff,0xfca00000-0xfca7ffff at device 0.0 on pci7
+pci7: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xfc800000-0xfc8fffff at device 0.3 on pci7
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xfc700000-0xfc7fffff at device 0.4 on pci7
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+pcib8: <ACPI PCI-PCI bridge> at device 8.2 on pci0
+pci8: <ACPI PCI bus> on pcib8
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xfce00000-0xfce007ff at device 0.0 on pci8
+ahci1: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich8: <AHCI channel> at channel 0 on ahci1
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1750000381 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen0.1: <AMD XHCI root HUB> at usbus0
+ugen2.1: <AMD XHCI root HUB> at usbus2
+ugen1.1: <AMD XHCI root HUB> at usbus1
+uhub0 on usbus0
+uhub1 on usbus2
+uhub1: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub2 on usbus1
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <Samsung SSD 970 EVO 250GB> NVMe namespace
+nvd0: 238475MB (488397168 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub1: 2 ports with 2 removable, self powered
+uhub2: 8 ports with 8 removable, self powered

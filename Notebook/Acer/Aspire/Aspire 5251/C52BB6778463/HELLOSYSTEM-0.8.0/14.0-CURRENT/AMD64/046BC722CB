@@ -1,0 +1,419 @@
+---<<BOOT>>---
+Copyright (c) F7F7-B2ED The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 main-n256605-a0b956f5ac5: Fri Jul  8 09:09:00 UTC 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(vbefb): resolution 800x600
+CPU: AMD V120 Processor (2194.58-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x100f63  Family=0x10  Model=0x6  Stepping=3
+  Features=0x78bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2>
+  Features2=0x802009<SSE3,MON,CX16,POPCNT>
+  AMD Features=0xee500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM,3DNow!+,3DNow!>
+  AMD Features2=0x8377d<LAHF,SVM,ExtAPIC,CR8,ABM,SSE4A,Prefetch,OSVW,IBS,SKINIT,WDT,NodeId>
+  SVM: NP,NRIP,NAsids=64
+  TSC: P-state invariant
+real memory  = 8589934592 (8192 MB)
+avail memory = 8003149824 (7632 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <ACRSYS ACRPRDCT>
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+ioapic0: MADT APIC ID 4 != hw id 0
+ioapic0 <Version 2.1> irqs 0-23
+random: entropy device external interface
+kbd1 at kbdmux0
+smbios0: <System Management BIOS> at iomem 0xfe120-0xfe13e
+smbios0: Version: 2.6, BCD Revision: 2.6
+aesni0: No AES or SHA support.
+acpi0: <ACRSYS ACRPRDCT>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x3> port 0x62,0x66 on acpi0
+acpi_button0: <Power Button> on acpi0
+acpi_button1: <Sleep Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pcib0: Length mismatch for 3 range: 6d40000 vs 6d3ffff
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci0: <VGA-compatible display> port 0x6000-0x60ff mem 0xe0000000-0xefffffff,0xf2200000-0xf220ffff,0xf2100000-0xf21fffff irq 18 at device 5.0 on pci1
+vgapci0: Boot video device
+hdac0: <ATI RS880 HDA Controller> mem 0xf2210000-0xf2213fff irq 19 at device 5.1 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 4.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+bge0: <Broadcom BCM57780 A1, ASIC rev. 0x57780001> mem 0xf1100000-0xf110ffff irq 16 at device 0.0 on pci2
+bge0: CHIP ID 0x57780001; ASIC REV 0x57780; CHIP REV 0x577800; PCI-E
+miibus0: <MII bus> on bge0
+brgphy0: <BCM57780 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> at device 5.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+ath0: <Atheros AR9485> mem 0xf1000000-0xf107ffff irq 17 at device 0.0 on pci3
+ar9300_flash_map: unimplemented for now
+Restoring Cal data from DRAM
+Restoring Cal data from EEPROM
+Restoring Cal data from Flash
+Restoring Cal data from Flash
+Restoring Cal data from OTP
+ar9300_hw_attach: ar9300_eeprom_attach returned 0
+ath0: [HT] enabling HT modes
+ath0: [HT] enabling short-GI in 20MHz mode
+ath0: [HT] 1 stream STBC receive enabled
+ath0: [HT] 1 RX streams; 1 TX streams
+ath0: AR9485 mac 576.1 RF5110 phy 1638.6
+ath0: 2GHz radio: 0x0000; 5GHz radio: 0x0000
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0x7038-0x703f,0x704c-0x704f,0x7030-0x7037,0x7048-0x704b,0x7010-0x701f mem 0xf2307000-0xf23073ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.20 with 6 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf2306000-0xf2306fff irq 18 at device 18.0 on pci0
+usbus0 on ohci0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf2307500-0xf23075ff irq 17 at device 18.2 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf2305000-0xf2305fff irq 18 at device 19.0 on pci0
+usbus2 on ohci1
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf2307400-0xf23074ff irq 17 at device 19.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+atapci0: <ATI IXP700/800 UDMA133 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0x7000-0x700f irq 17 at device 20.1 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+ata1: <ATA channel> at channel 1 on atapci0
+hdac1: <ATI SB600 HDA Controller> mem 0xf2300000-0xf2303fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib4: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+ohci2: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf2304000-0xf2304fff irq 18 at device 20.5 on pci0
+usbus4 on ohci2
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz0: _CRT value is absurd, ignored (200.1C)
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1097252305 Hz quality 1000
+CPU0: local APIC error 0x4
+Timecounters tick every 1.000 msec
+hdacc0: <ATI RS690/780 HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI RS690/780 Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI RS690/780 (HDMI)> at nid 3 on hdaa0
+hdacc1: <Realtek ALC272 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC272 Audio Function Group> at nid 1 on hdacc1
+pcm1: <Realtek ALC272 (Analog 2.0+HP/2.0)> at nid 20,33 and 25 on hdaa1
+pcm2: <Realtek ALC272 (Left Analog Mic)> at nid 24 on hdaa1
+WARNING: WITNESS option enabled, expect reduced performance.
+usbus0: 12Mbps Full Speed USB v1.0
+usbus1: 480Mbps High Speed USB v2.0
+usbus2: 12Mbps Full Speed USB v1.0
+usbus3: 480Mbps High Speed USB v2.0
+usbus4: 12Mbps Full Speed USB v1.0
+ugen4.1: <ATI OHCI root HUB> at usbus4
+uhub0 on usbus4
+uhub0: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+ugen3.1: <ATI EHCI root HUB> at usbus3
+uhub1 on usbus3
+uhub1: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+ugen2.1: <ATI OHCI root HUB> at usbus2
+uhub2 on usbus2
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen1.1: <ATI EHCI root HUB> at usbus1
+uhub3 on usbus1
+uhub3: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ugen0.1: <ATI OHCI root HUB> at usbus0
+uhub4 on usbus0
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+Trying to mount root from cd9660:/dev/iso9660/LIVE []...
+uhub0: 2 ports with 2 removable, self powered
+uhub2: 5 ports with 5 removable, self powered
+uhub4: 5 ports with 5 removable, self powered
+Root mount waiting for: CAM usbus1 usbus3
+uhub1: 5 ports with 5 removable, self powered
+uhub3: 5 ports with 5 removable, self powered
+Root mount waiting for: CAM usbus1 usbus3
+ugen1.2: <Kingston DataTraveler 3.0> at usbus1
+umass0 on uhub3
+umass0: <Kingston DataTraveler 3.0, class 0/0, rev 2.10/0.01, addr 2> on usbus1
+umass0:  SCSI over Bulk-Only; quirks = 0xc000
+umass0:8:0: Attached to scbus8
+ugen3.2: <Suyin 1.3M WebCam> at usbus3
+Root mount waiting for: CAM
+ugen0.2: <PixArt USB Optical Mouse> at usbus0
+ugen0.3: <SEM USB Keyboard> at usbus0
+ukbd0 on uhub4
+ukbd0: <SEM USB Keyboard, class 0/0, rev 1.10/1.10, addr 3> on usbus0
+kbd2 at ukbd0
+Root mount waiting for: CAM
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <WDC WDS100T2B0A-00SM50 401000WD> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+da0 at umass-sim0 bus 0 scbus8 target 0 lun 0
+da0: <Kingston DataTraveler 3.0 > Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 29510MB (60437492 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <TSSTcorp CDDVDW TS-L633C AC01> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXX
+GEOM: da0: the secondary GPT table is corrupt or invalid.
+GEOM: da0: using the primary only -- recovery suggested.
+GEOM_LABEL[1]: ISO9660 file system detected on da0.
+GEOM_LABEL[1]: Label for provider da0 is iso9660/LIVE.
+GEOM_LABEL[1]: MSDOSFS: da0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da0 is diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p3: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0p3 is label/swap0.
+GEOM_LABEL[1]: Label for provider da0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label for provider da0p2 is msdosfs/EFISYS.
+GEOM: iso9660/LIVE: the secondary GPT table is corrupt or invalid.
+GEOM: iso9660/LIVE: using the primary only -- recovery suggested.
+GEOM: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX the secondary GPT table is corrupt or invalid.
+GEOM: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX using the primary only -- recovery suggested.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label swap0(label/swap0) already exists (diskid/XXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp1).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp1: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: md0: no FAT signature found.
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: Label for provider md0.uzip is ufsid/XXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: MSDOSFS: md0.uzip: no FAT signature found.
+lock order reversal:
+ 1st 0xfffff80005eee770 ufs (ufs, lockmgr) @ /usr/src/sys/fs/unionfs/union_vnops.c:2010
+ 2nd 0xfffff80005eee3f0 tmpfs (tmpfs, lockmgr) @ /usr/src/sys/fs/unionfs/union_vnops.c:2041
+ 3rd 0xfffff80005cb0930 ufs (ufs, lockmgr) @ /usr/src/sys/kern/vfs_vnops.c:3715
+lock order ufs -> tmpfs established at:
+#0 0xffffffff80c5a22d at witness_checkorder+0x32d
+#1 0xffffffff80bb6ba2 at lockmgr_lock_flags+0x182
+#2 0xffffffff82af0aba at unionfs_lock+0x37a
+#3 0xffffffff80cf3f14 at _vn_lock+0x54
+#4 0xffffffff82aed403 at unionfs_root+0x43
+#5 0xffffffff80cd4c92 at vfs_domount_first+0x282
+#6 0xffffffff80cd124f at vfs_domount+0x2cf
+#7 0xffffffff80ccfc28 at vfs_donmount+0x878
+#8 0xffffffff80ccf379 at sys_nmount+0x69
+#9 0xffffffff810c533e at amd64_syscall+0x12e
+#10 0xffffffff8109829b at fast_syscall_common+0xf8
+lock order tmpfs -> ufs attempted at:
+#0 0xffffffff80c5aafd at witness_checkorder+0xbfd
+#1 0xffffffff80bb6ba2 at lockmgr_lock_flags+0x182
+#2 0xffffffff80f356fc at ffs_lock+0x6c
+#3 0xffffffff80cf3f14 at _vn_lock+0x54
+#4 0xffffffff80cf87b8 at vn_lock_pair+0x1e8
+#5 0xffffffff82aea4ce at unionfs_nodeget+0x35e
+#6 0xffffffff82aede81 at unionfs_lookup+0x741
+#7 0xffffffff80cbc576 at vfs_cache_lookup+0xa6
+#8 0xffffffff80ccd17a at vfs_lookup+0x48a
+#9 0xffffffff80ccc2d9 at namei+0x329
+#10 0xffffffff80cf36b5 at vn_open_cred+0x4d5
+#11 0xffffffff80cea2ea at kern_openat+0x29a
+#12 0xffffffff810c533e at amd64_syscall+0x12e
+#13 0xffffffff8109829b at fast_syscall_common+0xf8
+random: unblocking device.
+Cuse v0.1.36 @ /dev/cuse
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.PCI0.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20220331/nsarguments-361)
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+[drm] radeon kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] initializing kernel modesetting (RS880 0x1002:0x9712 0x1025:0x036E 0x00).
+[drm ERROR :radeon_atombios_init] Unable to find PCI I/O BAR; using MMIO for ATOM IIO
+ATOM BIOS: Acer_JE50DN
+drmn0: VRAM: 256M 0x00000000C0000000 - 0x00000000CFFFFFFF (256M used)
+drmn0: GTT: 512M 0x00000000A0000000 - 0x00000000BFFFFFFF
+[drm] Detected VRAM RAM=256M, BAR=256M
+[drm] RAM width 32bits DDR
+[TTM] Zone  kernel: Available graphics memory: 4040622 KiB
+[TTM] Zone   dma32: Available graphics memory: 2097152 KiB
+[TTM] Initializing pool allocator
+[drm] radeon: 256M of VRAM memory ready
+[drm] radeon: 512M of GTT memory ready.
+[drm] Loading RS780 Microcode
+drmn0: successfully loaded firmware image 'radeon/RS780_pfp.bin'
+drmn0: successfully loaded firmware image 'radeon/RS780_me.bin'
+drmn0: successfully loaded firmware image 'radeon/R600_rlc.bin'
+[drm] radeon: power management initialized
+drmn0: successfully loaded firmware image 'radeon/RS780_uvd.bin'
+[drm] GART: num cpu pages 131072, num gpu pages 131072
+[drm] PCIE GART of 512M enabled (table at 0x00000000C0146000).
+drmn0: WB enabled
+drmn0: fence driver on ring 0 use gpu addr 0x00000000a0000c00
+drmn0: fence driver on ring 5 use gpu addr 0x00000000c0056038
+drmn0: radeon: MSI limited to 32-bit
+[drm] radeon: irq initialized.
+[drm] ring test on 0 succeeded in 0 usecs
+[drm] ring test on 5 succeeded in 1 usecs
+[drm] UVD initialized successfully.
+[drm] ib test on ring 0 succeeded in 0 usecs
+[drm] ib test on ring 5 succeeded
+[drm] radeon atom DIG backlight initialized
+[drm] Radeon Display Connectors
+[drm] Connector 0:
+[drm]   VGA-1
+[drm]   DDC: 0x7e40 0x7e40 0x7e44 0x7e44 0x7e48 0x7e48 0x7e4c 0x7e4c
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[drm] Connector 1:
+[drm]   LVDS-1
+[drm]   DDC: 0x7e50 0x7e50 0x7e54 0x7e54 0x7e58 0x7e58 0x7e5c 0x7e5c
+[drm]   Encoders:
+[drm]     LCD1: INTERNAL_KLDSCP_LVTMA
+[drm] Connector 2:
+[drm]   HDMI-A-1
+[drm]   HPD1
+[drm]   DDC: 0x7e60 0x7e60 0x7e64 0x7e64 0x7e68 0x7e68 0x7e6c 0x7e6c
+[drm]   Encoders:
+[drm]     DFP1: INTERNAL_UNIPHY
+[drm] fb mappable at 0xE0247000
+[drm] vram apper at 0xE0000000
+[drm] size 4325376
+[drm] fb depth is 24
+[drm]    pitch is 5632
+VT: Replacing driver "vbefb" with new "fb".
+taskqueue_drain with the following non-sleepable locks held:
+exclusive sleep mutex vtdev (vtdev) r = 0 (0xffffffff81ae9c78) locked @ /usr/src/sys/dev/vt/vt_core.c:3051
+stack backtrace:
+#0 0xffffffff80c5af35 at witness_debugger+0x65
+#1 0xffffffff80c5c09a at witness_warn+0x3fa
+#2 0xffffffff80c4d823 at taskqueue_drain+0x33
+#3 0xffffffff82d37933 at vt_kms_postswitch+0x73
+#4 0xffffffff80a3062d at vt_fb_init+0xfd
+#5 0xffffffff80a35c78 at vt_replace_backend+0x118
+#6 0xffffffff80a30733 at vt_fb_attach+0x13
+#7 0xffffffff82d495bb at linux_register_framebuffer+0xeb
+#8 0xffffffff82d4aa62 at __drm_fb_helper_initial_config_and_unlock+0x492
+#9 0xffffffff82c43ae9 at radeon_fbdev_init+0xd9
+#10 0xffffffff82c3f887 at radeon_modeset_init+0x8a7
+#11 0xffffffff82c4c51a at radeon_driver_load_kms+0x16a
+#12 0xffffffff82d1f768 at drm_dev_register+0x148
+#13 0xffffffff82c42d26 at radeon_pci_probe+0x166
+#14 0xffffffff80e611c1 at linux_pci_attach_device+0x431
+#15 0xffffffff80c25741 at device_attach+0x3c1
+#16 0xffffffff80c252f0 at device_probe_and_attach+0x70
+#17 0xffffffff80c27307 at bus_generic_driver_added+0x67
+Sleeping on "tq_drain" with the following non-sleepable locks held:
+exclusive sleep mutex vtdev (vtdev) r = 0 (0xffffffff81ae9c78) locked @ /usr/src/sys/dev/vt/vt_core.c:3051
+stack backtrace:
+#0 0xffffffff80c5af35 at witness_debugger+0x65
+#1 0xffffffff80c5c09a at witness_warn+0x3fa
+#2 0xffffffff80bf5615 at _sleep+0x55
+#3 0xffffffff80c4d8eb at taskqueue_drain+0xfb
+#4 0xffffffff82d37933 at vt_kms_postswitch+0x73
+#5 0xffffffff80a3062d at vt_fb_init+0xfd
+#6 0xffffffff80a35c78 at vt_replace_backend+0x118
+#7 0xffffffff80a30733 at vt_fb_attach+0x13
+#8 0xffffffff82d495bb at linux_register_framebuffer+0xeb
+#9 0xffffffff82d4aa62 at __drm_fb_helper_initial_config_and_unlock+0x492
+#10 0xffffffff82c43ae9 at radeon_fbdev_init+0xd9
+#11 0xffffffff82c3f887 at radeon_modeset_init+0x8a7
+#12 0xffffffff82c4c51a at radeon_driver_load_kms+0x16a
+#13 0xffffffff82d1f768 at drm_dev_register+0x148
+#14 0xffffffff82c42d26 at radeon_pci_probe+0x166
+#15 0xffffffff80e611c1 at linux_pci_attach_device+0x431
+#16 0xffffffff80c25741 at device_attach+0x3c1
+#17 0xffffffff80c252f0 at device_probe_and_attach+0x70
+lock order reversal: (Giant after non-sleepable)
+ 1st 0xffffffff81ae9c78 vtdev (vtdev, sleep mutex) @ /usr/src/sys/dev/vt/vt_core.c:3051
+ 2nd 0xffffffff81a029c0 Giant (Giant, sleep mutex) @ /usr/src/sys/kern/kern_synch.c:232
+lock order Giant -> vtdev established at:
+#0 0xffffffff80c5a22d at witness_checkorder+0x32d
+#1 0xffffffff80bc3c54 at __mtx_lock_flags+0x94
+#2 0xffffffff80a35245 at vt_upgrade+0x365
+#3 0xffffffff80b70678 at mi_startup+0x1e8
+#4 0xffffffff8038a023 at btext+0x23
+lock order vtdev -> Giant attempted at:
+#0 0xffffffff80c5aafd at witness_checkorder+0xbfd
+#1 0xffffffff80bc3c54 at __mtx_lock_flags+0x94
+#2 0xffffffff80bf593f at _sleep+0x37f
+#3 0xffffffff80c4d8eb at taskqueue_drain+0xfb
+#4 0xffffffff82d37933 at vt_kms_postswitch+0x73
+#5 0xffffffff80a3062d at vt_fb_init+0xfd
+#6 0xffffffff80a35c78 at vt_replace_backend+0x118
+#7 0xffffffff80a30733 at vt_fb_attach+0x13
+#8 0xffffffff82d495bb at linux_register_framebuffer+0xeb
+#9 0xffffffff82d4aa62 at __drm_fb_helper_initial_config_and_unlock+0x492
+#10 0xffffffff82c43ae9 at radeon_fbdev_init+0xd9
+#11 0xffffffff82c3f887 at radeon_modeset_init+0x8a7
+#12 0xffffffff82c4c51a at radeon_driver_load_kms+0x16a
+#13 0xffffffff82d1f768 at drm_dev_register+0x148
+#14 0xffffffff82c42d26 at radeon_pci_probe+0x166
+#15 0xffffffff80e611c1 at linux_pci_attach_device+0x431
+#16 0xffffffff80c25741 at device_attach+0x3c1
+#17 0xffffffff80c252f0 at device_probe_and_attach+0x70
+start FB_INFO:
+type=11 height=768 width=1366 depth=32
+pbase=0xe0247000 vbase=0xfffff800e0247000
+name=drmn0 flags=0x0 stride=5632 bpp=32
+end FB_INFO
+[drm] Initialized radeon 2.50.0 20080528 for drmn0 on minor 0
+acpi_video0: <ACPI video extension> on vgapci0
+ACPI Warning: Time parameter 255 us > 100 us violating ACPI spec, please fix the firmware. (20220331/exsystem-307)
+lo0: link state changed to UP
+bge0: link state changed to DOWN
+ums0 on uhub4
+ums0: <PixArt USB Optical Mouse, class 0/0, rev 2.00/1.00, addr 2> on usbus0
+ums0: 3 buttons and [XYZ] coordinates ID=0
+uhid0 on uhub4
+uhid0: <SEM USB Keyboard, class 0/0, rev 1.10/1.10, addr 3> on usbus0
+ACPI Warning: Time parameter 255 us > 100 us violating ACPI spec, please fix the firmware. (20220331/exsystem-307)
+wlan0: Ethernet address: ...

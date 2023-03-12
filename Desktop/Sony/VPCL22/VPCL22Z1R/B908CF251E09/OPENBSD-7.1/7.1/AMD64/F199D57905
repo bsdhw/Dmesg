@@ -1,0 +1,437 @@
+OpenBSD 7.1 (RAMDISK_CD) #440: Mon Apr 11 18:09:13 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8552345600 (8156MB)
+avail mem = 8289136640 (7905MB)
+random: boothowto does not indicate good seed
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xeb1d0 (17 entries)
+bios0: vendor American Megatrends Inc. version "R2080T7" date 08/01/2011
+bios0: Sony Corporation VPCL22Z1R
+acpi0 at bios0: ACPI 4.0
+acpi0: tables DSDT FACP APIC HPET DBGP SLIC MCFG SSDT SSDT SSDT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz, 2195.33 MHz, 06-2a-07
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 3 (RP02)
+acpiprt2 at acpi0: bus 4 (RP03)
+acpiprt3 at acpi0: bus -1 (RP05)
+acpiprt4 at acpi0: bus 1 (PEGP)
+acpiprt5 at acpi0: bus 2 (RP01)
+acpiprt6 at acpi0: bus 5 (RP04)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"SNY5001" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using IvyBridge MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 2G Host" rev 0x09
+ppb0 at pci0 dev 1 function 0 "Intel Core 2G PCIE" rev 0x09: msi
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 vendor "NVIDIA", unknown product 0x0df4 rev 0xa1
+vga1: aperture needed
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+"NVIDIA GF108 HD Audio" rev 0xa1 at pci1 dev 0 function 1 not configured
+"Intel 6 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 20
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel 6 Series HD Audio" rev 0x04 at pci0 dev 27 function 0 not configured
+ppb1 at pci0 dev 28 function 0 "Intel 6 Series PCIE" rev 0xb4: msi
+pci2 at ppb1 bus 2
+athn0 at pci2 dev 0 function 0 "Atheros AR9285" rev 0x01: apic 2 int 16
+athn0: AR9285 rev 2 (1T1R), ROM rev 14, address XXX
+ppb2 at pci0 dev 28 function 1 "Intel 6 Series PCIE" rev 0xb4: msi
+pci3 at ppb2 bus 3
+sdhc0 at pci3 dev 0 function 0 "Ricoh 5U822 SD/MMC" rev 0x09: apic 2 int 17
+sdhc0: SDHC 3.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+vendor "Ricoh", unknown product 0xe232 (class system subclass miscellaneous, rev 0x06) at pci3 dev 0 function 1 not configured
+"Ricoh 5U832 Firewire" rev 0x05 at pci3 dev 0 function 3 not configured
+ppb3 at pci0 dev 28 function 2 "Intel 6 Series PCIE" rev 0xb4: msi
+pci4 at ppb3 bus 4
+xhci0 at pci4 dev 0 function 0 "NEC xHCI" rev 0x04: msi, xHCI 0.96
+usb1 at xhci0: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "NEC xHCI root hub" rev 3.00/1.00 addr 1
+ppb4 at pci0 dev 28 function 3 "Intel 6 Series PCIE" rev 0xb4: msi
+pci5 at ppb4 bus 5
+re0 at pci5 dev 0 function 0 "Realtek 8168" rev 0x06: RTL8168E/8111E (0x2c00), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 4
+ehci1 at pci0 dev 29 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 23
+usb2 at ehci1: USB revision 2.0
+uhub2 at usb2 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel HM65 LPC" rev 0x04 at pci0 dev 31 function 0 not configured
+ahci0 at pci0 dev 31 function 2 "Intel 6 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 4: 1.5Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, ST1000VX000-1CU1, CV23> naa.5000c5007c6850b3
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+cd0 at scsibus0 targ 4 lun 0: <MATSHITA, BD-MLT UJ240AS, 1.20> removable
+"Intel 6 Series SMBus" rev 0x04 at pci0 dev 31 function 3 not configured
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+uhub3 at uhub0 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+uhidev0 at uhub3 port 1 configuration 1 interface 1 "NextWindow Touchscreen" rev 1.10/0.08 addr 3
+uhidev0: iclass 3/0
+uhid at uhidev0 not configured
+"NextWindow Touchscreen" rev 1.10/0.08 addr 3 at uhub3 port 1 configuration 1 not configured
+"Ricoh Company Ltd. USB2.0 Camera" rev 2.00/7.33 addr 4 at uhub3 port 2 not configured
+uhidev1 at uhub3 port 4 configuration 1 interface 0 "Standard system devices USB Input Device" rev 2.00/0.02 addr 5
+uhidev1: iclass 3/0
+uhid at uhidev1 not configured
+"vendor 0x0cf3 product 0x3005" rev 1.10/0.01 addr 6 at uhub3 port 5 not configured
+uhub4 at uhub1 port 4 configuration 1 interface 0 "GenesysLogic USB2.0 Hub" rev 2.10/4.01 addr 2
+uhidev2 at uhub4 port 4 configuration 1 interface 0 "ZY.Ltd ZY RMC" rev 1.10/6.00 addr 3
+uhidev2: iclass 3/1
+ukbd0 at uhidev2
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay1
+uhidev3 at uhub4 port 4 configuration 1 interface 1 "ZY.Ltd ZY RMC" rev 1.10/6.00 addr 3
+uhidev3: iclass 3/0, 6 report ids
+uhid at uhidev3 reportid 1 not configured
+uhid at uhidev3 reportid 2 not configured
+uhid at uhidev3 reportid 4 not configured
+uhid at uhidev3 reportid 6 not configured
+uhub5 at uhub2 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+uhidev4 at uhub5 port 4 configuration 1 interface 0 "Sony RF Receiver" rev 2.00/20.00 addr 3
+uhidev4: iclass 3/1
+ukbd1 at uhidev4
+wskbd2 at ukbd1 mux 1
+wskbd2: connecting to wsdisplay1
+uhidev5 at uhub5 port 4 configuration 1 interface 1 "Sony RF Receiver" rev 2.00/20.00 addr 3
+uhidev5: iclass 3/1, 17 report ids
+uhid at uhidev5 reportid 2 not configured
+uhid at uhidev5 reportid 3 not configured
+uhid at uhidev5 reportid 4 not configured
+uhid at uhidev5 reportid 5 not configured
+uhid at uhidev5 reportid 16 not configured
+uhid at uhidev5 reportid 17 not configured
+softraid0 at root
+scsibus1 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+athn0: device timeout
+umass0 at uhub1 port 1 configuration 1 interface 0 "Innostor PenDrive" rev 3.10/0.01 addr 4
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+OpenBSD 7.1 (RAMDISK_CD) #440: Mon Apr 11 18:09:13 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8552345600 (8156MB)
+avail mem = 8289136640 (7905MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xeb1d0 (17 entries)
+bios0: vendor American Megatrends Inc. version "R2080T7" date 08/01/2011
+bios0: Sony Corporation VPCL22Z1R
+acpi0 at bios0: ACPI 4.0
+acpi0: tables DSDT FACP APIC HPET DBGP SLIC MCFG SSDT SSDT SSDT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz, 2195.33 MHz, 06-2a-07
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 3 (RP02)
+acpiprt2 at acpi0: bus 4 (RP03)
+acpiprt3 at acpi0: bus -1 (RP05)
+acpiprt4 at acpi0: bus 1 (PEGP)
+acpiprt5 at acpi0: bus 2 (RP01)
+acpiprt6 at acpi0: bus 5 (RP04)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"SNY5001" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using IvyBridge MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 2G Host" rev 0x09
+ppb0 at pci0 dev 1 function 0 "Intel Core 2G PCIE" rev 0x09: msi
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 vendor "NVIDIA", unknown product 0x0df4 rev 0xa1
+vga1: aperture needed
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+"NVIDIA GF108 HD Audio" rev 0xa1 at pci1 dev 0 function 1 not configured
+"Intel 6 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 20
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel 6 Series HD Audio" rev 0x04 at pci0 dev 27 function 0 not configured
+ppb1 at pci0 dev 28 function 0 "Intel 6 Series PCIE" rev 0xb4: msi
+pci2 at ppb1 bus 2
+athn0 at pci2 dev 0 function 0 "Atheros AR9285" rev 0x01: apic 2 int 16
+athn0: AR9285 rev 2 (1T1R), ROM rev 14, address XXX
+ppb2 at pci0 dev 28 function 1 "Intel 6 Series PCIE" rev 0xb4: msi
+pci3 at ppb2 bus 3
+sdhc0 at pci3 dev 0 function 0 "Ricoh 5U822 SD/MMC" rev 0x09: apic 2 int 17
+sdhc0: SDHC 3.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+vendor "Ricoh", unknown product 0xe232 (class system subclass miscellaneous, rev 0x06) at pci3 dev 0 function 1 not configured
+"Ricoh 5U832 Firewire" rev 0x05 at pci3 dev 0 function 3 not configured
+ppb3 at pci0 dev 28 function 2 "Intel 6 Series PCIE" rev 0xb4: msi
+pci4 at ppb3 bus 4
+xhci0 at pci4 dev 0 function 0 "NEC xHCI" rev 0x04: msi, xHCI 0.96
+usb1 at xhci0: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "NEC xHCI root hub" rev 3.00/1.00 addr 1
+ppb4 at pci0 dev 28 function 3 "Intel 6 Series PCIE" rev 0xb4: msi
+pci5 at ppb4 bus 5
+re0 at pci5 dev 0 function 0 "Realtek 8168" rev 0x06: RTL8168E/8111E (0x2c00), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 4
+ehci1 at pci0 dev 29 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 23
+usb2 at ehci1: USB revision 2.0
+uhub2 at usb2 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel HM65 LPC" rev 0x04 at pci0 dev 31 function 0 not configured
+ahci0 at pci0 dev 31 function 2 "Intel 6 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 4: 1.5Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, ST1000VX000-1CU1, CV23> naa.5000c5007c6850b3
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+cd0 at scsibus0 targ 4 lun 0: <MATSHITA, BD-MLT UJ240AS, 1.20> removable
+"Intel 6 Series SMBus" rev 0x04 at pci0 dev 31 function 3 not configured
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+uhub3 at uhub0 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+uhidev0 at uhub3 port 1 configuration 1 interface 1 "NextWindow Touchscreen" rev 1.10/0.08 addr 3
+uhidev0: iclass 3/0
+uhid at uhidev0 not configured
+"NextWindow Touchscreen" rev 1.10/0.08 addr 3 at uhub3 port 1 configuration 1 not configured
+"Ricoh Company Ltd. USB2.0 Camera" rev 2.00/7.33 addr 4 at uhub3 port 2 not configured
+uhidev1 at uhub3 port 4 configuration 1 interface 0 "Standard system devices USB Input Device" rev 2.00/0.02 addr 5
+uhidev1: iclass 3/0
+uhid at uhidev1 not configured
+uhub3: port 5, set config 0 at addr 6 failed
+uhub3: device problem, disabling port 5
+umass0 at uhub1 port 1 configuration 1 interface 0 "Innostor PenDrive" rev 3.10/0.01 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <Innostor, Innostor, 1.00> removable
+sd1: 15237MB, 512 bytes/sector, 31205376 sectors
+uhub4 at uhub1 port 4 configuration 1 interface 0 "GenesysLogic USB2.0 Hub" rev 2.10/4.01 addr 3
+uhidev2 at uhub4 port 4 configuration 1 interface 0 "ZY.Ltd ZY RMC" rev 1.10/6.00 addr 4
+uhidev2: iclass 3/1
+ukbd0 at uhidev2
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay1
+uhidev3 at uhub4 port 4 configuration 1 interface 1 "ZY.Ltd ZY RMC" rev 1.10/6.00 addr 4
+uhidev3: iclass 3/0, 6 report ids
+uhid at uhidev3 reportid 1 not configured
+uhid at uhidev3 reportid 2 not configured
+uhid at uhidev3 reportid 4 not configured
+uhid at uhidev3 reportid 6 not configured
+uhub5 at uhub2 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0024" rev 2.00/0.00 addr 2
+uhidev4 at uhub5 port 4 configuration 1 interface 0 "Sony RF Receiver" rev 2.00/20.00 addr 3
+uhidev4: iclass 3/1
+ukbd1 at uhidev4
+wskbd2 at ukbd1 mux 1
+wskbd2: connecting to wsdisplay1
+uhidev5 at uhub5 port 4 configuration 1 interface 1 "Sony RF Receiver" rev 2.00/20.00 addr 3
+uhidev5: iclass 3/1, 17 report ids
+uhid at uhidev5 reportid 2 not configured
+uhid at uhidev5 reportid 3 not configured
+uhid at uhidev5 reportid 4 not configured
+uhid at uhidev5 reportid 5 not configured
+uhid at uhidev5 reportid 16 not configured
+uhid at uhidev5 reportid 17 not configured
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 7.1 (GENERIC) #443: Mon Apr 11 17:55:15 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC
+real mem = 8552345600 (8156MB)
+avail mem = 8278958080 (7895MB)
+warning: no entropy supplied by boot loader
+random: boothowto does not indicate good seed
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.7 @ 0xeb1d0 (17 entries)
+bios0: vendor American Megatrends Inc. version "R2080T7" date 08/01/2011
+bios0: Sony Corporation VPCL22Z1R
+acpi0 at bios0: ACPI 4.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC HPET DBGP SLIC MCFG SSDT SSDT SSDT
+acpi0: wakeup devices EHC1(S3) USB1(S3) USB2(S3) USB3(S3) USB4(S3) USB5(S3) USB6(S3) USB7(S3) PXSX(S3) PXSX(S3) PXSX(S3) PXSX(S3) PXSX(S4) EHC2(S3) PWRB(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i7-2670QM CPU @ 2.20GHz, 2195.33 MHz, 06-2a-07
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,DEADLINE,AES,XSAVE,AVX,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,XSAVEOPT,MELTDOWN
+cpu0: 256KB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 3 (RP02)
+acpiprt2 at acpi0: bus 4 (RP03)
+acpiprt3 at acpi0: bus -1 (RP05)
+acpiprt4 at acpi0: bus 1 (PEGP)
+acpiprt5 at acpi0: bus 2 (RP01)
+acpiprt6 at acpi0: bus 5 (RP04)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"SNY5001" at acpi0 not configured
+acpibtn0 at acpi0: PWRB
+acpicpu0 at acpi0: C2(350@104 mwait.1@0x20), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 96 degC
+acpivideo0 at acpi0: GFX0
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 2195 MHz: speeds: 2201, 2200, 2100, 2000, 1900, 1800, 1700, 1600, 1500, 1400, 1300, 1200, 1100, 1000, 900, 800 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 2G Host" rev 0x09
+ppb0 at pci0 dev 1 function 0 "Intel Core 2G PCIE" rev 0x09: msi
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 0 function 0 vendor "NVIDIA", unknown product 0x0df4 rev 0xa1
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+azalia0 at pci1 dev 0 function 1 "NVIDIA GF108 HD Audio" rev 0xa1: msi
+azalia0: no supported codecs
+"Intel 6 Series MEI" rev 0x04 at pci0 dev 22 function 0 not configured
+ehci0 at pci0 dev 26 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 20
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia1 at pci0 dev 27 function 0 "Intel 6 Series HD Audio" rev 0x04: msi
+azalia1: codecs: Realtek ALC889
+audio0 at azalia1
+ppb1 at pci0 dev 28 function 0 "Intel 6 Series PCIE" rev 0xb4: msi
+pci2 at ppb1 bus 2
+athn0 at pci2 dev 0 function 0 "Atheros AR9285" rev 0x01: apic 2 int 16
+athn0: AR9285 rev 2 (1T1R), ROM rev 14, address XXX
+ppb2 at pci0 dev 28 function 1 "Intel 6 Series PCIE" rev 0xb4: msi
+pci3 at ppb2 bus 3
+sdhc0 at pci3 dev 0 function 0 "Ricoh 5U822 SD/MMC" rev 0x09: apic 2 int 17
+sdhc0: SDHC 3.0, 50 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+vendor "Ricoh", unknown product 0xe232 (class system subclass miscellaneous, rev 0x06) at pci3 dev 0 function 1 not configured
+"Ricoh 5U832 Firewire" rev 0x05 at pci3 dev 0 function 3 not configured
+ppb3 at pci0 dev 28 function 2 "Intel 6 Series PCIE" rev 0xb4: msi
+pci4 at ppb3 bus 4
+xhci0 at pci4 dev 0 function 0 "NEC xHCI" rev 0x04: msi, xHCI 0.96
+usb1 at xhci0: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "NEC xHCI root hub" rev 3.00/1.00 addr 1
+ppb4 at pci0 dev 28 function 3 "Intel 6 Series PCIE" rev 0xb4: msi
+pci5 at ppb4 bus 5
+re0 at pci5 dev 0 function 0 "Realtek 8168" rev 0x06: RTL8168E/8111E (0x2c00), msi, address XXX
+rgephy0 at re0 phy 7: RTL8169S/8110S/8211 PHY, rev. 4
+ehci1 at pci0 dev 29 function 0 "Intel 6 Series USB" rev 0x04: apic 2 int 23
+usb2 at ehci1: USB revision 2.0
+uhub2 at usb2 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+pcib0 at pci0 dev 31 function 0 "Intel HM65 LPC" rev 0x04
+ahci0 at pci0 dev 31 function 2 "Intel 6 Series AHCI" rev 0x04: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 4: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, ST1000VX000-1CU1, CV23> naa.5000c5007c6850b3
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+cd0 at scsibus1 targ 4 lun 0: <MATSHITA, BD-MLT UJ240AS, 1.20> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 6 Series SMBus" rev 0x04: apic 2 int 18
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x52: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT (using slow L1TF mitigation)
+/dev/ksyms: Symbol table not valid.
+uhub3 at uhub0 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev0 at uhub3 port 1 configuration 1 interface 1 "NextWindow Touchscreen" rev 1.10/0.08 addr 3
+uhidev0: iclass 3/0
+uhid0 at uhidev0: input=64, output=64, feature=0
+ugen0 at uhub3 port 1 configuration 1 "NextWindow Touchscreen" rev 1.10/0.08 addr 3
+uvideo0 at uhub3 port 2 configuration 1 interface 0 "Ricoh Company Ltd. USB2.0 Camera" rev 2.00/7.33 addr 4
+video0 at uvideo0
+uhidev1 at uhub3 port 4 configuration 1 interface 0 "Standard system devices USB Input Device" rev 2.00/0.02 addr 5
+uhidev1: iclass 3/0
+uhid1 at uhidev1: input=64, output=64, feature=0
+uhub3: port 5, set config 0 at addr 6 failed
+uhub3: device problem, disabling port 5
+uhub4 at uhub1 port 4 configuration 1 interface 0 "GenesysLogic USB2.0 Hub" rev 2.10/4.01 addr 2
+uhidev2 at uhub4 port 4 configuration 1 interface 0 "ZY.Ltd ZY RMC" rev 1.10/6.00 addr 3
+uhidev2: iclass 3/1
+ukbd0 at uhidev2: 8 variable keys, 6 key codes
+wskbd1 at ukbd0 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev3 at uhub4 port 4 configuration 1 interface 1 "ZY.Ltd ZY RMC" rev 1.10/6.00 addr 3
+uhidev3: iclass 3/0, 6 report ids
+ucc0 at uhidev3 reportid 1: 1024 usages, 18 keys, array
+wskbd2 at ucc0 mux 1
+wskbd2: connecting to wsdisplay0
+uhid2 at uhidev3 reportid 2: input=2, output=0, feature=0
+ums0 at uhidev3 reportid 4: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+uhid3 at uhidev3 reportid 6: input=0, output=0, feature=31
+uhub5 at uhub2 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev4 at uhub5 port 4 configuration 1 interface 0 "Sony RF Receiver" rev 2.00/20.00 addr 3
+uhidev4: iclass 3/1
+ukbd1 at uhidev4: 8 variable keys, 6 key codes
+wskbd3 at ukbd1 mux 1
+wskbd3: connecting to wsdisplay0
+uhidev5 at uhub5 port 4 configuration 1 interface 1 "Sony RF Receiver" rev 2.00/20.00 addr 3
+uhidev5: iclass 3/1, 17 report ids
+ums1 at uhidev5 reportid 2: 16 buttons, Z and W dir
+wsmouse1 at ums1 mux 0
+ucc1 at uhidev5 reportid 3: 652 usages, 18 keys, array
+wskbd4 at ucc1 mux 1
+wskbd4: connecting to wsdisplay0
+uhid4 at uhidev5 reportid 4: input=1, output=0, feature=0
+uhid5 at uhidev5 reportid 5: input=1, output=0, feature=0
+uhid6 at uhidev5 reportid 16: input=6, output=6, feature=0
+uhid7 at uhidev5 reportid 17: input=19, output=19, feature=0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (bbc0387627a52558.a) swap on sd0b dump on sd0b
+ugen1 at uhub3 port 5 "Foxconn product 0xe027" rev 1.10/0.01 addr 6

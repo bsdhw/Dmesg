@@ -1,0 +1,261 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p12-HBSD #0  3c6040c7243(stable/21.1)-dirty: Mon Jan 25 12:27:52 CET 2021
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: Intel(R) Atom(TM) CPU C3558 @ 2.20GHz (2200.07-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506f1  Family=0x6  Model=0x5f  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x4ff8ebbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,CX16,xTPR,PDCM,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x101<LAHF,Prefetch>
+  Structured Extended Features=0x2294e283<FSGSBASE,TSCADJ,SMEP,ERMS,NFPUSG,MPX,PQE,RDSEED,SMAP,CLFLUSHOPT,PROCTRACE,SHA>
+  Structured Extended Features3=0xac000000<IBPB,STIBP,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x9<RDCL_NO,SKIP_L1DFL_VME>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 8216731648 (7836 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  TIANO   >
+WARNING: L1 data cache covers fewer APIC IDs than a core (0 < 1)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119 on motherboard
+Launching APs: 1 2 3
+Timecounter "TSC-low" frequency 1100035230 Hz quality 1000
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff8128f7c0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000054 [4336] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <ALASKA A M I > on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+Event timer "HPET1" frequency 24000000 Hz quality 440
+Event timer "HPET2" frequency 24000000 Hz quality 440
+Event timer "HPET3" frequency 24000000 Hz quality 440
+Event timer "HPET4" frequency 24000000 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 6.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <processor> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> mem 0xdffa0000-0xdffbffff irq 16 at device 9.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igb0: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xd000-0xd01f mem 0xdfa00000-0xdfafffff,0xdfb00000-0xdfb03fff irq 16 at device 0.0 on pci2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib3: <ACPI PCI-PCI bridge> mem 0xdff80000-0xdff9ffff irq 17 at device 10.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+igb1: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xc000-0xc01f mem 0xdf700000-0xdf7fffff,0xdf800000-0xdf803fff irq 17 at device 0.0 on pci3
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib4: <ACPI PCI-PCI bridge> mem 0xdff60000-0xdff7ffff irq 18 at device 11.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+igb2: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xb000-0xb01f mem 0xdf400000-0xdf4fffff,0xdf500000-0xdf503fff irq 18 at device 0.0 on pci4
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 4 RX queues 4 TX queues
+igb2: Using MSI-X interrupts with 5 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib5: <ACPI PCI-PCI bridge> mem 0xdff40000-0xdff5ffff irq 19 at device 12.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+igb3: <Intel(R) PRO/1000 PCI-Express Network Driver> port 0xa000-0xa01f mem 0xdf100000-0xdf1fffff,0xdf200000-0xdf203fff irq 19 at device 0.0 on pci5
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 4 RX queues 4 TX queues
+igb3: Using MSI-X interrupts with 5 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib6: <ACPI PCI-PCI bridge> mem 0xdff20000-0xdff3ffff irq 20 at device 14.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> mem 0xdff00000-0xdff1ffff irq 22 at device 16.0 on pci0
+pci7: <ACPI PCI bus> on pcib7
+ahci0: <Intel Denverton AHCI SATA controller> port 0xe050-0xe057,0xe040-0xe043,0xe020-0xe03f mem 0xdffd4000-0xdffd5fff,0xdffdb000-0xdffdb0ff,0xdffda000-0xdffda7ff irq 20 at device 19.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci0
+device_attach: ahciem0 attach returned 6
+xhci0: <Intel Denverton USB 3.0 controller> mem 0xdffc0000-0xdffcffff irq 19 at device 21.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib8: <ACPI PCI-PCI bridge> irq 16 at device 22.0 on pci0
+pci8: <ACPI PCI bus> on pcib8
+ix0: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xdec00000-0xdedfffff,0xdee04000-0xdee07fff irq 16 at device 0.0 on pci8
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xdea00000-0xdebfffff,0xdee00000-0xdee03fff irq 17 at device 0.1 on pci8
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+pcib9: <ACPI PCI-PCI bridge> at device 23.0 on pci0
+pci9: <ACPI PCI bus> on pcib9
+ix2: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xde600000-0xde7fffff,0xde804000-0xde807fff irq 16 at device 0.0 on pci9
+ix2: Using 2048 TX descriptors and 2048 RX descriptors
+ix2: Using 4 RX queues 4 TX queues
+ix2: Using MSI-X interrupts with 5 vectors
+ix2: allocated for 4 queues
+ix2: allocated for 4 rx queues
+ix2: Ethernet address: ...
+ix2: netmap queues/slots: TX 4/2048, RX 4/2048
+ix3: <Intel(R) PRO/10GbE PCI-Express Network Driver> mem 0xde400000-0xde5fffff,0xde800000-0xde803fff irq 17 at device 0.1 on pci9
+ix3: Using 2048 TX descriptors and 2048 RX descriptors
+ix3: Using 4 RX queues 4 TX queues
+ix3: Using MSI-X interrupts with 5 vectors
+ix3: allocated for 4 queues
+ix3: allocated for 4 rx queues
+ix3: Ethernet address: ...
+ix3: netmap queues/slots: TX 4/2048, RX 4/2048
+pci0: <simple comms> at device 24.0 (no driver attached)
+sdhci_pci0: <Intel Denverton eMMC 5.0 Controller> mem 0xdffd8000-0xdffd8fff,0xdffd7000-0xdffd7fff irq 16 at device 28.0 on pci0
+sdhci_pci0: 1 slot(s) allocated
+mmc0: <MMC/SD bus> on sdhci_pci0
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_tz0: <Thermal Zone> on acpi0
+ppc1: <Parallel port> port 0x378-0x37f irq 5 on acpi0
+ppc1: Generic chipset (NIBBLE-only) in COMPATIBLE mode
+ppbus0: <Parallel port bus> on ppc1
+lpt0: <Printer> on ppbus0
+lpt0: Interrupt-driven port
+ppi0: <Parallel I/O> on ppbus0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc0fff,0xc1000-0xc1fff,0xc2000-0xc2fff,0xc3000-0xc3fff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 214700001600
+device_attach: est0 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 214700001600
+device_attach: est1 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 214700001600
+device_attach: est2 attach returned 6
+est: CPU supports Enhanced Speedstep, but is not recognized.
+est: cpu_vendor GenuineIntel, msr 214700001600
+device_attach: est3 attach returned 6
+Timecounters tick every 1.000 msec
+ugen0.1: <0x8086 XHCI root HUB> at usbus0
+uhub0: <0x8086 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+mmc0: No compatible cards found on bus
+ada0 at ahcich3 bus 0 scbus1 target 0 lun 0
+ada0: <TS240GSSD220S R0510A0> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 228936MB (468862128 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0: 8 ports with 8 removable, self powered
+igb0: link state changed to UP
+igb1: link state changed to UP
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+igb0: link state changed to DOWN
+igb1: link state changed to DOWN
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb0: link state changed to UP
+igb1: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb2: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+igb2: link state changed to DOWN
+igb2: link state changed to UP
+igb2: link state changed to DOWN
+igb2: link state changed to UP
+igb2: link state changed to DOWN
+igb2: link state changed to UP
+igb0: link state changed to DOWN
+igb0: link state changed to UP
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on igb0
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled
+pflog0: promiscuous mode disabled
+pflog0: promiscuous mode enabled

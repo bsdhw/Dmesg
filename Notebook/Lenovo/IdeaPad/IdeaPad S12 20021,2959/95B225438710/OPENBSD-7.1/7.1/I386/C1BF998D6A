@@ -1,0 +1,129 @@
+OpenBSD 7.1 (GENERIC.MP) #169: Mon Apr 11 19:10:51 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/i386/compile/GENERIC.MP
+real mem  = 2137341952 (2038MB)
+avail mem = 2081529856 (1985MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: date 07/17/09, BIOS32 rev. 0 @ 0xfda20, SMBIOS rev. 2.5 @ 0xdc010 (35 entries)
+bios0: vendor LENOVO version "19CN21WW" date 07/17/2009
+bios0: LENOVO 20021,2959
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP HPET MCFG TCPA TMOR SLIC APIC BOOT SSDT SSDT
+acpi0: wakeup devices SLPB(S3) LID0(S3) HDEF(S4) PXS1(S4) PXS2(S4) PXS3(S4) PXS4(S4) PXS5(S4) PXS6(S4) USB1(S4) USB2(S4) USB3(S4) USB4(S4) USB7(S4)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 14318179 Hz
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Atom(TM) CPU N270 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-1c-02
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,SENSOR,MELTDOWN
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 133MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Atom(TM) CPU N270 @ 1.60GHz ("GenuineIntel" 686-class) 1.60 GHz, 06-1c-02
+cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,EST,TM2,SSSE3,xTPR,PDCM,MOVBE,NXE,LAHF,PERF,SENSOR,MELTDOWN
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (RP01)
+acpiprt2 at acpi0: bus 3 (RP02)
+acpiprt3 at acpi0: bus 4 (RP03)
+acpiprt4 at acpi0: bus 5 (RP04)
+acpiprt5 at acpi0: bus -1 (RP05)
+acpiprt6 at acpi0: bus -1 (RP06)
+acpiec0 at acpi0
+"*pnp0c14" at acpi0 not configured
+acpibtn0 at acpi0: SLPB
+acpibtn1 at acpi0: LID0
+"PNP0A08" at acpi0 not configured
+"VPC2004" at acpi0 not configured
+acpibat0 at acpi0: BAT0 model "L08S6C21" serial ... type LION oem "3031004f594e4153"
+acpiac0 at acpi0: AC unit online
+acpicmos0 at acpi0
+"SYN0316" at acpi0 not configured
+acpicpu0 at acpi0: !C3(100@100 mwait.3@0x30), !C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0: !C3(100@100 mwait.3@0x30), !C2(500@20 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 90 degC
+acpitz1 at acpi0: critical temperature is 90 degC
+acpivideo0 at acpi0: GFX0
+acpivout0 at acpivideo0: DD04
+bios0: ROM list: 0xc0000/0xec00! 0xcf000/0x1e00 0xdc000/0x4000! 0xe0000/0x1800!
+cpu0: Enhanced SpeedStep 1597 MHz: speeds: 1600, 1333, 1067, 800 MHz
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 "Intel 82945GME Host" rev 0x03
+inteldrm0 at pci0 dev 2 function 0 "Intel 82945GME Video" rev 0x03
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0xd0000000, size 0x10000000
+inteldrm0: apic 2 int 16, I945GM, gen 3
+"Intel 82945GM Video" rev 0x03 at pci0 dev 2 function 1 not configured
+azalia0 at pci0 dev 27 function 0 "Intel 82801GB HD Audio" rev 0x02: msi
+azalia0: codecs: Realtek ALC269
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 82801GB PCIE" rev 0x02: apic 2 int 16
+pci1 at ppb0 bus 2
+bge0 at pci1 dev 0 function 0 "Broadcom BCM5906M" rev 0x02, BCM5906 A2 (0xc002): msi, address XXX
+brgphy0 at bge0 phy 1: BCM5906 10/100baseTX PHY, rev. 0
+ppb1 at pci0 dev 28 function 1 "Intel 82801GB PCIE" rev 0x02: apic 2 int 17
+pci2 at ppb1 bus 3
+"Broadcom BCM4315" rev 0x01 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 28 function 2 "Intel 82801GB PCIE" rev 0x02: apic 2 int 18
+pci3 at ppb2 bus 4
+ppb3 at pci0 dev 28 function 3 "Intel 82801GB PCIE" rev 0x02: apic 2 int 19
+pci4 at ppb3 bus 5
+uhci0 at pci0 dev 29 function 0 "Intel 82801GB USB" rev 0x02: apic 2 int 23
+uhci1 at pci0 dev 29 function 1 "Intel 82801GB USB" rev 0x02: apic 2 int 19
+uhci2 at pci0 dev 29 function 2 "Intel 82801GB USB" rev 0x02: apic 2 int 18
+uhci3 at pci0 dev 29 function 3 "Intel 82801GB USB" rev 0x02: apic 2 int 16
+ehci0 at pci0 dev 29 function 7 "Intel 82801GB USB" rev 0x02: apic 2 int 23
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb4 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xe2
+pci5 at ppb4 bus 10
+ichpcib0 at pci0 dev 31 function 0 "Intel 82801GBM LPC" rev 0x02: PM disabled
+pciide0 at pci0 dev 31 function 1 "Intel 82801GB IDE" rev 0x02: DMA, channel 0 configured to compatibility, channel 1 configured to compatibility
+pciide0: channel 0 disabled (no drives)
+pciide0: channel 1 ignored (disabled)
+ahci0 at pci0 dev 31 function 2 "Intel 82801GBM AHCI" rev 0x02: msi, AHCI 1.1
+ahci0: port 0: 1.5Gb/s
+ahci0: PHY offline on port 2
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD1600BEVT-2, 11.0> naa.50014ee2adde0b58
+sd0: 152627MB, 512 bytes/sector, 312581808 sectors
+ichiic0 at pci0 dev 31 function 3 "Intel 82801GB SMBus" rev 0x02: apic 2 int 19
+iic0 at ichiic0
+spdmem0 at iic0 addr 0x51: 1GB DDR2 SDRAM non-parity PC2-5300CL5 SO-DIMM
+usb1 at uhci0: USB revision 1.0
+uhub1 at usb1 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb2 at uhci1: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb3 at uhci2: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+usb4 at uhci3: USB revision 1.0
+uhub4 at usb4 configuration 1 interface 0 "Intel UHCI root hub" rev 1.00/1.00 addr 1
+isa0 at ichpcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 6.3, 0x1a0b1 0xa04000 0x0 0xa04711 0x0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+uvideo0 at uhub0 port 7 configuration 1 interface 0 "BISON Corporation Lenovo EasyCamera" rev 2.00/3.10 addr 2
+video0 at uvideo0
+ugen0 at uhub2 port 2 "Broadcom Corp BCM2046 Bluetooth Device" rev 2.00/6.01 addr 2
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (48bea1002396d08d.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x800, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

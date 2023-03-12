@@ -1,0 +1,380 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p3 GENERIC amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 1024x768
+CPU: AMD Ryzen 9 5900X 12-Core Processor             (3700.13-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0xa20f12  Family=0x19  Model=0x21  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ef8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c97a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x40068c<UMIP,PKU,VAES,VPCLMULQDQ,RDPID>
+  Structured Extended Features3=0x10<FSRM>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x111ef657<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,IBRS,STIBP,STIBP_ALWAYSON,PREFER_IBRS,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 68719476736 (65536 MB)
+avail memory = 66766438400 (63673 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 24 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 6 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 16 17 12 21 19 15 22 20 18 14 13 1 6 8 4 3 11 5 2 7 9 10 23
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0xdda08000-0xdda0801e
+smbios0: Version: 2.8, BCD Revision: 2.8
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xfcf00000-0xfcf03fff at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+nvme1: <Generic NVMe Device> mem 0xfcb00000-0xfcb03fff at device 0.0 on pci4
+pcib5: <ACPI PCI-PCI bridge> at device 1.0 on pci3
+pci5: <ACPI PCI bus> on pcib5
+pci5: <network> at device 0.0 (no driver attached)
+pcib6: <ACPI PCI-PCI bridge> at device 4.0 on pci3
+pci6: <ACPI PCI bus> on pcib6
+ahci0: <ASMedia ASM1062 AHCI SATA controller> port 0xe050-0xe057,0xe040-0xe043,0xe030-0xe037,0xe020-0xe023,0xe000-0xe01f mem 0xfc900000-0xfc9001ff at device 0.0 on pci6
+ahci0: AHCI v1.20 with 2 6Gbps ports, Port Multiplier supported
+ahci0: quirks=0xc00000<NOCCS,NOAUX>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib7: <ACPI PCI-PCI bridge> at device 5.0 on pci3
+pci7: <ACPI PCI bus> on pcib7
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0xd000-0xd0ff mem 0xfc804000-0xfc804fff,0xfc800000-0xfc803fff at device 0.0 on pci7
+re0: Using 1 MSI-X message
+re0: turning off MSI enable bit.
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib8: <ACPI PCI-PCI bridge> at device 8.0 on pci3
+pci8: <ACPI PCI bus> on pcib8
+pci8: <unknown> at device 0.0 (no driver attached)
+xhci0: <AMD Matisse USB 3.0 controller> mem 0xfc500000-0xfc5fffff at device 0.1 on pci8
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+xhci1: <AMD Matisse USB 3.0 controller> mem 0xfc400000-0xfc4fffff at device 0.3 on pci8
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib9: <PCI-PCI bridge> at device 9.0 on pci3
+pci9: <PCI bus> on pcib9
+pci9: <mass storage, RAID> at device 0.0 (no driver attached)
+pcib10: <PCI-PCI bridge> at device 10.0 on pci3
+pci10: <PCI bus> on pcib10
+pci10: <mass storage, RAID> at device 0.0 (no driver attached)
+pcib11: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci11: <ACPI PCI bus> on pcib11
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0x7c00000000-0x7dffffffff,0x7e00000000-0x7e001fffff,0xfce00000-0xfce3ffff at device 0.0 on pci11
+hdac0: <ATI (0xaaf0) HDA Controller> mem 0xfce60000-0xfce63fff at device 0.1 on pci11
+pcib12: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci12: <ACPI PCI bus> on pcib12
+pci12: <unknown> at device 0.0 (no driver attached)
+pcib13: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci13: <ACPI PCI bus> on pcib13
+pci13: <unknown> at device 0.0 (no driver attached)
+xhci2: <AMD Matisse USB 3.0 controller> mem 0xfcc00000-0xfccfffff at device 0.3 on pci13
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+hdac1: <AMD X570 HDA Controller> mem 0xfcd00000-0xfcd07fff at device 0.4 on pci13
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+atkbdc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1849999927 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen2.1: <AMD XHCI root HUB> at usbus2
+uhub0 on usbus2
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+ugen1.1: <AMD XHCI root HUB> at usbus1
+uhub1 on usbus1
+uhub1: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+ugen0.1: <AMD XHCI root HUB> at usbus0
+uhub2 on usbus0
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+nvd0: <Samsung SSD 970 EVO Plus 2TB> NVMe namespace
+nvd0: 1907729MB (3907029168 512 byte sectors)
+nvd1: <Reletech P400 M.2 Pro Q2000GB> NVMe namespace
+nvd1: 1907729MB (3907029168 512 byte sectors)
+GEOM_LABEL[1]: MSDOSFS: nvd0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider nvd0 is diskid/XXXXXXXXXXXXXXXXXXXXX
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+GEOM_LABEL[1]: Label for provider nvd0p1 is gpt/efiboot0.
+GEOM_LABEL[1]: Label for provider nvd0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: nvd0p1: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: nvd0p1: FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label for provider nvd0p2 is gpt/gptboot0.
+GEOM_LABEL[1]: Label for provider nvd0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+GEOM_LABEL[1]: MSDOSFS: nvd0p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider nvd0p3 is gpt/zfs0.
+GEOM_LABEL[1]: Label for provider nvd0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: nvd0p3: no FAT signature found.
+GEOM: nvd1: the primary GPT table is corrupt or invalid.
+GEOM: nvd1: using the secondary instead -- recovery strongly advised.
+GEOM_LABEL[1]: MSDOSFS: nvd1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider nvd1 is diskid/XXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs0(gpt/zfs0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label for provider nvd1p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: nvd1p1: no FAT signature found.
+GEOM: diskid/XXXXXXXXXXXXXXXXXX the primary GPT table is corrupt or invalid.
+GEOM: diskid/XXXXXXXXXXXXXXXXXX using the secondary instead -- recovery strongly advised.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXX no FAT signature found.
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+pcm4: <ATI R6xx (HDMI)> at nid 11 on hdaa0
+pcm5: <ATI R6xx (HDMI)> at nid 13 on hdaa0
+hdacc1: <Realtek ALC1220 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC1220 Audio Function Group> at nid 1 on hdacc1
+pcm6: <Realtek ALC1220 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm7: <Realtek ALC1220 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm8: <Realtek ALC1220 (Rear Digital)> at nid 30 on hdaa1
+Trying to mount root from zfs:zroot/ROOT/default []...
+uhub0: 8 ports with 8 removable, self powered
+uhub2: 10 ports with 10 removable, self powered
+uhub1: 10 ports with 10 removable, self powered
+ugen2.2: <vendor 0x0451 product 0x8142> at usbus2
+uhub3 on uhub0
+uhub3: <vendor 0x0451 product 0x8142, class 9/0, rev 2.10/1.00, addr 1> on usbus2
+uhub3: MTT enabled
+ugen1.2: <MSI MYSTIC LIGHT> at usbus1
+ugen0.2: <Razer Razer Nari Ultimate> at usbus0
+Root mount waiting for: usbus0 usbus1 usbus2
+ugen1.3: <vendor 0x05e3 USB2.0 Hub> at usbus1
+uhub4 on uhub1
+uhub4: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/60.90, addr 2> on usbus1
+ugen0.3: <Microchip USB4216 Smart Hub> at usbus0
+uhub5 on uhub2
+uhub5: <Microchip USB4216 Smart Hub, class 9/0, rev 2.10/6.08, addr 2> on usbus0
+uhub5: MTT enabled
+uhub3: 4 ports with 4 removable, self powered
+ugen2.3: <LG Electronics Inc. LG Monitor Controls> at usbus2
+uhub4: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0 usbus1 usbus2
+uhub5: 5 ports with 5 removable, self powered
+uhub_reattach_port: port 5 U1 timeout failed, error=USB_ERR_IOERROR
+uhub_reattach_port: port 5 U2 timeout failed, error=USB_ERR_IOERROR
+ugen1.4: <vendor 0x8087 product 0x0032> at usbus1
+ugen0.4: <Razer Razer Naga Trinity> at usbus0
+ukbd0 on uhub5
+ukbd0: <Razer Razer Naga Trinity, class 0/0, rev 2.00/2.00, addr 3> on usbus0
+kbd2 at ukbd0
+ukbd1 on uhub5
+ukbd1: <Razer Razer Naga Trinity, class 0/0, rev 2.00/2.00, addr 3> on usbus0
+kbd3 at ukbd1
+ugen0.5: <vendor 0x1a40 USB 2.0 Hub> at usbus0
+uhub6 on uhub5
+uhub6: <vendor 0x1a40 USB 2.0 Hub, class 9/0, rev 2.00/1.00, addr 4> on usbus0
+Root mount waiting for: usbus0 usbus2
+usb_msc_auto_quirk: UQ_MSC_NO_GETMAXLUN set for USB mass storage device Micron Technology Inc Crucial X8 SSD (0x0634:0x5600)
+ugen2.4: <Micron Technology Inc Crucial X8 SSD> at usbus2
+umass0 on uhub0
+umass0: <Micron Technology Inc Crucial X8 SSD, class 0/0, rev 3.20/1.00, addr 3> on usbus2
+umass0:  SCSI over Bulk-Only; quirks = 0x0100
+umass0:2:0: Attached to scbus2
+da0 at umass-sim0 bus 0 scbus2 target 0 lun 0
+da0: <Micron Crucial X8 SSD 0> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 1907729MB (3907029168 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM_LABEL[1]: MSDOSFS: da0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider da0 is diskid/XXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider da0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p1: FAT32 volume not valid.
+GEOM_LABEL[1]: Label for provider da0p1 is ntfs/Stuff.
+GEOM_LABEL[1]: Label for provider da0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p2: no FAT signature found.
+GEOM_LABEL[1]: ext2fs file system detected on da0p2.
+GEOM_LABEL[1]: Label for provider da0p2 is ext2fs/Linux%20Stuff.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXX FAT32 volume not valid.
+GEOM_LABEL[1]: Label Stuff(ntfs/Stuff) already exists (diskid/XXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: ext2fs file system detected on diskid/XXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label Linux%20Stuff(ext2fs/Linux%20Stuff) already exists (diskid/XXXXXXXXXXXXXXXXXXX).
+uhub6: 4 ports with 4 removable, self powered
+ugen2.5: <vendor 0x0451 product 0x8140> at usbus2
+uhub7 on uhub0
+uhub7: <vendor 0x0451 product 0x8140, class 9/0, rev 3.00/1.00, addr 4> on usbus2
+ugen0.6: <GenesysLogic USB2.1 Hub> at usbus0
+uhub8 on uhub6
+uhub8: <GenesysLogic USB2.1 Hub, class 9/0, rev 2.10/6.55, addr 5> on usbus0
+uhub7: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0
+uhub8: 4 ports with 4 removable, self powered
+ugen0.7: <Yubico YubiKey OTP+FIDO+CCID> at usbus0
+ukbd2 on uhub8
+ukbd2: <Yubico YubiKey OTP+FIDO+CCID, class 0/0, rev 2.00/5.43, addr 6> on usbus0
+kbd4 at ukbd2
+Root mount waiting for: usbus0
+ugen0.8: <USB C USB C Video Adaptor> at usbus0
+ugen0.9: <System76 Launch Configurable Keyboard (launch1)> at usbus0
+ukbd3 on uhub5
+ukbd3: <System76 Launch Configurable Keyboard (launch1), class 0/0, rev 1.10/0.01, addr 8> on usbus0
+kbd5 at ukbd3
+ukbd4 on uhub5
+ukbd4: <System76 Launch Configurable Keyboard (launch1), class 0/0, rev 1.10/0.01, addr 8> on usbus0
+kbd6 at ukbd4
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gpt/zfs0 removed.
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: cannot find EC device
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WMIC.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+ugen0.10: <Razer Razer Nari Ultimate> at usbus0
+Cuse v0.1.36 @ /dev/cuse
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+lo0: link state changed to UP
+re0: link state changed to DOWN
+re0: link state changed to UP
+Intel(R) Wireless WiFi based driver for FreeBSD
+iwlwifi0: <iwlwifi> mem 0xfca00000-0xfca03fff at device 0.0 on pci5
+iwlwifi0: could not load firmware image 'iwlwifi-ty-a0-gf-a0-70.ucode'
+iwlwifi0: File size way too small!
+iwlwifi0: could not load firmware image 'iwlwifi-ty-a0-gf-a0-69.ucode'
+iwlwifi0: File size way too small!
+iwlwifi0: successfully loaded firmware image 'iwlwifi-ty-a0-gf-a0-68.ucode'
+iwlwifi0: api flags index 2 larger than supported by driver
+iwlwifi0: TLV_FW_FSEQ_VERSION: FSEQ Version: XXX.XXX.XXX.XXX
+iwlwifi0: loaded firmware version 68.01d30b0c.0 ty-a0-gf-a0-68.ucode op_mode iwlmvm
+iwlwifi0: Detected Intel(R) Wi-Fi 6 AX210 160MHz, REV=0x420
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+iwlwifi0: successfully loaded firmware image 'iwlwifi-ty-a0-gf-a0.pnvm'
+iwlwifi0: loaded PNVM version dda57f4f
+iwlwifi0: Detected RF GF, rfid=0x10d000
+iwlwifi0: base HW address: XXX
+uhid0 on uhub1
+uhid0: <MSI MYSTIC LIGHT, class 0/0, rev 1.10/0.01, addr 1> on usbus1
+uhid1 on uhub3
+uhid1: <HID I2C> on usbus2
+uhid2 on uhub3
+uhid2: <LG UltraGear Monitor> on usbus2
+uhid3 on uhub2
+uhid3: <Hid Interface> on usbus0
+uhid4 on uhub5
+uhid4: <Hid Interface> on usbus0
+uhid5 on uhub8
+uhid5: <Yubico YubiKey OTP+FIDO+CCID, class 0/0, rev 2.00/5.43, addr 6> on usbus0
+uhid6 on uhub5
+uhid6: <System76 Launch Configurable Keyboard (launch1), class 0/0, rev 1.10/0.01, addr 8> on usbus0
+uaudio0 on uhub2
+uaudio0: <Razer Nari Ultimate - Chat> on usbus0
+uaudio0: Play[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 24000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 22050 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 11025 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[0]: 8000 Hz, 2 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 48000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 44100 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 32000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 24000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 22050 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 16000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 11025 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Play[1]: 8000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 48000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 44100 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 32000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 24000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 22050 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 16000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 11025 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: Record[0]: 8000 Hz, 1 ch, 16-bit S-LE PCM format, 2x8ms buffer.
+uaudio0: No MIDI sequencer.
+pcm9: <USB audio> on uaudio0
+pcm10: <USB audio> on uaudio0
+uaudio0: HID volume keys found.
+ums0 on uhub5
+ums0: <Razer Razer Naga Trinity, class 0/0, rev 2.00/2.00, addr 3> on usbus0
+ums0: 5 buttons and [XYZ] coordinates ID=0
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label ext2fs/Linux%20Stuff removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label ntfs/Stuff removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label for provider da0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p2: no FAT signature found.
+GEOM_LABEL[1]: ext2fs file system detected on da0p2.
+GEOM_LABEL[1]: Label for provider da0p2 is ext2fs/Linux%20Stuff.
+wlan0: Ethernet address: ...
+amdsmn0: <AMD Family 19h System Management Network> on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0

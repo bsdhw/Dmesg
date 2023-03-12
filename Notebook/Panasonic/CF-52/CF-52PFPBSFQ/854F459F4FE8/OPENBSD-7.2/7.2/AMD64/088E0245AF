@@ -1,0 +1,1509 @@
+OpenBSD 7.2 (RAMDISK_CD) #725: Tue Sep 27 12:02:48 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 4056928256 (3868MB)
+avail mem = 3929960448 (3747MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xeb110 (52 entries)
+bios0: vendor American Megatrends Inc. version "V3.00L14" date 08/24/2010
+bios0: Panasonic Corporation CF-52PFPBSFQ
+acpi0 at bios0: ACPI 4.0
+acpi0: tables DSDT FACP APIC MCFG HPET ASF! SLIC SSDT SSDT SSDT TCPA SSDT
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz, 2926.44 MHz, 06-25-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,AES,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,SENSOR,ARAT,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 4-way I-cache, 256KB 64b/line 8-way L2 cache, 3MB 64b/line 12-way L3 cache
+cpu0: apic clock running at 133MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P2)
+acpiprt2 at acpi0: bus -1 (RP05)
+acpiprt3 at acpi0: bus -1 (RP07)
+acpiprt4 at acpi0: bus -1 (RP08)
+acpiprt5 at acpi0: bus -1 (PEG3)
+acpiprt6 at acpi0: bus -1 (PEG5)
+acpiprt7 at acpi0: bus 10 (RP03)
+acpiprt8 at acpi0: bus -1 (RP04)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus 11 (BR10)
+acpiprt11 at acpi0: bus 2 (RP02)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+"IFX0102" at acpi0 not configured
+acpipci1 at acpi0 CPBG
+"MAT0021" at acpi0 not configured
+"MAT0019" at acpi0 not configured
+"ACPI0003" at acpi0 not configured
+"PNP0C0A" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+acpicpu at acpi0 not configured
+acpitz at acpi0 not configured
+acpitz at acpi0 not configured
+cpu0: using IvyBridge MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core Host" rev 0x02
+vga1 at pci0 dev 2 function 0 "Intel HD Graphics" rev 0x02
+wsdisplay1 at vga1 mux 1: console (80x25, vt100 emulation)
+em0 at pci0 dev 25 function 0 "Intel 82577LM" rev 0x06: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 3400 USB" rev 0x06: apic 2 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+"Intel 3400 HD Audio" rev 0x06 at pci0 dev 27 function 0 not configured
+ppb0 at pci0 dev 28 function 0 "Intel 3400 PCIE" rev 0x06: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 3400 PCIE" rev 0x06: msi
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 2 "Intel 3400 PCIE" rev 0x06: msi
+pci3 at ppb2 bus 10
+iwn0 at pci3 dev 0 function 0 "Intel Centrino Advanced-N 6200" rev 0x35: msi, MIMO 2T2R, MoW, address XXX
+ehci1 at pci0 dev 29 function 0 "Intel 3400 USB" rev 0x06: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb3 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xa6
+pci4 at ppb3 bus 11
+cbb0 at pci4 dev 0 function 0 "Ricoh 5C476 CardBus" rev 0xba: apic 2 int 21
+"Ricoh 5C832 Firewire" rev 0x04 at pci4 dev 0 function 1 not configured
+sdhc0 at pci4 dev 0 function 2 "Ricoh 5C822 SD/MMC" rev 0x21: apic 2 int 23
+sdhc0: SDHC 1.0, 33 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 12 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+"Intel QM57 LPC" rev 0x06 at pci0 dev 31 function 0 not configured
+ahci0 at pci0 dev 31 function 2 "Intel 3400 AHCI" rev 0x06: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 1.5Gb/s
+scsibus0 at ahci0: 32 targets
+sd0 at scsibus0 targ 0 lun 0: <ATA, WDC WD10JPLX-00M, 01.0> naa.5000cca8d8eac4dc
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+cd0 at scsibus0 targ 1 lun 0: <TEAC, DV-W28S-V, B.0A> removable
+"Intel 3400 SMBus" rev 0x06 at pci0 dev 31 function 3 not configured
+"Intel 3400 Thermal" rev 0x06 at pci0 dev 31 function 6 not configured
+pci5 at mainbus0 bus 63
+pchb1 at pci5 dev 0 function 0 "Intel QuickPath" rev 0x02
+pchb2 at pci5 dev 0 function 1 "Intel QuickPath" rev 0x02
+pchb3 at pci5 dev 2 function 0 "Intel QPI Link" rev 0x02
+pchb4 at pci5 dev 2 function 1 "Intel QPI Physical" rev 0x02
+pchb5 at pci5 dev 2 function 2 "Intel Reserved" rev 0x02
+pchb6 at pci5 dev 2 function 3 "Intel Reserved" rev 0x02
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard, using wsdisplay1
+uhub2 at uhub0 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0020" rev 2.00/0.00 addr 2
+uhub3 at uhub1 port 1 configuration 1 interface 0 "vendor 0x8087 product 0x0020" rev 2.00/0.00 addr 2
+umass0 at uhub3 port 3 configuration 1 interface 0 "Lexar USB Flash Drive" rev 2.00/11.00 addr 3
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <Lexar, USB Flash Drive, 1100> removable serial....
+sd1: 7634MB, 512 bytes/sector, 15634432 sectors
+"ALPS UGNZA" rev 2.00/52.76 addr 4 at uhub3 port 6 not configured
+"Qualcomm Incorporated Qualcomm Gobi 2000" rev 2.00/0.02 addr 5 at uhub3 port 8 not configured
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks...
+OpenBSD 7.2 (GENERIC.MP) #758: Tue Sep 27 11:57:54 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4056928256 (3868MB)
+avail mem = 3916591104 (3735MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xeb110 (52 entries)
+bios0: vendor American Megatrends Inc. version "V3.00L14" date 08/24/2010
+bios0: Panasonic Corporation CF-52PFPBSFQ
+acpi0 at bios0: ACPI 4.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC MCFG HPET ASF! SLIC SSDT SSDT SSDT TCPA SSDT
+acpi0: wakeup devices P0P2(S4) EHC1(S3) EHC2(S3) HDEF(S3) RP05(S4) PXSX(S4) RP07(S4) PXSX(S4) RP08(S4) PXSX(S4) GLAN(S4) PEG3(S4) PEG4(S4) PEG5(S4) PEG6(S4) RP01(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz, 2926.16 MHz, 06-25-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,AES,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 4-way I-cache, 256KB 64b/line 8-way L2 cache, 3MB 64b/line 12-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 133MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 4 (application processor)
+cpu1: Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz, 2660.04 MHz, 06-25-05
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,AES,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,MELTDOWN
+cpu1: 32KB 64b/line 8-way D-cache, 32KB 64b/line 4-way I-cache, 256KB 64b/line 8-way L2 cache, 3MB 64b/line 12-way L3 cache
+cpu1: smt 0, core 2, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz, 2660.02 MHz, 06-25-05
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,AES,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,MELTDOWN
+cpu2: 32KB 64b/line 8-way D-cache, 32KB 64b/line 4-way I-cache, 256KB 64b/line 8-way L2 cache, 3MB 64b/line 12-way L3 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 5 (application processor)
+cpu3: Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz, 2660.03 MHz, 06-25-05
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,AES,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,MELTDOWN
+cpu3: 32KB 64b/line 8-way D-cache, 32KB 64b/line 4-way I-cache, 256KB 64b/line 8-way L2 cache, 3MB 64b/line 12-way L3 cache
+cpu3: smt 1, core 2, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P2)
+acpiprt2 at acpi0: bus -1 (RP05)
+acpiprt3 at acpi0: bus -1 (RP07)
+acpiprt4 at acpi0: bus -1 (RP08)
+acpiprt5 at acpi0: bus -1 (PEG3)
+acpiprt6 at acpi0: bus -1 (PEG5)
+acpiprt7 at acpi0: bus 10 (RP03)
+acpiprt8 at acpi0: bus -1 (RP04)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus 11 (BR10)
+acpiprt11 at acpi0: bus 2 (RP02)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+tpm0 at acpi0 TPM_ 1.2 (TIS) addr 0x4e/0x2
+acpipci1 at acpi0 CPBG
+"MAT0021" at acpi0 not configured
+"MAT0019" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT1 model "CF-VZSU29A" serial ... type LION oem "Panasonic"
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PWRB
+acpicpu0 at acpi0: C2(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu1 at acpi0: C2(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu2 at acpi0: C2(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu3 at acpi0: C2(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 105 degC
+acpitz1 at acpi0: critical temperature is 130 degC
+acpivideo0 at acpi0: PEGP
+acpivideo1 at acpi0: GFX0
+acpivout0 at acpivideo1: DD02
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 2926 MHz: speeds: 2400, 2399, 2266, 2133, 1999, 1866, 1733, 1599, 1466, 1333, 1199 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics" rev 0x02
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0xd0000000, size 0x10000000
+inteldrm0: msi, IRONLAKE, gen 5
+em0 at pci0 dev 25 function 0 "Intel 82577LM" rev 0x06: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 3400 USB" rev 0x06: apic 2 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 3400 HD Audio" rev 0x06: msi
+azalia0: codecs: Conexant/0x5068, Conexant/0x2c06, Intel/0x2804, using Conexant/0x5068
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 3400 PCIE" rev 0x06: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 3400 PCIE" rev 0x06: msi
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 2 "Intel 3400 PCIE" rev 0x06: msi
+pci3 at ppb2 bus 10
+iwn0 at pci3 dev 0 function 0 "Intel Centrino Advanced-N 6200" rev 0x35: msi, MIMO 2T2R, MoW, address XXX
+ehci1 at pci0 dev 29 function 0 "Intel 3400 USB" rev 0x06: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb3 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xa6
+pci4 at ppb3 bus 11
+cbb0 at pci4 dev 0 function 0 "Ricoh 5C476 CardBus" rev 0xba: apic 2 int 21
+"Ricoh 5C832 Firewire" rev 0x04 at pci4 dev 0 function 1 not configured
+sdhc0 at pci4 dev 0 function 2 "Ricoh 5C822 SD/MMC" rev 0x21: apic 2 int 23
+sdhc0: SDHC 1.0, 33 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 12 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+pcib0 at pci0 dev 31 function 0 "Intel QM57 LPC" rev 0x06
+ahci0 at pci0 dev 31 function 2 "Intel 3400 AHCI" rev 0x06: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD10JPLX-00M, 01.0> naa.5000cca8d8eac4dc
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+cd0 at scsibus1 targ 1 lun 0: <TEAC, DV-W28S-V, B.0A> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 3400 SMBus" rev 0x06: apic 2 int 18
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x1a: mcp98243
+spdmem0 at iic0 addr 0x50: 2GB DDR3 SDRAM PC3-8500 SO-DIMM
+spdmem1 at iic0 addr 0x52: 2GB DDR3 SDRAM PC3-10600 SO-DIMM with thermal sensor
+itherm0 at pci0 dev 31 function 6 "Intel 3400 Thermal" rev 0x06
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 6.2, 0xa5a0b1 0x200000 0x0 0xa04711 0x0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+pci5 at mainbus0 bus 63
+pchb1 at pci5 dev 0 function 0 "Intel QuickPath" rev 0x02
+pchb2 at pci5 dev 0 function 1 "Intel QuickPath" rev 0x02
+pchb3 at pci5 dev 2 function 0 "Intel QPI Link" rev 0x02
+pchb4 at pci5 dev 2 function 1 "Intel QPI Physical" rev 0x02
+pchb5 at pci5 dev 2 function 2 "Intel Reserved" rev 0x02
+pchb6 at pci5 dev 2 function 3 "Intel Reserved" rev 0x02
+vmm0 at mainbus0: VMX/EPT
+uhub2 at uhub0 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+ugen0 at uhub3 port 6 "ALPS UGNZA" rev 2.00/52.76 addr 3
+ugen1 at uhub3 port 8 "Qualcomm Incorporated Qualcomm Gobi 2000" rev 2.00/0.02 addr 4
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (2c98220c4b3ea87d.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x800, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+pms0: not in sync yet, discard input (state = 0, 0c | 00 00 00 00 00)
+pms0: not in sync yet, discard input (state = 0, d0 | 00 00 00 00 00)
+pms0: not in sync yet, discard input (state = 0, 2a | 00 00 00 00 00)
+pms0: not in sync yet, discard input (state = 0, 2e | 00 00 00 00 00)
+pms0: not in sync yet, discard input (state = 0, 3c | f2 19 d0 30 2b)
+pms0: not in sync yet, discard input (state = 3, 90 2b 38 90 | 30 2b)
+pms0: not in sync yet, discard input (state = 0, 28 | 2b 38 90 30 2b)
+pms0: not in sync yet, discard input (state = 0, 2f | 2b 38 90 30 2b)
+pms0: not in sync yet, discard input (state = 3, 90 28 d0 22 | 30 2b)
+pms0: not in sync yet, discard input (state = 0, 2b | 28 d0 22 30 2b)
+pms0: not in sync yet, discard input (state = 0, d0 | 28 d0 22 30 2b)
+pms0: not in sync yet, discard input (state = 0, 22 | 28 d0 22 30 2b)
+pms0: not in sync yet, discard input (state = 0, 0e | 28 d0 22 30 2b)
+pms0: not in sync yet, discard input (state = 3, 90 e2 ee 90 | 22 f9)
+pms0: not in sync yet, discard input (state = 0, e2 | e2 ee 90 22 f9)
+pms0: not in sync yet, discard input (state = 0, 28 | e2 ee 90 22 f9)
+pms0: not in sync yet, discard input (state = 0, e7 | e2 ee 90 22 f9)
+pms0: not in sync yet, discard input (state = 3, 90 2b dc 90 | 22 f9)
+pms0: not in sync yet, discard input (state = 0, 2c | 2b dc 90 22 f9)
+pms0: not in sync yet, discard input (state = 0, d3 | 2b dc 90 22 f9)
+pms0: not in sync yet, discard input (state = 3, 90 2f c8 90 | 22 f9)
+pms0: not in sync yet, discard input (state = 0, bf | 2f c8 90 22 f9)
+pms0: not in sync yet, discard input (state = 3, 90 e2 ae 90 | 22 f9)
+pms0: not in sync yet, discard input (state = 0, e2 | e2 ae 90 22 f9)
+pms0: not in sync yet, discard input (state = 0, 3a | e2 ae 90 22 f9)
+pms0: not in sync yet, discard input (state = 3, a6 90 3e 9e | 22 f9)
+pms0: not in sync yet, discard input (state = 3, 90 48 8b 90 | 22 f9)
+pms0: not in sync yet, discard input (state = 0, 4b | 48 8b 90 22 f9)
+pms0: not in sync yet, discard input (state = 3, 84 90 4e 7e | 22 f9)
+pms0: not in sync yet, discard input (state = 0, e2 | 78 90 e2 6e 90)
+pms0: not in sync yet, discard input (state = 0, 5a | 78 90 e2 6e 90)
+pms0: not in sync yet, discard input (state = 0, 6a | 78 90 e2 6e 90)
+pms0: not in sync yet, discard input (state = 3, 90 38 d0 5f | 6e 90)
+pms0: not in sync yet, discard input (state = 0, 38 | 38 d0 5f 6e 90)
+pms0: not in sync yet, discard input (state = 0, d0 | 38 d0 5f 6e 90)
+pms0: not in sync yet, discard input (state = 0, 60 | 38 d0 5f 6e 90)
+pms0: not in sync yet, discard input (state = 0, 5f | 38 d0 5f 6e 90)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 38 d0 65 38)
+pms0: not in sync yet, discard input (state = 0, 68 | e2 38 d0 65 38)
+pms0: not in sync yet, discard input (state = 0, 4b | e2 38 d0 65 38)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 38 d0 6a 38)
+pms0: not in sync yet, discard input (state = 0, 6d | e2 38 d0 6a 38)
+pms0: not in sync yet, discard input (state = 0, 3d | e2 38 d0 6a 38)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 38 d0 6e 39)
+pms0: not in sync yet, discard input (state = 0, 70 | e2 38 d0 6e 39)
+pms0: not in sync yet, discard input (state = 0, 2f | e2 38 d0 6e 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 73 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 39 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 73 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 39 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 73 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 39 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 73 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 39 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 72 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 39 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 75 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, 29 | e2 39 d0 72 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e2 18 d0 6a 09)
+pms0: not in sync yet, discard input (state = 0, 54 | e2 18 d0 6a 09)
+pms0: not in sync yet, discard input (state = 0, 2f | e2 18 d0 6a 09)
+pms0: not in sync yet, discard input (state = 3, 90 d4 0c 90 | 60 fb)
+pms0: not in sync yet, discard input (state = 0, d4 | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, 29 | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, 60 | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, 2c | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, 61 | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, 2f | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, 60 | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, ff | d4 0c 90 60 fb)
+pms0: not in sync yet, discard input (state = 3, 90 c4 fd 90 | 60 fb)
+pms0: not in sync yet, discard input (state = 0, c4 | c4 fd 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, fb | c4 fd 90 60 fb)
+pms0: not in sync yet, discard input (state = 3, 90 c4 fa 90 | 60 fb)
+pms0: not in sync yet, discard input (state = 0, c4 | c4 fa 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, fa | c4 fa 90 60 fb)
+pms0: not in sync yet, discard input (state = 3, 90 c4 fa 90 | 60 fb)
+pms0: not in sync yet, discard input (state = 0, c4 | c4 fa 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, fa | c4 fa 90 60 fb)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 38 d0 61 39)
+pms0: not in sync yet, discard input (state = 0, 44 | d4 38 d0 61 39)
+pms0: not in sync yet, discard input (state = 0, 2b | d4 38 d0 61 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 39 d0 11 39)
+pms0: not in sync yet, discard input (state = 0, 05 | d4 39 d0 11 39)
+pms0: not in sync yet, discard input (state = 0, 39 | d4 39 d0 11 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 39 d0 11 39)
+pms0: not in sync yet, discard input (state = 0, fb | d4 39 d0 11 39)
+pms0: not in sync yet, discard input (state = 0, 39 | d4 39 d0 11 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 39 d0 11 39)
+pms0: not in sync yet, discard input (state = 0, f2 | d4 39 d0 11 39)
+pms0: not in sync yet, discard input (state = 0, aa | d4 39 d0 11 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 39 d0 ec 39)
+pms0: not in sync yet, discard input (state = 0, e6 | d3 39 d0 ec 39)
+pms0: not in sync yet, discard input (state = 0, ba | d3 39 d0 ec 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 39 d0 e1 39)
+pms0: not in sync yet, discard input (state = 0, df | d3 39 d0 e1 39)
+pms0: not in sync yet, discard input (state = 0, 39 | d3 39 d0 e1 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 39 d0 e1 39)
+pms0: not in sync yet, discard input (state = 0, da | d3 39 d0 e1 39)
+pms0: not in sync yet, discard input (state = 0, 39 | d3 39 d0 e1 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 39 d0 e1 39)
+pms0: not in sync yet, discard input (state = 0, d9 | d3 39 d0 e1 39)
+pms0: not in sync yet, discard input (state = 0, c9 | d3 39 d0 e1 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 39 d0 cb 39)
+pms0: not in sync yet, discard input (state = 0, c7 | d3 39 d0 cb 39)
+pms0: not in sync yet, discard input (state = 0, 39 | d3 39 d0 cb 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 39 d0 cb 39)
+pms0: not in sync yet, discard input (state = 0, c0 | d3 39 d0 cb 39)
+pms0: not in sync yet, discard input (state = 0, 39 | d3 39 d0 cb 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 39 d0 cb 39)
+pms0: not in sync yet, discard input (state = 0, b9 | d3 39 d0 cb 39)
+pms0: not in sync yet, discard input (state = 0, dd | d3 39 d0 cb 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 39 d0 b1 39)
+pms0: not in sync yet, discard input (state = 0, a9 | d3 39 d0 b1 39)
+pms0: not in sync yet, discard input (state = 0, e9 | d3 39 d0 b1 39)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 39 d0 9f 39)
+pms0: not in sync yet, discard input (state = 3, 93 39 d0 85 | 9f 39)
+pms0: not in sync yet, discard input (state = 0, 1d | 39 d0 85 9f 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, 6a | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, 39 | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, 5c | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, 39 | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, 4c | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, 39 | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, 3c | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, af | e3 39 d0 78 39)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 39 d0 2e 3a)
+pms0: not in sync yet, discard input (state = 0, 22 | e3 39 d0 2e 3a)
+pms0: not in sync yet, discard input (state = 0, da | e3 39 d0 2e 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, 04 | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, f7 | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, e5 | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, d4 | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, 6b | e3 3c d0 15 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | f2 3d d0 9c 3d)
+pms0: not in sync yet, discard input (state = 0, 8b | f2 3d d0 9c 3d)
+pms0: not in sync yet, discard input (state = 0, 1c | f2 3d d0 9c 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 63 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 58 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 50 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 4a | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 43 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 3b | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, 18 | 02 3d f0 6e 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, 1a | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, 0f | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, 02 | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, 3d | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, f9 | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, 89 | 12 3d f0 24 3d)
+pms0: not in sync yet, discard input (state = 0, f0 | 11 2d f0 df 2d)
+pms0: not in sync yet, discard input (state = 0, dc | 11 2d f0 df 2d)
+pms0: not in sync yet, discard input (state = 0, db | 11 2d f0 df 2d)
+pms0: not in sync yet, discard input (state = 0, d0 | 11 2d f0 df 2d)
+pms0: not in sync yet, discard input (state = 3, 94 48 a7 80 | df 2d)
+pms0: not in sync yet, discard input (state = 0, 0b | 48 a7 80 df 2d)
+pms0: not in sync yet, discard input (state = 0, d0 | 48 a7 80 df 2d)
+pms0: not in sync yet, discard input (state = 3, 82 7d 2d 90 | df 2d)
+pms0: not in sync yet, discard input (state = 0, 28 | 7d 2d 90 df 2d)
+pms0: not in sync yet, discard input (state = 0, d0 | 7d 2d 90 df 2d)
+pms0: not in sync yet, discard input (state = 0, 7a | 7d 2d 90 df 2d)
+pms0: not in sync yet, discard input (state = 0, 2e | 7d 2d 90 df 2d)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, 78 | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, 3a | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, 71 | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, 3c | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, 47 | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, 3c | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, 25 | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, 0d | d4 29 d0 79 2c)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 6e | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 3c | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 50 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 3c | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 3b | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 3c | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 25 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 3c | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 13 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 3d | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, 02 | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, ba | c3 3c d0 8f 3c)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 3d d0 f1 3e)
+pms0: not in sync yet, discard input (state = 0, e4 | c2 3d d0 f1 3e)
+pms0: not in sync yet, discard input (state = 0, 3e | c2 3d d0 f1 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 3d d0 f1 3e)
+pms0: not in sync yet, discard input (state = 0, dd | c2 3d d0 f1 3e)
+pms0: not in sync yet, discard input (state = 0, cd | c2 3d d0 f1 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 3e d0 d6 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 3e d0 d6 3e)
+pms0: not in sync yet, discard input (state = 0, 3e | c2 3e d0 d6 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 3e d0 d6 3e)
+pms0: not in sync yet, discard input (state = 0, c9 | c2 3e d0 d6 3e)
+pms0: not in sync yet, discard input (state = 0, dd | c2 3e d0 d6 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 3e d0 c3 3e)
+pms0: not in sync yet, discard input (state = 0, ba | c2 3e d0 c3 3e)
+pms0: not in sync yet, discard input (state = 0, 3e | c2 3e d0 c3 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 3e d0 c3 3e)
+pms0: not in sync yet, discard input (state = 0, a8 | eb 90 c2 3e d0)
+pms0: not in sync yet, discard input (state = 0, ef | eb 90 c2 3e d0)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 3e d0 9e 3e)
+pms0: not in sync yet, discard input (state = 3, 90 3e d0 7e | 9e 3e)
+pms0: not in sync yet, discard input (state = 0, fe | 3e d0 7e 9e 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 68 3e)
+pms0: not in sync yet, discard input (state = 0, 52 | d2 3e d0 68 3e)
+pms0: not in sync yet, discard input (state = 0, 3e | d2 3e d0 68 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 68 3e)
+pms0: not in sync yet, discard input (state = 0, 3c | d2 3e d0 68 3e)
+pms0: not in sync yet, discard input (state = 0, 1f | d2 3e d0 68 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 1d 3e)
+pms0: not in sync yet, discard input (state = 0, 15 | d2 3e d0 1d 3e)
+pms0: not in sync yet, discard input (state = 0, 3d | d2 3e d0 1d 3e)
+pms0: not in sync yet, discard input (state = 3, 90 d2 0e 3e | 0e 3e)
+pms0: not in sync yet, discard input (state = 3, 90 2e d0 10 | 0e 3e)
+pms0: not in sync yet, discard input (state = 0, 3b | 2e d0 10 0e 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 1d d0 12 0c)
+pms0: not in sync yet, discard input (state = 0, 07 | d2 1d d0 12 0c)
+pms0: not in sync yet, discard input (state = 0, 1d | d2 1d d0 12 0c)
+pms0: not in sync yet, discard input (state = 3, 90 b4 49 90 | 9d 59)
+pms0: not in sync yet, discard input (state = 3, b4 2b d0 82 | 9d 59)
+pms0: not in sync yet, discard input (state = 0, 3e | 2b d0 82 9d 59)
+pms0: not in sync yet, discard input (state = 0, d0 | b4 39 d0 81 3a)
+pms0: not in sync yet, discard input (state = 3, 81 3c d0 67 | 81 3a)
+pms0: not in sync yet, discard input (state = 0, 3e | 3c d0 67 81 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3c d0 67 81 3a)
+pms0: not in sync yet, discard input (state = 0, 46 | 3c d0 67 81 3a)
+pms0: not in sync yet, discard input (state = 0, 3e | 3c d0 67 81 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3c d0 67 81 3a)
+pms0: not in sync yet, discard input (state = 0, 2b | 3c d0 67 81 3a)
+pms0: not in sync yet, discard input (state = 0, 6c | 3c d0 67 81 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3e d0 a9 3e)
+pms0: not in sync yet, discard input (state = 3, 91 3e d0 7c | a9 3e)
+pms0: not in sync yet, discard input (state = 0, 4f | 3e d0 7c a9 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3e d0 51 3e)
+pms0: not in sync yet, discard input (state = 0, 3c | c3 3e d0 51 3e)
+pms0: not in sync yet, discard input (state = 0, 9b | c3 3e d0 51 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3e d0 29 3e)
+pms0: not in sync yet, discard input (state = 0, 16 | c3 3e d0 29 3e)
+pms0: not in sync yet, discard input (state = 0, ce | c3 3e d0 29 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3e d0 08 3e)
+pms0: not in sync yet, discard input (state = 0, ff | c3 3e d0 08 3e)
+pms0: not in sync yet, discard input (state = 0, fc | c3 3e d0 08 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 ef 3e)
+pms0: not in sync yet, discard input (state = 0, ed | d2 3e d0 ef 3e)
+pms0: not in sync yet, discard input (state = 0, 3e | d2 3e d0 ef 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 ef 3e)
+pms0: not in sync yet, discard input (state = 0, e8 | d2 3e d0 ef 3e)
+pms0: not in sync yet, discard input (state = 0, 3b | d2 3e d0 ef 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 e4 3e)
+pms0: not in sync yet, discard input (state = 0, e0 | d2 3e d0 e4 3e)
+pms0: not in sync yet, discard input (state = 0, 4b | d2 3e d0 e4 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 dc 3e)
+pms0: not in sync yet, discard input (state = 0, d8 | d2 3e d0 dc 3e)
+pms0: not in sync yet, discard input (state = 0, 5b | d2 3e d0 dc 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 d5 3e)
+pms0: not in sync yet, discard input (state = 0, cf | d2 3e d0 d5 3e)
+pms0: not in sync yet, discard input (state = 0, 6c | d2 3e d0 d5 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 ca 3e)
+pms0: not in sync yet, discard input (state = 0, c5 | d2 3e d0 ca 3e)
+pms0: not in sync yet, discard input (state = 0, 79 | d2 3e d0 ca 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 b6 3e)
+pms0: not in sync yet, discard input (state = 0, ab | d2 3e d0 b6 3e)
+pms0: not in sync yet, discard input (state = 0, 8c | d2 3e d0 b6 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 9d 3e)
+pms0: not in sync yet, discard input (state = 0, 8b | d2 3e d0 9d 3e)
+pms0: not in sync yet, discard input (state = 0, 9c | d2 3e d0 9d 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 74 3e)
+pms0: not in sync yet, discard input (state = 0, 5f | d2 3e d0 74 3e)
+pms0: not in sync yet, discard input (state = 0, 3e | d2 3e d0 74 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 74 3e)
+pms0: not in sync yet, discard input (state = 0, 48 | d2 3e d0 74 3e)
+pms0: not in sync yet, discard input (state = 0, bb | d2 3e d0 74 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 3e d0 33 3e)
+pms0: not in sync yet, discard input (state = 0, 1a | d2 3e d0 33 3e)
+pms0: not in sync yet, discard input (state = 0, ce | d2 3e d0 33 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | e1 3f d0 c0 3f)
+pms0: not in sync yet, discard input (state = 3, b1 3f d0 a2 | c0 3f)
+pms0: not in sync yet, discard input (state = 0, 3f | 3f d0 a2 c0 3f)
+pms0: not in sync yet, discard input (state = 0, d0 | 3f d0 a2 c0 3f)
+pms0: not in sync yet, discard input (state = 0, 8c | 3e 90 e1 3f d0)
+pms0: not in sync yet, discard input (state = 0, 3f | 3e 90 e1 3f d0)
+pms0: not in sync yet, discard input (state = 0, d0 | 3e 90 e1 3f d0)
+pms0: not in sync yet, discard input (state = 0, 76 | 4a 90 e1 3f d0)
+pms0: not in sync yet, discard input (state = 0, 4e | 4a 90 e1 3f d0)
+pms0: not in sync yet, discard input (state = 0, d0 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 61 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 3f | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, d0 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 52 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 3f | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, d0 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 44 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 3f | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, d0 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 35 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 3f | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, d0 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 29 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 3f | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, d0 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 1d | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 2a | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, d0 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 08 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, f8 | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 5b | e1 3f d0 6d 3f)
+pms0: not in sync yet, discard input (state = 0, 44 | ca a0 f0 0c d0)
+pms0: not in sync yet, discard input (state = 0, 3f | ca a0 f0 0c d0)
+pms0: not in sync yet, discard input (state = 3, 90 d2 59 90 | 48 4f)
+pms0: not in sync yet, discard input (state = 0, d2 | d2 59 90 48 4f)
+pms0: not in sync yet, discard input (state = 0, 5d | d2 59 90 48 4f)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 38 d0 3b 3a)
+pms0: not in sync yet, discard input (state = 0, 2d | d2 38 d0 3b 3a)
+pms0: not in sync yet, discard input (state = 0, 3c | d2 38 d0 3b 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 38 d0 3b 3a)
+pms0: not in sync yet, discard input (state = 0, 16 | d2 38 d0 3b 3a)
+pms0: not in sync yet, discard input (state = 0, 3e | d2 38 d0 3b 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | d2 38 d0 3b 3a)
+pms0: not in sync yet, discard input (state = 0, fd | d2 38 d0 3b 3a)
+pms0: not in sync yet, discard input (state = 0, 5f | d2 38 d0 3b 3a)
+pms0: not in sync yet, discard input (state = 3, 90 d1 c8 57 | 3b 3a)
+pms0: not in sync yet, discard input (state = 3, 90 8a 3a 90 | 9c 43)
+pms0: not in sync yet, discard input (state = 0, 7b | 8a 3a 90 9c 43)
+pms0: not in sync yet, discard input (state = 0, 34 | 8a 3a 90 9c 43)
+pms0: not in sync yet, discard input (state = 3, 90 6d 31 90 | 9c 43)
+pms0: not in sync yet, discard input (state = 0, 6b | 6d 31 90 9c 43)
+pms0: not in sync yet, discard input (state = 0, 30 | 6d 31 90 9c 43)
+pms0: not in sync yet, discard input (state = 3, 90 69 31 90 | 9c 43)
+pms0: not in sync yet, discard input (state = 0, 5f | 69 31 90 9c 43)
+pms0: not in sync yet, discard input (state = 0, 38 | 69 31 90 9c 43)
+pms0: not in sync yet, discard input (state = 3, 90 5c 3b 90 | 9c 43)
+pms0: not in sync yet, discard input (state = 0, 5d | 5c 3b 90 9c 43)
+pms0: not in sync yet, discard input (state = 0, 3d | 5c 3b 90 9c 43)
+pms0: not in sync yet, discard input (state = 3, 90 5b 40 90 | 9c 43)
+pms0: not in sync yet, discard input (state = 0, 59 | 5b 40 90 9c 43)
+pms0: not in sync yet, discard input (state = 0, 45 | 5b 40 90 9c 43)
+pms0: not in sync yet, discard input (state = 0, d1 | 4b 90 d1 5b 90)
+pms0: not in sync yet, discard input (state = 0, 58 | 4b 90 d1 5b 90)
+pms0: not in sync yet, discard input (state = 0, 73 | 4b 90 d1 5b 90)
+pms0: not in sync yet, discard input (state = 3, 90 5c 83 90 | 5b 90)
+pms0: not in sync yet, discard input (state = 0, 6a | 5c 83 90 5b 90)
+pms0: not in sync yet, discard input (state = 3, b2 90 7e de | 5b 90)
+pms0: not in sync yet, discard input (state = 3, 90 8c fb 90 | 5b 90)
+pms0: not in sync yet, discard input (state = 0, 99 | 8c fb 90 5b 90)
+pms0: not in sync yet, discard input (state = 0, 1d | 8c fb 90 5b 90)
+pms0: not in sync yet, discard input (state = 3, 90 d8 b3 90 | cd a1)
+pms0: not in sync yet, discard input (state = 0, e8 | d8 b3 90 cd a1)
+pms0: not in sync yet, discard input (state = 3, 90 e2 1f f8 | cd a1)
+pms0: not in sync yet, discard input (state = 3, 90 39 09 90 | cd a1)
+pms0: not in sync yet, discard input (state = 0, 1a | 39 09 90 cd a1)
+pms0: not in sync yet, discard input (state = 3, 90 f2 4f 90 | cd a1)
+pms0: not in sync yet, discard input (state = 0, f2 | f2 4f 90 cd a1)
+pms0: not in sync yet, discard input (state = 0, cc | f2 4f 90 cd a1)
+pms0: not in sync yet, discard input (state = 3, 93 90 d8 90 | cd a1)
+pms0: not in sync yet, discard input (state = 0, f3 | 90 d8 90 cd a1)
+pms0: not in sync yet, discard input (state = 0, 0c | 90 d8 90 cd a1)
+pms0: not in sync yet, discard input (state = 0, f7 | 90 d8 90 cd a1)
+pms0: not in sync yet, discard input (state = 3, 90 1e 0e 90 | cd a1)
+pms0: not in sync yet, discard input (state = 0, 1f | 1e 0e 90 cd a1)
+pms0: not in sync yet, discard input (state = 3, 90 03 3b 28 | cd a1)
+pms0: not in sync yet, discard input (state = 3, 90 2f 90 03 | cd a1)
+pms0: not in sync yet, discard input (state = 0, 2e | 2f 90 03 cd a1)
+pms0: not in sync yet, discard input (state = 0, f0 | 03 2b f0 4e 19)
+pms0: not in sync yet, discard input (state = 0, 50 | 03 2b f0 4e 19)
+pms0: not in sync yet, discard input (state = 0, 1b | 03 2b f0 4e 19)
+pms0: not in sync yet, discard input (state = 0, f4 | 03 0d f0 4d 08)
+pms0: not in sync yet, discard input (state = 0, 46 | 03 0d f0 4d 08)
+pms0: not in sync yet, discard input (state = 0, 0a | 03 0d f0 4d 08)
+pms0: not in sync yet, discard input (state = 3, 90 03 fd 94 | 4d 08)
+pms0: not in sync yet, discard input (state = 0, 03 | 03 fd 94 4d 08)
+pms0: not in sync yet, discard input (state = 0, 3c | 03 fd 94 4d 08)
+pms0: not in sync yet, discard input (state = 0, 0b | 03 fd 94 4d 08)
+pms0: not in sync yet, discard input (state = 3, 80 88 90 92 | 4d 08)
+pms0: not in sync yet, discard input (state = 0, 2d | 88 90 92 4d 08)
+pms0: not in sync yet, discard input (state = 0, d0 | 88 90 92 4d 08)
+pms0: not in sync yet, discard input (state = 0, 36 | 88 90 92 4d 08)
+pms0: not in sync yet, discard input (state = 0, 2f | 88 90 92 4d 08)
+pms0: not in sync yet, discard input (state = 0, d0 | 88 90 92 4d 08)
+pms0: not in sync yet, discard input (state = 0, 3b | 88 90 92 4d 08)
+pms0: not in sync yet, discard input (state = 0, ac | 88 90 92 4d 08)
+pms0: not in sync yet, discard input (state = 3, 90 92 fd 90 | 4d 08)
+pms0: not in sync yet, discard input (state = 3, a2 3d 90 a2 | 4d 08)
+pms0: not in sync yet, discard input (state = 0, 39 | 3d 90 a2 4d 08)
+pms0: not in sync yet, discard input (state = 0, d0 | 3d 90 a2 4d 08)
+pms0: not in sync yet, discard input (state = 0, 6c | 3d 90 a2 4d 08)
+pms0: not in sync yet, discard input (state = 0, 8b | 3d 90 a2 4d 08)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 3c d0 7a 3e)
+pms0: not in sync yet, discard input (state = 0, 8c | a2 3c d0 7a 3e)
+pms0: not in sync yet, discard input (state = 0, 1f | a2 3c d0 7a 3e)
+pms0: not in sync yet, discard input (state = 0, d0 | b2 3e d0 9d 3f)
+pms0: not in sync yet, discard input (state = 0, ac | b2 3e d0 9d 3f)
+pms0: not in sync yet, discard input (state = 0, bc | b2 3e d0 9d 3f)
+pms0: not in sync yet, discard input (state = 0, 17 | b2 3e d0 9d 3f)
+pms0: not in sync yet, discard input (state = 3, 90 cc 5f 90 | 9d 3f)
+pms0: not in sync yet, discard input (state = 0, db | cc 5f 90 9d 3f)
+pms0: not in sync yet, discard input (state = 3, a4 90 e8 ef | 9d 3f)
+pms0: not in sync yet, discard input (state = 0, e3 | db 90 e3 dd 90)
+pms0: not in sync yet, discard input (state = 0, df | db 90 e3 dd 90)
+pms0: not in sync yet, discard input (state = 3, 90 e3 df 90 | dd 90)
+pms0: not in sync yet, discard input (state = 0, e3 | e3 df 90 dd 90)
+pms0: not in sync yet, discard input (state = 0, dd | e3 df 90 dd 90)
+pms0: not in sync yet, discard input (state = 3, 90 e3 dd 90 | dd 90)
+pms0: not in sync yet, discard input (state = 0, e3 | e3 dd 90 dd 90)
+pms0: not in sync yet, discard input (state = 0, db | e3 dd 90 dd 90)
+pms0: not in sync yet, discard input (state = 3, 90 e3 db 90 | dd 90)
+pms0: not in sync yet, discard input (state = 0, e3 | e3 db 90 dd 90)
+pms0: not in sync yet, discard input (state = 0, d9 | e3 db 90 dd 90)
+pms0: not in sync yet, discard input (state = 3, 90 e3 3f cc | dd 90)
+pms0: not in sync yet, discard input (state = 3, 90 3b c4 90 | dd 90)
+pms0: not in sync yet, discard input (state = 0, 39 | 3b c4 90 dd 90)
+pms0: not in sync yet, discard input (state = 0, bd | 3b c4 90 dd 90)
+pms0: not in sync yet, discard input (state = 3, 90 38 d0 2d | 2f 78)
+pms0: not in sync yet, discard input (state = 0, 5d | 38 d0 2d 2f 78)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 3a d0 2d 3a)
+pms0: not in sync yet, discard input (state = 0, 2e | e3 3a d0 2d 3a)
+pms0: not in sync yet, discard input (state = 0, 3a | e3 3a d0 2d 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | e3 3a d0 2d 3a)
+pms0: not in sync yet, discard input (state = 0, 32 | e3 3a d0 2d 3a)
+pms0: not in sync yet, discard input (state = 0, ce | e3 3a d0 2d 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 3a d0 34 3a)
+pms0: not in sync yet, discard input (state = 0, 34 | d3 3a d0 34 3a)
+pms0: not in sync yet, discard input (state = 0, 9b | d3 3a d0 34 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 3a d0 35 3a)
+pms0: not in sync yet, discard input (state = 0, 35 | d3 3a d0 35 3a)
+pms0: not in sync yet, discard input (state = 0, 3a | d3 3a d0 35 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 3a d0 35 3a)
+pms0: not in sync yet, discard input (state = 0, 34 | d3 3a d0 35 3a)
+pms0: not in sync yet, discard input (state = 0, 2f | d3 3a d0 35 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 3a d0 39 3a)
+pms0: not in sync yet, discard input (state = 0, 3b | d3 3a d0 39 3a)
+pms0: not in sync yet, discard input (state = 0, 08 | d3 3a d0 39 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | d3 3a d0 3d 3a)
+pms0: not in sync yet, discard input (state = 0, 3f | d3 3a d0 3d 3a)
+pms0: not in sync yet, discard input (state = 0, f8 | d3 3a d0 3d 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3a d0 42 3a)
+pms0: not in sync yet, discard input (state = 0, 44 | c3 3a d0 42 3a)
+pms0: not in sync yet, discard input (state = 0, ef | c3 3a d0 42 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3a d0 51 3a)
+pms0: not in sync yet, discard input (state = 0, 5a | c3 3a d0 51 3a)
+pms0: not in sync yet, discard input (state = 0, be | c3 3a d0 51 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3a d0 83 3a)
+pms0: not in sync yet, discard input (state = 3, 85 3a d0 86 | 83 3a)
+pms0: not in sync yet, discard input (state = 0, 6e | 3a d0 86 83 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | c3 3a d0 8c 3a)
+pms0: not in sync yet, discard input (state = 3, 93 3a d0 97 | 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3a | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 98 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3a | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9a | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3a | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9a | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3b | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9a | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3b | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9a | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3c | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9a | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3c | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9c | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3d | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9f | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3e | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9f | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3f | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d0 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9f | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, b8 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 73 | 3a d0 97 8c 3a)
+pms0: not in sync yet, discard input (state = 3, 90 c9 7d 90 | 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9e | c9 7d 90 8c 3a)
+pms0: not in sync yet, discard input (state = 3, 90 c4 ad 90 | 8c 3a)
+pms0: not in sync yet, discard input (state = 0, c4 | c4 ad 90 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 0a | c4 ad 90 8c 3a)
+pms0: not in sync yet, discard input (state = 3, b6 90 ce 90 | 8c 3a)
+pms0: not in sync yet, discard input (state = 0, c4 | 90 ce 90 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 2e | 90 ce 90 8c 3a)
+pms0: not in sync yet, discard input (state = 0, da | 90 ce 90 8c 3a)
+pms0: not in sync yet, discard input (state = 3, 90 3d e9 90 | 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 4d | 3d e9 90 8c 3a)
+pms0: not in sync yet, discard input (state = 0, f9 | 3d e9 90 8c 3a)
+pms0: not in sync yet, discard input (state = 3, 90 5b 08 90 | 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 6b | 5b 08 90 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 18 | 5b 08 90 8c 3a)
+pms0: not in sync yet, discard input (state = 3, 90 79 29 90 | 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 3b | 79 29 90 8c 3a)
+pms0: not in sync yet, discard input (state = 3, 90 d4 4b 90 | 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d4 | d4 4b 90 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 58 | d4 4b 90 8c 3a)
+pms0: not in sync yet, discard input (state = 3, 90 d4 9b 64 | 8c 3a)
+pms0: not in sync yet, discard input (state = 3, 90 9f 6c 90 | 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 9e | 9f 6c 90 8c 3a)
+pms0: not in sync yet, discard input (state = 0, 72 | 9f 6c 90 8c 3a)
+pms0: not in sync yet, discard input (state = 0, d4 | 79 90 d4 79 90)
+pms0: not in sync yet, discard input (state = 0, 7b | 79 90 d4 79 90)
+pms0: not in sync yet, discard input (state = 3, 90 d4 7b 90 | 79 90)
+pms0: not in sync yet, discard input (state = 0, d4 | d4 7b 90 79 90)
+pms0: not in sync yet, discard input (state = 0, 7b | d4 7b 90 79 90)
+pms0: not in sync yet, discard input (state = 3, 90 d4 8c 90 | 79 90)
+pms0: not in sync yet, discard input (state = 0, d4 | d4 8c 90 79 90)
+pms0: not in sync yet, discard input (state = 0, a9 | d4 8c 90 79 90)
+pms0: not in sync yet, discard input (state = 0, 99 | d4 8c 90 79 90)
+pms0: not in sync yet, discard input (state = 3, 90 ab 9c 90 | 79 90)
+pms0: not in sync yet, discard input (state = 0, aa | ab 9c 90 79 90)
+pms0: not in sync yet, discard input (state = 0, 9e | ab 9c 90 79 90)
+pms0: not in sync yet, discard input (state = 3, 90 ad a1 90 | 79 90)
+pms0: not in sync yet, discard input (state = 0, ae | ad a1 90 79 90)
+pms0: not in sync yet, discard input (state = 0, d0 | d4 2b d0 b2 2b)
+pms0: not in sync yet, discard input (state = 3, b3 2b d0 b5 | b2 2b)
+pms0: not in sync yet, discard input (state = 0, 2b | 2b d0 b5 b2 2b)
+pms0: not in sync yet, discard input (state = 0, d0 | 2b d0 b5 b2 2b)
+pms0: not in sync yet, discard input (state = 3, b5 2b d0 b7 | 2b d0)
+pms0: not in sync yet, discard input (state = 0, 2b | 2b d0 b7 2b d0)
+pms0: not in sync yet, discard input (state = 0, d0 | 2b d0 b7 2b d0)
+pms0: not in sync yet, discard input (state = 0, b8 | 2b d0 b7 2b d0)
+pms0: not in sync yet, discard input (state = 0, 2b | 2b d0 b7 2b d0)
+pms0: not in sync yet, discard input (state = 0, d0 | 2b d0 b7 2b d0)
+pms0: not in sync yet, discard input (state = 0, b9 | 2b d0 b7 2b d0)
+pms0: not in sync yet, discard input (state = 0, c9 | 2b d0 b7 2b d0)
+pms0: not in sync yet, discard input (state = 0, e4 | d4 0c d0 af af)
+pms0: not in sync yet, discard input (state = 3, 90 ad f9 90 | af af)
+pms0: not in sync yet, discard input (state = 0, 0d | ad f9 90 af af)
+pms0: not in sync yet, discard input (state = 0, d0 | ad f9 90 af af)
+pms0: not in sync yet, discard input (state = 0, 5b | ad f9 90 af af)
+pms0: not in sync yet, discard input (state = 0, 1f | ad f9 90 af af)
+pms0: not in sync yet, discard input (state = 3, 90 d4 3b 1c | af af)
+pms0: not in sync yet, discard input (state = 3, 90 0c 0b 90 | 1a 12)
+pms0: not in sync yet, discard input (state = 0, fc | 0c 0b 90 1a 12)
+pms0: not in sync yet, discard input (state = 0, ff | 0c 0b 90 1a 12)
+pms0: not in sync yet, discard input (state = 3, 90 ea f2 90 | 1a 12)
+pms0: not in sync yet, discard input (state = 0, db | ea f2 90 1a 12)
+pms0: not in sync yet, discard input (state = 0, e4 | ea f2 90 1a 12)
+pms0: not in sync yet, discard input (state = 3, 90 cc db 90 | 1a 12)
+pms0: not in sync yet, discard input (state = 0, be | cc db 90 1a 12)
+pms0: not in sync yet, discard input (state = 0, d2 | cc db 90 1a 12)
+pms0: not in sync yet, discard input (state = 0, c3 | cb 90 c3 bb 90)
+pms0: not in sync yet, discard input (state = 0, 78 | cb 90 c3 bb 90)
+pms0: not in sync yet, discard input (state = 0, af | cb 90 c3 bb 90)
+pms0: not in sync yet, discard input (state = 3, 90 6e aa 90 | bb 90)
+pms0: not in sync yet, discard input (state = 0, 59 | 6e aa 90 bb 90)
+pms0: not in sync yet, discard input (state = 3, a1 90 9b 90 | bb 90)
+pms0: not in sync yet, discard input (state = 0, c3 | 90 9b 90 bb 90)
+pms0: not in sync yet, discard input (state = 0, 3c | 90 9b 90 bb 90)
+pms0: not in sync yet, discard input (state = 0, 8f | 90 9b 90 bb 90)
+pms0: not in sync yet, discard input (state = 3, 90 2a 82 90 | 2d 85)
+pms0: not in sync yet, discard input (state = 0, 28 | 2a 82 90 2d 85)
+pms0: not in sync yet, discard input (state = 3, 83 90 29 81 | 2d 85)
+pms0: not in sync yet, discard input (state = 0, c3 | 7f 90 c3 7f 90)
+pms0: not in sync yet, discard input (state = 0, 78 | 7f 90 c3 7f 90)
+pms0: not in sync yet, discard input (state = 3, 90 c3 0e 72 | 7f 90)
+pms0: not in sync yet, discard input (state = 3, 90 09 71 90 | 7f 90)
+pms0: not in sync yet, discard input (state = 0, 6e | 09 71 90 7f 90)
+pms0: not in sync yet, discard input (state = 3, 90 c2 fb 68 | 7f 90)
+pms0: not in sync yet, discard input (state = 3, 90 ed 61 90 | 7f 90)
+pms0: not in sync yet, discard input (state = 0, e8 | ed 61 90 7f 90)
+pms0: not in sync yet, discard input (state = 0, 5f | ed 61 90 7f 90)
+pms0: not in sync yet, discard input (state = 3, 90 e8 5f 90 | 7f 90)
+pms0: not in sync yet, discard input (state = 0, e8 | e8 5f 90 7f 90)
+pms0: not in sync yet, discard input (state = 0, 5f | e8 5f 90 7f 90)
+pms0: not in sync yet, discard input (state = 0, c2 | 5e 90 c2 5e 90)
+pms0: not in sync yet, discard input (state = 0, 5e | 5e 90 c2 5e 90)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 38 d0 e9 38)
+pms0: not in sync yet, discard input (state = 0, e9 | c2 38 d0 e9 38)
+pms0: not in sync yet, discard input (state = 0, 38 | c2 38 d0 e9 38)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 38 d0 e9 38)
+pms0: not in sync yet, discard input (state = 0, e9 | c2 38 d0 e9 38)
+pms0: not in sync yet, discard input (state = 0, 38 | c2 38 d0 e9 38)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 38 d0 e9 38)
+pms0: not in sync yet, discard input (state = 0, ea | c2 38 d0 e9 38)
+pms0: not in sync yet, discard input (state = 0, 5e | c2 38 d0 e9 38)
+pms0: not in sync yet, discard input (state = 3, 90 c2 5a 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, c2 | c2 5a 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 9c | c2 5a 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 53 | c2 5a 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 0d d0 07 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 1c | 0d d0 07 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 d3 0b 14 | e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 2c d0 06 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 2c | 2c d0 06 e6 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | 2c d0 06 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 04 | 2c d0 06 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 2e | 2c d0 06 e6 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | 2c d0 06 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 02 | 2c d0 06 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 0e | 2c d0 06 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 d3 0a 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, d2 | d3 0a 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, fe | d3 0a 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 02 | d3 0a 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 fe f6 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, bd | fe f6 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 c3 09 a9 | e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 0c 97 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 0f | 0c 97 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 84 90 6c 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, c3 | 90 6c 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 5a | 90 6c 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 c3 4b 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, c3 | c3 4b 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 3e | c3 4b 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 c3 2d 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, c3 | c3 2d 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 19 | c3 2d 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 c3 0f 04 | e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 0f f4 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 0f | 0f f4 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, e8 | 0f f4 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 db 90 b3 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, d9 | db 90 b3 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 b3 ce 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 3, b3 bf 90 b3 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 99 | bf 90 b3 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 b3 8b 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 3, b3 7b 90 b3 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 6d | 7b 90 b3 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 b3 1d 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 3, a3 fe 90 a3 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, dd | fe 90 a3 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 a3 19 bd | e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 1d 9d 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 28 | 1d 9d 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 6f | 1d 9d 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 2c 63 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 58 | 2c 63 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 a3 3a 4a | e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 3f 44 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 3e | 3f 44 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 a3 38 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 3, a3 4b 30 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 4c | 4b 30 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, 2b | 4b 30 90 e6 5a)
+pms0: not in sync yet, discard input (state = 3, 90 4e 26 90 | e6 5a)
+pms0: not in sync yet, discard input (state = 0, 2e | 4e 26 90 e6 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a3 08 d0 61 19)
+pms0: not in sync yet, discard input (state = 0, 72 | a3 08 d0 61 19)
+pms0: not in sync yet, discard input (state = 0, 4e | a3 08 d0 61 19)
+pms0: not in sync yet, discard input (state = 0, d0 | a3 08 d0 61 19)
+pms0: not in sync yet, discard input (state = 3, 90 8c 8f 90 | 61 19)
+pms0: not in sync yet, discard input (state = 0, 8b | 8c 8f 90 61 19)
+pms0: not in sync yet, discard input (state = 0, 88 | 8c 8f 90 61 19)
+pms0: not in sync yet, discard input (state = 3, 90 58 d0 89 | 61 19)
+pms0: not in sync yet, discard input (state = 0, 58 | 58 d0 89 61 19)
+pms0: not in sync yet, discard input (state = 0, d0 | 58 d0 89 61 19)
+pms0: not in sync yet, discard input (state = 0, 89 | 6c 90 d2 5a d0)
+pms0: not in sync yet, discard input (state = 0, 59 | 6c 90 d2 5a d0)
+pms0: not in sync yet, discard input (state = 0, d0 | c2 5a d0 84 5a)
+pms0: not in sync yet, discard input (state = 3, 80 5a d0 7e | 5a d0)
+pms0: not in sync yet, discard input (state = 0, 5a | 5a d0 7e 5a d0)
+pms0: not in sync yet, discard input (state = 0, d0 | 5a d0 7e 5a d0)
+pms0: not in sync yet, discard input (state = 3, 83 08 90 b2 | 5a d0)
+pms0: not in sync yet, discard input (state = 0, 5a | 08 90 b2 5a d0)
+pms0: not in sync yet, discard input (state = 0, d0 | 08 90 b2 5a d0)
+pms0: not in sync yet, discard input (state = 3, 85 ed 90 b2 | 5a d0)
+pms0: not in sync yet, discard input (state = 0, 5a | ed 90 b2 5a d0)
+pms0: not in sync yet, discard input (state = 0, d0 | ed 90 b2 5a d0)
+pms0: not in sync yet, discard input (state = 0, 89 | ed 90 b2 5a d0)
+pms0: not in sync yet, discard input (state = 0, 5a | ed 90 b2 5a d0)
+pms0: not in sync yet, discard input (state = 0, d0 | ed 90 b2 5a d0)
+pms0: not in sync yet, discard input (state = 0, 8e | ed 90 b2 5a d0)
+pms0: not in sync yet, discard input (state = 0, ae | ed 90 b2 5a d0)
+pms0: not in sync yet, discard input (state = 0, d0 | b2 5a d0 9d 5a)
+pms0: not in sync yet, discard input (state = 3, a6 5a d0 af | 9d 5a)
+pms0: not in sync yet, discard input (state = 0, 2c | 5a d0 af 9d 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | b2 5a d0 b4 5a)
+pms0: not in sync yet, discard input (state = 0, ba | b2 5a d0 b4 5a)
+pms0: not in sync yet, discard input (state = 0, 5a | b2 5a d0 b4 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | b2 5a d0 b4 5a)
+pms0: not in sync yet, discard input (state = 0, bd | b2 5a d0 b4 5a)
+pms0: not in sync yet, discard input (state = 0, fd | b2 5a d0 b4 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, be | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, 5a | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, c0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, 5a | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, c0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, 5a | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, c0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, 5a | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, c2 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, 5a | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, c3 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, 48 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, c4 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, 48 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, c5 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, f9 | a2 5a d0 be 5a)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, c4 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, 48 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, c4 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, 48 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, c6 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, 1d | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, c6 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, 0a | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, d0 | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, 9c | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 0, cf | a2 48 d0 c4 48)
+pms0: not in sync yet, discard input (state = 3, 90 a2 5b 98 | c4 48)
+pms0: not in sync yet, discard input (state = 3, 90 3d 89 80 | c4 48)
+pms0: not in sync yet, discard input (state = 0, 08 | 3d 89 80 c4 48)
+pms0: not in sync yet, discard input (state = 0, d0 | 3d 89 80 c4 48)
+pms0: not in sync yet, discard input (state = 0, ce | 3d 89 80 c4 48)
+pms0: not in sync yet, discard input (state = 0, da | 3d 89 80 c4 48)
+pms0: not in sync yet, discard input (state = 3, 90 c0 ce da | ce da)
+pms0: not in sync yet, discard input (state = 3, 90 1e d0 da | ce da)
+pms0: not in sync yet, discard input (state = 0, ea | 1e d0 da ce da)
+pms0: not in sync yet, discard input (state = 3, 90 c0 e8 90 | ce da)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 e8 90 ce da)
+pms0: not in sync yet, discard input (state = 0, 2c | c0 e8 90 ce da)
+pms0: not in sync yet, discard input (state = 0, d0 | c0 e8 90 ce da)
+pms0: not in sync yet, discard input (state = 0, d0 | c0 e8 90 ce da)
+pms0: not in sync yet, discard input (state = 0, cb | c0 e8 90 ce da)
+pms0: not in sync yet, discard input (state = 0, dc | c0 e8 90 ce da)
+pms0: not in sync yet, discard input (state = 3, 90 bf d0 90 | ce da)
+pms0: not in sync yet, discard input (state = 0, 38 | bf d0 90 ce da)
+pms0: not in sync yet, discard input (state = 0, d0 | bf d0 90 ce da)
+pms0: not in sync yet, discard input (state = 0, bc | bf d0 90 ce da)
+pms0: not in sync yet, discard input (state = 0, cf | bf d0 90 ce da)
+pms0: not in sync yet, discard input (state = 3, 90 c0 c8 90 | a9 c9)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 c8 90 a9 c9)
+pms0: not in sync yet, discard input (state = 0, c8 | c0 c8 90 a9 c9)
+pms0: not in sync yet, discard input (state = 3, 90 c0 c8 90 | a9 c9)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 c8 90 a9 c9)
+pms0: not in sync yet, discard input (state = 0, c8 | c0 c8 90 a9 c9)
+pms0: not in sync yet, discard input (state = 3, 90 c0 c8 90 | a9 c9)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 c8 90 a9 c9)
+pms0: not in sync yet, discard input (state = 0, c8 | c0 c8 90 a9 c9)
+pms0: not in sync yet, discard input (state = 3, 90 c0 ca 90 | a9 c9)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 ca 90 a9 c9)
+pms0: not in sync yet, discard input (state = 0, ca | c0 ca 90 a9 c9)
+pms0: not in sync yet, discard input (state = 3, 90 c0 ca 90 | a9 c9)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 ca 90 a9 c9)
+pms0: not in sync yet, discard input (state = 0, cb | c0 ca 90 a9 c9)
+pms0: not in sync yet, discard input (state = 3, 90 c0 cb 90 | a9 c9)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 cb 90 a9 c9)
+pms0: not in sync yet, discard input (state = 0, c8 | c0 cb 90 a9 c9)
+pms0: not in sync yet, discard input (state = 3, 90 c0 c8 90 | a9 c9)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 c8 90 a9 c9)
+pms0: not in sync yet, discard input (state = 0, 9c | c0 c8 90 a9 c9)
+pms0: not in sync yet, discard input (state = 0, c3 | c0 c8 90 a9 c9)
+pms0: not in sync yet, discard input (state = 3, 90 8a ba 90 | 8d bd)
+pms0: not in sync yet, discard input (state = 0, ba | 8a ba 90 8d bd)
+pms0: not in sync yet, discard input (state = 3, 90 c0 b9 90 | 8d bd)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 b9 90 8d bd)
+pms0: not in sync yet, discard input (state = 0, b9 | c0 b9 90 8d bd)
+pms0: not in sync yet, discard input (state = 3, 90 c0 b9 90 | 8d bd)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 b9 90 8d bd)
+pms0: not in sync yet, discard input (state = 0, b9 | c0 b9 90 8d bd)
+pms0: not in sync yet, discard input (state = 3, 90 c0 79 b1 | 8d bd)
+pms0: not in sync yet, discard input (state = 3, 90 6a a6 90 | 6f a8)
+pms0: not in sync yet, discard input (state = 0, 69 | 6a a6 90 6f a8)
+pms0: not in sync yet, discard input (state = 3, a5 90 59 a5 | 6f a8)
+pms0: not in sync yet, discard input (state = 3, 90 4f a4 90 | 6f a8)
+pms0: not in sync yet, discard input (state = 0, 4b | 4f a4 90 6f a8)
+pms0: not in sync yet, discard input (state = 3, a4 90 a9 90 | 6f a8)
+pms0: not in sync yet, discard input (state = 0, c0 | 90 a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 0, 3f | 90 a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 0, a8 | 90 a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 3, 90 3d a9 90 | 6f a8)
+pms0: not in sync yet, discard input (state = 0, 3d | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 0, a9 | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 3, 90 3d a9 90 | 6f a8)
+pms0: not in sync yet, discard input (state = 0, 3d | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 0, a9 | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 3, 90 3d a9 90 | 6f a8)
+pms0: not in sync yet, discard input (state = 0, 3d | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 0, a9 | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 3, 90 3d a9 90 | 6f a8)
+pms0: not in sync yet, discard input (state = 0, 3d | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 0, a9 | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 3, 90 3d a9 90 | 6f a8)
+pms0: not in sync yet, discard input (state = 0, 3b | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 0, a8 | 3d a9 90 6f a8)
+pms0: not in sync yet, discard input (state = 3, 90 2a aa 90 | 2f a8)
+pms0: not in sync yet, discard input (state = 0, ad | 2a aa 90 2f a8)
+pms0: not in sync yet, discard input (state = 3, 90 c0 1f ac | 2f a8)
+pms0: not in sync yet, discard input (state = 3, 90 18 af 90 | 2f a8)
+pms0: not in sync yet, discard input (state = 0, af | 18 af 90 2f a8)
+pms0: not in sync yet, discard input (state = 3, 90 c0 ae 90 | 2f a8)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 ae 90 2f a8)
+pms0: not in sync yet, discard input (state = 0, af | c0 ae 90 2f a8)
+pms0: not in sync yet, discard input (state = 3, 90 c0 af 90 | 2f a8)
+pms0: not in sync yet, discard input (state = 0, c0 | c0 af 90 2f a8)
+pms0: not in sync yet, discard input (state = 0, 0c | c0 af 90 2f a8)
+pms0: not in sync yet, discard input (state = 3, b3 90 08 b3 | 2f a8)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 45 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, 32 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 0, b8 | cf 45 c0 cf 45)
+pms0: not in sync yet, discard input (state = 3, 90 cf bd 90 | cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf bd 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf bd 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, 1f | cf bd 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf bd 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, c8 | cf bd 90 cf 45)
+pms0: not in sync yet, discard input (state = 3, 90 cf ca 90 | cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, 0c | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, f7 | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, 08 | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, 05 | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, cf | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, 0e | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, 9b | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, 9c | cf ca 90 cf 45)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 28 c0 cf 2c)
+pms0: not in sync yet, discard input (state = 0, cf | cf 28 c0 cf 2c)
+pms0: not in sync yet, discard input (state = 0, 31 | cf 28 c0 cf 2c)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 28 c0 cf 2c)
+pms0: not in sync yet, discard input (state = 0, 9d | cf 28 c0 cf 2c)
+pms0: not in sync yet, discard input (state = 3, 95 90 cf 36 | cf 2c)
+pms0: not in sync yet, discard input (state = 0, c0 | 90 cf 36 cf 2c)
+pms0: not in sync yet, discard input (state = 0, 9b | 90 cf 36 cf 2c)
+pms0: not in sync yet, discard input (state = 3, 94 90 cf 3b | cf 2c)
+pms0: not in sync yet, discard input (state = 0, c0 | 90 cf 3b cf 2c)
+pms0: not in sync yet, discard input (state = 0, 99 | 90 cf 3b cf 2c)
+pms0: not in sync yet, discard input (state = 3, 95 90 cf 3e | cf 2c)
+pms0: not in sync yet, discard input (state = 0, c0 | 90 cf 3e cf 2c)
+pms0: not in sync yet, discard input (state = 0, cf | 90 cf 3e cf 2c)
+pms0: not in sync yet, discard input (state = 0, 41 | 90 cf 3e cf 2c)
+pms0: not in sync yet, discard input (state = 0, c0 | 90 cf 3e cf 2c)
+pms0: not in sync yet, discard input (state = 0, 99 | 90 cf 3e cf 2c)
+pms0: not in sync yet, discard input (state = 3, 95 90 cf 43 | cf 2c)
+pms0: not in sync yet, discard input (state = 0, c0 | 90 cf 43 cf 2c)
+pms0: not in sync yet, discard input (state = 0, 9d | 90 cf 43 cf 2c)
+pms0: not in sync yet, discard input (state = 3, 95 90 cf 43 | cf 2c)
+pms0: not in sync yet, discard input (state = 0, c0 | 90 cf 43 cf 2c)
+pms0: not in sync yet, discard input (state = 0, 9d | 90 cf 43 cf 2c)
+pms0: not in sync yet, discard input (state = 3, 95 90 cf 43 | cf 2c)
+pms0: not in sync yet, discard input (state = 0, c0 | 90 cf 43 cf 2c)
+pms0: not in sync yet, discard input (state = 0, aa | 90 cf 43 cf 2c)
+pms0: not in sync yet, discard input (state = 0, 8e | 90 cf 43 cf 2c)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 43 c0 cf 43)
+pms0: not in sync yet, discard input (state = 0, cf | cf 43 c0 cf 43)
+pms0: not in sync yet, discard input (state = 0, 78 | cf 43 c0 cf 43)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 43 c0 cf 43)
+pms0: not in sync yet, discard input (state = 0, df | cf 43 c0 cf 43)
+pms0: not in sync yet, discard input (state = 0, 70 | cf 43 c0 cf 43)
+pms0: not in sync yet, discard input (state = 0, cf | cf 43 c0 6d 90)
+pms0: not in sync yet, discard input (state = 0, e8 | cf 43 c0 6d 90)
+pms0: not in sync yet, discard input (state = 0, 6b | cf 43 c0 6d 90)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 43 c0 cf 43)
+pms0: not in sync yet, discard input (state = 0, 5f | cf 43 c0 cf 43)
+pms0: not in sync yet, discard input (state = 3, 90 cf 5c 90 | cf 43)
+pms0: not in sync yet, discard input (state = 0, cf | cf 5c 90 cf 43)
+pms0: not in sync yet, discard input (state = 0, 5a | cf 5c 90 cf 43)
+pms0: not in sync yet, discard input (state = 3, 90 cf 58 90 | cf 43)
+pms0: not in sync yet, discard input (state = 0, cf | cf 58 90 cf 43)
+pms0: not in sync yet, discard input (state = 0, cf | cf 58 90 cf 43)
+pms0: not in sync yet, discard input (state = 0, 43 | cf 58 90 cf 43)
+pms0: not in sync yet, discard input (state = 0, c0 | cf 58 90 cf 43)
+pms0: not in sync yet, discard input (state = 0, 58 | cf 58 90 cf 43)
+pms0: not in sync yet, discard input (state = 3, 90 cf 58 90 | cf 43)
+pms0: not in sync yet, discard input (state = 0, cf | cf 58 90 cf 43)
+pms0: not in sync yet, discard input (state = 0, 58 | cf 58 90 cf 43)
+pms0: not in sync yet, discard input (state = 3, 90 cf f9 59 | cf 43)
+pms0: not in sync yet, discard input (state = 0, cf | cf 43 c0 58 90)
+pms0: not in sync yet, discard input (state = 0, 58 | cf 43 c0 58 90)
+pms0: not in sync yet, discard input (state = 3, 90 cf cf 43 | 58 90)
+pms0: not in sync yet, discard input (state = 0, c0 | cf cf 43 58 90)
+pms0: not in sync yet, discard input (state = 0, f8 | cf cf 43 58 90)
+pms0: not in sync yet, discard input (state = 0, 57 | cf cf 43 58 90)
+pms0: not in sync yet, discard input (state = 0, c0 | 4f 90 c0 4f 90)
+pms0: not in sync yet, discard input (state = 0, 4c | 4f 90 c0 4f 90)
+pms0: not in sync yet, discard input (state = 3, 90 c0 09 4d | 4f 90)
+pms0: not in sync yet, discard input (state = 3, 90 0a 4a 90 | 4f 90)
+pms0: not in sync yet, discard input (state = 0, 0d | 0a 4a 90 4f 90)
+pms0: not in sync yet, discard input (state = 0, 49 | 0a 4a 90 4f 90)
+pms0: not in sync yet, discard input (state = 3, 90 0f 48 90 | 4f 90)
+pms0: not in sync yet, discard input (state = 0, 0e | 0f 48 90 4f 90)
+pms0: not in sync yet, discard input (state = 0, 46 | 0f 48 90 4f 90)
+pms0: not in sync yet, discard input (state = 3, 90 0e 46 90 | 4f 90)
+pms0: not in sync yet, discard input (state = 0, 18 | 0e 46 90 4f 90)
+pms0: not in sync yet, discard input (state = 0, 3f | 0e 46 90 4f 90)
+pms0: not in sync yet, discard input (state = 3, 90 1e 3a 90 | 4f 90)
+pms0: not in sync yet, discard input (state = 0, 2d | 1e 3a 90 4f 90)
+pms0: not in sync yet, discard input (state = 0, 2d | 1e 3a 90 4f 90)
+pms0: not in sync yet, discard input (state = 3, 90 3d 1d 90 | 39 21)
+pms0: not in sync yet, discard input (state = 0, 19 | 3d 1d 90 39 21)
+pms0: not in sync yet, discard input (state = 3, 90 c0 49 11 | 39 21)
+pms0: not in sync yet, discard input (state = 3, 90 4c 0b 90 | 39 21)
+pms0: not in sync yet, discard input (state = 0, fc | 4c 0b 90 39 21)
+pms0: not in sync yet, discard input (state = 0, f0 | b0 5b f4 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 ec 90 b0 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, eb | ec 90 b0 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 b0 e8 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 3, b0 69 e5 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, 6a | 69 e5 90 90 5f)
+pms0: not in sync yet, discard input (state = 0, e2 | 69 e5 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 6b e0 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, 6d | 6b e0 90 90 5f)
+pms0: not in sync yet, discard input (state = 0, e1 | 6b e0 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 6d e1 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, 6e | 6d e1 90 90 5f)
+pms0: not in sync yet, discard input (state = 0, de | 6d e1 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 6f dc 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, dd | 6f dc 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 b0 dd 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 3, b0 6e da 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, 6e | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 0, da | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 6e da 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, 6e | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 0, da | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 6e da 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, 6e | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 0, da | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 6e da 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, 6e | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 0, da | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 6e da 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, 6e | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 0, da | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 6e da 90 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, db | 6e da 90 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 b0 6e da | 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 dd 90 b0 | 90 5f)
+pms0: not in sync yet, discard input (state = 0, 3f | dd 90 b0 90 5f)
+pms0: not in sync yet, discard input (state = 0, d0 | dd 90 b0 90 5f)
+pms0: not in sync yet, discard input (state = 0, 71 | dd 90 b0 90 5f)
+pms0: not in sync yet, discard input (state = 0, dd | dd 90 b0 90 5f)
+pms0: not in sync yet, discard input (state = 3, 90 b0 dd 90 | 71 dd)
+pms0: not in sync yet, discard input (state = 3, b0 dd 90 b0 | 71 dd)
+pms0: not in sync yet, discard input (state = 0, dd | dd 90 b0 71 dd)
+pms0: not in sync yet, discard input (state = 3, 90 b0 dd 90 | 71 dd)
+pms0: not in sync yet, discard input (state = 3, b0 dd 90 b0 | 71 dd)
+pms0: not in sync yet, discard input (state = 0, 3c | dd 90 b0 71 dd)
+pms0: not in sync yet, discard input (state = 0, d0 | dd 90 b0 71 dd)
+pms0: not in sync yet, discard input (state = 0, 70 | dd 90 b0 71 dd)
+pms0: not in sync yet, discard input (state = 0, db | dd 90 b0 71 dd)
+pms0: not in sync yet, discard input (state = 3, 90 b0 d8 90 | 71 dd)
+pms0: not in sync yet, discard input (state = 3, b0 6f d4 90 | 71 dd)
+pms0: not in sync yet, discard input (state = 0, 0f | 6f d4 90 71 dd)
+pms0: not in sync yet, discard input (state = 0, d0 | 6f d4 90 71 dd)
+pms0: not in sync yet, discard input (state = 0, 6f | 6f d4 90 71 dd)
+pms0: not in sync yet, discard input (state = 0, 08 | 6f d4 90 71 dd)
+pms0: not in sync yet, discard input (state = 0, d0 | 6f d4 90 71 dd)
+pms0: not in sync yet, discard input (state = 0, 6f | 6f d4 90 71 dd)
+pms0: not in sync yet, discard input (state = 0, 4d | 6f d4 90 71 dd)
+pms0: not in sync yet, discard input (state = 0, b9 | 6f d4 90 71 dd)
+uhidev0 at uhub3 port 1 configuration 1 interface 0 "vendor 0x062a product 0x0000" rev 1.10/0.00 addr 5
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+syncing disks... done
+rebooting...
+OpenBSD 7.2 (GENERIC.MP) #0: Wed Oct 26 12:01:47 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 4056928256 (3868MB)
+avail mem = 3916570624 (3735MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.6 @ 0xeb110 (52 entries)
+bios0: vendor American Megatrends Inc. version "V3.00L14" date 08/24/2010
+bios0: Panasonic Corporation CF-52PFPBSFQ
+acpi0 at bios0: ACPI 4.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP APIC MCFG HPET ASF! SLIC SSDT SSDT SSDT TCPA SSDT
+acpi0: wakeup devices P0P2(S4) EHC1(S3) EHC2(S3) HDEF(S3) RP05(S4) PXSX(S4) RP07(S4) PXSX(S4) RP08(S4) PXSX(S4) GLAN(S4) PEG3(S4) PEG4(S4) PEG5(S4) PEG6(S4) RP01(S4) [...]
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz, 2926.12 MHz, 06-25-05
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,AES,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 4-way I-cache, 256KB 64b/line 8-way L2 cache, 3MB 64b/line 12-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 133MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 4 (application processor)
+cpu1: Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz, 2660.03 MHz, 06-25-05
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,AES,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,MELTDOWN
+cpu1: 32KB 64b/line 8-way D-cache, 32KB 64b/line 4-way I-cache, 256KB 64b/line 8-way L2 cache, 3MB 64b/line 12-way L3 cache
+cpu1: smt 0, core 2, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz, 2660.02 MHz, 06-25-05
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,AES,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,MELTDOWN
+cpu2: 32KB 64b/line 8-way D-cache, 32KB 64b/line 4-way I-cache, 256KB 64b/line 8-way L2 cache, 3MB 64b/line 12-way L3 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 5 (application processor)
+cpu3: Intel(R) Core(TM) i5 CPU M 520 @ 2.40GHz, 2660.02 MHz, 06-25-05
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,POPCNT,AES,NXE,RDTSCP,LONG,LAHF,PERF,ITSC,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,MELTDOWN
+cpu3: 32KB 64b/line 8-way D-cache, 32KB 64b/line 4-way I-cache, 256KB 64b/line 8-way L2 cache, 3MB 64b/line 12-way L3 cache
+cpu3: smt 1, core 2, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpihpet0 at acpi0: 14318179 Hz
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (P0P2)
+acpiprt2 at acpi0: bus -1 (RP05)
+acpiprt3 at acpi0: bus -1 (RP07)
+acpiprt4 at acpi0: bus -1 (RP08)
+acpiprt5 at acpi0: bus -1 (PEG3)
+acpiprt6 at acpi0: bus -1 (PEG5)
+acpiprt7 at acpi0: bus 10 (RP03)
+acpiprt8 at acpi0: bus -1 (RP04)
+acpiprt9 at acpi0: bus 1 (RP01)
+acpiprt10 at acpi0: bus 11 (BR10)
+acpiprt11 at acpi0: bus 2 (RP02)
+acpiec0 at acpi0
+acpipci0 at acpi0 PCI0: 0x00000000 0x00000011 0x00000001
+acpicmos0 at acpi0
+com0 at acpi0 UAR1 addr 0x3f8/0x8 irq 4: ns16550a, 16 byte fifo
+tpm0 at acpi0 TPM_ 1.2 (TIS) addr 0x4e/0x2
+acpipci1 at acpi0 CPBG
+"MAT0021" at acpi0 not configured
+"MAT0019" at acpi0 not configured
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT1 model "CF-VZSU29A" serial ... type LION oem "Panasonic"
+acpibtn0 at acpi0: LID_
+acpibtn1 at acpi0: PWRB
+acpicpu0 at acpi0: C2(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu1 at acpi0: C2(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu2 at acpi0: C2(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpicpu3 at acpi0: C2(350@245 mwait.3@0x20), C1(1000@3 mwait.1), PSS
+acpitz0 at acpi0: critical temperature is 105 degC
+acpitz1 at acpi0: critical temperature is 130 degC
+acpivideo0 at acpi0: PEGP
+acpivideo1 at acpi0: GFX0
+acpivout0 at acpivideo1: DD02
+cpu0: using IvyBridge MDS workaround
+cpu0: Enhanced SpeedStep 2926 MHz: speeds: 2400, 2399, 2266, 2133, 1999, 1866, 1733, 1599, 1466, 1333, 1199 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core Host" rev 0x02
+inteldrm0 at pci0 dev 2 function 0 "Intel HD Graphics" rev 0x02
+drm0 at inteldrm0
+intagp0 at inteldrm0
+agp0 at intagp0: aperture at 0xd0000000, size 0x10000000
+inteldrm0: msi, IRONLAKE, gen 5
+em0 at pci0 dev 25 function 0 "Intel 82577LM" rev 0x06: msi, address XXX
+ehci0 at pci0 dev 26 function 0 "Intel 3400 USB" rev 0x06: apic 2 int 16
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 27 function 0 "Intel 3400 HD Audio" rev 0x06: msi
+azalia0: codecs: Conexant/0x5068, Conexant/0x2c06, Intel/0x2804, using Conexant/0x5068
+audio0 at azalia0
+ppb0 at pci0 dev 28 function 0 "Intel 3400 PCIE" rev 0x06: msi
+pci1 at ppb0 bus 1
+ppb1 at pci0 dev 28 function 1 "Intel 3400 PCIE" rev 0x06: msi
+pci2 at ppb1 bus 2
+ppb2 at pci0 dev 28 function 2 "Intel 3400 PCIE" rev 0x06: msi
+pci3 at ppb2 bus 10
+iwn0 at pci3 dev 0 function 0 "Intel Centrino Advanced-N 6200" rev 0x35: msi, MIMO 2T2R, MoW, address XXX
+ehci1 at pci0 dev 29 function 0 "Intel 3400 USB" rev 0x06: apic 2 int 23
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "Intel EHCI root hub" rev 2.00/1.00 addr 1
+ppb3 at pci0 dev 30 function 0 "Intel 82801BAM Hub-to-PCI" rev 0xa6
+pci4 at ppb3 bus 11
+cbb0 at pci4 dev 0 function 0 "Ricoh 5C476 CardBus" rev 0xba: apic 2 int 21
+"Ricoh 5C832 Firewire" rev 0x04 at pci4 dev 0 function 1 not configured
+sdhc0 at pci4 dev 0 function 2 "Ricoh 5C822 SD/MMC" rev 0x21: apic 2 int 23
+sdhc0: SDHC 1.0, 33 MHz base clock
+sdmmc0 at sdhc0: 4-bit, sd high-speed, mmc high-speed
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 12 device 0 cacheline 0x0, lattimer 0x20
+pcmcia0 at cardslot0
+pcib0 at pci0 dev 31 function 0 "Intel QM57 LPC" rev 0x06
+ahci0 at pci0 dev 31 function 2 "Intel 3400 AHCI" rev 0x06: msi, AHCI 1.3
+ahci0: port 0: 3.0Gb/s
+ahci0: port 1: 1.5Gb/s
+scsibus1 at ahci0: 32 targets
+sd0 at scsibus1 targ 0 lun 0: <ATA, WDC WD10JPLX-00M, 01.0> naa.5000cca8d8eac4dc
+sd0: 953869MB, 512 bytes/sector, 1953525168 sectors
+cd0 at scsibus1 targ 1 lun 0: <TEAC, DV-W28S-V, B.0A> removable
+ichiic0 at pci0 dev 31 function 3 "Intel 3400 SMBus" rev 0x06: apic 2 int 18
+iic0 at ichiic0
+sdtemp0 at iic0 addr 0x1a: mcp98243
+spdmem0 at iic0 addr 0x50: 2GB DDR3 SDRAM PC3-8500 SO-DIMM
+spdmem1 at iic0 addr 0x52: 2GB DDR3 SDRAM PC3-10600 SO-DIMM with thermal sensor
+itherm0 at pci0 dev 31 function 6 "Intel 3400 Thermal" rev 0x06
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Synaptics touchpad, firmware 6.2, 0xa5a0b1 0x200000 0x0 0xa04711 0x0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+pci5 at mainbus0 bus 63
+pchb1 at pci5 dev 0 function 0 "Intel QuickPath" rev 0x02
+pchb2 at pci5 dev 0 function 1 "Intel QuickPath" rev 0x02
+pchb3 at pci5 dev 2 function 0 "Intel QPI Link" rev 0x02
+pchb4 at pci5 dev 2 function 1 "Intel QPI Physical" rev 0x02
+pchb5 at pci5 dev 2 function 2 "Intel Reserved" rev 0x02
+pchb6 at pci5 dev 2 function 3 "Intel Reserved" rev 0x02
+vmm0 at mainbus0: VMX/EPT
+uhub2 at uhub0 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhub3 at uhub1 port 1 configuration 1 interface 0 "Intel Rate Matching Hub" rev 2.00/0.00 addr 2
+uhidev0 at uhub3 port 1 configuration 1 interface 0 "vendor 0x062a product 0x0000" rev 1.10/0.00 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse1 at ums0 mux 0
+ugen0 at uhub3 port 6 "ALPS UGNZA" rev 2.00/52.76 addr 4
+ugen1 at uhub3 port 8 "Qualcomm Incorporated Qualcomm Gobi 2000" rev 2.00/0.02 addr 5
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (2c98220c4b3ea87d.a) swap on sd0b dump on sd0b
+inteldrm0: 1280x800, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

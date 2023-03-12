@@ -1,0 +1,299 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE releng/13.1-n250148-fc952ac2212 GENERIC amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vbefb): resolution 800x600
+CPU: Intel(R) Core(TM)2 Duo CPU     L9400  @ 1.86GHz (1862.08-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x1067a  Family=0x6  Model=0x17  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0xc08e3fd<SSE3,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,XSAVE,OSXSAVE>
+  AMD Features=0x20100800<SYSCALL,NX,LM>
+  AMD Features2=0x1<LAHF>
+  VT-x: (disabled in BIOS) HLT,PAUSE
+  TSC: P-state invariant, performance statistics
+real memory  = 4294967296 (4096 MB)
+avail memory = 3930546176 (3748 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <HPQOEM 30EB    >
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+ioapic0: MADT APIC ID 1 != hw id 0
+ioapic0 <Version 2.0> irqs 0-23
+Launching APs: 1
+random: entropy device external interface
+kbd1 at kbdmux0
+smbios0: <System Management BIOS> at iomem 0xf68a0-0xf68be
+smbios0: Version: 2.4, BCD Revision: 2.4
+aesni0: No AES or SHA support.
+acpi0: <HPQOEM SLIC-MPC>
+acpi0: Power Button (fixed)
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 450
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x16> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pcib0: could not evaluate _ADR - AE_NOT_FOUND
+pcib0: Length mismatch for 3 range: 20000000 vs 20000001
+pcib0: Length mismatch for 3 range: 11ff000 vs 11fefff
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x6138-0x613f mem 0xd0000000-0xd03fffff,0xc0000000-0xcfffffff irq 16 at device 2.0 on pci0
+agp0: <Intel GM45 SVGA controller> on vgapci0
+WARNING: Device "agp" is Giant locked and may be deleted before FreeBSD 14.0.
+agp0: aperture size is 256M, detected 65532k stolen memory
+vgapci0: Boot video device
+vgapci1: <VGA-compatible display> mem 0xd0400000-0xd04fffff at device 2.1 on pci0
+pci0: <simple comms> at device 3.0 (no driver attached)
+atapci0: <Intel ATA controller> port 0x6130-0x6137,0x614c-0x614f,0x6128-0x612f,0x6148-0x614b,0x6100-0x610f irq 18 at device 3.2 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+uart2: <Mobile 4 Series Chipset KT Controller> port 0x6120-0x6127 mem 0xd8829000-0xd8829fff irq 17 at device 3.3 on pci0
+uart2: Using 1 MSI message
+em0: <Intel(R) 82567LM ICH9 AMT> port 0x60e0-0x60ff mem 0xd8800000-0xd881ffff,0xd8828000-0xd8828fff irq 22 at device 25.0 on pci0
+em0: EEPROM V1.8-3
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+uhci0: <Intel 82801I (ICH9) USB controller> port 0x60c0-0x60df irq 16 at device 26.0 on pci0
+uhci0: LegSup = 0x3f00
+usbus0 on uhci0
+usbus0: 12Mbps Full Speed USB v1.0
+uhci1: <Intel 82801I (ICH9) USB controller> port 0x60a0-0x60bf irq 17 at device 26.1 on pci0
+uhci1: LegSup = 0x3f00
+usbus1 on uhci1
+usbus1: 12Mbps Full Speed USB v1.0
+uhci2: <Intel 82801I (ICH9) USB controller> port 0x6080-0x609f irq 18 at device 26.2 on pci0
+uhci2: LegSup = 0x3f00
+usbus2 on uhci2
+usbus2: 12Mbps Full Speed USB v1.0
+ehci0: <Intel 82801I (ICH9) USB 2.0 controller> mem 0xd8826000-0xd88263ff irq 19 at device 26.7 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci0
+usbus3: 480Mbps High Speed USB v2.0
+hdac0: <Intel 82801I HDA Controller> mem 0xd8820000-0xd8823fff irq 17 at device 27.0 on pci0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pcib2: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci1: <ACPI PCI bus> on pcib2
+iwn0: <Intel WiFi Link 5100> mem 0xd8600000-0xd8601fff irq 17 at device 0.0 on pci1
+pcib3: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pcib4: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+uhci3: <Intel 82801I (ICH9) USB controller> port 0x6060-0x607f irq 20 at device 29.0 on pci0
+uhci3: LegSup = 0x2f00
+usbus4 on uhci3
+usbus4: 12Mbps Full Speed USB v1.0
+uhci4: <Intel 82801I (ICH9) USB controller> port 0x6040-0x605f irq 22 at device 29.1 on pci0
+uhci4: LegSup = 0x3f00
+usbus5 on uhci4
+usbus5: 12Mbps Full Speed USB v1.0
+uhci5: <Intel 82801I (ICH9) USB controller> port 0x6020-0x603f irq 18 at device 29.2 on pci0
+uhci5: LegSup = 0x2f00
+usbus6 on uhci5
+usbus6: 12Mbps Full Speed USB v1.0
+ehci1: <Intel 82801I (ICH9) USB 2.0 controller> mem 0xd8825000-0xd88253ff irq 20 at device 29.7 on pci0
+usbus7: EHCI version 1.0
+usbus7 on ehci1
+usbus7: 480Mbps High Speed USB v2.0
+pcib5: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pcib5: failed to allocate initial memory window: 0xd0500000-0xd05fffff
+pci2: <ACPI PCI bus> on pcib5
+fwohci0: <1394 Open Host Controller Interface> mem 0xd0501000-0xd05017ff irq 20 at device 9.0 on pci2
+fwohci0: OHCI version 1.10 (ROM=0)
+fwohci0: No. of Isochronous channels is 4.
+fwohci0: EUI64 XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX:XXXX
+fwohci0: Phy 1394a available S400, 1 ports.
+fwohci0: Link S400, max_rec 2048 bytes.
+firewire0: <IEEE1394(FireWire) bus> on fwohci0
+fwohci0: Initiate bus reset
+fwohci0: fwohci_intr_core: BUS reset
+fwohci0: PhysicalUpperBound register is not implemented.  Physical memory access is limited to the first 4GB
+fwohci0: PhysicalUpperBound = 0x00000000
+fwohci0: fwohci_intr_core: node_id=0x00000000, SelfID Count=1, CYCLEMASTER mode
+firewire0: 1 nodes, maxhop <= 0 cable IRM irm(0)  (me) 
+firewire0: bus manager 0 
+sdhci_pci0: <RICOH R5C822 SD> mem 0xd0502000-0xd05020ff irq 22 at device 9.1 on pci2
+sdhci_pci0: 1 slot(s) allocated
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+ahci0: <Intel ICH9M AHCI SATA controller> port 0x6118-0x611f,0x6144-0x6147,0x6110-0x6117,0x6140-0x6143,0x6000-0x601f mem 0xd8824000-0xd88247ff irq 21 at device 31.2 on pci0
+ahci0: AHCI v1.20 with 4 3Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+battery0: <ACPI Control Method Battery> on acpi0
+battery1: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_button0: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+acpi_tz3: <Thermal Zone> on acpi0
+acpi_tz4: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+uart3: <16550 or compatible> port 0x280-0x287 irq 6 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xcf7ff,0xcf800-0xd07ff pnpid ORM0000 on isa0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounter "TSC" frequency 1862000165 Hz quality 1000
+Timecounters tick every 1.000 msec
+hdacc0: <Analog Devices AD1984A HDA CODEC> at cad 0 on hdac0
+hdaa0: <Analog Devices AD1984A Audio Function Group> at nid 1 on hdacc0
+pcm0: <Analog Devices AD1984A (Analog 4ch/2.0)> at nid 18,22 and 28,21 on hdaa0
+pcm1: <Analog Devices AD1984A (Right Analog Mic)> at nid 20 on hdaa0
+hdacc1: <Lucent/Agere Systems (0x1040) HDA CODEC> at cad 1 on hdac0
+unknown: <Lucent/Agere Systems (0x1040) HDA CODEC Modem Function Group> at nid 1 on hdacc1 (no driver attached)
+ugen5.1: <Intel UHCI root HUB> at usbus5
+uhub0 on usbus5
+uhub0: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+ugen7.1: <Intel EHCI root HUB> at usbus7
+uhub1 on usbus7
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus7
+ugen3.1: <Intel EHCI root HUB> at usbus3
+uhub2 on usbus3
+uhub2: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+ugen4.1: <Intel UHCI root HUB> at usbus4
+ugen0.1: <Intel UHCI root HUB> at usbus0
+uhub3 on usbus4
+uhub3: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub4 on usbus0
+uhub4: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+ugen6.1: <Intel UHCI root HUB> at usbus6
+uhub5 on usbus6
+uhub5: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus6
+ugen2.1: <Intel UHCI root HUB> at usbus2
+uhub6 on usbus2
+uhub6: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen1.1: <Intel UHCI root HUB> at usbus1
+uhub7 on usbus1
+uhub7: <Intel UHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+Trying to mount root from cd9660:/dev/iso9660/LIVE []...
+uhub7: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+uhub5: 2 ports with 2 removable, self powered
+uhub6: 2 ports with 2 removable, self powered
+uhub4: 2 ports with 2 removable, self powered
+uhub3: 2 ports with 2 removable, self powered
+Root mount waiting for: CAM usbus3 usbus7
+Root mount waiting for: CAM usbus3 usbus7
+ses0 at ahciem0 bus 0 scbus5 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus2 target 0 lun 0
+ada0: <TOSHIBA MK1229GSG PS110C> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ses0: ada0,pass0 in 'Slot 00', SATA Slot: scbus2 target 0
+uhub2: 6 ports with 6 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+GEOM_LABEL[1]: MSDOSFS: ada0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: ada0s1: FAT32 volume not valid.
+GEOM_LABEL[1]: Label for provider ada0s1 is ntfs/Reservado%20para%20el%20sistema.
+GEOM_LABEL[1]: MSDOSFS: ada0s2: FAT32 volume not valid.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXX FAT32 volume not valid.
+GEOM_LABEL[1]: Label Reservado%20para%20el%20sistema(ntfs/Reservado%20para%20el%20sistema) already exists (diskid/XXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXX FAT32 volume not valid.
+Root mount waiting for: usbus7
+usb_msc_auto_quirk: UQ_MSC_NO_GETMAXLUN set for USB mass storage device SanDisk Cruzer Blade (0x0781:0x5567)
+usb_msc_auto_quirk: UQ_MSC_NO_PREVENT_ALLOW set for USB mass storage device SanDisk Cruzer Blade (0x0781:0x5567)
+usb_msc_auto_quirk: UQ_MSC_NO_SYNC_CACHE set for USB mass storage device SanDisk Cruzer Blade (0x0781:0x5567)
+ugen4.2: <Logitech USB Optical Mouse> at usbus4
+ugen0.2: <Broadcom Corp HP Integrated Module> at usbus0
+ugen7.2: <SanDisk Cruzer Blade> at usbus7
+umass0 on uhub1
+umass0: <SanDisk Cruzer Blade, class 0/0, rev 2.00/1.00, addr 2> on usbus7
+umass0:  SCSI over Bulk-Only; quirks = 0xc100
+umass0:6:0: Attached to scbus6
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <SanDisk Cruzer Blade 1.00> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: 29952MB (61341696 512 byte sectors)
+da0: quirks=0x2<NO_6_BYTE>
+GEOM_LABEL[1]: MSDOSFS: da0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider da0 is diskid/XXXXXXXXXXXXXXXXXXXXXXXXXX
+GEOM: ventoy/IMAGE: the secondary GPT table is corrupt or invalid.
+GEOM: ventoy/IMAGE: using the primary only -- recovery suggested.
+GEOM_LABEL[1]: ISO9660 file system detected on ventoy/IMAGE.
+GEOM_LABEL[1]: Label for provider ventoy/IMAGE is iso9660/LIVE.
+GEOM_LABEL[1]: MSDOSFS: ventoy/IMAGE: FAT12/16 volume not valid.
+GEOM_LABEL[1]: MSDOSFS: da0s1: no FAT volume detected.
+GEOM_LABEL[1]: MSDOSFS: da0s2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label for provider da0s2 is msdosfs/VTOYEFI.
+GEOM_LABEL[1]: Label for provider ventoy/IMAGEp1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ventoy/IMAGEp1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ventoy/IMAGEp2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ventoy/IMAGEp2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label for provider ventoy/IMAGEp2 is msdosfs/EFISYS.
+GEOM: iso9660/LIVE: the secondary GPT table is corrupt or invalid.
+GEOM: iso9660/LIVE: using the primary only -- recovery suggested.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXX no FAT volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label VTOYEFI(msdosfs/VTOYEFI) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp1).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp1: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: MSDOSFS: md0: no FAT signature found.
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: Label for provider md0.uzip is ufsid/XXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: MSDOSFS: md0.uzip: no FAT signature found.
+random: unblocking device.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Got stolen memory base 0xbc000000, size 0x4000000
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] Initialized i915 1.6.0 20200917 for drmn0 on minor 0
+VT: Replacing driver "vbefb" with new "fb".
+start FB_INFO:
+type=11 height=800 width=1280 depth=32
+pbase=0xc01e6000 vbase=0xfffff800c01e6000
+name=drmn0 flags=0x0 stride=5120 bpp=32
+end FB_INFO
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_video0: <ACPI video extension> on vgapci0
+Cuse v0.1.36 @ /dev/cuse
+lo0: link state changed to UP
+ugen4.2: <Logitech USB Optical Mouse> at usbus4 (disconnected)
+ubt0 on uhub4
+ubt0: <Broadcom Corp HP Integrated Module, class 224/1, rev 2.00/1.00, addr 2> on usbus0
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label ntfs/Reservado%20para%20el%20sistema removed.
+ugen4.2: <Logitech USB Optical Mouse> at usbus4
+ums0 on uhub3
+ums0: <Logitech USB Optical Mouse, class 0/0, rev 2.00/72.00, addr 2> on usbus4
+ums0: 3 buttons and [XYZ] coordinates ID=0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()

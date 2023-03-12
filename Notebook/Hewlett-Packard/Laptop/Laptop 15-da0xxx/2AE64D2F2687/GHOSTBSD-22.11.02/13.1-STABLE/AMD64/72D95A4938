@@ -1,0 +1,1047 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-STABLE GENERIC amd64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (2000.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc002e00<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xc04<RSBA>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 25769803776 (24576 MB)
+avail memory = 24711843840 (23567 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM 84A7    >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 5 2 6 7 4 3
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x6f032000-0x6f03201e
+smbios0: Version: 3.0, BCD Revision: 3.0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-MPC>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x50> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x6000-0x603f mem 0x92000000-0x92ffffff,0xa0000000-0xafffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point-LP USB 3.0 controller> mem 0x94210000-0x9421ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel ICH8M+ (RAID) AHCI SATA controller> port 0x6080-0x6087,0x6088-0x608b,0x6060-0x607f mem 0x94230000-0x94231fff,0x94237000-0x942370ff,0x94235000-0x942357ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci1: <VGA-compatible display> port 0x5000-0x507f mem 0x93000000-0x93ffffff,0x80000000-0x8fffffff,0x90000000-0x91ffffff at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0x4000-0x40ff mem 0x94104000-0x94104fff,0x94100000-0x94103fff at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: turning off MSI enable bit.
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib3: <ACPI PCI-PCI bridge> at device 28.5 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <network> at device 0.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake-LP HDA Controller> mem 0x94228000-0x9422bfff,0x94200000-0x9420ffff at device 31.3 on pci0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC" frequency 1991995978 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Realtek ALC236 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC236 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC236 (Analog)> at nid 20 and 25 on hdaa0
+pcm1: <Realtek ALC236 (Analog)> at nid 33 and 18 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+pcm2: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from zfs:tank/ROOT/sashaBSD []...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 870 EVO 1TB SVT01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <Samsung SSD 860 QVO 1TB RVQ01B6Q> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 953869MB (1953525168 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Got stolen memory base 0x79000000, size 0x2000000
+lkpi_iic0: <LinuxKPI I2C> on drmn0
+iicbus0: <Philips I2C bus> on lkpi_iic0
+iic0: <I2C generic I/O> on iicbus0
+lkpi_iic1: <LinuxKPI I2C> on drmn0
+iicbus1: <Philips I2C bus> on lkpi_iic1
+iic1: <I2C generic I/O> on iicbus1
+lkpi_iic2: <LinuxKPI I2C> on drmn0
+iicbus2: <Philips I2C bus> on lkpi_iic2
+iic2: <I2C generic I/O> on iicbus2
+drmn0: successfully loaded firmware image 'i915/kbl_dmc_ver1_04.bin'
+drmn0: [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+ugen0.2: <DHFHT019IATB7K HP TrueVision HD Camera> at usbus0
+ugen0.3: <Realtek Bluetooth Radio> at usbus0
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+lkpi_iic3: <LinuxKPI I2C> on drm2
+iicbus3: <Philips I2C bus> on lkpi_iic3
+iic3: <I2C generic I/O> on iicbus3
+[drm] Initialized i915 1.6.0 20200917 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+pbase=0xa0000000 vbase=0xfffff800a0000000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+end FB_INFO
+Cuse v0.1.37 @ /dev/cuse
+pchtherm0: <Skylake PCH Thermal Subsystem> mem 0x94233000-0x94233fff at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-LP SMBus controller> port 0x6040-0x605f mem 0x94236000-0x942360ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+rtw880: <rtw_8821ce> port 0x3000-0x30ff mem 0x94000000-0x9400ffff at device 0.0 on pci3
+rtw880: successfully loaded firmware image 'rtw88/rtw8821c_fw.bin'
+rtw880: Firmware version 24.8.0, H2C version 12
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+ACPI Error: No handler for Region [RCM0] (0xfffff80004dc0700) [SystemCMOS] (20201113/evregion-290)
+ACPI Error: Region SystemCMOS (ID=5) has no handler (20201113/exfldio-428)
+ACPI Error: Aborting method \134_SB.WMID.ESDT due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+ACPI Error: Aborting method \134_SB.PCI0.LPCB.EC0._Q42 due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+acpi_ec0: evaluation of query method _Q42 failed: AE_NOT_EXIST
+ubt0 on uhub0
+ubt0: <Bluetooth Radio> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+Security policy loaded: MAC/ntpd (mac_ntpd)
+nvidia1: <NVIDIA GeForce MX130> on vgapci1
+vgapci1: child nvidia1 requested pci_enable_io
+vgapci1: child nvidia1 requested pci_enable_io
+ACPI Warning: \134_SB.PCI0.RP01.PXSX._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20201113/nsarguments-212)
+pid 1826 (Xorg), jid 0, uid 0: exited on signal 6
+pid 1968 (evolution-alarm-not), jid 0, uid 1002: exited on signal 6
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 done
+All buffers synced.
+Uptime: 7m58s
+ubt0: detached
+uhub0: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-STABLE GENERIC amd64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (2000.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc002e00<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xc04<RSBA>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 25769803776 (24576 MB)
+avail memory = 24711843840 (23567 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM 84A7    >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 3 4 6 7 5 2
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x6f032000-0x6f03201e
+smbios0: Version: 3.0, BCD Revision: 3.0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-MPC>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x50> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x6000-0x603f mem 0x92000000-0x92ffffff,0xa0000000-0xafffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point-LP USB 3.0 controller> mem 0x94210000-0x9421ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel ICH8M+ (RAID) AHCI SATA controller> port 0x6080-0x6087,0x6088-0x608b,0x6060-0x607f mem 0x94230000-0x94231fff,0x94237000-0x942370ff,0x94235000-0x942357ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci1: <VGA-compatible display> port 0x5000-0x507f mem 0x93000000-0x93ffffff,0x80000000-0x8fffffff,0x90000000-0x91ffffff at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0x4000-0x40ff mem 0x94104000-0x94104fff,0x94100000-0x94103fff at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib3: <ACPI PCI-PCI bridge> at device 28.5 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <network> at device 0.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake-LP HDA Controller> mem 0x94228000-0x9422bfff,0x94200000-0x9420ffff at device 31.3 on pci0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC" frequency 1991995793 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Realtek ALC236 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC236 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC236 (Analog)> at nid 20 and 25 on hdaa0
+pcm1: <Realtek ALC236 (Analog)> at nid 33 and 18 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+pcm2: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from zfs:tank/ROOT/sashaBSD []...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 870 EVO 1TB SVT01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <Samsung SSD 860 QVO 1TB RVQ01B6Q> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 953869MB (1953525168 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Got stolen memory base 0x79000000, size 0x2000000
+lkpi_iic0: <LinuxKPI I2C> on drmn0
+iicbus0: <Philips I2C bus> on lkpi_iic0
+iic0: <I2C generic I/O> on iicbus0
+lkpi_iic1: <LinuxKPI I2C> on drmn0
+iicbus1: <Philips I2C bus> on lkpi_iic1
+iic1: <I2C generic I/O> on iicbus1
+lkpi_iic2: <LinuxKPI I2C> on drmn0
+iicbus2: <Philips I2C bus> on lkpi_iic2
+iic2: <I2C generic I/O> on iicbus2
+drmn0: successfully loaded firmware image 'i915/kbl_dmc_ver1_04.bin'
+drmn0: [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+ugen0.2: <DHFHT019IATB7K HP TrueVision HD Camera> at usbus0
+ugen0.3: <Realtek Bluetooth Radio> at usbus0
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+lkpi_iic3: <LinuxKPI I2C> on drm2
+iicbus3: <Philips I2C bus> on lkpi_iic3
+iic3: <I2C generic I/O> on iicbus3
+[drm] Initialized i915 1.6.0 20200917 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+pbase=0xa0000000 vbase=0xfffff800a0000000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+end FB_INFO
+Cuse v0.1.37 @ /dev/cuse
+rtw880: <rtw_8821ce> port 0x3000-0x30ff mem 0x94000000-0x9400ffff at device 0.0 on pci3
+rtw880: successfully loaded firmware image 'rtw88/rtw8821c_fw.bin'
+rtw880: Firmware version 24.8.0, H2C version 12
+pchtherm0: <Skylake PCH Thermal Subsystem> mem 0x94233000-0x94233fff at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-LP SMBus controller> port 0x6040-0x605f mem 0x94236000-0x942360ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+ACPI Error: No handler for Region [RCM0] (0xfffff80004dbd700) [SystemCMOS] (20201113/evregion-290)
+ACPI Error: Region SystemCMOS (ID=5) has no handler (20201113/exfldio-428)
+ACPI Error: Aborting method \134_SB.WMID.ESDT due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+ACPI Error: Aborting method \134_SB.PCI0.LPCB.EC0._Q42 due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+acpi_ec0: evaluation of query method _Q42 failed: AE_NOT_EXIST
+ubt0 on uhub0
+ubt0: <Bluetooth Radio> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+Security policy loaded: MAC/ntpd (mac_ntpd)
+nvidia1: <NVIDIA GeForce MX130> on vgapci1
+vgapci1: child nvidia1 requested pci_enable_io
+vgapci1: child nvidia1 requested pci_enable_io
+ACPI Warning: \134_SB.PCI0.RP01.PXSX._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20201113/nsarguments-212)
+pid 1819 (Xorg), jid 0, uid 0: exited on signal 6
+ACPI Error: No handler for Region [RCM0] (0xfffff80004dbd700) [SystemCMOS] (20201113/evregion-290)
+ACPI Error: Region SystemCMOS (ID=5) has no handler (20201113/exfldio-428)
+ACPI Error: Aborting method \134_SB.WMID.ESDT due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+ACPI Error: Aborting method \134_SB.PCI0.LPCB.EC0._Q42 due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+acpi_ec0: evaluation of query method _Q42 failed: AE_NOT_EXIST
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 0 done
+All buffers synced.
+Uptime: 7m11s
+ubt0: detached
+uhub0: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-STABLE GENERIC amd64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (2000.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc002e00<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xc04<RSBA>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 25769803776 (24576 MB)
+avail memory = 24711839744 (23567 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM 84A7    >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 6 2 4 5 3 7
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x6f032000-0x6f03201e
+smbios0: Version: 3.0, BCD Revision: 3.0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-MPC>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x50> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x6000-0x603f mem 0x92000000-0x92ffffff,0xa0000000-0xafffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point-LP USB 3.0 controller> mem 0x94210000-0x9421ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel ICH8M+ (RAID) AHCI SATA controller> port 0x6080-0x6087,0x6088-0x608b,0x6060-0x607f mem 0x94230000-0x94231fff,0x94237000-0x942370ff,0x94235000-0x942357ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci1: <VGA-compatible display> port 0x5000-0x507f mem 0x93000000-0x93ffffff,0x80000000-0x8fffffff,0x90000000-0x91ffffff at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0x4000-0x40ff mem 0x94104000-0x94104fff,0x94100000-0x94103fff at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib3: <ACPI PCI-PCI bridge> at device 28.5 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <network> at device 0.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake-LP HDA Controller> mem 0x94228000-0x9422bfff,0x94200000-0x9420ffff at device 31.3 on pci0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC" frequency 1991996124 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Realtek ALC236 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC236 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC236 (Analog)> at nid 20 and 25 on hdaa0
+pcm1: <Realtek ALC236 (Analog)> at nid 33 and 18 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+pcm2: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from zfs:tank/ROOT/sashaBSD []...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 870 EVO 1TB SVT01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <Samsung SSD 860 QVO 1TB RVQ01B6Q> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 953869MB (1953525168 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Got stolen memory base 0x79000000, size 0x2000000
+lkpi_iic0: <LinuxKPI I2C> on drmn0
+iicbus0: <Philips I2C bus> on lkpi_iic0
+iic0: <I2C generic I/O> on iicbus0
+lkpi_iic1: <LinuxKPI I2C> on drmn0
+iicbus1: <Philips I2C bus> on lkpi_iic1
+iic1: <I2C generic I/O> on iicbus1
+lkpi_iic2: <LinuxKPI I2C> on drmn0
+iicbus2: <Philips I2C bus> on lkpi_iic2
+iic2: <I2C generic I/O> on iicbus2
+drmn0: successfully loaded firmware image 'i915/kbl_dmc_ver1_04.bin'
+drmn0: [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+ugen0.2: <DHFHT019IATB7K HP TrueVision HD Camera> at usbus0
+ugen0.3: <Realtek Bluetooth Radio> at usbus0
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+lkpi_iic3: <LinuxKPI I2C> on drm2
+iicbus3: <Philips I2C bus> on lkpi_iic3
+iic3: <I2C generic I/O> on iicbus3
+[drm] Initialized i915 1.6.0 20200917 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+pbase=0xa0000000 vbase=0xfffff800a0000000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+end FB_INFO
+Cuse v0.1.37 @ /dev/cuse
+rtw880: <rtw_8821ce> port 0x3000-0x30ff mem 0x94000000-0x9400ffff at device 0.0 on pci3
+rtw880: successfully loaded firmware image 'rtw88/rtw8821c_fw.bin'
+rtw880: Firmware version 24.8.0, H2C version 12
+pchtherm0: <Skylake PCH Thermal Subsystem> mem 0x94233000-0x94233fff at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-LP SMBus controller> port 0x6040-0x605f mem 0x94236000-0x942360ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+lo0: link state changed to UP
+ACPI Error: No handler for Region [RCM0] (0xfffff80004ebaa00) [SystemCMOS] (20201113/evregion-290)
+ACPI Error: Region SystemCMOS (ID=5) has no handler (20201113/exfldio-428)
+ACPI Error: Aborting method \134_SB.WMID.ESDT due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+ACPI Error: Aborting method \134_SB.PCI0.LPCB.EC0._Q42 due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+acpi_ec0: evaluation of query method _Q42 failed: AE_NOT_EXIST
+re0: link state changed to DOWN
+ubt0 on uhub0
+ubt0: <Bluetooth Radio> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+Security policy loaded: MAC/ntpd (mac_ntpd)
+nvidia1: <NVIDIA GeForce MX130> on vgapci1
+vgapci1: child nvidia1 requested pci_enable_io
+vgapci1: child nvidia1 requested pci_enable_io
+ACPI Warning: \134_SB.PCI0.RP01.PXSX._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20201113/nsarguments-212)
+pid 1817 (Xorg), jid 0, uid 0: exited on signal 6
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 0 done
+All buffers synced.
+Uptime: 2m59s
+ubt0: detached
+uhub0: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-STABLE GENERIC amd64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (2000.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc002e00<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xc04<RSBA>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 25769803776 (24576 MB)
+avail memory = 24711839744 (23567 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM 84A7    >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 2 6 4 5 7 3
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x6f032000-0x6f03201e
+smbios0: Version: 3.0, BCD Revision: 3.0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-MPC>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x50> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x6000-0x603f mem 0x92000000-0x92ffffff,0xa0000000-0xafffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point-LP USB 3.0 controller> mem 0x94210000-0x9421ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel ICH8M+ (RAID) AHCI SATA controller> port 0x6080-0x6087,0x6088-0x608b,0x6060-0x607f mem 0x94230000-0x94231fff,0x94237000-0x942370ff,0x94235000-0x942357ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci1: <VGA-compatible display> port 0x5000-0x507f mem 0x93000000-0x93ffffff,0x80000000-0x8fffffff,0x90000000-0x91ffffff at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0x4000-0x40ff mem 0x94104000-0x94104fff,0x94100000-0x94103fff at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib3: <ACPI PCI-PCI bridge> at device 28.5 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <network> at device 0.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake-LP HDA Controller> mem 0x94228000-0x9422bfff,0x94200000-0x9420ffff at device 31.3 on pci0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC" frequency 1991995841 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Realtek ALC236 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC236 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC236 (Analog)> at nid 20 and 25 on hdaa0
+pcm1: <Realtek ALC236 (Analog)> at nid 33 and 18 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+pcm2: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from zfs:tank/ROOT/sashaBSD []...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 870 EVO 1TB SVT01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <Samsung SSD 860 QVO 1TB RVQ01B6Q> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 953869MB (1953525168 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+ugen0.2: <DHFHT019IATB7K HP TrueVision HD Camera> at usbus0
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Got stolen memory base 0x79000000, size 0x2000000
+lkpi_iic0: <LinuxKPI I2C> on drmn0
+iicbus0: <Philips I2C bus> on lkpi_iic0
+iic0: <I2C generic I/O> on iicbus0
+lkpi_iic1: <LinuxKPI I2C> on drmn0
+iicbus1: <Philips I2C bus> on lkpi_iic1
+iic1: <I2C generic I/O> on iicbus1
+lkpi_iic2: <LinuxKPI I2C> on drmn0
+iicbus2: <Philips I2C bus> on lkpi_iic2
+iic2: <I2C generic I/O> on iicbus2
+drmn0: successfully loaded firmware image 'i915/kbl_dmc_ver1_04.bin'
+drmn0: [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+ugen0.3: <Realtek Bluetooth Radio> at usbus0
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+lkpi_iic3: <LinuxKPI I2C> on drm2
+iicbus3: <Philips I2C bus> on lkpi_iic3
+iic3: <I2C generic I/O> on iicbus3
+[drm] Initialized i915 1.6.0 20200917 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+pbase=0xa0000000 vbase=0xfffff800a0000000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+end FB_INFO
+Cuse v0.1.37 @ /dev/cuse
+rtw880: <rtw_8821ce> port 0x3000-0x30ff mem 0x94000000-0x9400ffff at device 0.0 on pci3
+rtw880: successfully loaded firmware image 'rtw88/rtw8821c_fw.bin'
+rtw880: Firmware version 24.8.0, H2C version 12
+ACPI Error: No handler for Region [RCM0] (0xfffff80004dbf700) [SystemCMOS] (20201113/evregion-290)
+ACPI Error: Region SystemCMOS (ID=5) has no handler (20201113/exfldio-428)
+ACPI Error: Aborting method \134_SB.WMID.ESDT due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+ACPI Error: Aborting method \134_SB.PCI0.LPCB.EC0._Q42 due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+acpi_ec0: evaluation of query method _Q42 failed: AE_NOT_EXIST
+pchtherm0: <Skylake PCH Thermal Subsystem> mem 0x94233000-0x94233fff at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-LP SMBus controller> port 0x6040-0x605f mem 0x94236000-0x942360ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+ubt0 on uhub0
+ubt0: <Bluetooth Radio> on usbus0
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+Security policy loaded: MAC/ntpd (mac_ntpd)
+nvidia1: <NVIDIA GeForce MX130> on vgapci1
+vgapci1: child nvidia1 requested pci_enable_io
+vgapci1: child nvidia1 requested pci_enable_io
+ACPI Warning: \134_SB.PCI0.RP01.PXSX._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20201113/nsarguments-212)
+pid 1817 (Xorg), jid 0, uid 0: exited on signal 6
+ugen0.4: <Ralink 802.11 n WLAN> at usbus0
+run0 on uhub0
+run0: <1.0> on usbus0
+run0: MAC/BBP RT5592 (rev 0x0222), RF RT5592 (MIMO 2T2R), address XXX
+run0: [HT] Enabling 802.11n
+wlan1: Ethernet address: ...
+run0: firmware RT3071 ver. 0.33 loaded
+wlan1: link state changed to UP
+wlan1: link state changed to DOWN
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 0 done
+All buffers synced.
+Uptime: 2m37s
+run0: detached
+ubt0: detached
+uhub0: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-STABLE GENERIC amd64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+VT(efifb): resolution 1920x1080
+CPU: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz (2000.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806ea  Family=0x6  Model=0x8e  Stepping=10
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c67af<FSGSBASE,TSCADJ,SGX,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  Structured Extended Features3=0xbc002e00<MCUOPT,MD_CLEAR,TSXFA,IBPB,STIBP,L1DFL,ARCH_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0xc04<RSBA>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 25769803776 (24576 MB)
+avail memory = 24711839744 (23567 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <HPQOEM 84A7    >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 2 4 6 7 3 5
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x6f032000-0x6f03201e
+smbios0: Version: 3.0, BCD Revision: 3.0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <HPQOEM SLIC-MPC>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x50> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x6000-0x603f mem 0x92000000-0x92ffffff,0xa0000000-0xafffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point-LP USB 3.0 controller> mem 0x94210000-0x9421ffff at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel ICH8M+ (RAID) AHCI SATA controller> port 0x6080-0x6087,0x6088-0x608b,0x6060-0x607f mem 0x94230000-0x94231fff,0x94237000-0x942370ff,0x94235000-0x942357ff at device 23.0 on pci0
+ahci0: AHCI v1.31 with 2 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci1: <VGA-compatible display> port 0x5000-0x507f mem 0x93000000-0x93ffffff,0x80000000-0x8fffffff,0x90000000-0x91ffffff at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re0: <RealTek 8168/8111 B/C/CP/D/DP/E/F/G PCIe Gigabit Ethernet> port 0x4000-0x40ff mem 0x94104000-0x94104fff,0x94100000-0x94103fff at device 0.0 on pci2
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: Chip rev. 0x54000000
+re0: MAC rev. 0x00100000
+miibus0: <MII bus> on re0
+rgephy0: <RTL8251/8153 1000BASE-T media interface> PHY 1 on miibus0
+rgephy0:  none, 10baseT, 10baseT-FDX, 10baseT-FDX-flow, 100baseTX, 100baseTX-FDX, 100baseTX-FDX-flow, 1000baseT-FDX, 1000baseT-FDX-master, 1000baseT-FDX-flow, 1000baseT-FDX-flow-master, auto, auto-flow
+re0: Using defaults for TSO: 65518/35/2048
+re0: Ethernet address: ...
+re0: netmap queues/slots: TX 1/256, RX 1/256
+pcib3: <ACPI PCI-PCI bridge> at device 28.5 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pci3: <network> at device 0.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Kaby Lake-LP HDA Controller> mem 0x94228000-0x9422bfff,0x94200000-0x9420ffff at device 31.3 on pci0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz2: <Thermal Zone> on acpi0
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+battery0: <ACPI Control Method Battery> on acpi0
+acpi_acad0: <AC Adapter> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC" frequency 1991995973 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Realtek ALC236 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC236 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC236 (Analog)> at nid 20 and 25 on hdaa0
+pcm1: <Realtek ALC236 (Analog)> at nid 33 and 18 on hdaa0
+hdacc1: <Intel Kaby Lake HDA CODEC> at cad 2 on hdac0
+hdaa1: <Intel Kaby Lake Audio Function Group> at nid 1 on hdacc1
+pcm2: <Intel Kaby Lake (HDMI/DP 8ch)> at nid 3 on hdaa1
+Trying to mount root from zfs:tank/ROOT/sashaBSD []...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <Samsung SSD 870 EVO 1TB SVT01B6Q> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 953869MB (1953525168 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <Samsung SSD 860 QVO 1TB RVQ01B6Q> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada1: Command Queueing enabled
+ada1: 953869MB (1953525168 512 byte sectors)
+uhub0: 18 ports with 18 removable, self powered
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] Unable to create a private tmpfs mount, hugepage support will be disabled(-19).
+[drm] Got stolen memory base 0x79000000, size 0x2000000
+lkpi_iic0: <LinuxKPI I2C> on drmn0
+iicbus0: <Philips I2C bus> on lkpi_iic0
+iic0: <I2C generic I/O> on iicbus0
+lkpi_iic1: <LinuxKPI I2C> on drmn0
+iicbus1: <Philips I2C bus> on lkpi_iic1
+iic1: <I2C generic I/O> on iicbus1
+lkpi_iic2: <LinuxKPI I2C> on drmn0
+iicbus2: <Philips I2C bus> on lkpi_iic2
+iic2: <I2C generic I/O> on iicbus2
+drmn0: successfully loaded firmware image 'i915/kbl_dmc_ver1_04.bin'
+drmn0: [drm] Finished loading DMC firmware i915/kbl_dmc_ver1_04.bin (v1.4)
+ugen0.2: <Ralink 802.11 n WLAN> at usbus0
+ugen0.3: <DHFHT019IATB7K HP TrueVision HD Camera> at usbus0
+ugen0.4: <Realtek Bluetooth Radio> at usbus0
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+lkpi_iic3: <LinuxKPI I2C> on drm2
+iicbus3: <Philips I2C bus> on lkpi_iic3
+iic3: <I2C generic I/O> on iicbus3
+[drm] Initialized i915 1.6.0 20200917 for drmn0 on minor 0
+VT: Replacing driver "efifb" with new "fb".
+start FB_INFO:
+type=11 height=1080 width=1920 depth=32
+pbase=0xa0000000 vbase=0xfffff800a0000000
+name=drmn0 flags=0x0 stride=7680 bpp=32
+end FB_INFO
+Cuse v0.1.37 @ /dev/cuse
+pchtherm0: <Skylake PCH Thermal Subsystem> mem 0x94233000-0x94233fff at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-LP SMBus controller> port 0x6040-0x605f mem 0x94236000-0x942360ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+rtw880: <rtw_8821ce> port 0x3000-0x30ff mem 0x94000000-0x9400ffff at device 0.0 on pci3
+rtw880: successfully loaded firmware image 'rtw88/rtw8821c_fw.bin'
+rtw880: Firmware version 24.8.0, H2C version 12
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WMID.WQAB: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+lo0: link state changed to UP
+re0: link state changed to DOWN
+ACPI Error: No handler for Region [RCM0] (0xfffff80004dc2700) [SystemCMOS] (20201113/evregion-290)
+ACPI Error: Region SystemCMOS (ID=5) has no handler (20201113/exfldio-428)
+ACPI Error: Aborting method \134_SB.WMID.ESDT due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+ACPI Error: Aborting method \134_SB.PCI0.LPCB.EC0._Q42 due to previous error (AE_NOT_EXIST) (20201113/psparse-689)
+acpi_ec0: evaluation of query method _Q42 failed: AE_NOT_EXIST
+run0 on uhub0
+run0: <1.0> on usbus0
+run0: MAC/BBP RT5592 (rev 0x0222), RF RT5592 (MIMO 2T2R), address XXX
+run0: [HT] Enabling 802.11n
+ubt0 on uhub0
+ubt0: <Bluetooth Radio> on usbus0
+wlan1: Ethernet address: ...
+run0: firmware RT3071 ver. 0.33 loaded
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+wlan1: link state changed to UP

@@ -1,0 +1,825 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE n250148-fc952ac2212 ECLIPSE amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 800x600
+sysctl_warn_reuse: can't re-use a leaf (compat.linuxkpi.mlx4_udp_rss)!
+sysctl_warn_reuse: can't re-use a leaf (compat.linuxkpi.mlx4_pfctx)!
+sysctl_warn_reuse: can't re-use a leaf (compat.linuxkpi.mlx4_pfcrx)!
+sysctl_warn_reuse: can't re-use a leaf (compat.linuxkpi.mlx4_inline_thold)!
+module_register: cannot register mlx4en from kernel; already loaded from mlx4en.ko
+Module mlx4en failed to register: 17
+CPU: AMD Ryzen 9 5950X 16-Core Processor             (3400.10-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0xa20f12  Family=0x19  Model=0x21  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ef8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c97a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x40068c<UMIP,PKU,VAES,VPCLMULQDQ,RDPID>
+  Structured Extended Features3=0x10<FSRM>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x111ef657<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,IBRS,STIBP,STIBP_ALWAYSON,PREFER_IBRS,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 68717379584 (65534 MB)
+avail memory = 66773463040 (63680 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 32 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 8 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 23 22 16 30 27 18 1 5 19 29 4 20 24 26 17 21 28 31 10 3 8 14 13 25 7 2 11 9 15 12 6
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0xbde24000-0xbde2401e
+smbios0: Version: 3.2, BCD Revision: 3.2
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 3.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <PCI-PCI bridge> at device 1.0 on pci4
+pci5: <PCI bus> on pcib5
+pci5: <network> at device 0.0 (no driver attached)
+pcib6: <PCI-PCI bridge> at device 3.0 on pci4
+pci6: <PCI bus> on pcib6
+pcib7: <PCI-PCI bridge> at device 5.0 on pci4
+pci7: <PCI bus> on pcib7
+igb0: <Intel(R) I211 (Copper)> port 0xf000-0xf01f mem 0xfc300000-0xfc31ffff,0xfc320000-0xfc323fff at device 0.0 on pci7
+igb0: NVM V0.4 imgtype1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <PCI-PCI bridge> at device 7.0 on pci4
+pci8: <PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> at device 8.0 on pci2
+pci9: <ACPI PCI bus> on pcib9
+pci9: <unknown> at device 0.0 (no driver attached)
+xhci0: <AMD Matisse USB 3.0 controller> mem 0xfc200000-0xfc2fffff at device 0.1 on pci9
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+xhci1: <AMD Matisse USB 3.0 controller> mem 0xfc100000-0xfc1fffff at device 0.3 on pci9
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib10: <PCI-PCI bridge> at device 9.0 on pci2
+pci10: <PCI bus> on pcib10
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xfc600000-0xfc6007ff at device 0.0 on pci10
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+pcib11: <PCI-PCI bridge> at device 10.0 on pci2
+pci11: <PCI bus> on pcib11
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xfc500000-0xfc5007ff at device 0.0 on pci11
+ahci1: AHCI v1.31 with 2 6Gbps ports, Port Multiplier supported with FBS
+ahcich8: <AHCI channel> at channel 4 on ahci1
+ahcich9: <AHCI channel> at channel 5 on ahci1
+pcib12: <ACPI PCI-PCI bridge> at device 1.3 on pci0
+pci12: <ACPI PCI bus> on pcib12
+nvme0: <Generic NVMe Device> mem 0xfcf00000-0xfcf03fff at device 0.0 on pci12
+pcib13: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci13: <ACPI PCI bus> on pcib13
+pcib14: <PCI-PCI bridge> mem 0xfcc00000-0xfcc03fff at device 0.0 on pci13
+pci14: <PCI bus> on pcib14
+pcib15: <PCI-PCI bridge> at device 0.0 on pci14
+pci15: <PCI bus> on pcib15
+vgapci0: <VGA-compatible display> port 0xe000-0xe0ff mem 0x7800000000-0x7bffffffff,0x7c00000000-0x7c0fffffff,0xfca00000-0xfcafffff at device 0.0 on pci15
+hdac0: <ATI (0xab28) HDA Controller> mem 0xfcb20000-0xfcb23fff at device 0.1 on pci15
+pcib16: <ACPI PCI-PCI bridge> at device 3.2 on pci0
+pci16: <ACPI PCI bus> on pcib16
+pci16: <network, ethernet> at device 0.0 (no driver attached)
+pcib17: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci17: <ACPI PCI bus> on pcib17
+pci17: <unknown> at device 0.0 (no driver attached)
+pcib18: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci18: <ACPI PCI bus> on pcib18
+pci18: <unknown> at device 0.0 (no driver attached)
+pci18: <encrypt/decrypt> at device 0.1 (no driver attached)
+xhci2: <AMD Matisse USB 3.0 controller> mem 0xfc700000-0xfc7fffff at device 0.3 on pci18
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+hdac1: <AMD X570 HDA Controller> mem 0xfc900000-0xfc907fff at device 0.4 on pci18
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1699964069 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen0.1: <AMD XHCI root HUB> at usbus0
+ugen2.1: <AMD XHCI root HUB> at usbus2
+ugen1.1: <AMD XHCI root HUB> at usbus1
+uhub0 on usbus0
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1 on usbus2
+uhub1: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub2 on usbus1
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <T-FORCE TM8FP7001T> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+pcm4: <ATI R6xx (HDMI)> at nid 11 on hdaa0
+pcm5: <ATI R6xx (HDMI)> at nid 13 on hdaa0
+hdacc1: <Realtek ALC1220 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC1220 Audio Function Group> at nid 1 on hdacc1
+pcm6: <Realtek ALC1220 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm7: <Realtek ALC1220 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm8: <Realtek ALC1220 (Rear Digital)> at nid 30 on hdaa1
+mlx4_core0: <mlx4_core> mem 0xfce00000-0xfcefffff,0x7c10800000-0x7c10ffffff at device 0.0 on pci16
+mlx4_core: Mellanox ConnectX core driver v3.7.1 (November 2021)
+mlx4_core: Initializing mlx4_core
+uhub1: 8 ports with 8 removable, self powered
+uhub0: 10 ports with 10 removable, self powered
+uhub2: 10 ports with 10 removable, self powered
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 11444224MB (23437770752 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 11444224MB (23437770752 512 byte sectors)
+ada2 at ahcich2 bus 0 scbus2 target 0 lun 0
+ada2: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 11444224MB (23437770752 512 byte sectors)
+ada3 at ahcich3 bus 0 scbus3 target 0 lun 0
+ada3: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 11444224MB (23437770752 512 byte sectors)
+ada4 at ahcich8 bus 0 scbus4 target 0 lun 0
+ada4: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada4: Serial Number...
+ada4: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada4: Command Queueing enabled
+ada4: 11444224MB (23437770752 512 byte sectors)
+ada5 at ahcich9 bus 0 scbus5 target 0 lun 0
+ada5: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada5: Serial Number...
+ada5: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada5: Command Queueing enabled
+ada5: 11444224MB (23437770752 512 byte sectors)
+ugen2.2: <GenesysLogic USB2.0 Hub> at usbus2
+uhub3 on uhub1
+uhub3: <GenesysLogic USB2.0 Hub, class 9/0, rev 2.10/92.26, addr 1> on usbus2
+uhub3: MTT enabled
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub4 on uhub0
+uhub4: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/88.32, addr 1> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0029> at usbus1
+mlx4_core0: Unable to determine PCI device chain minimum BW
+mlx4_en mlx4_core0: Activating port:1
+mlxen0: Ethernet address: ...
+mlx4_en: mlx4_core0: Port 1: Using 32 TX rings
+mlx4_en: mlx4_core0: Port 1: Using 16 RX rings
+mlxen0: link state changed to DOWN
+mlx4_en: mlxen0: Using 32 TX rings
+mlx4_en: mlxen0: Using 16 RX rings
+mlx4_en: mlxen0: Initializing port
+mlx4_en mlx4_core0: Activating port:1
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.msg_enable)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.rx_rings)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.tx_rings)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.rx_size)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.tx_size)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.tx_ppp)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.rx_ppp)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.port_num)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.device_name)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.coalesce.pkt_rate_low)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.coalesce.rx_usecs_low)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.coalesce.pkt_rate_high)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.coalesce.rx_usecs_high)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.coalesce.sample_interval)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.coalesce.adaptive_rx_coal)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.conf.eeprom_info)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.queue_stopped)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.wake_queue)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_timeout)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_oversized_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_alloc_failed)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_chksum_good)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_chksum_none)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_chksum_offload)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_multicast_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_broadcast_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_errors)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_dropped)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_length_errors)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_over_errors)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_crc_errors)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_jabbers)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_in_range_length_error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_out_range_length_error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_lt_64_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_127_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_255_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_511_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_1023_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_1518_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_1522_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_1548_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_gt_1548_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_multicast_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_broadcast_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_errors)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_dropped)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_lt_64_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_127_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_255_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_511_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_1023_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_1518_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_1522_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_1548_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_gt_1548_bytes_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring0.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring0.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring0.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring0.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring1.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring1.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring1.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring1.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring2.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring2.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring2.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring2.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring3.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring3.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring3.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring3.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring4.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring4.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring4.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring4.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring5.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring5.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring5.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring5.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring6.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring6.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring6.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring6.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring7.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring7.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring7.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring7.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring8.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring8.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring8.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring8.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring9.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring9.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring9.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring9.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring10.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring10.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring10.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring10.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring11.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring11.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring11.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring11.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring12.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring12.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring12.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring12.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring13.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring13.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring13.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring13.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring14.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring14.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring14.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring14.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring15.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring15.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring15.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring15.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring16.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring16.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring16.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring16.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring17.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring17.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring17.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring17.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring18.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring18.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring18.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring18.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring19.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring19.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring19.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring19.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring20.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring20.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring20.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring20.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring21.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring21.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring21.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring21.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring22.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring22.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring22.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring22.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring23.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring23.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring23.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring23.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring24.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring24.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring24.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring24.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring25.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring25.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring25.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring25.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring26.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring26.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring26.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring26.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring27.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring27.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring27.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring27.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring28.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring28.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring28.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring28.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring29.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring29.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring29.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring29.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring30.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring30.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring30.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring30.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring31.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring31.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring31.tso_packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.tx_ring31.defrag_attempts)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring0.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring0.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring0.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring1.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring1.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring1.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring2.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring2.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring2.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring3.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring3.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring3.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring4.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring4.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring4.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring5.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring5.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring5.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring6.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring6.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring6.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring7.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring7.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring7.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring8.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring8.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring8.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring9.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring9.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring9.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring10.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring10.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring10.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring11.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring11.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring11.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring12.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring12.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring12.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring13.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring13.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring13.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring14.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring14.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring14.error)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring15.packets)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring15.bytes)!
+sysctl_warn_reuse: can't re-use a leaf (hw.mlxen0.stat.rx_ring15.error)!
+mlxen0: Ethernet address: ...
+mlx4_en: mlx4_core0: Port 1: Using 32 TX rings
+mlx4_en: mlx4_core0: Port 1: Using 16 RX rings
+mlxen0: link state changed to DOWN
+mlx4_en: mlxen0: Using 32 TX rings
+mlx4_en: mlxen0: Using 16 RX rings
+mlx4_en: mlxen0: Initializing port
+Trying to mount root from zfs:zroot/ROOT/default []...
+uhub3: 4 ports with 4 removable, self powered
+uhub4: 4 ports with 0 removable, self powered
+ugen2.3: <Generic USB2.0-CRW> at usbus2
+umass0 on uhub3
+umass0: <Generic USB2.0-CRW, class 0/0, rev 2.00/9.59, addr 2> on usbus2
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:6:0: Attached to scbus6
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <Generic- SD/MMC 1.00> Removable Direct Access SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+ugen2.4: <Logitech USB Receiver> at usbus2
+ukbd0 on uhub3
+ukbd0: <Logitech USB Receiver, class 0/0, rev 2.00/29.01, addr 3> on usbus2
+kbd2 at ukbd0
+ugen2.5: <GenesysLogic USB3.0 Hub> at usbus2
+uhub5 on uhub1
+uhub5: <GenesysLogic> on usbus2
+Root mount waiting for: usbus2
+uhub5: 4 ports with 4 removable, self powered
+Intel(R) Wireless WiFi based driver for FreeBSD
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+iwlwifi0: <iwlwifi> mem 0xfc400000-0xfc403fff at device 0.0 on pci5
+iwlwifi0: could not load firmware image 'iwlwifi-cc-a0-70.ucode'
+iwlwifi0: File size way too small!
+iwlwifi0: could not load firmware image 'iwlwifi-cc-a0-69.ucode'
+iwlwifi0: File size way too small!
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+iwlwifi0: successfully loaded firmware image 'iwlwifi-cc-a0-68.ucode'
+iwlwifi0: api flags index 2 larger than supported by driver
+iwlwifi0: TLV_FW_FSEQ_VERSION: FSEQ Version: XXX.XXX.XXX.XXX
+iwlwifi0: loaded firmware version 68.01d30b0c.0 cc-a0-68.ucode op_mode iwlmvm
+iwlwifi0: Detected Killer(R) Wi-Fi 6 AX1650x 160MHz Wireless Network Adapter (200NGW), REV=0x340
+lo0: link state changed to UP
+iwlwifi0: Detected RF HR B3, rfid=0x10a100
+iwlwifi0: base HW address: XXX
+igb0: link state changed to UP
+mlxen0: link state changed to UP
+ums0 on uhub3
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/29.01, addr 3> on usbus2
+ums0: 18 buttons and [XYZT] coordinates ID=2
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 done
+All buffers synced.
+Uptime: 1d6h42m20s
+umass0: detached
+ukbd0: detached
+ums0: detached
+uhub3: detached
+uhub5: detached
+uhub1: detached
+mlx4_core0: mlx4_shutdown was called
+mlx4_en: mlxen0: Link Down
+uhub2: detached
+uhub4: detached
+uhub0: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE n250148-fc952ac2212 ECLIPSE amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 800x600
+CPU: AMD Ryzen 9 5950X 16-Core Processor             (3400.02-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0xa20f12  Family=0x19  Model=0x21  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ef8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0x219c97a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x40068c<UMIP,PKU,VAES,VPCLMULQDQ,RDPID>
+  Structured Extended Features3=0x10<FSRM>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x111ef657<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,IBRS,STIBP,STIBP_ALWAYSON,PREFER_IBRS,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 68717379584 (65534 MB)
+avail memory = 66773463040 (63680 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 32 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 8 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 18 19 31 16 29 26 1 2 17 20 5 23 13 25 11 22 3 21 12 28 10 30 27 24 8 14 6 7 15 4 9
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0xbde24000-0xbde2401e
+smbios0: Version: 3.2, BCD Revision: 3.2
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 3.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci3
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <PCI-PCI bridge> at device 1.0 on pci4
+pci5: <PCI bus> on pcib5
+pci5: <network> at device 0.0 (no driver attached)
+pcib6: <PCI-PCI bridge> at device 3.0 on pci4
+pci6: <PCI bus> on pcib6
+pcib7: <PCI-PCI bridge> at device 5.0 on pci4
+pci7: <PCI bus> on pcib7
+igb0: <Intel(R) I211 (Copper)> port 0xf000-0xf01f mem 0xfc300000-0xfc31ffff,0xfc320000-0xfc323fff at device 0.0 on pci7
+igb0: NVM V0.4 imgtype1
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <PCI-PCI bridge> at device 7.0 on pci4
+pci8: <PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> at device 8.0 on pci2
+pci9: <ACPI PCI bus> on pcib9
+pci9: <unknown> at device 0.0 (no driver attached)
+xhci0: <AMD Matisse USB 3.0 controller> mem 0xfc200000-0xfc2fffff at device 0.1 on pci9
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+xhci1: <AMD Matisse USB 3.0 controller> mem 0xfc100000-0xfc1fffff at device 0.3 on pci9
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib10: <PCI-PCI bridge> at device 9.0 on pci2
+pci10: <PCI bus> on pcib10
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xfc600000-0xfc6007ff at device 0.0 on pci10
+ahci0: AHCI v1.31 with 4 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+pcib11: <PCI-PCI bridge> at device 10.0 on pci2
+pci11: <PCI bus> on pcib11
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xfc500000-0xfc5007ff at device 0.0 on pci11
+ahci1: AHCI v1.31 with 2 6Gbps ports, Port Multiplier supported with FBS
+ahcich8: <AHCI channel> at channel 4 on ahci1
+ahcich9: <AHCI channel> at channel 5 on ahci1
+pcib12: <ACPI PCI-PCI bridge> at device 1.3 on pci0
+pci12: <ACPI PCI bus> on pcib12
+nvme0: <Generic NVMe Device> mem 0xfcf00000-0xfcf03fff at device 0.0 on pci12
+pcib13: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci13: <ACPI PCI bus> on pcib13
+pcib14: <PCI-PCI bridge> mem 0xfcc00000-0xfcc03fff at device 0.0 on pci13
+pci14: <PCI bus> on pcib14
+pcib15: <PCI-PCI bridge> at device 0.0 on pci14
+pci15: <PCI bus> on pcib15
+vgapci0: <VGA-compatible display> port 0xe000-0xe0ff mem 0x7800000000-0x7bffffffff,0x7c00000000-0x7c0fffffff,0xfca00000-0xfcafffff at device 0.0 on pci15
+hdac0: <ATI (0xab28) HDA Controller> mem 0xfcb20000-0xfcb23fff at device 0.1 on pci15
+pcib16: <ACPI PCI-PCI bridge> at device 3.2 on pci0
+pci16: <ACPI PCI bus> on pcib16
+pci16: <network, ethernet> at device 0.0 (no driver attached)
+pcib17: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci17: <ACPI PCI bus> on pcib17
+pci17: <unknown> at device 0.0 (no driver attached)
+pcib18: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci18: <ACPI PCI bus> on pcib18
+pci18: <unknown> at device 0.0 (no driver attached)
+pci18: <encrypt/decrypt> at device 0.1 (no driver attached)
+xhci2: <AMD Matisse USB 3.0 controller> mem 0xfc700000-0xfc7fffff at device 0.3 on pci18
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+hdac1: <AMD X570 HDA Controller> mem 0xfc900000-0xfc907fff at device 0.4 on pci18
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1699967638 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen0.1: <AMD XHCI root HUB> at usbus0
+ugen2.1: <AMD XHCI root HUB> at usbus2
+ugen1.1: <AMD XHCI root HUB> at usbus1
+uhub0 on usbus0
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1 on usbus2
+uhub1: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub2 on usbus1
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <T-FORCE TM8FP7001T> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+pcm4: <ATI R6xx (HDMI)> at nid 11 on hdaa0
+pcm5: <ATI R6xx (HDMI)> at nid 13 on hdaa0
+hdacc1: <Realtek ALC1220 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC1220 Audio Function Group> at nid 1 on hdacc1
+pcm6: <Realtek ALC1220 (Rear Analog 5.1/2.0)> at nid 20,22,21 and 24,26 on hdaa1
+pcm7: <Realtek ALC1220 (Front Analog)> at nid 27 and 25 on hdaa1
+pcm8: <Realtek ALC1220 (Rear Digital)> at nid 30 on hdaa1
+mlx4_core0: <mlx4_core> mem 0xfce00000-0xfcefffff,0x7c10800000-0x7c10ffffff at device 0.0 on pci16
+mlx4_core: Mellanox ConnectX core driver v3.7.1 (November 2021)
+mlx4_core: Initializing mlx4_core
+uhub1: 8 ports with 8 removable, self powered
+uhub0: 10 ports with 10 removable, self powered
+uhub2: 10 ports with 10 removable, self powered
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 11444224MB (23437770752 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 11444224MB (23437770752 512 byte sectors)
+ada2 at ahcich2 bus 0 scbus2 target 0 lun 0
+ada2: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 11444224MB (23437770752 512 byte sectors)
+ada3 at ahcich3 bus 0 scbus3 target 0 lun 0
+ada3: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada3: Serial Number...
+ada3: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada3: Command Queueing enabled
+ada3: 11444224MB (23437770752 512 byte sectors)
+ada4 at ahcich8 bus 0 scbus4 target 0 lun 0
+ada4: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada4: Serial Number...
+ada4: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada4: Command Queueing enabled
+ada4: 11444224MB (23437770752 512 byte sectors)
+ada5 at ahcich9 bus 0 scbus5 target 0 lun 0
+ada5: <ST12000VN0008-2PH103 SC61> ACS-4 ATA SATA 3.x device
+ada5: Serial Number...
+ada5: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada5: Command Queueing enabled
+ada5: 11444224MB (23437770752 512 byte sectors)
+ugen2.2: <GenesysLogic USB2.0 Hub> at usbus2
+uhub3 on uhub1
+uhub3: <GenesysLogic USB2.0 Hub, class 9/0, rev 2.10/92.26, addr 1> on usbus2
+uhub3: MTT enabled
+ugen0.2: <vendor 0x05e3 USB2.0 Hub> at usbus0
+uhub4 on uhub0
+uhub4: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/88.32, addr 1> on usbus0
+ugen1.2: <vendor 0x8087 product 0x0029> at usbus1
+mlx4_core0: Unable to determine PCI device chain minimum BW
+mlx4_en mlx4_core0: Activating port:1
+mlxen0: Ethernet address: ...
+mlx4_en: mlx4_core0: Port 1: Using 32 TX rings
+mlx4_en: mlx4_core0: Port 1: Using 16 RX rings
+mlxen0: link state changed to DOWN
+mlx4_en: mlxen0: Using 32 TX rings
+mlx4_en: mlxen0: Using 16 RX rings
+mlx4_en: mlxen0: Initializing port
+Trying to mount root from zfs:zroot/ROOT/default []...
+uhub_attach: port 1 power on or off failed, USB_ERR_TIMEOUT
+uhub_attach: port 2 power on or off failed, USB_ERR_TIMEOUT
+uhub_attach: port 3 power on or off failed, USB_ERR_TIMEOUT
+uhub_attach: port 4 power on or off failed, USB_ERR_TIMEOUT
+uhub4: 4 ports with 0 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+ugen2.3: <Generic USB2.0-CRW> at usbus2
+umass0 on uhub3
+umass0: <Generic USB2.0-CRW, class 0/0, rev 2.00/9.59, addr 2> on usbus2
+umass0:  SCSI over Bulk-Only; quirks = 0x4000
+umass0:6:0: Attached to scbus6
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <Generic- SD/MMC 1.00> Removable Direct Access SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+Root mount waiting for: usbus2
+ugen2.4: <GenesysLogic USB3.0 Hub> at usbus2
+uhub5 on uhub1
+uhub5: <GenesysLogic> on usbus2
+Root mount waiting for: usbus2
+uhub5: 4 ports with 4 removable, self powered
+Intel(R) Wireless WiFi based driver for FreeBSD
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+iwlwifi0: <iwlwifi> mem 0xfc400000-0xfc403fff at device 0.0 on pci5
+iwlwifi0: could not load firmware image 'iwlwifi-cc-a0-70.ucode'
+iwlwifi0: File size way too small!
+iwlwifi0: could not load firmware image 'iwlwifi-cc-a0-69.ucode'
+iwlwifi0: File size way too small!
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20201113/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+iwlwifi0: successfully loaded firmware image 'iwlwifi-cc-a0-68.ucode'
+iwlwifi0: api flags index 2 larger than supported by driver
+iwlwifi0: TLV_FW_FSEQ_VERSION: FSEQ Version: XXX.XXX.XXX.XXX
+iwlwifi0: loaded firmware version 68.01d30b0c.0 cc-a0-68.ucode op_mode iwlmvm
+iwlwifi0: Detected Killer(R) Wi-Fi 6 AX1650x 160MHz Wireless Network Adapter (200NGW), REV=0x340
+lo0: link state changed to UP
+iwlwifi0: Detected RF HR B3, rfid=0x10a100
+iwlwifi0: base HW address: XXX
+igb0: link state changed to UP
+mlxen0: link state changed to UP

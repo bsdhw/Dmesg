@@ -1,0 +1,519 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p3 stable/22.7-n250262-83840459d88 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: AMD Opteron(tm) Processor 6380                  (2500.06-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x600f20  Family=0x15  Model=0x2  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x3e98320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x1eb3fff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,XOP,SKINIT,WDT,FMA4,TCE,NodeId,TBM,Topology,PCXC,PNXC>
+  Structured Extended Features=0x8<BMI1>
+  AMD Extended Feature Extensions ID EBX=0x1000<IBPB>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=65536
+  TSC: P-state invariant, performance statistics
+real memory  = 1099478073344 (1048544 MB)
+avail memory = 937337999360 (893915 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 64 CPUs
+FreeBSD/SMP: 4 package(s) x 2 cache groups x 8 core(s)
+random: unblocking device.
+Firmware Warning (ACPI): Invalid length for FADT/Pm2ControlBlock: 16, using default 8 (20201113/tbfadt-850)
+ioapic1: MADT APIC ID 1 != hw id 0
+ioapic2: MADT APIC ID 2 != hw id 0
+MADT: Forcing active-low polarity and level trigger for SCI
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+ioapic2 <Version 2.1> irqs 56-87
+Launching APs: 1 5 41 15 27 4 55 2 11 40 17 26 54 16 3 34 7 9 43 6 36 12 21 22 37 60 62 49 48 61 18 46 39 29 57 28 56 30 10 47 23 25 50 44 45 13 63 42 58 52 14 19 35 38 33 8 59 53 51 32 24 31 20
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xfca10-0xfca2e
+smbios0: Version: 2.6, BCD Revision: 2.6
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <DELL PE_SC3>
+acpi0: Power Button (fixed)
+apei0: <ACPI Platform Error Interface> on acpi0
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x7f irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x5f irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 2.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 3.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 4.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <PCI-PCI bridge> mem 0xefbe0000-0xefbfffff at device 0.0 on pci3
+pci4: <PCI bus> on pcib4
+pcib5: <PCI-PCI bridge> at device 0.0 on pci4
+pci5: <PCI bus> on pcib5
+mfi0: <Dell PERC H700 Integrated> port 0xfc00-0xfcff mem 0xef8fc000-0xef8fffff,0xef840000-0xef87ffff irq 44 at device 0.0 on pci5
+mfi0: Using MSI
+mfi0: Megaraid SAS driver Ver 4.23 
+mfi0: FW MaxCmds = 1008, limiting to 128
+mfi0: 7326 (721154161s/0x0020/info) - Shutdown command received from host
+mfi0: 7327 (boot + 33s/0x0020/info) - Firmware initialization started (PCI ID 0079/1000/1f17/1028)
+mfi0: 7328 (boot + 33s/0x0020/info) - Firmware version 2.100.03-4651
+mfi0: 7329 (boot + 35s/0x0008/info) - Battery Present
+mfi0: 7330 (boot + 35s/0x0020/info) - Package version 12.10.7-0001
+mfi0: 7331 (boot + 35s/0x0020/info) - Board Revision A04
+mfi0: 7332 (boot + 61s/0x0004/info) - Enclosure PD 20(c None/p0) communication restored
+mfi0: 7333 (boot + 61s/0x0002/info) - Inserted: Encl PD 20
+mfi0: 7334 (boot + 61s/0x0002/info) - Inserted: PD 20(c None/p0) Info: enclPd=20, scsiType=d, portMap=00, sasAddr=5c0830e0ca00a500,0000000000000000
+mfi0: 7335 (boot + 61s/0x0002/info) - Inserted: PD 00(e0x20/s0)
+pcib6: <PCI-PCI bridge> at device 1.0 on pci4
+mfi0: 7336 (boot + 61s/0x0002/info) - Inserted: PD 00(e0x20/s0) Info: enclPd=20, scsiType=0, portMap=03, sasAddr=5000c5007796b5pci6: <PCI bus>4d,0000000000000000
+mfi0: 7337 (boot + 61s/0x0002/info) - Inserted: PD 01(e0x20/s1)
+ on pcib6
+mfi0: 7338 (boot + 61s/0x0002/info) - Inserted: PD 01(e0x20/s1) Info: enclPd=20, scsiType=0, portMap=02, sasAddr=5000c5007796b5b1,0000000000000000
+mfi0: 7339 (boot + 61s/0x0002/info) - Inserted: PD 02(e0x20/s2)
+mfi0: 7340 (boot + 61s/0x0002/info) - Inserted: PD 02(e0x20/s2) Info: enclPd=20, scsiType=0, portMap=01, sasAddr=5000c5007796b5c5,0000000000000000
+mfi0: 7341 (boot + 61s/0x0002/info) - Inserted: PD 03(e0x20/s3)
+bxe0: <QLogic NetXtreme II BCM57810 10GbE (B0) BXE v:1.78.91>mfi0: 7342 (boot + 61s/0x0002/info) - Inserted: PD 03(e0x20/s3) Info: enclPd=20, scsiType=0, portMap=00, sasAddr=5000c50077958b mem 0xe7000000-0xe77fffff,0xe7800000-0xe7ffffff,0xe97e0000-0xe97effff irq 45 at device 0.0 on pci6
+c5,0000000000000000
+bxe0: PCI BAR0 [10] memory allocated: 0xe7000000-0xe77fffff (8388608) -> 0xfffff800e7000000
+mfi0: 7343 (721154250s/0x0020/info) - Time established as 11/07/22 16:37:30; (83 seconds since power on)
+mfi0: 7344 (721154267s/0x0008/info) - Battery temperature is normal
+mfi0: 7345 (721154267s/0x0008/info) - Current capacity of the battery is above threshold
+bxe0: PCI BAR2 [18] memory allocated: 0xe7800000-0xe7ffffff (8388608) -> 0xfffff800e7800000
+mfi0: 7346 (721154267s/0x0008/info) - Battery charge complete
+bxe0: PCI BAR4 [20] memory allocated: 0xe97e0000-0xe97effff (65536) -> 0xfffff800e97e0000
+bxe0: Found 10GBase-T media.
+bxe0: IFMEDIA flags : 20
+bxe0: Using defaults for TSO: 65518/35/2048
+bxe0: Ethernet address: ...
+bxe0: MSI-X vectors Requested 5 and Allocated 5
+bxe1: <QLogic NetXtreme II BCM57810 10GbE (B0) BXE v:1.78.91> mem 0xe8000000-0xe87fffff,0xe8800000-0xe8ffffff,0xe97f0000-0xe97fffff irq 46 at device 0.1 on pci6
+bxe1: PCI BAR0 [10] memory allocated: 0xe8000000-0xe87fffff (8388608) -> 0xfffff800e8000000
+bxe1: PCI BAR2 [18] memory allocated: 0xe8800000-0xe8ffffff (8388608) -> 0xfffff800e8800000
+bxe1: PCI BAR4 [20] memory allocated: 0xe97f0000-0xe97fffff (65536) -> 0xfffff800e97f0000
+bxe1: Found 10GBase-T media.
+bxe1: IFMEDIA flags : 20
+bxe1: Using defaults for TSO: 65518/35/2048
+bxe1: Ethernet address: ...
+bxe1: MSI-X vectors Requested 5 and Allocated 5
+pcib7: <PCI-PCI bridge> at device 4.0 on pci4
+pci7: <PCI bus> on pcib7
+pcib8: <PCI-PCI bridge> at device 5.0 on pci4
+pci8: <PCI bus> on pcib8
+bxe2: <QLogic NetXtreme II BCM57810 10GbE (B0) BXE v:1.78.91> mem 0xe9800000-0xe9ffffff,0xea000000-0xea7fffff,0xebfe0000-0xebfeffff irq 45 at device 0.0 on pci8
+bxe2: PCI BAR0 [10] memory allocated: 0xe9800000-0xe9ffffff (8388608) -> 0xfffff800e9800000
+bxe2: PCI BAR2 [18] memory allocated: 0xea000000-0xea7fffff (8388608) -> 0xfffff800ea000000
+bxe2: PCI BAR4 [20] memory allocated: 0xebfe0000-0xebfeffff (65536) -> 0xfffff800ebfe0000
+bxe2: Found 10GBase-T media.
+bxe2: IFMEDIA flags : 20
+bxe2: Using defaults for TSO: 65518/35/2048
+bxe2: Ethernet address: ...
+bxe2: MSI-X vectors Requested 5 and Allocated 5
+bxe3: <QLogic NetXtreme II BCM57810 10GbE (B0) BXE v:1.78.91> mem 0xea800000-0xeaffffff,0xeb000000-0xeb7fffff,0xebff0000-0xebffffff irq 46 at device 0.1 on pci8
+bxe3: PCI BAR0 [10] memory allocated: 0xea800000-0xeaffffff (8388608) -> 0xfffff800ea800000
+bxe3: PCI BAR2 [18] memory allocated: 0xeb000000-0xeb7fffff (8388608) -> 0xfffff800eb000000
+bxe3: PCI BAR4 [20] memory allocated: 0xebff0000-0xebffffff (65536) -> 0xfffff800ebff0000
+bxe3: Found 10GBase-T media.
+bxe3: IFMEDIA flags : 20
+bxe3: Using defaults for TSO: 65518/35/2048
+bxe3: Ethernet address: ...
+bxe3: MSI-X vectors Requested 5 and Allocated 5
+pcib9: <ACPI PCI-PCI bridge> at device 9.0 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pcib10: <PCI-PCI bridge> at device 0.0 on pci9
+pci10: <PCI bus> on pcib10
+pcib11: <PCI-PCI bridge> at device 2.0 on pci10
+pci11: <PCI bus> on pcib11
+igb0: <Intel(R) PRO/1000 ET 82576 (Quad Copper)> port 0xecc0-0xecdf mem 0xee7a0000-0xee7bffff,0xed800000-0xedbfffff,0xee7f8000-0xee7fbfff irq 50 at device 0.0 on pci11
+igb0: EEPROM V1.5-1 eTrack 0x0001615d
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 8 RX queues 8 TX queues
+igb0: Using MSI-X interrupts with 9 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 8/1024, RX 8/1024
+igb1: <Intel(R) PRO/1000 ET 82576 (Quad Copper)> port 0xece0-0xecff mem 0xee7c0000-0xee7dffff,0xedc00000-0xedffffff,0xee7fc000-0xee7fffff irq 51 at device 0.1 on pci11
+igb1: EEPROM V1.5-1 eTrack 0x0001615d
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 8 RX queues 8 TX queues
+igb1: Using MSI-X interrupts with 9 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 8/1024, RX 8/1024
+pcib12: <PCI-PCI bridge> at device 4.0 on pci10
+pci12: <PCI bus> on pcib12
+igb2: <Intel(R) PRO/1000 ET 82576 (Quad Copper)> port 0xdcc0-0xdcdf mem 0xef7a0000-0xef7bffff,0xee800000-0xeebfffff,0xef7f8000-0xef7fbfff irq 48 at device 0.0 on pci12
+igb2: EEPROM V1.5-1 eTrack 0x0001615e
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 8 RX queues 8 TX queues
+igb2: Using MSI-X interrupts with 9 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 8/1024, RX 8/1024
+igb3: <Intel(R) PRO/1000 ET 82576 (Quad Copper)> port 0xdce0-0xdcff mem 0xef7c0000-0xef7dffff,0xeec00000-0xeeffffff,0xef7fc000-0xef7fffff irq 49 at device 0.1 on pci12
+igb3: EEPROM V1.5-1 eTrack 0x0001615e
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 8 RX queues 8 TX queues
+igb3: Using MSI-X interrupts with 9 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 8/1024, RX 8/1024
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0xcce8-0xccef,0xccf8-0xccfb,0xccf0-0xccf7,0xccfc-0xccff,0xccd0-0xccdf mem 0xefcff800-0xefcffbff irq 22 at device 17.0 on pci0
+ahci0: AHCI v1.10 with 4 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xefcfb000-0xefcfbfff irq 16 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xefcfc000-0xefcfcfff irq 16 at device 18.1 on pci0
+usbus1 on ohci1
+usbus1: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xefcffe00-0xefcffeff irq 17 at device 18.2 on pci0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+usbus2: 480Mbps High Speed USB v2.0
+ohci2: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xefcfd000-0xefcfdfff irq 18 at device 19.0 on pci0
+usbus3 on ohci2
+usbus3: 12Mbps Full Speed USB v1.0
+ohci3: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xefcfe000-0xefcfefff irq 18 at device 19.1 on pci0
+usbus4 on ohci3
+usbus4: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xefcfff00-0xefcfffff irq 19 at device 19.2 on pci0
+usbus5: EHCI version 1.0
+usbus5 on ehci1
+usbus5: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib13: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci13: <ACPI PCI bus> on pcib13
+vgapci0: <VGA-compatible display> mem 0xec000000-0xec7fffff,0xed7fc000-0xed7fffff,0xec800000-0xecffffff irq 20 at device 3.0 on pci13
+vgapci0: Boot video device
+pcib14: <ACPI Host-PCI bridge> on acpi0
+pci14: <ACPI PCI bus> on pcib14
+pci14: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib15: <ACPI PCI-PCI bridge> at device 2.0 on pci14
+pci15: <ACPI PCI bus> on pcib15
+pcib16: <ACPI PCI-PCI bridge> at device 3.0 on pci14
+pci16: <ACPI PCI bus> on pcib16
+isp0: <Qlogic ISP 2031 PCI FC-AL Adapter> mem 0xe6afc000-0xe6afdfff,0xe6af4000-0xe6af7fff,0xe6800000-0xe68fffff irq 60 at device 0.0 on pci16
+isp1: <Qlogic ISP 2031 PCI FC-AL Adapter> mem 0xe6afe000-0xe6afffff,0xe6af8000-0xe6afbfff,0xe6900000-0xe69fffff irq 61 at device 0.1 on pci16
+pcib17: <ACPI PCI-PCI bridge> at device 11.0 on pci14
+pci17: <ACPI PCI bus> on pcib17
+isp2: <Qlogic ISP 2031 PCI FC-AL Adapter> mem 0xe6dfc000-0xe6dfdfff,0xe6df4000-0xe6df7fff,0xe6b00000-0xe6bfffff irq 64 at device 0.0 on pci17
+isp3: <Qlogic ISP 2031 PCI FC-AL Adapter> mem 0xe6dfe000-0xe6dfffff,0xe6df8000-0xe6dfbfff,0xe6c00000-0xe6cfffff irq 65 at device 0.1 on pci17
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+orm0: <ISA Option ROMs> at iomem 0xc0000-0xc7fff,0xc8800-0xce7ff,0xce800-0xcf7ff,0xec000-0xeffff pnpid ORM0000 on isa0
+atkbdc0: <Keyboard controller (i8042)> at port 0x60,0x64 on isa0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1250014845 Hz quality 800
+Timecounters tick every 1.000 msec
+ugen2.1: <ATI EHCI root HUB> at usbus2
+ugen0.1: <ATI OHCI root HUB> at usbus0
+ugen3.1: <ATI OHCI root HUB> at usbus3
+ugen4.1: <ATI OHCI root HUB> at usbus4
+ugen1.1: <ATI OHCI root HUB> at usbus1
+ugen5.1: <ATI EHCI root HUB> at usbus5
+mfid0 on mfi0
+mfid0: 418176MB (856424448 sectors) RAID volume 'VD01' is optimal
+Trying to mount root from ufs:/dev/gpt/rootfs [rw]...
+uhub0 on usbus0
+uhub0: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub1 on usbus4
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+uhub2 on usbus1
+uhub2: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus1
+uhub3 on usbus5
+uhub3: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus5
+uhub4 on usbus3
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus3
+uhub5 on usbus2
+uhub5: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+uhub0: 3 ports with 3 removable, self powered
+uhub4: 3 ports with 3 removable, self powered
+uhub1: 3 ports with 3 removable, self powered
+uhub2: 3 ports with 3 removable, self powered
+da0 at isp0 bus 0 scbus4 target 0 lun 1f
+da0: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da0: Serial Number...
+da0: 800.000MB/s transfers WWNN 0x2002f01fafd5ded1 WWPN 0x2043f01fafd5ded1 PortID 0x10100
+da0: Command Queueing enabled
+da0: 20MB (40960 512 byte sectors)
+da1 at isp0 bus 0 scbus4 target 1 lun 1f
+da1: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da1: Serial Number...
+da1: 800.000MB/s transfers WWNN 0x2002f01fafd5ded1 WWPN 0x2032f01fafd5ded1 PortID 0x10000
+da1: Command Queueing enabled
+da1: 20MB (40960 512 byte sectors)
+da8 at isp1 bus 0 scbus5 target 1 lun 1f
+da8: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da8: Serial Number...
+da8: 800.000MB/s transfers WWNN 0x2002f01fafd5ded1 WWPN 0x2042f01fafd5ded1 PortID 0x10100
+da8: Command Queueing enabled
+da8: 20MB (40960 512 byte sectors)
+da7 at isp1 bus 0 scbus5 target 0 lun 1f
+da7: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da7: Serial Number...
+da7: 800.000MB/s transfers WWNN 0x2002f01fafd5ded1 WWPN 0x2033f01fafd5ded1 PortID 0x10000
+da7: Command Queueing enabled
+da7: 20MB (40960 512 byte sectors)
+pass1 at isp0 bus 0 scbus4 target 0 lun 0
+pass1: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass1: Serial Number...
+pass1: 800.000MB/s transfers WWNN 0x2002f01fafd5ded1 WWPN 0x2043f01fafd5ded1 PortID 0x10100
+pass1: Command Queueing enabled
+pass3 at isp0 bus 0 scbus4 target 1 lun 0
+pass3: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass3: Serial Number...
+pass3: 800.000MB/s transfers WWNN 0x2002f01fafd5ded1 WWPN 0x2032f01fafd5ded1 PortID 0x10000
+pass3: Command Queueing enabled
+pass5 at isp0 bus 0 scbus4 target 2 lun 0
+da12 at isp1 bus 0 scbus5 target 5 lun 1f
+da12: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da12: Serial Number...
+da12: 800.000MB/s transfers WWNN 0x200290b11c52421a WWPN 0x204390b11c52421a PortID 0x10500
+da12: Command Queueing enabled
+da12: 20MB (40960 512 byte sectors)
+pass5: da11 at isp1 bus 0 scbus5 target 4 lun 1f
+da11: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da11: Serial Number...
+da11: 800.000MB/s transfers WWNN 0x200290b11c52421a WWPN 0x204290b11c52421a PortID 0x10400
+da11: Command Queueing enabled
+da11: 20MB (40960 512 byte sectors)
+da3 at isp0 bus 0 scbus4 target 3 lun 1f
+da3: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da3: Serial Number...
+da3: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x203590b11c524229 PortID 0x10300
+da3: Command Queueing enabled
+da3: 20MB (40960 512 byte sectors)
+da4 at isp0 bus 0 scbus4 target 4 lun 1f
+da4: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da4: Serial Number...
+da4: 800.000MB/s transfers WWNN 0x200290b11c52421a WWPN 0x203390b11c52421a PortID 0x10500
+da4: Command Queueing enabled
+da4: 20MB (40960 512 byte sectors)
+<DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass5: Serial Number...
+pass5: 800.000MB/s transfers WWNN 0x200490b11c524229da10 at isp1 bus 0 scbus5 target 3 lun 1f
+da10: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da10: Serial Number...
+da10: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x204590b11c524229 PortID 0x10300
+da10: Command Queueing enabled
+da10: 20MB (40960 512 byte sectors)
+ WWPN 0x203490b11c524229da5 at isp0 bus 0 scbus4 target 5 lun 1f
+da5: <DELL Universal Xport 0825> Fixed Direct Access SPC-3 SCSI device
+da5: Serial Number...
+da5: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x203200a0986e24ab PortID 0x10600
+da5: Command Queueing enabled
+da5: 20MB (40960 512 byte sectors)
+da21 at isp3 bus 0 scbus7 target 1 lun 7
+da21: <NETAPP Universal Xport 0830> Fixed Direct Access SPC-3 SCSI device
+da21: Serial Number...
+da21: 800.000MB/s transfers WWNN 0x200200a098b2f555 WWPN 0x203300a098b2f555 PortID 0x10100
+da21: Command Queueing enabled
+da21: 20MB (40960 512 byte sectors)
+ PortID 0x10200
+pass5: Command Queueing enabled
+pass7 at isp0 bus 0 scbus4 target 3 lun 0
+pass7: da16 at isp2 bus 0 scbus6 target 1 lun 7
+da16: <NETAPP Universal Xport 0830> Fixed Direct Access SPC-3 SCSI device
+da16: Serial Number...
+da16: 800.000MB/s transfers WWNN 0x200200a098b2f555 WWPN 0x204300a098b2f555 PortID 0x10100
+da16: Command Queueing enabled
+da16: 20MB (40960 512 byte sectors)
+<DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+da13 at isp1 bus 0 scbus5 target 6 lun 1f
+da13: <DELL Universal Xport 0825> Fixed Direct Access SPC-3 SCSI device
+da13: Serial Number...
+da13: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x204200a0986e24ab PortID 0x10600
+da13: Command Queueing enabled
+da13: 20MB (40960 512 byte sectors)
+pass7: Serial Number...
+pass7: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x203590b11c524229 PortID 0x10300
+pass7: Command Queueing enabled
+pass10 at isp0 bus 0 scbus4 target 5 lun 0
+da17 at isp2 bus 0 scbus6 target 2 lun 1f
+da17: <DELL Universal Xport 0825> Fixed Direct Access SPC-3 SCSI device
+da17: Serial Number...
+da17: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x202200a0986e24ab PortID 0x10d00
+da17: Command Queueing enabled
+da17: 20MB (40960 512 byte sectors)
+da19 at isp2 bus 0 scbus6 target 4 lun 1f
+da19: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da19: Serial Number...
+da19: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x201590b11c524229 PortID 0x10200
+da19: Command Queueing enabled
+da19: 20MB (40960 512 byte sectors)
+pass10: <DELL MD38xxf 0825> Fixed Direct Access SPC-3 SCSI device (offline)
+pass10: Serial Number...
+pass10: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x203200a0986e24ab PortID 0x10600
+pass10: Command Queueing enabled
+pass12 at isp0 bus 0 scbus4 target 6 lun 0
+pass12: <DELL MD38xxf 0825> Fixed Direct Access SPC-3 SCSI device (offline)
+pass12: Serial Number...
+pass12: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x203300a0986e24ab PortID 0x10700
+pass12: Command Queueing enabled
+pass14 at isp1 bus 0 scbus5 target 0 lun 0
+pass14: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass14: Serial Number...
+pass14: 800.000MB/s transfers WWNN 0x2002f01fafd5ded1 WWPN 0x2033f01fafd5ded1 PortID 0x10000
+pass14: Command Queueing enabled
+pass16 at isp1 bus 0 scbus5 target 1 lun 0
+da24 at isp3 bus 0 scbus7 target 4 lun 1f
+da24: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da24: Serial Number...
+da24: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x202590b11c524229 PortID 0x10200
+da24: Command Queueing enabled
+da24: 20MB (40960 512 byte sectors)
+da22 at isp3 bus 0 scbus7 target 2 lun 1f
+da22: <DELL Universal Xport 0825> Fixed Direct Access SPC-3 SCSI device
+da22: Serial Number...
+da22: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x201200a0986e24ab PortID 0x10d00
+da22: Command Queueing enabled
+da22: 20MB (40960 512 byte sectors)
+pass16: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass16: Serial Number...
+pass16: 800.000MB/s transfers WWNN 0x2002f01fafd5ded1 WWPN 0x2042f01fafd5ded1 PortID 0x10100
+pass16: Command Queueing enabled
+pass18 at isp1 bus 0 scbus5 target 2 lun 0
+pass18: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass18: Serial Number...
+pass18: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x204490b11c524229 PortID 0x10200
+pass18: Command Queueing enabled
+da2 at isp0 bus 0 scbus4 target 2 lun 1f
+da2: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da2: Serial Number...
+da2: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x203490b11c524229 PortID 0x10200
+da2: Command Queueing enabled
+da2: 20MB (40960 512 byte sectors)
+pass20 at isp1 bus 0 scbus5 target 3 lun 0
+da9 at isp1 bus 0 scbus5 target 2 lun 1f
+da9: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da9: Serial Number...
+da9: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x204490b11c524229 PortID 0x10200
+da9: Command Queueing enabled
+da9: 20MB (40960 512 byte sectors)
+da14 at isp1 bus 0 scbus5 target 7 lun 1f
+da14: <DELL Universal Xport 0825> Fixed Direct Access SPC-3 SCSI device
+da14: Serial Number...
+da14: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x204300a0986e24ab PortID 0x10700
+da14: Command Queueing enabled
+da14: 20MB (40960 512 byte sectors)
+pass20: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass20: Serial Number...
+pass20: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x204590b11c524229 PortID 0x10300
+pass20: Command Queueing enabled
+pass24 at isp1 bus 0 scbus5 target 6 lun 0
+pass24: <DELL MD38xxf 0825> Fixed Direct Access SPC-3 SCSI device (offline)
+pass24: Serial Number...
+pass24: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x204200a0986e24ab PortID 0x10600
+pass24: Command Queueing enabled
+pass26 at isp1 bus 0 scbus5 target 7 lun 0
+pass26: <DELL MD38xxf 0825> Fixed Direct Access SPC-3 SCSI device (offline)
+pass26: Serial Number...
+pass26: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x204300a0986e24ab PortID 0x10700
+pass26: Command Queueing enabled
+pass28 at isp2 bus 0 scbus6 target 0 lun 0
+pass28: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+da6 at isp0 bus 0 scbus4 target 6 lun 1f
+da6: <DELL Universal Xport 0825> Fixed Direct Access SPC-3 SCSI device
+da6: Serial Number...
+da6: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x203300a0986e24ab PortID 0x10700
+da6: Command Queueing enabled
+da6: 20MB (40960 512 byte sectors)
+pass28: Serial Number...
+pass28: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x201490b11c524229 PortID 0x10000
+pass28: Command Queueing enabled
+pass30 at isp2 bus 0 scbus6 target 1 lun 0
+pass30: <NETAPP INF-01-00 0830> Fixed Direct Access SPC-3 SCSI device (offline)
+pass30: Serial Number...
+pass30: 800.000MB/s transfers WWNN 0x200200a098b2f555da15 at isp2 bus 0 scbus6 target 0 lun 1f
+da15: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da15: Serial Number...
+da15: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x201490b11c524229 PortID 0x10000
+da15: Command Queueing enabled
+da15: 20MB (40960 512 byte sectors)
+ WWPN 0x204300a098b2f555da18 at isp2 bus 0 scbus6 target 3 lun 1f
+da18: <DELL Universal Xport 0825> Fixed Direct Access SPC-3 SCSI device
+da18: Serial Number...
+da18: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x202300a0986e24ab PortID 0x10e00
+da18: Command Queueing enabled
+da18: 20MB (40960 512 byte sectors)
+da20 at isp3 bus 0 scbus7 target 0 lun 1f
+da20: <DELL Universal Xport 0820> Fixed Direct Access SPC-3 SCSI device
+da20: Serial Number...
+da20: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x202490b11c524229 PortID 0x10000
+da20: Command Queueing enabled
+da20: 20MB (40960 512 byte sectors)
+da23 at isp3 bus 0 scbus7 target 3 lun 1f
+da23: <DELL Universal Xport 0825> Fixed Direct Access SPC-3 SCSI device
+da23: Serial Number...
+da23: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x201300a0986e24ab PortID 0x10e00
+da23: Command Queueing enabled
+da23: 20MB (40960 512 byte sectors)
+ PortID 0x10100
+pass30: Command Queueing enabled
+pass32 at isp2 bus 0 scbus6 target 2 lun 0
+pass32: <DELL MD38xxf 0825> Fixed Direct Access SPC-3 SCSI device (offline)
+pass32: Serial Number...
+pass32: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x202200a0986e24ab PortID 0x10d00
+pass32: Command Queueing enabled
+pass34 at isp2 bus 0 scbus6 target 3 lun 0
+pass34: <DELL MD38xxf 0825> Fixed Direct Access SPC-3 SCSI device (offline)
+pass34: Serial Number...
+pass34: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x202300a0986e24ab PortID 0x10e00
+pass34: Command Queueing enabled
+pass36 at isp2 bus 0 scbus6 target 4 lun 0
+pass36: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass36: Serial Number...
+pass36: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x201590b11c524229 PortID 0x10200
+pass36: Command Queueing enabled
+pass38 at isp3 bus 0 scbus7 target 0 lun 0
+pass38: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass38: Serial Number...
+pass38: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x202490b11c524229 PortID 0x10000
+pass38: Command Queueing enabled
+pass40 at isp3 bus 0 scbus7 target 1 lun 0
+pass40: <NETAPP INF-01-00 0830> Fixed Direct Access SPC-3 SCSI device (offline)
+pass40: Serial Number...
+pass40: 800.000MB/s transfers WWNN 0x200200a098b2f555 WWPN 0x203300a098b2f555 PortID 0x10100
+pass40: Command Queueing enabled
+pass42 at isp3 bus 0 scbus7 target 2 lun 0
+pass42: <DELL MD38xxf 0825> Fixed Direct Access SPC-3 SCSI device (offline)
+pass42: Serial Number...
+pass42: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x201200a0986e24ab PortID 0x10d00
+pass42: Command Queueing enabled
+pass44 at isp3 bus 0 scbus7 target 3 lun 0
+pass44: <DELL MD38xxf 0825> Fixed Direct Access SPC-3 SCSI device (offline)
+pass44: Serial Number...
+pass44: 800.000MB/s transfers WWNN 0x200200a0986e24ab WWPN 0x201300a0986e24ab PortID 0x10e00
+pass44: Command Queueing enabled
+pass46 at isp3 bus 0 scbus7 target 4 lun 0
+pass46: <DELL MD36xxf 0820> Fixed Direct Access SPC-3 SCSI device (offline)
+pass46: Serial Number...
+pass46: 800.000MB/s transfers WWNN 0x200490b11c524229 WWPN 0x202590b11c524229 PortID 0x10200
+pass46: Command Queueing enabled
+cd0 at ahcich0 bus 0 scbus0 target 0 lun 0
+cd0: <PLDS DVD+-RW DS-8ABSH AD51> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed

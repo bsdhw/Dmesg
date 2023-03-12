@@ -1,0 +1,467 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.3-RELEASE-p3 GENERIC amd64
+FreeBSD clang version 10.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-10.0.1-0-gef32c611aa2)
+VT(efifb): resolution 1024x768
+CPU: AMD EPYC 7351P 16-Core Processor                (2395.56-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x800f12  Family=0x17  Model=0x1  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 68719476736 (65536 MB)
+avail memory = 66459226112 (63380 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <DELL   PE_SC3  >
+FreeBSD/SMP: Multiprocessor System Detected: 32 CPUs
+FreeBSD/SMP: 1 package(s) x 4 groups x 2 cache groups x 2 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0: MADT APIC ID 128 != hw id 0
+ioapic1: MADT APIC ID 129 != hw id 0
+ioapic2: MADT APIC ID 130 != hw id 0
+ioapic3: MADT APIC ID 131 != hw id 0
+ioapic4: MADT APIC ID 132 != hw id 0
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+ioapic2 <Version 2.1> irqs 56-87 on motherboard
+ioapic3 <Version 2.1> irqs 88-119 on motherboard
+ioapic4 <Version 2.1> irqs 120-151 on motherboard
+Launching APs: 4 29 1 31 30 17 21 23 20 10 9 11 27 16 6 25 15 12 28 14 7 22 26 3 2 8 24 5 18 19 13
+Timecounter "TSC-low" frequency 1197779664 Hz quality 1000
+random: entropy device external interface
+WARNING: Device "g_ctl" is Giant locked and may be deleted before FreeBSD 14.0.
+000.000017 [4344] netmap_init               netmap: loaded module
+WARNING: Device "pci" is Giant locked and may be deleted before FreeBSD 14.0.
+[ath_hal] loaded
+module_register_init: MOD_LOAD (vesa, 0xffffffff811848b0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd0 at kbdmux0
+mlx5en: Mellanox Ethernet driver 3.6.0 (December 2020)
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <DELL PE_SC3> on motherboard
+acpi0: Power Button (fixed)
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed001ff on acpi0
+hpet0: memory region width 512 too small
+device_attach: hpet0 attach returned 6
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+apei0: <ACPI Platform Error Interface> on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+amdsmn0: <AMD Family 17h System Management Network> numa-domain 0 on hostb0
+amdtemp0: <AMD CPU On-Die Thermal Sensors> numa-domain 0 on hostb0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 3.1 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+ix0: <Intel(R) X520 82599 (Dual SFP+)> port 0x1020-0x103f mem 0xf7600000-0xf76fffff,0xf7704000-0xf7707fff at device 0.0 numa-domain 0 on pci1
+WARNING: Intel (R) Network Connections are quality tested using Intel (R) Ethernet Optics. Using untested modules is not supported and may cause unstable operation or damage to the module or the adapter. Intel Corporation is not responsible for any harm caused by using untested modules.
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+WARNING: Intel (R) Network Connections are quality tested using Intel (R) Ethernet Optics. Using untested modules is not supported and may cause unstable operation or damage to the module or the adapter. Intel Corporation is not responsible for any harm caused by using untested modules.
+WARNING: Intel (R) Network Connections are quality tested using Intel (R) Ethernet Optics. Using untested modules is not supported and may cause unstable operation or damage to the module or the adapter. Intel Corporation is not responsible for any harm caused by using untested modules.
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: Option ROM V18-b5-p18 eTrack 0x8000095d PHY FW V65535
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) X520 82599 (Dual SFP+)> port 0x1000-0x101f mem 0xf7500000-0xf75fffff,0xf7700000-0xf7703fff at device 0.1 numa-domain 0 on pci1
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: Option ROM V18-b5-p18 eTrack 0x8000095d PHY FW V65535
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+pcib2: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 0 on pci0
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pci2: <unknown> at device 0.0 (no driver attached)
+pci2: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xf7200000-0xf72fffff at device 0.3 numa-domain 0 on pci2
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 numa-domain 0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib3: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 0 on pci0
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+pci3: <unknown> at device 0.0 (no driver attached)
+pci3: <encrypt/decrypt> at device 0.1 (no driver attached)
+isab0: <PCI-ISA bridge> at device 20.3 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+pcib4: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci4: <ACPI PCI bus> numa-domain 1 on pcib4
+amdsmn1: <AMD Family 17h System Management Network> numa-domain 1 on hostb39
+amdtemp1: <AMD CPU On-Die Thermal Sensors> numa-domain 1 on hostb39
+pci4: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib5: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 1 on pci4
+pci5: <ACPI PCI bus> numa-domain 1 on pcib5
+pci5: <unknown> at device 0.0 (no driver attached)
+pci5: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xdb200000-0xdb2fffff at device 0.3 numa-domain 1 on pci5
+xhci1: 64 bytes context size, 64-bit DMA
+usbus1 numa-domain 1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib6: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 1 on pci4
+pci6: <ACPI PCI bus> numa-domain 1 on pcib6
+pci6: <unknown> at device 0.0 (no driver attached)
+pci6: <encrypt/decrypt> at device 0.1 (no driver attached)
+pcib7: <ACPI Host-PCI bridge> numa-domain 2 on acpi0
+pci7: <ACPI PCI bus> numa-domain 2 on pcib7
+amdsmn2: <AMD Family 17h System Management Network> numa-domain 2 on hostb46
+amdtemp2: <AMD CPU On-Die Thermal Sensors> numa-domain 2 on hostb46
+pci7: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib8: <ACPI PCI-PCI bridge> at device 1.1 numa-domain 2 on pci7
+pci8: <ACPI PCI bus> numa-domain 2 on pcib8
+bge0: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xac030000-0xac03ffff,0xac040000-0xac04ffff,0xac050000-0xac05ffff at device 0.0 numa-domain 2 on pci8
+bge0: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge0: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus0: <MII bus> numa-domain 2 on bge0
+brgphy0: <BCM5720C 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+bge1: <Broadcom NetXtreme Gigabit Ethernet, ASIC rev. 0x5720000> mem 0xac000000-0xac00ffff,0xac010000-0xac01ffff,0xac020000-0xac02ffff at device 0.1 numa-domain 2 on pci8
+bge1: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge1: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus1: <MII bus> numa-domain 2 on bge1
+brgphy1: <BCM5720C 1000BASE-T media interface> PHY 2 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge1: Using defaults for TSO: 65518/35/2048
+bge1: Ethernet address: ...
+pcib9: <ACPI PCI-PCI bridge> at device 1.2 numa-domain 2 on pci7
+pci9: <ACPI PCI bus> numa-domain 2 on pcib9
+pcib10: <PCI-PCI bridge> at device 0.0 numa-domain 2 on pci9
+pci10: <PCI bus> numa-domain 2 on pcib10
+vgapci0: <VGA-compatible display> mem 0xab000000-0xabffffff,0xc0808000-0xc080bfff,0xc0000000-0xc07fffff at device 0.0 numa-domain 2 on pci10
+vgapci0: Boot video device
+pcib11: <ACPI PCI-PCI bridge> at device 3.1 numa-domain 2 on pci7
+pci11: <ACPI PCI bus> numa-domain 2 on pcib11
+igb0: <Intel(R) I350 (Copper)> mem 0xc0e00000-0xc0efffff,0xc0f04000-0xc0f07fff at device 0.0 numa-domain 2 on pci11
+igb0: EEPROM V1.67-0 Option ROM V18-b5-p18 eTrack 0x80000fba
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 4 RX queues 4 TX queues
+igb0: Using MSI-X interrupts with 5 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 4/1024, RX 4/1024
+igb1: <Intel(R) I350 (Copper)> mem 0xc0d00000-0xc0dfffff,0xc0f00000-0xc0f03fff at device 0.1 numa-domain 2 on pci11
+igb1: EEPROM V1.67-0 Option ROM V18-b5-p18 eTrack 0x80000fba
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 4 RX queues 4 TX queues
+igb1: Using MSI-X interrupts with 5 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib12: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 2 on pci7
+pci12: <ACPI PCI bus> numa-domain 2 on pcib12
+pci12: <unknown> at device 0.0 (no driver attached)
+pci12: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib13: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 2 on pci7
+pci13: <ACPI PCI bus> numa-domain 2 on pcib13
+pci13: <unknown> at device 0.0 (no driver attached)
+pci13: <encrypt/decrypt> at device 0.1 (no driver attached)
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xc0a02000-0xc0a02fff at device 0.2 numa-domain 2 on pci13
+ahci0: AHCI v1.31 with 1 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+pcib14: <ACPI Host-PCI bridge> numa-domain 3 on acpi0
+pci14: <ACPI PCI bus> numa-domain 3 on pcib14
+amdsmn3: <AMD Family 17h System Management Network> numa-domain 3 on hostb53
+amdtemp3: <AMD CPU On-Die Thermal Sensors> numa-domain 3 on hostb53
+pci14: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib15: <ACPI PCI-PCI bridge> at device 1.1 numa-domain 3 on pci14
+pci15: <ACPI PCI bus> numa-domain 3 on pcib15
+mpr0: <Avago Technologies (LSI) SAS3008> port 0xc000-0xc0ff mem 0xa5500000-0xa550ffff,0xa5400000-0xa54fffff at device 0.0 numa-domain 3 on pci15
+mpr0: Firmware: XXX.XXX.XXX.XXX, Driver: XXX.XXX.XXX.XXX-fbsd
+mpr0: IOCCapabilities: 7a85c<ScsiTaskFull,DiagTrace,SnapBuf,EEDP,TransRetry,EventReplay,MSIXIndex,HostDisc,FastPath,RDPQArray>
+pcib16: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 3 on pci14
+pci16: <ACPI PCI bus> numa-domain 3 on pcib16
+pci16: <unknown> at device 0.0 (no driver attached)
+pci16: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib17: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 3 on pci14
+pci17: <ACPI PCI bus> numa-domain 3 on pcib17
+pci17: <unknown> at device 0.0 (no driver attached)
+pci17: <encrypt/decrypt> at device 0.1 (no driver attached)
+cpu0: <ACPI CPU> on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+orm0: <ISA Option ROM> at iomem 0xed800-0xf17ff pnpid ORM0000 on isa0
+vga0: <Generic ISA VGA> at port 0x3b0-0x3bb iomem 0xb0000-0xb7fff pnpid PNP0900 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen1.1: <0x1022 XHCI root HUB> at usbus1
+ugen0.1: <0x1022 XHCI root HUB> at usbus0
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub1: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x000a> enclosureHandle<0x0002> slot 0
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x000b> enclosureHandle<0x0002> slot 1
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x000c> enclosureHandle<0x0002> slot 2
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x000d> enclosureHandle<0x0002> slot 3
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x000e> enclosureHandle<0x0002> slot 4
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x000f> enclosureHandle<0x0002> slot 5
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x0010> enclosureHandle<0x0002> slot 6
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <6.0Gbps> handle<0x0011> enclosureHandle<0x0002> slot 7
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x0012> enclosureHandle<0x0002> slot 8
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x0013> enclosureHandle<0x0002> slot 9
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x0014> enclosureHandle<0x0002> slot 10
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <c01<SspTarg,Direct>,End Device> <12.0Gbps> handle<0x0015> enclosureHandle<0x0002> slot 11
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <881<SataDev,Direct>,End Device> <12.0Gbps> handle<0x0016> enclosureHandle<0x0002> slot 12
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <881<SataDev,Direct>,End Device> <12.0Gbps> handle<0x0017> enclosureHandle<0x0002> slot 13
+mpr0: At enclosure level 1 and connector name (    )
+mpr0: Found device <4c11<SmpInit,SspTarg,Direct,SepDev>,End Device> <12.0Gbps> handle<0x0018> enclosureHandle<0x0002> slot 14
+mpr0: At enclosure level 1 and connector name (    )
+da7 at mpr0 bus 0 scbus1 target 15 lun 0
+da7: <SEAGATE ST4000NM0023 0006> Fixed Direct Access SPC-4 SCSI device
+da7: Serial Number...
+da7: 600.000MB/s transfers
+da7: Command Queueing enabled
+da7: 3815447MB (7814037168 512 byte sectors)
+ses0 at mpr0 bus 0 scbus1 target 22 lun 0
+ses0: <DP BP14G+EXP 2.25> Fixed Enclosure Services SPC-4 SCSI device
+ses0: 1200.000MB/s transfers
+ses0: Command Queueing enabled
+ses0: SES Device
+da12 at mpr0 bus 0 scbus1 target 20 lun 0
+da12: <ATA MZ7KM480HMHQ0D3 GD57> Fixed Direct Access SPC-4 SCSI device
+da12: Serial Number...
+da12: 1200.000MB/s transfers
+da12: Command Queueing enabled
+da12: 457862MB (937703088 512 byte sectors)
+da12: quirks=0x8<4K>
+ses0: da0,pass0 in 'Drive Slot 0', SAS Slot: 2 phys at slot 0
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e8087ee6
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da1,pass1 in 'Drive Slot 1', SAS Slot: 2 phys at slot 1
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e808741e
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da2,pass2 in 'Drive Slot 2', SAS Slot: 2 phys at slot 2
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e8087d6e
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da3,pass3 in 'Drive Slot 3', SAS Slot: 2 phys at slot 3
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e80950ba
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da4,pass4 in 'Drive Slot 4', SAS Slot: 2 phys at slot 4
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e8087f7e
+ses0:  phy 1: SAS device type 0 phy 0
+da13 at mpr0 bus 0 scbus1 target 21 lun 0
+da13: <ATA MZ7KM480HMHQ0D3 GD57> Fixed Direct Access SPC-4 SCSI device
+da13: Serial Number...
+da13: 1200.000MB/s transfers
+da13: Command Queueing enabled
+da13: 457862MB (937703088 512 byte sectors)
+da13: quirks=0x8<4K>
+ses0:  phy 1: parent 0 addr 0
+ses0: da5,pass5 in 'Drive Slot 5', SAS Slot: 2 phys at slot 5
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e808fe92
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da6,pass6 in 'Drive Slot 6', SAS Slot: 2 phys at slot 6
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e803b2d6
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da7,pass7 in 'Drive Slot 7', SAS Slot: 2 phys at slot 7
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 5000c50084c71fb1
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da8,pass8 in 'Drive Slot 8', SAS Slot: 2 phys at slot 8
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e803fada
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da9,pass9 in 'Drive Slot 9', SAS Slot: 2 phys at slot 9
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e808fde6
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da10,pass10 in 'Drive Slot 10', SAS Slot: 2 phys at slot 10
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e80904d6
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da11,pass11 in 'Drive Slot 11', SAS Slot: 2 phys at slot 11
+ses0:  phy 0: SAS device type 1 phy 0 Target ( SSP )
+ses0:  phy 0: parent 500056b3cf81deff addr 50000398e8087e7e
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da12,pass12 in 'Drive Slot 12', SAS Slot: 2 phys at slot 12
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 500056b3cf81deff addr 500056b3cf81decc
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+ses0: da13,pass13 in 'Drive Slot 13', SAS Slot: 2 phys at slot 13
+ses0:  phy 0: SATA device
+ses0:  phy 0: parent 500056b3cf81deff addr 500056b3cf81decd
+ses0:  phy 1: SAS device type 0 phy 0
+ses0:  phy 1: parent 0 addr 0
+da0 at mpr0 bus 0 scbus1 target 8 lun 0
+da0: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 1200.000MB/s transfers
+da0: Command Queueing enabled
+da0: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da1 at mpr0 bus 0 scbus1 target 9 lun 0
+da1: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 1200.000MB/s transfers
+da1: Command Queueing enabled
+da1: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da2 at mpr0 bus 0 scbus1 target 10 lun 0
+da2: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 1200.000MB/s transfers
+da2: Command Queueing enabled
+da2: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da4 at mpr0 bus 0 scbus1 target 12 lun 0
+da4: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da4: Serial Number...
+da4: 1200.000MB/s transfers
+da4: Command Queueing enabled
+da4: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da5 at mpr0 bus 0 scbus1 target 13 lun 0
+da5: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da5: Serial Number...
+da5: 1200.000MB/s transfers
+da5: Command Queueing enabled
+da5: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da3 at mpr0 bus 0 scbus1 target 11 lun 0
+da3: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 1200.000MB/s transfers
+da3: Command Queueing enabled
+da3: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da6 at mpr0 bus 0 scbus1 target 14 lun 0
+da6: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da6: Serial Number...
+da6: 1200.000MB/s transfers
+da6: Command Queueing enabled
+da6: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da8 at mpr0 bus 0 scbus1 target 16 lun 0
+da8: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da8: Serial Number...
+da8: 1200.000MB/s transfers
+da8: Command Queueing enabled
+da8: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da10 at mpr0 bus 0 scbus1 target 18 lun 0
+da10: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da10: Serial Number...
+da10: 1200.000MB/s transfers
+da10: Command Queueing enabled
+da10: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da11 at mpr0 bus 0 scbus1 target 19 lun 0
+da11: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da11: Serial Number...
+da11: 1200.000MB/s transfers
+da11: Command Queueing enabled
+da11: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+da9 at mpr0 bus 0 scbus1 target 17 lun 0
+da9: <TOSHIBA MG04SCA40ENY EG03> Fixed Direct Access SPC-4 SCSI device
+da9: Serial Number...
+da9: 1200.000MB/s transfers
+da9: Command Queueing enabled
+da9: 3815447MB (7814037168 512 byte sectors, DIF type 2)
+Trying to mount root from zfs:zroot/ROOT/default []...
+uhub1: 4 ports with 4 removable, self powered
+uhub0: 4 ports with 4 removable, self powered
+ugen1.2: <vendor 0x1604 product 0x10c0> at usbus1
+uhub2 numa-domain 1 on uhub0
+uhub2: <vendor 0x1604 product 0x10c0, class 9/0, rev 2.00/0.00, addr 1> on usbus1
+ugen0.2: <Microchip Tech USB2734> at usbus0
+uhub3 numa-domain 0 on uhub1
+uhub3: <Microchip Tech USB2734, class 9/0, rev 2.10/1.21, addr 1> on usbus0
+uhub3: MTT enabled
+uhub3: 4 ports with 4 removable, self powered
+GEOM_MIRROR: Device mirror/swap launched (2/2).
+Root mount waiting for: usbus0 usbus1
+ugen0.3: <Microchip Tech USB5734> at usbus0
+uhub4 numa-domain 0 on uhub1
+uhub4: <Microchip Tech USB5734, class 9/0, rev 3.00/1.21, addr 2> on usbus0
+uhub4: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0 usbus1
+uhub2: 4 ports with 4 removable, self powered
+ugen1.3: <vendor 0x1604 product 0x10c0> at usbus1
+uhub5 numa-domain 1 on uhub2
+uhub5: <vendor 0x1604 product 0x10c0, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+Root mount waiting for: usbus1
+Root mount waiting for: usbus1
+Root mount waiting for: usbus1
+uhub5: 4 ports with 4 removable, self powered
+ugen1.4: <vendor 0x1604 product 0x10c0> at usbus1
+uhub6 numa-domain 1 on uhub2
+uhub6: <vendor 0x1604 product 0x10c0, class 9/0, rev 2.00/0.00, addr 3> on usbus1
+Root mount waiting for: usbus1
+Root mount waiting for: usbus1
+Root mount waiting for: usbus1
+uhub6: 4 ports with 4 removable, self powered
+CPU: AMD EPYC 7351P 16-Core Processor                (2395.56-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x800f12  Family=0x17  Model=0x1  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 numa-domain 0 on pci0
+smbus0: <System Management Bus> numa-domain 0 on intsmb0
+lo0: link state changed to UP
+WARNING: Intel (R) Network Connections are quality tested using Intel (R) Ethernet Optics. Using untested modules is not supported and may cause unstable operation or damage to the module or the adapter. Intel Corporation is not responsible for any harm caused by using untested modules.
+WARNING: Intel (R) Network Connections are quality tested using Intel (R) Ethernet Optics. Using untested modules is not supported and may cause unstable operation or damage to the module or the adapter. Intel Corporation is not responsible for any harm caused by using untested modules.
+WARNING: Intel (R) Network Connections are quality tested using Intel (R) Ethernet Optics. Using untested modules is not supported and may cause unstable operation or damage to the module or the adapter. Intel Corporation is not responsible for any harm caused by using untested modules.
+WARNING: Intel (R) Network Connections are quality tested using Intel (R) Ethernet Optics. Using untested modules is not supported and may cause unstable operation or damage to the module or the adapter. Intel Corporation is not responsible for any harm caused by using untested modules.
+WARNING: Intel (R) Network Connections are quality tested using Intel (R) Ethernet Optics. Using untested modules is not supported and may cause unstable operation or damage to the module or the adapter. Intel Corporation is not responsible for any harm caused by using untested modules.
+WARNING: Intel (R) Network Connections are quality tested using Intel (R) Ethernet Optics. Using untested modules is not supported and may cause unstable operation or damage to the module or the adapter. Intel Corporation is not responsible for any harm caused by using untested modules.
+ix0: link state changed to UP
+bge0: link state changed to DOWN
+bge1: link state changed to DOWN
+ix1: link state changed to UP
+bge0: link state changed to UP
+bge1: link state changed to UP
+lagg0: link state changed to UP

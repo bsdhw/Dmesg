@@ -1,0 +1,624 @@
+OpenBSD 7.2 (RAMDISK_CD) #725: Tue Sep 27 12:02:48 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 7312191488 (6973MB)
+avail mem = 7086567424 (6758MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.3 @ 0xc7e5a000 (57 entries)
+bios0: vendor LENOVO version "R20ET32W (1.12 )" date 10/07/2022
+bios0: LENOVO 21EDCTO1WW
+acpi0 at bios0: ACPI 6.3
+acpi0: tables DSDT FACP SSDT SSDT IVRS SSDT SSDT TPM2 POAT BATB HPET APIC MCFG SBST WSMT VFCT SSDT CRAT CDIT FPDT SSDT SSDT SSDT SSDT BGRT UEFI SSDT SSDT
+acpihpet0 at acpi0: 14318180 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: AMD Ryzen 7 5825U with Radeon Graphics, 1996.28 MHz, 19-50-00
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=1.1, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 32 pa 0xfec00000, version 21, 24 pins, can't remap
+ioapic1 at mainbus0: apid 33 pa 0xfec01000, version 21, 32 pins, can't remap
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (GPP3)
+acpiprt2 at acpi0: bus 1 (GPP4)
+acpiprt3 at acpi0: bus 2 (GPP5)
+acpiprt4 at acpi0: bus 3 (GPP6)
+acpiprt5 at acpi0: bus 4 (GP17)
+acpiprt6 at acpi0: bus -1 (GP18)
+acpiprt7 at acpi0: bus -1 (GP19)
+acpiec0 at acpi0
+"ACPI0010" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"ACPI0007" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+"PNP0C0A" at acpi0 not configured
+"ACPI0003" at acpi0 not configured
+"LEN0268" at acpi0 not configured
+"LEN0130" at acpi0 not configured
+"LEN0100" at acpi0 not configured
+"SMB0001" at acpi0 not configured
+"PNP0C0D" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+amdgpio0 at acpi0 GPIO uid 0 addr 0xfed81500/0x400 irq 9, 184 pins
+"USBC000" at acpi0 not configured
+"STM0151" at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+acpipwrres at acpi0 not configured
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "AMD 17h/6xh Root Complex" rev 0x00
+"AMD 17h/6xh IOMMU" rev 0x00 at pci0 dev 0 function 2 not configured
+pchb1 at pci0 dev 1 function 0 "AMD 17h/6xh Host" rev 0x00
+pchb2 at pci0 dev 2 function 0 "AMD 17h/6xh Host" rev 0x00
+ppb0 at pci0 dev 2 function 2 "AMD 17h/6xh PCIE" rev 0x00: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 2 function 3 "AMD 17h/6xh PCIE" rev 0x00: msi
+pci2 at ppb1 bus 2
+"MediaTek MT7921" rev 0x00 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 2 function 4 "AMD 17h/6xh PCIE" rev 0x00: msi
+pci3 at ppb2 bus 3
+nvme0 at pci3 dev 0 function 0 vendor "SanDisk", unknown product 0x5017 rev 0x01: msix, NVMe 1.4
+nvme0: WD PC SN740 SDDQNQD-1T00-1001, firmware 73110101, serial ...
+scsibus0 at nvme0: 2 targets, initiator 0
+sd0 at scsibus0 targ 1 lun 0: <NVMe, WD PC SN740 SDDQ, 7311>
+sd0: 976762MB, 512 bytes/sector, 2000409264 sectors
+pchb3 at pci0 dev 8 function 0 "AMD 17h/6xh Host" rev 0x00
+ppb3 at pci0 dev 8 function 1 "AMD 17h/6xh PCIE" rev 0x00
+pci4 at ppb3 bus 4
+"ATI Barcelo" rev 0xc1 at pci4 dev 0 function 0 not configured
+"ATI Renoir HD Audio" rev 0x00 at pci4 dev 0 function 1 not configured
+ccp0 at pci4 dev 0 function 2 "AMD 17h/1xh Crypto" rev 0x00
+xhci0 at pci4 dev 0 function 3 "AMD 17h/6xh xHCI" rev 0x00: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+xhci1 at pci4 dev 0 function 4 "AMD 17h/6xh xHCI" rev 0x00: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+"AMD 17h/1xh I2S Audio" rev 0x01 at pci4 dev 0 function 5 not configured
+"AMD 17h/1xh HD Audio" rev 0x00 at pci4 dev 0 function 6 not configured
+"AMD FCH SMBus" rev 0x51 at pci0 dev 20 function 0 not configured
+"AMD FCH LPC" rev 0x51 at pci0 dev 20 function 3 not configured
+pchb4 at pci0 dev 24 function 0 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb5 at pci0 dev 24 function 1 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb6 at pci0 dev 24 function 2 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb7 at pci0 dev 24 function 3 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb8 at pci0 dev 24 function 4 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb9 at pci0 dev 24 function 5 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb10 at pci0 dev 24 function 6 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb11 at pci0 dev 24 function 7 "AMD 19h/5xh Data Fabric" rev 0x00
+isa0 at mainbus0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+efifb0 at mainbus0: 1920x1080, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation), using wskbd0
+umass0 at uhub0 port 2 configuration 1 interface 0 "General UDisk" rev 2.00/1.00 addr 2
+umass0: using SCSI over Bulk-Only
+scsibus1 at umass0: 2 targets, initiator 0
+sd1 at scsibus1 targ 1 lun 0: <General, UDisk, 5.00> removable
+sd1: 15360MB, 512 bytes/sector, 31457280 sectors
+"Chicony Electronics Co.,Ltd. Integrated Camera" rev 2.01/30.18 addr 3 at uhub0 port 3 not configured
+"FPC FPC Sensor Controller L:0002 FW:XXX.XXX.XXX.XXX" rev 1.10/23.14 addr 2 at uhub1 port 3 not configured
+"MediaTek Inc. Wireless_Device" rev 2.10/1.00 addr 3 at uhub1 port 4 not configured
+softraid0 at root
+scsibus2 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+syncing disks... done
+rebooting...
+OpenBSD 7.2 (GENERIC.MP) #758: Tue Sep 27 11:57:54 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 7312191488 (6973MB)
+avail mem = 7073189888 (6745MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.3 @ 0xc7e5a000 (57 entries)
+bios0: vendor LENOVO version "R20ET32W (1.12 )" date 10/07/2022
+bios0: LENOVO 21EDCTO1WW
+acpi0 at bios0: ACPI 6.3
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SSDT SSDT IVRS SSDT SSDT TPM2 POAT BATB HPET APIC MCFG SBST WSMT VFCT SSDT CRAT CDIT FPDT SSDT SSDT SSDT SSDT BGRT UEFI SSDT SSDT
+acpi0: wakeup devices GPP3(S3) GPP4(S4) GPP5(S3) XHC0(S3) XHC1(S3) GP19(S3) LID_(S4) SLPB(S3)
+acpitimer0 at acpi0: 3579545 Hz, 32 bits
+acpihpet0 at acpi0: 14318180 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: AMD Ryzen 7 5825U with Radeon Graphics, 1996.27 MHz, 19-50-00
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=1.1, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu1: smt 1, core 0, package 0
+cpu2 at mainbus0: apid 2 (application processor)
+cpu2: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu2: smt 0, core 1, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu3: smt 1, core 1, package 0
+cpu4 at mainbus0: apid 4 (application processor)
+cpu4: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu4: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu4: smt 0, core 2, package 0
+cpu5 at mainbus0: apid 5 (application processor)
+cpu5: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu5: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu5: smt 1, core 2, package 0
+cpu6 at mainbus0: apid 6 (application processor)
+cpu6: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu6: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu6: smt 0, core 3, package 0
+cpu7 at mainbus0: apid 7 (application processor)
+cpu7: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu7: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu7: smt 1, core 3, package 0
+cpu8 at mainbus0: apid 8 (application processor)
+cpu8: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu8: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu8: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu8: smt 0, core 4, package 0
+cpu9 at mainbus0: apid 9 (application processor)
+cpu9: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu9: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu9: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu9: smt 1, core 4, package 0
+cpu10 at mainbus0: apid 10 (application processor)
+cpu10: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu10: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu10: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu10: smt 0, core 5, package 0
+cpu11 at mainbus0: apid 11 (application processor)
+cpu11: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu11: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu11: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu11: smt 1, core 5, package 0
+cpu12 at mainbus0: apid 12 (application processor)
+cpu12: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu12: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu12: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu12: smt 0, core 6, package 0
+cpu13 at mainbus0: apid 13 (application processor)
+cpu13: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu13: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu13: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu13: smt 1, core 6, package 0
+cpu14 at mainbus0: apid 14 (application processor)
+cpu14: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu14: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu14: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu14: smt 0, core 7, package 0
+cpu15 at mainbus0: apid 15 (application processor)
+cpu15: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu15: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu15: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu15: smt 1, core 7, package 0
+ioapic0 at mainbus0: apid 32 pa 0xfec00000, version 21, 24 pins, can't remap
+ioapic1 at mainbus0: apid 33 pa 0xfec01000, version 21, 32 pins, can't remap
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (GPP3)
+acpiprt2 at acpi0: bus 1 (GPP4)
+acpiprt3 at acpi0: bus 2 (GPP5)
+acpiprt4 at acpi0: bus 3 (GPP6)
+acpiprt5 at acpi0: bus 4 (GP17)
+acpiprt6 at acpi0: bus -1 (GP18)
+acpiprt7 at acpi0: bus -1 (GP19)
+acpiec0 at acpi0
+"ACPI0010" at acpi0 not configured
+acpicpu0 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu1 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu2 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu3 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu4 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu5 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu6 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu7 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu8 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu9 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu10 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu11 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu12 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu13 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu14 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu15 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpibtn0 at acpi0: PWRB
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+acpibat0 at acpi0: BAT0 model "LNV-5B11C73244" serial ... type LiP oem "SMP"
+acpiac0 at acpi0: AC unit online
+acpithinkpad0 at acpi0: version 2.0
+"LEN0130" at acpi0 not configured
+"LEN0100" at acpi0 not configured
+"SMB0001" at acpi0 not configured
+acpibtn1 at acpi0: LID_
+acpibtn2 at acpi0: SLPB
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+amdgpio0 at acpi0 GPIO uid 0 addr 0xfed81500/0x400 irq 9, 184 pins
+"USBC000" at acpi0 not configured
+tpm0 at acpi0 TPM_ 2.0 (TIS) addr 0xfed40000/0x5000, device 0x0000104a rev 0x4e
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: BTPR
+acpipwrres2 at acpi0: P0SA, resource for SATA, SAT1
+acpivideo0 at acpi0: VGA_
+acpivout0 at acpivideo0: LCD_
+cpu0: 1996 MHz: speeds: 2000 1800 1600 MHz
+pci0 at mainbus0 bus 0
+ksmn0 at pci0 dev 0 function 0 "AMD 17h/6xh Root Complex" rev 0x00
+"AMD 17h/6xh IOMMU" rev 0x00 at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0 "AMD 17h/6xh Host" rev 0x00
+pchb1 at pci0 dev 2 function 0 "AMD 17h/6xh Host" rev 0x00
+ppb0 at pci0 dev 2 function 2 "AMD 17h/6xh PCIE" rev 0x00: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 2 function 3 "AMD 17h/6xh PCIE" rev 0x00: msi
+pci2 at ppb1 bus 2
+"MediaTek MT7921" rev 0x00 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 2 function 4 "AMD 17h/6xh PCIE" rev 0x00: msi
+pci3 at ppb2 bus 3
+nvme0 at pci3 dev 0 function 0 vendor "SanDisk", unknown product 0x5017 rev 0x01: msix, NVMe 1.4
+nvme0: WD PC SN740 SDDQNQD-1T00-1001, firmware 73110101, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, WD PC SN740 SDDQ, 7311>
+sd0: 976762MB, 512 bytes/sector, 2000409264 sectors
+pchb2 at pci0 dev 8 function 0 "AMD 17h/6xh Host" rev 0x00
+ppb3 at pci0 dev 8 function 1 "AMD 17h/6xh PCIE" rev 0x00
+pci4 at ppb3 bus 4
+amdgpu0 at pci4 dev 0 function 0 "ATI Barcelo" rev 0xc1
+drm0 at amdgpu0
+amdgpu0: msi
+azalia0 at pci4 dev 0 function 1 "ATI Renoir HD Audio" rev 0x00: msi
+azalia0: no supported codecs
+ccp0 at pci4 dev 0 function 2 "AMD 17h/1xh Crypto" rev 0x00
+xhci0 at pci4 dev 0 function 3 "AMD 17h/6xh xHCI" rev 0x00: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+xhci1 at pci4 dev 0 function 4 "AMD 17h/6xh xHCI" rev 0x00: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+"AMD 17h/1xh I2S Audio" rev 0x01 at pci4 dev 0 function 5 not configured
+azalia1 at pci4 dev 0 function 6 "AMD 17h/1xh HD Audio" rev 0x00: apic 33 int 12
+azalia1: codecs: Realtek ALC257
+audio0 at azalia1
+piixpm0 at pci0 dev 20 function 0 "AMD FCH SMBus" rev 0x51: polling
+iic0 at piixpm0
+iic1 at piixpm0
+pcib0 at pci0 dev 20 function 3 "AMD FCH LPC" rev 0x51
+pchb3 at pci0 dev 24 function 0 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb4 at pci0 dev 24 function 1 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb5 at pci0 dev 24 function 2 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb6 at pci0 dev 24 function 3 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb7 at pci0 dev 24 function 4 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb8 at pci0 dev 24 function 5 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb9 at pci0 dev 24 function 6 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb10 at pci0 dev 24 function 7 "AMD 19h/5xh Data Fabric" rev 0x00
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Elantech Clickpad, version 4, firmware 0x5f3001
+wsmouse1 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x4e/2: W83627THF rev 0x27
+vmm0 at mainbus0: SVM/RVI
+efifb at mainbus0 not configured
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "Chicony Electronics Co.,Ltd. Integrated Camera" rev 2.01/30.18 addr 2
+video0 at uvideo0
+uvideo1 at uhub0 port 3 configuration 1 interface 2 "Chicony Electronics Co.,Ltd. Integrated Camera" rev 2.01/30.18 addr 2
+video1 at uvideo1
+ugen0 at uhub0 port 3 configuration 1 "Chicony Electronics Co.,Ltd. Integrated Camera" rev 2.01/30.18 addr 2
+ugen1 at uhub1 port 3 "FPC FPC Sensor Controller L:0002 FW:XXX.XXX.XXX.XXX" rev 1.10/23.14 addr 2
+ugen2 at uhub1 port 4 "MediaTek Inc. Wireless_Device" rev 2.10/1.00 addr 3
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (33d5c63758d66a23.a) swap on sd0b dump on sd0b
+amdgpu0: GREEN_SARDINE 8 CU rev 0x00
+amdgpu0: 1920x1080, 32bpp
+wsdisplay0 at amdgpu0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+syncing disks... done
+rebooting...
+OpenBSD 7.2 (GENERIC.MP) #5: Wed Jan 11 01:03:12 MST 2023
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 7312191488 (6973MB)
+avail mem = 7073173504 (6745MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.3 @ 0xc7e5a000 (57 entries)
+bios0: vendor LENOVO version "R20ET32W (1.12 )" date 10/07/2022
+bios0: LENOVO 21EDCTO1WW
+acpi0 at bios0: ACPI 6.3
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP SSDT SSDT IVRS SSDT SSDT TPM2 POAT BATB HPET APIC MCFG SBST WSMT VFCT SSDT CRAT CDIT FPDT SSDT SSDT SSDT SSDT BGRT UEFI SSDT SSDT
+acpi0: wakeup devices GPP3(S3) GPP4(S4) GPP5(S3) XHC0(S3) XHC1(S3) GP19(S3) LID_(S4) SLPB(S3)
+acpitimer0 at acpi0: 3579545 Hz, 32 bits
+acpihpet0 at acpi0: 14318180 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: AMD Ryzen 7 5825U with Radeon Graphics, 1996.28 MHz, 19-50-00
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 99MHz
+cpu0: mwait min=64, max=64, C-substates=1.1, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu1: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu1: smt 1, core 0, package 0
+cpu2 at mainbus0: apid 2 (application processor)
+cpu2: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu2: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu2: smt 0, core 1, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu3: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu3: smt 1, core 1, package 0
+cpu4 at mainbus0: apid 4 (application processor)
+cpu4: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu4: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu4: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu4: smt 0, core 2, package 0
+cpu5 at mainbus0: apid 5 (application processor)
+cpu5: AMD Ryzen 7 5825U with Radeon Graphics, 1996.26 MHz, 19-50-00
+cpu5: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu5: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu5: smt 1, core 2, package 0
+cpu6 at mainbus0: apid 6 (application processor)
+cpu6: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu6: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu6: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu6: smt 0, core 3, package 0
+cpu7 at mainbus0: apid 7 (application processor)
+cpu7: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu7: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu7: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu7: smt 1, core 3, package 0
+cpu8 at mainbus0: apid 8 (application processor)
+cpu8: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu8: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu8: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu8: smt 0, core 4, package 0
+cpu9 at mainbus0: apid 9 (application processor)
+cpu9: AMD Ryzen 7 5825U with Radeon Graphics, 1996.26 MHz, 19-50-00
+cpu9: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu9: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu9: smt 1, core 4, package 0
+cpu10 at mainbus0: apid 10 (application processor)
+cpu10: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu10: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu10: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu10: smt 0, core 5, package 0
+cpu11 at mainbus0: apid 11 (application processor)
+cpu11: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu11: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu11: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu11: smt 1, core 5, package 0
+cpu12 at mainbus0: apid 12 (application processor)
+cpu12: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu12: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu12: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu12: smt 0, core 6, package 0
+cpu13 at mainbus0: apid 13 (application processor)
+cpu13: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu13: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu13: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu13: smt 1, core 6, package 0
+cpu14 at mainbus0: apid 14 (application processor)
+cpu14: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu14: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu14: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu14: smt 0, core 7, package 0
+cpu15 at mainbus0: apid 15 (application processor)
+cpu15: AMD Ryzen 7 5825U with Radeon Graphics, 1996.25 MHz, 19-50-00
+cpu15: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,MMX,FXSR,SSE,SSE2,HTT,SSE3,PCLMUL,MWAIT,SSSE3,FMA3,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AES,XSAVE,AVX,F16C,RDRAND,NXE,MMXX,FFXSR,PAGE1GB,RDTSCP,LONG,LAHF,CMPLEG,SVM,EAPICSP,AMCR8,ABM,SSE4A,MASSE,3DNOWP,OSVW,IBS,SKINIT,TCE,TOPEXT,CPCTR,DBKP,PCTRL3,MWAITX,ITSC,FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA,UMIP,PKU,IBPB,IBRS,STIBP,SSBD,XSAVEOPT,XSAVEC,XGETBV1,XSAVES
+cpu15: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 512KB 64b/line 8-way L2 cache, 16MB 64b/line 16-way L3 cache
+cpu15: smt 1, core 7, package 0
+ioapic0 at mainbus0: apid 32 pa 0xfec00000, version 21, 24 pins, can't remap
+ioapic1 at mainbus0: apid 33 pa 0xfec01000, version 21, 32 pins, can't remap
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf8000000, bus 0-63
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (GPP3)
+acpiprt2 at acpi0: bus 1 (GPP4)
+acpiprt3 at acpi0: bus 2 (GPP5)
+acpiprt4 at acpi0: bus 3 (GPP6)
+acpiprt5 at acpi0: bus 4 (GP17)
+acpiprt6 at acpi0: bus -1 (GP18)
+acpiprt7 at acpi0: bus -1 (GP19)
+acpiec0 at acpi0
+"ACPI0010" at acpi0 not configured
+acpicpu0 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu1 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu2 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu3 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu4 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu5 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu6 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu7 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu8 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu9 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu10 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu11 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu12 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu13 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu14 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpicpu15 at acpi0: C3(0@350 io@0x415), C2(0@18 io@0x414), C1(0@1 mwait), PSS
+acpibtn0 at acpi0: PWRB
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000
+acpicmos0 at acpi0
+acpibat0 at acpi0: BAT0 model "LNV-5B11C73244" serial ... type LiP oem "SMP"
+acpiac0 at acpi0: AC unit online
+acpithinkpad0 at acpi0: version 2.0
+"LEN0130" at acpi0 not configured
+"LEN0100" at acpi0 not configured
+"SMB0001" at acpi0 not configured
+acpibtn1 at acpi0: LID_
+acpibtn2 at acpi0: SLPB
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+"PNP0C14" at acpi0 not configured
+amdgpio0 at acpi0 GPIO uid 0 addr 0xfed81500/0x400 irq 9, 184 pins
+"USBC000" at acpi0 not configured
+tpm0 at acpi0 TPM_ 2.0 (TIS) addr 0xfed40000/0x5000, device 0x0000104a rev 0x4e
+acpipwrres0 at acpi0: WRST
+acpipwrres1 at acpi0: BTPR
+acpipwrres2 at acpi0: P0SA, resource for SATA, SAT1
+acpivideo0 at acpi0: VGA_
+acpivout0 at acpivideo0: LCD_
+cpu0: 1996 MHz: speeds: 2000 1800 1600 MHz
+pci0 at mainbus0 bus 0
+ksmn0 at pci0 dev 0 function 0 "AMD 17h/6xh Root Complex" rev 0x00
+"AMD 17h/6xh IOMMU" rev 0x00 at pci0 dev 0 function 2 not configured
+pchb0 at pci0 dev 1 function 0 "AMD 17h/6xh Host" rev 0x00
+pchb1 at pci0 dev 2 function 0 "AMD 17h/6xh Host" rev 0x00
+ppb0 at pci0 dev 2 function 2 "AMD 17h/6xh PCIE" rev 0x00: msi
+pci1 at ppb0 bus 1
+re0 at pci1 dev 0 function 0 "Realtek 8168" rev 0x15: RTL8168H/8111H (0x5400), msi, address XXX
+rgephy0 at re0 phy 7: RTL8251 PHY, rev. 0
+ppb1 at pci0 dev 2 function 3 "AMD 17h/6xh PCIE" rev 0x00: msi
+pci2 at ppb1 bus 2
+"MediaTek MT7921" rev 0x00 at pci2 dev 0 function 0 not configured
+ppb2 at pci0 dev 2 function 4 "AMD 17h/6xh PCIE" rev 0x00: msi
+pci3 at ppb2 bus 3
+nvme0 at pci3 dev 0 function 0 vendor "SanDisk", unknown product 0x5017 rev 0x01: msix, NVMe 1.4
+nvme0: WD PC SN740 SDDQNQD-1T00-1001, firmware 73110101, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, WD PC SN740 SDDQ, 7311>
+sd0: 976762MB, 512 bytes/sector, 2000409264 sectors
+pchb2 at pci0 dev 8 function 0 "AMD 17h/6xh Host" rev 0x00
+ppb3 at pci0 dev 8 function 1 "AMD 17h/6xh PCIE" rev 0x00
+pci4 at ppb3 bus 4
+amdgpu0 at pci4 dev 0 function 0 "ATI Barcelo" rev 0xc1
+drm0 at amdgpu0
+amdgpu0: msi
+azalia0 at pci4 dev 0 function 1 "ATI Renoir HD Audio" rev 0x00: msi
+azalia0: no supported codecs
+ccp0 at pci4 dev 0 function 2 "AMD 17h/1xh Crypto" rev 0x00
+xhci0 at pci4 dev 0 function 3 "AMD 17h/6xh xHCI" rev 0x00: msi, xHCI 1.10
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+xhci1 at pci4 dev 0 function 4 "AMD 17h/6xh xHCI" rev 0x00: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "AMD xHCI root hub" rev 3.00/1.00 addr 1
+"AMD 17h/1xh I2S Audio" rev 0x01 at pci4 dev 0 function 5 not configured
+azalia1 at pci4 dev 0 function 6 "AMD 17h/1xh HD Audio" rev 0x00: apic 33 int 12
+azalia1: codecs: Realtek ALC257
+audio0 at azalia1
+piixpm0 at pci0 dev 20 function 0 "AMD FCH SMBus" rev 0x51: polling
+iic0 at piixpm0
+iic1 at piixpm0
+pcib0 at pci0 dev 20 function 3 "AMD FCH LPC" rev 0x51
+pchb3 at pci0 dev 24 function 0 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb4 at pci0 dev 24 function 1 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb5 at pci0 dev 24 function 2 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb6 at pci0 dev 24 function 3 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb7 at pci0 dev 24 function 4 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb8 at pci0 dev 24 function 5 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb9 at pci0 dev 24 function 6 "AMD 19h/5xh Data Fabric" rev 0x00
+pchb10 at pci0 dev 24 function 7 "AMD 19h/5xh Data Fabric" rev 0x00
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5 irq 1 irq 12
+pckbd0 at pckbc0 (kbd slot)
+wskbd0 at pckbd0: console keyboard
+pms0 at pckbc0 (aux slot)
+wsmouse0 at pms0 mux 0
+pms0: Elantech Clickpad, version 4, firmware 0x5f3001
+wsmouse1 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+wbsio0 at isa0 port 0x4e/2: W83627THF rev 0x27
+vmm0 at mainbus0: SVM/RVI
+efifb at mainbus0 not configured
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "Chicony Electronics Co.,Ltd. Integrated Camera" rev 2.01/30.18 addr 2
+video0 at uvideo0
+uvideo1 at uhub0 port 3 configuration 1 interface 2 "Chicony Electronics Co.,Ltd. Integrated Camera" rev 2.01/30.18 addr 2
+video1 at uvideo1
+ugen0 at uhub0 port 3 configuration 1 "Chicony Electronics Co.,Ltd. Integrated Camera" rev 2.01/30.18 addr 2
+ugen1 at uhub1 port 3 "FPC FPC Sensor Controller L:0002 FW:XXX.XXX.XXX.XXX" rev 1.10/23.14 addr 2
+ugen2 at uhub1 port 4 "MediaTek Inc. Wireless_Device" rev 2.10/1.00 addr 3
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on sd0a (33d5c63758d66a23.a) swap on sd0b dump on sd0b
+amdgpu0: GREEN_SARDINE 8 CU rev 0x00
+amdgpu0: 1920x1080, 32bpp
+wsdisplay0 at amdgpu0 mux 1: console (std, vt100 emulation), using wskbd0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)

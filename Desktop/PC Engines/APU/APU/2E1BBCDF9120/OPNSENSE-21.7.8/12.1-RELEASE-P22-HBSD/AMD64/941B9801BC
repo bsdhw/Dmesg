@@ -1,0 +1,200 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p22-HBSD #0  6fd65fcb739(stable/21.7)-dirty: Wed Jan 26 20:48:21 CET 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+VT(vga): resolution 640x480
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: AMD G-T40E Processor (1000.07-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x500f20  Family=0x14  Model=0x2  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802209<SSE3,MON,SSSE3,CX16,POPCNT>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,IBS,SKINIT,WDT>
+  SVM: NP,NRIP,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 4815060992 (4592 MB)
+avail memory = 4079112192 (3890 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <CORE   COREBOOT>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+Launching APs: 1
+Timecounter "TSC" frequency 1000067429 Hz quality 800
+wlan: mac acl policy registered
+random: entropy device external interface
+kbd0 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812947f0, 0) error 19
+000.000052 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+vtvga0: <VT VGA driver> on motherboard
+cryptosoft0: <software crypto> on motherboard
+acpi0: <CORE COREBOOT> on motherboard
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+atrtc0: <AT realtime clock> port 0x70-0x71 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 4.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+re0: <Realtek PCIe GbE Family Controller> port 0x1000-0x10ff mem 0xf7900000-0xf7900fff,0xf7800000-0xf7803fff irq 16 at device 0.0 on pci1
+re0: Using Memory Mapping!
+re0: Using 1 MSI-X message
+re0: ASPM disabled
+re0: version:1.96.04
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: Ethernet address: ...
+pcib2: <ACPI PCI-PCI bridge> irq 17 at device 5.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+re1: <Realtek PCIe GbE Family Controller> port 0x2000-0x20ff mem 0xf7b00000-0xf7b00fff,0xf7a00000-0xf7a03fff irq 17 at device 0.0 on pci2
+re1: Using Memory Mapping!
+re1: Using 1 MSI-X message
+re1: ASPM disabled
+re1: version:1.96.04
+re1: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re1: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> irq 18 at device 6.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+re2: <Realtek PCIe GbE Family Controller> port 0x3000-0x30ff mem 0xf7d00000-0xf7d00fff,0xf7c00000-0xf7c03fff irq 18 at device 0.0 on pci3
+re2: Using Memory Mapping!
+re2: Using 1 MSI-X message
+re2: ASPM disabled
+re2: version:1.96.04
+re2: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re2: Ethernet address: ...
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0x4010-0x4017,0x4020-0x4023,0x4018-0x401f,0x4024-0x4027,0x4000-0x400f mem 0xf7f04000-0xf7f043ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.20 with 6 6Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf7f00000-0xf7f00fff irq 18 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf7f04400-0xf7f044ff irq 17 at device 18.2 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf7f01000-0xf7f01fff irq 18 at device 19.0 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf7f04500-0xf7f045ff irq 17 at device 19.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+usbus3: 480Mbps High Speed USB v2.0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib4: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+ohci2: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf7f02000-0xf7f02fff irq 18 at device 20.5 on pci0
+usbus4 on ohci2
+usbus4: 12Mbps Full Speed USB v1.0
+pcib5: <ACPI PCI-PCI bridge> at device 21.0 on pci0
+pci5: <ACPI PCI bus> on pcib5
+ath0: <Atheros 9280> at device 0.0 on pci5
+ath0: [HT] enabling HT modes
+ath0: [HT] 1 stream STBC receive enabled
+ath0: [HT] 1 stream STBC transmit enabled
+ath0: [HT] 2 RX streams; 2 TX streams
+ath0: AR9280 mac 128.2 RF5133 phy 13.0
+ath0: 2GHz radio: 0x0000; 5GHz radio: 0x00c0
+ohci3: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf7f03000-0xf7f03fff at device 22.0 on pci0
+usbus5 on ohci3
+usbus5: 12Mbps Full Speed USB v1.0
+ehci2: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf7f04600-0xf7f046ff at device 22.2 on pci0
+usbus6: EHCI version 1.0
+usbus6 on ehci2
+usbus6: 480Mbps High Speed USB v2.0
+acpi_button0: <Power Button> on acpi0
+orm0: <ISA Option ROM> at iomem 0xee800-0xeffff pnpid ORM0000 on isa0
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> at port 0x2f8 irq 3 on isa0
+Timecounters tick every 1.000 msec
+ugen3.1: <ATI EHCI root HUB> at usbus3
+ugen5.1: <ATI OHCI root HUB> at usbus5
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus5
+ugen1.1: <ATI EHCI root HUB> at usbus1
+ugen2.1: <ATI OHCI root HUB> at usbus2
+uhub2: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen0.1: <ATI OHCI root HUB> at usbus0
+ugen6.1: <ATI EHCI root HUB> at usbus6
+uhub4: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub5: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus6
+ugen4.1: <ATI OHCI root HUB> at usbus4
+uhub6: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus4
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <SATA SSD S9FM01.9> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 15272MB (31277232 512 byte sectors)
+Trying to mount root from ufs:/dev/gpt/rootfs [rw,noatime]...
+uhub6: 2 ports with 2 removable, self powered
+uhub1: 4 ports with 4 removable, self powered
+uhub4: 5 ports with 5 removable, self powered
+uhub3: 5 ports with 5 removable, self powered
+uhub5: 4 ports with 4 removable, self powered
+uhub2: 5 ports with 5 removable, self powered
+uhub0: 5 ports with 5 removable, self powered
+ugen6.2: <Generic Flash Card Reader/Writer> at usbus6
+umass0 on uhub5
+umass0: <Generic Flash Card Reader/Writer, class 0/0, rev 2.01/1.00, addr 2> on usbus6
+umass0:  SCSI over Bulk-Only; quirks = 0x4001
+umass0:6:0: Attached to scbus6
+da0 at umass-sim0 bus 0 scbus6 target 0 lun 0
+da0: <Multiple Card  Reader 1.00> Removable Direct Access SPC-2 SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+lo0: link state changed to UP
+aesni0: No AES or SHA support.
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb4
+re0: link state changed to UP
+re1: link state changed to UP
+re2: link state changed to UP
+bridge0: Ethernet address: ...
+bridge0: IPv6 addresses on re0 have been removed before adding it as a member to prevent IPv6 address scope violation.
+bridge0: link state changed to UP
+re0: promiscuous mode enabled
+bridge0: IPv6 addresses on re2 have been removed before adding it as a member to prevent IPv6 address scope violation.
+re2: promiscuous mode enabled
+arp: XXX is using my IP address XXX.XXX.XXX.XXX on bridge0!
+pflog0: permanently promiscuous mode enabled
+arp: packet with invalid ethernet address length 0 received on bridge0
+WARNING: attempt to domain_add(netgraph) after domainfinalize()

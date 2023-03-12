@@ -1,0 +1,757 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE stable/22.7-n250212-a26d6065f1f SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: AMD C-50 Processor (997.54-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x500f10  Family=0x14  Model=0x1  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802209<SSE3,MON,SSSE3,CX16,POPCNT>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,IBS,SKINIT,WDT>
+  SVM: NP,NRIP,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 7868579840 (7504 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <INSYDE IS CRB  >
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0: MADT APIC ID 4 != hw id 0
+ioapic0 <Version 2.1> irqs 0-23
+Launching APs: 1
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xfe120-0xfe13e
+smbios0: Version: 2.7, BCD Revision: 2.7
+aesni0: No AES or SHA support.
+acpi0: <LENOVO CB-01>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x3> port 0x62,0x66 on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x30ff mem 0xe0000000-0xefffffff,0xf0200000-0xf023ffff irq 18 at device 1.0 on pci0
+vgapci0: Boot video device
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0x3118-0x311f,0x3124-0x3127,0x3110-0x3117,0x3120-0x3123,0x3100-0x310f mem 0xf0248000-0xf02483ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.20 with 2 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf0247000-0xf0247fff irq 18 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf0246000-0xf02460ff irq 17 at device 18.2 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf0245000-0xf0245fff irq 18 at device 19.0 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf0244000-0xf02440ff irq 17 at device 19.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+usbus3: 480Mbps High Speed USB v2.0
+hdac0: <ATI SB600 HDA Controller> mem 0xf0240000-0xf0243fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib1: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 21.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+alc0: <Atheros AR8152 v2.0 PCIe Fast Ethernet> port 0x2000-0x207f mem 0xf0100000-0xf013ffff irq 16 at device 0.0 on pci2
+alc0: 2048 Tx FIFO, 5376 Rx FIFO
+alc0: Using 1 MSI message(s).
+miibus0: <MII bus> on alc0
+atphy0: <Atheros F2 10/100 PHY> PHY 0 on miibus0
+atphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+alc0: Using defaults for TSO: 65518/35/2048
+alc0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> at device 21.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+ath0: <Atheros 9285> mem 0xf0000000-0xf000ffff irq 17 at device 0.0 on pci3
+[ath] AR9285E_20 detected; using XE TX gain tables
+[ath] AR9285 Main LNA config: LNA2
+[ath] AR9285 Alt LNA config: LNA1
+[ath] LNA diversity enabled, Diversity enabled
+[ath] Enabling diversity for Kite
+ath0: [HT] enabling HT modes
+ath0: [HT] 1 stream STBC receive enabled
+ath0: [HT] 1 RX streams; 1 TX streams
+ath0: AR9285 mac 192.2 RF5133 phy 14.0
+ath0: 2GHz radio: 0x0000; 5GHz radio: 0x00c0
+acpi_button1: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz0: _CRT value is absurd, ignored (200.1C)
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _CRT value is absurd, ignored (200.1C)
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+acpi_acad0: <AC Adapter> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+orm0: <ISA Option ROM> at iomem 0xce800-0xcf7ff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC" frequency 997502137 Hz quality 800
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen1.1: <ATI EHCI root HUB> at usbus1
+ugen2.1: <ATI OHCI root HUB> at usbus2
+uhub0 on usbus1
+uhub1 on usbus2
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen3.1: <ATI EHCI root HUB> at usbus3
+ugen0.1: <ATI OHCI root HUB> at usbus0
+uhub2 on usbus3
+uhub3 on usbus0
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub2: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+hdacc0: <Conexant CX20590 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant CX20590 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant CX20590 (Analog)> at nid 31 and 26 on hdaa0
+pcm1: <Conexant CX20590 (Right Analog)> at nid 25 and 27 on hdaa0
+Trying to mount root from zfs:zroot/ROOT/default []...
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TOSHIBA MK5076GSX GS001C> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <HL-DT-ST DVDRAM GT50N LC01> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA2, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub3: 5 ports with 5 removable, self powered
+uhub1: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1 usbus3
+uhub0: 5 ports with 5 removable, self powered
+uhub2: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1 usbus3
+ugen1.2: <Bison Corp. Lenovo EasyCamera> at usbus1
+ugen2.2: <Broadcom Corp Broadcom Bluetooth 2.1 Device> at usbus2
+ugen3.2: <Generic USB2.0-CRW> at usbus3
+carp: demoted by 240 to 240 (sysctl)
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+ubt0 on uhub1
+ubt0: <Broadcom Corp Broadcom Bluetooth 2.1 Device, class 224/1, rev 2.00/4.72, addr 2> on usbus2
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+lo0: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+alc0: link state changed to DOWN
+alc0: link state changed to UP
+[ar5210] loaded
+[ar5211] loaded
+[ar5212] loaded
+[ar5416] loaded
+[ar9300] loaded
+[ath_rate] loaded
+[ath_dfs] loaded
+[ath] loaded
+wlan0: Ethernet address: ...
+wlan0: changing name to 'ath0_wlan0'
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 done
+All buffers synced.
+Uptime: 43m46s
+uhub2: detached
+ugen2.3: <Generic USB2.0-CRW> at usbus2
+ubt0: detached
+uhub1: detached
+uhub0: detached
+ugen0.2: <Bison Corp. Lenovo EasyCamera> at usbus0
+uhub3: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE stable/22.7-n250212-a26d6065f1f SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: AMD C-50 Processor (997.53-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x500f10  Family=0x14  Model=0x1  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802209<SSE3,MON,SSSE3,CX16,POPCNT>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,IBS,SKINIT,WDT>
+  SVM: NP,NRIP,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 7868579840 (7504 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <INSYDE IS CRB  >
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0: MADT APIC ID 4 != hw id 0
+ioapic0 <Version 2.1> irqs 0-23
+Launching APs: 1
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xfe120-0xfe13e
+smbios0: Version: 2.7, BCD Revision: 2.7
+aesni0: No AES or SHA support.
+acpi0: <LENOVO CB-01>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x3> port 0x62,0x66 on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x30ff mem 0xe0000000-0xefffffff,0xf0200000-0xf023ffff irq 18 at device 1.0 on pci0
+vgapci0: Boot video device
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0x3118-0x311f,0x3124-0x3127,0x3110-0x3117,0x3120-0x3123,0x3100-0x310f mem 0xf0248000-0xf02483ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.20 with 2 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf0247000-0xf0247fff irq 18 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf0246000-0xf02460ff irq 17 at device 18.2 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf0245000-0xf0245fff irq 18 at device 19.0 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf0244000-0xf02440ff irq 17 at device 19.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+usbus3: 480Mbps High Speed USB v2.0
+hdac0: <ATI SB600 HDA Controller> mem 0xf0240000-0xf0243fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib1: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 21.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+alc0: <Atheros AR8152 v2.0 PCIe Fast Ethernet> port 0x2000-0x207f mem 0xf0100000-0xf013ffff irq 16 at device 0.0 on pci2
+alc0: 2048 Tx FIFO, 5376 Rx FIFO
+alc0: Using 1 MSI message(s).
+miibus0: <MII bus> on alc0
+atphy0: <Atheros F2 10/100 PHY> PHY 0 on miibus0
+atphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+alc0: Using defaults for TSO: 65518/35/2048
+alc0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> at device 21.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+ath0: <Atheros 9285> mem 0xf0000000-0xf000ffff irq 17 at device 0.0 on pci3
+[ath] AR9285E_20 detected; using XE TX gain tables
+[ath] AR9285 Main LNA config: LNA2
+[ath] AR9285 Alt LNA config: LNA1
+[ath] LNA diversity enabled, Diversity enabled
+[ath] Enabling diversity for Kite
+ath0: [HT] enabling HT modes
+ath0: [HT] 1 stream STBC receive enabled
+ath0: [HT] 1 RX streams; 1 TX streams
+ath0: AR9285 mac 192.2 RF5133 phy 14.0
+ath0: 2GHz radio: 0x0000; 5GHz radio: 0x00c0
+acpi_button1: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz0: _CRT value is absurd, ignored (200.1C)
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _CRT value is absurd, ignored (200.1C)
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+acpi_acad0: <AC Adapter> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+orm0: <ISA Option ROM> at iomem 0xce800-0xcf7ff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC" frequency 997501912 Hz quality 800
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen1.1: <ATI EHCI root HUB> at usbus1
+ugen2.1: <ATI OHCI root HUB> at usbus2
+uhub0 on usbus1
+uhub1 on usbus2
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen3.1: <ATI EHCI root HUB> at usbus3
+ugen0.1: <ATI OHCI root HUB> at usbus0
+uhub2 on usbus3
+uhub2: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+uhub3 on usbus0
+hdacc0: <Conexant CX20590 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant CX20590 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant CX20590 (Analog)> at nid 31 and 26 on hdaa0
+pcm1: <Conexant CX20590 (Right Analog)> at nid 25 and 27 on hdaa0
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+Trying to mount root from zfs:zroot/ROOT/default []...
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TOSHIBA MK5076GSX GS001C> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <HL-DT-ST DVDRAM GT50N LC01> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA2, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub1: 5 ports with 5 removable, self powered
+uhub3: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1 usbus3
+uhub2: 5 ports with 5 removable, self powered
+uhub0: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1 usbus3
+ugen1.2: <Bison Corp. Lenovo EasyCamera> at usbus1
+ugen2.2: <Broadcom Corp Broadcom Bluetooth 2.1 Device> at usbus2
+ugen3.2: <Generic USB2.0-CRW> at usbus3
+carp: demoted by 240 to 240 (sysctl)
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+ubt0 on uhub1
+ubt0: <Broadcom Corp Broadcom Bluetooth 2.1 Device, class 224/1, rev 2.00/4.72, addr 2> on usbus2
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+lo0: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+alc0: link state changed to DOWN
+alc0: link state changed to UP
+[ar5210] loaded
+[ar5211] loaded
+[ar5212] loaded
+[ar5416] loaded
+[ar9300] loaded
+[ath_rate] loaded
+[ath_dfs] loaded
+[ath] loaded
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 0 done
+All buffers synced.
+Uptime: 14m40s
+uhub2: detached
+ugen2.3: <Generic USB2.0-CRW> at usbus2
+ubt0: detached
+uhub1: detached
+uhub0: detached
+ugen0.2: <Bison Corp. Lenovo EasyCamera> at usbus0
+uhub3: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE stable/22.7-n250212-a26d6065f1f SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: AMD C-50 Processor (997.55-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x500f10  Family=0x14  Model=0x1  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802209<SSE3,MON,SSSE3,CX16,POPCNT>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,IBS,SKINIT,WDT>
+  SVM: NP,NRIP,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 7868579840 (7504 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <INSYDE IS CRB  >
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0: MADT APIC ID 4 != hw id 0
+ioapic0 <Version 2.1> irqs 0-23
+Launching APs: 1
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xfe120-0xfe13e
+smbios0: Version: 2.7, BCD Revision: 2.7
+aesni0: No AES or SHA support.
+acpi0: <LENOVO CB-01>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x3> port 0x62,0x66 on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x30ff mem 0xe0000000-0xefffffff,0xf0200000-0xf023ffff irq 18 at device 1.0 on pci0
+vgapci0: Boot video device
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0x3118-0x311f,0x3124-0x3127,0x3110-0x3117,0x3120-0x3123,0x3100-0x310f mem 0xf0248000-0xf02483ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.20 with 2 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf0247000-0xf0247fff irq 18 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf0246000-0xf02460ff irq 17 at device 18.2 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf0245000-0xf0245fff irq 18 at device 19.0 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf0244000-0xf02440ff irq 17 at device 19.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+usbus3: 480Mbps High Speed USB v2.0
+hdac0: <ATI SB600 HDA Controller> mem 0xf0240000-0xf0243fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib1: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 21.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+alc0: <Atheros AR8152 v2.0 PCIe Fast Ethernet> port 0x2000-0x207f mem 0xf0100000-0xf013ffff irq 16 at device 0.0 on pci2
+alc0: 2048 Tx FIFO, 5376 Rx FIFO
+alc0: Using 1 MSI message(s).
+miibus0: <MII bus> on alc0
+atphy0: <Atheros F2 10/100 PHY> PHY 0 on miibus0
+atphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+alc0: Using defaults for TSO: 65518/35/2048
+alc0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> at device 21.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+ath0: <Atheros 9285> mem 0xf0000000-0xf000ffff irq 17 at device 0.0 on pci3
+[ath] AR9285E_20 detected; using XE TX gain tables
+[ath] AR9285 Main LNA config: LNA2
+[ath] AR9285 Alt LNA config: LNA1
+[ath] LNA diversity enabled, Diversity enabled
+[ath] Enabling diversity for Kite
+ath0: [HT] enabling HT modes
+ath0: [HT] 1 stream STBC receive enabled
+ath0: [HT] 1 RX streams; 1 TX streams
+ath0: AR9285 mac 192.2 RF5133 phy 14.0
+ath0: 2GHz radio: 0x0000; 5GHz radio: 0x00c0
+acpi_button1: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz0: _CRT value is absurd, ignored (200.1C)
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _CRT value is absurd, ignored (200.1C)
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+acpi_acad0: <AC Adapter> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+orm0: <ISA Option ROM> at iomem 0xce800-0xcf7ff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC" frequency 997502103 Hz quality 800
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen1.1: <ATI EHCI root HUB> at usbus1
+ugen2.1: <ATI OHCI root HUB> at usbus2
+uhub0 on usbus1
+uhub1 on usbus2
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen3.1: <ATI EHCI root HUB> at usbus3
+ugen0.1: <ATI OHCI root HUB> at usbus0
+uhub2 on usbus3
+uhub3 on usbus0
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub2: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+hdacc0: <Conexant CX20590 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant CX20590 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant CX20590 (Analog)> at nid 31 and 26 on hdaa0
+pcm1: <Conexant CX20590 (Right Analog)> at nid 25 and 27 on hdaa0
+Trying to mount root from zfs:zroot/ROOT/default []...
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TOSHIBA MK5076GSX GS001C> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <HL-DT-ST DVDRAM GT50N LC01> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA2, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub1: 5 ports with 5 removable, self powered
+uhub3: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1 usbus3
+uhub0: 5 ports with 5 removable, self powered
+uhub2: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1 usbus3
+ugen1.2: <Bison Corp. Lenovo EasyCamera> at usbus1
+ugen2.2: <Broadcom Corp Broadcom Bluetooth 2.1 Device> at usbus2
+ugen3.2: <Generic USB2.0-CRW> at usbus3
+carp: demoted by 240 to 240 (sysctl)
+intsmb0: <AMD SB600/7xx/8xx/9xx SMBus Controller> at device 20.0 on pci0
+smbus0: <System Management Bus> on intsmb0
+ubt0 on uhub1
+ubt0: <Broadcom Corp Broadcom Bluetooth 2.1 Device, class 224/1, rev 2.00/4.72, addr 2> on usbus2
+WARNING: attempt to domain_add(bluetooth) after domainfinalize()
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+lo0: link state changed to UP
+pflog0: permanently promiscuous mode enabled
+alc0: link state changed to DOWN
+alc0: link state changed to UP
+[ar5210] loaded
+[ar5211] loaded
+[ar5212] loaded
+[ar5416] loaded
+[ar9300] loaded
+[ath_rate] loaded
+[ath_dfs] loaded
+[ath] loaded
+wlan0: Ethernet address: ...
+wlan0: changing name to 'ath0_wlan0'
+ath0_wlan0: link state changed to UP
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+ath0: bb hang detected (0x4), resetting
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 done
+All buffers synced.
+Uptime: 17h37m34s
+uhub2: detached
+ugen2.3: <Generic USB2.0-CRW> at usbus2
+ubt0: detached
+uhub1: detached
+uhub0: detached
+ugen0.2: <Bison Corp. Lenovo EasyCamera> at usbus0
+uhub3: detached
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE stable/22.7-n250212-a26d6065f1f SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(vga): resolution 640x480
+CPU: AMD C-50 Processor (997.53-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x500f10  Family=0x14  Model=0x1  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x802209<SSE3,MON,SSSE3,CX16,POPCNT>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,IBS,SKINIT,WDT>
+  SVM: NP,NRIP,NAsids=8
+  TSC: P-state invariant, performance statistics
+real memory  = 8589934592 (8192 MB)
+avail memory = 7868583936 (7504 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <INSYDE IS CRB  >
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0: MADT APIC ID 4 != hw id 0
+ioapic0 <Version 2.1> irqs 0-23
+Launching APs: 1
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+vtvga0: <VT VGA driver>
+smbios0: <System Management BIOS> at iomem 0xfe120-0xfe13e
+smbios0: Version: 2.7, BCD Revision: 2.7
+aesni0: No AES or SHA support.
+acpi0: <LENOVO CB-01>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 450
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x3> port 0x62,0x66 on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x3000-0x30ff mem 0xe0000000-0xefffffff,0xf0200000-0xf023ffff irq 18 at device 1.0 on pci0
+vgapci0: Boot video device
+ahci0: <AMD SB7x0/SB8x0/SB9x0 AHCI SATA controller> port 0x3118-0x311f,0x3124-0x3127,0x3110-0x3117,0x3120-0x3123,0x3100-0x310f mem 0xf0248000-0xf02483ff irq 19 at device 17.0 on pci0
+ahci0: AHCI v1.20 with 2 3Gbps ports, Port Multiplier supported
+ahci0: quirks=0x22000<ATI_PMP_BUG,1MSI>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ohci0: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf0247000-0xf0247fff irq 18 at device 18.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf0246000-0xf02460ff irq 17 at device 18.2 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+ohci1: <AMD SB7x0/SB8x0/SB9x0 USB controller> mem 0xf0245000-0xf0245fff irq 18 at device 19.0 on pci0
+usbus2 on ohci1
+usbus2: 12Mbps Full Speed USB v1.0
+ehci1: <AMD SB7x0/SB8x0/SB9x0 USB 2.0 controller> mem 0xf0244000-0xf02440ff irq 17 at device 19.2 on pci0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+usbus3: 480Mbps High Speed USB v2.0
+hdac0: <ATI SB600 HDA Controller> mem 0xf0240000-0xf0243fff irq 16 at device 20.2 on pci0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+pcib1: <ACPI PCI-PCI bridge> at device 20.4 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> at device 21.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+alc0: <Atheros AR8152 v2.0 PCIe Fast Ethernet> port 0x2000-0x207f mem 0xf0100000-0xf013ffff irq 16 at device 0.0 on pci2
+alc0: 2048 Tx FIFO, 5376 Rx FIFO
+alc0: Using 1 MSI message(s).
+miibus0: <MII bus> on alc0
+atphy0: <Atheros F2 10/100 PHY> PHY 0 on miibus0
+atphy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, auto, auto-flow
+alc0: Using defaults for TSO: 65518/35/2048
+alc0: Ethernet address: ...
+pcib3: <ACPI PCI-PCI bridge> at device 21.1 on pci0
+pci3: <ACPI PCI bus> on pcib3
+ath0: <Atheros 9285> mem 0xf0000000-0xf000ffff irq 17 at device 0.0 on pci3
+[ath] AR9285E_20 detected; using XE TX gain tables
+[ath] AR9285 Main LNA config: LNA2
+[ath] AR9285 Alt LNA config: LNA1
+[ath] LNA diversity enabled, Diversity enabled
+[ath] Enabling diversity for Kite
+ath0: [HT] enabling HT modes
+ath0: [HT] 1 stream STBC receive enabled
+ath0: [HT] 1 RX streams; 1 TX streams
+ath0: AR9285 mac 192.2 RF5133 phy 14.0
+ath0: 2GHz radio: 0x0000; 5GHz radio: 0x00c0
+acpi_button1: <Sleep Button> on acpi0
+acpi_lid0: <Control Method Lid Switch> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz0: _CRT value is absurd, ignored (200.1C)
+acpi_tz1: <Thermal Zone> on acpi0
+acpi_tz1: _CRT value is absurd, ignored (200.1C)
+atkbdc0: <Keyboard controller (i8042)> port 0x60,0x64 irq 1 on acpi0
+atkbd0: <AT Keyboard> irq 1 on atkbdc0
+kbd0 at atkbd0
+atkbd0: [GIANT-LOCKED]
+psm0: <PS/2 Mouse> irq 12 on atkbdc0
+psm0: [GIANT-LOCKED]
+WARNING: Device "psm" is Giant locked and may be deleted before FreeBSD 14.0.
+psm0: model Synaptics Touchpad, device ID 0
+acpi_acad0: <AC Adapter> on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+orm0: <ISA Option ROM> at iomem 0xce800-0xcf7ff pnpid ORM0000 on isa0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC" frequency 997501662 Hz quality 800
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+ugen1.1: <ATI EHCI root HUB> at usbus1
+ugen2.1: <ATI OHCI root HUB> at usbus2
+uhub0 on usbus1
+uhub1 on usbus2
+uhub0: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus2
+ugen3.1: <ATI EHCI root HUB> at usbus3
+ugen0.1: <ATI OHCI root HUB> at usbus0
+uhub2 on usbus3
+uhub3 on usbus0
+uhub3: <ATI OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+uhub2: <ATI EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+hdacc0: <Conexant CX20590 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Conexant CX20590 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Conexant CX20590 (Analog)> at nid 31 and 26 on hdaa0
+pcm1: <Conexant CX20590 (Right Analog)> at nid 25 and 27 on hdaa0
+Trying to mount root from zfs:zroot/ROOT/default []...
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <TOSHIBA MK5076GSX GS001C> ATA8-ACS SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 476940MB (976773168 512 byte sectors)
+cd0 at ahcich1 bus 0 scbus1 target 0 lun 0
+cd0: <HL-DT-ST DVDRAM GT50N LC01> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA2, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+uhub3: 5 ports with 5 removable, self powered
+uhub1: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1 usbus3
+uhub0: 5 ports with 5 removable, self powered
+uhub2: 5 ports with 5 removable, self powered
+Root mount waiting for: usbus1 usbus3
+ugen1.2: <Bison Corp. Lenovo EasyCamera> at usbus1
+ugen2.2: <Broadcom Corp Broadcom Bluetooth 2.1 Device> at usbus2
+ugen3.2: <Generic USB2.0-CRW> at usbus3

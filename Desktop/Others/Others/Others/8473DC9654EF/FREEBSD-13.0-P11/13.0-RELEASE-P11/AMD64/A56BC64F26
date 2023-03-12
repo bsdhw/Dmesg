@@ -1,0 +1,204 @@
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.0-RELEASE-p11 #1: Thu May 26 09:33:28 UTC 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 11.0.1 (XXX@XXX:llvm/llvm-project.git llvmorg-11.0.1-0-g43ff75f2c3fe)
+VT(vga): resolution 640x480
+CPU: AMD Athlon(tm) 64 X2 Dual Core Processor 6000+ (3013.95-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x40f33  Family=0xf  Model=0x43  Stepping=3
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x2001<SSE3,CX16>
+  AMD Features=0xea500800<SYSCALL,NX,MMX+,FFXSR,RDTSCP,LM,3DNow!+,3DNow!>
+  AMD Features2=0x1f<LAHF,CMP,SVM,ExtAPIC,CR8>
+  SVM: NAsids=64
+real memory  = 3221225472 (3072 MB)
+avail memory = 3105058816 (2961 MB)
+Event timer "LAPIC" quality 100
+ACPI APIC Table: <Nvidia AWRDACPI>
+FreeBSD/SMP: Multiprocessor System Detected: 2 CPUs
+FreeBSD/SMP: 1 package(s) x 2 core(s)
+random: unblocking device.
+ioapic0: MADT APIC ID 2 != hw id 0
+ioapic0 <Version 1.1> irqs 0-23
+Launching APs: 1
+KTLS: Initialized 2 threads
+Cuse v0.1.36 @ /dev/cuse
+random: entropy device external interface
+WARNING: Device "kbd" is Giant locked and may be deleted before FreeBSD 14.0.
+kbd0 at kbdmux0
+000.000045 [4347] netmap_init               netmap: loaded module
+nexus0
+vtvga0: <VT VGA driver>
+cryptosoft0: <software crypto>
+aesni0: No AES or SHA support.
+acpi0: <Nvidia AWRDACPI>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+attimer0: Can't map interrupt.
+atrtc0: <AT realtime clock> port 0x70-0x73 irq 8 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1008-0x100b on acpi0
+acpi_button0: <Power Button> on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <memory> at device 0.0 (no driver attached)
+isab0: <PCI-ISA bridge> at device 1.0 on pci0
+isa0: <ISA bus> on isab0
+nfsmb0: <nForce2/3/4 MCP SMBus Controller> port 0xfc00-0xfc1f,0xf800-0xf83f,0xf400-0xf43f irq 20 at device 1.1 on pci0
+smbus0: <System Management Bus> on nfsmb0
+smb0: <SMBus generic I/O> on smbus0
+nfsmb1: <nForce2/3/4 MCP SMBus Controller> on nfsmb0
+smbus1: <System Management Bus> on nfsmb1
+smb1: <SMBus generic I/O> on smbus1
+ohci0: <nVidia nForce CK804 USB Controller> mem 0xfe02f000-0xfe02ffff irq 21 at device 2.0 on pci0
+usbus0 on ohci0
+usbus0: 12Mbps Full Speed USB v1.0
+ehci0: <NVIDIA nForce CK804 USB 2.0 controller> mem 0xfeb00000-0xfeb000ff irq 22 at device 2.1 on pci0
+usbus1: waiting for BIOS to give up control
+usbus1: timed out waiting for BIOS
+usbus1: EHCI version 1.0
+usbus1 on ehci0
+usbus1: 480Mbps High Speed USB v2.0
+atapci0: <nVidia nForce CK804 UDMA133 controller> port 0x1f0-0x1f7,0x3f6,0x170-0x177,0x376,0xf000-0xf00f at device 6.0 on pci0
+ata0: <ATA channel> at channel 0 on atapci0
+ata1: <ATA channel> at channel 1 on atapci0
+atapci1: <nVidia nForce CK804 SATA300 controller> port 0x9f0-0x9f7,0xbf0-0xbf3,0x970-0x977,0xb70-0xb73,0xdc00-0xdc0f mem 0xfe02d000-0xfe02dfff irq 23 at device 7.0 on pci0
+ata2: <ATA channel> at channel 0 on atapci1
+ata3: <ATA channel> at channel 1 on atapci1
+atapci2: <nVidia nForce CK804 SATA300 controller> port 0x9e0-0x9e7,0xbe0-0xbe3,0x960-0x967,0xb60-0xb63,0xc800-0xc80f mem 0xfe02c000-0xfe02cfff irq 21 at device 8.0 on pci0
+ata4: <ATA channel> at channel 0 on atapci2
+ata5: <ATA channel> at channel 1 on atapci2
+pcib1: <ACPI PCI-PCI bridge> at device 9.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcm0: <CMedia CMI8738> port 0xbc00-0xbcff irq 18 at device 6.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 11.0 on pci0
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 13.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 14.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+vgapci0: <VGA-compatible display> port 0x8c00-0x8cff mem 0xd0000000-0xdfffffff,0xfd9f0000-0xfd9fffff irq 18 at device 0.0 on pci4
+vgapci0: Boot video device
+vgapci1: <VGA-compatible display> mem 0xfd9e0000-0xfd9effff at device 0.1 on pci4
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb3
+acpi_tz0: <Thermal Zone> on acpi0
+orm0: <ISA Option ROM> at iomem 0xd0000-0xd3fff pnpid ORM0000 on isa0
+powernow0: <PowerNow! K8> on cpu0
+Timecounters tick every 1.000 msec
+hwpmc: SOFT/16/64/0x67<INT,USR,SYS,REA,WRI> TSC/1/64/0x20<REA> K8/16/48/0x1ff<INT,USR,SYS,EDG,THR,REA,WRI,INV,QUA>
+ugen1.1: <nVidia EHCI root HUB> at usbus1
+uhub0 on usbus1
+ugen0.1: <nVidia OHCI root HUB> at usbus0
+uhub0: <nVidia EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1 on usbus0
+uhub1: <nVidia OHCI root HUB, class 9/0, rev 1.00/1.00, addr 1> on usbus0
+Trying to mount root from ufs:/dev/ada0p2 [rw]...
+Root mount waiting for: usbus0 usbus1 CAM
+uhub1: 10 ports with 10 removable, self powered
+Root mount waiting for: usbus1 CAM
+ada0 at ata2 bus 0 scbus2 target 0 lun 0
+ada0: <SAMSUNG HD161HJ JF100-19> ATA-7 SATA 2.x device
+ada0: Serial Number...
+ada0: 300.000MB/s transfers (SATA 2.x, UDMA5, PIO 8192bytes)
+ada0: 152627MB (312581808 512 byte sectors)
+cd0 at ata3 bus 0 scbus3 target 0 lun 0
+cd0: <Optiarc DVD RW AD-5260S 1.00> Removable CD-ROM SCSI device
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+Root mount waiting for: usbus1
+uhub0: 10 ports with 10 removable, self powered
+Root mount waiting for: usbus1
+mountroot: waiting for device /dev/ada0p2...
+ugen0.2: <Logitech USB Keyboard> at usbus0
+ukbd0 on uhub1
+ukbd0: <Logitech USB Keyboard, class 0/0, rev 1.10/86.00, addr 2> on usbus0
+kbd1 at ukbd0
+ugen0.3: <Genius Optical Mouse> at usbus0
+ums0 on uhub1
+ums0: <Genius Optical Mouse, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+ums0: 3 buttons and [XYZ] coordinates ID=0
+[drm] radeon kernel modesetting enabled.
+drmn0: <drmn> on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+[drm] initializing kernel modesetting (RV570 0x1002:0x7288 0x1787:0x2204 0x9A).
+[drm ERROR :radeon_atombios_init] Unable to find PCI I/O BAR; using MMIO for ATOM IIO
+ATOM BIOS: RV570GT
+[drm] Generation 2 PCI interface, using max accessible memory
+drmn0: VRAM: 512M 0x0000000000000000 - 0x000000001FFFFFFF (512M used)
+drmn0: GTT: 512M 0x0000000020000000 - 0x000000003FFFFFFF
+Successfully added WC MTRR for [0xd0000000-0xdfffffff]: 0; 
+[drm] Detected VRAM RAM=512M, BAR=256M
+[drm] RAM width 256bits DDR
+[TTM] Zone  kernel: Available graphics memory: 1562868 KiB
+[TTM] Initializing pool allocator
+[drm] radeon: 512M of VRAM memory ready
+[drm] radeon: 512M of GTT memory ready.
+[drm] GART: num cpu pages 131072, num gpu pages 131072
+[drm] radeon: 3 quad pipes, 1 z pipes initialized.
+[drm] PCIE GART of 512M enabled (table at 0x0000000000040000).
+drmn0: WB enabled
+drmn0: fence driver on ring 0 use gpu addr 0x0000000020000000 and cpu addr 0x0xfffff80002fd4000
+[drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[drm] Driver supports precise vblank timestamp query.
+drmn0: radeon: MSI limited to 32-bit
+drmn0: radeon: using MSI.
+[drm] radeon: irq initialized.
+[drm] Loading R500 Microcode
+drmn0: successfully loaded firmware image 'radeon/R520_cp.bin'
+[drm] radeon: ring at 0x0000000020001000
+[drm] ring test succeeded in 1 usecs
+[drm] ib test succeeded in 0 usecs
+[drm] Connector DVI-I-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.DVI-I-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector SVIDEO-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.SVIDEO-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Connector VGA-1: get mode from tunables:
+[drm]   - kern.vt.fb.modes.VGA-1
+[drm]   - kern.vt.fb.default_mode
+[drm] Radeon Display Connectors
+[drm] Connector 0:
+[drm]   DVI-I-1
+[drm]   HPD2
+[drm]   DDC: 0x7e40 0x7e40 0x7e44 0x7e44 0x7e48 0x7e48 0x7e4c 0x7e4c
+[drm]   Encoders:
+[drm]     CRT1: INTERNAL_KLDSCP_DAC1
+[drm]     DFP3: INTERNAL_LVTM1
+[drm] Connector 1:
+[drm]   SVIDEO-1
+[drm]   Encoders:
+[drm]     TV1: INTERNAL_KLDSCP_DAC2
+[drm] Connector 2:
+[drm]   VGA-1
+[drm]   DDC: 0x7e50 0x7e50 0x7e54 0x7e54 0x7e58 0x7e58 0x7e5c 0x7e5c
+[drm]   Encoders:
+[drm]     CRT2: INTERNAL_KLDSCP_DAC2
+[drm] fb mappable at 0xD00C0000
+[drm] vram apper at 0xD0000000
+[drm] size 5763072
+[drm] fb depth is 24
+[drm]    pitch is 6400
+WARNING: Device "fb" is Giant locked and may be deleted before FreeBSD 14.0.
+VT: Replacing driver "vga" with new "fb".
+start FB_INFO:
+type=11 height=900 width=1600 depth=32
+cmsize=16 size=5763072
+pbase=0xd00c0000 vbase=0xfffff800d00c0000
+name=drmn0 flags=0x0 stride=6400 bpp=32
+cmap[0]=0 cmap[1]=7f0000 cmap[2]=7f00 cmap[3]=c4a000
+end FB_INFO
+drmn0: fb0: radeondrmfb frame buffer device
+[drm] Initialized radeon 2.50.0 20080528 for drmn0 on minor 0
+lo0: link state changed to UP
+uhid0 on uhub1
+uhid0: <Logitech USB Keyboard, class 0/0, rev 1.10/86.00, addr 2> on usbus0

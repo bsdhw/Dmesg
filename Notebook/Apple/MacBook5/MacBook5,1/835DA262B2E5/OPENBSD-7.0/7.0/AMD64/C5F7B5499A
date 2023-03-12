@@ -1,0 +1,1010 @@
+OpenBSD 7.0 (GENERIC.MP) #6: Mon Apr  4 00:47:02 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8280006656 (7896MB)
+avail mem = 8013037568 (7641MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.4 @ 0xe0000 (41 entries)
+bios0: vendor Apple Inc. version "MB51.88Z.007D.B03.0904271443" date 04/27/09
+bios0: Apple Inc. MacBook5,1
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP HPET APIC MCFG ASF! SBST ECDT SSDT SSDT SSDT
+acpi0: wakeup devices ADP1(S3) LID0(S3) EC__(S3) OHC1(S3) EHC1(S3) OHC2(S3) EHC2(S3) GIGE(S5)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 25000000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.27 MHz, 06-17-06
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 3MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 265MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.1.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.02 MHz, 06-17-06
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 3MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 11, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-255
+acpiec0 at acpi0
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (IXVE)
+acpisbs0 at acpi0: SBS0acpisbs0: acpi_smbus_read: timeout reading 0x16
+
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: LID0
+abl0 at acpi0: PNLF (backlight)
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000memory map conflict 0xffc00000/0x400000
+
+asmc0 at acpi0: SMC_ (smc-mcp) addr 0x300/0x20: rev 1.32f532, 271 keys
+"ACPI0008" at acpi0 not configured
+"APP0003" at acpi0 not configured
+"ACPI0001" at acpi0 not configured
+acpicmos0 at acpi0
+acpicpu0 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+acpicpu1 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+cpu0: Enhanced SpeedStep 1592 MHz: speeds: 1995, 1862, 1596 MHz
+pci0 at mainbus0 bus 0
+0:3:5: mem address conflict 0xd3300000/0x80000
+pchb0 at pci0 dev 0 function 0 "NVIDIA MCP79 Host" rev 0xb1
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 0 function 1 not configured
+pcib0 at pci0 dev 3 function 0 "NVIDIA MCP79 ISA" rev 0xb2
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 1 not configured
+nviic0 at pci0 dev 3 function 2 "NVIDIA MCP79 SMBus" rev 0xb1
+iic0 at nviic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x51: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+iic1 at nviic0
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 3 not configured
+vendor "NVIDIA", unknown product 0x0a98 (class memory subclass RAM, rev 0xb1) at pci0 dev 3 function 4 not configured
+"NVIDIA MCP79 Co-processor" rev 0xb1 at pci0 dev 3 function 5 not configured
+ohci0 at pci0 dev 4 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 11, version 1.0, legacy support
+ehci0 at pci0 dev 4 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 10
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+ohci1 at pci0 dev 6 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 7, version 1.0, legacy support
+ehci1 at pci0 dev 6 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 5
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 8 function 0 "NVIDIA MCP79 HD Audio" rev 0xb1: apic 1 int 15
+azalia0: codecs: Realtek ALC885
+audio0 at azalia0
+ppb0 at pci0 dev 9 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci1 at ppb0 bus 1
+nfe0 at pci0 dev 10 function 0 "NVIDIA MCP79 LAN" rev 0xb1: apic 1 int 14, address XXX
+rgephy0 at nfe0 phy 1: RTL8169S/8110S/8211 PHY, rev. 2
+pciide0 at pci0 dev 11 function 0 "NVIDIA MCP79 SATA" rev 0xb1: DMA
+pciide0: using apic 1 int 11 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <Samsung SSD 840 EVO 120GB>
+wd0: 1-sector PIO, LBA48, 114473MB, 234441648 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 6
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HL-DT-ST, DVDRW GS21N, SA18> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 6
+ppb1 at pci0 dev 16 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci2 at ppb1 bus 2
+vga1 at pci2 dev 0 function 0 "NVIDIA GeForce 9400m" rev 0xb1
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+ppb2 at pci0 dev 21 function 0 "NVIDIA MCP79 PCIE" rev 0xb1: msi
+pci3 at ppb2 bus 3
+"Broadcom BCM4322" rev 0x01 at pci3 dev 0 function 0 not configured
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+dt: 445 probes
+uvideo0 at uhub0 port 4 configuration 1 interface 0 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+video0 at uvideo0
+ugen0 at uhub0 port 4 configuration 1 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+uhub4 at uhub1 port 2 configuration 1 interface 0 "vendor 0x214b USB2.0 HUB" rev 2.00/1.00 addr 2
+uhidev0 at uhub4 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+urtwn0 at uhub4 port 2 configuration 1 interface 0 "Realtek 802.11n NIC" rev 2.00/0.00 addr 4
+urtwn0: MAC/BB RTL8188EU, RF 6052 1T1R, address XXX
+uhidev1 at uhub2 port 5 configuration 1 interface 0 "Apple Computer, Inc. IR Receiver" rev 2.00/0.16 addr 2
+uhidev1: iclass 3/0, 38 report ids
+uhid0 at uhidev1 reportid 36: input=4, output=0, feature=0
+uhid1 at uhidev1 reportid 37: input=4, output=0, feature=0
+uhid2 at uhidev1 reportid 38: input=4, output=0, feature=0
+uhidev2 at uhub2 port 6 configuration 1 interface 0 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev2: iclass 3/1, 9 report ids
+ukbd0 at uhidev2 reportid 1: 8 variable keys, 6 key codes, country code 13
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhid3 at uhidev2 reportid 9: input=0, output=0, feature=3
+uhidev3 at uhub2 port 6 configuration 1 interface 1 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev3: iclass 3/0, 68 report ids
+uhid4 at uhidev3 reportid 68: input=511, output=0, feature=0
+ubcmtp0 at uhub2 port 6 configuration 1 interface 2 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+wsmouse1 at ubcmtp0 mux 0
+uhub5 at uhub3 port 1 configuration 1 interface 0 "Apple Inc. BRCM2046 Hub" rev 2.00/1.00 addr 2
+ugen1 at uhub5 port 1 "Apple Inc. Bluetooth USB Host Controller" rev 2.00/2.08 addr 3
+uhidev4 at uhub5 port 2 configuration 1 interface 0 "Apple Computer product 0x820a" rev 2.00/1.00 addr 4
+uhidev4: iclass 3/1, 1 report id
+ukbd1 at uhidev4 reportid 1: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev5 at uhub5 port 3 configuration 1 interface 0 "Apple Computer product 0x820b" rev 2.00/1.00 addr 5
+uhidev5: iclass 3/1, 2 report ids
+ums1 at uhidev5 reportid 2: 3 buttons
+wsmouse2 at ums1 mux 0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (c987ca78fe44a15f.a) swap on wd0b dump on wd0b
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+wsmouse0 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub4 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+wsmouse0 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub4 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+syncing disks... done
+OpenBSD 7.0 (GENERIC.MP) #6: Mon Apr  4 00:47:02 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8280006656 (7896MB)
+avail mem = 8013029376 (7641MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.4 @ 0xe0000 (41 entries)
+bios0: vendor Apple Inc. version "MB51.88Z.007D.B03.0904271443" date 04/27/09
+bios0: Apple Inc. MacBook5,1
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP HPET APIC MCFG ASF! SBST ECDT SSDT SSDT SSDT
+acpi0: wakeup devices ADP1(S3) LID0(S3) EC__(S3) OHC1(S3) EHC1(S3) OHC2(S3) EHC2(S3) GIGE(S5)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 25000000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.23 MHz, 06-17-06
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 3MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 265MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.1.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.02 MHz, 06-17-06
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 3MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 11, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-255
+acpiec0 at acpi0
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (IXVE)
+acpisbs0 at acpi0: SBS0acpisbs0: acpi_smbus_read: error reading status: 0x16
+
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: LID0
+abl0 at acpi0: PNLF (backlight)
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000memory map conflict 0xffc00000/0x400000
+
+asmc0 at acpi0: SMC_ (smc-mcp) addr 0x300/0x20: rev 1.32f532, 271 keys
+"ACPI0008" at acpi0 not configured
+"APP0003" at acpi0 not configured
+"ACPI0001" at acpi0 not configured
+acpicmos0 at acpi0
+acpicpu0 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+acpicpu1 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+cpu0: Enhanced SpeedStep 1592 MHz: speeds: 1995, 1862, 1596 MHz
+pci0 at mainbus0 bus 0
+0:3:5: mem address conflict 0xd3300000/0x80000
+pchb0 at pci0 dev 0 function 0 "NVIDIA MCP79 Host" rev 0xb1
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 0 function 1 not configured
+pcib0 at pci0 dev 3 function 0 "NVIDIA MCP79 ISA" rev 0xb2
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 1 not configured
+nviic0 at pci0 dev 3 function 2 "NVIDIA MCP79 SMBus" rev 0xb1
+iic0 at nviic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x51: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+iic1 at nviic0
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 3 not configured
+vendor "NVIDIA", unknown product 0x0a98 (class memory subclass RAM, rev 0xb1) at pci0 dev 3 function 4 not configured
+"NVIDIA MCP79 Co-processor" rev 0xb1 at pci0 dev 3 function 5 not configured
+ohci0 at pci0 dev 4 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 11, version 1.0, legacy support
+ehci0 at pci0 dev 4 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 10
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+ohci1 at pci0 dev 6 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 7, version 1.0, legacy support
+ehci1 at pci0 dev 6 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 5
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 8 function 0 "NVIDIA MCP79 HD Audio" rev 0xb1: apic 1 int 15
+azalia0: codecs: Realtek ALC885
+audio0 at azalia0
+ppb0 at pci0 dev 9 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci1 at ppb0 bus 1
+nfe0 at pci0 dev 10 function 0 "NVIDIA MCP79 LAN" rev 0xb1: apic 1 int 14, address XXX
+rgephy0 at nfe0 phy 1: RTL8169S/8110S/8211 PHY, rev. 2
+pciide0 at pci0 dev 11 function 0 "NVIDIA MCP79 SATA" rev 0xb1: DMA
+pciide0: using apic 1 int 11 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <Samsung SSD 840 EVO 120GB>
+wd0: 1-sector PIO, LBA48, 114473MB, 234441648 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 6
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HL-DT-ST, DVDRW GS21N, SA18> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 6
+ppb1 at pci0 dev 16 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci2 at ppb1 bus 2
+vga1 at pci2 dev 0 function 0 "NVIDIA GeForce 9400m" rev 0xb1
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+ppb2 at pci0 dev 21 function 0 "NVIDIA MCP79 PCIE" rev 0xb1: msi
+pci3 at ppb2 bus 3
+"Broadcom BCM4322" rev 0x01 at pci3 dev 0 function 0 not configured
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+dt: 445 probes
+uvideo0 at uhub0 port 4 configuration 1 interface 0 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+video0 at uvideo0
+ugen0 at uhub0 port 4 configuration 1 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+uhub4 at uhub1 port 2 configuration 1 interface 0 "vendor 0x214b USB2.0 HUB" rev 2.00/1.00 addr 2
+uhidev0 at uhub4 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+urtwn0 at uhub4 port 2 configuration 1 interface 0 "Realtek 802.11n NIC" rev 2.00/0.00 addr 4
+urtwn0: MAC/BB RTL8188EU, RF 6052 1T1R, address XXX
+uhidev1 at uhub2 port 5 configuration 1 interface 0 "Apple Computer, Inc. IR Receiver" rev 2.00/0.16 addr 2
+uhidev1: iclass 3/0, 38 report ids
+uhid0 at uhidev1 reportid 36: input=4, output=0, feature=0
+uhid1 at uhidev1 reportid 37: input=4, output=0, feature=0
+uhid2 at uhidev1 reportid 38: input=4, output=0, feature=0
+uhidev2 at uhub2 port 6 configuration 1 interface 0 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev2: iclass 3/1, 9 report ids
+ukbd0 at uhidev2 reportid 1: 8 variable keys, 6 key codes, country code 13
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhid3 at uhidev2 reportid 9: input=0, output=0, feature=3
+uhidev3 at uhub2 port 6 configuration 1 interface 1 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev3: iclass 3/0, 68 report ids
+uhid4 at uhidev3 reportid 68: input=511, output=0, feature=0
+ubcmtp0 at uhub2 port 6 configuration 1 interface 2 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+wsmouse1 at ubcmtp0 mux 0
+uhub5 at uhub3 port 1 configuration 1 interface 0 "Apple Inc. BRCM2046 Hub" rev 2.00/1.00 addr 2
+ugen1 at uhub5 port 1 "Apple Inc. Bluetooth USB Host Controller" rev 2.00/2.08 addr 3
+uhidev4 at uhub5 port 2 configuration 1 interface 0 "Apple Computer product 0x820a" rev 2.00/1.00 addr 4
+uhidev4: iclass 3/1, 1 report id
+ukbd1 at uhidev4 reportid 1: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev5 at uhub5 port 3 configuration 1 interface 0 "Apple Computer product 0x820b" rev 2.00/1.00 addr 5
+uhidev5: iclass 3/1, 2 report ids
+ums1 at uhidev5 reportid 2: 3 buttons
+wsmouse2 at ums1 mux 0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (c987ca78fe44a15f.a) swap on wd0b dump on wd0b
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+wsmouse0 detached
+ums0 detached
+uhidev0 detached
+uhidev0 at uhub4 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+syncing disks... done
+OpenBSD 7.0 (GENERIC.MP) #6: Mon Apr  4 00:47:02 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8280006656 (7896MB)
+avail mem = 8013045760 (7641MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.4 @ 0xe0000 (41 entries)
+bios0: vendor Apple Inc. version "MB51.88Z.007D.B03.0904271443" date 04/27/09
+bios0: Apple Inc. MacBook5,1
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP HPET APIC MCFG ASF! SBST ECDT SSDT SSDT SSDT
+acpi0: wakeup devices ADP1(S3) LID0(S3) EC__(S3) OHC1(S3) EHC1(S3) OHC2(S3) EHC2(S3) GIGE(S5)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 25000000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.24 MHz, 06-17-06
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 3MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 265MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.1.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.01 MHz, 06-17-06
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 3MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 11, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-255
+acpiec0 at acpi0
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (IXVE)
+acpisbs0 at acpi0: SBS0acpisbs0: acpi_smbus_read: error reading status: 0x16
+
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: LID0
+abl0 at acpi0: PNLF (backlight)
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000memory map conflict 0xffc00000/0x400000
+
+asmc0 at acpi0: SMC_ (smc-mcp) addr 0x300/0x20: rev 1.32f532, 271 keys
+"ACPI0008" at acpi0 not configured
+"APP0003" at acpi0 not configured
+"ACPI0001" at acpi0 not configured
+acpicmos0 at acpi0
+acpicpu0 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+acpicpu1 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+cpu0: Enhanced SpeedStep 1592 MHz: speeds: 1995, 1862, 1596 MHz
+pci0 at mainbus0 bus 0
+0:3:5: mem address conflict 0xd3300000/0x80000
+pchb0 at pci0 dev 0 function 0 "NVIDIA MCP79 Host" rev 0xb1
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 0 function 1 not configured
+pcib0 at pci0 dev 3 function 0 "NVIDIA MCP79 ISA" rev 0xb2
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 1 not configured
+nviic0 at pci0 dev 3 function 2 "NVIDIA MCP79 SMBus" rev 0xb1
+iic0 at nviic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x51: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+iic1 at nviic0
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 3 not configured
+vendor "NVIDIA", unknown product 0x0a98 (class memory subclass RAM, rev 0xb1) at pci0 dev 3 function 4 not configured
+"NVIDIA MCP79 Co-processor" rev 0xb1 at pci0 dev 3 function 5 not configured
+ohci0 at pci0 dev 4 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 11, version 1.0, legacy support
+ehci0 at pci0 dev 4 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 10
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+ohci1 at pci0 dev 6 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 7, version 1.0, legacy support
+ehci1 at pci0 dev 6 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 5
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 8 function 0 "NVIDIA MCP79 HD Audio" rev 0xb1: apic 1 int 15
+azalia0: codecs: Realtek ALC885
+audio0 at azalia0
+ppb0 at pci0 dev 9 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci1 at ppb0 bus 1
+nfe0 at pci0 dev 10 function 0 "NVIDIA MCP79 LAN" rev 0xb1: apic 1 int 14, address XXX
+rgephy0 at nfe0 phy 1: RTL8169S/8110S/8211 PHY, rev. 2
+pciide0 at pci0 dev 11 function 0 "NVIDIA MCP79 SATA" rev 0xb1: DMA
+pciide0: using apic 1 int 11 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <Samsung SSD 840 EVO 120GB>
+wd0: 1-sector PIO, LBA48, 114473MB, 234441648 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 6
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HL-DT-ST, DVDRW GS21N, SA18> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 6
+ppb1 at pci0 dev 16 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci2 at ppb1 bus 2
+vga1 at pci2 dev 0 function 0 "NVIDIA GeForce 9400m" rev 0xb1
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+ppb2 at pci0 dev 21 function 0 "NVIDIA MCP79 PCIE" rev 0xb1: msi
+pci3 at ppb2 bus 3
+"Broadcom BCM4322" rev 0x01 at pci3 dev 0 function 0 not configured
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+dt: 445 probes
+uvideo0 at uhub0 port 4 configuration 1 interface 0 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+video0 at uvideo0
+ugen0 at uhub0 port 4 configuration 1 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+uhub4 at uhub1 port 2 configuration 1 interface 0 "vendor 0x214b USB2.0 HUB" rev 2.00/1.00 addr 2
+uhidev0 at uhub4 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+urtwn0 at uhub4 port 2 configuration 1 interface 0 "Realtek 802.11n NIC" rev 2.00/0.00 addr 4
+urtwn0: MAC/BB RTL8188EU, RF 6052 1T1R, address XXX
+uhidev1 at uhub2 port 5 configuration 1 interface 0 "Apple Computer, Inc. IR Receiver" rev 2.00/0.16 addr 2
+uhidev1: iclass 3/0, 38 report ids
+uhid0 at uhidev1 reportid 36: input=4, output=0, feature=0
+uhid1 at uhidev1 reportid 37: input=4, output=0, feature=0
+uhid2 at uhidev1 reportid 38: input=4, output=0, feature=0
+uhidev2 at uhub2 port 6 configuration 1 interface 0 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev2: iclass 3/1, 9 report ids
+ukbd0 at uhidev2 reportid 1: 8 variable keys, 6 key codes, country code 13
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhid3 at uhidev2 reportid 9: input=0, output=0, feature=3
+uhidev3 at uhub2 port 6 configuration 1 interface 1 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev3: iclass 3/0, 68 report ids
+uhid4 at uhidev3 reportid 68: input=511, output=0, feature=0
+ubcmtp0 at uhub2 port 6 configuration 1 interface 2 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+wsmouse1 at ubcmtp0 mux 0
+uhub5 at uhub3 port 1 configuration 1 interface 0 "Apple Inc. BRCM2046 Hub" rev 2.00/1.00 addr 2
+ugen1 at uhub5 port 1 "Apple Inc. Bluetooth USB Host Controller" rev 2.00/2.08 addr 3
+uhidev4 at uhub5 port 2 configuration 1 interface 0 "Apple Computer product 0x820a" rev 2.00/1.00 addr 4
+uhidev4: iclass 3/1, 1 report id
+ukbd1 at uhidev4 reportid 1: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev5 at uhub5 port 3 configuration 1 interface 0 "Apple Computer product 0x820b" rev 2.00/1.00 addr 5
+uhidev5: iclass 3/1, 2 report ids
+ums1 at uhidev5 reportid 2: 3 buttons
+wsmouse2 at ums1 mux 0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (c987ca78fe44a15f.a) swap on wd0b dump on wd0b
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+syncing disks...acpisbs0: acpi_smbus_read: error reading status: 0x16
+ done
+OpenBSD 7.0 (GENERIC.MP) #6: Mon Apr  4 00:47:02 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8280006656 (7896MB)
+avail mem = 8013045760 (7641MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.4 @ 0xe0000 (41 entries)
+bios0: vendor Apple Inc. version "MB51.88Z.007D.B03.0904271443" date 04/27/09
+bios0: Apple Inc. MacBook5,1
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP HPET APIC MCFG ASF! SBST ECDT SSDT SSDT SSDT
+acpi0: wakeup devices ADP1(S3) LID0(S3) EC__(S3) OHC1(S3) EHC1(S3) OHC2(S3) EHC2(S3) GIGE(S5)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 25000000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.23 MHz, 06-17-06
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 3MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 265MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.1.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.02 MHz, 06-17-06
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 3MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 11, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-255
+acpiec0 at acpi0
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (IXVE)
+acpisbs0 at acpi0: SBS0acpisbs0: acpi_smbus_read: error reading status: 0x16
+
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: LID0
+abl0 at acpi0: PNLF (backlight)
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000memory map conflict 0xffc00000/0x400000
+
+asmc0 at acpi0: SMC_ (smc-mcp) addr 0x300/0x20: rev 1.32f532, 271 keys
+"ACPI0008" at acpi0 not configured
+"APP0003" at acpi0 not configured
+"ACPI0001" at acpi0 not configured
+acpicmos0 at acpi0
+acpicpu0 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+acpicpu1 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+cpu0: Enhanced SpeedStep 1592 MHz: speeds: 1995, 1862, 1596 MHz
+pci0 at mainbus0 bus 0
+0:3:5: mem address conflict 0xd3300000/0x80000
+pchb0 at pci0 dev 0 function 0 "NVIDIA MCP79 Host" rev 0xb1
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 0 function 1 not configured
+pcib0 at pci0 dev 3 function 0 "NVIDIA MCP79 ISA" rev 0xb2
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 1 not configured
+nviic0 at pci0 dev 3 function 2 "NVIDIA MCP79 SMBus" rev 0xb1
+iic0 at nviic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x51: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+iic1 at nviic0
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 3 not configured
+vendor "NVIDIA", unknown product 0x0a98 (class memory subclass RAM, rev 0xb1) at pci0 dev 3 function 4 not configured
+"NVIDIA MCP79 Co-processor" rev 0xb1 at pci0 dev 3 function 5 not configured
+ohci0 at pci0 dev 4 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 11, version 1.0, legacy support
+ehci0 at pci0 dev 4 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 10
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+ohci1 at pci0 dev 6 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 7, version 1.0, legacy support
+ehci1 at pci0 dev 6 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 5
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 8 function 0 "NVIDIA MCP79 HD Audio" rev 0xb1: apic 1 int 15
+azalia0: codecs: Realtek ALC885
+audio0 at azalia0
+ppb0 at pci0 dev 9 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci1 at ppb0 bus 1
+nfe0 at pci0 dev 10 function 0 "NVIDIA MCP79 LAN" rev 0xb1: apic 1 int 14, address XXX
+rgephy0 at nfe0 phy 1: RTL8169S/8110S/8211 PHY, rev. 2
+pciide0 at pci0 dev 11 function 0 "NVIDIA MCP79 SATA" rev 0xb1: DMA
+pciide0: using apic 1 int 11 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <Samsung SSD 840 EVO 120GB>
+wd0: 1-sector PIO, LBA48, 114473MB, 234441648 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 6
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HL-DT-ST, DVDRW GS21N, SA18> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 6
+ppb1 at pci0 dev 16 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci2 at ppb1 bus 2
+vga1 at pci2 dev 0 function 0 "NVIDIA GeForce 9400m" rev 0xb1
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+ppb2 at pci0 dev 21 function 0 "NVIDIA MCP79 PCIE" rev 0xb1: msi
+pci3 at ppb2 bus 3
+"Broadcom BCM4322" rev 0x01 at pci3 dev 0 function 0 not configured
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+dt: 445 probes
+uvideo0 at uhub0 port 4 configuration 1 interface 0 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+video0 at uvideo0
+ugen0 at uhub0 port 4 configuration 1 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+uhub4 at uhub1 port 2 configuration 1 interface 0 "vendor 0x214b USB2.0 HUB" rev 2.00/1.00 addr 2
+uhidev0 at uhub4 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+urtwn0 at uhub4 port 2 configuration 1 interface 0 "Realtek 802.11n NIC" rev 2.00/0.00 addr 4
+urtwn0: MAC/BB RTL8188EU, RF 6052 1T1R, address XXX
+uhidev1 at uhub2 port 5 configuration 1 interface 0 "Apple Computer, Inc. IR Receiver" rev 2.00/0.16 addr 2
+uhidev1: iclass 3/0, 38 report ids
+uhid0 at uhidev1 reportid 36: input=4, output=0, feature=0
+uhid1 at uhidev1 reportid 37: input=4, output=0, feature=0
+uhid2 at uhidev1 reportid 38: input=4, output=0, feature=0
+uhidev2 at uhub2 port 6 configuration 1 interface 0 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev2: iclass 3/1, 9 report ids
+ukbd0 at uhidev2 reportid 1: 8 variable keys, 6 key codes, country code 13
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhid3 at uhidev2 reportid 9: input=0, output=0, feature=3
+uhidev3 at uhub2 port 6 configuration 1 interface 1 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev3: iclass 3/0, 68 report ids
+uhid4 at uhidev3 reportid 68: input=511, output=0, feature=0
+ubcmtp0 at uhub2 port 6 configuration 1 interface 2 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+wsmouse1 at ubcmtp0 mux 0
+uhub5 at uhub3 port 1 configuration 1 interface 0 "Apple Inc. BRCM2046 Hub" rev 2.00/1.00 addr 2
+ugen1 at uhub5 port 1 "Apple Inc. Bluetooth USB Host Controller" rev 2.00/2.08 addr 3
+uhidev4 at uhub5 port 2 configuration 1 interface 0 "Apple Computer product 0x820a" rev 2.00/1.00 addr 4
+uhidev4: iclass 3/1, 1 report id
+ukbd1 at uhidev4 reportid 1: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev5 at uhub5 port 3 configuration 1 interface 0 "Apple Computer product 0x820b" rev 2.00/1.00 addr 5
+uhidev5: iclass 3/1, 2 report ids
+ums1 at uhidev5 reportid 2: 3 buttons
+wsmouse2 at ums1 mux 0
+vscsi0 at root
+scsibus2 at vscsi0: 256 targets
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on wd0a (c987ca78fe44a15f.a) swap on wd0b dump on wd0b
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+umass0 at uhub4 port 3 configuration 1 interface 0 "TrekStor SE TrekStor USB-Stick SE" rev 2.00/1.00 addr 5
+umass0: using SCSI over Bulk-Only
+scsibus4 at umass0: 2 targets, initiator 0
+sd0 at scsibus4 targ 1 lun 0: <TrekStor, TrekStor USB SE, 1.00> removable serial....
+sd0: 122203MB, 512 bytes/sector, 250272768 sectors
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+urtwn0: could not send firmware command 5
+syncing disks... done
+urtwn0: could not send firmware command 5
+OpenBSD 7.0 (GENERIC.MP) #6: Mon Apr  4 00:47:02 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8280006656 (7896MB)
+avail mem = 8013041664 (7641MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 2.4 @ 0xe0000 (41 entries)
+bios0: vendor Apple Inc. version "MB51.88Z.007D.B03.0904271443" date 04/27/09
+bios0: Apple Inc. MacBook5,1
+acpi0 at bios0: ACPI 3.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP HPET APIC MCFG ASF! SBST ECDT SSDT SSDT SSDT
+acpi0: wakeup devices ADP1(S3) LID0(S3) EC__(S3) OHC1(S3) EHC1(S3) OHC2(S3) EHC2(S3) GIGE(S5)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpihpet0 at acpi0: 25000000 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.24 MHz, 06-17-06
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu0: 3MB 64b/line 8-way L2 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 8 var ranges, 88 fixed ranges
+cpu0: apic clock running at 265MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.2.1.3, IBE
+cpu1 at mainbus0: apid 1 (application processor)
+cpu1: Intel(R) Core(TM)2 Duo CPU P7350 @ 2.00GHz, 1592.01 MHz, 06-17-06
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,DTES64,MWAIT,DS-CPL,VMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,SSE4.1,NXE,LONG,LAHF,PERF,SENSOR,MELTDOWN
+cpu1: 3MB 64b/line 8-way L2 cache
+cpu1: smt 0, core 1, package 0
+ioapic0 at mainbus0: apid 1 pa 0xfec00000, version 11, 24 pins, remapped
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xf0000000, bus 0-255
+acpiec0 at acpi0
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus 2 (IXVE)
+acpisbs0 at acpi0: SBS0acpisbs0: acpi_smbus_read: error reading status: 0x16
+
+acpiac0 at acpi0: AC unit online
+acpibtn0 at acpi0: LID0
+abl0 at acpi0: PNLF (backlight)
+acpibtn1 at acpi0: PWRB
+acpibtn2 at acpi0: SLPB
+acpipci0 at acpi0 PCI0: 0x00000010 0x00000011 0x00000000memory map conflict 0xffc00000/0x400000
+
+asmc0 at acpi0: SMC_ (smc-mcp) addr 0x300/0x20: rev 1.32f532, 271 keys
+"ACPI0008" at acpi0 not configured
+"APP0003" at acpi0 not configured
+"ACPI0001" at acpi0 not configured
+acpicmos0 at acpi0
+acpicpu0 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+acpicpu1 at acpi0: !C3(100@57 mwait.3@0x31), !C2(500@1 mwait@0x10), C1(1000@1 mwait), PSS
+cpu0: Enhanced SpeedStep 1592 MHz: speeds: 1995, 1862, 1596 MHz
+pci0 at mainbus0 bus 0
+0:3:5: mem address conflict 0xd3300000/0x80000
+pchb0 at pci0 dev 0 function 0 "NVIDIA MCP79 Host" rev 0xb1
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 0 function 1 not configured
+pcib0 at pci0 dev 3 function 0 "NVIDIA MCP79 ISA" rev 0xb2
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 1 not configured
+nviic0 at pci0 dev 3 function 2 "NVIDIA MCP79 SMBus" rev 0xb1
+iic0 at nviic0
+spdmem0 at iic0 addr 0x50: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+spdmem1 at iic0 addr 0x51: 4GB DDR3 SDRAM PC3-10600 SO-DIMM
+iic1 at nviic0
+"NVIDIA MCP79 Memory" rev 0xb1 at pci0 dev 3 function 3 not configured
+vendor "NVIDIA", unknown product 0x0a98 (class memory subclass RAM, rev 0xb1) at pci0 dev 3 function 4 not configured
+"NVIDIA MCP79 Co-processor" rev 0xb1 at pci0 dev 3 function 5 not configured
+ohci0 at pci0 dev 4 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 11, version 1.0, legacy support
+ehci0 at pci0 dev 4 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 10
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+ohci1 at pci0 dev 6 function 0 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 7, version 1.0, legacy support
+ehci1 at pci0 dev 6 function 1 "NVIDIA MCP79 USB" rev 0xb1: apic 1 int 5
+usb1 at ehci1: USB revision 2.0
+uhub1 at usb1 configuration 1 interface 0 "NVIDIA EHCI root hub" rev 2.00/1.00 addr 1
+azalia0 at pci0 dev 8 function 0 "NVIDIA MCP79 HD Audio" rev 0xb1: apic 1 int 15
+azalia0: codecs: Realtek ALC885
+audio0 at azalia0
+ppb0 at pci0 dev 9 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci1 at ppb0 bus 1
+nfe0 at pci0 dev 10 function 0 "NVIDIA MCP79 LAN" rev 0xb1: apic 1 int 14, address XXX
+rgephy0 at nfe0 phy 1: RTL8169S/8110S/8211 PHY, rev. 2
+pciide0 at pci0 dev 11 function 0 "NVIDIA MCP79 SATA" rev 0xb1: DMA
+pciide0: using apic 1 int 11 for native-PCI interrupt
+wd0 at pciide0 channel 0 drive 0: <Samsung SSD 840 EVO 120GB>
+wd0: 1-sector PIO, LBA48, 114473MB, 234441648 sectors
+wd0(pciide0:0:0): using PIO mode 4, Ultra-DMA mode 6
+atapiscsi0 at pciide0 channel 1 drive 0
+scsibus1 at atapiscsi0: 2 targets
+cd0 at scsibus1 targ 0 lun 0: <HL-DT-ST, DVDRW GS21N, SA18> removable
+cd0(pciide0:1:0): using PIO mode 4, Ultra-DMA mode 6
+ppb1 at pci0 dev 16 function 0 "NVIDIA MCP79 PCIE" rev 0xb1
+pci2 at ppb1 bus 2
+vga1 at pci2 dev 0 function 0 "NVIDIA GeForce 9400m" rev 0xb1
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+ppb2 at pci0 dev 21 function 0 "NVIDIA MCP79 PCIE" rev 0xb1: msi
+pci3 at ppb2 bus 3
+"Broadcom BCM4322" rev 0x01 at pci3 dev 0 function 0 not configured
+isa0 at pcib0
+isadma0 at isa0
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+usb2 at ohci0: USB revision 1.0
+uhub2 at usb2 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+usb3 at ohci1: USB revision 1.0
+uhub3 at usb3 configuration 1 interface 0 "NVIDIA OHCI root hub" rev 1.00/1.00 addr 1
+vmm0 at mainbus0: VMX (using slow L1TF mitigation)
+dt: 445 probes
+uvideo0 at uhub0 port 4 configuration 1 interface 0 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+video0 at uvideo0
+ugen0 at uhub0 port 4 configuration 1 "Apple Inc. Built-in iSight" rev 2.00/4.18 addr 2
+uhub4 at uhub1 port 2 configuration 1 interface 0 "vendor 0x214b USB2.0 HUB" rev 2.00/1.00 addr 2
+uhidev0 at uhub4 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 3
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+urtwn0 at uhub4 port 2 configuration 1 interface 0 "Realtek 802.11n NIC" rev 2.00/0.00 addr 4
+urtwn0: MAC/BB RTL8188EU, RF 6052 1T1R, address XXX
+umass0 at uhub4 port 3 configuration 1 interface 0 "TrekStor SE TrekStor USB-Stick SE" rev 2.00/1.00 addr 5
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd0 at scsibus2 targ 1 lun 0: <TrekStor, TrekStor USB SE, 1.00> removable serial....
+sd0: 122203MB, 512 bytes/sector, 250272768 sectors
+uhidev1 at uhub2 port 5 configuration 1 interface 0 "Apple Computer, Inc. IR Receiver" rev 2.00/0.16 addr 2
+uhidev1: iclass 3/0, 38 report ids
+uhid0 at uhidev1 reportid 36: input=4, output=0, feature=0
+uhid1 at uhidev1 reportid 37: input=4, output=0, feature=0
+uhid2 at uhidev1 reportid 38: input=4, output=0, feature=0
+uhidev2 at uhub2 port 6 configuration 1 interface 0 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev2: iclass 3/1, 9 report ids
+ukbd0 at uhidev2 reportid 1: 8 variable keys, 6 key codes, country code 13
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+uhid3 at uhidev2 reportid 9: input=0, output=0, feature=3
+uhidev3 at uhub2 port 6 configuration 1 interface 1 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+uhidev3: iclass 3/0, 68 report ids
+uhid4 at uhidev3 reportid 68: input=511, output=0, feature=0
+ubcmtp0 at uhub2 port 6 configuration 1 interface 2 "Apple, Inc. Apple Internal Keyboard / Trackpad" rev 2.00/0.77 addr 3
+wsmouse1 at ubcmtp0 mux 0
+uhub5 at uhub3 port 1 configuration 1 interface 0 "Apple Inc. BRCM2046 Hub" rev 2.00/1.00 addr 2
+ugen1 at uhub5 port 1 "Apple Inc. Bluetooth USB Host Controller" rev 2.00/2.08 addr 3
+uhidev4 at uhub5 port 2 configuration 1 interface 0 "Apple Computer product 0x820a" rev 2.00/1.00 addr 4
+uhidev4: iclass 3/1, 1 report id
+ukbd1 at uhidev4 reportid 1: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev5 at uhub5 port 3 configuration 1 interface 0 "Apple Computer product 0x820b" rev 2.00/1.00 addr 5
+uhidev5: iclass 3/1, 2 report ids
+ums1 at uhidev5 reportid 2: 3 buttons
+wsmouse2 at ums1 mux 0
+vscsi0 at root
+scsibus3 at vscsi0: 256 targets
+softraid0 at root
+scsibus4 at softraid0: 256 targets
+root on wd0a (c987ca78fe44a15f.a) swap on wd0b dump on wd0b
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+sd0 detached
+scsibus2 detached
+umass0 detached
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16
+acpisbs0: acpi_smbus_read: error reading status: 0x16

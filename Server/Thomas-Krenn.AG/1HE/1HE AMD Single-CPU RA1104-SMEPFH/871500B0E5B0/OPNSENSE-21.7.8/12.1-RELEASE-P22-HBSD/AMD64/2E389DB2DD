@@ -1,0 +1,285 @@
+---<<BOOT>>---
+Copyright (c) 2474-67F5 The HardenedBSD Project.
+Copyright (c) 10F0-EC3A The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 12.1-RELEASE-p22-HBSD #0  6fd65fcb739(stable/21.7)-dirty: Wed Jan 26 20:48:21 CET 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 8.0.1 (tags/RELEASE_801/final 366581) (based on LLVM 8.0.1)
+HardenedBSD: initialize and check features (__HardenedBSD_version 1200059 __FreeBSD_version 1201000).
+CPU: AMD EPYC 7232P 8-Core Processor                 (3100.07-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x830f10  Family=0x17  Model=0x31  Stepping=0
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,<b30>>
+  Structured Extended Features=0x219c91a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,PQM,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,SHA>
+  Structured Extended Features2=0x400004<UMIP,RDPID>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x18cf757<CLZERO,IRPerf,XSaveErPtr>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16465817600 (15703 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <SUPERM SMCI--MB>
+FreeBSD/SMP: Multiprocessor System Detected: 16 CPUs
+FreeBSD/SMP: 1 package(s) x 4 cache groups x 2 core(s) x 2 hardware threads
+random: unblocking device.
+ioapic0: Changing APIC ID to 240
+ioapic1: Changing APIC ID to 241
+ioapic2: Changing APIC ID to 242
+ioapic3: Changing APIC ID to 243
+ioapic4: Changing APIC ID to 244
+ioapic0 <Version 2.1> irqs 0-23 on motherboard
+ioapic1 <Version 2.1> irqs 24-55 on motherboard
+ioapic2 <Version 2.1> irqs 56-87 on motherboard
+ioapic3 <Version 2.1> irqs 88-119 on motherboard
+ioapic4 <Version 2.1> irqs 120-151 on motherboard
+Launching APs: 15 14 12 13 6 5 10 8 2 4 1 7 11 9 3
+Timecounter "TSC-low" frequency 1550034999 Hz quality 1000
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+module_register_init: MOD_LOAD (vesa, 0xffffffff812947f0, 0) error 19
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+000.000065 [4344] netmap_init               netmap: loaded module
+[ath_hal] loaded
+nexus0
+efirtc0: <EFI Realtime Clock> on motherboard
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+cryptosoft0: <software crypto> on motherboard
+acpi0: <SUPERM SMCI--MB> on motherboard
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 3.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+nvme0: <Generic NVMe Device> mem 0xb7900000-0xb7903fff irq 54 at device 0.0 on pci1
+pcib2: <ACPI PCI-PCI bridge> at device 3.2 on pci0
+pci2: <ACPI PCI bus> on pcib2
+nvme1: <Generic NVMe Device> mem 0xb7800000-0xb7803fff irq 50 at device 0.0 on pci2
+pcib3: <ACPI PCI-PCI bridge> at device 3.3 on pci0
+pci3: <ACPI PCI bus> on pcib3
+xhci0: <ASMedia ASM1042A USB 3.0 controller> mem 0xb7700000-0xb7707fff irq 46 at device 0.0 on pci3
+xhci0: 32 bytes context size, 64-bit DMA
+xhci0: Unable to map MSI-X table 
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib4: <ACPI PCI-PCI bridge> at device 3.4 on pci0
+pci4: <ACPI PCI bus> on pcib4
+xhci1: <ASMedia ASM1042A USB 3.0 controller> mem 0xb7600000-0xb7607fff irq 42 at device 0.0 on pci4
+xhci1: 32 bytes context size, 64-bit DMA
+xhci1: Unable to map MSI-X table 
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib5: <ACPI PCI-PCI bridge> at device 3.5 on pci0
+pcib5: failed to allocate initial I/O port window: 0xf000-0xffff
+pci5: <ACPI PCI bus> on pcib5
+pcib6: <PCI-PCI bridge> irq 38 at device 0.0 on pci5
+pcib6: failed to allocate initial I/O port window: 0xf000-0xffff
+pci6: <PCI bus> on pcib6
+vgapci0: <VGA-compatible display> mem 0xb6000000-0xb6ffffff,0xb7000000-0xb701ffff irq 38 at device 0.0 on pci6
+pcib7: <ACPI PCI-PCI bridge> at device 3.6 on pci0
+pci7: <ACPI PCI bus> on pcib7
+ahci0: <ASMedia ASM1062 AHCI SATA controller> port 0xe050-0xe057,0xe040-0xe043,0xe030-0xe037,0xe020-0xe023,0xe000-0xe01f mem 0xb7500000-0xb75001ff irq 34 at device 0.0 on pci7
+ahci0: AHCI v1.20 with 2 6Gbps ports, Port Multiplier supported
+ahci0: quirks=0xc00000<NOCCS,NOAUX>
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+pcib8: <ACPI PCI-PCI bridge> at device 3.7 on pci0
+pci8: <ACPI PCI bus> on pcib8
+bge0: <Broadcom NetXtreme Gigabit Ethernet Controller, ASIC rev. 0x5720000> mem 0xb7f50000-0xb7f5ffff,0xb7f40000-0xb7f4ffff,0xb7f30000-0xb7f3ffff irq 30 at device 0.0 on pci8
+bge0: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge0: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus0: <MII bus> on bge0
+brgphy0: <BCM5720C 1000BASE-T media interface> PHY 1 on miibus0
+brgphy0:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge0: Using defaults for TSO: 65518/35/2048
+bge0: Ethernet address: ...
+bge1: <Broadcom NetXtreme Gigabit Ethernet Controller, ASIC rev. 0x5720000> mem 0xb7f20000-0xb7f2ffff,0xb7f10000-0xb7f1ffff,0xb7f00000-0xb7f0ffff irq 31 at device 0.1 on pci8
+bge1: APE FW version: NCSI vXXX.XXX.XXX.XXX
+bge1: CHIP ID 0x05720000; ASIC REV 0x5720; CHIP REV 0x57200; PCI-E
+miibus1: <MII bus> on bge1
+brgphy1: <BCM5720C 1000BASE-T media interface> PHY 2 on miibus1
+brgphy1:  10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-master, 1000baseT-FDX, 1000baseT-FDX-master, auto, auto-flow
+bge1: Using defaults for TSO: 65518/35/2048
+bge1: Ethernet address: ...
+pcib9: <ACPI PCI-PCI bridge> at device 7.1 on pci0
+pci9: <ACPI PCI bus> on pcib9
+pci9: <unknown> at device 0.0 (no driver attached)
+pci9: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib10: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci10: <ACPI PCI bus> on pcib10
+pci10: <unknown> at device 0.0 (no driver attached)
+pci10: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib11: <ACPI Host-PCI bridge> on acpi0
+pci11: <ACPI PCI bus> on pcib11
+pci11: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib12: <ACPI PCI-PCI bridge> at device 3.1 on pci11
+pci12: <ACPI PCI bus> on pcib12
+pcib13: <ACPI PCI-PCI bridge> at device 3.2 on pci11
+pci13: <ACPI PCI bus> on pcib13
+pcib14: <ACPI PCI-PCI bridge> at device 7.1 on pci11
+pci14: <ACPI PCI bus> on pcib14
+pci14: <unknown> at device 0.0 (no driver attached)
+pci14: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib15: <ACPI PCI-PCI bridge> at device 8.1 on pci11
+pci15: <ACPI PCI bus> on pcib15
+pci15: <unknown> at device 0.0 (no driver attached)
+pci15: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib16: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci16: <ACPI PCI bus> on pcib16
+pci16: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib17: <ACPI PCI-PCI bridge> at device 7.1 on pci16
+pci17: <ACPI PCI bus> on pcib17
+pci17: <unknown> at device 0.0 (no driver attached)
+pci17: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib18: <ACPI PCI-PCI bridge> at device 8.1 on pci16
+pci18: <ACPI PCI bus> on pcib18
+pci18: <unknown> at device 0.0 (no driver attached)
+pci18: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xf6000000-0xf60fffff irq 135 at device 0.3 on pci18
+xhci2: 64 bytes context size, 64-bit DMA
+xhci2: Unable to map MSI-X table 
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+isab0: <PCI-ISA bridge> at device 20.3 on pci16
+isa0: <ISA bus> on isab0
+pcib19: <ACPI Host-PCI bridge> on acpi0
+pci19: <ACPI PCI bus> on pcib19
+pci19: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib20: <ACPI PCI-PCI bridge> at device 3.1 on pci19
+pci20: <ACPI PCI bus> on pcib20
+igb0: <Intel(R) I350 (Copper)> port 0x7020-0x703f mem 0xb0100000-0xb01fffff,0xb0304000-0xb0307fff irq 118 at device 0.0 on pci20
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 8 RX queues 8 TX queues
+igb0: Using MSI-X interrupts with 9 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 8/1024, RX 8/1024
+igb1: <Intel(R) I350 (Copper)> port 0x7000-0x701f mem 0xb0000000-0xb00fffff,0xb0300000-0xb0303fff irq 119 at device 0.1 on pci20
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 8 RX queues 8 TX queues
+igb1: Using MSI-X interrupts with 9 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 8/1024, RX 8/1024
+pcib21: <ACPI PCI-PCI bridge> at device 7.1 on pci19
+pci21: <ACPI PCI bus> on pcib21
+pci21: <unknown> at device 0.0 (no driver attached)
+pci21: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib22: <ACPI PCI-PCI bridge> at device 8.1 on pci19
+pci22: <ACPI PCI bus> on pcib22
+pci22: <unknown> at device 0.0 (no driver attached)
+pci22: <encrypt/decrypt> at device 0.1 (no driver attached)
+pci22: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci3: <XHCI (generic) USB 3.0 controller> mem 0xb0400000-0xb04fffff irq 103 at device 0.3 on pci22
+xhci3: 64 bytes context size, 64-bit DMA
+xhci3: Unable to map MSI-X table 
+usbus3 on xhci3
+usbus3: 5.0Gbps Super Speed USB v3.0
+pcib23: <ACPI PCI-PCI bridge> at device 8.2 on pci19
+pci23: <ACPI PCI bus> on pcib23
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xb0800000-0xb08007ff irq 105 at device 0.0 on pci23
+ahci1: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported with FBS
+ahcich2: <AHCI channel> at channel 0 on ahci1
+ahcich3: <AHCI channel> at channel 1 on ahci1
+ahcich4: <AHCI channel> at channel 2 on ahci1
+ahcich5: <AHCI channel> at channel 3 on ahci1
+ahcich6: <AHCI channel> at channel 4 on ahci1
+ahcich7: <AHCI channel> at channel 5 on ahci1
+ahcich8: <AHCI channel> at channel 6 on ahci1
+ahcich9: <AHCI channel> at channel 7 on ahci1
+ahciem0: <AHCI enclosure management bridge> at channel 2147483647 on ahci1
+device_attach: ahciem0 attach returned 6
+pcib24: <ACPI PCI-PCI bridge> at device 8.3 on pci19
+pci24: <ACPI PCI bus> on pcib24
+ahci2: <AMD KERNCZ AHCI SATA controller> mem 0xb0700000-0xb07007ff irq 109 at device 0.0 on pci24
+ahci2: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported with FBS
+ahcich10: <AHCI channel> at channel 0 on ahci2
+ahcich11: <AHCI channel> at channel 1 on ahci2
+ahcich12: <AHCI channel> at channel 2 on ahci2
+ahcich13: <AHCI channel> at channel 3 on ahci2
+ahcich14: <AHCI channel> at channel 4 on ahci2
+ahcich15: <AHCI channel> at channel 5 on ahci2
+ahcich16: <AHCI channel> at channel 6 on ahci2
+ahcich17: <AHCI channel> at channel 7 on ahci2
+ahciem1: <AHCI enclosure management bridge> at channel 2147483647 on ahci2
+device_attach: ahciem1 attach returned 6
+cpu0: <ACPI CPU> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (115200,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+ipmi0: <IPMI System Interface> port 0xca4,0xca5 on acpi0
+ipmi0: KCS mode found at io 0xca4 on acpi
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+Timecounters tick every 1.000 msec
+ugen2.1: <0x1022 XHCI root HUB> at usbus2
+ugen0.1: <0x1b21 XHCI root HUB> at usbus0
+ugen1.1: <0x1b21 XHCI root HUB> at usbus1
+ugen3.1: <0x1022 XHCI root HUB> at usbus3
+uhub0: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub1: <0x1b21 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2: <0x1022 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus3
+uhub3: <0x1b21 XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <ATP NVMe M.2 2280 SSD> NVMe namespace
+nvd0: 228936MB (468862128 512 byte sectors)
+nvd1: <ATP NVMe M.2 2280 SSD> NVMe namespace
+nvd1: 228936MB (468862128 512 byte sectors)
+ipmi0: IPMI device rev. 1, firmware rev. 3.10, version 2.0, device support mask 0xbf
+ipmi0: Number of channels 2
+ipmi0: Attached watchdog
+ipmi0: Establishing power cycle handler
+Trying to mount root from zfs:zroot/ROOT/default []...
+Root mount waiting for: usbus3 usbus2 usbus1 usbus0
+uhub0: 4 ports with 4 removable, self powered
+uhub1: 4 ports with 4 removable, self powered
+uhub2: 4 ports with 4 removable, self powered
+uhub3: 4 ports with 4 removable, self powered
+ugen2.2: <vendor 0x0557 product 0x7000> at usbus2
+uhub4 on uhub0
+uhub4: <vendor 0x0557 product 0x7000, class 9/0, rev 2.00/0.00, addr 1> on usbus2
+uhub4: 4 ports with 3 removable, self powered
+Root mount waiting for: usbus2
+ugen2.3: <vendor 0x0557 product 0x2419> at usbus2
+ukbd0 on uhub4
+ukbd0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus2
+kbd2 at ukbd0
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci16
+smbus0: <System Management Bus> on intsmb0
+ums0 on uhub4
+ums0: <vendor 0x0557 product 0x2419, class 0/0, rev 1.10/1.00, addr 2> on usbus2
+ums0: 3 buttons and [Z] coordinates ID=0
+lo0: link state changed to UP
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256> on motherboard
+amdsmn0: <AMD Family 17h System Management Network> on hostb0
+amdsmn1: <AMD Family 17h System Management Network> on hostb8
+amdsmn2: <AMD Family 17h System Management Network> on hostb16
+amdsmn3: <AMD Family 17h System Management Network> on hostb32
+amdtemp0: <AMD CPU On-Die Thermal Sensors> on hostb0
+amdtemp1: <AMD CPU On-Die Thermal Sensors> on hostb8
+amdtemp2: <AMD CPU On-Die Thermal Sensors> on hostb16
+amdtemp3: <AMD CPU On-Die Thermal Sensors> on hostb32
+tun2: changing name to 'ovpns2'
+bge0: link state changed to DOWN
+bge1: link state changed to DOWN
+pflog0: permanently promiscuous mode enabled
+ovpns2: link state changed to UP
+bge0: link state changed to UP
+bge1: link state changed to UP

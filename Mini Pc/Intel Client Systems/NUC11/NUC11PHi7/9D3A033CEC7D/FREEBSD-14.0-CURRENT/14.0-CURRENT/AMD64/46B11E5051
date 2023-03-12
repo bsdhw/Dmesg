@@ -1,0 +1,641 @@
+---<<BOOT>>---
+Copyright (c) F7F7-B2ED The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 main-n255577-586ed321068: Thu May 12 03:43:04 JST 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 2560x1440
+CPU: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz (2803.20-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806c1  Family=0x6  Model=0x8c  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0xf3bfa7eb<FSGSBASE,TSCADJ,BMI1,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,NFPUSG,PQE,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,CLWB,PROCTRACE,AVX512CD,SHA,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x18c05fce<AVX512VBMI,UMIP,PKU,AVX512VBMI2,GFNI,VAES,VPCLMULQDQ,AVX512VNNI,AVX512BITALG,AVX512VPOPCNTDQ,RDPID,MOVDIRI,MOVDIR64B>
+  Structured Extended Features3=0xfc100510<FSRM,AVX512VP2INTERSECT,MD_CLEAR,IBT,IBPB,STIBP,L1DFL,ARCH_CAP,CORE_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 68717379584 (65534 MB)
+avail memory = 66340671488 (63267 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL NUC11PHB>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 3 2 5 4 6 7
+random: entropy device external interface
+kbd0 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x3fd69000-0x3fd6901e
+smbios0: Version: 3.3, BCD Revision: 3.3
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <INTEL>
+Firmware Error (ACPI): Failure creating named object [\134_SB.PC00.XHCI.RHUB.HS10._UPC], AE_ALREADY_EXISTS (20220331/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20220331/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.PC00.XHCI.RHUB.HS10._PLD], AE_ALREADY_EXISTS (20220331/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20220331/psobject-372)
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - ^SPI1.SPFD.CVFD (20220331/dspkginit-605)
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - ^SPI1.SPFD.CVFD (20220331/dspkginit-605)
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - ^XHCI.RHUB.HS04.VI2C (20220331/dspkginit-605)
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - ^XHCI.RHUB.HS04.VI2C (20220331/dspkginit-605)
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 19200000 Hz quality 950
+Event timer "HPET" frequency 19200000 Hz quality 550
+atrtc1: <AT realtime clock> on acpi0
+atrtc1: Warning: Couldn't map I/O.
+atrtc1: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x6e> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x4000-0x403f mem 0x6053000000-0x6053ffffff,0x4000000000-0x403fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+pcib1: <ACPI PCI-PCI bridge> at device 6.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci1: <VGA-compatible display> port 0x3000-0x307f mem 0x6b000000-0x6bffffff,0x6040000000-0x604fffffff,0x6050000000-0x6051ffffff at device 0.0 on pci1
+hdac0: <NVIDIA (0x10f9) HDA Controller> mem 0x6c080000-0x6c083fff at device 0.1 on pci1
+xhci0: <NVIDIA TU106 USB 3.1 controller> mem 0x6052000000-0x605203ffff,0x6052040000-0x605204ffff at device 0.2 on pci1
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci1: <serial bus> at device 0.3 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 7.0 on pci0
+pcib3: <ACPI PCI-PCI bridge> at device 7.2 on pci0
+pci2: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib4
+pcib5: <PCI-PCI bridge> at device 1.0 on pci3
+pci4: <PCI bus> on pcib5
+pci4: <network, ethernet> at device 0.0 (no driver attached)
+xhci1: <Intel Tiger Lake-LP Thunderbolt 4 USB controller> mem 0x6054190000-0x605419ffff at device 13.0 on pci0
+xhci1: 32 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pci0: <serial bus, USB> at device 13.2 (no driver attached)
+pci0: <serial bus, USB> at device 13.3 (no driver attached)
+xhci2: <Intel Tiger Lake-LP USB 3.2 controller> mem 0x6054180000-0x605418ffff at device 20.0 on pci0
+xhci2: 32 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <network> at device 20.3 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+pcib6: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci5: <ACPI PCI bus> on pcib6
+rtsx0: <2.1g Realtek RTS525A PCIe SD Card Reader> mem 0x6c600000-0x6c600fff at device 0.0 on pci5
+rtsx0: No card is detected
+pcib7: <ACPI PCI-PCI bridge> at device 28.2 on pci0
+pci6: <ACPI PCI bus> on pcib7
+igc0: <Intel(R) Ethernet Controller I225-LM> mem 0x6c200000-0x6c2fffff,0x6c300000-0x6c303fff at device 0.0 on pci6
+igc0: PHY reset is blocked due to SOL/IDER session.
+igc0: Using 1024 TX descriptors and 1024 RX descriptors
+igc0: Using 4 RX queues 4 TX queues
+igc0: Using MSI-X interrupts with 5 vectors
+igc0: Ethernet address: ...
+igc0: link state changed to UP
+igc0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib8: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci7: <ACPI PCI bus> on pcib8
+nvme0: <Generic NVMe Device> mem 0x6c500000-0x6c503fff at device 0.0 on pci7
+pcib9: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci8: <ACPI PCI bus> on pcib9
+nvme1: <Generic NVMe Device> mem 0x6c400000-0x6c403fff,0x6c404000-0x6c4040ff at device 0.0 on pci8
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac1: <Intel Tiger Lake HDA Controller> mem 0x60541a8000-0x60541abfff,0x6054000000-0x60540fffff at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+atrtc0: Can't map interrupt.
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC-low" frequency 1401608836 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <NVIDIA (0x0093) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0093) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0093) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0093) (HDMI/DP 8ch)> at nid 5 on hdaa0
+ugen0.1: <(0x10de) XHCI root HUB> at usbus0
+ugen1.1: <Intel XHCI root HUB> at usbus1
+ugen2.1: <Intel XHCI root HUB> at usbus2
+uhub0 on usbus0
+uhub0: <(0x10de) XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub1 on usbus1
+uhub1: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub2 on usbus2
+uhub2: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+nvd0: <WDS100T1X0E-00AFY0> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+nvd1: <WDS100T3X0C-00SJG0> NVMe namespace
+nvd1: 953869MB (1953525168 512 byte sectors)
+hdacc1: <Realtek ALC700 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC700 Audio Function Group> at nid 1 on hdacc1
+pcm2: <Realtek ALC700 (Analog 2.0+HP/2.0)> at nid 27,33 and 18 on hdaa1
+pcm3: <Realtek ALC700 (Analog)> at nid 30 and 19 on hdaa1
+hdacc2: <Intel Tiger Lake HDA CODEC> at cad 2 on hdac1
+hdaa2: <Intel Tiger Lake Audio Function Group> at nid 1 on hdacc2
+pcm4: <Intel Tiger Lake (HDMI/DP 8ch)> at nid 4 on hdaa2
+Trying to mount root from zfs:zroot/ROOT/default []...
+WARNING: WITNESS option enabled, expect reduced performance.
+uhub1: 5 ports with 5 removable, self powered
+uhub0: 6 ports with 6 removable, self powered
+uhub2: 16 ports with 16 removable, self powered
+ugen2.2: <VIA Labs, Inc. USB2.0 Hub> at usbus2
+uhub3 on uhub2
+uhub3: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/90.34, addr 1> on usbus2
+Root mount waiting for: usbus2
+uhub3: MTT enabled
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+uhub3: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus2
+ugen2.3: <GeneralPlus USB Audio Device> at usbus2
+ugen2.4: <Logitech Gaming Mouse G600> at usbus2
+ukbd0 on uhub3
+ukbd0: <Logitech Gaming Mouse G600, class 0/0, rev 2.00/77.02, addr 3> on usbus2
+kbd1 at ukbd0
+Root mount waiting for: usbus2
+ugen2.5: <Razer Razer Huntsman V2 Tenkeyless> at usbus2
+ukbd1 on uhub3
+ukbd1: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+kbd2 at ukbd1
+ukbd2 on uhub3
+ukbd2: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+kbd3 at ukbd2
+ugen2.6: <VIA Labs, Inc. USB2.0 Hub> at usbus2
+uhub4 on uhub2
+uhub4: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/90.13, addr 5> on usbus2
+uhub4: MTT enabled
+Root mount waiting for: usbus2
+uhub4: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus2
+ugen2.7: <vendor 0x8087 product 0x0026> at usbus2
+ugen2.8: <VIA Labs, Inc. USB3.1 Hub> at usbus2
+uhub5 on uhub2
+uhub5: <VIA Labs, Inc. USB3.1 Hub, class 9/0, rev 3.20/90.34, addr 7> on usbus2
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+uhub5: 4 ports with 4 removable, self powered
+ugen2.9: <VIA Labs, Inc. USB3.1 Hub> at usbus2
+uhub6 on uhub2
+uhub6: <VIA Labs, Inc. USB3.1 Hub, class 9/0, rev 3.20/90.13, addr 8> on usbus2
+Root mount waiting for: usbus2
+uhub6: 2 ports with 2 removable, self powered
+nvidia1: <NVIDIA GeForce RTX 2060> on vgapci1
+vgapci1: child nvidia1 requested pci_enable_io
+vgapci1: child nvidia1 requested pci_enable_io
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  510.60.02  Wed Mar 16 11:03:12 UTC 2022
+aq0: <Aquantia AQtion 10Gbit Network Adapter> mem 0x50440000-0x5044ffff,0x50450000-0x50450fff,0x50000000-0x503fffff at device 0.0 on pci4
+atlantic: RBL> F/W loaded from flash. Host Bootload disabled.
+atlantic: MAC F/W version is 3.1.121
+atlantic: RBL> F/W loaded from flash. Host Bootload disabled.
+aq0: Using 1024 TX descriptors and 1024 RX descriptors
+aq0: queue equality override not set, capping rx_queues at 4 and tx_queues at 4
+aq0: Using 4 RX queues 4 TX queues
+aq0: Using MSI-X interrupts with 5 vectors
+aq0: Assign IRQ 0 to rx ring 0
+aq0: Assign IRQ 1 to rx ring 1
+aq0: Assign IRQ 2 to rx ring 2
+aq0: Assign IRQ 3 to rx ring 3
+aq0: Assign IRQ 0 to tx ring 0
+aq0: Assign IRQ 1 to tx ring 1
+aq0: Assign IRQ 2 to tx ring 2
+aq0: Assign IRQ 3 to tx ring 3
+aq0: Assign IRQ 4 to admin proc 
+aq0: Ethernet address: ...
+aq0: netmap queues/slots: TX 4/1024, RX 4/1024
+Cuse v0.1.36 @ /dev/cuse
+Intel(R) Wireless WiFi based driver for FreeBSD
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134AMW0.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20220331/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WFDE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20220331/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20220331/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+iwlwifi0: <iwlwifi> mem 0x60541ac000-0x60541affff at device 20.3 on pci0
+iwlwifi0: could not load firmware image 'iwlwifi-QuZ-a0-hr-b0-70.ucode'
+iwlwifi0: File size way too small!
+iwlwifi0: could not load firmware image 'iwlwifi-QuZ-a0-hr-b0-69.ucode'
+iwlwifi0: File size way too small!
+ig4iic0: <Intel Tiger Lake-LP I2C Controller-4> at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+iwlwifi0: successfully loaded firmware image 'iwlwifi-QuZ-a0-hr-b0-68.ucode'
+iwlwifi0: api flags index 2 larger than supported by driver
+iwlwifi0: TLV_FW_FSEQ_VERSION: FSEQ Version: XXX.XXX.XXX.XXX
+iwlwifi0: loaded firmware version 68.01d30b0c.0 QuZ-a0-hr-b0-68.ucode op_mode iwlmvm
+iwlwifi0: Detected Intel(R) Wi-Fi 6 AX201 160MHz, REV=0x351
+iwlwifi0: Detected RF HR B5, rfid=0x10a100
+iwlwifi0: base HW address: XXX
+ig4iic1: <Intel Tiger Lake-LP I2C Controller-5> at device 21.1 on pci0
+ig4iic1: Using MSI
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+iicbus1: <unknown card> at addr 0x21
+ichsmb0: <Intel Tiger Lake SMBus controller> port 0xefa0-0xefbf mem 0x60541b4000-0x60541b40ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+lo0: link state changed to UP
+atlantic: RBL> F/W loaded from flash. Host Bootload disabled.
+aq0: ring 0: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 1: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 2: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 3: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+atlantic: RBL> F/W loaded from flash. Host Bootload disabled.
+aq0: ring 0: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 1: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 2: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 3: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+atlantic: set 1 mc address XXX
+uaudio0 on uhub3
+uaudio0: <GeneralPlus USB Audio Device, class 0/0, rev 1.10/1.00, addr 2> on usbus2
+uaudio0: Play[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Play[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 48000 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 44100 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: No MIDI sequencer.
+pcm5: <USB audio> on uaudio0
+uaudio0: HID volume keys found.
+uhid0 on uhub3
+uhid0: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+uhid1 on uhub3
+uhid1: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+ums0 on uhub3
+ums0: <Logitech Gaming Mouse G600, class 0/0, rev 2.00/77.02, addr 3> on usbus2
+ums0: 16 buttons and [XYZT] coordinates ID=0
+ums1 on uhub3
+ums1: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+ums1: 5 buttons and [XYZ] coordinates ID=0
+aq0: atlantic: link UP: speed=10000
+aq0: link state changed to UP
+ACPI Warning: \134_SB.PC00.PEG0.PEGP._DSM: Argument #4 type mismatch - Found [Buffer], ACPI requires [Package] (20220331/nsarguments-212)
+acquiring duplicate lock of same type: "os.lock_mtx"
+ 1st os.lock_mtx @ nvidia_os.c:865
+ 2nd os.lock_mtx @ nvidia_os.c:865
+stack backtrace:
+#0 0xffffffff80c810d5 at witness_debugger+0x65
+#1 0xffffffff80bea044 at __mtx_lock_flags+0x94
+#2 0xffffffff84fe4e0b at os_acquire_spinlock+0x1b
+#3 0xffffffff84d410dc at _nv033621rm+0xc
+acquiring duplicate lock of same type: "os.lock_sx"
+ 1st os.lock_sx @ nvidia_os.c:626
+ 2nd os.lock_sx @ nvidia_os.c:626
+stack backtrace:
+#0 0xffffffff80c810d5 at witness_debugger+0x65
+#1 0xffffffff80c19cd3 at _sx_xlock+0x63
+#2 0xffffffff84fe48e2 at os_acquire_mutex+0x32
+#3 0xffffffff84d4115c at _nv033598rm+0xc
+acquiring duplicate lock of same type: "fops_sx"
+ 1st fops_sx @ nvidia_subr.c:399
+ 2nd fops_sx @ nvidia_subr.c:1050
+stack backtrace:
+#0 0xffffffff80c810d5 at witness_debugger+0x65
+#1 0xffffffff80c19cd3 at _sx_xlock+0x63
+#2 0xffffffff84fe86bf at nv_add_mapping_context_to_file+0x7f
+#3 0xffffffff84f234c9 at _nv034372rm+0x599
+wlan0: Ethernet address: ...
+---<<BOOT>>---
+Copyright (c) F7F7-B2ED The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 main-n255577-586ed321068: Thu May 12 03:43:04 JST 2022
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 2560x1440
+CPU: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz (2803.20-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x806c1  Family=0x6  Model=0x8c  Stepping=1
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0xf3bfa7eb<FSGSBASE,TSCADJ,BMI1,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,NFPUSG,PQE,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,CLWB,PROCTRACE,AVX512CD,SHA,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x18c05fce<AVX512VBMI,UMIP,PKU,AVX512VBMI2,GFNI,VAES,VPCLMULQDQ,AVX512VNNI,AVX512BITALG,AVX512VPOPCNTDQ,RDPID,MOVDIRI,MOVDIR64B>
+  Structured Extended Features3=0xfc100510<FSRM,AVX512VP2INTERSECT,MD_CLEAR,IBT,IBPB,STIBP,L1DFL,ARCH_CAP,CORE_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 68717379584 (65534 MB)
+avail memory = 66340671488 (63267 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL NUC11PHB>
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 5 4 6 7 3 2
+random: entropy device external interface
+kbd0 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x3fd69000-0x3fd6901e
+smbios0: Version: 3.3, BCD Revision: 3.3
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <INTEL>
+Firmware Error (ACPI): Failure creating named object [\134_SB.PC00.XHCI.RHUB.HS10._UPC], AE_ALREADY_EXISTS (20220331/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20220331/psobject-372)
+Firmware Error (ACPI): Failure creating named object [\134_SB.PC00.XHCI.RHUB.HS10._PLD], AE_ALREADY_EXISTS (20220331/dswload2-480)
+ACPI Error: AE_ALREADY_EXISTS, During name lookup/catalog (20220331/psobject-372)
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - ^SPI1.SPFD.CVFD (20220331/dspkginit-605)
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - ^SPI1.SPFD.CVFD (20220331/dspkginit-605)
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - ^XHCI.RHUB.HS04.VI2C (20220331/dspkginit-605)
+ACPI Error: AE_NOT_FOUND, While resolving a named reference package element - ^XHCI.RHUB.HS04.VI2C (20220331/dspkginit-605)
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 19200000 Hz quality 950
+Event timer "HPET" frequency 19200000 Hz quality 550
+atrtc1: <AT realtime clock> on acpi0
+atrtc1: Warning: Couldn't map I/O.
+atrtc1: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x6e> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x4000-0x403f mem 0x6053000000-0x6053ffffff,0x4000000000-0x403fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+pcib1: <ACPI PCI-PCI bridge> at device 6.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+vgapci1: <VGA-compatible display> port 0x3000-0x307f mem 0x6b000000-0x6bffffff,0x6040000000-0x604fffffff,0x6050000000-0x6051ffffff at device 0.0 on pci1
+hdac0: <NVIDIA (0x10f9) HDA Controller> mem 0x6c080000-0x6c083fff at device 0.1 on pci1
+xhci0: <NVIDIA TU106 USB 3.1 controller> mem 0x6052000000-0x605203ffff,0x6052040000-0x605204ffff at device 0.2 on pci1
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci1: <serial bus> at device 0.3 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 7.0 on pci0
+pcib3: <ACPI PCI-PCI bridge> at device 7.2 on pci0
+pci2: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib4
+pcib5: <PCI-PCI bridge> at device 1.0 on pci3
+pci4: <PCI bus> on pcib5
+pci4: <network, ethernet> at device 0.0 (no driver attached)
+xhci1: <Intel Tiger Lake-LP Thunderbolt 4 USB controller> mem 0x6054190000-0x605419ffff at device 13.0 on pci0
+xhci1: 32 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pci0: <serial bus, USB> at device 13.2 (no driver attached)
+pci0: <serial bus, USB> at device 13.3 (no driver attached)
+xhci2: <Intel Tiger Lake-LP USB 3.2 controller> mem 0x6054180000-0x605418ffff at device 20.0 on pci0
+xhci2: 32 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <network> at device 20.3 (no driver attached)
+pci0: <serial bus> at device 21.0 (no driver attached)
+pci0: <serial bus> at device 21.1 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+pcib6: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci5: <ACPI PCI bus> on pcib6
+rtsx0: <2.1g Realtek RTS525A PCIe SD Card Reader> mem 0x6c600000-0x6c600fff at device 0.0 on pci5
+rtsx0: No card is detected
+pcib7: <ACPI PCI-PCI bridge> at device 28.2 on pci0
+pci6: <ACPI PCI bus> on pcib7
+igc0: <Intel(R) Ethernet Controller I225-LM> mem 0x6c200000-0x6c2fffff,0x6c300000-0x6c303fff at device 0.0 on pci6
+igc0: PHY reset is blocked due to SOL/IDER session.
+igc0: Using 1024 TX descriptors and 1024 RX descriptors
+igc0: Using 4 RX queues 4 TX queues
+igc0: Using MSI-X interrupts with 5 vectors
+igc0: Ethernet address: ...
+igc0: link state changed to UP
+igc0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib8: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci7: <ACPI PCI bus> on pcib8
+nvme0: <Generic NVMe Device> mem 0x6c500000-0x6c503fff at device 0.0 on pci7
+pcib9: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci8: <ACPI PCI bus> on pcib9
+nvme1: <Generic NVMe Device> mem 0x6c400000-0x6c403fff,0x6c404000-0x6c4040ff at device 0.0 on pci8
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac1: <Intel Tiger Lake HDA Controller> mem 0x60541a8000-0x60541abfff,0x6054000000-0x60540fffff at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+atrtc0: Can't map interrupt.
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC-low" frequency 1401608105 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <NVIDIA (0x0093) HDA CODEC> at cad 0 on hdac0
+hdaa0: <NVIDIA (0x0093) Audio Function Group> at nid 1 on hdacc0
+pcm0: <NVIDIA (0x0093) (HDMI/DP 8ch)> at nid 4 on hdaa0
+pcm1: <NVIDIA (0x0093) (HDMI/DP 8ch)> at nid 5 on hdaa0
+ugen2.1: <Intel XHCI root HUB> at usbus2
+ugen1.1: <Intel XHCI root HUB> at usbus1
+ugen0.1: <(0x10de) XHCI root HUB> at usbus0
+uhub0 on usbus2
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub1 on usbus0
+uhub1: <(0x10de) XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+uhub2 on usbus1
+uhub2: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+nvd0: <WDS100T1X0E-00AFY0> NVMe namespace
+nvd0: 953869MB (1953525168 512 byte sectors)
+nvd1: <WDS100T3X0C-00SJG0> NVMe namespace
+nvd1: 953869MB (1953525168 512 byte sectors)
+hdacc1: <Realtek ALC700 HDA CODEC> at cad 0 on hdac1
+hdaa1: <Realtek ALC700 Audio Function Group> at nid 1 on hdacc1
+pcm2: <Realtek ALC700 (Analog 2.0+HP/2.0)> at nid 27,33 and 18 on hdaa1
+pcm3: <Realtek ALC700 (Analog)> at nid 30 and 19 on hdaa1
+hdacc2: <Intel Tiger Lake HDA CODEC> at cad 2 on hdac1
+hdaa2: <Intel Tiger Lake Audio Function Group> at nid 1 on hdacc2
+pcm4: <Intel Tiger Lake (HDMI/DP 8ch)> at nid 4 on hdaa2
+Trying to mount root from zfs:zroot/ROOT/default []...
+WARNING: WITNESS option enabled, expect reduced performance.
+uhub2: 5 ports with 5 removable, self powered
+uhub1: 6 ports with 6 removable, self powered
+uhub0: 16 ports with 16 removable, self powered
+ugen2.2: <VIA Labs, Inc. USB2.0 Hub> at usbus2
+uhub3 on uhub0
+uhub3: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/90.34, addr 1> on usbus2
+Root mount waiting for: usbus2
+uhub3: MTT enabled
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+uhub3: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus2
+ugen2.3: <GeneralPlus USB Audio Device> at usbus2
+ugen2.4: <Logitech Gaming Mouse G600> at usbus2
+ukbd0 on uhub3
+ukbd0: <Logitech Gaming Mouse G600, class 0/0, rev 2.00/77.02, addr 3> on usbus2
+kbd1 at ukbd0
+Root mount waiting for: usbus2
+ugen2.5: <Razer Razer Huntsman V2 Tenkeyless> at usbus2
+ukbd1 on uhub3
+ukbd1: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+kbd2 at ukbd1
+ukbd2 on uhub3
+ukbd2: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+kbd3 at ukbd2
+ugen2.6: <VIA Labs, Inc. USB2.0 Hub> at usbus2
+uhub4 on uhub0
+uhub4: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/90.13, addr 5> on usbus2
+uhub4: MTT enabled
+Root mount waiting for: usbus2
+uhub4: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus2
+ugen2.7: <vendor 0x8087 product 0x0026> at usbus2
+ugen2.8: <VIA Labs, Inc. USB3.1 Hub> at usbus2
+uhub5 on uhub0
+uhub5: <VIA Labs, Inc. USB3.1 Hub, class 9/0, rev 3.20/90.34, addr 7> on usbus2
+Root mount waiting for: usbus2
+Root mount waiting for: usbus2
+uhub5: 4 ports with 4 removable, self powered
+ugen2.9: <VIA Labs, Inc. USB3.1 Hub> at usbus2
+uhub6 on uhub0
+uhub6: <VIA Labs, Inc. USB3.1 Hub, class 9/0, rev 3.20/90.13, addr 8> on usbus2
+Root mount waiting for: usbus2
+uhub6: 2 ports with 2 removable, self powered
+nvidia1: <NVIDIA GeForce RTX 2060> on vgapci1
+vgapci1: child nvidia1 requested pci_enable_io
+vgapci1: child nvidia1 requested pci_enable_io
+nvidia-modeset: Loading NVIDIA Kernel Mode Setting Driver for UNIX platforms  510.60.02  Wed Mar 16 11:03:12 UTC 2022
+aq0: <Aquantia AQtion 10Gbit Network Adapter> mem 0x50440000-0x5044ffff,0x50450000-0x50450fff,0x50000000-0x503fffff at device 0.0 on pci4
+atlantic: RBL> F/W loaded from flash. Host Bootload disabled.
+atlantic: MAC F/W version is 3.1.121
+atlantic: RBL> F/W loaded from flash. Host Bootload disabled.
+aq0: Using 1024 TX descriptors and 1024 RX descriptors
+aq0: queue equality override not set, capping rx_queues at 4 and tx_queues at 4
+aq0: Using 4 RX queues 4 TX queues
+aq0: Using MSI-X interrupts with 5 vectors
+aq0: Assign IRQ 0 to rx ring 0
+aq0: Assign IRQ 1 to rx ring 1
+aq0: Assign IRQ 2 to rx ring 2
+aq0: Assign IRQ 3 to rx ring 3
+aq0: Assign IRQ 0 to tx ring 0
+aq0: Assign IRQ 1 to tx ring 1
+aq0: Assign IRQ 2 to tx ring 2
+aq0: Assign IRQ 3 to tx ring 3
+aq0: Assign IRQ 4 to admin proc 
+aq0: Ethernet address: ...
+aq0: netmap queues/slots: TX 4/1024, RX 4/1024
+Cuse v0.1.36 @ /dev/cuse
+Intel(R) Wireless WiFi based driver for FreeBSD
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134AMW0.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20220331/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WFDE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20220331/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20220331/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+iwlwifi0: <iwlwifi> mem 0x60541ac000-0x60541affff at device 20.3 on pci0
+iwlwifi0: could not load firmware image 'iwlwifi-QuZ-a0-hr-b0-70.ucode'
+iwlwifi0: File size way too small!
+iwlwifi0: could not load firmware image 'iwlwifi-QuZ-a0-hr-b0-69.ucode'
+iwlwifi0: File size way too small!
+ig4iic0: <Intel Tiger Lake-LP I2C Controller-4> at device 21.0 on pci0
+ig4iic0: Using MSI
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+iwlwifi0: successfully loaded firmware image 'iwlwifi-QuZ-a0-hr-b0-68.ucode'
+iwlwifi0: api flags index 2 larger than supported by driver
+iwlwifi0: TLV_FW_FSEQ_VERSION: FSEQ Version: XXX.XXX.XXX.XXX
+iwlwifi0: loaded firmware version 68.01d30b0c.0 QuZ-a0-hr-b0-68.ucode op_mode iwlmvm
+iwlwifi0: Detected Intel(R) Wi-Fi 6 AX201 160MHz, REV=0x351
+iwlwifi0: Detected RF HR B5, rfid=0x10a100
+iwlwifi0: base HW address: XXX
+ig4iic1: <Intel Tiger Lake-LP I2C Controller-5> at device 21.1 on pci0
+ig4iic1: Using MSI
+iicbus1: <Philips I2C bus (ACPI-hinted)> on ig4iic1
+iicbus1: <unknown card> at addr 0x21
+ichsmb0: <Intel Tiger Lake SMBus controller> port 0xefa0-0xefbf mem 0x60541b4000-0x60541b40ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+wlan0: Ethernet address: ...
+lo0: link state changed to UP
+atlantic: RBL> F/W loaded from flash. Host Bootload disabled.
+aq0: ring 0: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 1: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 2: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 3: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+atlantic: RBL> F/W loaded from flash. Host Bootload disabled.
+aq0: ring 0: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 1: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 2: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+aq0: ring 3: __PAGESIZE=4096 MCLBYTES=2048 hw->max_frame_size=2048
+atlantic: set 1 mc address XXX
+uaudio0 on uhub3
+uaudio0: <GeneralPlus USB Audio Device, class 0/0, rev 1.10/1.00, addr 2> on usbus2
+uaudio0: Play[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Play[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 48000 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 44100 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: No MIDI sequencer.
+pcm5: <USB audio> on uaudio0
+uaudio0: HID volume keys found.
+uhid0 on uhub3
+uhid0: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+uhid1 on uhub3
+uhid1: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+ums0 on uhub3
+ums0: <Logitech Gaming Mouse G600, class 0/0, rev 2.00/77.02, addr 3> on usbus2
+ums0: 16 buttons and [XYZT] coordinates ID=0
+ums1 on uhub3
+ums1: <Razer Razer Huntsman V2 Tenkeyless, class 0/0, rev 2.00/1.01, addr 4> on usbus2
+ums1: 5 buttons and [XYZ] coordinates ID=0
