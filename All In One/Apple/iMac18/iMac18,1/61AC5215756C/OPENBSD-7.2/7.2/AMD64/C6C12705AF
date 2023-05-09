@@ -1,0 +1,460 @@
+OpenBSD 7.2 (RAMDISK_CD) #725: Tue Sep 27 12:02:48 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/RAMDISK_CD
+real mem = 8415944704 (8026MB)
+avail mem = 8156864512 (7778MB)
+random: good seed from bootblocks
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x88eff000 (34 entries)
+bios0: vendor Apple Inc. version "XXX.XXX.XXX.XXX.0" date 08/22/2022
+bios0: Apple Inc. iMac18,1
+acpi0 at bios0: ACPI 5.0
+acpi0: tables DSDT FACP UEFI ECDT HPET APIC MCFG SBST SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT DMAR
+acpiec0 at acpi0
+acpihpet0 at acpi0: 23999999 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, 3591.63 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,OSXSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+cpu at mainbus0: not configured
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus 4 (RP05)
+acpiprt4 at acpi0: bus 2 (RP09)
+acpiprt5 at acpi0: bus 3 (RP10)
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+"APP0001" at acpi0 not configured
+"ACPI0008" at acpi0 not configured
+"PNP0C0C" at acpi0 not configured
+"APP0002" at acpi0 not configured
+"PNP0C0E" at acpi0 not configured
+acpicpu at acpi0 not configured
+cpu0: using VERW MDS workaround
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x03
+"Intel Iris Plus 640" rev 0x06 at pci0 dev 2 function 0 not configured
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x21: msi, AHCI 1.3.1
+scsibus0 at ahci0: 32 targets
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+nvme0 at pci1 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msi, NVMe 1.1
+nvme0: APPLE SSD SM0256L, firmware CXS8CA0Q, serial ...
+scsibus1 at nvme0: 2 targets, initiator 0
+sd0 at scsibus1 targ 1 lun 0: <NVMe, APPLE SSD SM0256, CXS8>
+sd0: 239372MB, 4096 bytes/sector, 61279344 sectors
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 4
+ppb2 at pci2 dev 0 function 0 vendor "Intel", unknown product 0x1578 rev 0x02
+pci3 at ppb2 bus 5
+ppb3 at pci3 dev 0 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci4 at ppb3 bus 6
+"Intel JHL6540 Thunderbolt" rev 0x02 at pci4 dev 0 function 0 not configured
+ppb4 at pci3 dev 1 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci5 at ppb4 bus 8
+ppb5 at pci3 dev 2 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci6 at ppb5 bus 7
+xhci1 at pci6 dev 0 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+ppb6 at pci3 dev 4 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci7 at ppb6 bus 65
+ppb7 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci8 at ppb7 bus 2
+bwfm0 at pci8 dev 0 function 0 "Broadcom BCM43602" rev 0x01: msi
+ppb8 at pci0 dev 29 function 1 "Intel 100 Series PCIE" rev 0xf1: msi
+pci9 at ppb8 bus 3
+bge0 at pci9 dev 0 function 0 "Broadcom BCM57766" rev 0x01, BCM57766 A1 (0x57766001): msi, address XXX
+brgphy0 at bge0 phy 1: BCM57765 10/100/1000baseT PHY, rev. 1
+sdhc0 at pci9 dev 0 function 1 "Broadcom SD Host Controller" rev 0x01: apic 2 int 18
+sdhc0: SDHC 3.0, 200 MHz base clock
+sdmmc0 at sdhc0: 8-bit, sd high-speed, mmc high-speed, ddr52, dma
+"Intel 200 Series LPC" rev 0x21 at pci0 dev 31 function 0 not configured
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+"Intel 200 Series HD Audio" rev 0x21 at pci0 dev 31 function 3 not configured
+"Intel 100 Series SMBus" rev 0x21 at pci0 dev 31 function 4 not configured
+isa0 at mainbus0
+com0 at isa0 port 0x3f8/8 irq 4: ns8250, no fifo
+efifb0 at mainbus0: 1920x1080, 32bpp
+wsdisplay0 at efifb0 mux 1: console (std, vt100 emulation)
+uhidev0 at uhub0 port 2 configuration 1 interface 0 "DELL DELL USB Keyboard" rev 1.10/1.04 addr 2
+uhidev0: iclass 3/1
+ukbd0 at uhidev0
+wskbd0 at ukbd0: console keyboard, using wsdisplay0
+"Apple Inc. FaceTime HD Camera (Built-in)" rev 2.00/72.52 addr 3 at uhub0 port 3 not configured
+uhub2 at uhub0 port 6 configuration 1 interface 0 "vendor 0x05e3 USB2.0 Hub" rev 2.00/7.02 addr 4
+umass0 at uhub2 port 1 configuration 1 interface 0 "USB SanDisk 3.2Gen1" rev 2.10/1.00 addr 5
+umass0: using SCSI over Bulk-Only
+scsibus2 at umass0: 2 targets, initiator 0
+sd1 at scsibus2 targ 1 lun 0: <USB, SanDisk 3.2Gen1, 1.00> removable serial....
+sd1: 14688MB, 512 bytes/sector, 30081024 sectors
+uhidev1 at uhub0 port 9 configuration 1 interface 0 "Broadcom Corp. Bluetooth USB Host Controller" rev 2.01/1.09 addr 6
+uhidev1: iclass 3/1, 1 report id
+ukbd1 at uhidev1 reportid 1
+wskbd1 at ukbd1 mux 1
+wskbd1: connecting to wsdisplay0
+uhidev2 at uhub0 port 9 configuration 1 interface 1 "Broadcom Corp. Bluetooth USB Host Controller" rev 2.01/1.09 addr 6
+uhidev2: iclass 3/1, 2 report ids
+uhid at uhidev2 reportid 2 not configured
+"Broadcom Corp. Bluetooth USB Host Controller" rev 2.01/1.09 addr 6 at uhub0 port 9 configuration 1 not configured
+softraid0 at root
+scsibus3 at softraid0: 256 targets
+root on rd0a swap on rd0b dump on rd0b
+WARNING: CHECK AND RESET THE DATE!
+bwfm0: failed loadfirmware of file brcmfmac43602-pcie.bin
+OpenBSD 7.2 (GENERIC.MP) #758: Tue Sep 27 11:57:54 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8415944704 (8026MB)
+avail mem = 8143478784 (7766MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x88eff000 (34 entries)
+bios0: vendor Apple Inc. version "XXX.XXX.XXX.XXX.0" date 08/22/2022
+bios0: Apple Inc. iMac18,1
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI ECDT HPET APIC MCFG SBST SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT DMAR
+acpi0: wakeup devices PEG0(S3) RP01(S4) RP05(S3) XHC2(S3) RP09(S3) ARPT(S4) RP10(S3) GIGE(S4) SDXC(S4) EC__(S3) XHC1(S3)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpiec0 at acpi0
+acpihpet0 at acpi0: 23999999 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, 3591.63 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,OSXSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, 3589.59 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,OSXSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, 3591.63 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,OSXSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, 3591.64 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,OSXSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus 4 (RP05)
+acpiprt4 at acpi0: bus 2 (RP09)
+acpiprt5 at acpi0: bus 3 (RP10)
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+asmc0 at acpi0: SMC_ (smc-huronriver) addr 0x300/0x20: rev 2.39f639, 670 keys
+"ACPI0008" at acpi0 not configured
+acpibtn0 at acpi0: PWRB
+abl0 at acpi0: PNLF (backlight)
+acpibtn1 at acpi0: SLPB
+acpicpu0 at acpi0### AML PARSE ERROR (0x598): Undefined name: \\_SB_.OSCP
+error evaluating: \\_PR_.CPU0._OSC
+: C2(350@151 mwait.1@0x21), C2(500@79 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0### AML PARSE ERROR (0x7d7): Undefined name: \\_SB_.OSCP
+error evaluating: \\_PR_.CPU1._OSC
+: C2(350@151 mwait.1@0x21), C2(500@79 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0### AML PARSE ERROR (0x9b2): Undefined name: \\_SB_.OSCP
+error evaluating: \\_PR_.CPU2._OSC
+: C2(350@151 mwait.1@0x21), C2(500@79 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0### AML PARSE ERROR (0xab4): Undefined name: \\_SB_.OSCP
+error evaluating: \\_PR_.CPU3._OSC
+: C2(350@151 mwait.1@0x21), C2(500@79 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpivideo0 at acpi0: IGPU
+acpivout0 at acpivideo0: DD01
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3591 MHz: speeds: 2301, 2300, 2200, 2000, 1900, 1800, 1600, 1500, 1300, 1200, 1100, 900, 800, 700, 500, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x03
+inteldrm0 at pci0 dev 2 function 0 "Intel Iris Plus 640" rev 0x06
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x21: msi, AHCI 1.3.1
+scsibus1 at ahci0: 32 targets
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+nvme0 at pci1 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msi, NVMe 1.1
+nvme0: APPLE SSD SM0256L, firmware CXS8CA0Q, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd0 at scsibus2 targ 1 lun 0: <NVMe, APPLE SSD SM0256, CXS8>
+sd0: 239372MB, 4096 bytes/sector, 61279344 sectors
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 4
+ppb2 at pci2 dev 0 function 0 vendor "Intel", unknown product 0x1578 rev 0x02
+pci3 at ppb2 bus 5
+ppb3 at pci3 dev 0 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci4 at ppb3 bus 6
+"Intel JHL6540 Thunderbolt" rev 0x02 at pci4 dev 0 function 0 not configured
+ppb4 at pci3 dev 1 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci5 at ppb4 bus 8
+ppb5 at pci3 dev 2 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci6 at ppb5 bus 7
+xhci1 at pci6 dev 0 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+ppb6 at pci3 dev 4 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci7 at ppb6 bus 65
+ppb7 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci8 at ppb7 bus 2
+bwfm0 at pci8 dev 0 function 0 "Broadcom BCM43602" rev 0x01: msi
+ppb8 at pci0 dev 29 function 1 "Intel 100 Series PCIE" rev 0xf1: msi
+pci9 at ppb8 bus 3
+bge0 at pci9 dev 0 function 0 "Broadcom BCM57766" rev 0x01, BCM57766 A1 (0x57766001): msi, address XXX
+brgphy0 at bge0 phy 1: BCM57765 10/100/1000baseT PHY, rev. 1
+sdhc0 at pci9 dev 0 function 1 "Broadcom SD Host Controller" rev 0x01: apic 2 int 18
+sdhc0: SDHC 3.0, 200 MHz base clock
+sdmmc0 at sdhc0: 8-bit, sd high-speed, mmc high-speed, ddr52, dma
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Cirrus Logic/0x8409, Intel/0x280b, using Cirrus Logic/0x8409
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic0 at ichiic0
+iic0: addr 0x2c 00=30 01=63 02=c0 04=f8 06=03 07=58 71=06 72=80 90=80 91=8b 92=51 93=02 94=22 95=27 96=a0 97=f7 98=46 99=0e 9a=64 9b=9b 9c=12 9d=ef 9f=09 a0=8f a1=ff a2=1b a3=e0 a4=a7 a5=12 a6=07 a7=9e a8=07 aa=34 ab=20 ac=b9 ad=b0 ae=aa af=80 b1=2c b2=e6 b3=23 b4=02 b7=c5 words 00=3063 01=63c0 02=c000 03=00f8 04=f800 05=0003 06=0359 07=5900
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns8250, no fifo
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 2 configuration 1 interface 0 "DELL DELL USB Keyboard" rev 1.10/1.04 addr 2
+uhidev0: iclass 3/1
+ukbd0 at uhidev0: 8 variable keys, 6 key codes
+wskbd0 at ukbd0: console keyboard
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "Apple Inc. FaceTime HD Camera (Built-in)" rev 2.00/72.52 addr 3
+video0 at uvideo0
+ugen0 at uhub0 port 3 configuration 1 "Apple Inc. FaceTime HD Camera (Built-in)" rev 2.00/72.52 addr 3
+uhub2 at uhub0 port 6 configuration 1 interface 0 "Genesys Logic USB2.0 Hub" rev 2.00/7.02 addr 4
+umass0 at uhub2 port 1 configuration 1 interface 0 "USB SanDisk 3.2Gen1" rev 2.10/1.00 addr 5
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd1 at scsibus3 targ 1 lun 0: <USB, SanDisk 3.2Gen1, 1.00> removable serial....
+sd1: 14688MB, 512 bytes/sector, 30081024 sectors
+uhidev1 at uhub0 port 9 configuration 1 interface 0 "Broadcom Corp. Bluetooth USB Host Controller" rev 2.01/1.09 addr 6
+uhidev1: iclass 3/1, 1 report id
+ukbd1 at uhidev1 reportid 1: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+uhidev2 at uhub0 port 9 configuration 1 interface 1 "Broadcom Corp. Bluetooth USB Host Controller" rev 2.01/1.09 addr 6
+uhidev2: iclass 3/1, 2 report ids
+ums0 at uhidev2 reportid 2: 3 buttons
+wsmouse0 at ums0 mux 0
+ugen1 at uhub0 port 9 configuration 1 "Broadcom Corp. Bluetooth USB Host Controller" rev 2.01/1.09 addr 6
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+root on sd0a (01a2636a316510f6.a) swap on sd0b dump on sd0b
+hib block_io biowait error 22 blk 2120209 size 512
+drm:pid0:intel_ddi_sanitize_encoder_pll_mapping *NOTICE* [drm] [ENCODER:102:DDI B/PHY B] is disabled/in DSI mode with an ungated DDI clock, gate it
+drm:pid0:intel_ddi_sanitize_encoder_pll_mapping *NOTICE* [drm] [ENCODER:116:DDI C/PHY C] is disabled/in DSI mode with an ungated DDI clock, gate it
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+bwfm0: address XXX
+uhidev3 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 7
+uhidev3: iclass 3/1
+ums1 at uhidev3: 3 buttons, Z dir
+wsmouse1 at ums1 mux 0
+syncing disks... done
+rebooting...
+OpenBSD 7.2 (GENERIC.MP) #758: Tue Sep 27 11:57:54 MDT 2022
+    XXX@XXX:/usr/src/sys/arch/amd64/compile/GENERIC.MP
+real mem = 8415944704 (8026MB)
+avail mem = 8143478784 (7766MB)
+random: good seed from bootblocks
+mpath0 at root
+scsibus0 at mpath0: 256 targets
+mainbus0 at root
+bios0 at mainbus0: SMBIOS rev. 3.0 @ 0x88eff000 (34 entries)
+bios0: vendor Apple Inc. version "XXX.XXX.XXX.XXX.0" date 08/22/2022
+bios0: Apple Inc. iMac18,1
+acpi0 at bios0: ACPI 5.0
+acpi0: sleep states S0 S3 S4 S5
+acpi0: tables DSDT FACP UEFI ECDT HPET APIC MCFG SBST SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT SSDT DMAR
+acpi0: wakeup devices PEG0(S3) RP01(S4) RP05(S3) XHC2(S3) RP09(S3) ARPT(S4) RP10(S3) GIGE(S4) SDXC(S4) EC__(S3) XHC1(S3)
+acpitimer0 at acpi0: 3579545 Hz, 24 bits
+acpiec0 at acpi0
+acpihpet0 at acpi0: 23999999 Hz
+acpimadt0 at acpi0 addr 0xfee00000: PC-AT compat
+cpu0 at mainbus0: apid 0 (boot processor)
+cpu0: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, 3591.64 MHz, 06-8e-09
+cpu0: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,OSXSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu0: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu0: smt 0, core 0, package 0
+mtrr: Pentium Pro MTRR support, 10 var ranges, 88 fixed ranges
+cpu0: apic clock running at 24MHz
+cpu0: mwait min=64, max=64, C-substates=XXX.XXX.XXX.XXX.XXX.XXX.XXX.XXX, IBE
+cpu1 at mainbus0: apid 2 (application processor)
+cpu1: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, 3589.24 MHz, 06-8e-09
+cpu1: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,OSXSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu1: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu1: smt 0, core 1, package 0
+cpu2 at mainbus0: apid 1 (application processor)
+cpu2: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, 3591.63 MHz, 06-8e-09
+cpu2: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,OSXSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu2: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu2: smt 1, core 0, package 0
+cpu3 at mainbus0: apid 3 (application processor)
+cpu3: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, 3591.64 MHz, 06-8e-09
+cpu3: FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE,SSE3,PCLMUL,DTES64,MWAIT,DS-CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,DEADLINE,AES,XSAVE,OSXSAVE,AVX,F16C,RDRAND,NXE,PAGE1GB,RDTSCP,LONG,LAHF,ABM,3DNOWP,PERF,ITSC,FSGSBASE,TSC_ADJUST,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PT,SRBDS_CTRL,MD_CLEAR,TSXFA,IBRS,IBPB,STIBP,L1DF,SSBD,SENSOR,ARAT,XSAVEOPT,XSAVEC,XGETBV1,XSAVES,MELTDOWN
+cpu3: 32KB 64b/line 8-way D-cache, 32KB 64b/line 8-way I-cache, 256KB 64b/line 4-way L2 cache, 4MB 64b/line 16-way L3 cache
+cpu3: smt 1, core 1, package 0
+ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 20, 24 pins
+acpimcfg0 at acpi0
+acpimcfg0: addr 0xe0000000, bus 0-255
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PEG0)
+acpiprt2 at acpi0: bus 1 (RP01)
+acpiprt3 at acpi0: bus 4 (RP05)
+acpiprt4 at acpi0: bus 2 (RP09)
+acpiprt5 at acpi0: bus 3 (RP10)
+acpipci0 at acpi0 PCI0: 0x00000004 0x00000011 0x00000001
+acpicmos0 at acpi0
+asmc0 at acpi0: SMC_ (smc-huronriver) addr 0x300/0x20: rev 2.39f639, 670 keys
+"ACPI0008" at acpi0 not configured
+acpibtn0 at acpi0: PWRB
+abl0 at acpi0: PNLF (backlight)
+acpibtn1 at acpi0: SLPB
+acpicpu0 at acpi0### AML PARSE ERROR (0x598): Undefined name: \\_SB_.OSCP
+error evaluating: \\_PR_.CPU0._OSC
+: C2(350@151 mwait.1@0x21), C2(500@79 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu1 at acpi0### AML PARSE ERROR (0x7d7): Undefined name: \\_SB_.OSCP
+error evaluating: \\_PR_.CPU1._OSC
+: C2(350@151 mwait.1@0x21), C2(500@79 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu2 at acpi0### AML PARSE ERROR (0x9b2): Undefined name: \\_SB_.OSCP
+error evaluating: \\_PR_.CPU2._OSC
+: C2(350@151 mwait.1@0x21), C2(500@79 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpicpu3 at acpi0### AML PARSE ERROR (0xab4): Undefined name: \\_SB_.OSCP
+error evaluating: \\_PR_.CPU3._OSC
+: C2(350@151 mwait.1@0x21), C2(500@79 mwait.1@0x10), C1(1000@1 mwait.1), PSS
+acpivideo0 at acpi0: IGPU
+acpivout0 at acpivideo0: DD01
+cpu0: using VERW MDS workaround (except on vmm entry)
+cpu0: Enhanced SpeedStep 3591 MHz: speeds: 2301, 2300, 2200, 2000, 1900, 1800, 1600, 1500, 1300, 1200, 1100, 900, 800, 700, 500, 400 MHz
+pci0 at mainbus0 bus 0
+pchb0 at pci0 dev 0 function 0 "Intel Core 7G Host" rev 0x03
+inteldrm0 at pci0 dev 2 function 0 "Intel Iris Plus 640" rev 0x06
+drm0 at inteldrm0
+inteldrm0: msi, KABYLAKE, gen 9
+xhci0 at pci0 dev 20 function 0 "Intel 100 Series xHCI" rev 0x21: msi, xHCI 1.0
+usb0 at xhci0: USB revision 3.0
+uhub0 at usb0 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+"Intel 100 Series MEI" rev 0x21 at pci0 dev 22 function 0 not configured
+ahci0 at pci0 dev 23 function 0 "Intel 100 Series AHCI" rev 0x21: msi, AHCI 1.3.1
+scsibus1 at ahci0: 32 targets
+ppb0 at pci0 dev 28 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci1 at ppb0 bus 1
+nvme0 at pci1 dev 0 function 0 "Samsung SM961/PM961 NVMe" rev 0x00: msi, NVMe 1.1
+nvme0: APPLE SSD SM0256L, firmware CXS8CA0Q, serial ...
+scsibus2 at nvme0: 2 targets, initiator 0
+sd0 at scsibus2 targ 1 lun 0: <NVMe, APPLE SSD SM0256, CXS8>
+sd0: 239372MB, 4096 bytes/sector, 61279344 sectors
+ppb1 at pci0 dev 28 function 4 "Intel 100 Series PCIE" rev 0xf1: msi
+pci2 at ppb1 bus 4
+ppb2 at pci2 dev 0 function 0 vendor "Intel", unknown product 0x1578 rev 0x02
+pci3 at ppb2 bus 5
+ppb3 at pci3 dev 0 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci4 at ppb3 bus 6
+"Intel JHL6540 Thunderbolt" rev 0x02 at pci4 dev 0 function 0 not configured
+ppb4 at pci3 dev 1 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci5 at ppb4 bus 8
+ppb5 at pci3 dev 2 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci6 at ppb5 bus 7
+xhci1 at pci6 dev 0 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi, xHCI 1.10
+usb1 at xhci1: USB revision 3.0
+uhub1 at usb1 configuration 1 interface 0 "Intel xHCI root hub" rev 3.00/1.00 addr 1
+ppb6 at pci3 dev 4 function 0 "Intel JHL6540 Thunderbolt" rev 0x02: msi
+pci7 at ppb6 bus 65
+ppb7 at pci0 dev 29 function 0 "Intel 100 Series PCIE" rev 0xf1: msi
+pci8 at ppb7 bus 2
+bwfm0 at pci8 dev 0 function 0 "Broadcom BCM43602" rev 0x01: msi
+ppb8 at pci0 dev 29 function 1 "Intel 100 Series PCIE" rev 0xf1: msi
+pci9 at ppb8 bus 3
+bge0 at pci9 dev 0 function 0 "Broadcom BCM57766" rev 0x01, BCM57766 A1 (0x57766001): msi, address XXX
+brgphy0 at bge0 phy 1: BCM57765 10/100/1000baseT PHY, rev. 1
+sdhc0 at pci9 dev 0 function 1 "Broadcom SD Host Controller" rev 0x01: apic 2 int 18
+sdhc0: SDHC 3.0, 200 MHz base clock
+sdmmc0 at sdhc0: 8-bit, sd high-speed, mmc high-speed, ddr52, dma
+pcib0 at pci0 dev 31 function 0 "Intel 200 Series LPC" rev 0x21
+"Intel 100 Series PMC" rev 0x21 at pci0 dev 31 function 2 not configured
+azalia0 at pci0 dev 31 function 3 "Intel 200 Series HD Audio" rev 0x21: msi
+azalia0: codecs: Cirrus Logic/0x8409, Intel/0x280b, using Cirrus Logic/0x8409
+audio0 at azalia0
+ichiic0 at pci0 dev 31 function 4 "Intel 100 Series SMBus" rev 0x21: apic 2 int 16
+iic0 at ichiic0
+iic0: addr 0x2c 00=30 01=63 02=c0 04=f8 06=03 07=5a 71=06 72=80 90=80 91=8b 92=51 93=02 94=22 95=27 96=a0 97=f7 98=46 99=0e 9a=64 9b=9b 9c=12 9d=ef 9f=09 a0=8f a1=ff a2=1b a3=e0 a4=a7 a5=12 a6=07 a7=9e a8=07 aa=34 ab=20 ac=b9 ad=b0 ae=aa af=80 b1=2c b2=e6 b3=23 b4=02 b7=c5 words 00=3063 01=63c0 02=c000 03=00f8 04=f800 05=0003 06=035a 07=5a00
+isa0 at pcib0
+isadma0 at isa0
+com0 at isa0 port 0x3f8/8 irq 4: ns8250, no fifo
+pcppi0 at isa0 port 0x61
+spkr0 at pcppi0
+vmm0 at mainbus0: VMX/EPT
+efifb at mainbus0 not configured
+uhidev0 at uhub0 port 1 configuration 1 interface 0 "Logitech USB Optical Mouse" rev 2.00/72.00 addr 2
+uhidev0: iclass 3/1
+ums0 at uhidev0: 3 buttons, Z dir
+wsmouse0 at ums0 mux 0
+uhidev1 at uhub0 port 2 configuration 1 interface 0 "DELL DELL USB Keyboard" rev 1.10/1.04 addr 3
+uhidev1: iclass 3/1
+ukbd0 at uhidev1: 8 variable keys, 6 key codes
+wskbd0 at ukbd0: console keyboard
+uvideo0 at uhub0 port 3 configuration 1 interface 0 "Apple Inc. FaceTime HD Camera (Built-in)" rev 2.00/72.52 addr 4
+video0 at uvideo0
+ugen0 at uhub0 port 3 configuration 1 "Apple Inc. FaceTime HD Camera (Built-in)" rev 2.00/72.52 addr 4
+uhub2 at uhub0 port 6 configuration 1 interface 0 "Genesys Logic USB2.0 Hub" rev 2.00/7.02 addr 5
+umass0 at uhub2 port 1 configuration 1 interface 0 "USB SanDisk 3.2Gen1" rev 2.10/1.00 addr 6
+umass0: using SCSI over Bulk-Only
+scsibus3 at umass0: 2 targets, initiator 0
+sd1 at scsibus3 targ 1 lun 0: <USB, SanDisk 3.2Gen1, 1.00> removable serial....
+sd1: 14688MB, 512 bytes/sector, 30081024 sectors
+uhidev2 at uhub0 port 9 configuration 1 interface 0 "Broadcom Corp. Bluetooth USB Host Controller" rev 2.01/1.09 addr 7
+uhidev2: iclass 3/1, 1 report id
+ukbd1 at uhidev2 reportid 1: 8 variable keys, 6 key codes
+wskbd1 at ukbd1 mux 1
+uhidev3 at uhub0 port 9 configuration 1 interface 1 "Broadcom Corp. Bluetooth USB Host Controller" rev 2.01/1.09 addr 7
+uhidev3: iclass 3/1, 2 report ids
+ums1 at uhidev3 reportid 2: 3 buttons
+wsmouse1 at ums1 mux 0
+ugen1 at uhub0 port 9 configuration 1 "Broadcom Corp. Bluetooth USB Host Controller" rev 2.01/1.09 addr 7
+vscsi0 at root
+scsibus4 at vscsi0: 256 targets
+softraid0 at root
+scsibus5 at softraid0: 256 targets
+root on sd0a (01a2636a316510f6.a) swap on sd0b dump on sd0b
+hib block_io biowait error 22 blk 2120209 size 512
+drm:pid0:intel_ddi_sanitize_encoder_pll_mapping *NOTICE* [drm] [ENCODER:102:DDI B/PHY B] is disabled/in DSI mode with an ungated DDI clock, gate it
+drm:pid0:intel_ddi_sanitize_encoder_pll_mapping *NOTICE* [drm] [ENCODER:116:DDI C/PHY C] is disabled/in DSI mode with an ungated DDI clock, gate it
+inteldrm0: 1920x1080, 32bpp
+wsdisplay0 at inteldrm0 mux 1: console (std, vt100 emulation), using wskbd0
+wskbd1: connecting to wsdisplay0
+wsdisplay0: screen 1-5 added (std, vt100 emulation)
+bwfm0: address XXX

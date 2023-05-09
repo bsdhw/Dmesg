@@ -1,0 +1,718 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE releng/13.1-n250148-fc952ac2212 GENERIC amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 800x600
+CPU: Intel(R) Xeon(R) CPU E3-1220 V2 @ 3.10GHz (3093.11-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306a9  Family=0x6  Model=0x3a  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: (disabled in BIOS) PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33074724864 (31542 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  S1200BTL>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-23
+Launching APs: 2 1 3
+random: entropy device external interface
+kbd0 at kbdmux0
+smbios0: Unable to allocate memory resource.
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <INTEL>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+em0: <Intel(R) 82579LM> port 0x4020-0x403f mem 0xc2400000-0xc241ffff,0xc2460000-0xc2460fff at device 25.0 on pci0
+em0: EEPROM V0.13-4
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc2450000-0xc24503ff at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+mps0: <Avago Technologies (LSI) SAS2308> port 0x3000-0x30ff mem 0xc1a40000-0xc1a4ffff,0xc1a00000-0xc1a3ffff at device 0.0 on pci1
+mps0: Firmware: XXX.XXX.XXX.XXX, Driver: XXX.XXX.XXX.XXX-fbsd
+mps0: IOCCapabilities: 5a85c<ScsiTaskFull,DiagTrace,SnapBuf,EEDP,TransRetry,EventReplay,MSIXIndex,HostDisc>
+pcib2: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+em1: <Intel(R) Gigabit CT 82574L> port 0x2000-0x201f mem 0xc2300000-0xc231ffff,0xc2320000-0xc2323fff at device 0.0 on pci2
+em1: EEPROM V2.1-0
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using 2 RX queues 2 TX queues
+em1: Using MSI-X interrupts with 3 vectors
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib3: <ACPI PCI-PCI bridge> at device 28.5 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> mem 0xc0000000-0xc0ffffff,0xc1810000-0xc1813fff,0xc1000000-0xc17fffff at device 0.0 on pci3
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc2440000-0xc24403ff at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib4: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci0: <Intel Cougar Point SATA600 controller> port 0x40f0-0x40f7,0x40e0-0x40e3,0x40d0-0x40d7,0x40c0-0x40c3,0x40b0-0x40bf,0x40a0-0x40af at device 31.2 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+atapci1: <Intel Cougar Point SATA300 controller> port 0x4090-0x4097,0x4080-0x4083,0x4070-0x4077,0x4060-0x4063,0x4050-0x405f,0x4040-0x404f at device 31.5 on pci0
+ata4: <ATA channel> at channel 0 on atapci1
+ata5: <ATA channel> at channel 1 on atapci1
+acpi_button0: <Sleep Button> on acpi0
+apei0: <ACPI Platform Error Interface> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+battery1: <ACPI Control Method Battery> on acpi0
+battery2: <ACPI Control Method Battery> on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounter "TSC-low" frequency 1546486955 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen1.1: <Intel EHCI root HUB> at usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+uhub0 on usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+uhub1 on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+Trying to mount root from ufs:/dev/ada0p2 [rw]...
+Root mount waiting for: usbus0 CAM usbus1
+uhub1: 2 ports with 2 removable, self powered
+uhub0: 2 ports with 2 removable, self powered
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+Root mount waiting for: usbus0 CAM usbus1
+uhub2: 6 ports with 6 removable, self powered
+Root mount waiting for: usbus0 CAM usbus1
+ugen1.3: <Logitech USB Receiver> at usbus1
+Root mount waiting for: usbus0 CAM usbus1
+uhub3: 6 ports with 6 removable, self powered
+usb_msc_auto_quirk: UQ_MSC_NO_GETMAXLUN set for USB mass storage device TOSHIBA TOSHIBA USB DRV (0x0930:0x1400)
+usb_msc_auto_quirk: UQ_MSC_NO_PREVENT_ALLOW set for USB mass storage device TOSHIBA TOSHIBA USB DRV (0x0930:0x1400)
+ugen1.4: <TOSHIBA TOSHIBA USB DRV> at usbus1
+umass0 on uhub2
+umass0: <TOSHIBA TOSHIBA USB DRV, class 0/0, rev 2.00/1.00, addr 4> on usbus1
+umass0:  SCSI over Bulk-Only; quirks = 0x8100
+umass0:5:0: Attached to scbus5
+ugen0.3: <American Megatrends Inc. Virtual Keyboard and Mouse> at usbus0
+ukbd0 on uhub3
+ukbd0: <Keyboard Interface> on usbus0
+kbd1 at ukbd0
+ugen1.5: <SIGMACHIP USB Keyboard> at usbus1
+ukbd1 on uhub2
+ukbd1: <SIGMACHIP USB Keyboard, class 0/0, rev 1.10/1.10, addr 5> on usbus1
+kbd2 at ukbd1
+ugen0.4: <Prolific Technology Inc. USB-Serial Controller D> at usbus0
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+ada0 at ata2 bus 0 scbus1 target 0 lun 0
+ada0: <Samsung SSD 840 EVO 120GB EXT0BB0Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA5, PIO 8192bytes)
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+da6 at umass-sim0 bus 0 scbus5 target 0 lun 0
+da6: <TOSHIBA TOSHIBA USB DRV PMAP> Removable Direct Access SPC-4 SCSI device
+da6: Serial Number...
+da6: 40.000MB/s transfers
+da6: 7644MB (15654912 512 byte sectors)
+da6: quirks=0x2<NO_6_BYTE>
+da0 at mps0 bus 0 scbus0 target 5 lun 0
+da0: <ATA WDC WD30EFRX-68E 0A82> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: Command Queueing enabled
+da0: 2861588MB (5860533168 512 byte sectors)
+da0: quirks=0x8<4K>
+da3 at mps0 bus 0 scbus0 target 8 lun 0
+da3: <ATA WDC WD30EZRX-00S 0A80> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 600.000MB/s transfers
+da3: Command Queueing enabled
+da3: 2861588MB (5860533168 512 byte sectors)
+da3: quirks=0x8<4K>
+da2 at mps0 bus 0 scbus0 target 7 lun 0
+da2: <ATA WDC WD30EZRX-00M 0A80> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 600.000MB/s transfers
+da2: Command Queueing enabled
+da2: 2861588MB (5860533168 512 byte sectors)
+da2: quirks=0x8<4K>
+da1 at mps0 bus 0 scbus0 target 6 lun 0
+da1: <ATA WDC WD30EZRX-00M 0A80> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 600.000MB/s transfers
+da1: Command Queueing enabled
+da1: 2861588MB (5860533168 512 byte sectors)
+da1: quirks=0x8<4K>
+da4 at mps0 bus 0 scbus0 target 9 lun 0
+da4: <ATA ST4000VN000-2AH1 SC60> Fixed Direct Access SPC-4 SCSI device
+da4: Serial Number...
+da4: 600.000MB/s transfers
+da4: Command Queueing enabled
+da4: 3815447MB (7814037168 512 byte sectors)
+da5 at mps0 bus 0 scbus0 target 11 lun 0
+da5: <ATA KINGSTON SHFS37A BBF0> Fixed Direct Access SPC-4 SCSI device
+da5: Serial Number...
+da5: 600.000MB/s transfers
+da5: Command Queueing enabled
+da5: 228936MB (468862128 512 byte sectors)
+ichsmb0: <Intel Cougar Point SMBus controller> port 0x4000-0x401f mem 0xc2430000-0xc24300ff at device 31.3 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_dock0: <ACPI Docking Station> on acpi0
+lo0: link state changed to UP
+em0: link state changed to UP
+ums0 on uhub3
+ums1 on uhub2
+ums1: <Logitech USB Receiver, class 0/0, rev 2.00/57.00, addr 3> on usbus1
+ums1: 16 buttons and [XYZT] coordinates ID=0
+uhid0 on uhub2
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/57.00, addr 3> on usbus1
+uhid1 on uhub2
+uhid1: <SIGMACHIP USB Keyboard, class 0/0, rev 1.10/1.10, addr 5> on usbus1
+ums0: <American Megatrends Inc. Virtual Keyboard and Mouse, class 0/0, rev 1.10/1.00, addr 3> on usbus0
+ums0: 3 buttons and [Z] coordinates ID=0
+uplcom0 on uhub3
+uplcom0: <Prolific Technology Inc. USB-Serial Controller D, class 0/0, rev 1.10/4.00, addr 4> on usbus0
+Security policy loaded: MAC/ntpd (mac_ntpd)
+ugen1.4: <TOSHIBA TOSHIBA USB DRV> at usbus1 (disconnected)
+umass0: at uhub2, port 5, addr 4 (disconnected)
+da6 at umass-sim0 bus 0 scbus5 target 0 lun 0
+da6: <TOSHIBA TOSHIBA USB DRV PMAP>  s/n ... detached
+(da6:umass-sim0:0:0:0): Periph destroyed
+umass0: detached
+usb_msc_auto_quirk: UQ_MSC_NO_GETMAXLUN set for USB mass storage device TOSHIBA TOSHIBA USB DRV (0x0930:0x1400)
+usb_msc_auto_quirk: UQ_MSC_NO_TEST_UNIT_READY set for USB mass storage device TOSHIBA TOSHIBA USB DRV (0x0930:0x1400)
+usb_msc_auto_quirk: UQ_MSC_NO_PREVENT_ALLOW set for USB mass storage device TOSHIBA TOSHIBA USB DRV (0x0930:0x1400)
+ugen1.4: <TOSHIBA TOSHIBA USB DRV> at usbus1
+umass0 on uhub2
+umass0: <TOSHIBA TOSHIBA USB DRV, class 0/0, rev 2.00/1.00, addr 4> on usbus1
+umass0:  SCSI over Bulk-Only; quirks = 0x8101
+umass0:5:0: Attached to scbus5
+da6 at umass-sim0 bus 0 scbus5 target 0 lun 0
+da6: <TOSHIBA TOSHIBA USB DRV PMAP> Removable Direct Access SPC-4 SCSI device
+da6: Serial Number...
+da6: 40.000MB/s transfers
+da6: 7644MB (15654912 512 byte sectors)
+da6: quirks=0x2<NO_6_BYTE>
+GEOM: da6: the secondary GPT table is corrupt or invalid.
+GEOM: da6: using the primary only -- recovery suggested.
+GEOM: iso9660/LIVE: the secondary GPT table is corrupt or invalid.
+GEOM: iso9660/LIVE: using the primary only -- recovery suggested.
+GEOM: diskid/XXXXXXXXXXXXXXXXXXXXXX the secondary GPT table is corrupt or invalid.
+GEOM: diskid/XXXXXXXXXXXXXXXXXXXXXX using the primary only -- recovery suggested.
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 1 0 done
+All buffers synced.
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE releng/13.1-n250148-fc952ac2212 GENERIC amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 1280x1024
+CPU: Intel(R) Xeon(R) CPU E3-1220 V2 @ 3.10GHz (3093.14-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x306a9  Family=0x6  Model=0x3a  Stepping=9
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7fbae3ff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x28100800<SYSCALL,NX,RDTSCP,LM>
+  AMD Features2=0x1<LAHF>
+  Structured Extended Features=0x281<FSGSBASE,SMEP,ERMS>
+  XSAVE Features=0x1<XSAVEOPT>
+  VT-x: (disabled in BIOS) PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 34359738368 (32768 MB)
+avail memory = 33070579712 (31538 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <INTEL  S1200BTL>
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+arc4random: WARNING: initial seeding bypassed the cryptographic random device because it was not yet seeded and the knob 'bypass_before_seeding' was enabled.
+ioapic0 <Version 2.0> irqs 0-23
+Launching APs: 2 1 3
+random: entropy device external interface
+kbd0 at kbdmux0
+smbios0: Unable to allocate memory resource.
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <INTEL>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 550
+Event timer "HPET1" frequency 14318180 Hz quality 440
+Event timer "HPET2" frequency 14318180 Hz quality 440
+Event timer "HPET3" frequency 14318180 Hz quality 440
+Event timer "HPET4" frequency 14318180 Hz quality 440
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x408-0x40b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+em0: <Intel(R) 82579LM> port 0x4020-0x403f mem 0xc2400000-0xc241ffff,0xc2460000-0xc2460fff at device 25.0 on pci0
+em0: EEPROM V0.13-4
+em0: Using 1024 TX descriptors and 1024 RX descriptors
+em0: Using an MSI interrupt
+em0: Ethernet address: ...
+em0: netmap queues/slots: TX 1/1024, RX 1/1024
+ehci0: <Intel Cougar Point USB 2.0 controller> mem 0xc2450000-0xc24503ff at device 26.0 on pci0
+usbus0: EHCI version 1.0
+usbus0 on ehci0
+usbus0: 480Mbps High Speed USB v2.0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+mps0: <Avago Technologies (LSI) SAS2308> port 0x3000-0x30ff mem 0xc1a40000-0xc1a4ffff,0xc1a00000-0xc1a3ffff at device 0.0 on pci1
+mps0: Firmware: XXX.XXX.XXX.XXX, Driver: XXX.XXX.XXX.XXX-fbsd
+mps0: IOCCapabilities: 5a85c<ScsiTaskFull,DiagTrace,SnapBuf,EEDP,TransRetry,EventReplay,MSIXIndex,HostDisc>
+pcib2: <ACPI PCI-PCI bridge> at device 28.4 on pci0
+pci2: <ACPI PCI bus> on pcib2
+em1: <Intel(R) Gigabit CT 82574L> port 0x2000-0x201f mem 0xc2300000-0xc231ffff,0xc2320000-0xc2323fff at device 0.0 on pci2
+em1: EEPROM V2.1-0
+em1: Using 1024 TX descriptors and 1024 RX descriptors
+em1: Using 2 RX queues 2 TX queues
+em1: Using MSI-X interrupts with 3 vectors
+em1: Ethernet address: ...
+em1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib3: <ACPI PCI-PCI bridge> at device 28.5 on pci0
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> mem 0xc0000000-0xc0ffffff,0xc1810000-0xc1813fff,0xc1000000-0xc17fffff at device 0.0 on pci3
+ehci1: <Intel Cougar Point USB 2.0 controller> mem 0xc2440000-0xc24403ff at device 29.0 on pci0
+usbus1: EHCI version 1.0
+usbus1 on ehci1
+usbus1: 480Mbps High Speed USB v2.0
+pcib4: <ACPI PCI-PCI bridge> at device 30.0 on pci0
+pci4: <ACPI PCI bus> on pcib4
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+atapci0: <Intel Cougar Point SATA600 controller> port 0x40f0-0x40f7,0x40e0-0x40e3,0x40d0-0x40d7,0x40c0-0x40c3,0x40b0-0x40bf,0x40a0-0x40af at device 31.2 on pci0
+ata2: <ATA channel> at channel 0 on atapci0
+ata3: <ATA channel> at channel 1 on atapci0
+atapci1: <Intel Cougar Point SATA300 controller> port 0x4090-0x4097,0x4080-0x4083,0x4070-0x4077,0x4060-0x4063,0x4050-0x405f,0x4040-0x404f at device 31.5 on pci0
+ata4: <ATA channel> at channel 0 on atapci1
+ata5: <ATA channel> at channel 1 on atapci1
+acpi_button0: <Sleep Button> on acpi0
+apei0: <ACPI Platform Error Interface> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+battery0: <ACPI Control Method Battery> on acpi0
+battery1: <ACPI Control Method Battery> on acpi0
+battery2: <ACPI Control Method Battery> on acpi0
+est0: <Enhanced SpeedStep Frequency Control> on cpu0
+Timecounter "TSC-low" frequency 1546487056 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen1.1: <Intel EHCI root HUB> at usbus1
+uhub0 on usbus1
+uhub0: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus1
+ugen0.1: <Intel EHCI root HUB> at usbus0
+uhub1 on usbus0
+uhub1: <Intel EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus0
+Trying to mount root from cd9660:/dev/iso9660/LIVE []...
+uhub0: 2 ports with 2 removable, self powered
+uhub1: 2 ports with 2 removable, self powered
+Root mount waiting for: usbus0 CAM usbus1
+ugen1.2: <vendor 0x8087 product 0x0024> at usbus1
+uhub2 on uhub0
+uhub2: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus1
+ugen0.2: <vendor 0x8087 product 0x0024> at usbus0
+uhub3 on uhub1
+uhub3: <vendor 0x8087 product 0x0024, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+Root mount waiting for: usbus0 CAM usbus1
+uhub2: 6 ports with 6 removable, self powered
+ugen1.3: <Logitech USB Receiver> at usbus1
+Root mount waiting for: usbus0 CAM usbus1
+uhub3: 6 ports with 6 removable, self powered
+Root mount waiting for: usbus0 CAM usbus1
+usb_msc_auto_quirk: UQ_MSC_NO_GETMAXLUN set for USB mass storage device TOSHIBA TOSHIBA USB DRV (0x0930:0x1400)
+usb_msc_auto_quirk: UQ_MSC_NO_PREVENT_ALLOW set for USB mass storage device TOSHIBA TOSHIBA USB DRV (0x0930:0x1400)
+ugen0.3: <American Megatrends Inc. Virtual Keyboard and Mouse> at usbus0
+ukbd0 on uhub3
+ukbd0: <Keyboard Interface> on usbus0
+kbd1 at ukbd0
+ugen1.4: <TOSHIBA TOSHIBA USB DRV> at usbus1
+umass0 on uhub2
+umass0: <TOSHIBA TOSHIBA USB DRV, class 0/0, rev 2.00/1.00, addr 4> on usbus1
+umass0:  SCSI over Bulk-Only; quirks = 0x8100
+umass0:5:0: Attached to scbus5
+ugen0.4: <Prolific Technology Inc. USB-Serial Controller D> at usbus0
+ugen1.5: <SIGMACHIP USB Keyboard> at usbus1
+ukbd1 on uhub2
+ukbd1: <SIGMACHIP USB Keyboard, class 0/0, rev 1.10/1.10, addr 5> on usbus1
+kbd2 at ukbd1
+Root mount waiting for: CAM
+Root mount waiting for: CAM
+ada0 at ata2 bus 0 scbus1 target 0 lun 0
+ada0: <Samsung SSD 840 EVO 120GB EXT0BB0Q> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA5, PIO 8192bytes)
+ada0: 114473MB (234441648 512 byte sectors)
+ada0: quirks=0x3<4K,NCQ_TRIM_BROKEN>
+da6 at umass-sim0 bus 0 scbus5 target 0 lun 0
+da6: <TOSHIBA TOSHIBA USB DRV PMAP> Removable Direct Access SPC-4 SCSI device
+da6: Serial Number...
+da6: 40.000MB/s transfers
+da6: 7644MB (15654912 512 byte sectors)
+da6: quirks=0x2<NO_6_BYTE>
+da0 at mps0 bus 0 scbus0 target 5 lun 0
+da0: <ATA WDC WD30EFRX-68E 0A82> Fixed Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 600.000MB/s transfers
+da0: Command Queueing enabled
+da0: 2861588MB (5860533168 512 byte sectors)
+da0: quirks=0x8<4K>
+da3 at mps0 bus 0 scbus0 target 8 lun 0
+da3: <ATA WDC WD30EZRX-00S 0A80> Fixed Direct Access SPC-4 SCSI device
+da3: Serial Number...
+da3: 600.000MB/s transfers
+da3: Command Queueing enabled
+da3: 2861588MB (5860533168 512 byte sectors)
+da3: quirks=0x8<4K>
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT32 volume detected.
+GEOM_LABEL[1]: MSDOSFS: ada0p1: FAT32 volume has no name.
+GEOM_LABEL[1]: Label for provider ada0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: UFS2 file system detected on ada0p2.
+GEOM_LABEL[1]: Label for provider ada0p2 is ufsid/XXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: UFS2 file system detected on ada0p2.
+GEOM_LABEL[1]: MSDOSFS: ada0p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider ada0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+da1 at mps0 bus 0 scbus0 target 6 lun 0
+da1: <ATA WDC WD30EZRX-00M 0A80> Fixed Direct Access SPC-4 SCSI device
+da1: Serial Number...
+da1: 600.000MB/s transfers
+da1: Command Queueing enabled
+da1: 2861588MB (5860533168 512 byte sectors)
+da1: quirks=0x8<4K>
+GEOM_LABEL[1]: MSDOSFS: ada0p3: no FAT signature found.
+da2 at mps0 bus 0 scbus0 target 7 lun 0
+da2: <ATA WDC WD30EZRX-00M 0A80> Fixed Direct Access SPC-4 SCSI device
+da2: Serial Number...
+da2: 600.000MB/s transfers
+da2: Command Queueing enabled
+da2: 2861588MB (5860533168 512 byte sectors)
+da2: quirks=0x8<4K>
+da4 at mps0 bus 0 scbus0 target 9 lun 0
+da4: <ATA ST4000VN000-2AH1 SC60> Fixed Direct Access SPC-4 SCSI device
+da4: Serial Number...
+da4: 600.000MB/s transfers
+da4: Command Queueing enabled
+da4: 3815447MB (7814037168 512 byte sectors)
+da5 at mps0 bus 0 scbus0 target 11 lun 0
+da5: <ATA KINGSTON SHFS37A BBF0> Fixed Direct Access SPC-4 SCSI device
+da5: Serial Number...
+da5: 600.000MB/s transfers
+da5: Command Queueing enabled
+da5: 228936MB (468862128 512 byte sectors)
+GEOM_LABEL[1]: MSDOSFS: da0: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da0 is diskid/XXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: da1: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da1 is diskid/XXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: da2: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da2 is diskid/XXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: da3: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da3 is diskid/XXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: da4: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da4 is diskid/XXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: da5: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da5 is diskid/XXXXXXXXXXXXXXXXXXXXXX
+GEOM: da6: the secondary GPT table is corrupt or invalid.
+GEOM: da6: using the primary only -- recovery suggested.
+GEOM_LABEL[1]: ISO9660 file system detected on da6.
+GEOM_LABEL[1]: Label for provider da6 is iso9660/LIVE.
+GEOM_LABEL[1]: MSDOSFS: da6: FAT12/16 volume not valid.
+GEOM_LABEL[1]: Label for provider da6 is diskid/XXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT32 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT32 volume has no name.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: UFS2 file system detected on diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label XXXXXXXXXXXXXXXX(ufsid/XXXXXXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: UFS2 file system detected on diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label for provider da0p1 is gpt/efiboot0.
+GEOM_LABEL[1]: Label for provider da0p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p1: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: da0p1: FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label for provider da0p2 is gpt/gptboot0.
+GEOM_LABEL[1]: Label for provider da0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da0p3 is gpt/swap0.
+GEOM_LABEL[1]: Label for provider da0p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p3: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da0p4 is gpt/zfs0.
+GEOM_LABEL[1]: Label for provider da0p4 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da0p4: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da1p1 is gpt/efiboot1.
+GEOM_LABEL[1]: Label for provider da1p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da1p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da1p2 is gpt/gptboot1.
+GEOM_LABEL[1]: Label for provider da1p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da1p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da1p3 is gpt/swap1.
+GEOM_LABEL[1]: Label for provider da1p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da1p3: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da1p4 is gpt/zfs1.
+GEOM_LABEL[1]: Label for provider da1p4 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da1p4: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da2p1 is gpt/efiboot2.
+GEOM_LABEL[1]: Label for provider da2p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da2p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da2p2 is gpt/gptboot2.
+GEOM_LABEL[1]: Label for provider da2p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da2p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da2p3 is gpt/swap2.
+GEOM_LABEL[1]: Label for provider da2p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da2p3: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da2p4 is gpt/zfs2.
+GEOM_LABEL[1]: Label for provider da2p4 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da2p4: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da3p1 is gpt/efiboot3.
+GEOM_LABEL[1]: Label for provider da3p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da3p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da3p2 is gpt/gptboot3.
+GEOM_LABEL[1]: Label for provider da3p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da3p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da3p3 is gpt/swap3.
+GEOM_LABEL[1]: Label for provider da3p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da3p3: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da3p4 is gpt/zfs3.
+GEOM_LABEL[1]: Label for provider da3p4 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da3p4: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da4p1 is gpt/efiboot4.
+GEOM_LABEL[1]: Label for provider da4p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da4p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da4p2 is gpt/gptboot4.
+GEOM_LABEL[1]: Label for provider da4p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da4p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da4p3 is gpt/swap4.
+GEOM_LABEL[1]: Label for provider da4p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da4p3: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da4p4 is gpt/zfs4.
+GEOM_LABEL[1]: Label for provider da4p4 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da4p4: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da5p1 is gpt/efiboot5.
+GEOM_LABEL[1]: Label for provider da5p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da5p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da5p2 is gpt/gptboot5.
+GEOM_LABEL[1]: Label for provider da5p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da5p2: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da5p3 is gpt/swap5.
+GEOM_LABEL[1]: Label for provider da5p3 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da5p3: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da5p4 is gpt/zfs5.
+GEOM_LABEL[1]: Label for provider da5p4 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da5p4: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da6p1 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da6p1: no FAT signature found.
+GEOM_LABEL[1]: Label for provider da6p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: MSDOSFS: da6p2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label for provider da6p2 is msdosfs/EFISYS.
+GEOM: iso9660/LIVE: the secondary GPT table is corrupt or invalid.
+GEOM: iso9660/LIVE: using the primary only -- recovery suggested.
+GEOM: diskid/XXXXXXXXXXXXXXXXXXXXXX the secondary GPT table is corrupt or invalid.
+GEOM: diskid/XXXXXXXXXXXXXXXXXXXXXX using the primary only -- recovery suggested.
+GEOM_LABEL[1]: Label efiboot0(gpt/efiboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT12/16 volume has no name.
+GEOM_LABEL[1]: Label gptboot0(gpt/gptboot0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label swap0(gpt/swap0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs0(gpt/zfs0) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label efiboot1(gpt/efiboot1) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label gptboot1(gpt/gptboot1) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label swap1(gpt/swap1) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs1(gpt/zfs1) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label efiboot2(gpt/efiboot2) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label gptboot2(gpt/gptboot2) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label swap2(gpt/swap2) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs2(gpt/zfs2) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label efiboot3(gpt/efiboot3) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label gptboot3(gpt/gptboot3) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label swap3(gpt/swap3) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs3(gpt/zfs3) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label efiboot4(gpt/efiboot4) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label gptboot4(gpt/gptboot4) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label swap4(gpt/swap4) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs4(gpt/zfs4) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label efiboot5(gpt/efiboot5) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+random: unblocking device.
+GEOM_LABEL[1]: Label gptboot5(gpt/gptboot5) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label swap5(gpt/swap5) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label zfs5(gpt/zfs5) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp1).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp1: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: MSDOSFS: iso9660/LIVEp2: FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (iso9660/LIVEp2).
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXXX FAT12/FAT16 volume detected.
+GEOM_LABEL[1]: Label EFISYS(msdosfs/EFISYS) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: md0: no FAT signature found.
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: Label for provider md0.uzip is ufsid/XXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: UFS1 file system detected on md0.uzip.
+GEOM_LABEL[1]: MSDOSFS: md0.uzip: no FAT signature found.
+Cuse v0.1.36 @ /dev/cuse
+utouch0 on uhub3
+utouch0: <Mouse Interface> on usbus0
+utouch0: 3 buttons and [XYZ] axes
+ichsmb0: <Intel Cougar Point SMBus controller> port 0x4000-0x401f mem 0xc2430000-0xc24300ff at device 31.3 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_dock0: <ACPI Docking Station> on acpi0
+lo0: link state changed to UP
+em0: link state changed to UP
+ums0 on uhub2
+ums0: <Logitech USB Receiver, class 0/0, rev 2.00/57.00, addr 3> on usbus1
+ums0: 16 buttons and [XYZT] coordinates ID=0
+uhid0 on uhub2
+uhid0: <Logitech USB Receiver, class 0/0, rev 2.00/57.00, addr 3> on usbus1
+uhid1 on uhub2
+uhid1: <SIGMACHIP USB Keyboard, class 0/0, rev 1.10/1.10, addr 5> on usbus1
+uplcom0 on uhub3
+uplcom0: <Prolific Technology Inc. USB-Serial Controller D, class 0/0, rev 1.10/4.00, addr 4> on usbus0
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label ufsid/XXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: UFS2 file system detected on ada0p2.
+GEOM_LABEL[1]: Label for provider ada0p2 is ufsid/XXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: UFS2 file system detected on ada0p2.
+GEOM_LABEL[1]: MSDOSFS: ada0p2: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT32 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT32 volume has no name.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: UFS2 file system detected on diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label XXXXXXXXXXXXXXXX(ufsid/XXXXXXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: UFS2 file system detected on diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label ufsid/XXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.
+GEOM_LABEL[1]: MSDOSFS: ada0: no FAT volume detected.
+GEOM_LABEL[1]: Label for provider ada0 is diskid/XXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label for provider ada0p2 is gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.
+GEOM_LABEL[1]: UFS2 file system detected on ada0p2.
+GEOM_LABEL[1]: Label for provider ada0p2 is ufsid/XXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: UFS2 file system detected on ada0p2.
+GEOM_LABEL[1]: MSDOSFS: ada0p2: no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT32 volume detected.
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX FAT32 volume has no name.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: UFS2 file system detected on diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: Label XXXXXXXXXXXXXXXX(ufsid/XXXXXXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: UFS2 file system detected on diskid/XXXXXXXXXXXXXXXXXXXXXXX
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX(gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX) already exists (diskid/XXXXXXXXXXXXXXXXXXXXXX).
+GEOM_LABEL[1]: MSDOSFS: diskid/XXXXXXXXXXXXXXXXXXXXXXX no FAT signature found.
+GEOM_LABEL[1]: Label diskid/XXXXXXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label ufsid/XXXXXXXXXXXXXXXX removed.
+GEOM_LABEL[1]: Label gptid/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX removed.

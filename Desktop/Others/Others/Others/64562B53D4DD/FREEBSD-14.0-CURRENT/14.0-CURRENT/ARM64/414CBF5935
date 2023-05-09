@@ -1,0 +1,1377 @@
+---<<BOOT>>---
+GDB: debug ports: uart
+GDB: current port: uart
+KDB: debugger backends: ddb gdb
+KDB: current backend: ddb
+                   Type     Physical      Virtual   #Pages Attr
+               Reserved 000000000000 000000000000 00000af0 WC WT WB 
+     ConventionalMemory 000000af0000 000000000000 00007910 WC WT WB 
+               Reserved 000008400000 000000000000 00001000 WC WT WB 
+     ConventionalMemory 000009400000 000000000000 0003616f WC WT WB 
+       BootServicesCode 00003f56f000 000000000000 00000038 WC WT WB 
+       BootServicesData 00003f5a7000 000000000000 00000a59 WC WT WB 
+     ConventionalMemory 000040000000 000000000000 000a48f4 WC WT WB 
+             LoaderData 0000e48f4000 000000000000 00008000 WC WT WB 
+             LoaderCode 0000ec8f4000 000000000000 000000cf WC WT WB 
+               Reserved 0000ec9c3000 000000000000 0000004d WC WT WB 
+    RuntimeServicesData 0000eca10000 0000eca10000 00000010 WC WT WB RUNTIME
+    RuntimeServicesCode 0000eca20000 0000eca20000 000000c0 WC WT WB RUNTIME
+      ACPIReclaimMemory 0000ecae0000 000000000000 00000010 WC WT WB 
+    RuntimeServicesCode 0000ecaf0000 0000ecaf0000 00000050 WC WT WB RUNTIME
+     ConventionalMemory 0000ecb40000 000000000000 00000003 WC WT WB 
+             LoaderData 0000ecb43000 000000000000 00000001 WC WT WB 
+     ConventionalMemory 0000ecb44000 000000000000 00001db9 WC WT WB 
+       BootServicesData 0000ee8fd000 000000000000 00000001 WC WT WB 
+     ConventionalMemory 0000ee8fe000 000000000000 000000cf WC WT WB 
+       BootServicesData 0000ee9cd000 000000000000 0000106b WC WT WB 
+     ConventionalMemory 0000efa38000 000000000000 00000157 WC WT WB 
+       BootServicesCode 0000efb8f000 000000000000 00000291 WC WT WB 
+    RuntimeServicesCode 0000efe20000 0000efe20000 00000090 WC WT WB RUNTIME
+     ConventionalMemory 0000efeb0000 000000000000 00000010 WC WT WB 
+    RuntimeServicesData 0000efec0000 0000efec0000 00000120 WC WT WB RUNTIME
+     ConventionalMemory 0000effe0000 000000000000 0000001f WC WT WB 
+       BootServicesData 0000effff000 000000000000 00000001 WC WT WB 
+Physical memory chunk(s):
+  0x00af0000 - 0x083fffff,   121 MB (  30992 pages)
+  0x09400000 - 0xec9c2fff,  3637 MB ( 931267 pages)
+  0xeca10000 - 0xefffffff,    53 MB (  13808 pages)
+Excluded memory regions:
+  0xe4a00000 - 0xe6228fff,    24 MB (   6185 pages) NoAlloc 
+  0xeca10000 - 0xecb3ffff,     1 MB (    304 pages) NoAlloc 
+  0xefe20000 - 0xefeaffff,     0 MB (    144 pages) NoAlloc 
+  0xefec0000 - 0xeffdffff,     1 MB (    288 pages) NoAlloc 
+Found 4 CPUs in the device tree
+Copyright (c) B817-9222 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 main-n261950-4aeb939ecf8b-dirty: Sun Apr  2 17:42:01 MSK 2023
+    XXX@XXX:/usr/crochet/work/obj/usr/crochet/src-current-14.0/arm64.aarch64/sys/EXPERT arm64
+FreeBSD clang version 14.0.5 (https://github.com/llvm/llvm-project.git llvmorg-14.0.5-0-gc12386ae247c)
+VT: init without driver.
+Preloaded elf kernel "/boot/kernel/kernel" at 0xffff0000015f3000.
+Preloaded boot_entropy_cache "/boot/entropy" at 0xffff0000015fc3b0.
+Preloaded elf module "/boot/kernel/zfs.ko" at 0xffff0000015fc408.
+Preloaded elf module "/boot/modules/if_re.ko" at 0xffff0000015fcc60.
+Preloaded hostuuid "/etc/hostid" at 0xffff0000015fd338.
+Preloaded boot_entropy_platform "efi_rng_seed" at 0xffff0000015fd388.
+Preloaded TSLOG data "TSLOG" at 0xffff0000015fd3e0.
+real memory  = 3997970432 (3812 MB)
+Physical memory chunk(s):
+0x00000000af0000 - 0x000000083fffff, 126943232 bytes (30992 pages)
+0x00000009400000 - 0x000000debd8fff, 3581775872 bytes (874457 pages)
+0x000000e6229000 - 0x000000ec9c2fff, 108634112 bytes (26522 pages)
+0x000000ecb40000 - 0x000000efe1ffff, 53346304 bytes (13024 pages)
+0x000000efeb0000 - 0x000000efebffff, 65536 bytes (16 pages)
+0x000000effe0000 - 0x000000efffffff, 131072 bytes (32 pages)
+avail memory = 3869696000 (3690 MB)
+Starting CPU 1 (100)
+Starting CPU 2 (200)
+Starting CPU 3 (300)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+Enabling LSE atomics in the kernel
+random: read 4096 bytes from preloaded cache
+random: read 2048 bytes from platform bootloader
+random: unblocking device.
+VIMAGE (virtualized network stack) enabled
+hostuuid: using XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ULE: setup cpu 0
+ULE: setup cpu 1
+ULE: setup cpu 2
+ULE: setup cpu 3
+random: entropy device external interface
+snd_unit_init() u=0x00ff8000 [512] d=0x00007c00 [32] c=0x000003ff [1024]
+feeder_register: snd_unit=-1 snd_maxautovchans=16 latency=2 feeder_rate_min=1 feeder_rate_max=2016000 feeder_rate_round=25
+MAP eca10000 mode 2 pages 16
+MAP eca20000 mode 2 pages 192
+MAP ecaf0000 mode 2 pages 80
+MAP efe20000 mode 2 pages 144
+MAP efec0000 mode 2 pages 288
+tcp_log: tcp_log device
+kbd0 at kbdmux0
+mem: <memory>
+null: <full device, null device, zero device>
+openfirm: <Open Firmware control device>
+crypto: <crypto core>
+ofwbus0: <Open Firmware Device Tree>
+clk_fixed0: <Fixed clock> on ofwbus0
+clk_fixed1: <Fixed clock> on ofwbus0
+rk_grf0: <RockChip General Register Files> mem 0xfdc20000-0xfdc2ffff on ofwbus0
+rk_grf1: <RockChip General Register Files> mem 0xfdc50000-0xfdc50fff on ofwbus0
+rk_grf2: <RockChip General Register Files> mem 0xfdc60000-0xfdc6ffff on ofwbus0
+rk_grf3: <RockChip General Register Files> mem 0xfdc80000-0xfdc80fff on ofwbus0
+rk_grf4: <RockChip General Register Files> mem 0xfdc90000-0xfdc90fff on ofwbus0
+rk_grf5: <RockChip General Register Files> mem 0xfdca0000-0xfdca7fff on ofwbus0
+rk_grf6: <RockChip General Register Files> mem 0xfdca8000-0xfdcaffff on ofwbus0
+rk3568_pmucru0: <Rockchip RK3568 PMU Clock & Reset Unit> mem 0xfdd00000-0xfdd00fff on ofwbus0
+clknode_link_recalc: Attempt to use unresolved linked clock: cpll
+Cannot get frequency for clk: cpll, error: 9
+Clock: cpll, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gpll
+Cannot get frequency for clk: gpll, error: 9
+Clock: gpll, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: usb480m
+Cannot get frequency for clk: usb480m, error: 9
+Clock: usb480m, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: clk_32k_pvtm
+Cannot get frequency for clk: clk_32k_pvtm, error: 9
+Clock: clk_32k_pvtm, parent: (NULL)(-1), freq: 9
+Clock: clk_rtc_32k, parent: clk_rtc32k_frac(2), freq: 0
+Clock: sclk_uart0_mux, parent: xin24m(2), freq: 24000000
+Clock: ppll, parent: xin24m(0), freq: 200000000
+Clock: hpll, parent: xin24m(0), freq: 594000000
+Clock: ppll_ph0, parent: ppll(0), freq: 100000000
+Clock: ppll_ph180, parent: ppll(0), freq: 100000000
+Clock: hpll_ph0, parent: hpll(0), freq: 297000000
+Clock: clk_pdpmu, parent: ppll(0), freq: 200000000
+Clock: pclk_pdpmu, parent: clk_pdpmu(0), freq: 100000000
+Clock: clk_i2c0, parent: clk_pdpmu(0), freq: 100000000
+Clock: clk_rtc32k_frac, parent: xin24m(0), freq: 0
+Clock: xin_osc0_div, parent: xin24m(0), freq: 24000000
+Clock: sclk_uart0_div, parent: ppll(0), freq: 200000000
+Clock: sclk_uart0_frac, parent: sclk_uart0_div(0), freq: 0
+Clock: dbclk_gpio0_c, parent: xin24m(0), freq: 24000000
+Clock: clk_pwm0, parent: xin24m(0), freq: 12000000
+Clock: clk_ref24m, parent: clk_pdpmu(0), freq: 20000000
+Clock: clk_usbphy0_ref, parent: xin_osc0_usbphy0_g(1), freq: 24000000
+Clock: clk_usbphy1_ref, parent: xin_osc0_usbphy1_g(1), freq: 24000000
+Clock: clk_mipidsiphy0_ref, parent: xin_osc0_mipidsiphy0_g(1), freq: 24000000
+Clock: clk_mipidsiphy1_ref, parent: xin_osc0_mipidsiphy1_g(1), freq: 24000000
+Clock: clk_wifi_div, parent: clk_pdpmu(0), freq: 33333333
+Clock: clk_wifi, parent: clk_wifi_osc0(0), freq: 24000000
+Clock: clk_pciephy0_div, parent: ppll_ph0(0), freq: 25000000
+Clock: clk_pciephy0_ref, parent: clk_pciephy0_div(1), freq: 25000000
+Clock: clk_pciephy1_div, parent: ppll_ph0(0), freq: 25000000
+Clock: clk_pciephy1_ref, parent: clk_pciephy1_div(1), freq: 25000000
+Clock: clk_pciephy2_div, parent: ppll_ph0(0), freq: 100000000
+Clock: clk_pciephy2_ref, parent: clk_pciephy2_div(1), freq: 100000000
+Clock: clk_hdmi_ref, parent: hpll(0), freq: 594000000
+Clock: pclk_pmu, parent: pclk_pdpmu(0), freq: 100000000
+Clock: dbclk_gpio0, parent: dbclk_gpio0_c(0), freq: 24000000
+Clock: clk_pmu, parent: xin24m(0), freq: 24000000
+Clock: pclk_i2c0, parent: pclk_pdpmu(0), freq: 100000000
+Clock: pclk_uart0, parent: pclk_pdpmu(0), freq: 100000000
+Clock: sclk_uart0, parent: sclk_uart0_mux(0), freq: 24000000
+Clock: pclk_gpio0, parent: pclk_pdpmu(0), freq: 100000000
+Clock: pclk_pwm0, parent: pclk_pdpmu(0), freq: 100000000
+Clock: clk_capture_pwm0_ndft, parent: xin24m(0), freq: 24000000
+Clock: pclk_pmupvtm, parent: pclk_pdpmu(0), freq: 100000000
+Clock: clk_pmupvtm, parent: xin24m(0), freq: 24000000
+Clock: clk_core_pmupvtm, parent: xin24m(0), freq: 24000000
+Clock: xin_osc0_usbphy0_g, parent: xin24m(0), freq: 24000000
+Clock: xin_osc0_usbphy1_g, parent: xin24m(0), freq: 24000000
+Clock: xin_osc0_mipidsiphy0_g, parent: xin24m(0), freq: 24000000
+Clock: xin_osc0_mipidsiphy1_g, parent: xin24m(0), freq: 24000000
+Clock: clk_wifi_osc0, parent: xin24m(0), freq: 24000000
+Clock: clk_pciephy0_osc0, parent: xin24m(0), freq: 24000000
+Clock: clk_pciephy1_osc0, parent: xin24m(0), freq: 24000000
+Clock: clk_pciephy2_osc0, parent: xin24m(0), freq: 24000000
+Clock: clk_pcie30phy_ref_m, parent: ppll_ph0(0), freq: 100000000
+Clock: clk_pcie30phy_ref_n, parent: ppll_ph180(0), freq: 100000000
+Clock: xin_osc0_edpphy_g, parent: xin24m(0), freq: 24000000
+rk3568_cru0: <Rockchip RK3568 Clock & Reset Unit> mem 0xfdd20000-0xfdd20fff on ofwbus0
+clknode_link_recalc: Attempt to use unresolved linked clock: usb480m_phy
+Cannot get frequency for clk: usb480m_phy, error: 9
+Clock: usb480m_phy, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: mpll
+Cannot get frequency for clk: mpll, error: 9
+Clock: mpll, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: i2s0_mclkin
+Cannot get frequency for clk: i2s0_mclkin, error: 9
+Clock: i2s0_mclkin, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: i2s1_mclkin
+Cannot get frequency for clk: i2s1_mclkin, error: 9
+Clock: i2s1_mclkin, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: i2s2_mclkin
+Cannot get frequency for clk: i2s2_mclkin, error: 9
+Clock: i2s2_mclkin, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: i2s3_mclkin
+Cannot get frequency for clk: i2s3_mclkin, error: 9
+Clock: i2s3_mclkin, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gpu_pvtpll_out
+Cannot get frequency for clk: gpu_pvtpll_out, error: 9
+Clock: gpu_pvtpll_out, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: npu_pvtpll_out
+Cannot get frequency for clk: npu_pvtpll_out, error: 9
+Clock: npu_pvtpll_out, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac0_clkin
+Cannot get frequency for clk: gmac0_clkin, error: 9
+Clock: gmac0_clkin, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac1_clkin
+Cannot get frequency for clk: gmac1_clkin, error: 9
+Clock: gmac1_clkin, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: clk_gmac0_xpcs_mii
+Cannot get frequency for clk: clk_gmac0_xpcs_mii, error: 9
+Clock: clk_gmac0_xpcs_mii, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: clk_gmac1_xpcs_mii
+Cannot get frequency for clk: clk_gmac1_xpcs_mii, error: 9
+Clock: clk_gmac1_xpcs_mii, parent: (NULL)(-1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: dummy
+Cannot get frequency for clk: dummy, error: 9
+Clock: dummy, parent: (NULL)(-1), freq: 9
+Clock: apll, parent: xin24m(0), freq: 1992000000
+Clock: dpll, parent: xin24m(0), freq: 780000000
+Clock: gpll, parent: xin24m(0), freq: 1188000000
+Clock: cpll, parent: xin24m(0), freq: 1000000000
+Clock: npll, parent: xin24m(0), freq: 1200000000
+Clock: vpll, parent: xin24m(0), freq: 500000000
+Clock: armclk, parent: gpll(1), freq: 1188000000
+Clock: clk_osc0_div_375k, parent: clk_osc0_div_750k(0), freq: 375000
+Clock: xin_osc0_half, parent: xin24m(0), freq: 12000000
+Clock: usb480m, parent: xin24m(0), freq: 24000000
+Clock: gpll_400m, parent: gpll(0), freq: 396000000
+Clock: gpll_300m, parent: gpll(0), freq: 297000000
+Clock: gpll_200m, parent: gpll(0), freq: 198000000
+Clock: gpll_150m, parent: gpll(0), freq: 148500000
+Clock: gpll_100m, parent: gpll(0), freq: 99000000
+Clock: gpll_75m, parent: gpll(0), freq: 74250000
+Clock: gpll_20m, parent: gpll(0), freq: 19800000
+Clock: cpll_500m, parent: cpll(0), freq: 500000000
+Clock: cpll_333m, parent: cpll(0), freq: 333333333
+Clock: cpll_250m, parent: cpll(0), freq: 250000000
+Clock: cpll_125m, parent: cpll(0), freq: 125000000
+Clock: cpll_100m, parent: cpll(0), freq: 100000000
+Clock: cpll_62p5, parent: cpll(0), freq: 62500000
+Clock: cpll_50m, parent: cpll(0), freq: 50000000
+Clock: cpll_25m, parent: cpll(0), freq: 25000000
+Clock: clk_osc0_div_750k, parent: xin24m(0), freq: 750000
+Clock: sclk_core_src, parent: gpll(1), freq: 1188000000
+Clock: sclk_core, parent: npll(1), freq: 1200000000
+Clock: atclk_core, parent: armclk(0), freq: 169714285
+Clock: gicclk_core, parent: armclk(0), freq: 169714285
+Clock: pclk_core_pre, parent: armclk(0), freq: 84857142
+Clock: periphclk_core_pre, parent: armclk(0), freq: 84857142
+Clock: tsclk_core, parent: periphclk_core_pre(0), freq: 42428571
+Clock: cntclk_core, parent: periphclk_core_pre(0), freq: 42428571
+Clock: aclk_core, parent: sclk_core(0), freq: 600000000
+Clock: aclk_core_niu2bus, parent: gpll_150m(0), freq: 148500000
+Clock: clk_gpu_src, parent: cpll(2), freq: 500000000
+Clock: clk_gpu_pre_mux, parent: clk_gpu_src(0), freq: 500000000
+Clock: aclk_gpu_pre, parent: clk_gpu_pre_mux(0), freq: 250000000
+Clock: pclk_gpu_pre, parent: clk_gpu_pre_mux(0), freq: 100000000
+Clock: clk_npu_src, parent: npll(0), freq: 600000000
+Clock: clk_npu_pre_ndft, parent: clk_npu_src(0), freq: 600000000
+Clock: clk_npu, parent: clk_npu_pre_ndft(0), freq: 600000000
+Clock: hclk_npu_pre, parent: clk_npu(0), freq: 150000000
+Clock: pclk_npu_pre, parent: clk_npu(0), freq: 100000000
+Clock: clk_ddrphy1x_src, parent: dpll(0), freq: 780000000
+Clock: clk_ddr1x, parent: clk_ddrphy1x_src(0), freq: 780000000
+Clock: clk_msch, parent: clk_ddr1x(0), freq: 390000000
+Clock: aclk_gic_audio, parent: gpll_200m(0), freq: 198000000
+Clock: hclk_gic_audio, parent: gpll_150m(0), freq: 148500000
+Clock: dclk_sdmmc_buffer, parent: gpll_100m(0), freq: 99000000
+Clock: clk_i2s0_8ch_tx_src, parent: cpll(1), freq: 50000000
+Clock: clk_i2s0_8ch_tx, parent: clk_i2s0_8ch_tx_src(0), freq: 50000000
+Clock: clk_i2s0_8ch_tx_frac, parent: clk_i2s0_8ch_tx_src(0), freq: 0
+Clock: i2s0_mclkout_tx, parent: xin_osc0_half(1), freq: 12000000
+Clock: clk_i2s0_8ch_rx_src, parent: cpll(1), freq: 50000000
+Clock: clk_i2s0_8ch_rx, parent: clk_i2s0_8ch_rx_src(0), freq: 50000000
+Clock: clk_i2s0_8ch_rx_frac, parent: clk_i2s0_8ch_rx_src(0), freq: 0
+Clock: i2s0_mclkout_rx, parent: xin_osc0_half(1), freq: 12000000
+Clock: clk_i2s1_8ch_tx_src, parent: cpll(1), freq: 50000000
+Clock: clk_i2s1_8ch_tx, parent: clk_i2s1_8ch_tx_src(0), freq: 50000000
+Clock: clk_i2s1_8ch_tx_frac, parent: clk_i2s1_8ch_tx_src(0), freq: 0
+Clock: i2s1_mclkout_tx, parent: xin_osc0_half(1), freq: 12000000
+Clock: clk_i2s1_8ch_rx_src, parent: cpll(1), freq: 50000000
+Clock: clk_i2s1_8ch_rx, parent: clk_i2s1_8ch_rx_src(0), freq: 50000000
+Clock: clk_i2s1_8ch_rx_frac, parent: clk_i2s1_8ch_rx_src(0), freq: 0
+Clock: i2s1_mclkout_rx, parent: xin_osc0_half(1), freq: 12000000
+Clock: clk_i2s2_2ch_src, parent: cpll(1), freq: 50000000
+Clock: clk_i2s2_2ch, parent: clk_i2s2_2ch_src(0), freq: 50000000
+Clock: clk_i2s2_2ch_frac, parent: clk_i2s2_2ch_src(0), freq: 0
+Clock: i2s2_mclkout, parent: xin_osc0_half(1), freq: 12000000
+Clock: clk_i2s3_2ch_tx_src, parent: cpll(1), freq: 50000000
+Clock: clk_i2s3_2ch_tx, parent: clk_i2s3_2ch_tx_src(0), freq: 50000000
+Clock: clk_i2s3_2ch_tx_frac, parent: clk_i2s3_2ch_tx_src(0), freq: 0
+Clock: i2s3_mclkout_tx, parent: xin_osc0_half(1), freq: 12000000
+Clock: clk_i2s3_2ch_rx_src, parent: cpll(1), freq: 50000000
+Clock: clk_i2s3_2ch_rx, parent: clk_i2s3_2ch_rx_src(0), freq: 50000000
+Clock: clk_i2s3_2ch_rx_frac, parent: clk_i2s3_2ch_rx_src(0), freq: 0
+Clock: i2s3_mclkout_rx, parent: xin_osc0_half(1), freq: 12000000
+Clock: mclk_pdm, parent: gpll_300m(0), freq: 297000000
+Clock: mclk_spdif_8ch_src, parent: cpll(0), freq: 50000000
+Clock: mclk_spdif_8ch, parent: mclk_spdif_8ch_src(0), freq: 50000000
+Clock: mclk_spdif_8ch_frac, parent: mclk_spdif_8ch_src(0), freq: 0
+Clock: sclk_audpwm_src, parent: gpll(0), freq: 99000000
+Clock: sclk_audpwm, parent: sclk_audpwm_src(0), freq: 99000000
+Clock: sclk_audpwm_frac, parent: sclk_audpwm_src(0), freq: 0
+Clock: clk_acdcdig_i2c, parent: gpll_200m(0), freq: 198000000
+Clock: aclk_secure_flash, parent: gpll_200m(0), freq: 198000000
+Clock: hclk_secure_flash, parent: gpll_150m(0), freq: 148500000
+Clock: clk_crypto_ns_core, parent: gpll_150m(1), freq: 148500000
+Clock: clk_crypto_ns_pka, parent: gpll_300m(0), freq: 297000000
+Clock: nclk_nandc, parent: gpll_150m(1), freq: 148500000
+Clock: sclk_sfc, parent: gpll_100m(3), freq: 99000000
+Clock: bclk_emmc, parent: gpll_200m(0), freq: 198000000
+Clock: cclk_emmc, parent: gpll_200m(1), freq: 198000000
+Clock: aclk_pipe, parent: gpll_200m(2), freq: 198000000
+Clock: pclk_pipe, parent: aclk_pipe(0), freq: 49500000
+Clock: clk_usb3otg0_suspend, parent: xin24m(0), freq: 24000000
+Clock: clk_usb3otg1_suspend, parent: xin24m(0), freq: 24000000
+Clock: clk_xpcs_eee, parent: gpll_200m(0), freq: 198000000
+Clock: aclk_php, parent: gpll_300m(0), freq: 297000000
+Clock: hclk_php, parent: gpll_150m(0), freq: 148500000
+Clock: pclk_php, parent: aclk_php(0), freq: 99000000
+Clock: clk_sdmmc0, parent: cpll_100m(3), freq: 100000000
+Clock: clk_sdmmc1, parent: xin24m(0), freq: 24000000
+Clock: clk_mac0_2top, parent: cpll_125m(0), freq: 125000000
+Clock: clk_mac0_out, parent: cpll_125m(0), freq: 125000000
+Clock: clk_gmac0_ptp_ref, parent: cpll_62p5(0), freq: 62500000
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac0_clkin
+Cannot get frequency for clk: gmac0_clkin, error: 9
+Clock: clk_gmac0, parent: gmac0_clkin(1), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac0_clkin
+Cannot get frequency for clk: gmac0_clkin, error: 9
+Clock: clk_gmac0_tx_div5, parent: clk_gmac0(0), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac0_clkin
+Cannot get frequency for clk: gmac0_clkin, error: 9
+Clock: clk_gmac0_tx_div50, parent: clk_gmac0(0), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac0_clkin
+Cannot get frequency for clk: gmac0_clkin, error: 9
+Clock: clk_gmac0_rx_div2, parent: clk_gmac0(0), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac0_clkin
+Cannot get frequency for clk: gmac0_clkin, error: 9
+Clock: clk_gmac0_rx_div20, parent: clk_gmac0(0), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac0_clkin
+Cannot get frequency for clk: gmac0_clkin, error: 9
+Clock: clk_gmac0_rgmii_speed, parent: clk_gmac0(0), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac0_clkin
+Cannot get frequency for clk: gmac0_clkin, error: 9
+Clock: clk_gmac0_rmii_speed, parent: clk_gmac0_rx_div20(0), freq: 9
+clknode_link_recalc: Attempt to use unresolved linked clock: gmac0_clkin
+Cannot get frequency for clk: gmac0_clkin, error: 9
+Clock: clk_gmac0_rx_tx, parent: clk_gmac0_rgmii_speed(0), freq: 9
+Clock: aclk_usb, parent: gpll_300m(0), freq: 297000000
+Clock: hclk_usb, parent: gpll_150m(0), freq: 148500000
+Clock: pclk_usb, parent: aclk_usb(0), freq: 99000000
+Clock: clk_sdmmc2, parent: xin24m(0), freq: 24000000
+Clock: clk_mac1_2top, parent: cpll_125m(0), freq: 125000000
+Clock: clk_mac1_out, parent: cpll_125m(0), freq: 125000000
+Clock: clk_gmac1_ptp_ref, parent: cpll_62p5(0), freq: 62500000
+Clock: clk_gmac1, parent: clk_mac1_2top(0), freq: 125000000
+Clock: clk_gmac1_tx_div5, parent: clk_gmac1(0), freq: 25000000
+Clock: clk_gmac1_tx_div50, parent: clk_gmac1(0), freq: 2500000
+Clock: clk_gmac1_rx_div2, parent: clk_gmac1(0), freq: 62500000
+Clock: clk_gmac1_rx_div20, parent: clk_gmac1(0), freq: 6250000
+Clock: clk_gmac1_rgmii_speed, parent: clk_gmac1(0), freq: 125000000
+Clock: clk_gmac1_rmii_speed, parent: clk_gmac1_rx_div20(0), freq: 6250000
+Clock: clk_gmac1_rx_tx, parent: clk_gmac1_rgmii_speed(0), freq: 125000000
+Clock: aclk_perimid, parent: gpll_300m(0), freq: 297000000
+Clock: hclk_perimid, parent: gpll_150m(0), freq: 148500000
+Clock: aclk_vi, parent: gpll_400m(0), freq: 396000000
+Clock: hclk_vi, parent: aclk_vi(0), freq: 198000000
+Clock: pclk_vi, parent: aclk_vi(0), freq: 99000000
+Clock: dclk_vicap, parent: cpll_333m(0), freq: 333333333
+Clock: clk_isp, parent: cpll(0), freq: 500000000
+Clock: clk_cif_out, parent: xin24m(3), freq: 24000000
+Clock: clk_cam0_out, parent: xin24m(3), freq: 24000000
+Clock: clk_cam1_out, parent: xin24m(3), freq: 24000000
+Clock: aclk_vo, parent: gpll_300m(0), freq: 297000000
+Clock: hclk_vo, parent: aclk_vo(0), freq: 148500000
+Clock: pclk_vo, parent: aclk_vo(0), freq: 74250000
+Clock: aclk_vop_pre, parent: cpll(0), freq: 500000000
+Clock: dclk_vop0, parent: hpll(0), freq: 594000000
+Clock: dclk_vop1, parent: hpll(0), freq: 297000000
+Clock: dclk_vop2, parent: hpll(0), freq: 148500000
+Clock: clk_edp_200m, parent: gpll_200m(0), freq: 198000000
+Clock: aclk_vpu_pre, parent: gpll(0), freq: 297000000
+Clock: hclk_vpu_pre, parent: aclk_vpu_pre(0), freq: 148500000
+Clock: aclk_rga_pre, parent: gpll_300m(0), freq: 297000000
+Clock: hclk_rga_pre, parent: aclk_rga_pre(0), freq: 148500000
+Clock: pclk_rga_pre, parent: aclk_rga_pre(0), freq: 99000000
+Clock: clk_rga_core, parent: gpll_300m(0), freq: 297000000
+Clock: clk_iep_core, parent: gpll_300m(0), freq: 297000000
+Clock: dclk_ebc, parent: gpll_400m(0), freq: 396000000
+Clock: aclk_rkvenc_pre, parent: gpll(0), freq: 297000000
+Clock: hclk_rkvenc_pre, parent: aclk_rkvenc_pre(0), freq: 99000000
+Clock: clk_rkvenc_core, parent: gpll(0), freq: 297000000
+Clock: aclk_rkvdec_pre, parent: gpll(0), freq: 396000000
+Clock: hclk_rkvdec_pre, parent: aclk_rkvdec_pre(0), freq: 198000000
+Clock: clk_rkvdec_ca, parent: gpll(0), freq: 297000000
+Clock: clk_rkvdec_core, parent: gpll(0), freq: 297000000
+Clock: clk_rkvdec_hevc_ca, parent: gpll(0), freq: 594000000
+Clock: aclk_bus, parent: gpll_150m(1), freq: 148500000
+Clock: pclk_bus, parent: cpll_50m(2), freq: 50000000
+Clock: clk_tsadc_tsen, parent: xin24m(0), freq: 24000000
+Clock: clk_tsadc, parent: clk_tsadc_tsen(0), freq: 1200000
+Clock: clk_uart1_src, parent: gpll(0), freq: 99000000
+Clock: clk_uart1_frac, parent: clk_uart1_src(0), freq: 0
+Clock: sclk_uart1_mux, parent: xin24m(2), freq: 24000000
+Clock: clk_uart2_src, parent: gpll(0), freq: 99000000
+Clock: clk_uart2_frac, parent: clk_uart2_src(0), freq: 0
+Clock: sclk_uart2_mux, parent: xin24m(2), freq: 24000000
+Clock: clk_uart3_src, parent: gpll(0), freq: 99000000
+Clock: clk_uart3_frac, parent: clk_uart3_src(0), freq: 0
+Clock: sclk_uart3_mux, parent: xin24m(2), freq: 24000000
+Clock: clk_uart4_src, parent: gpll(0), freq: 99000000
+Clock: clk_uart4_frac, parent: clk_uart4_src(0), freq: 0
+Clock: sclk_uart4_mux, parent: xin24m(2), freq: 24000000
+Clock: clk_uart5_src, parent: gpll(0), freq: 99000000
+Clock: clk_uart5_frac, parent: clk_uart5_src(0), freq: 0
+Clock: sclk_uart5_mux, parent: xin24m(2), freq: 24000000
+Clock: clk_uart6_src, parent: gpll(0), freq: 99000000
+Clock: clk_uart6_frac, parent: clk_uart6_src(0), freq: 0
+Clock: sclk_uart6_mux, parent: xin24m(2), freq: 24000000
+Clock: clk_uart7_src, parent: gpll(0), freq: 99000000
+Clock: clk_uart7_frac, parent: clk_uart7_src(0), freq: 0
+Clock: sclk_uart7_mux, parent: xin24m(2), freq: 24000000
+Clock: clk_uart8_src, parent: gpll(0), freq: 99000000
+Clock: clk_uart8_frac, parent: clk_uart8_src(0), freq: 0
+Clock: sclk_uart8_mux, parent: xin24m(2), freq: 24000000
+Clock: clk_uart9_src, parent: gpll(0), freq: 99000000
+Clock: clk_uart9_frac, parent: clk_uart9_src(0), freq: 0
+Clock: sclk_uart9_mux, parent: xin24m(2), freq: 24000000
+Clock: clk_can0, parent: gpll(0), freq: 297000000
+Clock: clk_can1, parent: gpll(0), freq: 297000000
+Clock: clk_can2, parent: gpll(0), freq: 297000000
+Clock: clk_i2c, parent: xin24m(2), freq: 24000000
+Clock: clk_spi0, parent: gpll_200m(0), freq: 198000000
+Clock: clk_spi1, parent: gpll_200m(0), freq: 198000000
+Clock: clk_spi2, parent: gpll_200m(0), freq: 198000000
+Clock: clk_spi3, parent: gpll_200m(0), freq: 198000000
+Clock: clk_pwm1, parent: xin24m(1), freq: 24000000
+Clock: clk_pwm2, parent: xin24m(1), freq: 24000000
+Clock: clk_pwm3, parent: xin24m(1), freq: 24000000
+Clock: dbclk_gpio, parent: xin24m(0), freq: 24000000
+Clock: aclk_top_high, parent: gpll_300m(2), freq: 297000000
+Clock: aclk_top_low, parent: gpll_200m(2), freq: 198000000
+Clock: hclk_top, parent: gpll_150m(0), freq: 148500000
+Clock: pclk_top, parent: cpll_50m(2), freq: 50000000
+Clock: clk_optc_arb, parent: xin24m(0), freq: 24000000
+Clock: clk_core_pvtm, parent: xin24m(0), freq: 24000000
+Clock: clk_core_pvtm_core, parent: armclk(0), freq: 1188000000
+Clock: clk_core_pvtpll, parent: armclk(0), freq: 1188000000
+Clock: pclk_core_pvtm, parent: pclk_core_pre(0), freq: 84857142
+Clock: clk_gpu, parent: clk_gpu_pre_mux(0), freq: 500000000
+Clock: pclk_gpu_pvtm, parent: pclk_gpu_pre(0), freq: 100000000
+Clock: clk_gpu_pvtm, parent: xin24m(0), freq: 24000000
+Clock: clk_gpu_pvtm_core, parent: clk_gpu_src(0), freq: 500000000
+Clock: clk_gpu_pvtpll, parent: clk_gpu_src(0), freq: 500000000
+Clock: aclk_npu_pre, parent: clk_npu(0), freq: 600000000
+Clock: aclk_npu, parent: aclk_npu_pre(0), freq: 600000000
+Clock: hclk_npu, parent: hclk_npu_pre(0), freq: 150000000
+Clock: pclk_npu_pvtm, parent: pclk_npu_pre(0), freq: 100000000
+Clock: clk_npu_pvtm, parent: xin24m(0), freq: 24000000
+Clock: clk_npu_pvtm_core, parent: clk_npu_pre_ndft(0), freq: 600000000
+Clock: clk_npu_pvtpll, parent: clk_npu_pre_ndft(0), freq: 600000000
+Clock: clk24_ddrmon, parent: xin24m(0), freq: 24000000
+Clock: hclk_sdmmc_buffer, parent: hclk_gic_audio(0), freq: 148500000
+Clock: aclk_gic600, parent: aclk_gic_audio(0), freq: 198000000
+Clock: aclk_spinlock, parent: aclk_gic_audio(0), freq: 198000000
+Clock: hclk_i2s0_8ch, parent: hclk_gic_audio(0), freq: 148500000
+Clock: hclk_i2s1_8ch, parent: hclk_gic_audio(0), freq: 148500000
+Clock: hclk_i2s2_2ch, parent: hclk_gic_audio(0), freq: 148500000
+Clock: hclk_i2s3_2ch, parent: hclk_gic_audio(0), freq: 148500000
+Clock: mclk_i2s0_8ch_tx, parent: clk_i2s0_8ch_tx(0), freq: 50000000
+Clock: mclk_i2s0_8ch_rx, parent: clk_i2s0_8ch_rx(0), freq: 50000000
+Clock: mclk_i2s1_8ch_tx, parent: clk_i2s1_8ch_tx(0), freq: 50000000
+Clock: mclk_i2s1_8ch_rx, parent: clk_i2s1_8ch_rx(0), freq: 50000000
+Clock: mclk_i2s2_2ch, parent: clk_i2s2_2ch(0), freq: 50000000
+Clock: mclk_i2s3_2ch_tx, parent: clk_i2s3_2ch_tx(0), freq: 50000000
+Clock: mclk_i2s3_2ch_rx, parent: clk_i2s3_2ch_rx(0), freq: 50000000
+Clock: hclk_pdm, parent: hclk_gic_audio(0), freq: 148500000
+Clock: hclk_vad, parent: hclk_gic_audio(0), freq: 148500000
+Clock: hclk_spdif_8ch, parent: hclk_gic_audio(0), freq: 148500000
+Clock: hclk_audpwm, parent: hclk_gic_audio(0), freq: 148500000
+Clock: hclk_acdcdig, parent: hclk_gic_audio(0), freq: 148500000
+Clock: clk_acdcdig_dac, parent: mclk_i2s3_2ch_tx(0), freq: 50000000
+Clock: clk_acdcdig_adc, parent: mclk_i2s3_2ch_rx(0), freq: 50000000
+Clock: aclk_crypto_ns, parent: aclk_secure_flash(0), freq: 198000000
+Clock: hclk_crypto_ns, parent: hclk_secure_flash(0), freq: 148500000
+Clock: clk_crypto_ns_rng, parent: hclk_secure_flash(0), freq: 148500000
+Clock: hclk_trng_ns, parent: hclk_secure_flash(0), freq: 148500000
+Clock: clk_trng_ns, parent: hclk_secure_flash(0), freq: 148500000
+Clock: pclk_otpc_ns, parent: hclk_secure_flash(0), freq: 148500000
+Clock: clk_otpc_ns_sbpi, parent: xin24m(0), freq: 24000000
+Clock: clk_otpc_ns_usr, parent: xin_osc0_half(0), freq: 12000000
+Clock: hclk_nandc, parent: hclk_secure_flash(0), freq: 148500000
+Clock: hclk_sfc, parent: hclk_secure_flash(0), freq: 148500000
+Clock: hclk_sfc_xip, parent: hclk_secure_flash(0), freq: 148500000
+Clock: aclk_emmc, parent: aclk_secure_flash(0), freq: 198000000
+Clock: hclk_emmc, parent: hclk_secure_flash(0), freq: 148500000
+Clock: tclk_emmc, parent: xin24m(0), freq: 24000000
+Clock: aclk_pcie20_mst, parent: aclk_pipe(0), freq: 198000000
+Clock: aclk_pcie20_slv, parent: aclk_pipe(0), freq: 198000000
+Clock: aclk_pcie20_dbi, parent: aclk_pipe(0), freq: 198000000
+Clock: pclk_pcie20, parent: pclk_pipe(0), freq: 49500000
+Clock: clk_pcie20_aux_ndft, parent: xin24m(0), freq: 24000000
+Clock: aclk_pcie30x1_mst, parent: aclk_pipe(0), freq: 198000000
+Clock: aclk_pcie30x1_slv, parent: aclk_pipe(0), freq: 198000000
+Clock: aclk_pcie30x1_dbi, parent: aclk_pipe(0), freq: 198000000
+Clock: pclk_pcie30x1, parent: pclk_pipe(0), freq: 49500000
+Clock: clk_pcie30x1_aux_ndft, parent: xin24m(0), freq: 24000000
+Clock: aclk_pcie30x2_mst, parent: aclk_pipe(0), freq: 198000000
+Clock: aclk_pcie30x2_slv, parent: aclk_pipe(0), freq: 198000000
+Clock: aclk_pcie30x2_dbi, parent: aclk_pipe(0), freq: 198000000
+Clock: pclk_pcie30x2, parent: pclk_pipe(0), freq: 49500000
+Clock: clk_pcie30x2_aux_ndft, parent: xin24m(0), freq: 24000000
+Clock: aclk_sata0, parent: aclk_pipe(0), freq: 198000000
+Clock: clk_sata0_pmalive, parent: gpll_20m(0), freq: 19800000
+Clock: clk_sata0_rxoob, parent: cpll_50m(0), freq: 50000000
+Clock: aclk_sata1, parent: aclk_pipe(0), freq: 198000000
+Clock: clk_sata1_pmalive, parent: gpll_20m(0), freq: 19800000
+Clock: clk_sata1_rxoob, parent: cpll_50m(0), freq: 50000000
+Clock: aclk_sata2, parent: aclk_pipe(0), freq: 198000000
+Clock: clk_sata2_pmalive, parent: gpll_20m(0), freq: 19800000
+Clock: clk_sata2_rxoob, parent: cpll_50m(0), freq: 50000000
+Clock: aclk_usb3otg0, parent: aclk_pipe(0), freq: 198000000
+Clock: clk_usb3otg0_ref, parent: xin24m(0), freq: 24000000
+Clock: aclk_usb3otg1, parent: aclk_pipe(0), freq: 198000000
+Clock: clk_usb3otg1_ref, parent: xin24m(0), freq: 24000000
+Clock: pclk_xpcs, parent: pclk_pipe(0), freq: 49500000
+Clock: hclk_sdmmc0, parent: hclk_php(0), freq: 148500000
+Clock: hclk_sdmmc1, parent: hclk_php(0), freq: 148500000
+Clock: aclk_gmac0, parent: aclk_php(0), freq: 297000000
+Clock: pclk_gmac0, parent: pclk_php(0), freq: 99000000
+Clock: clk_mac0_refout, parent: clk_mac0_2top(0), freq: 125000000
+Clock: hclk_usb2host0, parent: hclk_usb(0), freq: 148500000
+Clock: hclk_usb2host0_arb, parent: hclk_usb(0), freq: 148500000
+Clock: hclk_usb2host1, parent: hclk_usb(0), freq: 148500000
+Clock: hclk_usb2host1_arb, parent: hclk_usb(0), freq: 148500000
+Clock: hclk_sdmmc2, parent: hclk_usb(0), freq: 148500000
+Clock: aclk_gmac1, parent: aclk_usb(0), freq: 297000000
+Clock: pclk_gmac1, parent: pclk_usb(0), freq: 99000000
+Clock: clk_mac1_refout, parent: clk_mac1_2top(0), freq: 125000000
+Clock: aclk_vicap, parent: aclk_vi(0), freq: 396000000
+Clock: hclk_vicap, parent: hclk_vi(0), freq: 198000000
+Clock: aclk_isp, parent: aclk_vi(0), freq: 396000000
+Clock: hclk_isp, parent: hclk_vi(0), freq: 198000000
+Clock: pclk_csi2host1, parent: pclk_vi(0), freq: 99000000
+Clock: aclk_vop, parent: aclk_vop_pre(0), freq: 500000000
+Clock: hclk_vop, parent: hclk_vo(0), freq: 148500000
+Clock: clk_vop_pwm, parent: xin24m(0), freq: 24000000
+Clock: aclk_hdcp, parent: aclk_vo(0), freq: 297000000
+Clock: hclk_hdcp, parent: hclk_vo(0), freq: 148500000
+Clock: pclk_hdcp, parent: pclk_vo(0), freq: 74250000
+Clock: pclk_hdmi_host, parent: pclk_vo(0), freq: 74250000
+Clock: clk_hdmi_sfr, parent: xin24m(0), freq: 24000000
+Clock: clk_hdmi_cec, parent: clk_rtc_32k(0), freq: 0
+Clock: pclk_dsitx_0, parent: pclk_vo(0), freq: 74250000
+Clock: pclk_dsitx_1, parent: pclk_vo(0), freq: 74250000
+Clock: pclk_edp_ctrl, parent: pclk_vo(0), freq: 74250000
+Clock: aclk_vpu, parent: aclk_vpu_pre(0), freq: 297000000
+Clock: hclk_vpu, parent: hclk_vpu_pre(0), freq: 148500000
+Clock: aclk_rga, parent: aclk_rga_pre(0), freq: 297000000
+Clock: hclk_rga, parent: hclk_rga_pre(0), freq: 148500000
+Clock: aclk_iep, parent: aclk_rga_pre(0), freq: 297000000
+Clock: hclk_iep, parent: hclk_rga_pre(0), freq: 148500000
+Clock: hclk_ebc, parent: hclk_rga_pre(0), freq: 148500000
+Clock: aclk_jdec, parent: aclk_rga_pre(0), freq: 297000000
+Clock: hclk_jdec, parent: hclk_rga_pre(0), freq: 148500000
+Clock: aclk_jenc, parent: aclk_rga_pre(0), freq: 297000000
+Clock: hclk_jenc, parent: hclk_rga_pre(0), freq: 148500000
+Clock: pclk_eink, parent: pclk_rga_pre(0), freq: 99000000
+Clock: hclk_eink, parent: hclk_rga_pre(0), freq: 148500000
+Clock: aclk_rkvenc, parent: aclk_rkvenc_pre(0), freq: 297000000
+Clock: hclk_rkvenc, parent: hclk_rkvenc_pre(0), freq: 99000000
+Clock: aclk_rkvdec, parent: aclk_rkvdec_pre(0), freq: 396000000
+Clock: hclk_rkvdec, parent: hclk_rkvdec_pre(0), freq: 198000000
+Clock: pclk_tsadc, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_saradc, parent: pclk_bus(0), freq: 50000000
+Clock: clk_saradc, parent: xin24m(0), freq: 24000000
+Clock: pclk_scr, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_wdt_ns, parent: pclk_bus(0), freq: 50000000
+Clock: tclk_wdt_ns, parent: xin24m(0), freq: 24000000
+Clock: aclk_mcu, parent: aclk_bus(0), freq: 148500000
+Clock: pclk_intmux, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_mailbox, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_uart1, parent: pclk_bus(0), freq: 50000000
+Clock: sclk_uart1, parent: sclk_uart1_mux(0), freq: 24000000
+Clock: pclk_uart2, parent: pclk_bus(0), freq: 50000000
+Clock: sclk_uart2, parent: sclk_uart2_mux(0), freq: 24000000
+Clock: pclk_uart3, parent: pclk_bus(0), freq: 50000000
+Clock: sclk_uart3, parent: sclk_uart3_mux(0), freq: 24000000
+Clock: pclk_uart4, parent: pclk_bus(0), freq: 50000000
+Clock: sclk_uart4, parent: sclk_uart4_mux(0), freq: 24000000
+Clock: pclk_uart5, parent: pclk_bus(0), freq: 50000000
+Clock: sclk_uart5, parent: sclk_uart5_mux(0), freq: 24000000
+Clock: pclk_uart6, parent: pclk_bus(0), freq: 50000000
+Clock: sclk_uart6, parent: sclk_uart6_mux(0), freq: 24000000
+Clock: pclk_uart7, parent: pclk_bus(0), freq: 50000000
+Clock: sclk_uart7, parent: sclk_uart7_mux(0), freq: 24000000
+Clock: pclk_uart8, parent: pclk_bus(0), freq: 50000000
+Clock: sclk_uart8, parent: sclk_uart8_mux(0), freq: 24000000
+Clock: pclk_uart9, parent: pclk_bus(0), freq: 50000000
+Clock: sclk_uart9, parent: sclk_uart9_mux(0), freq: 24000000
+Clock: pclk_can0, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_can1, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_can2, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_i2c1, parent: pclk_bus(0), freq: 50000000
+Clock: clk_i2c1, parent: clk_i2c(0), freq: 24000000
+Clock: pclk_i2c2, parent: pclk_bus(0), freq: 50000000
+Clock: clk_i2c2, parent: clk_i2c(0), freq: 24000000
+Clock: pclk_i2c3, parent: pclk_bus(0), freq: 50000000
+Clock: clk_i2c3, parent: clk_i2c(0), freq: 24000000
+Clock: pclk_i2c4, parent: pclk_bus(0), freq: 50000000
+Clock: clk_i2c4, parent: clk_i2c(0), freq: 24000000
+Clock: pclk_i2c5, parent: pclk_bus(0), freq: 50000000
+Clock: clk_i2c5, parent: clk_i2c(0), freq: 24000000
+Clock: pclk_spi0, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_spi1, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_spi2, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_spi3, parent: pclk_bus(0), freq: 50000000
+Clock: pclk_pwm1, parent: pclk_bus(0), freq: 50000000
+Clock: clk_pwm1_capture, parent: xin24m(0), freq: 24000000
+Clock: pclk_pwm2, parent: pclk_bus(0), freq: 50000000
+Clock: clk_pwm2_capture, parent: xin24m(0), freq: 24000000
+Clock: pclk_pwm3, parent: pclk_bus(0), freq: 50000000
+Clock: clk_pwm3_capture, parent: xin24m(0), freq: 24000000
+Clock: pclk_gpio1, parent: pclk_bus(0), freq: 50000000
+Clock: dbclk_gpio1, parent: dbclk_gpio(0), freq: 24000000
+Clock: pclk_gpio2, parent: pclk_bus(0), freq: 50000000
+Clock: dbclk_gpio2, parent: dbclk_gpio(0), freq: 24000000
+Clock: pclk_gpio3, parent: pclk_bus(0), freq: 50000000
+Clock: dbclk_gpio3, parent: dbclk_gpio(0), freq: 24000000
+Clock: pclk_gpio4, parent: pclk_bus(0), freq: 50000000
+Clock: dbclk_gpio4, parent: dbclk_gpio(0), freq: 24000000
+Clock: pclk_timer, parent: pclk_bus(0), freq: 50000000
+Clock: clk_timer0, parent: xin24m(0), freq: 24000000
+Clock: clk_timer1, parent: xin24m(0), freq: 24000000
+Clock: clk_timer2, parent: xin24m(0), freq: 24000000
+Clock: clk_timer3, parent: xin24m(0), freq: 24000000
+Clock: clk_timer4, parent: xin24m(0), freq: 24000000
+Clock: clk_timer5, parent: xin24m(0), freq: 24000000
+Clock: pclk_pcie30phy, parent: pclk_top(0), freq: 50000000
+Clock: pclk_mipicsiphy, parent: pclk_top(0), freq: 50000000
+Clock: pclk_mipidsiphy0, parent: pclk_top(0), freq: 50000000
+Clock: pclk_mipidsiphy1, parent: pclk_top(0), freq: 50000000
+Clock: pclk_pipephy0, parent: pclk_top(0), freq: 50000000
+Clock: pclk_pipephy1, parent: pclk_top(0), freq: 50000000
+Clock: pclk_pipephy2, parent: pclk_top(0), freq: 50000000
+Clock: pclk_cpu_boost, parent: pclk_top(0), freq: 50000000
+Clock: clk_cpu_boost, parent: xin24m(0), freq: 24000000
+Clock: pclk_otpphy, parent: pclk_top(0), freq: 50000000
+Clock: pclk_edpphy_grf, parent: pclk_top(0), freq: 50000000
+rk3568_cru0: Set gpll to 1200000000
+rk3568_cru0: Set ppll to 200000000
+rk_otp0: <RockChip OTP> mem 0xfe38c000-0xfe38ffff on ofwbus0
+rk_grf7: <RockChip General Register Files> mem 0xfdc70000-0xfdc70fff on ofwbus0
+rk_grf8: <RockChip General Register Files> mem 0xfdcb8000-0xfdcc7fff on ofwbus0
+regfix0: <Fixed Regulator> on ofwbus0
+regfix1: <Fixed Regulator> on ofwbus0
+regfix2: <Fixed Regulator> on ofwbus0
+regfix3: <Fixed Regulator> on ofwbus0
+regfix4: <Fixed Regulator> on ofwbus0
+regfix5: <Fixed Regulator> on ofwbus0
+regfix6: <Fixed Regulator> on ofwbus0
+regfix7: <Fixed Regulator> on ofwbus0
+simple_mfd0: <Simple MFD (Multi-Functions Device)> mem 0xfdd90000-0xfdd90fff on ofwbus0
+psci0: <ARM Power State Co-ordination Interface Driver> on ofwbus0
+psci0: PSCI version 0.2 compatible
+Found SMCCC version 1.0
+rk3568_combphy0: <RockChip combo PHY> mem 0xfe830000-0xfe8300ff on ofwbus0
+rk3568_combphy1: <RockChip combo PHY> mem 0xfe840000-0xfe8400ff on ofwbus0
+rk3568_pciephy0: <RockChip PCIe PHY> mem 0xfe8c0000-0xfe8dffff on ofwbus0
+rk3568_combphy2: <RockChip combo PHY> mem 0xfe820000-0xfe8200ff on ofwbus0
+gic0: <ARM Generic Interrupt Controller v3.0> mem 0xfd400000-0xfd40ffff,0xfd460000-0xfd4dffff irq 12 on ofwbus0
+gic0: using spi 296 to 320
+gic0: SPIs: 352, IDs: 65535
+gic0: Start searching for Re-Distributor
+gic0: CPU0 Re-Distributor has been found
+gic0: CPU0 Re-Distributor woke up
+gic0: CPU0 enabled CPU interface via system registers
+gic0: Failed to attach ITS to this GIC
+rk_iodomain0: <RockChip IO Voltage Domain> mem 0xfdc20000-0xfdc2ffff on rk_grf0
+rk_iodomain0: Cannot get property for regulator pmuio1-supply
+rk_iodomain0: Cannot get property for regulator pmuio2-supply
+rk_iodomain0: Cannot get property for regulator vccio1-supply
+rk_iodomain0: Cannot get property for regulator vccio2-supply
+rk_iodomain0: Cannot get property for regulator vccio3-supply
+rk_iodomain0: Cannot get property for regulator vccio4-supply
+rk_iodomain0: Cannot get property for regulator vccio5-supply
+rk_iodomain0: Cannot get property for regulator vccio6-supply
+rk_iodomain0: Cannot get property for regulator vccio7-supply
+rk_pinctrl0: <RockChip Pinctrl controller> on ofwbus0
+gpio0: <RockChip GPIO Bank controller> mem 0xfdd60000-0xfdd600ff irq 84 on rk_pinctrl0
+gpiobus0: <OFW GPIO bus> on gpio0
+gpio1: <RockChip GPIO Bank controller> mem 0xfe740000-0xfe7400ff irq 85 on rk_pinctrl0
+gpiobus1: <OFW GPIO bus> on gpio1
+gpio2: <RockChip GPIO Bank controller> mem 0xfe750000-0xfe7500ff irq 86 on rk_pinctrl0
+gpiobus2: <OFW GPIO bus> on gpio2
+gpio3: <RockChip GPIO Bank controller> mem 0xfe760000-0xfe7600ff irq 87 on rk_pinctrl0
+gpiobus3: <OFW GPIO bus> on gpio3
+gpio4: <RockChip GPIO Bank controller> mem 0xfe770000-0xfe7700ff irq 88 on rk_pinctrl0
+gpiobus4: <OFW GPIO bus> on gpio4
+Processing 1 pin-config node(s) in pinctrl-0 for xin32k
+Processing 1 pin-config node(s) in pinctrl-0 for pmic@20
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@fdd40000
+Processing 1 pin-config node(s) in pinctrl-0 for serial@fdd50000
+Processing 4 pin-config node(s) in pinctrl-0 for mmc@fe2b0000
+Processing 3 pin-config node(s) in pinctrl-0 for mmc@fe310000
+Processing 1 pin-config node(s) in pinctrl-0 for hym8563@51
+Processing 1 pin-config node(s) in pinctrl-0 for i2c@fe5e0000
+Processing 1 pin-config node(s) in pinctrl-0 for serial@fe660000
+Processing 1 pin-config node(s) in pinctrl-0 for tsadc@fe710000
+Processing 1 pin-config node(s) in pinctrl-0 for ethernet-phy@1
+Processing 6 pin-config node(s) in pinctrl-0 for ethernet@fe2a0000
+Processing 1 pin-config node(s) in pinctrl-0 for led-0
+Processing 1 pin-config node(s) in pinctrl-0 for led-1
+Processing 1 pin-config node(s) in pinctrl-0 for led-2
+Processing 1 pin-config node(s) in pinctrl-0 for led-3
+Processing 1 pin-config node(s) in pinctrl-0 for vcc5v0-host-regulator
+rk_i2c0: <RockChip I2C> mem 0xfdd40000-0xfdd40fff irq 17 on ofwbus0
+iicbus0: <OFW I2C bus> on rk_i2c0
+fan53555_pmic0: <TCS4525 PMIC> at addr 0x38 on iicbus0
+fan53555_pmic0:  Regulator vdd_cpu: voltage: 825000 uV
+rk817_pmu0: <RockChip RK809 PMIC> at addr 0x40 irq 89 on iicbus0
+Clock: rk808-clkout1, parent: (NULL)(-1), freq: 32768
+Clock: rk808-clkout2, parent: (NULL)(-1), freq: 32768
+rk817_pmu0: Regulator DCDC_REG1 attached
+rk817_pmu0: Regulator DCDC_REG2 attached
+rk817_pmu0: Regulator DCDC_REG3 attached
+rk817_pmu0: Regulator DCDC_REG4 attached
+rk817_pmu0: Regulator DCDC_REG5 attached
+rk817_pmu0: Regulator LDO_REG1 attached
+rk817_pmu0: Regulator LDO_REG2 attached
+rk817_pmu0: Regulator LDO_REG3 attached
+rk817_pmu0: Regulator LDO_REG4 attached
+rk817_pmu0: Regulator LDO_REG5 attached
+rk817_pmu0: Regulator LDO_REG6 attached
+rk817_pmu0: Regulator LDO_REG7 attached
+rk817_pmu0: Regulator LDO_REG8 attached
+rk817_pmu0: Regulator LDO_REG9 attached
+rk817_pmu0: Regulator SWITCH_REG1 attached
+rk817_pmu0: Regulator SWITCH_REG2 attached
+rk_i2c1: <RockChip I2C> mem 0xfe5e0000-0xfe5e0fff irq 52 on ofwbus0
+iicbus1: <OFW I2C bus> on rk_i2c1
+generic_timer0: <ARMv8 Generic Timer> irq 4,5,6,7 on ofwbus0
+generic_timer0: allocated irq for 'sec-phys'
+generic_timer0: allocated irq for 'phys'
+generic_timer0: allocated irq for 'virt'
+generic_timer0: allocated irq for 'hyp-phys'
+ofwbus0: no default resources for rid = 4, type = 1
+generic_timer0: could not allocate irq for optional interrupt 'hyp-virt'
+Timecounter "ARM MPCore Timecounter" frequency 24000000 Hz quality 1000
+Event timer "ARM MPCore Eventtimer" frequency 24000000 Hz quality 1000
+rk_tsadc0: <RockChip temperature sensors> mem 0xfe710000-0xfe7100ff irq 67 on ofwbus0
+rk_tsadc0: Set clk_tsadc_tsen to 17000000
+rk_tsadc0: Set clk_tsadc to 700000
+mmio_sram0: <MMIO SRAM> mem 0x10f000-0x10f0ff on ofwbus0
+rk_usb2phy0: <Rockchip USB2PHY> mem 0xfe8a0000-0xfe8affff irq 69 on ofwbus0
+Clock: clk_usbphy0_480m, parent: clk_usbphy0_ref(0), freq: 480000000
+rk_usb2phy1: <Rockchip USB2PHY> mem 0xfe8b0000-0xfe8bffff irq 70 on ofwbus0
+Clock: clk_usbphy1_480m, parent: clk_usbphy1_ref(0), freq: 480000000
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+ram0: reserving memory region:   af0000-8400000
+ram0: reserving memory region:   9400000-e4a00000
+ram0: reserving memory region:   e6229000-ec9c3000
+ram0: reserving memory region:   ecb40000-efe20000
+ram0: reserving memory region:   efeb0000-efec0000
+ram0: reserving memory region:   effe0000-f0000000
+ram0: reserving excluded region: e4a00000-e6228fff
+ram0: reserving excluded region: eca10000-ecb3ffff
+ram0: reserving excluded region: efe20000-efeaffff
+ram0: reserving excluded region: efec0000-effdffff
+cpulist0: <Open Firmware CPU Group> on ofwbus0
+cpu0: <Open Firmware CPU> on cpulist0
+cpu0: missing 'clock-frequency' property
+cpufreq_dt0: <Generic cpufreq driver> on cpu0
+cpufreq_dt0: Found cpu-supply
+cpufreq_dt0: 408.000 Mhz (900000 uV)
+cpufreq_dt0: 600.000 Mhz (900000 uV)
+cpufreq_dt0: 816.000 Mhz (900000 uV)
+cpufreq_dt0: 1104.000 Mhz (900000 uV)
+cpufreq_dt0: 1416.000 Mhz (900000 uV)
+cpufreq_dt0: 1608.000 Mhz (975000 uV)
+cpufreq_dt0: 1800.000 Mhz (1050000 uV)
+cpufreq_dt0: 1992.000 Mhz (1150000 uV)
+cpufreq_dt0: 2208.000 Mhz (1150000 uV)
+cpu1: <Open Firmware CPU> on cpulist0
+cpu1: missing 'clock-frequency' property
+cpufreq_dt1: <Generic cpufreq driver> on cpu1
+cpufreq_dt1: Found cpu-supply
+cpufreq_dt1: 408.000 Mhz (900000 uV)
+cpufreq_dt1: 600.000 Mhz (900000 uV)
+cpufreq_dt1: 816.000 Mhz (900000 uV)
+cpufreq_dt1: 1104.000 Mhz (900000 uV)
+cpufreq_dt1: 1416.000 Mhz (900000 uV)
+cpufreq_dt1: 1608.000 Mhz (975000 uV)
+cpufreq_dt1: 1800.000 Mhz (1050000 uV)
+cpufreq_dt1: 1992.000 Mhz (1150000 uV)
+cpufreq_dt1: 2208.000 Mhz (1150000 uV)
+cpu2: <Open Firmware CPU> on cpulist0
+cpu2: missing 'clock-frequency' property
+cpufreq_dt2: <Generic cpufreq driver> on cpu2
+cpufreq_dt2: Found cpu-supply
+cpufreq_dt2: 408.000 Mhz (900000 uV)
+cpufreq_dt2: 600.000 Mhz (900000 uV)
+cpufreq_dt2: 816.000 Mhz (900000 uV)
+cpufreq_dt2: 1104.000 Mhz (900000 uV)
+cpufreq_dt2: 1416.000 Mhz (900000 uV)
+cpufreq_dt2: 1608.000 Mhz (975000 uV)
+cpufreq_dt2: 1800.000 Mhz (1050000 uV)
+cpufreq_dt2: 1992.000 Mhz (1150000 uV)
+cpufreq_dt2: 2208.000 Mhz (1150000 uV)
+cpu3: <Open Firmware CPU> on cpulist0
+cpu3: missing 'clock-frequency' property
+cpufreq_dt3: <Generic cpufreq driver> on cpu3
+cpufreq_dt3: Found cpu-supply
+cpufreq_dt3: 408.000 Mhz (900000 uV)
+cpufreq_dt3: 600.000 Mhz (900000 uV)
+cpufreq_dt3: 816.000 Mhz (900000 uV)
+cpufreq_dt3: 1104.000 Mhz (900000 uV)
+cpufreq_dt3: 1416.000 Mhz (900000 uV)
+cpufreq_dt3: 1608.000 Mhz (975000 uV)
+cpufreq_dt3: 1800.000 Mhz (1050000 uV)
+cpufreq_dt3: 1992.000 Mhz (1150000 uV)
+cpufreq_dt3: 2208.000 Mhz (1150000 uV)
+ofwbus0: <opp-table-0> compat operating-points-v2 (no driver attached)
+ofwbus0: <display-subsystem> compat rockchip,display-subsystem (no driver attached)
+ofwbus0: <opp-table-1> compat operating-points-v2 (no driver attached)
+ofwbus0: <hdmi-sound> disabled compat simple-audio-card (no driver attached)
+pmu0: <Performance Monitoring Unit> irq 0,1,2,3 on ofwbus0
+ofwbus0: no default resources for rid = 4, type = 1
+mmio_sram0: <XXX@XXX> mem 0-0xff compat arm,scmi-shmem (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfc400000-0xfc400fff irq 8 disabled compat rockchip,rk3568-dwc-ahci (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfc800000-0xfc800fff irq 9 disabled compat rockchip,rk3568-dwc-ahci (no driver attached)
+snps_dwc3_fdt0: <Synopsys Designware DWC3> mem 0xfcc00000-0xfcffffff irq 10 on ofwbus0
+snps_dwc3_fdt0: SNPS Version: DWC3 (5533 300a)
+rk3568_combphy2: configuring for USB3 ref_clk=25000000
+snps_dwc3_fdt0: 64 bytes context size, 32-bit DMA
+usbus0: trying to attach
+usbus0 on snps_dwc3_fdt0
+snps_dwc3_fdt0: usbpf: Attached
+snps_dwc3_fdt1: <Synopsys Designware DWC3> mem 0xfd000000-0xfd3fffff irq 11 on ofwbus0
+snps_dwc3_fdt1: SNPS Version: DWC3 (5533 300a)
+rk3568_combphy0: configuring for USB3 ref_clk=25000000
+snps_dwc3_fdt1: 64 bytes context size, 32-bit DMA
+usbus1: trying to attach
+usbus1 on snps_dwc3_fdt1
+snps_dwc3_fdt1: usbpf: Attached
+ehci0: <Generic EHCI Controller> mem 0xfd800000-0xfd83ffff irq 13 on ofwbus0
+usbus2: EHCI version 1.0
+usbus2 on ehci0
+ehci0: usbpf: Attached
+ofwbus0: <XXX@XXX> mem 0xfd840000-0xfd87ffff irq 14 disabled compat generic-ohci (no driver attached)
+ehci1: <Generic EHCI Controller> mem 0xfd880000-0xfd8bffff irq 15 on ofwbus0
+usbus3: EHCI version 1.0
+usbus3 on ehci1
+ehci1: usbpf: Attached
+ofwbus0: <XXX@XXX> mem 0xfd8c0000-0xfd8fffff irq 16 disabled compat generic-ohci (no driver attached)
+iic0: <I2C generic I/O> on iicbus0
+ofwbus0: no default resources for rid = 0, type = 4
+ofwbus0: no default resources for rid = 0, type = 4
+uart0: <Non-standard ns8250 class UART with FIFOs> mem 0xfdd50000-0xfdd500ff irq 18 on ofwbus0
+uart0: debug port (-1,n,8,1)
+uart0: fast interrupt
+uart0: PPS capture mode: DCD
+ofwbus0: <XXX@XXX> mem 0xfdd70000-0xfdd7000f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfdd70010-0xfdd7001f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfdd70020-0xfdd7002f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfdd70030-0xfdd7003f disabled compat rockchip,rk3568-pwm (no driver attached)
+simple_mfd0: <power-controller> mem 0xfdd90000-0xfdd90fff compat rockchip,rk3568-power-controller (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfde60000-0xfde63fff irq 19,20,21 disabled compat rockchip,rk3568-mali (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe000000-0xfe003fff irq 22 disabled compat rockchip,rk3568-dw-mshc (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe010000-0xfe01ffff irq 23,24 disabled compat rockchip,rk3568-gmac (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe040000-0xfe042fff,0xfe044000-0xfe044fff irq 25 disabled compat rockchip,rk3568-vop (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe043e00-0xfe043eff,0xfe043f00-0xfe043fff irq 26 disabled compat rockchip,rk3568-iommu (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe0a0000-0xfe0bffff irq 27 disabled compat rockchip,rk3568-dw-hdmi (no driver attached)
+syscon_generic_dev0: <syscon> mem 0xfe128000-0xfe12801f on ofwbus0
+syscon_generic_dev1: <syscon> mem 0xfe138080-0xfe13809f on ofwbus0
+syscon_generic_dev2: <syscon> mem 0xfe138100-0xfe13811f on ofwbus0
+syscon_generic_dev3: <syscon> mem 0xfe138180-0xfe13819f on ofwbus0
+syscon_generic_dev4: <syscon> mem 0xfe148000-0xfe14801f on ofwbus0
+syscon_generic_dev5: <syscon> mem 0xfe148080-0xfe14809f on ofwbus0
+syscon_generic_dev6: <syscon> mem 0xfe148100-0xfe14811f on ofwbus0
+syscon_generic_dev7: <syscon> mem 0xfe150000-0xfe15001f on ofwbus0
+syscon_generic_dev8: <syscon> mem 0xfe158000-0xfe15801f on ofwbus0
+syscon_generic_dev9: <syscon> mem 0xfe158100-0xfe15811f on ofwbus0
+syscon_generic_dev10: <syscon> mem 0xfe158180-0xfe15819f on ofwbus0
+syscon_generic_dev11: <syscon> mem 0xfe158200-0xfe15821f on ofwbus0
+syscon_generic_dev12: <syscon> mem 0xfe158280-0xfe15829f on ofwbus0
+syscon_generic_dev13: <syscon> mem 0xfe158300-0xfe15831f on ofwbus0
+syscon_generic_dev14: <syscon> mem 0xfe180000-0xfe18001f on ofwbus0
+syscon_generic_dev15: <syscon> mem 0xfe190000-0xfe19001f on ofwbus0
+syscon_generic_dev16: <syscon> mem 0xfe190280-0xfe19029f on ofwbus0
+syscon_generic_dev17: <syscon> mem 0xfe190300-0xfe19031f on ofwbus0
+syscon_generic_dev18: <syscon> mem 0xfe190380-0xfe19039f on ofwbus0
+syscon_generic_dev19: <syscon> mem 0xfe190400-0xfe19041f on ofwbus0
+syscon_generic_dev20: <syscon> mem 0xfe198000-0xfe19801f on ofwbus0
+syscon_generic_dev21: <syscon> mem 0xfe1a8000-0xfe1a801f on ofwbus0
+syscon_generic_dev22: <syscon> mem 0xfe1a8080-0xfe1a809f on ofwbus0
+syscon_generic_dev23: <syscon> mem 0xfe1a8100-0xfe1a811f on ofwbus0
+pcib0: <RockChip RK3568 PCI-express controller> mem 0x3c0000000-0x3c03fffff,0xfe260000-0xfe26ffff,0xf4000000-0xf40fffff irq 28,29,30,31,32 on ofwbus0
+rk3568_combphy1: configuring for PCIe ref_clk=100000000
+pcib0: Bus is not cache-coherent
+pcib0: Using iATU unroll mode
+pcib0: Detected outbound iATU regions: 8
+pci0: <OFW PCI bus> on pcib0
+pci0: domain=0, physical bus=0
+found->	vendor=0x1d87, dev=0x3566, revid=0x01
+	domain=0, bus=0, slot=0, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=0
+	cmdreg=0x0107, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 32 messages, 64 bit
+	MSI-X supports 1 message in map 0x10
+	secbus=1, subbus=255
+pcib1: <PCI-PCI bridge> at device 0.0 on pci0
+pcib0: failed to reserve resource for pcib1
+pcib1: failed to allocate initial I/O port window: 0-0xfff
+pcib0: failed to reserve resource for pcib1
+pcib1: failed to allocate initial memory window: 0-0xfffff
+pcib0: failed to reserve resource for pcib1
+pcib1: failed to allocate initial prefetch window: 0-0xfffff
+pcib1:   domain            0
+pcib1:   secondary bus     1
+pcib1:   subordinate bus   255
+pci1: <PCI bus> on pcib1
+pcib1: allocated bus range (1-1) for rid 0 of pci1
+pci1: domain=0, physical bus=1
+found->	vendor=0x10ec, dev=0x8125, revid=0x05
+	domain=0, bus=1, slot=0, func=0
+	class=02-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 1 message, 64 bit, vector masks
+	MSI-X supports 32 messages in map 0x20
+	map[10]: type I/O Port, range 32, base 0, size  8, port disabled
+	map[18]: type Memory, range 64, base 0, size 16, memory disabled
+	map[20]: type Memory, range 64, base 0, size 14, memory disabled
+re0: <Realtek PCIe 2.5GbE Family Controller> at device 0.0 on pci1
+pcib1: allocated initial memory window of 0x40000000-0x400fffff
+pcib1: allocated memory range (0x40000000-0x4000ffff) for rid 18 of re0
+re0: Lazy allocation of 0x10000 bytes rid 0x18 type 3 at 0x40000000
+ofw_pci mapdev: start 300000000, len 65536
+re0: Using Memory Mapping!
+re0: unknown device
+device_attach: re0 attach returned 6
+rockchip_dwmmc0: <Synopsys DesignWare Mobile Storage Host Controller (RockChip)> mem 0xfe2b0000-0xfe2b3fff irq 33 on ofwbus0
+rockchip_dwmmc0: vmmc-supply regulator found
+rockchip_dwmmc0: vqmmc-supply regulator found
+rockchip_dwmmc0: Hardware version ID is 270a
+rockchip_dwmmc0: Card inserted
+mmc0: <MMC/SD bus> on rockchip_dwmmc0
+ofwbus0: <XXX@XXX> mem 0xfe2c0000-0xfe2c3fff irq 34 disabled compat rockchip,rk3568-dw-mshc (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe300000-0xfe303fff irq 35 disabled compat rockchip,sfc (no driver attached)
+sdhci_fdt0: <Rockchip RK3568 fdt SDHCI controller> mem 0xfe310000-0xfe31ffff irq 36 on ofwbus0
+sdhci_fdt0-slot0: 200MHz 8bits VDD: VCCQ: 3.3V DRV: B DMA removable
+sdhci_fdt0-slot0: ============== REGISTER DUMP ==============
+sdhci_fdt0-slot0: Sys addr: 0x00000000 | Version:  0x00000005
+sdhci_fdt0-slot0: Blk size: 0x00000200 | Blk cnt:  0x00000000
+sdhci_fdt0-slot0: Argument: 0x000001ff | Trn mode: 0x00000000
+sdhci_fdt0-slot0: Present:  0x03f700f0 | Host ctl: 0x00000030
+sdhci_fdt0-slot0: Power:    0x0000000d | Blk gap:  0x00000000
+sdhci_fdt0-slot0: Wake-up:  0x00000000 | Clock:    0x00000007
+sdhci_fdt0-slot0: Timeout:  0x0000000e | Int stat: 0x00018100
+sdhci_fdt0-slot0: Int enab: 0xffff7fff | Sig enab: 0x00000000
+sdhci_fdt0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00001403
+sdhci_fdt0-slot0: Caps:     0x226dc881 | Caps2:    0x08000007
+sdhci_fdt0-slot0: Max curr: 0x00000000 | ADMA err: 0x00000000
+sdhci_fdt0-slot0: ADMA addr:0xefa2f008 | Slot int: 0x00000000
+sdhci_fdt0-slot0: ===========================================
+sdhci_fdt0: 1 slot(s) allocated
+sdhci_fdt0-slot0: Card inserted
+mmc1: <MMC/SD bus> on sdhci_fdt0
+ofwbus0: <XXX@XXX> mem 0xfe330000-0xfe333fff irq 37 disabled compat rockchip,rk-nandc-v9 (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe380000-0xfe383fff irq 38 disabled compat rockchip,rk3568-crypto (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe388000-0xfe389fff disabled compat rockchip,cryptov2-rng (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe460000-0xfe460fff irq 39 disabled compat rockchip,rk3568-spdif (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe400000-0xfe400fff irq 40 disabled compat rockchip,rk3568-i2s-tdm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe410000-0xfe410fff irq 41 disabled compat rockchip,rk3568-i2s-tdm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe430000-0xfe430fff irq 42 disabled compat rockchip,rk3568-i2s-tdm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe440000-0xfe440fff irq 43 disabled compat rockchip,rk3568-pdm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe530000-0xfe533fff irq 44,45 compat arm,pl330 (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe550000-0xfe553fff irq 46,47 compat arm,pl330 (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe5a0000-0xfe5a0fff irq 48 disabled compat rockchip,rk3568-i2c (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe5b0000-0xfe5b0fff irq 49 disabled compat rockchip,rk3568-i2c (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe5c0000-0xfe5c0fff irq 50 disabled compat rockchip,rk3568-i2c (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe5d0000-0xfe5d0fff irq 51 disabled compat rockchip,rk3568-i2c (no driver attached)
+iicbus1: <unknown card> at addr 0xa2
+iic1: <I2C generic I/O> on iicbus1
+ofwbus0: <XXX@XXX> mem 0xfe600000-0xfe6000ff irq 53 compat rockchip,rk3568-wdt (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe610000-0xfe610fff irq 54 disabled compat rockchip,rk3568-spi (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe620000-0xfe620fff irq 55 disabled compat rockchip,rk3568-spi (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe630000-0xfe630fff irq 56 disabled compat rockchip,rk3568-spi (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe640000-0xfe640fff irq 57 disabled compat rockchip,rk3568-spi (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe650000-0xfe6500ff irq 58 disabled compat rockchip,rk3568-uart (no driver attached)
+ofwbus0: no default resources for rid = 0, type = 4
+ofwbus0: no default resources for rid = 0, type = 4
+uart1: <16750 or compatible> mem 0xfe660000-0xfe6600ff irq 59 on ofwbus0
+uart1: console (115384,n,8,1)
+uart1: fast interrupt
+uart1: PPS capture mode: DCD
+ofwbus0: <XXX@XXX> mem 0xfe670000-0xfe6700ff irq 60 disabled compat rockchip,rk3568-uart (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe680000-0xfe6800ff irq 61 disabled compat rockchip,rk3568-uart (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe690000-0xfe6900ff irq 62 disabled compat rockchip,rk3568-uart (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6a0000-0xfe6a00ff irq 63 disabled compat rockchip,rk3568-uart (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6b0000-0xfe6b00ff irq 64 disabled compat rockchip,rk3568-uart (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6c0000-0xfe6c00ff irq 65 disabled compat rockchip,rk3568-uart (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6d0000-0xfe6d00ff irq 66 disabled compat rockchip,rk3568-uart (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe720000-0xfe7200ff irq 68 compat rockchip,rk3568-saradc (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6e0000-0xfe6e000f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6e0010-0xfe6e001f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6e0020-0xfe6e002f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6e0030-0xfe6e003f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6f0000-0xfe6f000f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6f0010-0xfe6f001f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6f0020-0xfe6f002f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe6f0030-0xfe6f003f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe700000-0xfe70000f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe700010-0xfe70001f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe700020-0xfe70002f disabled compat rockchip,rk3568-pwm (no driver attached)
+ofwbus0: <XXX@XXX> mem 0xfe700030-0xfe70003f disabled compat rockchip,rk3568-pwm (no driver attached)
+gpioc0: <GPIO controller> on gpio0
+gpioc1: <GPIO controller> on gpio1
+gpioc2: <GPIO controller> on gpio2
+gpioc3: <GPIO controller> on gpio3
+gpioc4: <GPIO controller> on gpio4
+ofwbus0: <XXX@XXX> mem 0xfc000000-0xfc000fff irq 71 disabled compat rockchip,rk3568-dwc-ahci (no driver attached)
+syscon_generic_dev24: <syscon> mem 0xfe190080-0xfe19009f on ofwbus0
+syscon_generic_dev25: <syscon> mem 0xfe190100-0xfe19011f on ofwbus0
+syscon_generic_dev26: <syscon> mem 0xfe190200-0xfe19021f on ofwbus0
+pcib2: <RockChip RK3568 PCI-express controller> mem 0x3c0400000-0x3c07fffff,0xfe270000-0xfe27ffff,0xf2000000-0xf20fffff irq 72,73,74,75,76 on ofwbus0
+rk3568_pciephy0: PCIe3 data_lanes[0] > 0
+rk3568_pciephy0: PCIe3 data_lanes[1] > 0
+rk3568_pciephy0: PCIe3 data_lanes[0] > 1 data_lanes[1] > 1
+pcib2: Bus is not cache-coherent
+pcib2: Using iATU unroll mode
+pcib2: Detected outbound iATU regions: 8
+pci2: <OFW PCI bus> on pcib2
+pci2: domain=2, physical bus=0
+found->	vendor=0x1d87, dev=0x3566, revid=0x01
+	domain=2, bus=0, slot=0, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=0
+	cmdreg=0x0107, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 32 messages, 64 bit
+	MSI-X supports 128 messages in map 0x20
+	secbus=1, subbus=255
+pcib3: <PCI-PCI bridge> at device 0.0 on pci2
+pcib2: failed to reserve resource for pcib3
+pcib3: failed to allocate initial I/O port window: 0-0xfff
+pcib2: failed to reserve resource for pcib3
+pcib3: failed to allocate initial memory window: 0-0xfffff
+pcib2: failed to reserve resource for pcib3
+pcib3: failed to allocate initial prefetch window: 0-0xfffff
+pcib3:   domain            2
+pcib3:   secondary bus     1
+pcib3:   subordinate bus   255
+pci3: <PCI bus> on pcib3
+pcib3: allocated bus range (1-1) for rid 0 of pci3
+pci3: domain=2, physical bus=1
+found->	vendor=0x10ec, dev=0x8125, revid=0x05
+	domain=2, bus=1, slot=0, func=0
+	class=02-00-00, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 1 message, 64 bit, vector masks
+	MSI-X supports 32 messages in map 0x20
+	map[10]: type I/O Port, range 32, base 0, size  8, port disabled
+	map[18]: type Memory, range 64, base 0, size 16, memory disabled
+	map[20]: type Memory, range 64, base 0, size 14, memory disabled
+re0: <Realtek PCIe 2.5GbE Family Controller> at device 0.0 on pci3
+pcib3: allocated initial memory window of 0xf2200000-0xf22fffff
+pcib3: allocated memory range (0xf2200000-0xf220ffff) for rid 18 of re0
+re0: Lazy allocation of 0x10000 bytes rid 0x18 type 3 at 0xf2200000
+ofw_pci mapdev: start f2200000, len 65536
+re0: Using Memory Mapping!
+pcib3: allocated memory range (0xf2210000-0xf2213fff) for rid 20 of re0
+re0: Lazy allocation of 0x4000 bytes rid 0x20 type 3 at 0xf2210000
+ofw_pci mapdev: start f2210000, len 16384
+re0: attempting to allocate 1 MSI-X vectors (32 supported)
+re0: using IRQ 91 for MSI-X
+re0: Using 1 MSI-X message
+re0: Invalid ether addr: XXX
+re0: Random ether addr: XXX
+re0: version:1.98.00
+re0: Ethernet address: ...
+
+This product is covered by one or more of the following patents:            
+US6,570,884, US6,115,776, and US6,327,625.
+re0: bpf attached
+re0: Ethernet address: ...
+pcib4: <RockChip RK3568 PCI-express controller> mem 0x3c0800000-0x3c0bfffff,0xfe280000-0xfe28ffff,0xf0000000-0xf00fffff irq 77,78,79,80,81 on ofwbus0
+pcib4: Bus is not cache-coherent
+pcib4: Using iATU unroll mode
+pcib4: Detected outbound iATU regions: 8
+pci4: <OFW PCI bus> on pcib4
+pci4: domain=4, physical bus=0
+found->	vendor=0x1d87, dev=0x3566, revid=0x01
+	domain=4, bus=0, slot=0, func=0
+	class=06-04-00, hdrtype=0x01, mfdev=0
+	cmdreg=0x0107, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D1 D2 D3  current D0
+	MSI supports 32 messages, 64 bit, vector masks
+	MSI-X supports 128 messages in map 0x20
+	map[10]: type Memory, range 64, base 0, size 30, enabled
+	secbus=1, subbus=255
+pcib5: <PCI-PCI bridge> at device 0.0 on pci4
+pcib4: failed to reserve resource for pcib5
+pcib5: failed to allocate initial I/O port window: 0-0xfff
+pcib4: failed to reserve resource for pcib5
+pcib5: failed to allocate initial memory window: 0-0xfffff
+pcib4: failed to reserve resource for pcib5
+pcib5: failed to allocate initial prefetch window: 0-0xfffff
+pcib5:   domain            4
+pcib5:   secondary bus     1
+pcib5:   subordinate bus   255
+pci5: <PCI bus> on pcib5
+pcib5: allocated bus range (1-1) for rid 0 of pci5
+pci5: domain=4, physical bus=1
+found->	vendor=0x126f, dev=0x2263, revid=0x03
+	domain=4, bus=1, slot=0, func=0
+	class=01-08-02, hdrtype=0x00, mfdev=0
+	cmdreg=0x0000, statreg=0x0010, cachelnsz=0 (dwords)
+	lattimer=0x00 (0 ns), mingnt=0x00 (0 ns), maxlat=0x00 (0 ns)
+	intpin=a, irq=255
+	powerspec 3  supports D0 D3  current D0
+	MSI supports 8 messages, 64 bit, vector masks
+	MSI-X supports 16 messages in map 0x10
+	map[10]: type Memory, range 64, base 0, size 14, memory disabled
+nvme0: <Generic NVMe Device> at device 0.0 on pci5
+pcib5: allocated initial memory window of 0xf0200000-0xf02fffff
+pcib5: allocated memory range (0xf0200000-0xf0203fff) for rid 10 of nvme0
+nvme0: Lazy allocation of 0x4000 bytes rid 0x10 type 3 at 0xf0200000
+ofw_pci mapdev: start f0200000, len 16384
+nvme0: attempting to allocate 5 MSI-X vectors (16 supported)
+nvme0: using IRQs 92-96 for MSI-X
+nvme0: CapLo: 0xf00100ff: MQES 255, CQR, TO 240
+nvme0: CapHi: 0x00100030: DSTRD 0, NSSRS, CSS 1, MPSMIN 0, MPSMAX 1
+nvme0: Version: 0x00010300: 1.3
+eq0: <DesignWare EQOS Gigabit ethernet> mem 0xfe2a0000-0xfe2affff irq 82,83 on ofwbus0
+eq0: DesignWare EQOS ver 0x51 (0x30)
+eq0: hw features 160171e7 010c01c8 10000000 00000000
+eq0: Ethernet address XXX
+eq0: TX ring @ 0x6626000, RX ring @ 0x67ff000
+miibus0: <MII bus> on eq0
+rgephy0: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 0 on miibus0
+rgephy0: OUI 0x00e04c, model 0x0011, rev. 6
+rgephy0:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+rgephy1: <RTL8169S/8110S/8211 1000BASE-T media interface> PHY 1 on miibus0
+rgephy1: OUI 0x00e04c, model 0x0011, rev. 6
+rgephy1:  none, 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT-FDX, 1000baseT-FDX-master, auto
+eq0: bpf attached
+eq0: Ethernet address: ...
+gpioled0: <GPIO LEDs> on ofwbus0
+armv8crypto0: <AES-CBC,AES-XTS,AES-GCM>
+crypto: assign armv8crypto0 driver id 0, flags 0xe000000
+crypto: assign cryptosoft0 driver id 1, flags 0x6000000
+Device configuration finished.
+procfs registered
+Timecounters tick every 1.000 msec
+usbus0: 5.0Gbps Super Speed USB v3.0
+usbus1: 5.0Gbps Super Speed USB v3.0
+usbus2: 480Mbps High Speed USB v2.0
+usbus3: 480Mbps High Speed USB v2.0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+vlan: initialized, using hash tables with chaining
+lo0: bpf attached
+IPsec: Initialized Security Association Processing.
+tcp_init: net.inet.tcp.tcbhashsize auto tuned to 32768
+[nl_generic_kpi] genl_register_family: Registered family nlctrl id 16
+[nl_generic_kpi] genl_register_cmds: Adding cmd GETFAMILY(3) to family nlctrl
+ugen0.1: <Synopsys XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Synopsys XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ugen1.1: <Synopsys XHCI root HUB> at usbus1
+uhub1 on usbus1
+uhub1: <Synopsys XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+ugen2.1: <Generic EHCI root HUB> at usbus2
+uhub2 on usbus2
+uhub2: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus2
+ugen3.1: <Generic EHCI root HUB> at usbus3
+uhub3 on usbus3
+uhub3: <Generic EHCI root HUB, class 9/0, rev 2.00/1.00, addr 1> on usbus3
+rk817_pmu0: registered as a time-of-day clock, resolution 1.000000s
+mmc0: Probing bus
+mmc0: SD 2.0 interface conditions: OK
+mmc0: SD probe: OK (OCR: 0x40ff8000)
+mmc0: Current OCR: 0x00ff8000
+mmc0: Probing cards
+mmc0: New card detected (CID XXX)
+mmc0: New card detected (CSD XXX)
+mmc0: Card at relative address 0xe624 added:
+mmc0:  card: SDHC SA08G 8.0 SN ... MFG 08/2018 by 3 SD
+mmc0:  quirks: 0
+mmc0:  bus: 4bit, 50MHz (high speed timing)
+mmc0:  memory: 15523840 blocks, erase sector 8192 blocks
+mmc0: setting transfer rate to 50.000MHz (high speed timing)
+mmcsd0: 8GB <SDHC SA08G 8.0 SN ... MFG 08/2018 by 3 SD> at mmc0 50.0MHz/4bit/1016-block
+sdhci_fdt0-slot0: Divider 267 for freq 375000 (base 200000000)
+mmc1: Probing bus
+sdhci_fdt0-slot0: Divider 267 for freq 375000 (base 200000000)
+GEOM: new disk mmcsd0
+sdhci_fdt0-slot0: Divider 267 for freq 375000 (base 200000000)
+mmc0: setting bus width to 4 bits high speed timing
+sdhci_fdt0-slot0: Got command interrupt 0x00000001, but there is no active command.
+sdhci_fdt0-slot0: ============== REGISTER DUMP ==============
+sdhci_fdt0-slot0: Sys addr: 0x00000000 | Version:  0x00000005
+sdhci_fdt0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_fdt0-slot0: Argument: 0x000001aa | Trn mode: 0x00000000
+sdhci_fdt0-slot0: Present:  0x03f700f0 | Host ctl: 0x00000001
+sdhci_fdt0-slot0: Power:    0x0000000d | Blk gap:  0x00000000
+sdhci_fdt0-slot0: Wake-up:  0x00000000 | Clock:    0x00000b47
+sdhci_fdt0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_fdt0-slot0: Int enab: 0x01ff00fb | Sig enab: 0x01ff00fb
+sdhci_fdt0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_fdt0-slot0: Caps:     0x226dc881 | Caps2:    0x08000007
+sdhci_fdt0-slot0: Max curr: 0x00000000 | ADMA err: 0x00000000
+sdhci_fdt0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_fdt0-slot0: ===========================================
+sdhci_fdt0-slot0: Got command interrupt 0x00000001, but there is no active command.
+sdhci_fdt0-slot0: ============== REGISTER DUMP ==============
+sdhci_fdt0-slot0: Sys addr: 0x00000000 | Version:  0x00000005
+sdhci_fdt0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_fdt0-slot0: Argument: 0x00000000 | Trn mode: 0x00000000
+sdhci_fdt0-slot0: Present:  0x03f700f0 | Host ctl: 0x00000001
+sdhci_fdt0-slot0: Power:    0x0000000d | Blk gap:  0x00000000
+sdhci_fdt0-slot0: Wake-up:  0x00000000 | Clock:    0x00000b47
+sdhci_fdt0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_fdt0-slot0: Int enab: 0x01ff00fb | Sig enab: 0x01ff00fb
+sdhci_fdt0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_fdt0-slot0: Caps:     0x226dc881 | Caps2:    0x08000007
+sdhci_fdt0-slot0: Max curr: 0x00000000 | ADMA err: 0x00000000
+sdhci_fdt0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_fdt0-slot0: ===========================================
+uhub0: 2 ports with 2 removable, self powered
+sdhci_fdt0-slot0: Got command interrupt 0x00000001, but there is no active command.
+sdhci_fdt0-slot0: ============== REGISTER DUMP ==============
+sdhci_fdt0-slot0: Sys addr: 0x00000000 | Version:  0x00000005
+sdhci_fdt0-slot0: Blk size: 0x00000000 | Blk cnt:  0x00000000
+sdhci_fdt0-slot0: Argument: 0x00000000 | Trn mode: 0x00000000
+sdhci_fdt0-slot0: Present:  0x03f700f0 | Host ctl: 0x00000001
+sdhci_fdt0-slot0: Power:    0x0000000d | Blk gap:  0x00000000
+sdhci_fdt0-slot0: Wake-up:  0x00000000 | Clock:    0x00000b47
+sdhci_fdt0-slot0: Timeout:  0x00000000 | Int stat: 0x00000000
+sdhci_fdt0-slot0: Int enab: 0x01ff00fb | Sig enab: 0x01ff00fb
+sdhci_fdt0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_fdt0-slot0: Caps:     0x226dc881 | Caps2:    0x08000007
+sdhci_fdt0-slot0: Max curr: 0x00000000 | ADMA err: 0x00000000
+sdhci_fdt0-slot0: ADMA addr:0x00000000 | Slot int: 0x00000000
+sdhci_fdt0-slot0: ===========================================
+uhub1: 2 ports with 2 removable, self powered
+mmc1: SD probe: failed
+mmc1: MMC probe: OK (OCR: 0x40ff8080)
+sdhci_fdt0-slot0: Divider 267 for freq 375000 (base 200000000)
+sdhci_fdt0-slot0: Divider 267 for freq 375000 (base 200000000)
+mmc1: Current OCR: 0x00ff8080
+mmc1: Probing cards
+mmc1: New card detected (CID XXX)
+mmc1: New card detected (CSD XXX)
+GEOM_PART: partition 2 on (mmcsd0, GPT) is not aligned on 4194304 bytes
+GEOM_PART: partition 3 on (mmcsd0, GPT) is not aligned on 4194304 bytes
+sdhci_fdt0-slot0: Divider 267 for freq 375000 (base 200000000)
+sdhci_fdt0-slot0: Divider 267 for freq 375000 (base 200000000)
+mmc1: Card at relative address 0x0002 added:
+mmc1:  card: MMCHC 8GTF4R 0.6 SN ... MFG 01/2022 by 21 0x0000
+mmc1:  quirks: 0
+mmc1:  bus: 8bit, 52MHz (high speed timing)
+mmc1:  memory: 15269888 blocks, erase sector 1024 blocks, read-only
+sdhci_fdt0-slot0: Got command interrupt 0x00000001, but there is no active command.
+sdhci_fdt0-slot0: ============== REGISTER DUMP ==============
+sdhci_fdt0-slot0: Sys addr: 0xdeb00008 | Version:  0x00000005
+sdhci_fdt0-slot0: Blk size: 0x00007008 | Blk cnt:  0x00000000
+sdhci_fdt0-slot0: Argument: 0x00000000 | Trn mode: 0x00000013
+sdhci_fdt0-slot0: Present:  0x03f700f0 | Host ctl: 0x00000001
+sdhci_fdt0-slot0: Power:    0x0000000d | Blk gap:  0x00000000
+sdhci_fdt0-slot0: Wake-up:  0x00000000 | Clock:    0x00000b47
+sdhci_fdt0-slot0: Timeout:  0x00000007 | Int stat: 0x00000000
+sdhci_fdt0-slot0: Int enab: 0x01ff00fb | Sig enab: 0x01ff00fb
+sdhci_fdt0-slot0: AC12 err: 0x00000000 | Host ctl2:0x00000000
+sdhci_fdt0-slot0: Caps:     0x226dc881 | Caps2:    0x08000007
+sdhci_fdt0-slot0: Max curr: 0x00000000 | ADMA err: 0x00000000
+sdhci_fdt0-slot0: ADMA addr:0xdeb00008 | Slot int: 0x00000000
+sdhci_fdt0-slot0: ===========================================
+sdhci_fdt0-slot0: Divider 267 for freq 375000 (base 200000000)
+mmc1: setting transfer rate to 52.000MHz (high speed timing)
+sdhci_fdt0-slot0: Divider 267 for freq 375000 (base 200000000)
+sdhci_fdt0-slot0: Divider 2 for freq 50000000 (base 200000000)
+mmc1: setting bus width to 8 bits high speed timing
+mmcsd1: taking advantage of TRIM
+mmcsd1: cache size 65536KB
+mmcsd1: 8GB <MMCHC 8GTF4R 0.6 SN ... MFG 01/2022 by 21 0x0000> (read-only) at mmc1 50.0MHz/8bit/65535-block
+mmcsd1boot0: 4MB partition 1 (read-only) at mmcsd1
+mmcsd1boot1: 4MB partition 2 (read-only) at mmcsd1
+mmcsd1rpmb: 524kB partition 3 (read-only) at mmcsd1
+uhub3: 1 port with 1 removable, self powered
+uhub2: 1 port with 1 removable, self powered
+nvme0: Allocated 64MB host memory buffer
+CPU  0: ARM Cortex-A55 r2p0 affinity:  0  0
+                   Cache Type = <64 byte D-cacheline,64 byte I-cacheline,VIPT ICache,64 byte ERG,64 byte CWG>
+Trying to mount root from zfs:zroot/ROOT/default []...
+ Instruction Set Attributes 0 = <DP,RDM,Atomic,CRC32,SHA2,SHA1,AES+PMULL>
+ Instruction Set Attributes 1 = <RCPC-8.3,DCPoP>
+ Instruction Set Attributes 2 = <>
+         Processor Features 0 = <RAS,GIC,AdvSIMD+HP,FP+HP,EL3 32,EL2 32,EL1 32,EL0 32>
+         Processor Features 1 = <PSTATE.SSBS>
+      Memory Model Features 0 = <TGran4,TGran64,TGran16,SNSMem,BigEnd,16bit ASID,1TB PA>
+      Memory Model Features 1 = <XNX,PAN+ATS1E1,LO,HPD+TTPBHA,VH,16bit VMID,HAF+DS>
+      Memory Model Features 2 = <32bit CCIDX,48bit VA,IESB,UAO,CnP>
+             Debug Features 0 = <DoubleLock,2 CTX BKPTs,4 Watchpoints,6 Breakpoints,PMUv3 v8.1,Debugv8.2>
+             Debug Features 1 = <>
+         Auxiliary Features 0 = <>
+         Auxiliary Features 1 = <>
+AArch32 Instruction Set Attributes 5 = <RDM,CRC32,SHA2,SHA1,AES+VMULL,SEVL>
+AArch32 Media and VFP Features 0 = <FPRound,FPSqrt,FPDivide,DP VFPv3+v4,SP VFPv3+v4,AdvSIMD>
+AArch32 Media and VFP Features 1 = <SIMDFMAC,FPHP Arith,SIMDHP Arith,SIMDSP,SIMDInt,SIMDLS,FPDNaN,FPFtZ>
+ L1 cache: 32KB (instruction), 32KB (data)
+ L2 cache: 512KB (unified)
+CPU  1: ARM Cortex-A55 r2p0 affinity:  1  0
+ L1 cache: 32KB (instruction), 32KB (data)
+ L2 cache: 512KB (unified)
+CPU  2: ARM Cortex-A55 r2p0 affinity:  2  0
+ L1 cache: 32KB (instruction), 32KB (data)
+ L2 cache: 512KB (unified)
+CPU  3: ARM Cortex-A55 r2p0 affinity:  3  0
+ L1 cache: 32KB (instruction), 32KB (data)
+ L2 cache: 512KB (unified)
+Release APs...gic0: Start searching for Re-Distributor
+gic0: Start searching for Re-Distributor
+gic0: Start searching for Re-Distributor
+gic0: CPU2 Re-Distributor has been found
+gic0: CPU1 Re-Distributor has been found
+gic0: CPU2 Re-Distributor woke up
+gic0: CPU3 Re-Distributor has been found
+gic0: CPU1 Re-Distributor woke up
+gic0: CPU2 enabled CPU interface via system registers
+gic0: CPU3 Re-Distributor woke up
+gic0: CPU3 enabled CPU interface via system registers
+gic0: CPU1 enabled CPU interface via system registers
+nda0 at nvme0 bus 0 scbus0 target 0 lun 1
+done
+nda0: <NE-512 T1223A0L 9410430000198>
+Enabling CnP
+nda0: Serial Number...
+nda0: nvme version 1.3 x1 (max x4) lanes PCIe Gen3 (max Gen3) link
+Unresolved linked clock found: clk_32k_pvtm
+nda0: 488386MB (1000215216 512 byte sectors)
+Unresolved linked clock found: usb480m_phy
+pass0 at nvme0 bus 0 scbus0 target 0 lun 1
+Unresolved linked clock found: mpll
+GEOM: new disk mmcsd1
+pass0: GEOM: new disk mmcsd1boot0
+Unresolved linked clock found: i2s0_mclkin
+GEOM: new disk mmcsd1boot1
+<NE-512 T1223A0L 9410430000198>
+pass0: Serial Number...
+Unresolved linked clock found: i2s1_mclkin
+pass0: nvme version 1.3 x1 (max x4) lanes PCIe Gen3 (max Gen3) link
+Unresolved linked clock found: i2s2_mclkin
+Unresolved linked clock found: i2s3_mclkin
+Unresolved linked clock found: gpu_pvtpll_out
+Unresolved linked clock found: npu_pvtpll_out
+Unresolved linked clock found: gmac0_clkin
+Unresolved linked clock found: gmac1_clkin
+Unresolved linked clock found: clk_gmac0_xpcs_mii
+Unresolved linked clock found: clk_gmac1_xpcs_mii
+Unresolved linked clock found: dummy
+GEOM: new disk nda0
+efirtc0: providing initial system time
+Dual Console: Serial Primary, Video Secondary
+start_init: trying /sbin/init
+lo0: link state changed to UP
+eq0: link state changed to DOWN
+re0: link state changed to DOWN

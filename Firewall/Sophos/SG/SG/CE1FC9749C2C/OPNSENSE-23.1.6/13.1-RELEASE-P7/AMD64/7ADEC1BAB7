@@ -1,0 +1,834 @@
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p7 stable/23.1-n250411-85724e9ce22 SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 800x600
+CPU: Intel(R) Xeon(R) CPU E3-1275 v5 @ 3.60GHz (3600.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506e3  Family=0x6  Model=0x5e  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16496115712 (15731 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 4 5 2 3 6 7
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+smbios0: <System Management BIOS> at iomem 0xf05e0-0xf05fe
+smbios0: Version: 3.0, BCD Revision: 3.0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xdc000000-0xdcffffff,0xc0000000-0xcfffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xdf410000-0xdf41ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xdf428000-0xdf429fff,0xdf42c000-0xdf42c0ff,0xdf42b000-0xdf42b7ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 5 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 27.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 19 at device 27.3 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> at device 0.0 on pci4
+pci5: <ACPI PCI bus> on pcib5
+vgapci1: <VGA-compatible display> port 0xe000-0xe07f mem 0xdd000000-0xdd7fffff,0xdd820000-0xdd83ffff irq 19 at device 0.0 on pci5
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb0: <Intel(R) I211 (Copper)> port 0xd000-0xd01f mem 0xde300000-0xde31ffff,0xde320000-0xde323fff irq 16 at device 0.0 on pci6
+igb0: NVM V0.6 imgtype2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib7: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci7: <ACPI PCI bus> on pcib7
+igb1: <Intel(R) I211 (Copper)> port 0xc000-0xc01f mem 0xdf300000-0xdf31ffff,0xdf320000-0xdf323fff irq 17 at device 0.0 on pci7
+igb1: NVM V0.6 imgtype2
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci8: <ACPI PCI bus> on pcib8
+igb2: <Intel(R) I211 (Copper)> port 0xb000-0xb01f mem 0xdf200000-0xdf21ffff,0xdf220000-0xdf223fff irq 18 at device 0.0 on pci8
+igb2: NVM V0.6 imgtype2
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib9: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci9: <ACPI PCI bus> on pcib9
+igb3: <Intel(R) I211 (Copper)> port 0xa000-0xa01f mem 0xdf100000-0xdf11ffff,0xdf120000-0xdf123fff irq 19 at device 0.0 on pci9
+igb3: NVM V0.6 imgtype2
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib10: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci10: <ACPI PCI bus> on pcib10
+igb4: <Intel(R) I211 (Copper)> port 0x9000-0x901f mem 0xdd900000-0xdd91ffff,0xdd920000-0xdd923fff irq 16 at device 0.0 on pci10
+igb4: NVM V0.6 imgtype2
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib11: <ACPI PCI-PCI bridge> irq 17 at device 28.5 on pci0
+pci11: <ACPI PCI bus> on pcib11
+igb5: <Intel(R) I211 (Copper)> port 0x8000-0x801f mem 0xdf000000-0xdf01ffff,0xdf020000-0xdf023fff irq 17 at device 0.0 on pci11
+igb5: NVM V0.6 imgtype2
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib12: <ACPI PCI-PCI bridge> irq 18 at device 28.6 on pci0
+pci12: <ACPI PCI bus> on pcib12
+igb6: <Intel(R) I211 (Copper)> port 0x7000-0x701f mem 0xdef00000-0xdef1ffff,0xdef20000-0xdef23fff irq 18 at device 0.0 on pci12
+igb6: NVM V0.6 imgtype2
+igb6: Using 1024 TX descriptors and 1024 RX descriptors
+igb6: Using 2 RX queues 2 TX queues
+igb6: Using MSI-X interrupts with 3 vectors
+igb6: Ethernet address: ...
+igb6: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib13: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pci13: <ACPI PCI bus> on pcib13
+igb7: <Intel(R) I211 (Copper)> port 0x6000-0x601f mem 0xdee00000-0xdee1ffff,0xdee20000-0xdee23fff irq 19 at device 0.0 on pci13
+igb7: NVM V0.6 imgtype2
+igb7: Using 1024 TX descriptors and 1024 RX descriptors
+igb7: Using 2 RX queues 2 TX queues
+igb7: Using MSI-X interrupts with 3 vectors
+igb7: Ethernet address: ...
+igb7: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib14: <ACPI PCI-PCI bridge> irq 16 at device 29.0 on pci0
+pci14: <ACPI PCI bus> on pcib14
+ix0: <Intel(R) X520 82599ES (SFI/SFP+)> port 0x5020-0x503f mem 0xded20000-0xded3ffff,0xded44000-0xded47fff irq 16 at device 0.0 on pci14
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x4
+ix0: eTrack 0x800006d1 PHY FW V65535
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) X520 82599ES (SFI/SFP+)> port 0x5000-0x501f mem 0xded00000-0xded1ffff,0xded40000-0xded43fff irq 17 at device 0.1 on pci14
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x4
+ix1: eTrack 0x800006d1 PHY FW V65535
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Sunrise Point HDA Controller> mem 0xdf420000-0xdf423fff,0xdf400000-0xdf40ffff irq 16 at device 31.3 on pci0
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (38400,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC-low" frequency 1799996656 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Intel Skylake HDA CODEC> at cad 2 on hdac0
+hdaa0: <Intel Skylake Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Skylake (HDMI/DP 8ch)> at nid 3 on hdaa0
+ses0 at ahciem0 bus 0 scbus5 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <KINGSTON SA400S37120G SBFKB1E1> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ses0: ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <KINGSTON SA400S37120G SBFK71E0> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 114473MB (234441648 512 byte sectors)
+ses0: ada1,pass1 in 'Slot 01', SATA Slot: scbus1 target 0
+Trying to mount root from zfs:zroot/ROOT/default []...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+Root mount waiting for: usbus0
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <Avocent General Purpose USB Hub> at usbus0
+uhub1 on uhub0
+uhub1: <Avocent General Purpose USB Hub, class 9/0, rev 2.00/80.00, addr 1> on usbus0
+Root mount waiting for: usbus0
+uhub1: 3 ports with 3 removable, bus powered
+ugen0.3: <AVOCENT AVODSR VMCHS-USB MPUIQ> at usbus0
+ukbd0 on uhub1
+ukbd0: <AVOCENT AVODSR VMCHS-USB MPUIQ, class 0/0, rev 2.00/0.01, addr 2> on usbus0
+kbd2 at ukbd0
+Dual Console: Video Primary, Serial Secondary
+igb3: link state changed to UP
+igb4: link state changed to UP
+igb5: link state changed to UP
+pchtherm0: <Skylake PCH 100 Thermal Subsystem> mem 0xdf42e000-0xdf42efff irq 18 at device 20.2 on pci0
+ichsmb0: <Intel Sunrise Point-H SMBus controller> port 0xf040-0xf05f mem 0xdf42a000-0xdf42a0ff irq 16 at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+ums0 on uhub1
+ums0: <AVOCENT AVODSR VMCHS-USB MPUIQ, class 0/0, rev 2.00/0.01, addr 2> on usbus0
+ums0: 5 buttons and [XYZ] coordinates ID=1
+ums0: 5 buttons and [Z] coordinates ID=2
+lo0: link state changed to UP
+coretemp0: <CPU On-Die Thermal Sensors> on cpu0
+pflog0: permanently promiscuous mode enabled
+vlan0: changing name to 'vlan0050'
+vlan1: changing name to 'vlan0051'
+vlan2: changing name to 'vlan0055'
+vlan3: changing name to 'vlan0056'
+vlan4: changing name to 'vlan0100'
+vlan5: changing name to 'vlan0101'
+vlan6: changing name to 'vlan0103'
+vlan7: changing name to 'vlan0200'
+vlan8: changing name to 'vlan0300'
+vlan9: changing name to 'vlan0301'
+ix0: link state changed to UP
+vlan0051: link state changed to UP
+vlan0103: link state changed to UP
+vlan0050: link state changed to UP
+vlan0100: link state changed to UP
+vlan0101: link state changed to UP
+vlan0200: link state changed to UP
+vlan0055: link state changed to UP
+vlan0301: link state changed to UP
+vlan0300: link state changed to UP
+ix1: link state changed to UP
+vlan0056: link state changed to UP
+igb4: link state changed to DOWN
+igb5: link state changed to DOWN
+WARNING: attempt to domain_add(netgraph) after domainfinalize()
+ng0: changing name to 'pppoe0'
+igb5: link state changed to UP
+igb4: link state changed to UP
+ng_pppoe[1f]: no matching session
+ng_pppoe[1f]: no matching session
+ng_pppoe[1f]: no matching session
+ng_pppoe[1f]: no matching session
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0100
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0100
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on ix0
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0100
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+igb4: link state changed to DOWN
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+igb4: link state changed to UP
+igb4: link state changed to DOWN
+igb4: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+igb4: link state changed to DOWN
+igb4: link state changed to UP
+igb4: link state changed to DOWN
+igb4: link state changed to UP
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+arp: XXX.XXX.XXX.XXX moved from XXX to XXX on vlan0050
+igb4: link state changed to DOWN
+igb4: link state changed to UP
+igb4: link state changed to DOWN
+igb4: link state changed to UP
+Waiting (max 60 seconds) for system process `vnlru' to stop... done
+Waiting (max 60 seconds) for system process `syncer' to stop... 
+Syncing disks, vnodes remaining... 0 0 0 0 done
+All buffers synced.
+Uptime: 8d12h21m32s
+---<<BOOT>>---
+Copyright (c) 02B2-369B The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 13.1-RELEASE-p7 stable/23.1-n250430-7eb6eb035df SMP amd64
+FreeBSD clang version 13.0.0 (XXX@XXX:llvm/llvm-project.git llvmorg-13.0.0-0-gd7b669b3a303)
+VT(efifb): resolution 800x600
+CPU: Intel(R) Xeon(R) CPU E3-1275 v5 @ 3.60GHz (3600.00-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0x506e3  Family=0x6  Model=0x5e  Stepping=3
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbff<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,SMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x29c6fbf<FSGSBASE,TSCADJ,SGX,BMI1,HLE,AVX2,SMEP,BMI2,ERMS,INVPCID,RTM,NFPUSG,MPX,RDSEED,ADX,SMAP,CLFLUSHOPT,PROCTRACE>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16496119808 (15731 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 8 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 1 5 4 3 2 6 7
+random: entropy device external interface
+wlan: mac acl policy registered
+kbd1 at kbdmux0
+WARNING: Device "spkr" is Giant locked and may be deleted before FreeBSD 14.0.
+smbios0: <System Management BIOS> at iomem 0xf05e0-0xf05fe
+smbios0: Version: 3.0, BCD Revision: 3.0
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS>
+acpi0: <ALASKA A M I >
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 24000000 Hz quality 950
+Event timer "HPET" frequency 24000000 Hz quality 550
+atrtc0: <AT realtime clock> port 0x70-0x77 irq 8 on acpi0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pcib1: <ACPI PCI-PCI bridge> irq 16 at device 1.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 16 at device 1.1 on pci0
+pci2: <ACPI PCI bus> on pcib2
+vgapci0: <VGA-compatible display> port 0xf000-0xf03f mem 0xdc000000-0xdcffffff,0xc0000000-0xcfffffff irq 16 at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <Intel Sunrise Point USB 3.0 controller> mem 0xdf410000-0xdf41ffff irq 16 at device 20.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0: waiting for BIOS to give up control
+xhci_interrupt: host controller halted
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms> at device 22.0 (no driver attached)
+ahci0: <Intel Sunrise Point AHCI SATA controller> port 0xf090-0xf097,0xf080-0xf083,0xf060-0xf07f mem 0xdf428000-0xdf429fff,0xdf42c000-0xdf42c0ff,0xdf42b000-0xdf42b7ff irq 16 at device 23.0 on pci0
+ahci0: AHCI v1.31 with 5 6Gbps ports, Port Multiplier not supported
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+pcib3: <ACPI PCI-PCI bridge> irq 16 at device 27.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+pcib4: <ACPI PCI-PCI bridge> irq 19 at device 27.3 on pci0
+pci4: <ACPI PCI bus> on pcib4
+pcib5: <ACPI PCI-PCI bridge> at device 0.0 on pci4
+pci5: <ACPI PCI bus> on pcib5
+vgapci1: <VGA-compatible display> port 0xe000-0xe07f mem 0xdd000000-0xdd7fffff,0xdd820000-0xdd83ffff irq 19 at device 0.0 on pci5
+pcib6: <ACPI PCI-PCI bridge> irq 16 at device 28.0 on pci0
+pci6: <ACPI PCI bus> on pcib6
+igb0: <Intel(R) I211 (Copper)> port 0xd000-0xd01f mem 0xde300000-0xde31ffff,0xde320000-0xde323fff irq 16 at device 0.0 on pci6
+igb0: NVM V0.6 imgtype2
+igb0: Using 1024 TX descriptors and 1024 RX descriptors
+igb0: Using 2 RX queues 2 TX queues
+igb0: Using MSI-X interrupts with 3 vectors
+igb0: Ethernet address: ...
+igb0: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib7: <ACPI PCI-PCI bridge> irq 17 at device 28.1 on pci0
+pci7: <ACPI PCI bus> on pcib7
+igb1: <Intel(R) I211 (Copper)> port 0xc000-0xc01f mem 0xdf300000-0xdf31ffff,0xdf320000-0xdf323fff irq 17 at device 0.0 on pci7
+igb1: NVM V0.6 imgtype2
+igb1: Using 1024 TX descriptors and 1024 RX descriptors
+igb1: Using 2 RX queues 2 TX queues
+igb1: Using MSI-X interrupts with 3 vectors
+igb1: Ethernet address: ...
+igb1: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib8: <ACPI PCI-PCI bridge> irq 18 at device 28.2 on pci0
+pci8: <ACPI PCI bus> on pcib8
+igb2: <Intel(R) I211 (Copper)> port 0xb000-0xb01f mem 0xdf200000-0xdf21ffff,0xdf220000-0xdf223fff irq 18 at device 0.0 on pci8
+igb2: NVM V0.6 imgtype2
+igb2: Using 1024 TX descriptors and 1024 RX descriptors
+igb2: Using 2 RX queues 2 TX queues
+igb2: Using MSI-X interrupts with 3 vectors
+igb2: Ethernet address: ...
+igb2: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib9: <ACPI PCI-PCI bridge> irq 19 at device 28.3 on pci0
+pci9: <ACPI PCI bus> on pcib9
+igb3: <Intel(R) I211 (Copper)> port 0xa000-0xa01f mem 0xdf100000-0xdf11ffff,0xdf120000-0xdf123fff irq 19 at device 0.0 on pci9
+igb3: NVM V0.6 imgtype2
+igb3: Using 1024 TX descriptors and 1024 RX descriptors
+igb3: Using 2 RX queues 2 TX queues
+igb3: Using MSI-X interrupts with 3 vectors
+igb3: Ethernet address: ...
+igb3: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib10: <ACPI PCI-PCI bridge> irq 16 at device 28.4 on pci0
+pci10: <ACPI PCI bus> on pcib10
+igb4: <Intel(R) I211 (Copper)> port 0x9000-0x901f mem 0xdd900000-0xdd91ffff,0xdd920000-0xdd923fff irq 16 at device 0.0 on pci10
+igb4: NVM V0.6 imgtype2
+igb4: Using 1024 TX descriptors and 1024 RX descriptors
+igb4: Using 2 RX queues 2 TX queues
+igb4: Using MSI-X interrupts with 3 vectors
+igb4: Ethernet address: ...
+igb4: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib11: <ACPI PCI-PCI bridge> irq 17 at device 28.5 on pci0
+pci11: <ACPI PCI bus> on pcib11
+igb5: <Intel(R) I211 (Copper)> port 0x8000-0x801f mem 0xdf000000-0xdf01ffff,0xdf020000-0xdf023fff irq 17 at device 0.0 on pci11
+igb5: NVM V0.6 imgtype2
+igb5: Using 1024 TX descriptors and 1024 RX descriptors
+igb5: Using 2 RX queues 2 TX queues
+igb5: Using MSI-X interrupts with 3 vectors
+igb5: Ethernet address: ...
+igb5: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib12: <ACPI PCI-PCI bridge> irq 18 at device 28.6 on pci0
+pci12: <ACPI PCI bus> on pcib12
+igb6: <Intel(R) I211 (Copper)> port 0x7000-0x701f mem 0xdef00000-0xdef1ffff,0xdef20000-0xdef23fff irq 18 at device 0.0 on pci12
+igb6: NVM V0.6 imgtype2
+igb6: Using 1024 TX descriptors and 1024 RX descriptors
+igb6: Using 2 RX queues 2 TX queues
+igb6: Using MSI-X interrupts with 3 vectors
+igb6: Ethernet address: ...
+igb6: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib13: <ACPI PCI-PCI bridge> irq 19 at device 28.7 on pci0
+pci13: <ACPI PCI bus> on pcib13
+igb7: <Intel(R) I211 (Copper)> port 0x6000-0x601f mem 0xdee00000-0xdee1ffff,0xdee20000-0xdee23fff irq 19 at device 0.0 on pci13
+igb7: NVM V0.6 imgtype2
+igb7: Using 1024 TX descriptors and 1024 RX descriptors
+igb7: Using 2 RX queues 2 TX queues
+igb7: Using MSI-X interrupts with 3 vectors
+igb7: Ethernet address: ...
+igb7: netmap queues/slots: TX 2/1024, RX 2/1024
+pcib14: <ACPI PCI-PCI bridge> irq 16 at device 29.0 on pci0
+pci14: <ACPI PCI bus> on pcib14
+ix0: <Intel(R) X520 82599ES (SFI/SFP+)> port 0x5020-0x503f mem 0xded20000-0xded3ffff,0xded44000-0xded47fff irq 16 at device 0.0 on pci14
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: Using 4 RX queues 4 TX queues
+ix0: Using MSI-X interrupts with 5 vectors
+ix0: allocated for 4 queues
+ix0: allocated for 4 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x4
+ix0: eTrack 0x800006d1 PHY FW V65535
+ix0: netmap queues/slots: TX 4/2048, RX 4/2048
+ix1: <Intel(R) X520 82599ES (SFI/SFP+)> port 0x5000-0x501f mem 0xded00000-0xded1ffff,0xded40000-0xded43fff irq 17 at device 0.1 on pci14
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: Using 4 RX queues 4 TX queues
+ix1: Using MSI-X interrupts with 5 vectors
+ix1: allocated for 4 queues
+ix1: allocated for 4 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x4
+ix1: eTrack 0x800006d1 PHY FW V65535
+ix1: netmap queues/slots: TX 4/2048, RX 4/2048
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+pci0: <memory> at device 31.2 (no driver attached)
+hdac0: <Intel Sunrise Point HDA Controller> mem 0xdf420000-0xdf423fff,0xdf400000-0xdf40ffff irq 16 at device 31.3 on pci0
+acpi_button0: <Sleep Button> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_tz1: <Thermal Zone> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart0: console (38400,n,8,1)
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+hwpstate_intel4: <Intel Speed Shift> on cpu4
+hwpstate_intel5: <Intel Speed Shift> on cpu5
+hwpstate_intel6: <Intel Speed Shift> on cpu6
+hwpstate_intel7: <Intel Speed Shift> on cpu7
+Timecounter "TSC-low" frequency 1799996469 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+hdacc0: <Intel Skylake HDA CODEC> at cad 2 on hdac0
+hdaa0: <Intel Skylake Audio Function Group> at nid 1 on hdacc0
+pcm0: <Intel Skylake (HDMI/DP 8ch)> at nid 3 on hdaa0
+Trying to mount root from zfs:zroot/ROOT/default []...
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus0
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ses0 at ahciem0 bus 0 scbus5 target 0 lun 0
+ses0: <AHCI SGPIO Enclosure 2.00 0001> SEMB S-E-S 2.00 device
+ses0: SEMB SES Device
+ada0 at ahcich0 bus 0 scbus0 target 0 lun 0
+ada0: <KINGSTON SA400S37120G SBFKB1E1> ACS-3 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 512bytes)
+ada0: Command Queueing enabled
+ada0: 114473MB (234441648 512 byte sectors)
+ada1 at ahcich1 bus 0 scbus1 target 0 lun 0
+ada1: <KINGSTON SA400S37120G SBFK71E0> ACS-4 ATA SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 114473MB (234441648 512 byte sectors)
+ses0: ada0 in 'Slot 00', SATA Slot: scbus0 target 0
+ses0: ada1,pass1 in 'Slot 01', SATA Slot: scbus1 target 0
+Root mount waiting for: usbus0
+uhub0: 26 ports with 26 removable, self powered
+ugen0.2: <Avocent General Purpose USB Hub> at usbus0
+uhub1 on uhub0
+uhub1: <Avocent General Purpose USB Hub, class 9/0, rev 2.00/80.00, addr 1> on usbus0
+Root mount waiting for: usbus0
+uhub1: 3 ports with 3 removable, bus powered
+ugen0.3: <AVOCENT AVODSR VMCHS-USB MPUIQ> at usbus0
+ukbd0 on uhub1
+ukbd0: <AVOCENT AVODSR VMCHS-USB MPUIQ, class 0/0, rev 2.00/0.01, addr 2> on usbus0
+kbd2 at ukbd0
+Dual Console: Video Primary, Serial Secondary

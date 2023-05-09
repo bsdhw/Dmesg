@@ -1,0 +1,321 @@
+---<<BOOT>>---
+Copyright (c) B817-9222 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #0 main-n262746-4194bbb34c60: Thu May  4 08:05:46 UTC 2023
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 15.0.7 (https://github.com/llvm/llvm-project.git llvmorg-15.0.7-0-g8dfdcc7b7bf6)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 1024x768
+CPU: AMD Ryzen 9 7950X 16-Core Processor             (4500.14-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0xa60f12  Family=0x19  Model=0x61  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ef8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x75c237ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,IBS,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX,ADMSKX>
+  Structured Extended Features=0xf1bf97a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,ERMS,INVPCID,PQM,PQE,AVX512F,AVX512DQ,RDSEED,ADX,SMAP,AVX512IFMA,CLFLUSHOPT,CLWB,AVX512CD,SHA,AVX512BW,AVX512VL>
+  Structured Extended Features2=0x405fde<AVX512VBMI,UMIP,PKU,OSPKE,AVX512VBMI2,GFNI,VAES,VPCLMULQDQ,AVX512VNNI,AVX512BITALG,AVX512VPOPCNTDQ,RDPID>
+  Structured Extended Features3=0x10000010<FSRM,L1DFL>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x791ef257<CLZERO,IRPerf,XSaveErPtr,RDPRU,WBNOINVD,IBPB,IBRS,STIBP,STIBP_ALWAYSON,PREFER_IBRS,SSBD>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 68717379584 (65534 MB)
+avail memory = 65878691840 (62826 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+FreeBSD/SMP: Multiprocessor System Detected: 32 CPUs
+FreeBSD/SMP: 1 package(s) x 2 cache groups x 8 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+Launching APs: 24 25 1 11 20 18 16 22 30 27 28 12 15 9 4 2 7 14 13 6 8 17 10 5 29 19 23 31 21 26 3
+random: entropy device external interface
+kbd0 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x796a6000-0x796a601e
+smbios0: Version: 3.5, BCD Revision: 3.5
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+Firmware Error (ACPI): Could not resolve symbol [\134_SB.PCI0.GPP7.UP00.DP40.UP00.DP68], AE_NOT_FOUND (20221020/dswload2-315)
+ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20221020/psobject-372)
+acpi0: Power Button (fixed)
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff irq 0,8 on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+acpi_ec0: <Embedded Controller: GPE 0x4> port 0x62,0x66 on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+pci0: <base peripheral, IOMMU> at device 0.2 (no driver attached)
+pcib1: <ACPI PCI-PCI bridge> at device 1.1 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pcib2: <ACPI PCI-PCI bridge> mem 0xfcc00000-0xfcc03fff at device 0.0 on pci1
+pci2: <ACPI PCI bus> on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 0.0 on pci2
+pci3: <ACPI PCI bus> on pcib3
+vgapci0: <VGA-compatible display> port 0xf000-0xf0ff mem 0xf000000000-0xf7ffffffff,0xf800000000-0xf80fffffff,0xfca00000-0xfcafffff at device 0.0 on pci3
+hdac0: <ATI (0xab30) HDA Controller> mem 0xfcb20000-0xfcb23fff at device 0.1 on pci3
+pcib4: <ACPI PCI-PCI bridge> at device 1.2 on pci0
+pci4: <ACPI PCI bus> on pcib4
+nvme0: <Generic NVMe Device> mem 0xfcf00000-0xfcf03fff at device 0.0 on pci4
+pcib5: <ACPI PCI-PCI bridge> at device 2.1 on pci0
+pci5: <ACPI PCI bus> on pcib5
+pcib6: <ACPI PCI-PCI bridge> at device 0.0 on pci5
+pci6: <ACPI PCI bus> on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 0.0 on pci6
+pci7: <ACPI PCI bus> on pcib7
+pcib8: <ACPI PCI-PCI bridge> at device 8.0 on pci6
+pci8: <ACPI PCI bus> on pcib8
+pcib9: <ACPI PCI-PCI bridge> at device 0.0 on pci8
+pci9: <ACPI PCI bus> on pcib9
+pcib10: <ACPI PCI-PCI bridge> at device 0.0 on pci9
+pci10: <ACPI PCI bus> on pcib10
+pcib11: <ACPI PCI-PCI bridge> at device 4.0 on pci9
+pci11: <ACPI PCI bus> on pcib11
+pci11: <network> at device 0.0 (no driver attached)
+pcib12: <ACPI PCI-PCI bridge> at device 5.0 on pci9
+pci12: <ACPI PCI bus> on pcib12
+igc0: <Intel(R) Ethernet Controller I225-V> mem 0xfbe00000-0xfbefffff,0xfbf00000-0xfbf03fff at device 0.0 on pci12
+igc0: Using 1024 TX descriptors and 1024 RX descriptors
+igc0: Using 4 RX queues 4 TX queues
+igc0: Using MSI-X interrupts with 5 vectors
+igc0: Ethernet address: ...
+igc0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib13: <PCI-PCI bridge> at device 6.0 on pci9
+pci13: <PCI bus> on pcib13
+pcib14: <ACPI PCI-PCI bridge> at device 7.0 on pci9
+pci14: <ACPI PCI bus> on pcib14
+pcib15: <ACPI PCI-PCI bridge> at device 8.0 on pci9
+pci15: <ACPI PCI bus> on pcib15
+pcib16: <ACPI PCI-PCI bridge> at device 12.0 on pci9
+pci16: <ACPI PCI bus> on pcib16
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xfc300000-0xfc307fff at device 0.0 on pci16
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib17: <PCI-PCI bridge> at device 13.0 on pci9
+pci17: <PCI bus> on pcib17
+pci17: <mass storage, RAID> at device 0.0 (no driver attached)
+pcib18: <ACPI PCI-PCI bridge> at device 12.0 on pci6
+pci18: <ACPI PCI bus> on pcib18
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xfc500000-0xfc507fff at device 0.0 on pci18
+xhci1: 32 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib19: <PCI-PCI bridge> at device 13.0 on pci6
+pci19: <PCI bus> on pcib19
+pci19: <mass storage, RAID> at device 0.0 (no driver attached)
+pcib20: <ACPI PCI-PCI bridge> at device 2.2 on pci0
+pci20: <ACPI PCI bus> on pcib20
+nvme1: <Generic NVMe Device> mem 0xfce00000-0xfce03fff at device 0.0 on pci20
+pcib21: <ACPI PCI-PCI bridge> at device 8.1 on pci0
+pci21: <ACPI PCI bus> on pcib21
+vgapci1: <VGA-compatible display> port 0xe000-0xe0ff mem 0xf820000000-0xf82fffffff,0xf830000000-0xf8301fffff,0xfc900000-0xfc97ffff at device 0.0 on pci21
+hdac1: <ATI (0x1640) HDA Controller> mem 0xfc980000-0xfc983fff at device 0.1 on pci21
+pci21: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xfc700000-0xfc7fffff at device 0.3 on pci21
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+xhci3: <XHCI (generic) USB 3.0 controller> mem 0xfc600000-0xfc6fffff at device 0.4 on pci21
+xhci3: 64 bytes context size, 64-bit DMA
+usbus3 on xhci3
+usbus3: 5.0Gbps Super Speed USB v3.0
+pcib22: <ACPI PCI-PCI bridge> at device 8.3 on pci0
+pci22: <ACPI PCI bus> on pcib22
+xhci4: <XHCI (generic) USB 3.0 controller> mem 0xfcd00000-0xfcdfffff at device 0.0 on pci22
+xhci4: 64 bytes context size, 64-bit DMA
+usbus4 on xhci4
+usbus4: 5.0Gbps Super Speed USB v3.0
+isab0: <PCI-ISA bridge> at device 20.3 on pci0
+isa0: <ISA bus> on isab0
+acpi_button0: <Power Button> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+cpu0: <ACPI CPU> on acpi0
+ns8250: UART FCR is broken
+ns8250: UART FCR is broken
+uart0: <16550 or compatible> at port 0x3f8 irq 4 flags 0x10 on isa0
+uart0: non-PNP ISA device will be removed from GENERIC in FreeBSD 14.
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1124999855 Hz quality 1000
+Timecounters tick every 1.000 msec
+[nl_generic_kpi] genl_register_family: Registered family nlctrl id 16
+[nl_generic_kpi] genl_register_cmds: Adding cmd GETFAMILY(3) to family nlctrl
+hdacc0: <ATI R6xx HDA CODEC> at cad 0 on hdac0
+hdaa0: <ATI R6xx Audio Function Group> at nid 1 on hdacc0
+pcm0: <ATI R6xx (HDMI)> at nid 3 on hdaa0
+pcm1: <ATI R6xx (HDMI)> at nid 5 on hdaa0
+pcm2: <ATI R6xx (HDMI)> at nid 7 on hdaa0
+pcm3: <ATI R6xx (HDMI)> at nid 9 on hdaa0
+ugen2.1: <AMD XHCI root HUB> at usbus2
+ugen4.1: <AMD XHCI root HUB> at usbus4
+ugen0.1: <AMD XHCI root HUB> at usbus0
+ugen1.1: <AMD XHCI root HUB> at usbus1
+uhub0 on usbus2
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub1 on usbus1
+uhub1: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub2 on usbus4
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus4
+uhub3 on usbus0
+uhub3: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ugen3.1: <AMD XHCI root HUB> at usbus3
+uhub4 on usbus3
+uhub4: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus3
+nvd0: <Samsung SSD 980 PRO with Heatsink 2TB> NVMe namespace
+nvd0: 1907729MB (3907029168 512 byte sectors)
+nvme1: Allocated 200MB host memory buffer
+nvd1: <WD_BLACK SN770 2TB> NVMe namespace
+nvd1: 1907729MB (3907029168 512 byte sectors)
+hdacc1: <ATI R6xx HDA CODEC> at cad 0 on hdac1
+hdaa1: <ATI R6xx Audio Function Group> at nid 1 on hdacc1
+pcm4: <ATI R6xx (HDMI)> at nid 3 on hdaa1
+pcm5: <ATI R6xx (HDMI)> at nid 5 on hdaa1
+Trying to mount root from ufs:/dev/nvd1p2 [rw]...
+WARNING: WITNESS option enabled, expect reduced performance.
+uhub2: 1 port with 1 removable, self powered
+uhub0: 4 ports with 4 removable, self powered
+uhub4: 4 ports with 4 removable, self powered
+ugen3.2: <Razer Razer Viper V2 Pro> at usbus3
+ukbd0 on uhub4
+ukbd0: <Razer Razer Viper V2 Pro, class 0/0, rev 2.00/1.00, addr 1> on usbus3
+kbd1 at ukbd0
+ukbd1 on uhub4
+ukbd1: <Razer Razer Viper V2 Pro, class 0/0, rev 2.00/1.00, addr 1> on usbus3
+kbd2 at ukbd1
+uhub1: 18 ports with 18 removable, self powered
+uhub3: 18 ports with 18 removable, self powered
+ugen0.2: <Razer DSV2Pro TKL> at usbus0
+ukbd2 on uhub3
+ukbd2: <Razer DSV2Pro TKL, class 0/0, rev 2.00/2.00, addr 1> on usbus0
+kbd3 at ukbd2
+ukbd3 on uhub3
+ukbd3: <Razer DSV2Pro TKL, class 0/0, rev 2.00/2.00, addr 1> on usbus0
+kbd4 at ukbd3
+ugen0.3: <MediaTek Inc. WirelessDevice> at usbus0
+usb_msc_auto_quirk: UQ_MSC_NO_GETMAXLUN set for USB mass storage device vendor 0x6557 USB DISK 3.0 (0x6557:0x0331)
+usb_msc_auto_quirk: UQ_MSC_NO_PREVENT_ALLOW set for USB mass storage device vendor 0x6557 USB DISK 3.0 (0x6557:0x0331)
+ugen1.2: <vendor 0x6557 USB DISK 3.0> at usbus1
+umass0 on uhub1
+umass0: <vendor 0x6557 USB DISK 3.0, class 0/0, rev 3.10/1.00, addr 1> on usbus1
+umass0:  SCSI over Bulk-Only; quirks = 0x8100
+umass0:0:0: Attached to scbus0
+da0 at umass-sim0 bus 0 scbus0 target 0 lun 0
+da0: < USB DISK 3.0 PMAP> Removable Direct Access SPC-4 SCSI device
+da0: Serial Number...
+da0: 400.000MB/s transfers
+da0: 30192MB (61833216 512 byte sectors)
+da0: quirks=0x3<NO_SYNC_CACHE,NO_6_BYTE>
+ugen1.3: <Microsoft Controller> at usbus1
+ugen1.4: <C-Media Electronics Inc. USB PnP Sound Device> at usbus1
+ugen1.5: <Generic USB Audio> at usbus1
+ugen1.6: <AsusTek Computer Inc. AURA LED Controller> at usbus1
+ugen1.7: <Corsair CORSAIR iCUE COMMANDER Core> at usbus1
+[drm] amdgpu kernel modesetting enabled.
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 on pci0
+intsmb0: Could not allocate I/O space
+device_attach: intsmb0 attach returned 6
+intsmb0: <AMD FCH SMBus Controller> port 0xff00-0xff0f at device 20.0 on pci0
+intsmb0: Could not allocate I/O space
+device_attach: intsmb0 attach returned 6
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: Embedded MOF found
+ACPI: \134AWW0.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: Embedded MOF found
+ACPI: \134ABAW.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi2: <ACPI-WMI mapping> on acpi0
+acpi_wmi2: Embedded MOF found
+ACPI: \134RMTW.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+acpi_wmi3: <ACPI-WMI mapping> on acpi0
+acpi_wmi3: Embedded MOF found
+ACPI: \134AOD.WQBA: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+ig4iic0: <Designware I2C Controller> iomem 0xfedc2000-0xfedc2fff irq 10 on acpi0
+iicbus0: <Philips I2C bus (ACPI-hinted)> on ig4iic0
+iic0: <I2C generic I/O> on iicbus0
+acpi_wmi4: <ACPI-WMI mapping> on acpi0
+acpi_wmi4: Embedded MOF found
+ACPI: \134_SB.ATKD.WQMO: 1 arguments were passed to a non-method ACPI object (Buffer) (20221020/nsarguments-361)
+driver bug: Unable to set devclass (class: ppc devname: (unknown))
+lo0: link state changed to UP
+Cuse v0.1.37 @ /dev/cuse
+ums0 on uhub4
+ums0: <Razer Razer Viper V2 Pro, class 0/0, rev 2.00/1.00, addr 1> on usbus3
+ums0: 5 buttons and [XYZ] coordinates ID=0
+ums1 on uhub3
+ums1: <Razer DSV2Pro TKL, class 0/0, rev 2.00/2.00, addr 1> on usbus0
+ums1: 5 buttons and [XYZ] coordinates ID=0
+uhid0 on uhub3
+uhid0: <Razer DSV2Pro TKL, class 0/0, rev 2.00/2.00, addr 1> on usbus0
+uhid1 on uhub1
+uhid1: <C-Media Electronics Inc. USB PnP Sound Device, class 0/0, rev 1.10/1.00, addr 3> on usbus1
+uhid2 on uhub1
+uhid2: <Generic USB Audio, class 239/2, rev 2.00/0.05, addr 4> on usbus1
+uhid3 on uhub1
+uhid3: <AsusTek Computer Inc. AURA LED Controller, class 0/0, rev 2.00/1.00, addr 5> on usbus1
+uhid4 on uhub1
+uhid4: <Corsair CORSAIR iCUE COMMANDER Core, class 0/0, rev 2.00/1.00, addr 6> on usbus1
+uhid5 on uhub1
+uhid5: <Corsair CORSAIR iCUE COMMANDER Core, class 0/0, rev 2.00/1.00, addr 6> on usbus1
+ubt0 on uhub3
+ubt0: <BTACLIf> on usbus0
+ubt1 on uhub3
+ubt1: <BTISOIf> on usbus0
+ubt1: ubt_attach:671: could not get two interfaces
+device_attach: ubt1 attach returned 6
+uaudio0 on uhub1
+uaudio0: <C-Media Electronics Inc. USB PnP Sound Device, class 0/0, rev 1.10/1.00, addr 3> on usbus1
+ubt1 on uhub3
+ubt1: <BTISOIf> on usbus0
+ubt1: ubt_attach:671: could not get two interfaces
+device_attach: ubt1 attach returned 6
+uaudio0: Play[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Play[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 48000 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 44100 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: No MIDI sequencer.
+pcm6: <USB audio> on uaudio0
+uaudio0: HID volume keys found.
+uaudio1 on uhub1
+uaudio1: <Realtek USB2.0 Audio> on usbus1
+igc0: link state changed to UP
+ubt1 on uhub3
+ubt1: <BTISOIf> on usbus0
+ubt1: ubt_attach:671: could not get two interfaces
+device_attach: ubt1 attach returned 6
+uaudio1: Play[0]: 192000 Hz, 8 ch, 32-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[0]: 96000 Hz, 8 ch, 32-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[0]: 48000 Hz, 8 ch, 32-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[0]: 44100 Hz, 8 ch, 32-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[1]: 192000 Hz, 2 ch, 32-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[1]: 96000 Hz, 2 ch, 32-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[1]: 48000 Hz, 2 ch, 32-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[1]: 44100 Hz, 2 ch, 32-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 192000 Hz, 2 ch, 24-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 96000 Hz, 2 ch, 24-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[1]: 192000 Hz, 2 ch, 24-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[1]: 96000 Hz, 2 ch, 24-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[1]: 48000 Hz, 2 ch, 24-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[1]: 44100 Hz, 2 ch, 24-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: No MIDI sequencer.
+pcm7: <USB audio> on uaudio1
+pcm8: <USB audio> on uaudio1
+uaudio1: No HID volume keys found.
+ng_hci_process_command_timeout: ubt0hci - unable to complete HCI command OGF=0x3, OCF=0x3. Timeout

@@ -1,0 +1,597 @@
+---<<BOOT>>---
+Copyright (c) B817-9222 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 14.0-CURRENT #1 main-n261611-9ee6278b7885: Sat Mar 18 15:53:26 GMT 2023
+    XXX@XXX:/usr/obj/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX amd64
+FreeBSD clang version 15.0.7 (https://github.com/llvm/llvm-project.git llvmorg-15.0.7-0-g8dfdcc7b7bf6)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 800x600
+CPU: AMD EPYC 7601 32-Core Processor                 (2195.95-MHz K8-class CPU)
+  Origin="AuthenticAMD"  Id=0x800f12  Family=0x17  Model=0x1  Stepping=2
+  Features=0x178bfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,MMX,FXSR,SSE,SSE2,HTT>
+  Features2=0x7ed8320b<SSE3,PCLMULQDQ,MON,SSSE3,FMA,CX16,SSE4.1,SSE4.2,MOVBE,POPCNT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2e500800<SYSCALL,NX,MMX+,FFXSR,Page1GB,RDTSCP,LM>
+  AMD Features2=0x35c233ff<LAHF,CMP,SVM,ExtAPIC,CR8,ABM,SSE4A,MAS,Prefetch,OSVW,SKINIT,WDT,TCE,Topology,PCXC,PNXC,DBE,PL2I,MWAITX>
+  Structured Extended Features=0x209c01a9<FSGSBASE,BMI1,AVX2,SMEP,BMI2,RDSEED,ADX,SMAP,CLFLUSHOPT,SHA>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  AMD Extended Feature Extensions ID EBX=0x1007<CLZERO,IRPerf,XSaveErPtr,IBPB>
+  SVM: NP,NRIP,VClean,AFlush,DAssist,NAsids=32768
+  TSC: P-state invariant, performance statistics
+real memory  = 137438953472 (131072 MB)
+avail memory = 133633490944 (127442 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <AMD SPEEDWAY>
+FreeBSD/SMP: Multiprocessor System Detected: 64 CPUs
+FreeBSD/SMP: 1 package(s) x 4 groups x 2 cache groups x 4 core(s) x 2 hardware threads
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.1> irqs 0-23
+ioapic1 <Version 2.1> irqs 24-55
+ioapic2 <Version 2.1> irqs 56-87
+ioapic3 <Version 2.1> irqs 88-119
+ioapic4 <Version 2.1> irqs 120-151
+Launching APs: 37 24 4 57 59 41 5 26 56 3 32 54 61 13 60 36 40 58 45 53 21 28 15 29 22 34 63 47 8 52 23 46 62 39 25 12 9 17 48 2 55 42 38 33 50 27 1 6 10 16 7 43 18 30 14 51 19 49 31 11 20 35 44
+Cuse v0.1.37 @ /dev/cuse
+random: entropy device external interface
+kbd1 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0xbab00000-0xbab0001e
+smbios0: Version: 2.8, BCD Revision: 2.8
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <AMD>
+acpi0: Power Button (fixed)
+cpu0: <ACPI CPU> on acpi0
+attimer0: <AT timer> port 0x40-0x43 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+atrtc0: <AT realtime clock> port 0x70-0x71 on acpi0
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+apei0: <ACPI Platform Error Interface> on acpi0
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 14318180 Hz quality 950
+Event timer "HPET" frequency 14318180 Hz quality 350
+Event timer "HPET1" frequency 14318180 Hz quality 350
+Event timer "HPET2" frequency 14318180 Hz quality 350
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <32-bit timer at 3.579545MHz> port 0x808-0x80b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff numa-domain 0 on acpi0
+pci0: <ACPI PCI bus> numa-domain 0 on pcib0
+pcib1: <ACPI PCI-PCI bridge> at device 1.3 numa-domain 0 on pci0
+pci1: <ACPI PCI bus> numa-domain 0 on pcib1
+pcib2: <ACPI PCI-PCI bridge> irq 32 at device 0.0 numa-domain 0 on pci1
+pci2: <ACPI PCI bus> numa-domain 0 on pcib2
+pcib3: <ACPI PCI-PCI bridge> at device 3.1 numa-domain 0 on pci0
+pci3: <ACPI PCI bus> numa-domain 0 on pcib3
+hdac0: <Creative (0x0012) HDA Controller> mem 0xeff04000-0xeff07fff,0xeff00000-0xeff03fff irq 54 at device 0.0 numa-domain 0 on pci3
+pcib4: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 0 on pci0
+pci4: <ACPI PCI bus> numa-domain 0 on pcib4
+pci4: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0xefa00000-0xefafffff irq 37 at device 0.3 numa-domain 0 on pci4
+xhci0: 64 bytes context size, 64-bit DMA
+usbus0 numa-domain 0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pcib5: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 0 on pci0
+pci5: <ACPI PCI bus> numa-domain 0 on pcib5
+pci5: <encrypt/decrypt> at device 0.1 (no driver attached)
+ahci0: <AMD KERNCZ AHCI SATA controller> mem 0xefe02000-0xefe02fff irq 42 at device 0.2 numa-domain 0 on pci5
+ahci0: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported with FBS
+ahcich0: <AHCI channel> at channel 0 on ahci0
+ahcich1: <AHCI channel> at channel 1 on ahci0
+ahcich2: <AHCI channel> at channel 2 on ahci0
+ahcich3: <AHCI channel> at channel 3 on ahci0
+ahcich4: <AHCI channel> at channel 4 on ahci0
+ahcich5: <AHCI channel> at channel 5 on ahci0
+ahcich6: <AHCI channel> at channel 6 on ahci0
+ahcich7: <AHCI channel> at channel 7 on ahci0
+ahciem0: <AHCI enclosure management bridge> on ahci0
+isab0: <PCI-ISA bridge> at device 20.3 numa-domain 0 on pci0
+isa0: <ISA bus> numa-domain 0 on isab0
+pcib6: <ACPI Host-PCI bridge> numa-domain 1 on acpi0
+pci6: <ACPI PCI bus> numa-domain 1 on pcib6
+pcib7: <ACPI PCI-PCI bridge> at device 1.1 numa-domain 1 on pci6
+pci7: <ACPI PCI bus> numa-domain 1 on pcib7
+pcib8: <PCI-PCI bridge> mem 0xef500000-0xef503fff irq 56 at device 0.0 numa-domain 1 on pci7
+pci8: <PCI bus> numa-domain 1 on pcib8
+pcib9: <PCI-PCI bridge> irq 56 at device 0.0 numa-domain 1 on pci8
+pci9: <PCI bus> numa-domain 1 on pcib9
+vgapci0: <VGA-compatible display> port 0x1000-0x10ff mem 0xd0000000-0xdfffffff,0xe0000000-0xe01fffff,0xef300000-0xef3fffff irq 56 at device 0.0 numa-domain 1 on pci9
+vgapci0: Boot video device
+hdac1: <ATI (0xab28) HDA Controller> mem 0xef420000-0xef423fff irq 57 at device 0.1 numa-domain 1 on pci9
+pcib10: <ACPI PCI-PCI bridge> at device 3.1 numa-domain 1 on pci6
+pci10: <ACPI PCI bus> numa-domain 1 on pcib10
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0xef800000-0xef807fff irq 86 at device 0.0 numa-domain 1 on pci10
+xhci1: 32 bytes context size, 64-bit DMA
+usbus1 numa-domain 1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pcib11: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 1 on pci6
+pci11: <ACPI PCI bus> numa-domain 1 on pcib11
+pci11: <encrypt/decrypt> at device 0.2 (no driver attached)
+xhci2: <XHCI (generic) USB 3.0 controller> mem 0xef000000-0xef0fffff irq 69 at device 0.3 numa-domain 1 on pci11
+xhci2: 64 bytes context size, 64-bit DMA
+usbus2 numa-domain 1 on xhci2
+usbus2: 5.0Gbps Super Speed USB v3.0
+pcib12: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 1 on pci6
+pci12: <ACPI PCI bus> numa-domain 1 on pcib12
+pci12: <encrypt/decrypt> at device 0.1 (no driver attached)
+pcib13: <ACPI Host-PCI bridge> numa-domain 2 on acpi0
+pci13: <ACPI PCI bus> numa-domain 2 on pcib13
+pcib14: <ACPI PCI-PCI bridge> at device 1.2 numa-domain 2 on pci13
+pci14: <ACPI PCI bus> numa-domain 2 on pcib14
+nvme0: <Generic NVMe Device> mem 0xcfd00000-0xcfd03fff,0xcfd04000-0xcfd040ff irq 92 at device 0.0 numa-domain 2 on pci14
+pcib15: <ACPI PCI-PCI bridge> at device 1.3 numa-domain 2 on pci13
+pci15: <ACPI PCI bus> numa-domain 2 on pcib15
+nvme1: <Generic NVMe Device> mem 0xcfc00000-0xcfc03fff,0xcfc04000-0xcfc040ff irq 96 at device 0.0 numa-domain 2 on pci15
+pcib16: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 2 on pci13
+pci16: <ACPI PCI bus> numa-domain 2 on pcib16
+pci16: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib17: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 2 on pci13
+pci17: <ACPI PCI bus> numa-domain 2 on pcib17
+pci17: <encrypt/decrypt> at device 0.1 (no driver attached)
+ahci1: <AMD KERNCZ AHCI SATA controller> mem 0xcf902000-0xcf902fff irq 106 at device 0.2 numa-domain 2 on pci17
+ahci1: AHCI v1.31 with 8 6Gbps ports, Port Multiplier supported with FBS
+ahcich8: <AHCI channel> at channel 0 on ahci1
+ahcich9: <AHCI channel> at channel 1 on ahci1
+ahcich10: <AHCI channel> at channel 2 on ahci1
+ahcich11: <AHCI channel> at channel 3 on ahci1
+ahcich12: <AHCI channel> at channel 4 on ahci1
+ahcich13: <AHCI channel> at channel 5 on ahci1
+ahcich14: <AHCI channel> at channel 6 on ahci1
+ahcich15: <AHCI channel> at channel 7 on ahci1
+ahciem1: <AHCI enclosure management bridge> on ahci1
+pcib18: <ACPI Host-PCI bridge> numa-domain 3 on acpi0
+pci18: <ACPI PCI bus> numa-domain 3 on pcib18
+pcib19: <ACPI PCI-PCI bridge> at device 3.1 numa-domain 3 on pci18
+pci19: <ACPI PCI bus> numa-domain 3 on pcib19
+nvme2: <Generic NVMe Device> mem 0xcf500000-0xcf503fff irq 150 at device 0.0 numa-domain 3 on pci19
+pcib20: <ACPI PCI-PCI bridge> at device 3.2 numa-domain 3 on pci18
+pci20: <ACPI PCI bus> numa-domain 3 on pcib20
+ix0: <Intel(R) X550-T2> mem 0xce800000-0xcebfffff,0xcec04000-0xcec07fff irq 146 at device 0.0 numa-domain 3 on pci20
+ix0: Using 2048 TX descriptors and 2048 RX descriptors
+ix0: queue equality override not set, capping rx_queues at 8 and tx_queues at 8
+ix0: Using 8 RX queues 8 TX queues
+ix0: Using MSI-X interrupts with 9 vectors
+ix0: allocated for 8 queues
+ix0: allocated for 8 rx queues
+ix0: Ethernet address: ...
+ix0: PCI Express Bus: Speed 5.0GT/s Width x8
+ix0: Option ROM V1-b1876-p0 eTrack 0x80000a77 PHY FW V523
+ix0: netmap queues/slots: TX 8/2048, RX 8/2048
+ix1: <Intel(R) X550-T2> mem 0xce400000-0xce7fffff,0xcec00000-0xcec03fff irq 147 at device 0.1 numa-domain 3 on pci20
+ix1: Using 2048 TX descriptors and 2048 RX descriptors
+ix1: queue equality override not set, capping rx_queues at 8 and tx_queues at 8
+ix1: Using 8 RX queues 8 TX queues
+ix1: Using MSI-X interrupts with 9 vectors
+ix1: allocated for 8 queues
+ix1: allocated for 8 rx queues
+ix1: Ethernet address: ...
+ix1: PCI Express Bus: Speed 5.0GT/s Width x8
+ix1: Option ROM V1-b1876-p0 eTrack 0x80000a77 PHY FW V523
+ix1: netmap queues/slots: TX 8/2048, RX 8/2048
+pcib21: <ACPI PCI-PCI bridge> at device 7.1 numa-domain 3 on pci18
+pci21: <ACPI PCI bus> numa-domain 3 on pcib21
+pci21: <encrypt/decrypt> at device 0.2 (no driver attached)
+pcib22: <ACPI PCI-PCI bridge> at device 8.1 numa-domain 3 on pci18
+pci22: <ACPI PCI bus> numa-domain 3 on pcib22
+pci22: <encrypt/decrypt> at device 0.1 (no driver attached)
+acpi_button0: <Power Button> on acpi0
+uart0: <16550 or compatible> port 0x3f8-0x3ff irq 4 flags 0x10 on acpi0
+uart1: <16550 or compatible> port 0x2f8-0x2ff irq 3 on acpi0
+hwpstate0: <Cool`n'Quiet 2.0> on cpu0
+Timecounter "TSC-low" frequency 1097943269 Hz quality 1000
+Timecounters tick every 1.000 msec
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+[nl_generic] genl_register_family: Registered family nlctrl id 16
+[nl_generic] genl_register_cmds: Adding cmd GETFAMILY(3) to family nlctrl
+ugen2.1: <AMD XHCI root HUB> at usbus2
+hdacc0: <Realtek ALC899 HDA CODEC> at cad 1 on hdac0
+hdaa0: <Realtek ALC899 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC899 (Analog 5.1+HP/2.0)> at nid 20,22,21,27 and 24 on hdaa0
+pcm1: <Realtek ALC899 (Front Analog Mic)> at nid 25 on hdaa0
+pcm2: <Realtek ALC899 (Rear Analog Line-in)> at nid 26 on hdaa0
+hdacc1: <ATI R6xx HDA CODEC> at cad 0 on hdac1
+hdaa1: <ATI R6xx Audio Function Group> at nid 1 on hdacc1
+pcm3: <ATI R6xx (HDMI)> at nid 3 on hdaa1
+ahciem0: Unsupported enclosure interface
+(aprobe0:ahciem0:0:0:0): SEP_ATTN IDENTIFY. ACB: 67 ec 02 00 00 40 00 00 00 00 80 00
+(aprobe0:ahciem0:0:0:0): CAM status: CCB request was invalid
+(aprobe0:ahciem0:0:0:0): Error 22, Unretryable error
+pcm4: <ATI R6xx (HDMI)> at nid 5 on hdaa1
+pcm5: <ATI R6xx (HDMI)> at nid 7 on hdaa1
+pcm6: <ATI R6xx (HDMI)> at nid 9 on hdaa1
+pcm7: <ATI R6xx (HDMI)> at nid 11 on hdaa1
+ugen1.1: <(0x1b21) XHCI root HUB> at usbus1
+uhub0 numa-domain 1 on usbus2
+uhub0: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus2
+uhub1 numa-domain 1 on usbus1
+uhub1: <(0x1b21) XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+ugen0.1: <AMD XHCI root HUB> at usbus0
+uhub2 numa-domain 0 on usbus0
+ahciem1: Unsupported enclosure interface
+uhub2: <AMD XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+(aprobe3:ahciem1:0:0:0): SEP_ATTN IDENTIFY. ACB: 67 ec 02 00 00 40 00 00 00 00 80 00
+(aprobe3:ahciem1:0:0:0): CAM status: CCB request was invalid
+(aprobe3:ahciem1:0:0:0): Error 22, Unretryable error
+nvme0: Allocated 200MB host memory buffer
+nvd0: <WD Green SN350 2TB> NVMe namespace
+nvd0: 1907729MB (3907029168 512 byte sectors)
+nvme1: Allocated 200MB host memory buffer
+nvd1: <WD Green SN350 2TB> NVMe namespace
+nvd1: 1907729MB (488378646 4096 byte sectors)
+nvd2: <INTEL SSDPEKNW512G8> NVMe namespace
+nvd2: 488386MB (1000215216 512 byte sectors)
+ada0 at ahcich8 bus 0 scbus9 target 0 lun 0
+ada0: <ST2000VN000-1H3164 SC41> ACS-2 ATA SATA 3.x device
+ada0: Serial Number...
+ada0: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada0: Command Queueing enabled
+ada0: 1907729MB (3907029168 512 byte sectors)
+ada1 at ahcich9 bus 0 scbus10 target 0 lun 0
+ada1: <TOSHIBA DT01ACA200 MX4OABB0> ATA8-ACS SATA 3.x device
+ada1: Serial Number...
+ada1: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada1: Command Queueing enabled
+ada1: 1907729MB (3907029168 512 byte sectors)
+ada2 at ahcich10 bus 0 scbus11 target 0 lun 0
+ada2: <Crucial CT750MX300SSD1 M0CR011> ACS-3 ATA SATA 3.x device
+ada2: Serial Number...
+ada2: 600.000MB/s transfers (SATA 3.x, UDMA6, PIO 8192bytes)
+ada2: Command Queueing enabled
+ada2: 715404MB (1465149168 512 byte sectors)
+cd0 at ahcich2 bus 0 scbus2 target 0 lun 0
+cd0: <TSSTcorp CDDVDW SH-222AB SB01> Removable CD-ROM SCSI device
+cd0: Serial Number...
+cd0: 150.000MB/s transfers (SATA 1.x, UDMA5, ATAPI 12bytes, PIO 8192bytes)
+cd0: Attempt to query device size failed: NOT READY, Medium not present - tray closed
+Trying to mount root from zfs:bsdroot/ROOT/default []...
+WARNING: WITNESS option enabled, expect reduced performance.
+uhub0: 4 ports with 4 removable, self powered
+uhub1: 4 ports with 4 removable, self powered
+uhub2: 4 ports with 4 removable, self powered
+ugen0.2: <vendor 0x0424 product 0x2502> at usbus0
+uhub3 numa-domain 0 on uhub2
+uhub3: <vendor 0x0424 product 0x2502, class 9/0, rev 2.00/0.01, addr 1> on usbus0
+ugen2.2: <vendor 0x05e3 USB2.0 Hub> at usbus2
+uhub4 numa-domain 1 on uhub0
+uhub4: <vendor 0x05e3 USB2.0 Hub, class 9/0, rev 2.00/88.32, addr 1> on usbus2
+ugen1.2: <VIA Labs, Inc. USB3.1 Hub> at usbus1
+uhub5 numa-domain 1 on uhub1
+uhub5: <VIA Labs, Inc. USB3.1 Hub, class 9/0, rev 3.20/7.34, addr 1> on usbus1
+uhub3: 2 ports with 1 removable, self powered
+Root mount waiting for: usbus0 usbus1 usbus2
+uhub4: 4 ports with 4 removable, self powered
+ugen0.3: <vendor 0x0424 product 0x2602> at usbus0
+uhub6 numa-domain 0 on uhub3
+uhub6: <vendor 0x0424 product 0x2602, class 9/0, rev 2.00/0.00, addr 2> on usbus0
+uhub6: MTT enabled
+uhub6: 4 ports with 3 removable, self powered
+Root mount waiting for: usbus0 usbus1
+uhub5: 4 ports with 4 removable, self powered
+ugen1.3: <VIA Labs, Inc. USB2.0 Hub> at usbus1
+uhub7 numa-domain 1 on uhub1
+uhub7: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/7.34, addr 2> on usbus1
+uhub7: MTT enabled
+Root mount waiting for: usbus0 usbus1
+usb_msc_auto_quirk: UQ_MSC_NO_TEST_UNIT_READY set for USB mass storage device Generic Flash Card Reader (0x0424:0x2228)
+usb_msc_auto_quirk: UQ_MSC_NO_PREVENT_ALLOW set for USB mass storage device Generic Flash Card Reader (0x0424:0x2228)
+usb_msc_auto_quirk: UQ_MSC_NO_SYNC_CACHE set for USB mass storage device Generic Flash Card Reader (0x0424:0x2228)
+usb_msc_auto_quirk: UQ_MSC_NO_START_STOP set for USB mass storage device Generic Flash Card Reader (0x0424:0x2228)
+ugen0.4: <Generic Flash Card Reader> at usbus0
+umass0 numa-domain 0 on uhub6
+umass0: <Generic Flash Card Reader, class 0/0, rev 2.00/4.44, addr 3> on usbus0
+umass0:  SCSI over Bulk-Only; quirks = 0xc005
+umass0:18:0: Attached to scbus18
+da0 at umass-sim0 bus 0 scbus18 target 0 lun 0
+da0: <Generic Flash HS-CF 4.44> Removable Direct Access SCSI device
+da0: Serial Number...
+da0: 40.000MB/s transfers
+da0: Attempt to query device size failed: NOT READY, Medium not present
+da0: quirks=0x2<NO_6_BYTE>
+da1 at umass-sim0 bus 0 scbus18 target 0 lun 1
+da1: <Generic Flash HS-COMBO 4.44> Removable Direct Access SCSI device
+da1: Serial Number...
+da1: 40.000MB/s transfers
+da1: Attempt to query device size failed: NOT READY, Medium not present
+da1: quirks=0x2<NO_6_BYTE>
+ugen0.5: <SMSC USB2134B> at usbus0
+uhub8 numa-domain 0 on uhub6
+uhub8: <SMSC USB2134B, class 9/0, rev 2.10/60.80, addr 4> on usbus0
+uhub8: MTT enabled
+uhub7: 4 ports with 4 removable, self powered
+uhub8: 4 ports with 4 removable, self powered
+Root mount waiting for: usbus0 usbus1
+ugen1.4: <Broadcom Corp BCM920702 Bluetooth 4.0> at usbus1
+ugen0.6: <HP OfficeJet Pro 6970> at usbus0
+umass1 numa-domain 0 on uhub8
+umass1: <HP OfficeJet Pro 6970, class 0/0, rev 2.00/1.00, addr 5> on usbus0
+umass1:  SCSI over Bulk-Only; quirks = 0x0000
+umass1:19:1: Attached to scbus19
+(probe0:umass-sim1:1:0:0): REPORT LUNS. CDB: a0 00 00 00 00 00 00 00 00 10 00 00 
+(probe0:umass-sim1:1:0:0): CAM status: SCSI Status Error
+(probe0:umass-sim1:1:0:0): SCSI status: Check Condition
+(probe0:umass-sim1:1:0:0): SCSI sense: ILLEGAL REQUEST asc:20,0 (Invalid command operation code)
+(probe0:umass-sim1:1:0:0): Error 22, Unretryable error
+da2 at umass-sim1 bus 1 scbus19 target 0 lun 0
+da2: <HP OfficeJet Pro 69 1.00> Removable Direct Access SPC-3 SCSI device
+da2: 40.000MB/s transfers
+da2: Attempt to query device size failed: NOT READY, Medium not present
+da2: quirks=0x2<NO_6_BYTE>
+ugen0.7: <VIA Labs, Inc. USB2.0 Hub> at usbus0
+uhub9 numa-domain 0 on uhub8
+uhub9: <VIA Labs, Inc. USB2.0 Hub, class 9/0, rev 2.10/d.a0, addr 6> on usbus0
+Root mount waiting for: usbus0
+uhub9: 4 ports with 4 removable, self powered
+ugen0.8: <USB Flash Disk> at usbus0
+umass2 numa-domain 0 on uhub9
+umass2: <USB Flash Disk, class 0/0, rev 2.00/11.00, addr 7> on usbus0
+umass2:  SCSI over Bulk-Only; quirks = 0x4000
+umass2:20:2: Attached to scbus20
+da3 at umass-sim2 bus 2 scbus20 target 0 lun 0
+da3: <USB Flash Disk 1100> Removable Direct Access SPC-2 SCSI device
+da3: Serial Number...
+da3: 40.000MB/s transfers
+da3: 3864MB (7913472 512 byte sectors)
+da3: quirks=0x2<NO_6_BYTE>
+ugen0.9: <Microsoft Microsoft Pro Intellimouse> at usbus0
+ukbd0 numa-domain 0 on uhub9
+ukbd0: <HID KEYBOARD DEVICE> on usbus0
+kbd2 at ukbd0
+ugen0.10: <Metadot - Das Keyboard Das Keyboard> at usbus0
+ukbd1 numa-domain 0 on uhub9
+ukbd1: <Keyboard> on usbus0
+kbd3 at ukbd1
+Root mount waiting for: usbus0
+ugen0.11: <Sonix Technology Co., Ltd. Canyon CNS-CWC6 Webcam> at usbus0
+ugen0.12: <Logitech USB Headset Logitech USB Headset> at usbus0
+[drm] amdgpu kernel modesetting enabled.
+drmn0: <drmn> numa-domain 1 on vgapci0
+vgapci0: child drmn0 requested pci_enable_io
+vgapci0: child drmn0 requested pci_enable_io
+[drm] initializing kernel modesetting (DIMGREY_CAVEFISH 0x1002:0x73FF 0x1458:0x2338 0xC1).
+drmn0: Trusted Memory Zone (TMZ) feature not supported
+[drm] register mmio base: 0xEF300000
+[drm] register mmio size: 1048576
+[drm] add ip block number 0 <nv_common>
+[drm] add ip block number 1 <gmc_v10_0>
+[drm] add ip block number 2 <navi10_ih>
+[drm] add ip block number 3 <psp>
+[drm] add ip block number 4 <smu>
+[drm] add ip block number 5 <dm>
+[drm] add ip block number 6 <gfx_v10_0>
+[drm] add ip block number 7 <sdma_v5_2>
+[drm] add ip block number 8 <vcn_v3_0>
+[drm] add ip block number 9 <jpeg_v3_0>
+drmn0: Fetched VBIOS from ROM BAR
+amdgpu: ATOM BIOS: 113-D53201-R66XTGOP
+[drm] VCN(0) decode is enabled in VM mode
+[drm] VCN(0) encode is enabled in VM mode
+[drm] JPEG decode is enabled in VM mode
+[drm] vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+drmn0: VRAM: 8176M 0x0000008000000000 - 0x00000081FEFFFFFF (8176M used)
+drmn0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+drmn0: AGP: 267894784M 0x0000008400000000 - 0x0000FFFFFFFFFFFF
+[drm] Detected VRAM RAM=8176M, BAR=256M
+[drm] RAM width 128bits GDDR6
+[drm] amdgpu: 8176M of VRAM memory ready
+[drm] amdgpu: 8176M of GTT memory ready.
+[drm] GART: num cpu pages 131072, num gpu pages 131072
+[drm] PCIE GART of 512M enabled (table at 0x00000080001E8000).
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_sos.bin'
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_ta.bin'
+drmn0: PSP runtime database doesn't exist
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_smc.bin'
+lkpi_iic0: <LinuxKPI I2C> numa-domain 1 on drmn0
+iicbus0: <Philips I2C bus> numa-domain 1 on lkpi_iic0
+iic0: <I2C generic I/O> on iicbus0
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_dmcub.bin'
+[drm] Loading DMUB firmware via PSP: version=0x02020017
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_pfp.bin'
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_me.bin'
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_ce.bin'
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_rlc.bin'
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_mec.bin'
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_mec2.bin'
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_sdma.bin'
+[drm] use_doorbell being set to: [true]
+[drm] use_doorbell being set to: [true]
+drmn0: successfully loaded firmware image 'amdgpu/dimgrey_cavefish_vcn.bin'
+[drm] Found VCN firmware Version ENC: 1.26 DEC: 2 VEP: 0 Revision: 0
+drmn0: Will use PSP to load VCN firmware
+[drm] reserve 0xa00000 from 0x81fe000000 for PSP TMR
+drmn0: RAS: optional ras ta ucode is not available
+drmn0: SECUREDISPLAY: securedisplay ta ucode is not available
+drmn0: smu driver if version = 0x0000000f, smu fw if version = 0x00000013, smu fw version = 0x003b2a00 (59.42.0)
+drmn0: SMU driver if version not matched
+drmn0: use vbios provided pptable
+drmn0: SMU is initialized successfully!
+[drm] Display Core initialized with v3.2.149!
+[drm] DMUB hardware initialized: version=0x02020017
+[drm] REG_WAIT timeout 1us * 100000 tries - mpc2_assert_idle_mpcc line:481
+lkpi_iic1: <LinuxKPI I2C> numa-domain 1 on drmn0
+iicbus1: <Philips I2C bus> numa-domain 1 on lkpi_iic1
+iic1: <I2C generic I/O> on iicbus1
+lkpi_iic2: <LinuxKPI I2C> numa-domain 1 on drmn0
+iicbus2: <Philips I2C bus> numa-domain 1 on lkpi_iic2
+iic2: <I2C generic I/O> on iicbus2
+lkpi_iic3: <LinuxKPI I2C> numa-domain 1 on drmn0
+iicbus3: <Philips I2C bus> numa-domain 1 on lkpi_iic3
+iic3: <I2C generic I/O> on iicbus3
+lkpi_iic4: <LinuxKPI I2C> numa-domain 1 on drmn0
+iicbus4: <Philips I2C bus> numa-domain 1 on lkpi_iic4
+iic4: <I2C generic I/O> on iicbus4
+[drm] kiq ring mec 2 pipe 1 q 0
+[drm] VCN decode and encode initialized successfully(under DPG Mode).
+[drm] JPEG decode initialized successfully.
+drmn0: SE 2, SH per SE 2, CU per SH 8, active_cu_number 32
+[drm] fb mappable at 0xD04D9000
+[drm] vram apper at 0xD0000000
+[drm] size 33177600
+[drm] fb depth is 24
+[drm]    pitch is 15360
+VT: Replacing driver "efifb" with new "fb".
+taskqueue_drain with the following non-sleepable locks held:
+exclusive sleep mutex vtdev (vtdev) r = 0 (0xffffffff81aec5f8) locked @ /usr/src/sys/dev/vt/vt_core.c:3057
+stack backtrace:
+#0 0xffffffff80c5fed5 at witness_debugger+0x65
+#1 0xffffffff80c61029 at witness_warn+0x3f9
+#2 0xffffffff80c52923 at taskqueue_drain+0x33
+#3 0xffffffff8313ddee at vt_kms_postswitch+0x11e
+#4 0xffffffff80a3020d at vt_fb_init+0xfd
+#5 0xffffffff80a35848 at vt_replace_backend+0x118
+#6 0xffffffff80a3570b at vt_allocate+0x7b
+#7 0xffffffff8315013b at linux_register_framebuffer+0xeb
+#8 0xffffffff831517ad at __drm_fb_helper_initial_config_and_unlock+0x4ed
+#9 0xffffffff83221cb0 at amdgpu_fbdev_init+0xf0
+#10 0xffffffff83214b3e at amdgpu_device_init+0x1dfe
+#11 0xffffffff8322fa6d at amdgpu_driver_load_kms+0x1d
+#12 0xffffffff83220911 at amdgpu_pci_probe+0x211
+#13 0xffffffff80e7ba01 at linux_pci_attach_device+0x431
+#14 0xffffffff80c2b230 at device_attach+0x3c0
+#15 0xffffffff80c2ade0 at device_probe_and_attach+0x70
+#16 0xffffffff80c2cdf7 at bus_generic_driver_added+0x67
+#17 0xffffffff80c28859 at devclass_driver_added+0x39
+Sleeping on "tq_drain" with the following non-sleepable locks held:
+exclusive sleep mutex vtdev (vtdev) r = 0 (0xffffffff81aec5f8) locked @ /usr/src/sys/dev/vt/vt_core.c:3057
+stack backtrace:
+#0 0xffffffff80c5fed5 at witness_debugger+0x65
+#1 0xffffffff80c61029 at witness_warn+0x3f9
+#2 0xffffffff80bfab35 at _sleep+0x55
+#3 0xffffffff80c529eb at taskqueue_drain+0xfb
+#4 0xffffffff8313ddee at vt_kms_postswitch+0x11e
+#5 0xffffffff80a3020d at vt_fb_init+0xfd
+#6 0xffffffff80a35848 at vt_replace_backend+0x118
+#7 0xffffffff80a3570b at vt_allocate+0x7b
+#8 0xffffffff8315013b at linux_register_framebuffer+0xeb
+#9 0xffffffff831517ad at __drm_fb_helper_initial_config_and_unlock+0x4ed
+#10 0xffffffff83221cb0 at amdgpu_fbdev_init+0xf0
+#11 0xffffffff83214b3e at amdgpu_device_init+0x1dfe
+#12 0xffffffff8322fa6d at amdgpu_driver_load_kms+0x1d
+#13 0xffffffff83220911 at amdgpu_pci_probe+0x211
+#14 0xffffffff80e7ba01 at linux_pci_attach_device+0x431
+#15 0xffffffff80c2b230 at device_attach+0x3c0
+#16 0xffffffff80c2ade0 at device_probe_and_attach+0x70
+#17 0xffffffff80c2cdf7 at bus_generic_driver_added+0x67
+[drm] REG_WAIT timeout 1us * 100000 tries - mpc2_assert_idle_mpcc line:481
+lock order reversal: (Giant after non-sleepable)
+ 1st 0xffffffff81aec5f8 vtdev (vtdev, sleep mutex) @ /usr/src/sys/dev/vt/vt_core.c:3057
+ 2nd 0xffffffff81a02bc0 Giant (Giant, sleep mutex) @ /usr/src/sys/kern/kern_synch.c:232
+lock order Giant -> vtdev established at:
+#0 0xffffffff80c5f1db at witness_checkorder+0x2fb
+#1 0xffffffff80bc8724 at __mtx_lock_flags+0x94
+#2 0xffffffff80a34db6 at vt_upgrade+0x386
+#3 0xffffffff80b739a8 at mi_startup+0x1e8
+#4 0xffffffff8038f023 at btext+0x23
+lock order vtdev -> Giant attempted at:
+#0 0xffffffff80c5fa93 at witness_checkorder+0xbb3
+#1 0xffffffff80bc8724 at __mtx_lock_flags+0x94
+#2 0xffffffff80bfae60 at _sleep+0x380
+#3 0xffffffff80c529eb at taskqueue_drain+0xfb
+#4 0xffffffff8313ddee at vt_kms_postswitch+0x11e
+#5 0xffffffff80a3020d at vt_fb_init+0xfd
+#6 0xffffffff80a35848 at vt_replace_backend+0x118
+#7 0xffffffff80a3570b at vt_allocate+0x7b
+#8 0xffffffff8315013b at linux_register_framebuffer+0xeb
+#9 0xffffffff831517ad at __drm_fb_helper_initial_config_and_unlock+0x4ed
+#10 0xffffffff83221cb0 at amdgpu_fbdev_init+0xf0
+#11 0xffffffff83214b3e at amdgpu_device_init+0x1dfe
+#12 0xffffffff8322fa6d at amdgpu_driver_load_kms+0x1d
+#13 0xffffffff83220911 at amdgpu_pci_probe+0x211
+#14 0xffffffff80e7ba01 at linux_pci_attach_device+0x431
+#15 0xffffffff80c2b230 at device_attach+0x3c0
+#16 0xffffffff80c2ade0 at device_probe_and_attach+0x70
+#17 0xffffffff80c2cdf7 at bus_generic_driver_added+0x67
+start FB_INFO:
+type=11 height=1200 width=1920 depth=32
+pbase=0xd04d9000 vbase=0xfffff800d04d9000
+name=drmn0 flags=0x0 stride=15360 bpp=32
+end FB_INFO
+drmn0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+drmn0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+drmn0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+drmn0: ring comp_1.2.0 uses VM inv eng 5 on hub 0
+drmn0: ring comp_1.3.0 uses VM inv eng 6 on hub 0
+drmn0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+drmn0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+drmn0: ring comp_1.2.1 uses VM inv eng 9 on hub 0
+drmn0: ring comp_1.3.1 uses VM inv eng 10 on hub 0
+drmn0: ring kiq_2.1.0 uses VM inv eng 11 on hub 0
+drmn0: ring sdma0 uses VM inv eng 12 on hub 0
+drmn0: ring sdma1 uses VM inv eng 13 on hub 0
+drmn0: ring vcn_dec_0 uses VM inv eng 0 on hub 1
+drmn0: ring vcn_enc_0.0 uses VM inv eng 1 on hub 1
+drmn0: ring vcn_enc_0.1 uses VM inv eng 4 on hub 1
+drmn0: ring jpeg_dec uses VM inv eng 5 on hub 1
+vgapci0: child drmn0 requested pci_get_powerstate
+drmn0: Using BACO for runtime pm
+sysctl_warn_reuse: can't re-use a leaf (hw.dri.debug)!
+lkpi_iic5: <LinuxKPI I2C> numa-domain 1 on drm1
+iicbus5: <Philips I2C bus> numa-domain 1 on lkpi_iic5
+iic5: <I2C generic I/O> on iicbus5
+lkpi_iic6: <LinuxKPI I2C> numa-domain 1 on drm2
+iicbus6: <Philips I2C bus> numa-domain 1 on lkpi_iic6
+iic6: <I2C generic I/O> on iicbus6
+[drm] Initialized amdgpu 3.42.0 20150101 for drmn0 on minor 0
+intsmb0: <AMD FCH SMBus Controller> at device 20.0 numa-domain 0 on pci0
+smbus0: <System Management Bus> numa-domain 0 on intsmb0
+lo0: link state changed to UP
+ix0: link state changed to UP
+ix0: link state changed to DOWN
+ix0: link state changed to UP
+ubt0 numa-domain 1 on uhub7
+ubt0: <Broadcom Corp BCM920702 Bluetooth 4.0, rev 2.00/1.12, addr 3> on usbus1
+ulpt0 numa-domain 0 on uhub8
+ulpt0: <HP OfficeJet Pro 6970, class 0/0, rev 2.00/1.00, addr 5> on usbus0
+ulpt0: using bi-directional mode
+ums0 numa-domain 0 on uhub9
+ums0: <HID MOUSE DEVICE> on usbus0
+ums0: 5 buttons and [XYZT] coordinates ID=1
+uhid0 numa-domain 0 on uhub9
+uhid0: <System Control> on usbus0
+uhid1 numa-domain 0 on uhub2
+uhid1: <Logitech USB Headset Logitech USB Headset, class 0/0, rev 1.10/0.12, addr 11> on usbus0
+uaudio0 numa-domain 0 on uhub8
+uaudio0: <Canyon CNS-CWC6 Microphone> on usbus0
+uaudio0: No playback.
+uaudio0: Record[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 24000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 22050 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 11025 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: Record[0]: 8000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio0: No MIDI sequencer.
+pcm8: <USB audio> numa-domain 0 on uaudio0
+uaudio0: No HID volume keys found.
+uaudio1 numa-domain 0 on uhub2
+uaudio1: <Logitech USB Headset> on usbus0
+uaudio1: Play[0]: 48000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[0]: 44100 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[0]: 32000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[0]: 22050 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[0]: 16000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[0]: 11025 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Play[0]: 8000 Hz, 2 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 48000 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 44100 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 32000 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 22050 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 16000 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 11025 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: Record[0]: 8000 Hz, 1 ch, 16-bit S-LE PCM format, 2x2ms buffer.
+uaudio1: No MIDI sequencer.
+pcm9: <USB audio> numa-domain 0 on uaudio1
+uaudio1: HID volume keys found.
+ubt0: ubt_bulk_read_callback:1132: bulk-in transfer failed: USB_ERR_STALLED
+ugen0.12: <Logitech USB Headset Logitech USB Headset> at usbus0 (disconnected)
+uaudio1: at uhub2, port 2, addr 11 (disconnected)
+pcm9: detached
+uaudio1: detached
+uhid1: at uhub2, port 2, addr 11 (disconnected)
+uhid1: detached
+ubt0: ubt_bulk_read_callback:1132: bulk-in transfer failed: USB_ERR_STALLED
+ubt0: ubt_bulk_read_callback:1132: bulk-in transfer failed: USB_ERR_STALLED
